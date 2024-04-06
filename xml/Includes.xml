@@ -6,7 +6,8 @@
 	<include file="Coordinates_Custom_Cache_Progress.xml" />
 	<include file="Coordinates_Custom_Confirm_Reset_Skin_Settings.xml" />
 	<include file="Coordinates_Custom_DialogMasking.xml" />
-	<include file="Coordinates_Custom_Overlay_Debug.xml" />
+	<include file="Coordinates_Custom_Debug_Grid.xml" />
+	<include file="Coordinates_Custom_Debug_Info.xml" />
 	<include file="Coordinates_Custom_Skin_Shortcuts_Help.xml" />
 	<include file="Coordinates_Custom_Welcome.xml" />
 	<include file="Coordinates_DialogAddonInfo.xml" />

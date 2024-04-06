@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="97">
+	<!-- Debug grid -->
+	<zorder>100</zorder>
+	<visible>!Window.IsVisible(startup) + Skin.HasSetting(DebugGrid)</visible>
+	
+	<controls>
+
+		<!-- Global debug grid -->
+		<control type="image">
+			<include>Custom_Overlay_Debug_Grid_coords</include>
+			<include>Custom_Overlay_Debug_Grid</include>
+			<colordiffuse>88FFFFFF</colordiffuse>
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+	<include name="Custom_Overlay_DebugGrid_coords">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Overlay_Debug_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Overlay_Debug_coords_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Overlay_Debug_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Overlay_Debug_coords_4:3</include>
+	</include>
+	<include name="Custom_Overlay_Debug_coords_16:9">
+		<left>0</left>
+		<top>0</top>
+		<width>1920</width>
+		<height>1080</height>
+	</include>
+	<include name="Custom_Overlay_Debug_coords_21:9">
+		<left>0</left>
+		<top>0</top>
+		<width>2560</width>
+		<height>1080</height>
+	</include>
+	<include name="Custom_Overlay_Debug_coords_21:9_masked">
+		<left>0</left>
+		<top>180</top>
+		<width>2560</width>
+		<height>1080</height>
+	</include>
+	<include name="Custom_Overlay_Debug_coords_4:3">
+		<left>0</left>
+		<top>0</top>
+		<width>1440</width>
+		<height>1080</height>
+	</include>
+
+	<include name="Custom_Overlay_Debug_Grid">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Overlay_Debug_Grid_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Overlay_Debug_Grid_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Overlay_Debug_Grid_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Overlay_Debug_Grid_4:3</include>
+	</include>
+	<include name="Custom_Overlay_Debug_Grid_16:9">
+		<texture>special://skin/extras/debug/debuggrid1920.png</texture>
+	</include>
+	<include name="Custom_Overlay_Debug_Grid_21:9">
+		<texture>special://skin/extras/debug/debuggrid2560.png</texture>
+	</include>
+	<include name="Custom_Overlay_Debug_Grid_21:9_masked">
+		<texture>special://skin/extras/debug/debuggrid2560.png</texture>
+	</include>
+	<include name="Custom_Overlay_Debug_Grid_4:3">
+		<texture>special://skin/extras/debug/debuggrid1440.png</texture>
+	</include>
+
+</includes>
