@@ -41,7 +41,7 @@
 				<pagecontrol>70</pagecontrol>
 			</control>
 			
-			<!-- Default button -->
+			<!-- Default group button -->
 			<control type="button" id="10">
 				<include>DialogAddonSettings_coords2</include>
 				<font>Font33</font>
@@ -163,6 +163,15 @@
 
 			<!-- Default slider -->
 			<control type="sliderex" id="13">
+				<include>DialogAddonSettings_coords8</include>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+				<disabledcolor>$VAR[DisabledColor]</disabledcolor>
+			</control>
+				
+			<!-- Default color button -->
+			<control type="colorbutton" id="15">
 				<include>DialogAddonSettings_coords8</include>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
