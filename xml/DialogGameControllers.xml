@@ -6,7 +6,8 @@
 	<!-- Textbox scroll reset -->
 	<include>ResetScroll</include>
 	
-	<include condition="Window.IsVisible(gamecontrollers)">DialogGameControllers_Default</include>
-	<include condition="Window.IsVisible(gameports)">DialogGameControllers_Ports</include>
+	<include condition="Window.IsDialogTopMost(gamecontrollers)">DialogGameControllers_Default</include>
+	<include condition="Window.IsDialogTopMost(gameports)">DialogGameControllers_Ports</include>
+	<include condition="Window.IsDialogTopMost(gameagents)">DialogGameControllers_Agents</include>
 
 </window>

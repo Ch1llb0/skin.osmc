@@ -18,7 +18,6 @@
 	<include file="Coordinates_DialogConfirm.xml" />
 	<include file="Coordinates_DialogContextMenu.xml" />
 	<include file="Coordinates_DialogExtendedProgressBar.xml" />
-	<include file="Coordinates_DialogFavourites.xml" />
 	<include file="Coordinates_DialogFullScreenInfo.xml" />
 	<include file="Coordinates_DialogGameControllers.xml" />
 	<include file="Coordinates_DialogKeyboard.xml" />
@@ -42,6 +41,7 @@
 	<include file="Coordinates_DialogSubtitles.xml" />
 	<include file="Coordinates_DialogTextViewer.xml" />
 	<include file="Coordinates_DialogVideoInfo.xml" />
+	<include file="Coordinates_DialogVideoManager.xml" />
 	<include file="Coordinates_DialogVolumeBar.xml" />
 	<include file="Coordinates_EventLog.xml" />
 	<include file="Coordinates_FileBrowser.xml" />
@@ -49,7 +49,6 @@
 	<include file="Coordinates_GameOSD.xml" />
 	<include file="Coordinates_Home.xml" />
 	<include file="Coordinates_Includes.xml" />
-	<include file="Coordinates_Includes_Home.xml" />
 	<include file="Coordinates_Includes_MediaFlags.xml" />
 	<include file="Coordinates_Includes_SubMenu.xml" />
 	<include file="Coordinates_Includes_Time_NowPlaying.xml" />

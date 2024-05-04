@@ -414,7 +414,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
+							<label>$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -581,7 +581,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
+							<label>$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -610,11 +610,11 @@
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<onleft>60</onleft>
-				<onright condition="Control.IsVisible(17)">17</onright>
 				<onright condition="Control.IsVisible(18)">18</onright>
 				<onright condition="Control.IsVisible(19)">19</onright>
 				<onright condition="Control.IsVisible(20)">20</onright>
-				<onright condition="![Control.IsVisible(17) | Control.IsVisible(18) | Control.IsVisible(19) | Control.IsVisible(20)]">9000</onright>
+				<onright condition="Control.IsVisible(21)">21</onright>
+				<onright condition="![Control.IsVisible(18) | Control.IsVisible(19) | Control.IsVisible(20) | Control.IsVisible(21)]">9000</onright>
 				<orientation>vertical</orientation>
 				<viewtype label="$LOCALIZE[535]">list</viewtype>
 				<pagecontrol>60</pagecontrol>
@@ -631,11 +631,11 @@
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="60">
 				<include>DialogVideoInfo_coords12</include>
-				<onleft condition="Control.IsVisible(17)">17</onleft>
 				<onleft condition="Control.IsVisible(18)">18</onleft>
 				<onleft condition="Control.IsVisible(19)">19</onleft>
 				<onleft condition="Control.IsVisible(20)">20</onleft>
-				<onleft condition="![Control.IsVisible(17) | Control.IsVisible(18) | Control.IsVisible(19) | Control.IsVisible(20)]">9000</onleft>
+				<onleft condition="Control.IsVisible(21)">21</onleft>
+				<onleft condition="![Control.IsVisible(18) | Control.IsVisible(19) | Control.IsVisible(20) | Control.IsVisible(21)]">9000</onleft>
 				<onright>50</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
@@ -807,7 +807,7 @@
 					<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,set)</usealttexture>
 				</control>
 				<!-- Extended info Button -->
-				<control type="togglebutton" id="15">
+				<control type="togglebutton" id="16">
 					<width>Auto</width>
 					<label>207</label>
 					<altlabel>33029</altlabel>
@@ -821,7 +821,7 @@
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Extended info Button -->
-				<control type="togglebutton" id="16">
+				<control type="togglebutton" id="17">
 					<width>Auto</width>
 					<label>22082</label>
 					<altlabel>33029</altlabel>
@@ -835,7 +835,7 @@
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Cast Button -->
-				<control type="togglebutton" id="17">
+				<control type="togglebutton" id="18">
 					<width>Auto</width>
 					<label>206</label>
 					<altlabel>33029</altlabel>
@@ -848,7 +848,7 @@
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Cast Button -->
-				<control type="togglebutton" id="18">
+				<control type="togglebutton" id="19">
 					<width>Auto</width>
 					<label>206</label>
 					<altlabel>207</altlabel>
@@ -861,7 +861,7 @@
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Cast Button -->
-				<control type="togglebutton" id="19">
+				<control type="togglebutton" id="20">
 					<width>Auto</width>
 					<label>206</label>
 					<altlabel>33029</altlabel>
@@ -874,7 +874,7 @@
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Cast Button -->
-				<control type="togglebutton" id="20">
+				<control type="togglebutton" id="21">
 					<width>Auto</width>
 					<label>206</label>
 					<altlabel>22082</altlabel>
@@ -891,6 +891,18 @@
 					<width>Auto</width>
 					<label>20339</label>
 					<visible>!String.IsEmpty(ListItem.Director)</visible>
+				</control>
+				<!-- Versions Button -->
+				<control type="button" id="14">
+					<width>Auto</width>
+					<label>40000</label>
+					<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+				</control>
+				<!-- Extras Button -->
+				<control type="button" id="15">
+					<width>Auto</width>
+					<label>40211</label>
+					<visible>String.IsEqual(ListItem.DBType,movie)</visible>
 				</control>
 				<!-- Trailer Button -->
 				<control type="button" id="11">
@@ -917,7 +929,7 @@
 					<visible>!Skin.HasSetting(KioskMode)</visible>
 				</control>
 				<!-- Artwork Downloader Button -->
-				<control type="button" id="21">
+				<control type="button" id="23">
 					<width>Auto</width>
 					<label>31043</label>
 					<onclick condition="String.IsEqual(ListItem.DBTYPE,episode)">RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
@@ -926,7 +938,7 @@
 					<visible>!Skin.HasSetting(KioskMode)</visible>
 				</control>
 				<!-- Cinema Experience Button -->
-				<control type="button" id="22">
+				<control type="button" id="24">
 					<width>Auto</width>
 					<label>31066</label>
 					<onclick>Dialog.Close(MovieInformation)</onclick>

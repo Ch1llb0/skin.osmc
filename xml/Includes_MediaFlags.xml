@@ -61,7 +61,7 @@
 					</control>
 					<control type="fadelabel" id="9990">
 						<include>MediaFlags_coords5</include>
-						<label>$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
+						<label>$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
 						<font>Font30</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>

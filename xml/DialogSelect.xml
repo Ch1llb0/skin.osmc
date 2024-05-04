@@ -10,7 +10,7 @@
 		
 		<!-- Select dialog -->
 		<control type="group">
-			<visible>![Window.IsVisible(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation)]</visible>
+			<visible>![Window.IsVisible(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation) | Window.IsVisible(ingamesaves)]</visible>
 			
 			<!-- Dialog fanart -->
 			<include>DialogBackgroundImage</include>
@@ -30,6 +30,10 @@
 				<control type="label" id="1">
 					<font></font>
 				</control>
+				
+				<control type="label" id="10823">
+					<font></font>
+				</control>
 
 				<!-- Image -->
 				<control type="image">
@@ -37,6 +41,25 @@
 					<texture>$VAR[SelectImage]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 					<visible>Control.IsVisible(6)</visible>
+				</control>
+				
+				<!-- Image -->
+				<control type="image">
+					<include>DialogSelect_coords1</include>
+					<texture>$INFO[Container(3).ListItem.Art(screenshot)]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+					<visible>Window.IsActive(gamesaves)</visible>
+				</control>
+
+				<!-- Savegame info -->
+				<control type="fadelabel">
+					<include>DialogVideoInfo_coords2</include>
+					<font>Font27</font>
+					<align>center</align>
+					<label>$LOCALIZE[35255] $INFO[Control.GetLabel(10823)]</label>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<visible>Window.IsActive(gamesaves) + Control.HasFocus(3)</visible>
+					<include>VisibleFadeAnimation</include>
 				</control>
 
 				<!-- List -->
@@ -102,14 +125,36 @@
 					<align>center</align>
 					<defaultcontrol always="true">0</defaultcontrol>
 
+					<!-- OK / Get more Button -->
+					<control type="button" id="5">
+						<width>Auto</width>
+						<visible>!Window.IsActive(gamesaves)</visible>
+					</control>
+
 					<!-- Cancel Button -->
 					<control type="button" id="7">
 						<width>Auto</width>
+						<visible>!Window.IsActive(gamesaves)</visible>
 					</control>
-
+					
 					<!-- Get more Button -->
-					<control type="button" id="5">
+					<control type="button" id="8">
 						<width>Auto</width>
+						<visible>!Window.IsActive(gamesaves)</visible>
+					</control>
+					
+					<!-- New savegame Button -->
+					<control type="button" id="10825">
+						<label>$LOCALIZE[35261]</label>
+						<width>Auto</width>
+						<visible>Window.IsActive(gamesaves)</visible>
+					</control>
+					
+					<!-- Cancel Button -->
+					<control type="button" id="10826">
+						<label>$LOCALIZE[222]</label>
+						<width>Auto</width>
+						<visible>Window.IsActive(gamesaves)</visible>
 					</control>
 
 				</control>
@@ -128,7 +173,7 @@
 		<!-- Game OSD dialog -->
 		<control type="group">
 			<include>DialogDepth</include>
-			<visible>[Window.IsVisible(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation)] + !Window.IsVisible(shutdownmenu)</visible>
+			<visible>[Window.IsVisible(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation) | Window.IsVisible(ingamesaves)] + !Window.IsVisible(shutdownmenu)</visible>
 			
 			<!-- Animation -->
 			<animation effect="slide" start="0,500" time="200">WindowOpen</animation>
@@ -152,7 +197,7 @@
 			</control>
 			
 			<!-- Panel -->
-			<control type="panel" id="11">
+			<control type="panel" id="10811">
 				<include>DialogSelect_coords11</include>
 				<onup>Close</onup>
 				<ondown>Close</ondown>
