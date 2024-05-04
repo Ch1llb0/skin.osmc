@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.osmc.scope" version="20.2.1" name="OSMC Skin (Scope edition)" provider-name="OSMC">
+<addon id="skin.osmc.scope" version="21.0.0" name="OSMC Skin (Scope edition)" provider-name="OSMC">
 	<requires>
-		<import addon="xbmc.gui" version="5.16.0"/>
+		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<!-- <res width="2560" height="1080" aspect="21:9" default="true" folder="xml" /> -->
@@ -17,6 +17,6 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]Improved[/B][CR]- - improve video info dialog button navigation when moving away from the cast list[CR][CR][B]Fixed[/B][CR]- fix select dialog icons[CR]- fix dialog background fallback layers[CR]- minor fixes before transition to v21</news>
+		<news>[B]New[/B][CR]- Kodi v21 Omega support</news>
 	</extension>
 </addon>

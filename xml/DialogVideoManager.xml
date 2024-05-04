@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- dialogvideomanager -->
+	<defaultcontrol always="true">50</defaultcontrol>
+	
+	<!-- Textbox scroll reset -->
+	<include>ResetScroll</include>
+
+	<controls>
+
+		<!-- Dialog fanart -->
+		<include>DialogBackgroundImage</include>
+
+		<control type="group">
+			<include>DialogDepth</include>
+		
+			<!-- Animation -->
+			<include>DialogZoomAnimation</include>
+			
+			<!-- Heading -->
+			<include content="Time">
+				<param name="heading">$INFO[Control.GetLabel(2)]</param>
+				<param name="secondary">False</param>
+			</include>
+			
+			<!-- Image -->
+			<control type="image">
+				<include>DialogVideoManager_coords1</include>
+				<texture>$VAR[VideoManagerImages]</texture>
+				<aspectratio aligny="center">keep</aspectratio>
+			</control>
+			
+			<!-- Filename and path -->
+			<control type="fadelabel">
+				<include>DialogVideoManager_coords2</include>
+				<font>Font27</font>
+				<align>center</align>
+				<label>$INFO[Container(50).ListItem.FileNameAndPath]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>!String.IsEmpty(Container(50).ListItem.FileNameAndPath)</visible>
+				<include>VisibleFadeAnimation</include>
+			</control>
+			
+			<!-- Versions List -->
+			<control type="list" id="50">
+				<include>DialogVideoManager_coords3</include>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>60</onleft>
+				<onright>9001</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="$LOCALIZE[535]">list</viewtype>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+
+				<include>DialogVideoManager_coords4</include>
+
+				<include>DialogVideoManager_coords5</include>
+
+			</control>
+			
+			<!-- Scrollbar -->
+			<control type="scrollbar" id="60">
+				<include>DialogVideoManager_coords6</include>
+				<onleft>9001</onleft>
+				<onright>50</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
+				<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+				<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<textureslidernib></textureslidernib>
+				<textureslidernibfocus></textureslidernibfocus>
+				<visible>!Skin.HasSetting(Scrollbars)</visible>
+			</control>
+
+			<!-- Buttons -->
+			<control type="grouplist" id="9001">
+				<include>DialogButtons</include>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>30</itemgap>
+				<onup>50</onup>
+				<defaultcontrol always="true">0</defaultcontrol>
+
+				<!-- Play Button -->
+				<control type="button" id="21">
+					<width>Auto</width>
+					<label>208</label>
+					<visible>Window.IsActive(managevideoversions)</visible>
+				</control>
+
+				<!-- Add Version Button -->
+				<control type="button" id="22">
+					<width>Auto</width>
+					<label>40014</label>
+					<visible>Window.IsActive(managevideoversions)</visible>
+				</control>
+
+				<!-- Add Extras Button -->
+				<control type="button" id="23">
+					<width>Auto</width>
+					<label>40015</label>
+					<visible>Window.IsActive(managevideoextras)</visible>
+				</control>
+				
+				<!-- Rename Button -->
+				<control type="button" id="24">
+					<width>Auto</width>
+					<label>118</label>
+				</control>
+				
+				<!-- Set Default Button -->
+				<control type="button" id="25">
+					<width>Auto</width>
+					<label>40023</label>
+					<visible>Window.IsActive(managevideoversions)</visible>
+				</control>
+				
+				<!-- Remove Button -->
+				<control type="button" id="26">
+					<width>Auto</width>
+					<label>15015</label>
+				</control>
+				
+				<!-- Choose Art Button -->
+				<control type="button" id="27">
+					<width>Auto</width>
+					<label>13511</label>
+				</control>
+
+			</control>
+			
+			<!-- Button indicator -->
+			<include content="dialogButtonIndicator">
+				<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+			</include>
+
+			<!-- Heading -->
+			<control type="label" id="2">
+				<left>-10000</left>
+				<top>-10000</top>
+				<width>1620</width>
+				<height>72</height>
+				<font>Font72</font>
+				<textcolor>$VAR[TextColorFO]</textcolor>
+				<label></label>
+			</control>
+		</control>
+
+		<include>MaskingBars</include>
+
+	</controls>
+
+</window>

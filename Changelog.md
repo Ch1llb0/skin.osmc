@@ -2,7 +2,14 @@
 
 ---
 
-**_v20.2.1 - March 2024_**
+**_v21.0.0_**
+
+_New_
+- support Omega skin engine features
+
+---
+
+**_v20.2.1 - April 2024_**
 
 _Improved_
 - improve video info dialog button navigation when moving away from the cast list
@@ -53,7 +60,7 @@ _Fixed_
 **_v20.0.0 - June 2023_**
 
 _New_
-- Support Nexus skin engine features
+- support Nexus skin engine features
 - remove Skin Helper Service ColorPicker support
 - add new video OSD audio and subtitle selection
 - add missing PVR guide controls dialog
@@ -506,54 +513,69 @@ Release
 
 ---
 
-**Changelog v20.2.1**
+**Changelog v21.0.0**
 
-template.xml:
-- fix animation condition of recording, timer and reminder icon slide animations
+_remove deprecated favourites dialog_
+_ add new video manager dialog_
+
+Textures.xbt:
+- update textures file with new video versions image files and removed collection image files
+
+Coordinates_DialogGameControllers.xml:
+- adjust and add coordinates includes for new in-game player viewer dialog
 
 Coordinates_DialogSelect.xml:
-- remove deprecated image controls for cases where the icon info label was populated with a 'Default' string
+- adjust coordinates includes to show information specific to the video versions selection correctly
+- adjust coordinates includes for new savegame selection
 
-Coordinates_FileBrowser.xml:
-- remove deprecated image controls for cases where the icon info label was populated with a 'Default' string
+Defaults.xml:
+- add new texturesliderbardisabled and textureslidernibdisabled tags to sliderex and slider controls
+
+DialogGameControllers.xml:
+- adjust includes and include conditions for new in-game player viewer dialog
+
+DialogSeekBar.xml:
+- adjust visibility condition to incorporate new in-game save and load dialog
+- add new texturesliderbardisabled and textureslidernibdisabled tags to the slider control
 
 DialogSelect.xml:
-- remove deprecated image control for cases where the icon info label was populated with a 'Default' string
+- adjust dialog for new savegame selection
 
 DialogVideoInfo.xml:
-- fix onright and onleft of cast list to always navigate to last used button
+- adjust video info to use new video witdth and video height info labels
+- add new video versions and extras buttons
 
-FileBrowser.xml:
-- remove deprecated image control for cases where the icon info label was populated with a 'Default' string
+GameOSD.xml:
+- adjust visibility conditions to incorporate new in-game save and load dialog
+- add new in-game save and load button
+- remove deprecated game controller ports button
 
-Includes_Windows_Dialogs.xml:
-- adjust color as well as single and multiple background image controls' visibility condition to always render these layers as fallback
+Includes.xml:
+- remove deprecated favourites dialog include file
+- remove deprecated Includes_Home include file
+- add new video manager dialog include file
 
-MyVideoNav.xml:
-- remove deprecated movie sets hidden list
+Includes_GameControllers.xml:
+- add new player viewer dialog
 
-script-skinshortcuts-static.xml:
-- fix animation condition of recording, timer and reminder icon slide animations
+Includes_MediaFlags.xml:
+- adjust video info to use new video witdth and video height info labels
+
+Includes_SubMenu.xml:
+- remove deprecated favourites dialog related includes
+
+MusicOSD.xml:
+- add new texturesliderbardisabled and textureslidernibdisabled tags to the slider control
 
 Variables.xml:
-- add missing variable condition to SelectImage variable
-- add variable conditions for movie sets to Label2 variable
-- remove deprecated SetListContent, SetLabel and VideoInfoListPlot variables
+- add new VideoManagerImages variable
+- add new variable conditions to HeadingLabelSecondary and ContentType variables for new video versions windows
+- remove deprecated ContentTypeFavourites variable
+- add new variable condition to VideoPlayerTitle, VideoInfoLabel and Label1 variables for new video versions feature
+- adjsut VideoResolution variable to only use new video witdth and video height info labels
 
-Viewtype511.xml:
-- remove deprecated VideoInfoListPlot variable from plot textbox
-
-Viewtype522.xml:
-- remove deprecated VideoInfoListPlot variable from plot textbox
-
-Viewtype531.xml:
-- remove deprecated movie set info label
-
-Viewtype533.xml:
-- remove deprecated movie set info label
-
-Addon.xml:
-- bump version to 20.2.1
+addon.xml:
+- bump version to 21.0.0
 - update changelog
 
 Changelog.md:

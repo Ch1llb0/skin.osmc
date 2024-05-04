@@ -138,8 +138,10 @@
 		<aligny>center</aligny>
 		<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 		<texturesliderbar>osd/OSDSliderBack.png</texturesliderbar>
+		<texturesliderbardisabled colordiffuse="$VAR[DisabledColor]">osd/OSDSliderBack.png</texturesliderbardisabled>
 		<textureslidernib border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDSliderNibNF.png</textureslidernib>
 		<textureslidernibfocus border="10,0,10,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibFO.png</textureslidernibfocus>
+		<textureslidernibdisabled border="10,0,10,0" colordiffuse="$VAR[DisabledColor]">osd/OSDSliderNibFO.png</textureslidernibdisabled>
 		<sliderwidth>230</sliderwidth>
 		<sliderheight>20</sliderheight>
 		<font>Font33</font>
@@ -176,8 +178,10 @@
 		<height>20</height>
 		<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 		<texturesliderbar>osd/OSDSliderBack.png</texturesliderbar>
+		<texturesliderbardisabled colordiffuse="$VAR[DisabledColor]">osd/OSDSliderBack.png</texturesliderbardisabled>
 		<textureslidernib border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDSliderNibNF.png</textureslidernib>
 		<textureslidernibfocus border="10,0,10,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibFO.png</textureslidernibfocus>
+		<textureslidernibdisabled border="10,0,10,0" colordiffuse="$VAR[DisabledColor]">osd/OSDSliderNibFO.png</textureslidernibdisabled>
 		<orientation>horizontal</orientation>
 		<include>WindowDepth</include>
 	</default>

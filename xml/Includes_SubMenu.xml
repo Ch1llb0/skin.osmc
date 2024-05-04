@@ -33,7 +33,6 @@
 				</control>
 				
 				<include condition="Window.IsVisible(AddonBrowser.xml)">SubMenu_AddonBrowser</include>
-				<include condition="Window.IsVisible(DialogFavourites.xml)">SubMenu_DialogFavourites</include>
 				<include condition="Window.IsVisible(MyFavourites.xml)">SubMenu_FavouritesBrowser</include>
 				<include condition="Window.IsVisible(EventLog.xml)">SubMenu_EventLog</include>
 				<include condition="Window.IsVisible(MyGames.xml)">SubMenu_MyGames</include>
@@ -142,27 +141,6 @@
 				<label>25001</label>
 				<visible>Control.IsEnabled(7)</visible>
 			</control>
-			
-			<include>SubMenuControls</include>
-		
-		</control>
-	</include>
-	
-	<!-- Favourites dialog sub menu -->
-	<include name="SubMenu_DialogFavourites">
-		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>450</onleft>
-			<onright>450</onright>
-			<onback>450</onback>
-			<include>SubMenuResetScroll</include>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
 			
 			<include>SubMenuControls</include>
 		

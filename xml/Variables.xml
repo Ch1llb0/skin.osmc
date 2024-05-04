@@ -150,6 +150,12 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	
+	<!-- Video Versions images -->
+	<variable name="VideoManagerImages">
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
+		<value condition="String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(thumb)]</value>
+	</variable>
+	
 	<!-- Heading labels -->
 	<variable name="HeadingLabelPrimary">
 		<value condition="Window.IsVisible(busydialog)">$LOCALIZE[20186]...</value>
@@ -199,7 +205,8 @@
 	<variable name="HeadingLabelSecondary">
 		<value condition="Window.IsVisible(busydialog)"></value>
 		<value condition="[String.StartsWith(Container.FolderPath,library://video/movies) + String.EndsWith(Container.FolderPath,library://video/movies/)] | [String.StartsWith(Container.FolderPath,videodb://movies/titles/) + String.EndsWith(Container.FolderPath,videodb://movies/titles/)]"></value>
-		<value condition="Container.Content(movies) | [String.StartsWith(Container.FolderPath,videodb://movies/) + !String.EndsWith(Container.FolderPath,videodb://movies/)] | [String.StartsWith(Container.FolderPath,library://video/movies) + !String.EndsWith(Container.FolderPath,library://video/movies/)]">$INFO[Container.FolderName]</value>
+		<value condition="[Container.Content(movies) | [String.StartsWith(Container.FolderPath,videodb://movies/) + !String.EndsWith(Container.FolderPath,videodb://movies/)] | [String.StartsWith(Container.FolderPath,library://video/movies) + !String.EndsWith(Container.FolderPath,library://video/movies/)]] + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[Container.FolderName]</value>
+		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[Container.FolderName] ($LOCALIZE[24069])</value>
 		<value condition="[String.StartsWith(Container.FolderPath,library://video/tvshows/) + String.EndsWith(Container.FolderPath,library://video/tvshows/)] | [String.StartsWith(Container.FolderPath,videodb://tvshows/titles/) + String.EndsWith(Container.FolderPath,videodb://tvshows/titles/)]"></value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [String.StartsWith(Container.FolderPath,videodb://tvshows/) + !String.EndsWith(Container.FolderPath,videodb://tvshows/)] | [String.StartsWith(Container.FolderPath,library://video/tvshows/) + !String.EndsWith(Container.FolderPath,library://video/tvshows/)] | String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[Container.FolderName]</value>
 		<value condition="String.StartsWith(Container.FolderPath,library://video/musicvideos/) + String.EndsWith(Container.FolderPath,library://video/musicvideos/)"></value>
@@ -247,8 +254,10 @@
 	
 	<!-- Content type label -->
 	<variable name="ContentType">
-		<value condition="Container.Content(movies) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20338]</value>
-		<value condition="Container.Content(movies) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[342]</value>
+		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20338]</value>
+		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[342]</value>
+		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[40012]</value>
+		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[40013]</value>
 		<value condition="Container.Content(tvshows) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20364]</value>
 		<value condition="Container.Content(tvshows) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20343]</value>
 		<value condition="Container.Content(seasons) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20373]</value>
@@ -298,11 +307,6 @@
 		<value condition="Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31000]</value>
 		<value condition="!Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31001]</value>
 	</variable>
-
-	<variable name="ContentTypeFavourites">
-		<value condition="Integer.IsEqual(Container(450).NumItems,1)">$LOCALIZE[31000]</value>
-		<value condition="!Integer.IsEqual(Container(450).NumItems,1)">$LOCALIZE[31001]</value>
-	</variable>
 	
 	<variable name="ContentTypeFileManager20">
 		<value condition="Integer.IsEqual(Container(20).NumItems,1)">$LOCALIZE[31000]</value>
@@ -324,6 +328,7 @@
 		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
 		<value condition="VideoPlayer.Content(episodes) + String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Player.Title]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.HasVideoVersions">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.VideoVersionName, (,)]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 		<value>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 	</variable>
 	
@@ -434,7 +439,8 @@
 		<value condition="Container.Content(episodes) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle,, &#8226; ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
 		<value condition="Container.Content(episodes) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle,, &#8226; ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
 		<value condition="Container.Content(episodes) + String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle,, &#8226; ]$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(musicvideos) | !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(musicvideos) | !String.IsEmpty(ListItem.Title) + !ListItem.HasVideoVersions">$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="!String.IsEmpty(ListItem.Title) + ListItem.HasVideoVersions">$INFO[ListItem.Title]$INFO[ListItem.VideoVersionName, (,)]$VAR[LabelUserRating]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -476,9 +482,10 @@
 	
 	<!-- List labels -->
 	<variable name="Label1">
-		<value condition="!Container.Content(episodes) + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+		<value condition="!Container.Content(episodes) + !String.IsEmpty(ListItem.Title) + !ListItem.HasVideoVersions + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[ListItem.Title]</value>
+		<value condition="!Container.Content(episodes) + !String.IsEmpty(ListItem.Title) + ListItem.HasVideoVersions + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[ListItem.Title]$INFO[ListItem.VideoVersionName, (,)]</value>
 		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Title)">$VAR[SElist,, &#8226; ]$INFO[ListItem.Title]</value>
-		<value condition="String.IsEmpty(ListItem.Title)">$INFO[ListItem.Label]</value>
+		<value condition="String.IsEmpty(ListItem.Title) | String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="Label2">
@@ -827,13 +834,13 @@
 	
 	<!-- Video Resolution labels -->
 	<variable name="VideoResolution">
-		<value condition="![String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)]">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]x$INFO[ListItem.VideoHeight]</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)] + String.IsEqual(ListItem.VideoResolution,480) | String.IsEqual(ListItem.VideoResolution,576) | String.IsEqual(ListItem.VideoResolution,540)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]SD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)] + String.IsEqual(ListItem.VideoResolution,720)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]HD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)] + String.IsEqual(ListItem.VideoResolution,1080)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]Full HD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)] + String.IsEqual(ListItem.VideoResolution,4K)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]4K UHD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)] + String.IsEqual(ListItem.VideoResolution,8K)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]8K UHD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight) | String.IsEqual(ListItem.VideoWidth,0) | String.IsEqual(ListItem.VideoHeight,0)] + String.IsEmpty(ListItem.VideoResolution)">$VAR[HDRType,, &#8226; ]$VAR[3DMode]</value>
+		<value condition="![String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)]">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]x$INFO[ListItem.VideoHeight]</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,480) | String.IsEqual(ListItem.VideoResolution,576) | String.IsEqual(ListItem.VideoResolution,540)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]SD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,720)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]HD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,1080)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]Full HD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,4K)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]4K UHD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,8K)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]8K UHD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEmpty(ListItem.VideoResolution)">$VAR[HDRType,, &#8226; ]$VAR[3DMode]</value>
 	</variable>
 	
 	<!-- Video Codec labels -->

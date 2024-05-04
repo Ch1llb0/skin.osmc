@@ -17,8 +17,10 @@
 		<control type="slider">
 			<include>MusicOSD_coords1</include>
 			<texturesliderbar />
+			<texturesliderbardisabled />
 			<textureslidernib />
 			<textureslidernibfocus />
+			<textureslidernibdisabled />
 			<action>seek</action>
 		</control>
 		
