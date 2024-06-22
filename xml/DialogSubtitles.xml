@@ -17,73 +17,9 @@
 			<include>DialogZoomAnimation</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		<!-- Color -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture background="true">common/white.png</texture>
-			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
-			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) | String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
-			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
-			<include>DialogBackgroundDepth</include>
-		</control>
-		<!-- Single background image -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture background="true">$VAR[OSMCBackgroundImage]</texture>
-			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(background))</visible>
-			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
-			<include>DialogBackgroundDepth</include>
-		</control>
-		<!-- Multiple background images -->
-		<control type="multiimage">
-			<include>FullscreenDimensions</include>
-			<imagepath background="true">$VAR[OSMCBackgroundImage]</imagepath>
-			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(9000).ListItem.Property(background))</visible>
-			<aspectratio>scale</aspectratio>
-			<include>CustomBackgroundFolderDuration</include>
-			<fadetime>2000</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>DialogZoomAnimation</include>
-			<include>DialogBackgroundDepth</include>
-		</control>
-		<!-- Overlay -->
-		<control type="group">
-			<include>FullscreenDimensions</include>
-			<animation type="WindowOpen">
-				<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
-				<effect type="fade" start="0" end="100" time="100" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="zoom" start="100" end="70" center="auto" time="300" />
-				<effect type="fade" start="100" end="0" time="100" delay="200" />
-			</animation>
-			<control type="image">
-				<include>BackgroundOverlayDialog1</include>
-				<texture background="true">$VAR[Background1]</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-			</control>
-			<control type="image">
-				<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog2</include>
-				<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog3</include>
-				<texture background="true">$VAR[BackgroundOverlayStyle]</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-			</control>
-			<control type="image">
-				<include>BackgroundOverlayDialog4</include>
-				<texture background="true">$VAR[Background2]</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-				<visible>Skin.HasSetting(BackgroundOverlayStyle)</visible>
-			</control>
-		</control>
+		
+		<!-- Dialog fanart -->
+		<include>DialogBackgroundImage</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
@@ -194,7 +130,7 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
-				<texturesliderbackground border="0,5,0,5">$VAR[BackgroundOverlayStyleScrollbarVertical]</texturesliderbackground>
+				<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
