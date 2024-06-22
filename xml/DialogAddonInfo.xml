@@ -155,7 +155,7 @@
 					<!-- Install date -->
 					<control type="group">
 						<include>DialogAddonInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.AddonInstallDate)</visible>
+						<visible>!String.IsEmpty(ListItem.AddonInstallDate) + ListItem.Property(Addon.IsInstalled)</visible>
 						<control type="fadelabel">
 							<include>DialogAddonInfo_coords6</include>
 							<align>right</align>

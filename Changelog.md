@@ -521,6 +521,9 @@ _ add new video manager dialog_
 Textures.xbt:
 - update textures file with new video versions image files and removed collection image files
 
+template.xml:
+- add new browse tag to widget content tags to prevent "More..." item from showing
+
 Coordinates_DialogGameControllers.xml:
 - adjust and add coordinates includes for new in-game player viewer dialog
 
@@ -560,12 +563,19 @@ Includes_GameControllers.xml:
 
 Includes_MediaFlags.xml:
 - adjust video info to use new video witdth and video height info labels
+- adjust visibility condition of media flags for them to show correctly independent of content type
 
 Includes_SubMenu.xml:
 - remove deprecated favourites dialog related includes
 
+Includes_Widgets.xml:
+- add new browse tag to widget content tags to prevent "More..." item from showin
+
 MusicOSD.xml:
 - add new texturesliderbardisabled and textureslidernibdisabled tags to the slider control
+
+skinshortcuts-static.xml:
+- add new browse tag to widget content tags to prevent "More..." item from showing
 
 Variables.xml:
 - add new VideoManagerImages variable

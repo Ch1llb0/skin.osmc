@@ -398,7 +398,7 @@
 
 	<include name="widget-content">
 		<definition>
-			<content target="$PARAM[target]">$PARAM[path]</content>
+			<content target="$PARAM[target]" browse="never">$PARAM[path]</content>
 		</definition>
 	</include>
 

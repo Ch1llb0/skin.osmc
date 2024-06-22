@@ -5,7 +5,7 @@
 	<include name="MediaFlags">
 		<control type="group">
 			<include>MediaFlags_coords1</include>
-			<visible>Integer.IsGreater(Container.NumItems,0) + !ListItem.IsCollection + !ListItem.IsParentFolder + !ListItem.IsFolder + !String.IsEqual(Skin.String(mediaflags),None) + [Container.Content(files) | Container.Content(songs) | Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | Window.IsVisible(MyPlaylist.xml)]</visible>
+			<visible>Integer.IsGreater(Container.NumItems,0) + !ListItem.IsCollection + !ListItem.IsParentFolder + !ListItem.IsFolder + !String.IsEqual(Skin.String(mediaflags),None)</visible>
 			<animation effect="fade" start="0" time="200" delay="200">WindowOpen</animation>
 			<animation effect="fade" start="0" time="200" delay="200">Visible</animation>
 			<animation type="Conditional" reversible="false" condition="[Container.OnNext | Container.OnPrevious] + Integer.IsGreater(Container.NumItems,1)">

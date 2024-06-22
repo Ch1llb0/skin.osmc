@@ -337,7 +337,7 @@
 					</control>
 				</focusedlayout>
 
-				<content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
+				<content target="$SKINSHORTCUTS[target]" browse="never">$SKINSHORTCUTS[path]</content>
 			</control>
 		</controls>
 
@@ -726,7 +726,7 @@
 
 				</focusedlayout>
 
-				<content limit="$SKINSHORTCUTS[limit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
+				<content limit="$SKINSHORTCUTS[limit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]" browse="never">$SKINSHORTCUTS[path]</content>
 			</control>
 
 		</controls>
