@@ -32,7 +32,7 @@
 			<!-- Poster image -->
 			<control type="group">
 				<visible>!String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-				<visible>[!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set) | !String.IsEqual(ListItem.DBTYPE,set) + String.IsEmpty(Window(12003).Property(cast)) + [String.IsEmpty(Window(12003).Property(extended)) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEmpty(ListItem.RatingAndVotes) + String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]</visible>
+				<visible>[!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set) | !String.IsEqual(ListItem.DBTYPE,set) + String.IsEmpty(Window(12003).Property(cast)) + [String.IsEmpty(Window(12003).Property(extended)) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]</visible>
 				<include>VisibleFadeAnimation</include>
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
@@ -680,7 +680,7 @@
 						<font>Font36</font>
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<visible>!Control.IsVisible(302) + !Control.IsVisible(303) + !Control.IsVisible(304) + !Control.IsVisible(305) + !Control.IsVisible(306) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
+						<visible>!Control.IsVisible(302) + !Control.IsVisible(303) + !Control.IsVisible(304) + !Control.IsVisible(305) + !Control.IsVisible(306)</visible>
 					</control>
 					<control type="fadelabel" id="302">
 						<include>DialogVideoInfo_coords15</include>

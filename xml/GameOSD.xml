@@ -12,7 +12,7 @@
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>GameOSD_coords1</include>
-			<visible>player.forwarding | player.rewinding | player.paused | player.istempo</visible>
+			<visible>Player.Forwarding | Player.Rewinding | Player.IsTempo | Player.Paused</visible>
 			<visible>![Window.IsVisible(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation) | Window.IsVisible(ingamesaves) | Window.IsVisible(gamevolume) | Window.IsVisible(gamecontrollers) | Window.IsVisible(gameadvancedsettings) | Window.IsVisible(GamePorts) | Window.IsVisible(shutdownmenu)]</visible>
 			<include>OSDVisibleHiddenAnimation</include>
 			<include>OSDOpenCloseAnimation</include>

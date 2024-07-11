@@ -80,7 +80,7 @@
 				<control type="group" id="1">
 					<include>VideoFullScreen_coords7</include>
 					<visible>!Window.IsVisible(VideoBookmarks)</visible>
-					<visible>[player.forwarding | player.rewinding | player.istempo | Player.HasPerformedSeek(3)] + !Player.HasGame + !Player.Seeking | player.paused</visible>
+					<visible>[Player.Forwarding | Player.Rewinding | Player.IsTempo | Player.HasPerformedSeek(3)] + !Player.HasGame + !Player.Seeking | Player.Paused</visible>
 					<include>OSDVisibleHiddenAnimation</include>
 					<include>WindowFadeAnimation</include>
 
@@ -97,7 +97,7 @@
 						<align>center</align>
 						<label>$VAR[PlayerStatus]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
-						<visible>player.forwarding | player.rewinding | player.istempo</visible>
+						<visible>Player.Forwarding | Player.Rewinding | Player.IsTempo</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 
@@ -105,7 +105,7 @@
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords9</include>
 						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
-						<visible>player.paused</visible>
+						<visible>Player.Paused</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -113,7 +113,7 @@
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords9</include>
 						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</texture>
-						<visible>Player.HasPerformedSeek(3) + ![Player.Paused | player.forwarding | player.rewinding | player.istempo]</visible>
+						<visible>Player.HasPerformedSeek(3) + ![Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 
@@ -173,7 +173,7 @@
 					<include>VideoFullScreen_coords11</include>
 					<visible>!Window.IsVisible(VideoBookmarks)</visible>
 					<visible>Pvr.IsTimeShift</visible>
-					<animation effect="slide" end="155,0" time="200" condition="player.forwarding | player.rewinding | player.paused | player.istempo | Player.HasPerformedSeek(3)">Conditional</animation>
+					<animation effect="slide" end="155,0" time="200" condition="Player.Forwarding | Player.Rewinding | Player.Paused | Player.IsTempo | Player.HasPerformedSeek(3)">Conditional</animation>
 					<include>OSDVisibleHiddenAnimation</include>
 					<include>WindowFadeAnimation</include>
 					
