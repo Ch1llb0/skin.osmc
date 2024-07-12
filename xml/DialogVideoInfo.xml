@@ -817,7 +817,7 @@
 					<onclick condition="[!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)">SetFocus(50)</onclick>
 					<usealttexture>!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)</usealttexture>
 					<visible>!String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-					<visible>![!String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.RatingAndVotes) + String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Status) + String.IsEmpty(ListItem.OriginalTitle) + String.IsEmpty(ListItem.Director) + String.IsEmpty(ListItem.Writer) + String.IsEmpty(ListItem.Studio) + String.IsEmpty(ListItem.Country) + String.IsEmpty(ListItem.Premiered) + String.IsEmpty(ListItem.Genre) + String.IsEmpty(ListItem.Set) + String.IsEmpty(ListItem.Duration) + String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.Mpaa) + String.IsEmpty(ListItem.VideoResolution) + !String.IsEqual(ListItem.DBTYPE,set)]</visible>
+					<visible>![String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Status) + String.IsEmpty(ListItem.OriginalTitle) + String.IsEmpty(ListItem.Director) + String.IsEmpty(ListItem.Writer) + String.IsEmpty(ListItem.Studio) + String.IsEmpty(ListItem.Country) + String.IsEmpty(ListItem.Premiered) + String.IsEmpty(ListItem.Genre) + String.IsEmpty(ListItem.Set) + String.IsEmpty(ListItem.Duration) + String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.Mpaa) + String.IsEmpty(ListItem.VideoResolution) + !String.IsEqual(ListItem.DBTYPE,set)]</visible>
 					<visible>!String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Extended info Button -->
@@ -831,7 +831,7 @@
 					<onclick condition="[!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)">SetFocus(50)</onclick>
 					<usealttexture>!String.IsEmpty(Window(12003).Property(extended))</usealttexture>
 					<visible>!String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-					<visible>![!String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.RatingAndVotes) + String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Album) + String.IsEmpty(ListItem.Status) + String.IsEmpty(ListItem.OriginalTitle) + String.IsEmpty(ListItem.Director) + String.IsEmpty(ListItem.Writer) + String.IsEmpty(ListItem.Studio) + String.IsEmpty(ListItem.Country) + String.IsEmpty(ListItem.Premiered) + String.IsEmpty(ListItem.Genre) + String.IsEmpty(ListItem.Set) + String.IsEmpty(ListItem.Duration) + String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.Mpaa) + String.IsEmpty(ListItem.VideoResolution) + !String.IsEqual(ListItem.DBTYPE,set)]</visible>
+					<visible>![String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !String.IsEqual(ListItem.DBTYPE,set)]</visible>
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<!-- Cast Button -->
@@ -936,14 +936,6 @@
 					<onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,movie)]</visible>
 					<visible>!Skin.HasSetting(KioskMode)</visible>
-				</control>
-				<!-- Cinema Experience Button -->
-				<control type="button" id="24">
-					<width>Auto</width>
-					<label>31066</label>
-					<onclick>Dialog.Close(MovieInformation)</onclick>
-					<onclick>RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
-					<visible>System.HasAddon(script.cinema.experience) + String.IsEqual(ListItem.DBTYPE,movie)</visible>
 				</control>
 
 			</control>
