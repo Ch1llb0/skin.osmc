@@ -1529,7 +1529,7 @@
 				</control>
 				
 				<control type="grouplist" id="3002">
-					<include>SubMenu_coords3</include>
+					<include>SubMenu_coords4</include>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onback>50</onback>
@@ -1544,7 +1544,7 @@
 				
 					<!-- List 50 -->
 					<control type="togglebutton" id="180">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[535]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
 						<usealttexture>Control.IsVisible(50)</usealttexture>
@@ -1554,7 +1554,7 @@
 					
 					<!-- List 51 -->
 					<control type="togglebutton" id="181">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[535]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
 						<usealttexture>Control.IsVisible(51)</usealttexture>
@@ -1564,7 +1564,7 @@
 					
 					<!-- List info 511 -->
 					<control type="togglebutton" id="182">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31117]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31117]</altlabel>
 						<usealttexture>Control.IsVisible(511)</usealttexture>
@@ -1574,7 +1574,7 @@
 					
 					<!-- Wide 52 -->
 					<control type="togglebutton" id="183">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31241]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
 						<usealttexture>Control.IsVisible(52)</usealttexture>
@@ -1584,7 +1584,7 @@
 					
 					<!-- Wide low 521 -->
 					<control type="togglebutton" id="184">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31112]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
 						<usealttexture>Control.IsVisible(521)</usealttexture>
@@ -1594,7 +1594,7 @@
 					
 					<!-- Wide low info 522 -->
 					<control type="togglebutton" id="185">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31392]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
 						<usealttexture>Control.IsVisible(522)</usealttexture>
@@ -1604,7 +1604,7 @@
 					
 					<!-- Wide 523 -->
 					<control type="togglebutton" id="186">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31241]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
 						<usealttexture>Control.IsVisible(523)</usealttexture>
@@ -1614,7 +1614,7 @@
 					
 					<!-- Wide low (videos) 524 -->
 					<control type="togglebutton" id="187">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31112]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
 						<usealttexture>Control.IsVisible(524)</usealttexture>
@@ -1624,7 +1624,7 @@
 					
 					<!-- Wide low info (videos) 525 -->
 					<control type="togglebutton" id="188">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31392]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
 						<usealttexture>Control.IsVisible(525)</usealttexture>
@@ -1634,7 +1634,7 @@
 					
 					<!-- Wall 53 -->
 					<control type="togglebutton" id="189">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31078]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
 						<usealttexture>Control.IsVisible(53)</usealttexture>
@@ -1644,7 +1644,7 @@
 					
 					<!-- Wall info 531 -->
 					<control type="togglebutton" id="190">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31133]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
 						<usealttexture>Control.IsVisible(531)</usealttexture>
@@ -1654,7 +1654,7 @@
 					
 					<!-- Wall small 532 -->
 					<control type="togglebutton" id="191">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31114]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
 						<usealttexture>Control.IsVisible(532)</usealttexture>
@@ -1664,7 +1664,7 @@
 					
 					<!-- Wall small info 533 -->
 					<control type="togglebutton" id="192">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31116]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
 						<usealttexture>Control.IsVisible(533)</usealttexture>
@@ -1674,7 +1674,7 @@
 					
 					<!-- Wall low 534 -->
 					<control type="togglebutton" id="193">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31113]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
 						<usealttexture>Control.IsVisible(534)</usealttexture>
@@ -1684,7 +1684,7 @@
 					
 					<!-- Wall 535 -->
 					<control type="togglebutton" id="194">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31078]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
 						<usealttexture>Control.IsVisible(535)</usealttexture>
@@ -1694,7 +1694,7 @@
 					
 					<!-- Wall info (videos) 536 -->
 					<control type="togglebutton" id="195">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31133]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
 						<usealttexture>Control.IsVisible(536)</usealttexture>
@@ -1704,7 +1704,7 @@
 					
 					<!-- Wall small 537 -->
 					<control type="togglebutton" id="196">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31114]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
 						<usealttexture>Control.IsVisible(537)</usealttexture>
@@ -1714,7 +1714,7 @@
 					
 					<!-- Wall small info (videos) 538 -->
 					<control type="togglebutton" id="197">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31116]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
 						<usealttexture>Control.IsVisible(538)</usealttexture>
@@ -1724,7 +1724,7 @@
 					
 					<!-- Wall low (videos) 539 -->
 					<control type="togglebutton" id="198">
-						<include>SubMenu_coords4</include>
+						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31113]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
 						<usealttexture>Control.IsVisible(539)</usealttexture>
