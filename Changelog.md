@@ -6,6 +6,7 @@
 
 _New_
 - support Omega skin engine features
+- add new view type selection dialog
 
 ---
 
@@ -567,6 +568,9 @@ Includes_MediaFlags.xml:
 
 Includes_SubMenu.xml:
 - remove deprecated favourites dialog related includes
+- adjust sub menu view button to open new view type selection dialog
+- add new ViewMenu include for additional view type dialog
+- adjust sub menu indicators to not show when new view type selection dialog is visible
 
 Includes_Widgets.xml:
 - add new browse tag to widget content tags to prevent "More..." item from showin

@@ -52,6 +52,8 @@
 			</control>
 		</control>
 		
+		<include>ViewMenu</include>
+		
 	</include>
 	
 	<!-- Addon browser sub menu -->
@@ -76,7 +78,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
@@ -168,7 +170,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
@@ -279,7 +281,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
@@ -370,7 +372,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
@@ -496,7 +498,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
@@ -691,7 +693,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
@@ -1223,7 +1225,7 @@
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
+				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1) + ![Container.Content(videos) + Skin.HasSetting(FixedVideosView)]</visible>
 			</control>
 
@@ -1495,6 +1497,248 @@
 		</control>
 	</include>
 
+	<!-- View menu -->
+	<include name="ViewMenu">
+		<control type="group" id="9003">
+			<include>NotificationDepth</include>
+			<visible>!Skin.HasSetting(KioskMode)</visible>
+			
+			<!-- Window dim overlay -->
+			<control type="image">
+				<include>BackgroundDepth</include>
+				<include>FullscreenDimensions</include>
+				<texture colordiffuse="$VAR[DarkenColor]">common/DimOverlay.png</texture>
+				<visible>ControlGroup(9003).HasFocus</visible>
+				<include>VisibleFadeAnimation</include>
+			</control>
+			
+			<control type="group">
+				<include>SubMenu_coords1</include>
+				<animation effect="slide" start="0,0" end="460,0" time="200" condition="ControlGroup(9003).HasFocus">Conditional</animation>
+				
+				<!-- Hidden togglebutton for mouse control -->
+				<control type="togglebutton">
+					<include>SubMenu_coords2</include>
+					<texturefocus>noop</texturefocus>
+				</control>
+
+				<!-- Background -->
+				<control type="image">
+					<include>SubMenu_coords2</include>
+					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				</control>
+				
+				<control type="grouplist" id="3002">
+					<include>SubMenu_coords3</include>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onback>50</onback>
+					<include>SubMenuResetScroll</include>
+					<scrolltime>200</scrolltime>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+
+					<include content="SubMenuAnimation">
+						<param name="containerID">3002</param>
+					</include>
+				
+					<!-- List 50 -->
+					<control type="togglebutton" id="180">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[535]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
+						<usealttexture>Control.IsVisible(50)</usealttexture>
+						<onclick>Container.SetViewMode(50)</onclick>
+						<visible>Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | ![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | Container.Content(addons) | Container.Content(albums) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images)]</visible>
+					</control>
+					
+					<!-- List 51 -->
+					<control type="togglebutton" id="181">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[535]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
+						<usealttexture>Control.IsVisible(51)</usealttexture>
+						<onclick>Container.SetViewMode(51)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums) | Container.Content(videos) | Container.Content(addons) | Container.Content(images) | Container.Content(games)</visible>
+					</control>
+					
+					<!-- List info 511 -->
+					<control type="togglebutton" id="182">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31117]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31117]</altlabel>
+						<usealttexture>Control.IsVisible(511)</usealttexture>
+						<onclick>Container.SetViewMode(511)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos)</visible>
+					</control>
+					
+					<!-- Wide 52 -->
+					<control type="togglebutton" id="183">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31241]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
+						<usealttexture>Control.IsVisible(52)</usealttexture>
+						<onclick>Container.SetViewMode(52)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wide low 521 -->
+					<control type="togglebutton" id="184">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31112]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
+						<usealttexture>Control.IsVisible(521)</usealttexture>
+						<onclick>Container.SetViewMode(521)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wide low info 522 -->
+					<control type="togglebutton" id="185">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31392]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
+						<usealttexture>Control.IsVisible(522)</usealttexture>
+						<onclick>Container.SetViewMode(522)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wide 523 -->
+					<control type="togglebutton" id="186">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31241]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
+						<usealttexture>Control.IsVisible(523)</usealttexture>
+						<onclick>Container.SetViewMode(523)</onclick>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(videos) | Container.Content(favourites)</visible>
+					</control>
+					
+					<!-- Wide low (videos) 524 -->
+					<control type="togglebutton" id="187">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31112]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
+						<usealttexture>Control.IsVisible(524)</usealttexture>
+						<onclick>Container.SetViewMode(524)</onclick>
+						<visible>Container.Content(videos)</visible>
+					</control>
+					
+					<!-- Wide low info (videos) 525 -->
+					<control type="togglebutton" id="188">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31392]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
+						<usealttexture>Control.IsVisible(525)</usealttexture>
+						<onclick>Container.SetViewMode(525)</onclick>
+						<visible>Container.Content(videos)</visible>
+					</control>
+					
+					<!-- Wall 53 -->
+					<control type="togglebutton" id="189">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31078]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
+						<usealttexture>Control.IsVisible(53)</usealttexture>
+						<onclick>Container.SetViewMode(53)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wall info 531 -->
+					<control type="togglebutton" id="190">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31133]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
+						<usealttexture>Control.IsVisible(531)</usealttexture>
+						<onclick>Container.SetViewMode(531)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wall small 532 -->
+					<control type="togglebutton" id="191">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31114]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
+						<usealttexture>Control.IsVisible(532)</usealttexture>
+						<onclick>Container.SetViewMode(532)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wall small info 533 -->
+					<control type="togglebutton" id="192">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31116]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
+						<usealttexture>Control.IsVisible(533)</usealttexture>
+						<onclick>Container.SetViewMode(533)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wall low 534 -->
+					<control type="togglebutton" id="193">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31113]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
+						<usealttexture>Control.IsVisible(534)</usealttexture>
+						<onclick>Container.SetViewMode(534)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					
+					<!-- Wall 535 -->
+					<control type="togglebutton" id="194">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31078]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
+						<usealttexture>Control.IsVisible(535)</usealttexture>
+						<onclick>Container.SetViewMode(535)</onclick>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(videos) | Container.Content(favourites)</visible>
+					</control>
+					
+					<!-- Wall info (videos) 536 -->
+					<control type="togglebutton" id="195">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31133]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
+						<usealttexture>Control.IsVisible(536)</usealttexture>
+						<onclick>Container.SetViewMode(536)</onclick>
+						<visible>Container.Content(videos)</visible>
+					</control>
+					
+					<!-- Wall small 537 -->
+					<control type="togglebutton" id="196">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31114]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
+						<usealttexture>Control.IsVisible(537)</usealttexture>
+						<onclick>Container.SetViewMode(537)</onclick>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(videos) | Container.Content(favourites)</visible>
+					</control>
+					
+					<!-- Wall small info (videos) 538 -->
+					<control type="togglebutton" id="197">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31116]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
+						<usealttexture>Control.IsVisible(538)</usealttexture>
+						<onclick>Container.SetViewMode(538)</onclick>
+						<visible>Container.Content(videos)</visible>
+					</control>
+					
+					<!-- Wall low (videos) 539 -->
+					<control type="togglebutton" id="198">
+						<include>SubMenu_coords4</include>
+						<label>$LOCALIZE[31113]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
+						<usealttexture>Control.IsVisible(539)</usealttexture>
+						<onclick>Container.SetViewMode(539)</onclick>
+						<visible>Container.Content(videos)</visible>
+					</control>
+					
+				</control>
+				
+			</control>
+		</control>
+		
+	</include>
+	
 	<!-- Sub menu animation -->
 	<include name="SubMenuAnimation">
 		<definition>
@@ -1743,7 +1987,7 @@
 			
 			<control type="group">
 				<visible>!Skin.HasSetting(KioskMode)</visible>
-				<visible>!ControlGroup(9002).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(511) | Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(532) | Control.IsVisible(533) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(536) | Control.IsVisible(537) | Control.IsVisible(538) | Control.IsVisible(539) | Window.IsVisible(addonbrowser) | Window.IsVisible(eventlog) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyWeather.xml)]</visible>
+				<visible>!ControlGroup(9002).HasFocus + !ControlGroup(9003).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(511) | Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(532) | Control.IsVisible(533) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(536) | Control.IsVisible(537) | Control.IsVisible(538) | Control.IsVisible(539) | Window.IsVisible(addonbrowser) | Window.IsVisible(eventlog) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyWeather.xml)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<animation effect="slide" time="200" start="-200,0" end="0,0">WindowOpen</animation>
 				<animation effect="slide" time="200" start="0,0" end="-200,0">WindowClose</animation>
@@ -1755,7 +1999,7 @@
 			
 			<control type="group">
 				<visible>!Skin.HasSetting(KioskMode)</visible>
-				<visible>!ControlGroup(9002).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(523) | Control.IsVisible(524) | Control.IsVisible(525)]</visible>
+				<visible>!ControlGroup(9002).HasFocus + !ControlGroup(9003).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(523) | Control.IsVisible(524) | Control.IsVisible(525)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<animation effect="slide" time="200" start="0,200" end="0,0">WindowOpen</animation>
 				<animation effect="slide" time="200" start="0,0" end="0,200">WindowClose</animation>
