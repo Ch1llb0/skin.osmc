@@ -17,6 +17,6 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]New[/B][CR]- Kodi v21 Omega support</news>
+		<news>[B]New[/B][CR]- support Omega skin engine features[CR]- add new view type selection dialog</news>
 	</extension>
 </addon>
