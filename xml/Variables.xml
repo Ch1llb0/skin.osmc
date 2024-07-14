@@ -804,8 +804,8 @@
 	<!-- Audio/Video Duration -->
 	<variable name="MediaFlagsDuration">
 		<value condition="!Window.IsVisible(MyPlaylist.xml) + !String.IsEmpty(ListItem.Duration) + ![String.StartsWith(ListItem.Size,0) + String.EndsWith(ListItem.Size,0 B)]">$VAR[Duration]$INFO[ListItem.Size, &#8226; $LOCALIZE[289]: ,]</value>
-		<value condition="!Window.IsVisible(MyPlaylist.xml)">$VAR[Duration]</value>
-		<value condition="Window.IsVisible(MyPlaylist.xml)">$INFO[ListItem.Duration]$INFO[Container.Totaltime, / ,]</value>
+		<value condition="!Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyPlaylist.xml) + !Integer.IsGreater(Container.NumItems,1)">$VAR[Duration]</value>
+		<value condition="Window.IsVisible(MyPlaylist.xml) + Integer.IsGreater(Container.NumItems,1)">$INFO[ListItem.Duration]$INFO[Container.Totaltime, / ,]</value>
 	</variable>
 	
 	<variable name="Duration">
