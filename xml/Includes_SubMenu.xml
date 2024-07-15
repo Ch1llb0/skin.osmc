@@ -1599,7 +1599,7 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
 						<usealttexture>Control.IsVisible(522)</usealttexture>
 						<onclick>Container.SetViewMode(522)</onclick>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
 					
 					<!-- Wide 523 -->
@@ -1649,7 +1649,7 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
 						<usealttexture>Control.IsVisible(531)</usealttexture>
 						<onclick>Container.SetViewMode(531)</onclick>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
 					
 					<!-- Wall small 532 -->
@@ -1669,7 +1669,7 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
 						<usealttexture>Control.IsVisible(533)</usealttexture>
 						<onclick>Container.SetViewMode(533)</onclick>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
 					
 					<!-- Wall low 534 -->
