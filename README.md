@@ -1,6 +1,6 @@
 # skin.osmc
 
-The default skin for OSMC.
+4:3 edition of the default skin for OSMC.
 
 For further information, check out the wiki here: https://osmc.tv/wiki/general/the-osmc-skin/
 
