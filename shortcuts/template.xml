@@ -394,9 +394,9 @@
 				</include>
 				
 				<!-- Widget onclick -->
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,album)">$VAR[WidgetOnClickAlbum]</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$VAR[WidgetOnClickTVShow]</onclick>
-				<onclick condition="String.IsEqual(ListItem.DBTYPE,set)">$VAR[WidgetOnClickMovieSet]</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,album) + !String.StartsWith(ListItem.FileNameAndPath,plugin://)">$VAR[WidgetOnClickAlbum]</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + !String.StartsWith(ListItem.FileNameAndPath,plugin://)">$VAR[WidgetOnClickTVShow]</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBTYPE,set) + !String.StartsWith(ListItem.FileNameAndPath,plugin://)">$VAR[WidgetOnClickMovieSet]</onclick>
 
 				<itemlayout width="$SKINSHORTCUTS[layoutWidth]" height="$SKINSHORTCUTS[layoutHeight]">
 					<include content="$PYTHON[$SKINSHORTCUTS[primary-art]]">

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.osmc.scope" version="21.0.0" name="OSMC Skin (Scope edition)" provider-name="OSMC">
+<addon id="skin.osmc.scope" version="21.1.0" name="OSMC Skin (Scope edition)" provider-name="OSMC">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
+		<import addon="script.skinshortcuts" version="2.0.3" optional="true"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<!-- <res width="2560" height="1080" aspect="21:9" default="true" folder="xml" /> -->
@@ -17,6 +18,6 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]New[/B][CR]- support Omega skin engine features[CR]- add new view type selection dialog</news>
+		<news>[B]New[/B][CR]- add new notification icon[CR][CR][B]Improved[/B][CR]- add skinshortcuts script as an optional dependency to avoid removal of the addon when marked as unused[CR][CR][B]Fixed[/B][CR]- fix widget onclick options to avoid errors when widgets are pointing to addon directories</news>
 	</extension>
 </addon>
