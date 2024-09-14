@@ -1,6 +1,8 @@
 group:
   repos: |
     osmc/skin.osmc@omega-scope
+    osmc/skin.osmc@omega-21to9
+    osmc/skin.osmc@omega-4to3
   files:
     - source: language/
       dest: language/
