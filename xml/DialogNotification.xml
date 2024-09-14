@@ -18,10 +18,15 @@
 				<include>DialogNotification_coords1</include>
 				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
 			</control>
+			
+			<!-- Default icon -->
+			<control type="image" id="400">
+				<include>DialogNotification_coords2</include>
+			</control>
 
 			<!-- Heading -->
 			<control type="label" id="401">
-				<include>DialogNotification_coords2</include>
+				<include>DialogNotification_coords3</include>
 				<align>left</align>
 				<scroll>True</scroll>
 				<font>Font27</font>
@@ -29,7 +34,7 @@
 
 			<!-- Details -->
 			<control type="fadelabel" id="402">
-				<include>DialogNotification_coords3</include>
+				<include>DialogNotification_coords4</include>
 				<align>left</align>
 				<aligny>top</aligny>
 				<font>Font27-light</font>

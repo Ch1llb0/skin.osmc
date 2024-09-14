@@ -2,7 +2,20 @@
 
 ---
 
-**_v21.0.0_**
+**_v21.1.0_**
+
+_New_
+- add new notification icon
+
+_Improved_
+- add skinshortcuts script as an optional dependency to avoid removal of the addon when marked as unused
+
+_Fixed_
+- fix widget onclick options to avoid errors when widgets are pointing to addon directories
+
+---
+
+**_v21.0.0 - August 2024_**
 
 _New_
 - support Omega skin engine features
@@ -514,82 +527,20 @@ Release
 
 ---
 
-**Changelog v21.0.0**
-
-_remove deprecated favourites dialog_
-_ add new video manager dialog_
-
-Textures.xbt:
-- update textures file with new video versions image files and removed collection image files
+**Changelog v21.1.0**
 
 template.xml:
-- add new browse tag to widget content tags to prevent "More..." item from showing
+- adjust widget onclick options to avoid errors when widgets are pointing to addon directories
 
-Coordinates_DialogGameControllers.xml:
-- adjust and add coordinates includes for new in-game player viewer dialog
+Coordinates_DialogNotification.xml:
+- add coordinates includes for new notification icon
 
-Coordinates_DialogSelect.xml:
-- adjust coordinates includes to show information specific to the video versions selection correctly
-- adjust coordinates includes for new savegame selection
-
-Defaults.xml:
-- add new texturesliderbardisabled and textureslidernibdisabled tags to sliderex and slider controls
-
-DialogGameControllers.xml:
-- adjust includes and include conditions for new in-game player viewer dialog
-
-DialogSeekBar.xml:
-- adjust visibility condition to incorporate new in-game save and load dialog
-- add new texturesliderbardisabled and textureslidernibdisabled tags to the slider control
-
-DialogSelect.xml:
-- adjust dialog for new savegame selection
-
-DialogVideoInfo.xml:
-- adjust video info to use new video witdth and video height info labels
-- add new video versions and extras buttons
-
-GameOSD.xml:
-- adjust visibility conditions to incorporate new in-game save and load dialog
-- add new in-game save and load button
-- remove deprecated game controller ports button
-
-Includes.xml:
-- remove deprecated favourites dialog include file
-- remove deprecated Includes_Home include file
-- add new video manager dialog include file
-
-Includes_GameControllers.xml:
-- add new player viewer dialog
-
-Includes_MediaFlags.xml:
-- adjust video info to use new video witdth and video height info labels
-- adjust visibility condition of media flags for them to show correctly independent of content type
-
-Includes_SubMenu.xml:
-- remove deprecated favourites dialog related includes
-- adjust sub menu view button to open new view type selection dialog
-- add new ViewMenu include for additional view type dialog
-- adjust sub menu indicators to not show when new view type selection dialog is visible
-
-Includes_Widgets.xml:
-- add new browse tag to widget content tags to prevent "More..." item from showin
-
-MusicOSD.xml:
-- add new texturesliderbardisabled and textureslidernibdisabled tags to the slider control
-
-skinshortcuts-static.xml:
-- add new browse tag to widget content tags to prevent "More..." item from showing
-
-Variables.xml:
-- add new VideoManagerImages variable
-- add new variable conditions to HeadingLabelSecondary and ContentType variables for new video versions windows
-- remove deprecated ContentTypeFavourites variable
-- add new variable condition to VideoPlayerTitle, VideoInfoLabel and Label1 variables for new video versions feature
-- adjsut VideoResolution variable to only use new video witdth and video height info labels
+DialogNotification.xml:
+- add new notification icon
 
 addon.xml:
-- bump version to 21.0.0
+- bump version to 21.1.0
+- add skinshortcuts script as an optional dependency to avoid removal of the addon when marked as unused
 - update changelog
 
 Changelog.md:
