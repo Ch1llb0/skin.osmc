@@ -1318,8 +1318,8 @@ msgid "Amount of dimming of non-focused images such as cover art in library view
 msgstr "Hoeveelheid dimmen van onscherpe afbeeldingen zoals cover art in bibliotheekweergaven en widgets (standaard: 100%)[CR]Beschikbare opties: 0%, 33%, 66%, 100%, 133%"
 
 msgctxt "#31326"
-msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
-msgstr "Lettergrootte van plot- en omschrijvingteksten in muur- en lijstinfoweergaven en OSD-infodialogen (standaard: S)[CR]Beschikbare opties: S, M, L"
+msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
+msgstr ""
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
@@ -1784,6 +1784,10 @@ msgstr "Actie die wordt gebruikt bij het selecteren van een item in de TV-serie 
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr "Actie die wordt gebruikt bij het selecteren van een item in de filmset widget in het hoofdmenu (Standaard: Bladeren naar)"
+
+#~ msgctxt "#31326"
+#~ msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
+#~ msgstr "Lettergrootte van plot- en omschrijvingteksten in muur- en lijstinfoweergaven en OSD-infodialogen (standaard: S)[CR]Beschikbare opties: S, M, L"
 
 #~ msgctxt "#31188"
 #~ msgid "Movie Sets"

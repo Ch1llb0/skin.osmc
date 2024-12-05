@@ -1318,8 +1318,8 @@ msgid "Amount of dimming of non-focused images such as cover art in library view
 msgstr "Velikost ztmavení neaktivních obrázků, například obálek v zobrazeních knihoven a widgetů (výchozí: 100%) [CR] Dostupné možnosti: 0%, 33%, 66%, 100%, 133%"
 
 msgctxt "#31326"
-msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
-msgstr "Velikost písma vykreslovaných a popisných textů v informačních pohledech na zeď a seznam, stejně jako informační dialogová okna OSD (výchozí: S) [CR] Dostupné možnosti: S, M, L"
+msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
+msgstr ""
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
@@ -1784,6 +1784,10 @@ msgstr "Akce použitá při výběru položky widgetu televizního pořadu v hla
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr "Akce použitá při výběru položky widgetu filmové sady v hlavní nabídce (Výchozí: Procházet do)"
+
+#~ msgctxt "#31326"
+#~ msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
+#~ msgstr "Velikost písma vykreslovaných a popisných textů v informačních pohledech na zeď a seznam, stejně jako informační dialogová okna OSD (výchozí: S) [CR] Dostupné možnosti: S, M, L"
 
 #~ msgctxt "#31188"
 #~ msgid "Movie Sets"

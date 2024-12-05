@@ -1318,8 +1318,8 @@ msgid "Amount of dimming of non-focused images such as cover art in library view
 msgstr "Quantità di oscuramento delle immagini non focalizzate, come la copertina nelle visualizzazioni libreria e nei widget (default: 100%)[CR]Opzioni disponibili: 0%, 33%, 66%, 100%, 133%"
 
 msgctxt "#31326"
-msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
-msgstr "Dimensione del carattere dei testi di trama e descrizione nella visualizzazione dell'elenco episodi, nonché nelle finestre di dialogo delle informazioni (default: S)[CR]Opzioni disponibili: S, M, L"
+msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
+msgstr ""
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
@@ -1784,6 +1784,10 @@ msgstr "Azione eseguita quando si seleziona uno show TV nel menù principale (De
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr "Azione eseguita quando si seleziona un film nel menù principale (Default: Esplora)"
+
+#~ msgctxt "#31326"
+#~ msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
+#~ msgstr "Dimensione del carattere dei testi di trama e descrizione nella visualizzazione dell'elenco episodi, nonché nelle finestre di dialogo delle informazioni (default: S)[CR]Opzioni disponibili: S, M, L"
 
 #~ msgctxt "#31188"
 #~ msgid "Movie Sets"
