@@ -1568,7 +1568,7 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
 						<usealttexture>Control.IsVisible(50)</usealttexture>
 						<onclick>Container.SetViewMode(50)</onclick>
-						<visible>Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | ![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | Container.Content(addons) | Container.Content(albums) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images)]</visible>
+						<visible>Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | ![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | Container.Content(addons) | Container.Content(albums) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images) | Container.Content(games)]</visible>
 					</control>
 					
 					<!-- List 51 -->
@@ -1634,7 +1634,7 @@
 						<onclick>Container.SetViewMode(523)</onclick>
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWide)">Skin.SetBool(DefaultVideosViewWide)</onclick>
-						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 					
 					<!-- Wide low (videos) 524 -->
@@ -1720,7 +1720,7 @@
 						<onclick>Container.SetViewMode(535)</onclick>
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWall)">Skin.SetBool(DefaultVideosViewWall)</onclick>
-						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 					
 					<!-- Wall info (videos) 536 -->
@@ -1744,7 +1744,7 @@
 						<onclick>Container.SetViewMode(537)</onclick>
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWallsmall)">Skin.SetBool(DefaultVideosViewWallsmall)</onclick>
-						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 					
 					<!-- Wall small info (videos) 538 -->

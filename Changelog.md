@@ -4,6 +4,9 @@
 
 **_v21.2.0_**
 
+_New_
+- add new views for images section
+
 _Improved_
 - adjust video addon views to work with multiple content types (videos, episodes, movies)
 - add fixed video addon views setting to side menu
@@ -537,6 +540,9 @@ Release
 
 **Changelog v21.2.0**
 
+Coordinates_MyPics.xml:
+- add new coordinates includes for new scrollbars
+
 Coordinates_Viewtype523.xml:
 - add new content type image includes
 
@@ -568,6 +574,13 @@ Includes.xml:
 Includes_SubMenu.xml:
 - add fixed video addon views setting to side menu
 - adjust views menu to work together with fixed video addon views setting
+- add new images content type in views menu for viewtypes 523, 535 and 537
+
+MyPics.xml:
+- add new viewtypes
+- change background include to WindowBackgroundImageMultiView
+- add new viewtype includes
+- add new scrollbars
 
 Variables.xml:
 - add new DefaultViewSettings variable for reworked views menu buttons
@@ -582,6 +595,7 @@ Viewtype511.xml:
 
 Viewtype523.xml:
 - adjust visibility conditions of list container to work with multiple with multiple video addons content type
+- adjust conditional visibility of list control with new images content type
 
 Viewtype524xml:
 - adjust visibility conditions of list container to work with multiple with multiple video addons content type
@@ -591,12 +605,14 @@ Viewtype525.xml:
 
 Viewtype535.xml:
 - adjust visibility conditions of panel container to work with multiple with multiple video addons content type
+- adjust conditional visibility of panel control with new images content type
 
 Viewtype536.xml:
 - adjust visibility conditions of panel container and info controls to work with multiple with multiple video addons content type
 
 Viewtype537.xml:
 - adjust visibility conditions of panel container to work with multiple with multiple video addons content type
+- adjust conditional visibility of panel control with new images content type
 
 Viewtype538.xml:
 - adjust visibility conditions of panel container and info controls to work with multiple with multiple video addons content type
