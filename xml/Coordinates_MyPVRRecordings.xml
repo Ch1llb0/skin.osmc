@@ -127,28 +127,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords6_4:3</include>
 	</include>
 	<include name="MyPVRRecordings_coords6_16:9">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1050</width>
-		<height>720</height>
+		<height>400</height>
 	</include>
 	<include name="MyPVRRecordings_coords6_21:9">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1690</width>
-		<height>720</height>
+		<height>400</height>
 	</include>
 	<include name="MyPVRRecordings_coords6_21:9_masked">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1690</width>
-		<height>720</height>
+		<height>400</height>
 	</include>
 	<include name="MyPVRRecordings_coords6_4:3">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1050</width>
-		<height>720</height>
+		<height>400</height>
 	</include>
 	
 	<include name="MyPVRRecordings_coords7">
@@ -158,6 +146,37 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords7_4:3</include>
 	</include>
 	<include name="MyPVRRecordings_coords7_16:9">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1050</width>
+		<height>720</height>
+	</include>
+	<include name="MyPVRRecordings_coords7_21:9">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1690</width>
+		<height>720</height>
+	</include>
+	<include name="MyPVRRecordings_coords7_21:9_masked">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1690</width>
+		<height>720</height>
+	</include>
+	<include name="MyPVRRecordings_coords7_4:3">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1050</width>
+		<height>720</height>
+	</include>
+	
+	<include name="MyPVRRecordings_coords8">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRRecordings_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRRecordings_coords8_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRRecordings_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords8_4:3</include>
+	</include>
+	<include name="MyPVRRecordings_coords8_16:9">
 		<itemlayout height="90" width="1050">
 			<control type="label">
 				<left>32</left>
@@ -213,7 +232,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="MyPVRRecordings_coords7_21:9">
+	<include name="MyPVRRecordings_coords8_21:9">
 		<itemlayout height="90" width="1690">
 			<control type="label">
 				<left>32</left>
@@ -269,7 +288,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="MyPVRRecordings_coords7_21:9_masked">
+	<include name="MyPVRRecordings_coords8_21:9_masked">
 		<itemlayout height="90" width="1690">
 			<control type="label">
 				<left>32</left>
@@ -325,7 +344,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="MyPVRRecordings_coords7_4:3">
+	<include name="MyPVRRecordings_coords8_4:3">
 		<itemlayout height="90" width="570">
 			<control type="label">
 				<left>32</left>
@@ -382,13 +401,13 @@
 		</itemlayout>
 	</include>
 	
-	<include name="MyPVRRecordings_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRRecordings_coords8_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRRecordings_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRRecordings_coords8_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords8_4:3</include>
+	<include name="MyPVRRecordings_coords9">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRRecordings_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRRecordings_coords9_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRRecordings_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords9_4:3</include>
 	</include>
-	<include name="MyPVRRecordings_coords8_16:9">
+	<include name="MyPVRRecordings_coords9_16:9">
 		<focusedlayout height="180" width="1050">
 			<control type="group">
 				<include content="NonFocusWindowFadeAnimation">
@@ -477,7 +496,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="MyPVRRecordings_coords8_21:9_masked">
+	<include name="MyPVRRecordings_coords9_21:9_masked">
 		<focusedlayout height="180" width="1690">
 			<control type="group">
 				<include content="NonFocusWindowFadeAnimation">
@@ -566,7 +585,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="MyPVRRecordings_coords8_21:9">
+	<include name="MyPVRRecordings_coords9_21:9">
 		<focusedlayout height="180" width="1690">
 			<control type="group">
 				<include content="NonFocusWindowFadeAnimation">
@@ -655,7 +674,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="MyPVRRecordings_coords8_4:3">
+	<include name="MyPVRRecordings_coords9_4:3">
 		<focusedlayout height="180" width="570">
 			<control type="group">
 				<include content="NonFocusWindowFadeAnimation">
@@ -745,31 +764,31 @@
 		</focusedlayout>
 	</include>
 	
-	<include name="MyPVRRecordings_coords9">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRRecordings_coords9_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRRecordings_coords9_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRRecordings_coords9_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords9_4:3</include>
+	<include name="MyPVRRecordings_coords10">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRRecordings_coords10_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRRecordings_coords10_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRRecordings_coords10_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRRecordings_coords10_4:3</include>
 	</include>
-	<include name="MyPVRRecordings_coords9_16:9">
+	<include name="MyPVRRecordings_coords10_16:9">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-	<include name="MyPVRRecordings_coords9_21:9_masked">
+	<include name="MyPVRRecordings_coords10_21:9_masked">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-	<include name="MyPVRRecordings_coords9_21:9">
+	<include name="MyPVRRecordings_coords10_21:9">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-	<include name="MyPVRRecordings_coords9_4:3">
+	<include name="MyPVRRecordings_coords10_4:3">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
