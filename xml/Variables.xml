@@ -132,6 +132,20 @@
 		<value>$VAR[OverlayColorNF]</value>
 	</variable>
 	
+	<!-- Default forced views settings -->
+	<variable name="DefaultViewSettings">
+		<value condition="Skin.HasSetting(DefaultVideosViewList)">Skin.Reset(DefaultVideosViewList)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">Skin.Reset(DefaultVideosViewListinfo)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWide)">Skin.Reset(DefaultVideosViewWide)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">Skin.Reset(DefaultVideosViewWidelow)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">Skin.Reset(DefaultVideosViewWidelowinfo)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWall)">Skin.Reset(DefaultVideosViewWall)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallinfo)">Skin.Reset(DefaultVideosViewWallinfo)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallsmall)">Skin.Reset(DefaultVideosViewWallsmall)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.Reset(DefaultVideosViewWallsmallinfo)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.Reset(DefaultVideosViewWallsmallinfo)</value>
+	</variable>
+	
 	<!-- Busy spinner -->
 	<variable name="BusySpinner">
 		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.gif</value>
@@ -208,7 +222,9 @@
 		<value condition="[Container.Content(movies) | [String.StartsWith(Container.FolderPath,videodb://movies/) + !String.EndsWith(Container.FolderPath,videodb://movies/)] | [String.StartsWith(Container.FolderPath,library://video/movies) + !String.EndsWith(Container.FolderPath,library://video/movies/)]] + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[Container.FolderName]</value>
 		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[Container.FolderName] ($LOCALIZE[24069])</value>
 		<value condition="[String.StartsWith(Container.FolderPath,library://video/tvshows/) + String.EndsWith(Container.FolderPath,library://video/tvshows/)] | [String.StartsWith(Container.FolderPath,videodb://tvshows/titles/) + String.EndsWith(Container.FolderPath,videodb://tvshows/titles/)]"></value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | [String.StartsWith(Container.FolderPath,videodb://tvshows/) + !String.EndsWith(Container.FolderPath,videodb://tvshows/)] | [String.StartsWith(Container.FolderPath,library://video/tvshows/) + !String.EndsWith(Container.FolderPath,library://video/tvshows/)] | String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[Container.FolderName]</value>
+		<value condition="Container.Content(episodes) + !String.IsEqual(Container.ShowTitle,Container.FolderName) + !String.IsEqual(Container.FolderName,$LOCALIZE[20366])">$INFO[Container.ShowTitle,, - ]$INFO[Container.FolderName]</value>
+		<value condition="Container.Content(episodes) + String.IsEqual(Container.FolderName,$LOCALIZE[20366])">$INFO[Container.ShowTitle]</value>
+		<value condition="Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | [String.StartsWith(Container.FolderPath,videodb://tvshows/) + !String.EndsWith(Container.FolderPath,videodb://tvshows/)] | [String.StartsWith(Container.FolderPath,library://video/tvshows/) + !String.EndsWith(Container.FolderPath,library://video/tvshows/)] | String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[Container.FolderName]</value>
 		<value condition="String.StartsWith(Container.FolderPath,library://video/musicvideos/) + String.EndsWith(Container.FolderPath,library://video/musicvideos/)"></value>
 		<value condition="Container.Content(musicvideos) | [String.StartsWith(Container.FolderPath,videodb://musicvideos/) + !String.EndsWith(Container.FolderPath,videodb://musicvideos/)] | [String.StartsWith(Container.FolderPath,library://video/musicvideos) + !String.EndsWith(Container.FolderPath,library://video/musicvideos/)]">$INFO[Container.FolderName]</value>
 		<value condition="Window.IsVisible(TVChannels)">$INFO[Control.GetLabel(29)]</value>
@@ -254,16 +270,16 @@
 	
 	<!-- Content type label -->
 	<variable name="ContentType">
-		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20338]</value>
-		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[342]</value>
-		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[40012]</value>
-		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[40013]</value>
+		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20338]</value>
+		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[342]</value>
+		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[40012]</value>
+		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[40013]</value>
 		<value condition="Container.Content(tvshows) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20364]</value>
 		<value condition="Container.Content(tvshows) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20343]</value>
 		<value condition="Container.Content(seasons) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20373]</value>
 		<value condition="Container.Content(seasons) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[33054]</value>
-		<value condition="Container.Content(episodes) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20359]</value>
-		<value condition="Container.Content(episodes) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20360]</value>
+		<value condition="Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20359]</value>
+		<value condition="Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20360]</value>
 		<value condition="Container.Content(musicvideos) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20391]</value>
 		<value condition="Container.Content(musicvideos) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20389]</value>
 		<value condition="Container.Content(genres) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[515]</value>
@@ -298,8 +314,8 @@
 		<value condition="[Window.IsVisible(RadioGuide) | Window.IsVisible(TVGuide) | Window.IsVisible(TVChannels) | Window.IsVisible(RadioRecordings)] + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[19019]</value>
 		<value condition="Container.Content(games) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31238]</value>
 		<value condition="Container.Content(games) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[15016]</value>
-		<value condition="[Container.Content(videos) | Window.IsVisible(VideoPlaylist)] + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[157]</value>
-		<value condition="[Container.Content(videos) | Window.IsVisible(VideoPlaylist)] + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[10025]</value>
+		<value condition="[Container.Content(videos) | [Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Window.IsVisible(VideoPlaylist)] + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[157]</value>
+		<value condition="[Container.Content(videos) | [Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Window.IsVisible(VideoPlaylist)] + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[10025]</value>
 		<value condition="String.StartsWith(Container.FolderPath,addons://sources/game) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31239]</value>
 		<value condition="String.StartsWith(Container.FolderPath,addons://sources/game) + !Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[35049]</value>
 		<value condition="Container.Content(favourites) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31015]</value>
