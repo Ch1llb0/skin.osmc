@@ -10,6 +10,7 @@ _New_
 _Improved_
 - adjust video addon views to work with multiple content types (videos, episodes, movies)
 - add fixed video addon views setting to side menu
+- add XL font to plot/description text size setting
 
 ---
 
@@ -540,8 +541,51 @@ Release
 
 **Changelog v21.2.0**
 
+strings.po:
+- adjust plot/description setting description to mention new XL font size (31326)
+
+
+Coordinates_DialogPVRChannelGuide.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_DialogPVRChannelsOSD.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_MusicVisualisation.xml:
+- add coordinates includes for new XL plot font textbox control
+
 Coordinates_MyPics.xml:
 - add new coordinates includes for new scrollbars
+
+Coordinates_MyPVRChannels.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPVRGuide.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPVRRecordings.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPVRSearch.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Settings.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_SettingsCategory.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_SkinSettings.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_VideoFullScreen.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype511.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype522.xml:
+- adjust coordinates includes for new XL plot font textbox control
 
 Coordinates_Viewtype523.xml:
 - add new content type image includes
@@ -551,12 +595,20 @@ Coordinates_Viewtype524.xml:
 
 Coordinates_Viewtype525.xml:
 - add new content type image includes
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype531.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype533.xml:
+- adjust coordinates includes for new XL plot font textbox control
 
 Coordinates_Viewtype535.xml:
 - add new content type image includes
 
 Coordinates_Viewtype536.xml:
 - add new content type image includes
+- adjust coordinates includes for new XL plot font textbox control
 
 Coordinates_Viewtype537.xml:
 - add new content type image includes
