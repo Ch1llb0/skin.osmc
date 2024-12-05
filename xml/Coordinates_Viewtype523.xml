@@ -75,6 +75,15 @@
 				<param name="coords2">Viewtype523_coords8</param>
 				<param name="coords3">Viewtype523_coords9</param>
 			</include>
+			<!-- Image - Images -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultPicture.png</param>
+				<param name="visible">Container.Content(images)</param>
+				<param name="id">523</param>
+				<param name="coords">Viewtype523_coords7</param>
+				<param name="coords2">Viewtype523_coords8</param>
+				<param name="coords3">Viewtype523_coords9</param>
+			</include>
 			<!-- Image - Games -->
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultAddonGame.png</param>
@@ -146,6 +155,15 @@
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultArtist.png</param>
 				<param name="visible">Container.Content(artists)</param>
+				<param name="id">523</param>
+				<param name="coords">Viewtype523_coords7</param>
+				<param name="coords2">Viewtype523_coords8</param>
+				<param name="coords3">Viewtype523_coords9</param>
+			</include>
+			<!-- Image - Images -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultPicture.png</param>
+				<param name="visible">Container.Content(images)</param>
 				<param name="id">523</param>
 				<param name="coords">Viewtype523_coords7</param>
 				<param name="coords2">Viewtype523_coords8</param>
@@ -227,6 +245,15 @@
 				<param name="coords2">Viewtype523_coords8</param>
 				<param name="coords3">Viewtype523_coords9</param>
 			</include>
+			<!-- Image - Images -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultPicture.png</param>
+				<param name="visible">Container.Content(images)</param>
+				<param name="id">523</param>
+				<param name="coords">Viewtype523_coords7</param>
+				<param name="coords2">Viewtype523_coords8</param>
+				<param name="coords3">Viewtype523_coords9</param>
+			</include>
 			<!-- Image - Games -->
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultAddonGame.png</param>
@@ -298,6 +325,15 @@
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultArtist.png</param>
 				<param name="visible">Container.Content(artists)</param>
+				<param name="id">523</param>
+				<param name="coords">Viewtype523_coords7</param>
+				<param name="coords2">Viewtype523_coords8</param>
+				<param name="coords3">Viewtype523_coords9</param>
+			</include>
+			<!-- Image - Images -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultPicture.png</param>
+				<param name="visible">Container.Content(images)</param>
 				<param name="id">523</param>
 				<param name="coords">Viewtype523_coords7</param>
 				<param name="coords2">Viewtype523_coords8</param>
@@ -388,6 +424,15 @@
 					<param name="coords2">Viewtype523_coords11</param>
 					<param name="coords3">Viewtype523_coords12</param>
 				</include>
+				<!-- Image - Images -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultPicture.png</param>
+					<param name="visible">Container.Content(images)</param>
+					<param name="id">523</param>
+					<param name="coords">Viewtype523_coords10</param>
+					<param name="coords2">Viewtype523_coords11</param>
+					<param name="coords3">Viewtype523_coords12</param>
+				</include>
 				<!-- Image - Games -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultAddonGame.png</param>
@@ -462,6 +507,15 @@
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultArtist.png</param>
 					<param name="visible">Container.Content(artists)</param>
+					<param name="id">523</param>
+					<param name="coords">Viewtype523_coords10</param>
+					<param name="coords2">Viewtype523_coords11</param>
+					<param name="coords3">Viewtype523_coords12</param>
+				</include>
+				<!-- Image - Images -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultPicture.png</param>
+					<param name="visible">Container.Content(images)</param>
 					<param name="id">523</param>
 					<param name="coords">Viewtype523_coords10</param>
 					<param name="coords2">Viewtype523_coords11</param>
@@ -546,6 +600,15 @@
 					<param name="coords2">Viewtype523_coords11</param>
 					<param name="coords3">Viewtype523_coords12</param>
 				</include>
+				<!-- Image - Images -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultPicture.png</param>
+					<param name="visible">Container.Content(images)</param>
+					<param name="id">523</param>
+					<param name="coords">Viewtype523_coords10</param>
+					<param name="coords2">Viewtype523_coords11</param>
+					<param name="coords3">Viewtype523_coords12</param>
+				</include>
 				<!-- Image - Games -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultAddonGame.png</param>
@@ -620,6 +683,15 @@
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultArtist.png</param>
 					<param name="visible">Container.Content(artists)</param>
+					<param name="id">523</param>
+					<param name="coords">Viewtype523_coords10</param>
+					<param name="coords2">Viewtype523_coords11</param>
+					<param name="coords3">Viewtype523_coords12</param>
+				</include>
+				<!-- Image - Images -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultPicture.png</param>
+					<param name="visible">Container.Content(images)</param>
 					<param name="id">523</param>
 					<param name="coords">Viewtype523_coords10</param>
 					<param name="coords2">Viewtype523_coords11</param>
