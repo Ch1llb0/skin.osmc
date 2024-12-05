@@ -60,11 +60,20 @@
 					<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,L)</visible>
 				</control>
+				<control type="textbox">
+					<include>DialogPVRChannelsOSD_coords8</include>
+					<align>left</align>
+					<font>Font36</font>
+					<label>$VAR[PVRDescriptionDialogGuide]$INFO[Window(Home).Property(ResetScroll.10608)]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+					<visible>Skin.String(PlotFont,XL)</visible>
+				</control>
 			</control>
 			
 			<!-- Channel group -->
 			<control type="fadelabel">
-				<include>DialogPVRChannelsOSD_coords8</include>
+				<include>DialogPVRChannelsOSD_coords9</include>
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[19141]: ,]</label>
@@ -73,7 +82,7 @@
 
 			<!-- List -->
 			<control type="fixedlist" id="11">
-				<include>DialogPVRChannelsOSD_coords9</include>
+				<include>DialogPVRChannelsOSD_coords10</include>
 				<onleft>60</onleft>
 				<onright>NextChannelGroup</onright>
 				<pagecontrol>60</pagecontrol>
@@ -82,15 +91,15 @@
 				<viewtype label="$LOCALIZE[535]">list</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 
-				<include>DialogPVRChannelsOSD_coords10</include>
-
 				<include>DialogPVRChannelsOSD_coords11</include>
+
+				<include>DialogPVRChannelsOSD_coords12</include>
 
 			</control>
 
 			<!-- Scrollbar (list) -->
 			<control type="scrollbar" id="60">
-				<include>DialogPVRChannelsOSD_coords12</include>
+				<include>DialogPVRChannelsOSD_coords13</include>
 				<onright>11</onright>
 				<onleft>PreviousChannelGroup</onleft>
 				<showonepage>false</showonepage>
@@ -106,11 +115,11 @@
 			
 			<!-- Channel group button indicator -->
 			<control type="image">
-				<include>DialogPVRChannelsOSD_coords13</include>
+				<include>DialogPVRChannelsOSD_coords14</include>
 				<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
 			</control>
 			<control type="image">
-				<include>DialogPVRChannelsOSD_coords14</include>
+				<include>DialogPVRChannelsOSD_coords15</include>
 				<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-right.png</texture>
 			</control>
 

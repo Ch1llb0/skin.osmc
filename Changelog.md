@@ -2,7 +2,19 @@
 
 ---
 
-**_v21.1.0_**
+**_v21.2.0_**
+
+_New_
+- add new views for images section
+
+_Improved_
+- adjust video addon views to work with multiple content types (videos, episodes, movies)
+- add fixed video addon views setting to side menu
+- add XL font to plot/description text size setting
+
+---
+
+**_v21.1.0 - October 2024_**
 
 _New_
 - add new notification icon
@@ -527,20 +539,141 @@ Release
 
 ---
 
-**Changelog v21.1.0**
+**Changelog v21.2.0**
 
-template.xml:
-- adjust widget onclick options to avoid errors when widgets are pointing to addon directories
+strings.po:
+- adjust plot/description setting description to mention new XL font size (31326)
 
-Coordinates_DialogNotification.xml:
-- add coordinates includes for new notification icon
 
-DialogNotification.xml:
-- add new notification icon
+Coordinates_DialogPVRChannelGuide.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_DialogPVRChannelsOSD.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_MusicVisualisation.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPics.xml:
+- add new coordinates includes for new scrollbars
+
+Coordinates_MyPVRChannels.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPVRGuide.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPVRRecordings.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_MyPVRSearch.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Settings.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_SettingsCategory.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_SkinSettings.xml:
+- add coordinates includes for new XL plot font textbox control
+
+Coordinates_VideoFullScreen.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype511.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype522.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype523.xml:
+- add new content type image includes
+
+Coordinates_Viewtype524.xml:
+- add new content type image includes
+
+Coordinates_Viewtype525.xml:
+- add new content type image includes
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype531.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype533.xml:
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype535.xml:
+- add new content type image includes
+
+Coordinates_Viewtype536.xml:
+- add new content type image includes
+- adjust coordinates includes for new XL plot font textbox control
+
+Coordinates_Viewtype537.xml:
+- add new content type image includes
+
+Coordinates_Viewtype538.xml:
+- add new content type image includes
+
+Coordinates_Viewtype539.xml:
+- add new content type image includes
+- fix videos fallback icon
+
+Includes.xml:
+- adjust DefaultView include to work with multiple content types and specifically with video addons
+
+Includes_SubMenu.xml:
+- add fixed video addon views setting to side menu
+- adjust views menu to work together with fixed video addon views setting
+- add new images content type in views menu for viewtypes 523, 535 and 537
+
+MyPics.xml:
+- add new viewtypes
+- change background include to WindowBackgroundImageMultiView
+- add new viewtype includes
+- add new scrollbars
+
+Variables.xml:
+- add new DefaultViewSettings variable for reworked views menu buttons
+- adjust HeadingLabelSecondary variable to show proper information on episodes level (TV show title and season, if useful)
+- adjust ContentType variable to show videos content type when a list of video addon items are shown
+
+Viewtype51.xml:
+- adjust visibility conditions of images and list container to work with multiple with multiple video addons content type
+
+Viewtype511.xml:
+- adjust visibility conditions of images and list container to work with multiple with multiple video addons content type
+
+Viewtype523.xml:
+- adjust visibility conditions of list container to work with multiple with multiple video addons content type
+- adjust conditional visibility of list control with new images content type
+
+Viewtype524xml:
+- adjust visibility conditions of list container to work with multiple with multiple video addons content type
+
+Viewtype525.xml:
+- adjust visibility conditions of list container and info controls to work with multiple with multiple video addons content type
+
+Viewtype535.xml:
+- adjust visibility conditions of panel container to work with multiple with multiple video addons content type
+- adjust conditional visibility of panel control with new images content type
+
+Viewtype536.xml:
+- adjust visibility conditions of panel container and info controls to work with multiple with multiple video addons content type
+
+Viewtype537.xml:
+- adjust visibility conditions of panel container to work with multiple with multiple video addons content type
+- adjust conditional visibility of panel control with new images content type
+
+Viewtype538.xml:
+- adjust visibility conditions of panel container and info controls to work with multiple with multiple video addons content type
+
+Viewtype539.xml:
+- adjust visibility conditions of panel container to work with multiple with multiple video addons content type
 
 addon.xml:
-- bump version to 21.1.0
-- add skinshortcuts script as an optional dependency to avoid removal of the addon when marked as unused
+- bump version to 21.2.0
 - update changelog
 
 Changelog.md:
