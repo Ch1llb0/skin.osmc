@@ -241,13 +241,9 @@
 	</variable>
 	
 	<variable name="PlotFont">
-		<value condition="String.IsEqual(Skin.String(PlotFont),S light)">$LOCALIZE[289] S (light)</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),S)">$LOCALIZE[289] S</value>
-		<value condition="String.IsEqual(Skin.String(PlotFont),M light)">$LOCALIZE[289] M (light)</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),M)">$LOCALIZE[289] M</value>
-		<value condition="String.IsEqual(Skin.String(PlotFont),L light)">$LOCALIZE[289] L (light)</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),L)">$LOCALIZE[289] L</value>
-		<value condition="String.IsEqual(Skin.String(PlotFont),XL light)">$LOCALIZE[289] XL (light)</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),XL)">$LOCALIZE[289] XL</value>
 	</variable>
 	
