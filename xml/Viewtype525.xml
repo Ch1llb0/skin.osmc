@@ -19,7 +19,7 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="$LOCALIZE[31392]">biginfo</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<visible>Container.Content(videos)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
 				<include>DefaultView</include>
 
 				<include>Viewtype525_coords2</include>
@@ -31,7 +31,7 @@
 			<!-- Video info -->
 			<control type="group">
 				<include>Viewtype525_coords4</include>
-				<visible>Container.Content(videos)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
 				
 				<!-- Title -->
 				<control type="fadelabel">
@@ -83,6 +83,15 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
+					</control>
+					<control type="textbox">
+						<include>Viewtype525_coords11</include>
+						<align>left</align>
+						<font>Font36</font>
+						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.525)]</label>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
 			

@@ -53,9 +53,27 @@
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">525</param>
-				<param name="coords">Viewtype525_coords11</param>
-				<param name="coords2">Viewtype525_coords12</param>
-				<param name="coords3">Viewtype525_coords13</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -66,9 +84,27 @@
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">525</param>
-				<param name="coords">Viewtype525_coords11</param>
-				<param name="coords2">Viewtype525_coords12</param>
-				<param name="coords3">Viewtype525_coords13</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -79,9 +115,27 @@
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">525</param>
-				<param name="coords">Viewtype525_coords11</param>
-				<param name="coords2">Viewtype525_coords12</param>
-				<param name="coords3">Viewtype525_coords13</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -92,9 +146,27 @@
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">525</param>
-				<param name="coords">Viewtype525_coords11</param>
-				<param name="coords2">Viewtype525_coords12</param>
-				<param name="coords3">Viewtype525_coords13</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
+				<param name="id">525</param>
+				<param name="coords">Viewtype525_coords12</param>
+				<param name="coords2">Viewtype525_coords13</param>
+				<param name="coords3">Viewtype525_coords14</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -114,9 +186,27 @@
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">525</param>
-					<param name="coords">Viewtype525_coords14</param>
-					<param name="coords2">Viewtype525_coords15</param>
-					<param name="coords3">Viewtype525_coords16</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -130,9 +220,27 @@
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">525</param>
-					<param name="coords">Viewtype525_coords14</param>
-					<param name="coords2">Viewtype525_coords15</param>
-					<param name="coords3">Viewtype525_coords16</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -146,9 +254,27 @@
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">525</param>
-					<param name="coords">Viewtype525_coords14</param>
-					<param name="coords2">Viewtype525_coords15</param>
-					<param name="coords3">Viewtype525_coords16</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -162,9 +288,27 @@
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">525</param>
-					<param name="coords">Viewtype525_coords14</param>
-					<param name="coords2">Viewtype525_coords15</param>
-					<param name="coords3">Viewtype525_coords16</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
+					<param name="id">525</param>
+					<param name="coords">Viewtype525_coords15</param>
+					<param name="coords2">Viewtype525_coords16</param>
+					<param name="coords3">Viewtype525_coords17</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -354,28 +498,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords11_4:3</include>
 	</include>
 	<include name="Viewtype525_coords11_16:9">
-		<bottom>0</bottom>
-		<left>15</left>
-		<width>160</width>
-		<height>160</height>
+		<height>350</height>
 	</include>
 	<include name="Viewtype525_coords11_21:9">
-		<bottom>0</bottom>
-		<left>10</left>
-		<width>160</width>
-		<height>160</height>
+		<height>350</height>
 	</include>
 	<include name="Viewtype525_coords11_21:9_masked">
-		<bottom>0</bottom>
-		<left>10</left>
-		<width>160</width>
-		<height>160</height>
+		<height>350</height>
 	</include>
 	<include name="Viewtype525_coords11_4:3">
-		<bottom>0</bottom>
-		<left>7</left>
-		<width>160</width>
-		<height>160</height>
+		<height>350</height>
 	</include>
 	
 	<include name="Viewtype525_coords12">
@@ -385,28 +517,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords12_4:3</include>
 	</include>
 	<include name="Viewtype525_coords12_16:9">
-		<left>15</left>
 		<bottom>0</bottom>
+		<left>15</left>
 		<width>160</width>
-		<height>18</height>
+		<height>160</height>
 	</include>
 	<include name="Viewtype525_coords12_21:9">
-		<left>10</left>
 		<bottom>0</bottom>
+		<left>10</left>
 		<width>160</width>
-		<height>18</height>
+		<height>160</height>
 	</include>
 	<include name="Viewtype525_coords12_21:9_masked">
-		<left>10</left>
 		<bottom>0</bottom>
+		<left>10</left>
 		<width>160</width>
-		<height>18</height>
+		<height>160</height>
 	</include>
 	<include name="Viewtype525_coords12_4:3">
-		<left>7</left>
 		<bottom>0</bottom>
+		<left>7</left>
 		<width>160</width>
-		<height>18</height>
+		<height>160</height>
 	</include>
 	
 	<include name="Viewtype525_coords13">
@@ -416,20 +548,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords13_4:3</include>
 	</include>
 	<include name="Viewtype525_coords13_16:9">
-		<width>18</width>
-		<centerleft>80</centerleft>
+		<left>15</left>
+		<bottom>0</bottom>
+		<width>160</width>
+		<height>18</height>
 	</include>
 	<include name="Viewtype525_coords13_21:9">
-		<width>18</width>
-		<centerleft>80</centerleft>
+		<left>10</left>
+		<bottom>0</bottom>
+		<width>160</width>
+		<height>18</height>
 	</include>
 	<include name="Viewtype525_coords13_21:9_masked">
-		<width>18</width>
-		<centerleft>80</centerleft>
+		<left>10</left>
+		<bottom>0</bottom>
+		<width>160</width>
+		<height>18</height>
 	</include>
 	<include name="Viewtype525_coords13_4:3">
-		<width>18</width>
-		<centerleft>80</centerleft>
+		<left>7</left>
+		<bottom>0</bottom>
+		<width>160</width>
+		<height>18</height>
 	</include>
 	
 	<include name="Viewtype525_coords14">
@@ -439,28 +579,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords14_4:3</include>
 	</include>
 	<include name="Viewtype525_coords14_16:9">
-		<bottom>0</bottom>
-		<left>0</left>
-		<width>400</width>
-		<height>400</height>
+		<width>18</width>
+		<centerleft>80</centerleft>
 	</include>
 	<include name="Viewtype525_coords14_21:9">
-		<bottom>0</bottom>
-		<left>0</left>
-		<width>400</width>
-		<height>400</height>
+		<width>18</width>
+		<centerleft>80</centerleft>
 	</include>
 	<include name="Viewtype525_coords14_21:9_masked">
-		<bottom>0</bottom>
-		<left>0</left>
-		<width>400</width>
-		<height>400</height>
+		<width>18</width>
+		<centerleft>80</centerleft>
 	</include>
 	<include name="Viewtype525_coords14_4:3">
-		<bottom>0</bottom>
-		<left>1</left>
-		<width>400</width>
-		<height>400</height>
+		<width>18</width>
+		<centerleft>80</centerleft>
 	</include>
 	
 	<include name="Viewtype525_coords15">
@@ -470,28 +602,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords15_4:3</include>
 	</include>
 	<include name="Viewtype525_coords15_16:9">
-		<left>0</left>
 		<bottom>0</bottom>
+		<left>0</left>
 		<width>400</width>
-		<height>44</height>
+		<height>400</height>
 	</include>
 	<include name="Viewtype525_coords15_21:9">
-		<left>0</left>
 		<bottom>0</bottom>
+		<left>0</left>
 		<width>400</width>
-		<height>44</height>
+		<height>400</height>
 	</include>
 	<include name="Viewtype525_coords15_21:9_masked">
-		<left>0</left>
 		<bottom>0</bottom>
+		<left>0</left>
 		<width>400</width>
-		<height>44</height>
+		<height>400</height>
 	</include>
 	<include name="Viewtype525_coords15_4:3">
-		<left>1</left>
 		<bottom>0</bottom>
+		<left>1</left>
 		<width>400</width>
-		<height>44</height>
+		<height>400</height>
 	</include>
 	
 	<include name="Viewtype525_coords16">
@@ -501,18 +633,49 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords16_4:3</include>
 	</include>
 	<include name="Viewtype525_coords16_16:9">
-		<width>44</width>
-		<centerleft>200</centerleft>
+		<left>0</left>
+		<bottom>0</bottom>
+		<width>400</width>
+		<height>44</height>
 	</include>
 	<include name="Viewtype525_coords16_21:9">
-		<width>44</width>
-		<centerleft>200</centerleft>
+		<left>0</left>
+		<bottom>0</bottom>
+		<width>400</width>
+		<height>44</height>
 	</include>
 	<include name="Viewtype525_coords16_21:9_masked">
+		<left>0</left>
+		<bottom>0</bottom>
+		<width>400</width>
+		<height>44</height>
+	</include>
+	<include name="Viewtype525_coords16_4:3">
+		<left>1</left>
+		<bottom>0</bottom>
+		<width>400</width>
+		<height>44</height>
+	</include>
+	
+	<include name="Viewtype525_coords17">
+		<include condition="$EXP[NonMaskedCoordinates]">Viewtype525_coords17_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype525_coords17_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Viewtype525_coords17_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype525_coords17_4:3</include>
+	</include>
+	<include name="Viewtype525_coords17_16:9">
 		<width>44</width>
 		<centerleft>200</centerleft>
 	</include>
-	<include name="Viewtype525_coords16_4:3">
+	<include name="Viewtype525_coords17_21:9">
+		<width>44</width>
+		<centerleft>200</centerleft>
+	</include>
+	<include name="Viewtype525_coords17_21:9_masked">
+		<width>44</width>
+		<centerleft>200</centerleft>
+	</include>
+	<include name="Viewtype525_coords17_4:3">
 		<width>44</width>
 		<centerleft>200</centerleft>
 	</include>

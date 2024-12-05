@@ -10,7 +10,7 @@
 			<!-- Movie/TV show info -->
 			<control type="group">
 				<include>Viewtype538_coords1</include>
-				<visible>Container.Content(videos)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
 				
 				<!-- Title -->
 				<control type="fadelabel">
@@ -85,14 +85,23 @@
 						<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
+					<control type="textbox">
+						<include>Viewtype538_coords10</include>
+						<align>left</align>
+						<font>Font36</font>
+						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.538)]</label>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
+					</control>
 				</control>
 				
 				<!-- Plot -->
 				<control type="group">
-					<include>Viewtype538_coords10</include>
+					<include>Viewtype538_coords11</include>
 					<visible>[!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)] + [!Skin.HasSetting(UserRating) | String.IsEmpty(ListItem.UserRating)]</visible>
 					<control type="textbox">
-						<include>Viewtype538_coords11</include>
+						<include>Viewtype538_coords12</include>
 						<align>left</align>
 						<font>Font27</font>
 						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.538)]</label>
@@ -101,7 +110,7 @@
 						<visible>Skin.String(PlotFont,S)</visible>
 					</control>
 					<control type="textbox">
-						<include>Viewtype538_coords12</include>
+						<include>Viewtype538_coords13</include>
 						<align>left</align>
 						<font>Font30</font>
 						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.538)]</label>
@@ -110,7 +119,7 @@
 						<visible>Skin.String(PlotFont,M)</visible>
 					</control>
 					<control type="textbox">
-						<include>Viewtype538_coords13</include>
+						<include>Viewtype538_coords14</include>
 						<align>left</align>
 						<font>Font33</font>
 						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.538)]</label>
@@ -118,25 +127,34 @@
 						<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
+					<control type="textbox">
+						<include>Viewtype538_coords15</include>
+						<align>left</align>
+						<font>Font36</font>
+						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.538)]</label>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
+					</control>
 				</control>
 
 			</control>
 			
 			<!-- Thumbs -->
 			<control type="panel" id="538">
-				<include>Viewtype538_coords14</include>
+				<include>Viewtype538_coords16</include>
 				<onleft>60</onleft>
 				<onup>538</onup>
 				<ondown>538</ondown>
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="$LOCALIZE[31116]">icon</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<visible>Container.Content(videos)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
 				<include>DefaultView</include>
 
-				<include>Viewtype538_coords15</include>
+				<include>Viewtype538_coords17</include>
 
-				<include>Viewtype538_coords16</include>
+				<include>Viewtype538_coords18</include>
 				
 			</control>
 

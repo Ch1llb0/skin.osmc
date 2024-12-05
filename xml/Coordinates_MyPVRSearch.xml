@@ -1226,24 +1226,43 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRSearch_coords12_4:3</include>
 	</include>
 	<include name="MyPVRSearch_coords12_16:9">
+		<height>450</height>
+	</include>
+	<include name="MyPVRSearch_coords12_21:9">
+		<height>450</height>
+	</include>
+	<include name="MyPVRSearch_coords12_21:9_masked">
+		<height>450</height>
+	</include>
+	<include name="MyPVRSearch_coords12_4:3">
+		<height>450</height>
+	</include>
+	
+	<include name="MyPVRSearch_coords13">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRSearch_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRSearch_coords13_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRSearch_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRSearch_coords13_4:3</include>
+	</include>
+	<include name="MyPVRSearch_coords13_16:9">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>600</width>
 		<height>30</height>
 	</include>
-	<include name="MyPVRSearch_coords12_21:9">
+	<include name="MyPVRSearch_coords13_21:9">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>1050</width>
 		<height>30</height>
 	</include>
-	<include name="MyPVRSearch_coords12_21:9_masked">
+	<include name="MyPVRSearch_coords13_21:9_masked">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>1050</width>
 		<height>30</height>
 	</include>
-	<include name="MyPVRSearch_coords12_4:3">
+	<include name="MyPVRSearch_coords13_4:3">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>360</width>

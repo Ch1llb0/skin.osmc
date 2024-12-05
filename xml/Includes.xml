@@ -148,9 +148,10 @@
 		<onload>ClearProperty(scriptdialog,10000)</onload>
 		<onunload>ClearProperty(scriptdialog,10000)</onunload>
 		<onload condition="String.IsEmpty(Skin.String(PlotFont))">Skin.SetString(PlotFont,S)</onload>
-		<onload condition="String.IsEqual(Skin.String(PlotFont),XL) | String.IsEqual(Skin.String(PlotFont),XL light) | String.IsEqual(Skin.String(PlotFont),L light)">Skin.SetString(PlotFont,L)</onload>
-		<onload condition="String.IsEqual(Skin.String(PlotFont),M light)">Skin.SetString(PlotFont,M)</onload>
 		<onload condition="String.IsEqual(Skin.String(PlotFont),S light)">Skin.SetString(PlotFont,S)</onload>
+		<onload condition="String.IsEqual(Skin.String(PlotFont),M light)">Skin.SetString(PlotFont,M)</onload>
+		<onload condition="String.IsEqual(Skin.String(PlotFont),L light)">Skin.SetString(PlotFont,L)</onload>
+		<onload condition="String.IsEqual(Skin.String(PlotFont),XL light)">Skin.SetString(PlotFont,XL)</onload>
 		<onload condition="String.IsEmpty(Skin.String(HideOSD))">Skin.SetString(HideOSD,Always)</onload>
 		<onload condition="String.IsEqual(Skin.String(HideOSD),Off)">Skin.SetString(HideOSD,Always)</onload>
 		<onload condition="String.IsEmpty(Skin.String(NFDimOpac))">Skin.SetString(NFDimOpac,100)</onload>
@@ -199,16 +200,16 @@
 	
 	<!-- Default forced views -->
 	<include name="DefaultView">
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWide)">Container.SetViewMode(523)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWidelowinfo)">Container.SetViewMode(525)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWall)">Container.SetViewMode(535)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWallinfo)">Container.SetViewMode(536)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWallsmall)">Container.SetViewMode(537)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Container.SetViewMode(538)</onfocus>
-		<onfocus condition="Container.Content(videos) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWalllow)">Container.SetViewMode(539)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWide)">Container.SetViewMode(523)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWidelowinfo)">Container.SetViewMode(525)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWall)">Container.SetViewMode(535)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWallinfo)">Container.SetViewMode(536)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWallsmall)">Container.SetViewMode(537)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Container.SetViewMode(538)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + Skin.HasSetting(DefaultVideosViewWalllow)">Container.SetViewMode(539)</onfocus>
 	</include>
 
 	<!-- Keyboard buttons -->
