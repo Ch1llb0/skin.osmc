@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.osmc.scope" version="21.1.1" name="OSMC Skin (Scope edition)" provider-name="OSMC">
+<addon id="skin.osmc.scope" version="21.2.0" name="OSMC Skin (Scope edition)" provider-name="OSMC">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 		<import addon="script.skinshortcuts" version="2.0.3" optional="true"/>
@@ -18,6 +18,6 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]New[/B][CR]- add new notification icon[CR][CR][B]Improved[/B][CR]- add skinshortcuts script as an optional dependency to avoid removal of the addon when marked as unused[CR][CR][B]Fixed[/B][CR]- fix widget onclick options to avoid errors when widgets are pointing to addon directories</news>
+		<news>[B]Improved[/B][CR]- add new views for images section[CR][CR][B]Improved[/B][CR]- adjust video addon views to work with multiple content types (videos, episodes, movies)[CR]- add fixed video addon views setting to side menu[CR]- add XL font to plot/description text size setting</news>
 	</extension>
 </addon>
