@@ -85,14 +85,23 @@
 						<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
+					<control type="textbox">
+						<include>Viewtype531_coords10</include>
+						<align>left</align>
+						<font>Font36</font>
+						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.531)]</label>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
+					</control>
 				</control>
 				
 				<!-- Plot -->
 				<control type="group">
-					<include>Viewtype531_coords10</include>
+					<include>Viewtype531_coords11</include>
 					<visible>[!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)] + [!Skin.HasSetting(UserRating) | String.IsEmpty(ListItem.UserRating)] + ![Container.Content(sets) | ListItem.IsCollection]</visible>
 					<control type="textbox">
-						<include>Viewtype531_coords11</include>
+						<include>Viewtype531_coords12</include>
 						<align>left</align>
 						<font>Font27</font>
 						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.531)]</label>
@@ -101,7 +110,7 @@
 						<visible>Skin.String(PlotFont,S)</visible>
 					</control>
 					<control type="textbox">
-						<include>Viewtype531_coords12</include>
+						<include>Viewtype531_coords13</include>
 						<align>left</align>
 						<font>Font30</font>
 						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.531)]</label>
@@ -110,7 +119,7 @@
 						<visible>Skin.String(PlotFont,M)</visible>
 					</control>
 					<control type="textbox">
-						<include>Viewtype531_coords13</include>
+						<include>Viewtype531_coords14</include>
 						<align>left</align>
 						<font>Font33</font>
 						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.531)]</label>
@@ -118,13 +127,22 @@
 						<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
+					<control type="textbox">
+						<include>Viewtype531_coords15</include>
+						<align>left</align>
+						<font>Font36</font>
+						<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.531)]</label>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
+					</control>
 				</control>
 
 			</control>
 			
 			<!-- Thumbs -->
 			<control type="panel" id="531">
-				<include>Viewtype531_coords14</include>
+				<include>Viewtype531_coords16</include>
 				<onleft>60</onleft>
 				<onup>531</onup>
 				<ondown>531</ondown>
@@ -134,9 +152,9 @@
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 
-				<include>Viewtype531_coords15</include>
+				<include>Viewtype531_coords17</include>
 
-				<include>Viewtype531_coords16</include>
+				<include>Viewtype531_coords18</include>
 				
 			</control>
 

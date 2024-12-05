@@ -756,6 +756,15 @@
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
+					<control type="textbox">
+						<include>MusicVisualisation_coords27</include>
+						<align>left</align>
+						<font>Font36</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Home).Property(ResetScroll.12006Artist)]</label>
+						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
+					</control>
 				</control>
 				
 				<!-- Album description -->
@@ -800,6 +809,15 @@
 						<label>$INFO[MusicPlayer.Property(Album_Description)]$INFO[Window(Home).Property(ResetScroll.12006Album)]</label>
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
+					</control>
+					<control type="textbox">
+						<include>MusicVisualisation_coords27</include>
+						<align>left</align>
+						<font>Font36</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[MusicPlayer.Property(Album_Description)]$INFO[Window(Home).Property(ResetScroll.12006Album)]</label>
+						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
 				
@@ -846,6 +864,15 @@
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
+					<control type="textbox">
+						<include>MusicVisualisation_coords27</include>
+						<align>left</align>
+						<font>Font36</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[VideoPlayer.Plot]$INFO[Window(Home).Property(ResetScroll.12006PlotNow)]</label>
+						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
+					</control>
 				</control>
 				
 				<!-- Radio plot (next) -->
@@ -890,6 +917,15 @@
 						<label>$INFO[VideoPlayer.NextPlot]$INFO[Window(Home).Property(ResetScroll.12006PlotNext)]</label>
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
+					</control>
+					<control type="textbox">
+						<include>MusicVisualisation_coords27</include>
+						<align>left</align>
+						<font>Font36</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[VideoPlayer.NextPlot]$INFO[Window(Home).Property(ResetScroll.12006PlotNext)]</label>
+						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
+						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
 				

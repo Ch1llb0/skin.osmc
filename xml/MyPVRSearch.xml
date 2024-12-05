@@ -103,11 +103,20 @@
 								<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 								<visible>Skin.String(PlotFont,L)</visible>
 							</control>
+							<control type="textbox">
+								<include>MyPVRSearch_coords12</include>
+								<font>Font36</font>
+								<align>left</align>
+								<label>$INFO[Container(50).ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.10704)]</label>
+								<textcolor>$VAR[TextColorFO]</textcolor>
+								<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+								<visible>Skin.String(PlotFont,XL)</visible>
+							</control>
 						</control>
 
 						<!-- Next program -->
 						<control type="fadelabel">
-							<include>MyPVRSearch_coords12</include>
+							<include>MyPVRSearch_coords13</include>
 							<font>Font30</font>
 							<align>right</align>
 							<label>$INFO[Container(50).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(11).ListItem.NextStartTime, (,)]</label>

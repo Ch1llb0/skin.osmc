@@ -148,9 +148,10 @@
 		<onload>ClearProperty(scriptdialog,10000)</onload>
 		<onunload>ClearProperty(scriptdialog,10000)</onunload>
 		<onload condition="String.IsEmpty(Skin.String(PlotFont))">Skin.SetString(PlotFont,S)</onload>
-		<onload condition="String.IsEqual(Skin.String(PlotFont),XL) | String.IsEqual(Skin.String(PlotFont),XL light) | String.IsEqual(Skin.String(PlotFont),L light)">Skin.SetString(PlotFont,L)</onload>
-		<onload condition="String.IsEqual(Skin.String(PlotFont),M light)">Skin.SetString(PlotFont,M)</onload>
 		<onload condition="String.IsEqual(Skin.String(PlotFont),S light)">Skin.SetString(PlotFont,S)</onload>
+		<onload condition="String.IsEqual(Skin.String(PlotFont),M light)">Skin.SetString(PlotFont,M)</onload>
+		<onload condition="String.IsEqual(Skin.String(PlotFont),L light)">Skin.SetString(PlotFont,L)</onload>
+		<onload condition="String.IsEqual(Skin.String(PlotFont),XL light)">Skin.SetString(PlotFont,XL)</onload>
 		<onload condition="String.IsEmpty(Skin.String(HideOSD))">Skin.SetString(HideOSD,Always)</onload>
 		<onload condition="String.IsEqual(Skin.String(HideOSD),Off)">Skin.SetString(HideOSD,Always)</onload>
 		<onload condition="String.IsEmpty(Skin.String(NFDimOpac))">Skin.SetString(NFDimOpac,100)</onload>
