@@ -1318,8 +1318,8 @@ msgid "Amount of dimming of non-focused images such as cover art in library view
 msgstr "Količina zatemnitve neizostrenih slik, kot je naslovnica v pogledih knjižnice in pripomočkih (privzeto: 100%)[CR Razpoložljive možnosti: 0%, 33%, 66%, 100%, 133%"
 
 msgctxt "#31326"
-msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
-msgstr "Velikost pisave izrisa in opisnih besedil v pogledih stenskih in seznamskih informacij ter pogovornih oknih z informacijami na zaslonu (privzeto: S)[CR]Razpoložljive možnosti: S, M, L"
+msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
+msgstr ""
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
@@ -1784,3 +1784,7 @@ msgstr "Dejanje, uporabljeno pri izbiri elementa gradnika TV-oddaje v glavnem me
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr "Dejanje, uporabljeno pri izbiri elementa pripomočka za nabor filmov v glavnem meniju (privzeto: Prebrskaj po)"
+
+#~ msgctxt "#31326"
+#~ msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
+#~ msgstr "Velikost pisave izrisa in opisnih besedil v pogledih stenskih in seznamskih informacij ter pogovornih oknih z informacijami na zaslonu (privzeto: S)[CR]Razpoložljive možnosti: S, M, L"

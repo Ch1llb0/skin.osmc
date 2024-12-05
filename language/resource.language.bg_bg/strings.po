@@ -1318,7 +1318,7 @@ msgid "Amount of dimming of non-focused images such as cover art in library view
 msgstr ""
 
 msgctxt "#31326"
-msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
+msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
 msgstr ""
 
 msgctxt "#31327"
