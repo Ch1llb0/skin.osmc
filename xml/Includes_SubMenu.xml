@@ -1206,8 +1206,8 @@
 	<!-- My video nav sub menu -->
 	<include name="SubMenu_MyVideoNav">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1) + ![Container.Content(videos) + Skin.HasSetting(FixedVideosView)]">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1) | [Container.Content(videos) + Skin.HasSetting(FixedVideosView)]">SubMenu_coords4</include>
+			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
+			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onback>50</onback>
@@ -1226,14 +1226,33 @@
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1) + ![Container.Content(videos) + Skin.HasSetting(FixedVideosView)]</visible>
+				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+			</control>
+			
+			<!-- Set fixed video addon view -->
+			<control type="radiobutton" id="98">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31409]</label>
+				<onclick>Skin.ToggleSetting(FixedVideosView)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWide)">Container.SetViewMode(523)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">Container.SetViewMode(525)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWall)">Container.SetViewMode(535)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWallinfo)">Container.SetViewMode(536)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWallsmall)">Container.SetViewMode(537)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Container.SetViewMode(538)</onclick>
+				<onclick condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Container.SetViewMode(539)</onclick>
+				<selected>Skin.HasSetting(FixedVideosView)</selected>
+				<visible>Integer.IsGreater(Container.ViewCount,1) + String.StartsWith(Container.FolderPath,plugin://plugin.video)</visible>
 			</control>
 
 			<!-- Seperator -->
 			<control type="image" id="80">
 				<include>SubMenu_coords7</include>
 				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1) + ![Container.Content(videos) + Skin.HasSetting(FixedVideosView)]</visible>
+				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
 
 			<!-- Sort by -->
@@ -1559,7 +1578,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
 						<usealttexture>Control.IsVisible(51)</usealttexture>
 						<onclick>Container.SetViewMode(51)</onclick>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums) | Container.Content(videos) | Container.Content(addons) | Container.Content(images) | Container.Content(games)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewList)">Skin.SetBool(DefaultVideosViewList)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums) | Container.Content(episodes) | Container.Content(videos) | Container.Content(addons) | Container.Content(images) | Container.Content(games)</visible>
 					</control>
 					
 					<!-- List info 511 -->
@@ -1569,6 +1590,8 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31117]</altlabel>
 						<usealttexture>Control.IsVisible(511)</usealttexture>
 						<onclick>Container.SetViewMode(511)</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewListinfo)">Skin.SetBool(DefaultVideosViewListinfo)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 					
@@ -1609,7 +1632,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
 						<usealttexture>Control.IsVisible(523)</usealttexture>
 						<onclick>Container.SetViewMode(523)</onclick>
-						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(videos) | Container.Content(favourites)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWide)">Skin.SetBool(DefaultVideosViewWide)</onclick>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 					
 					<!-- Wide low (videos) 524 -->
@@ -1619,7 +1644,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
 						<usealttexture>Control.IsVisible(524)</usealttexture>
 						<onclick>Container.SetViewMode(524)</onclick>
-						<visible>Container.Content(videos)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWidelow)">Skin.SetBool(DefaultVideosViewWidelow)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 					
 					<!-- Wide low info (videos) 525 -->
@@ -1629,7 +1656,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
 						<usealttexture>Control.IsVisible(525)</usealttexture>
 						<onclick>Container.SetViewMode(525)</onclick>
-						<visible>Container.Content(videos)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWidelowinfo)">Skin.SetBool(DefaultVideosViewWidelowinfo)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 					
 					<!-- Wall 53 -->
@@ -1689,7 +1718,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
 						<usealttexture>Control.IsVisible(535)</usealttexture>
 						<onclick>Container.SetViewMode(535)</onclick>
-						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(videos) | Container.Content(favourites)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWall)">Skin.SetBool(DefaultVideosViewWall)</onclick>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 					
 					<!-- Wall info (videos) 536 -->
@@ -1699,7 +1730,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
 						<usealttexture>Control.IsVisible(536)</usealttexture>
 						<onclick>Container.SetViewMode(536)</onclick>
-						<visible>Container.Content(videos)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWallinfo)">Skin.SetBool(DefaultVideosViewWallinfo)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 					
 					<!-- Wall small 537 -->
@@ -1709,7 +1742,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
 						<usealttexture>Control.IsVisible(537)</usealttexture>
 						<onclick>Container.SetViewMode(537)</onclick>
-						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(videos) | Container.Content(favourites)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWallsmall)">Skin.SetBool(DefaultVideosViewWallsmall)</onclick>
+						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 					
 					<!-- Wall small info (videos) 538 -->
@@ -1719,7 +1754,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
 						<usealttexture>Control.IsVisible(538)</usealttexture>
 						<onclick>Container.SetViewMode(538)</onclick>
-						<visible>Container.Content(videos)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.SetBool(DefaultVideosViewWallsmallinfo)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 					
 					<!-- Wall low (videos) 539 -->
@@ -1729,7 +1766,9 @@
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
 						<usealttexture>Control.IsVisible(539)</usealttexture>
 						<onclick>Container.SetViewMode(539)</onclick>
-						<visible>Container.Content(videos)</visible>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView)">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(DefaultVideosViewWalllow)">Skin.SetBool(DefaultVideosViewWalllow)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 					
 				</control>
