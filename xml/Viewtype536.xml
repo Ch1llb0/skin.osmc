@@ -10,7 +10,7 @@
 			<!-- Video info -->
 			<control type="group">
 				<include>Viewtype536_coords1</include>
-				<visible>Container.Content(videos)</visible>
+				<visible>Container.Content(videos) | [Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video)</visible>
 				
 				<!-- Title -->
 				<control type="fadelabel">
@@ -131,7 +131,7 @@
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="$LOCALIZE[31133]">bigicon</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<visible>Container.Content(videos)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
 				<include>DefaultView</include>
 
 				<include>Viewtype536_coords15</include>
