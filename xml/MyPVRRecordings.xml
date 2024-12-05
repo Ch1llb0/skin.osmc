@@ -78,13 +78,22 @@
 							<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 							<visible>Skin.String(PlotFont,L)</visible>
 						</control>
+						<control type="textbox">
+							<include>MyPVRRecordings_coords6</include>
+							<font>Font36</font>
+							<align>left</align>
+							<label>$VAR[PVRDescription]$INFO[Window(Home).Property(ResetScroll.10701)]</label>
+							<textcolor>$VAR[TextColorFO]</textcolor>
+							<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+							<visible>Skin.String(PlotFont,XL)</visible>
+						</control>
 					</control>
 
 				</control>
 
 				<!-- List -->
 				<control type="fixedlist" id="50">
-					<include>MyPVRRecordings_coords6</include>
+					<include>MyPVRRecordings_coords7</include>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>60</onleft>
@@ -94,15 +103,15 @@
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
-					<include>MyPVRRecordings_coords7</include>
-
 					<include>MyPVRRecordings_coords8</include>
+
+					<include>MyPVRRecordings_coords9</include>
 
 				</control>
 
 				<!-- Scrollbar (list) -->
 				<control type="scrollbar" id="60">
-					<include>MyPVRRecordings_coords9</include>
+					<include>MyPVRRecordings_coords10</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
 					<showonepage>false</showonepage>

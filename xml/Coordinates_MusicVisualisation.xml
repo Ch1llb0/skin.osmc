@@ -694,5 +694,32 @@
 		<height>437</height>
 		<width>620</width>
 	</include>
+	
+	<include name="MusicVisualisation_coords27">
+		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords27_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords27_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MusicVisualisation_coords27_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MusicVisualisation_coords27_4:3</include>
+	</include>
+	<include name="MusicVisualisation_coords27_16:9">
+		<top>48</top>
+		<height>500</height>
+		<width>1100</width>
+	</include>
+	<include name="MusicVisualisation_coords27_21:9">
+		<top>48</top>
+		<height>500</height>
+		<width>1740</width>
+	</include>
+	<include name="MusicVisualisation_coords27_21:9_masked">
+		<top>48</top>
+		<height>500</height>
+		<width>1740</width>
+	</include>
+	<include name="MusicVisualisation_coords27_4:3">
+		<top>48</top>
+		<height>500</height>
+		<width>620</width>
+	</include>
 
 </includes>

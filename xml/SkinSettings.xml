@@ -1004,7 +1004,8 @@
 							<label2>$VAR[PlotFont]</label2>
 							<onclick condition="String.IsEqual(Skin.String(PlotFont),S)">Skin.SetString(PlotFont,M)</onclick>
 							<onclick condition="String.IsEqual(Skin.String(PlotFont),M)">Skin.SetString(PlotFont,L)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(PlotFont),L)">Skin.SetString(PlotFont,S)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(PlotFont),L)">Skin.SetString(PlotFont,XL)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(PlotFont),XL)">Skin.SetString(PlotFont,S)</onclick>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -1372,6 +1373,14 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<font>Font33</font>
 					<visible>Skin.String(PlotFont,L)</visible>
+				</control>
+				
+				<control type="textbox">
+					<include>SkinSettings_coords23</include>
+					<label>$VAR[SkinSettingsExplanation]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<font>Font36</font>
+					<visible>Skin.String(PlotFont,XL)</visible>
 				</control>
 				
 			</control>
