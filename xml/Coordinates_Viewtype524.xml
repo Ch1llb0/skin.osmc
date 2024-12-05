@@ -57,6 +57,24 @@
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
 			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype524_coords2_21:9">
@@ -65,6 +83,24 @@
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
 				<param name="coords2">Viewtype524_coords8</param>
@@ -83,6 +119,24 @@
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
 			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype524_coords2_4:3">
@@ -91,6 +145,24 @@
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
+			<!-- Image - Episodes -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultTVShows.png</param>
+				<param name="visible">Container.Content(episodes)</param>
+				<param name="id">524</param>
+				<param name="coords">Viewtype524_coords7</param>
+				<param name="coords2">Viewtype524_coords8</param>
+				<param name="coords3">Viewtype524_coords9</param>
+			</include>
+			<!-- Image - Movies -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultMovies.png</param>
+				<param name="visible">Container.Content(movies)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
 				<param name="coords2">Viewtype524_coords8</param>
@@ -118,6 +190,24 @@
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
 				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -129,6 +219,24 @@
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
 					<param name="coords2">Viewtype524_coords11</param>
@@ -150,6 +258,24 @@
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
 				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -161,6 +287,24 @@
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
+				<!-- Image - Episodes -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultTVShows.png</param>
+					<param name="visible">Container.Content(episodes)</param>
+					<param name="id">524</param>
+					<param name="coords">Viewtype524_coords10</param>
+					<param name="coords2">Viewtype524_coords11</param>
+					<param name="coords3">Viewtype524_coords12</param>
+				</include>
+				<!-- Image - Movies -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultMovies.png</param>
+					<param name="visible">Container.Content(movies)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
 					<param name="coords2">Viewtype524_coords11</param>

@@ -2,7 +2,15 @@
 
 ---
 
-**_v21.1.0_**
+**_v21.2.0_**
+
+_Improved_
+- adjust video addon views to work with multiple content types (videos, episodes, movies)
+- add fixed video addon views setting to side menu
+
+---
+
+**_v21.1.0 - October 2024_**
 
 _New_
 - add new notification icon
@@ -527,20 +535,77 @@ Release
 
 ---
 
-**Changelog v21.1.0**
+**Changelog v21.2.0**
 
-template.xml:
-- adjust widget onclick options to avoid errors when widgets are pointing to addon directories
+Coordinates_Viewtype523.xml:
+- add new content type image includes
 
-Coordinates_DialogNotification.xml:
-- add coordinates includes for new notification icon
+Coordinates_Viewtype524.xml:
+- add new content type image includes
 
-DialogNotification.xml:
-- add new notification icon
+Coordinates_Viewtype525.xml:
+- add new content type image includes
+
+Coordinates_Viewtype535.xml:
+- add new content type image includes
+
+Coordinates_Viewtype536.xml:
+- add new content type image includes
+
+Coordinates_Viewtype537.xml:
+- add new content type image includes
+
+Coordinates_Viewtype538.xml:
+- add new content type image includes
+
+Coordinates_Viewtype539.xml:
+- add new content type image includes
+- fix videos fallback icon
+
+Includes.xml:
+- adjust DefaultView include to work with multiple content types and specifically with video addons
+
+Includes_SubMenu.xml:
+- add fixed video addon views setting to side menu
+- adjust views menu to work together with fixed video addon views setting
+
+Variables.xml:
+- add new DefaultViewSettings variable for reworked views menu buttons
+- adjust HeadingLabelSecondary variable to show proper information on episodes level (TV show title and season, if useful)
+- adjust ContentType variable to show videos content type when a list of video addon items are shown
+
+Viewtype51.xml:
+- adjust visibility conditions of images and list container to work with multiple with multiple video addons content type
+
+Viewtype511.xml:
+- adjust visibility conditions of images and list container to work with multiple with multiple video addons content type
+
+Viewtype523.xml:
+- adjust visibility conditions of list container to work with multiple with multiple video addons content type
+
+Viewtype524xml:
+- adjust visibility conditions of list container to work with multiple with multiple video addons content type
+
+Viewtype525.xml:
+- adjust visibility conditions of list container and info controls to work with multiple with multiple video addons content type
+
+Viewtype535.xml:
+- adjust visibility conditions of panel container to work with multiple with multiple video addons content type
+
+Viewtype536.xml:
+- adjust visibility conditions of panel container and info controls to work with multiple with multiple video addons content type
+
+Viewtype537.xml:
+- adjust visibility conditions of panel container to work with multiple with multiple video addons content type
+
+Viewtype538.xml:
+- adjust visibility conditions of panel container and info controls to work with multiple with multiple video addons content type
+
+Viewtype539.xml:
+- adjust visibility conditions of panel container to work with multiple with multiple video addons content type
 
 addon.xml:
-- bump version to 21.1.0
-- add skinshortcuts script as an optional dependency to avoid removal of the addon when marked as unused
+- bump version to 21.2.0
 - update changelog
 
 Changelog.md:
