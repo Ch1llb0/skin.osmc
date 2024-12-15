@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-12-19 19:09+0000\n"
+"PO-Revision-Date: 2024-12-15 13:23+0000\n"
 "Last-Translator: Jan Sykora <translator-9@contribute-osmc.com>\n"
 "Language-Team: Czech <http://translate.osmc.tv/projects/osmc/osmc-skin/cs_cz/>\n"
 "Language: cs_cz\n"
@@ -1319,7 +1319,7 @@ msgstr "Velikost ztmavení neaktivních obrázků, například obálek v zobraze
 
 msgctxt "#31326"
 msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
-msgstr ""
+msgstr "Velikost písma textu výkresu a popisu v informačních zobrazeních na stěně a seznamu a také v informačních dialozích OSD (výchozí: S)[CR]Dostupné možnosti: S, M, L, XL"
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
