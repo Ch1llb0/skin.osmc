@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-12-19 19:09+0000\n"
+"PO-Revision-Date: 2024-12-16 07:04+0000\n"
 "Last-Translator: Roelof Schuiling <translator-11@contribute-osmc.com>\n"
 "Language-Team: Dutch <http://translate.osmc.tv/projects/osmc/osmc-skin/nl_nl/>\n"
 "Language: nl_nl\n"
@@ -1319,7 +1319,7 @@ msgstr "Hoeveelheid dimmen van onscherpe afbeeldingen zoals cover art in bibliot
 
 msgctxt "#31326"
 msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
-msgstr ""
+msgstr "Lettergrootte van plot- en beschrijvingsteksten in wand- en lijstinfo-weergaven en OSD-infovensters (standaard: S)[CR]Beschikbare opties: S, M, L, XL"
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
