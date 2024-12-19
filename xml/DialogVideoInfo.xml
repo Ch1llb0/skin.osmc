@@ -781,7 +781,7 @@
 					<control type="fadelabel" id="313">
 						<include>DialogVideoInfo_coords15</include>
 						<font>Font36</font>
-						<label>$INFO[ListItem.Property(SubtitleLanguage.1),[CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.2),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.3),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.4),$COMMA [CAPITALIZE],[/CAPITALIZE]]</label>
+						<label>$VAR[SubtitleSimple]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 					</control>
