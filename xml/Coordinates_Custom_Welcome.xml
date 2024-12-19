@@ -11,25 +11,25 @@
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
 		<width>1620</width>
-		<height>600</height>
+		<height>559</height>
 	</include>
 	<include name="Custom_Welcome_coords_21:9">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
 		<width>2260</width>
-		<height>600</height>
+		<height>559</height>
 	</include>
 	<include name="Custom_Welcome_coords_21:9_masked">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
 		<width>2260</width>
-		<height>600</height>
+		<height>559</height>
 	</include>
 	<include name="Custom_Welcome_coords_4:3">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
 		<width>1140</width>
-		<height>600</height>
+		<height>559</height>
 	</include>
 
 </includes>
