@@ -235,16 +235,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelGuide_coords10_4:3</include>
 	</include>
 	<include name="DialogPVRChannelGuide_coords10_16:9">
-		<height>350</height>
+		<height>344</height>
 	</include>
 	<include name="DialogPVRChannelGuide_coords10_21:9">
-		<height>350</height>
+		<height>344</height>
 	</include>
 	<include name="DialogPVRChannelGuide_coords10_21:9_masked">
-		<height>350</height>
+		<height>344</height>
 	</include>
 	<include name="DialogPVRChannelGuide_coords10_4:3">
-		<height>350</height>
+		<height>344</height>
 	</include>
 	
 	<include name="DialogPVRChannelGuide_coords11">
