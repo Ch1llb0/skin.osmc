@@ -907,16 +907,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords34_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords34_16:9">
-		<height>150</height>
+		<height>129</height>
 	</include>
 	<include name="VideoFullScreen_coords34_21:9">
-		<height>150</height>
+		<height>129</height>
 	</include>
 	<include name="VideoFullScreen_coords34_21:9_masked">
-		<height>150</height>
+		<height>129</height>
 	</include>
 	<include name="VideoFullScreen_coords34_4:3">
-		<height>150</height>
+		<height>129</height>
 	</include>
 	
 	<include name="VideoFullScreen_coords35">

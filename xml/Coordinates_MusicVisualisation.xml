@@ -703,22 +703,22 @@
 	</include>
 	<include name="MusicVisualisation_coords27_16:9">
 		<top>48</top>
-		<height>500</height>
+		<height>473</height>
 		<width>1100</width>
 	</include>
 	<include name="MusicVisualisation_coords27_21:9">
 		<top>48</top>
-		<height>500</height>
+		<height>473</height>
 		<width>1740</width>
 	</include>
 	<include name="MusicVisualisation_coords27_21:9_masked">
 		<top>48</top>
-		<height>500</height>
+		<height>473</height>
 		<width>1740</width>
 	</include>
 	<include name="MusicVisualisation_coords27_4:3">
 		<top>48</top>
-		<height>500</height>
+		<height>473</height>
 		<width>620</width>
 	</include>
 
