@@ -158,16 +158,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords7_4:3</include>
 	</include>
 	<include name="Viewtype511_coords7_16:9">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	<include name="Viewtype511_coords7_21:9">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	<include name="Viewtype511_coords7_21:9_masked">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	<include name="Viewtype511_coords7_4:3">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	
 	<include name="Viewtype511_coords8">
@@ -381,16 +381,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords16_4:3</include>
 	</include>
 	<include name="Viewtype511_coords16_16:9">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	<include name="Viewtype511_coords16_21:9">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	<include name="Viewtype511_coords16_21:9_masked">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	<include name="Viewtype511_coords16_4:3">
-		<height>150</height>
+		<height>172</height>
 	</include>
 	
 	<include name="Viewtype511_coords17">

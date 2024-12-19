@@ -122,27 +122,23 @@
 			<name>Font36</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>34</size>
-			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Font36-bold</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>34</size>
-			<linespacing>1.3</linespacing>
 			<style>bold</style>
 		</font>
 		<font>
 			<name>Font36-light</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>34</size>
-			<linespacing>1.3</linespacing>
 			<style>lighten</style>
 		</font>
 		<font>
 			<name>Font36-italic</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>34</size>
-			<linespacing>1.3</linespacing>
 			<style>italics</style>
 		</font>
 		<font>
