@@ -801,25 +801,25 @@
 		<left>550</left>
 		<top>900</top>
 		<width>1250</width>
-		<height>100</height>
+		<height>86</height>
 	</include>
 	<include name="SkinSettings_coords23_21:9">
 		<left>550</left>
 		<top>900</top>
 		<width>1890</width>
-		<height>100</height>
+		<height>86</height>
 	</include>
 	<include name="SkinSettings_coords23_21:9_masked">
 		<left>550</left>
 		<top>1080</top>
 		<width>1890</width>
-		<height>100</height>
+		<height>86</height>
 	</include>
 	<include name="SkinSettings_coords23_4:3">
 		<left>550</left>
 		<top>900</top>
 		<width>770</width>
-		<height>100</height>
+		<height>86</height>
 	</include>
 
 </includes>
