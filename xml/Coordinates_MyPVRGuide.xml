@@ -1475,16 +1475,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords18_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords18_16:9">
-		<height>100</height>
+		<height>86</height>
 	</include>
 	<include name="MyPVRGuide_coords18_21:9">
-		<height>100</height>
+		<height>86</height>
 	</include>
 	<include name="MyPVRGuide_coords18_21:9_masked">
-		<height>100</height>
+		<height>86</height>
 	</include>
 	<include name="MyPVRGuide_coords18_4:3">
-		<height>100</height>
+		<height>86</height>
 	</include>
 
 </includes>

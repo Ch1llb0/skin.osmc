@@ -620,6 +620,9 @@ Coordinates_Viewtype539.xml:
 - add new content type image includes
 - fix videos fallback icon
 
+Font.xml:
+- remove line spacing from Font36
+
 Includes.xml:
 - adjust DefaultView include to work with multiple content types and specifically with video addons
 

@@ -243,16 +243,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype536_coords10_4:3</include>
 	</include>
 	<include name="Viewtype536_coords10_16:9">
-		<height>400</height>
+		<height>387</height>
 	</include>
 	<include name="Viewtype536_coords10_21:9">
-		<height>400</height>
+		<height>387</height>
 	</include>
 	<include name="Viewtype536_coords10_21:9_masked">
-		<height>400</height>
+		<height>387</height>
 	</include>
 	<include name="Viewtype536_coords10_4:3">
-		<height>400</height>
+		<height>387</height>
 	</include>
 	
 	<include name="Viewtype536_coords11">
@@ -350,16 +350,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype536_coords15_4:3</include>
 	</include>
 	<include name="Viewtype536_coords15_16:9">
-		<height>450</height>
+		<height>430</height>
 	</include>
 	<include name="Viewtype536_coords15_21:9">
-		<height>450</height>
+		<height>430</height>
 	</include>
 	<include name="Viewtype536_coords15_21:9_masked">
-		<height>450</height>
+		<height>430</height>
 	</include>
 	<include name="Viewtype536_coords15_4:3">
-		<height>450</height>
+		<height>430</height>
 	</include>
 	
 	<include name="Viewtype536_coords16">
