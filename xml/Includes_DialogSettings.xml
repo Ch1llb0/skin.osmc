@@ -53,7 +53,7 @@
 
 				<!-- Default spincontrolex -->
 				<control type="spincontrolex" id="9">
-					<include>DialogSettings_coords3</include>
+					<include>DialogSettings_coords5</include>
 				</control>
 
 				<!-- Default edit -->
@@ -63,12 +63,12 @@
 
 				<!-- Default slider -->
 				<control type="sliderex" id="13"> 
-					<include>DialogSettings_coords3</include>
+					<include>DialogSettings_coords6</include>
 				</control>
 
 				<!-- Default image -->
 				<control type="image" id="11">
-					<include>DialogSettings_coords5</include>
+					<include>DialogSettings_coords7</include>
 					<texture border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 				</control>
 
@@ -126,7 +126,7 @@
 
 			<control type="group">
 				<include>DialogDepth</include>
-				<include>DialogSettings_coords6</include>
+				<include>DialogSettings_coords8</include>
 				<visible>!Window.IsVisible(10153) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(SliderDialog) + !Window.IsVisible(FileBrowser) + !Window.IsVisible(shutdownmenu) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
 				
 				<!-- Animation -->
@@ -135,13 +135,13 @@
 
 				<!-- Window Background -->
 				<control type="image">
-					<include>DialogSettings_coords7</include>
+					<include>DialogSettings_coords9</include>
 					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
 				</control>
 
 				<!-- Heading -->
 				<control type="label" id="2">
-					<include>DialogSettings_coords8</include>
+					<include>DialogSettings_coords10</include>
 					<align>center</align>
 					<aligny>top</aligny>
 					<font>Font33</font>
@@ -149,7 +149,7 @@
 
 				<!-- Grouplist -->
 				<control type="grouplist" id="5">
-					<include>DialogSettings_coords9</include>
+					<include>DialogSettings_coords11</include>
 					<itemgap>0</itemgap>
 					<onleft>noop</onleft>
 					<onright>noop</onright>
@@ -161,7 +161,7 @@
 
 				<!-- Default label -->
 				<control type="label" id="14">
-					<include>DialogSettings_coords10</include>
+					<include>DialogSettings_coords12</include>
 					<font>Font33</font>
 					<align>center</align>
 					<label></label>
@@ -170,38 +170,38 @@
 
 				<!-- Default button -->
 				<control type="button" id="7">
-					<include>DialogSettings_coords11</include>
+					<include>DialogSettings_coords13</include>
 				</control>
 
 				<!-- Default radiobutton -->
 				<control type="radiobutton" id="8">
-					<include>DialogSettings_coords12</include>
+					<include>DialogSettings_coords14</include>
 				</control>
 
 				<!-- Default spincontrolex -->
 				<control type="spincontrolex" id="9">
-					<include>DialogSettings_coords12</include>
+					<include>DialogSettings_coords15</include>
 				</control>
 
 				<!-- Default edit -->
 				<control type="edit" id="12">
-					<include>DialogSettings_coords11</include>
+					<include>DialogSettings_coords13</include>
 				</control>
 
 				<!-- Default slider -->
 				<control type="sliderex" id="13"> 
-					<include>DialogSettings_coords11</include>
+					<include>DialogSettings_coords16</include>
 				</control>
 
 				<!-- Default image -->
 				<control type="image" id="11">
-					<include>DialogSettings_coords13</include>
+					<include>DialogSettings_coords17</include>
 					<texture border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 				</control>
 
 				<!-- Button grouplist -->
 				<control type="grouplist" id="9001">
-					<include>DialogSettings_coords14</include>
+					<include>DialogSettings_coords18</include>
 					<itemgap>30</itemgap>
 					<onleft>noop</onleft>
 					<onright>noop</onright>
