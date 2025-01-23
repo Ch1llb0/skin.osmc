@@ -113,19 +113,23 @@
 	</include>
 	<include name="DialogSettings_coords5_16:9">
 		<width>1170</width>
-		<height>20</height>
+		<height>50</height>
+		<textwidth>1105</textwidth>
 	</include>
 	<include name="DialogSettings_coords5_21:9">
 		<width>1810</width>
-		<height>20</height>
+		<height>50</height>
+		<textwidth>1745</textwidth>
 	</include>
 	<include name="DialogSettings_coords5_21:9_masked">
 		<width>1810</width>
-		<height>20</height>
+		<height>50</height>
+		<textwidth>1745</textwidth>
 	</include>
 	<include name="DialogSettings_coords5_4:3">
 		<width>690</width>
-		<height>20</height>
+		<height>50</height>
+		<textwidth>625</textwidth>
 	</include>
 	
 	<include name="DialogSettings_coords6">
@@ -135,28 +139,24 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords6_4:3</include>
 	</include>
 	<include name="DialogSettings_coords6_16:9">
-		<centerleft>50%</centerleft>
-		<centertop>50%</centertop>
-		<width>920</width>
-		<height>940</height>
+		<width>1170</width>
+		<height>50</height>
+		<textwidth>890</textwidth>
 	</include>
 	<include name="DialogSettings_coords6_21:9">
-		<centerleft>50%</centerleft>
-		<centertop>50%</centertop>
-		<width>920</width>
-		<height>940</height>
+		<width>1810</width>
+		<height>50</height>
+		<textwidth>1530</textwidth>
 	</include>
 	<include name="DialogSettings_coords6_21:9_masked">
-		<centerleft>50%</centerleft>
-		<centertop>50%</centertop>
-		<width>920</width>
-		<height>940</height>
+		<width>1810</width>
+		<height>50</height>
+		<textwidth>1530</textwidth>
 	</include>
 	<include name="DialogSettings_coords6_4:3">
-		<centerleft>50%</centerleft>
-		<centertop>50%</centertop>
-		<width>920</width>
-		<height>940</height>
+		<width>690</width>
+		<height>50</height>
+		<textwidth>410</textwidth>
 	</include>
 	
 	<include name="DialogSettings_coords7">
@@ -166,20 +166,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords7_4:3</include>
 	</include>
 	<include name="DialogSettings_coords7_16:9">
-		<width>920</width>
-		<height>940</height>
+		<width>1170</width>
+		<height>20</height>
 	</include>
 	<include name="DialogSettings_coords7_21:9">
-		<width>920</width>
-		<height>940</height>
+		<width>1810</width>
+		<height>20</height>
 	</include>
 	<include name="DialogSettings_coords7_21:9_masked">
-		<width>920</width>
-		<height>940</height>
+		<width>1810</width>
+		<height>20</height>
 	</include>
 	<include name="DialogSettings_coords7_4:3">
-		<width>920</width>
-		<height>940</height>
+		<width>690</width>
+		<height>20</height>
 	</include>
 	
 	<include name="DialogSettings_coords8">
@@ -189,28 +189,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords8_4:3</include>
 	</include>
 	<include name="DialogSettings_coords8_16:9">
-		<left>50</left>
-		<top>30</top>
-		<width>820</width>
-		<height>33</height>
+		<centerleft>50%</centerleft>
+		<centertop>50%</centertop>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	<include name="DialogSettings_coords8_21:9">
-		<left>50</left>
-		<top>30</top>
-		<width>820</width>
-		<height>33</height>
+		<centerleft>50%</centerleft>
+		<centertop>50%</centertop>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	<include name="DialogSettings_coords8_21:9_masked">
-		<left>50</left>
-		<top>30</top>
-		<width>820</width>
-		<height>33</height>
+		<centerleft>50%</centerleft>
+		<centertop>50%</centertop>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	<include name="DialogSettings_coords8_4:3">
-		<left>50</left>
-		<top>30</top>
-		<width>820</width>
-		<height>33</height>
+		<centerleft>50%</centerleft>
+		<centertop>50%</centertop>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	
 	<include name="DialogSettings_coords9">
@@ -220,28 +220,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords9_4:3</include>
 	</include>
 	<include name="DialogSettings_coords9_16:9">
-		<left>50</left>
-		<top>90</top>
-		<width>820</width>
-		<height>780</height>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	<include name="DialogSettings_coords9_21:9">
-		<left>50</left>
-		<top>90</top>
-		<width>820</width>
-		<height>780</height>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	<include name="DialogSettings_coords9_21:9_masked">
-		<left>50</left>
-		<top>90</top>
-		<width>820</width>
-		<height>780</height>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	<include name="DialogSettings_coords9_4:3">
-		<left>50</left>
-		<top>90</top>
-		<width>820</width>
-		<height>780</height>
+		<width>920</width>
+		<height>940</height>
 	</include>
 	
 	<include name="DialogSettings_coords10">
@@ -252,23 +244,27 @@
 	</include>
 	<include name="DialogSettings_coords10_16:9">
 		<left>50</left>
+		<top>30</top>
 		<width>820</width>
-		<height>42</height>
+		<height>33</height>
 	</include>
 	<include name="DialogSettings_coords10_21:9">
 		<left>50</left>
+		<top>30</top>
 		<width>820</width>
-		<height>42</height>
+		<height>33</height>
 	</include>
 	<include name="DialogSettings_coords10_21:9_masked">
 		<left>50</left>
+		<top>30</top>
 		<width>820</width>
-		<height>42</height>
+		<height>33</height>
 	</include>
 	<include name="DialogSettings_coords10_4:3">
 		<left>50</left>
+		<top>30</top>
 		<width>820</width>
-		<height>42</height>
+		<height>33</height>
 	</include>
 	
 	<include name="DialogSettings_coords11">
@@ -279,23 +275,27 @@
 	</include>
 	<include name="DialogSettings_coords11_16:9">
 		<left>50</left>
+		<top>90</top>
 		<width>820</width>
-		<height>50</height>
+		<height>780</height>
 	</include>
 	<include name="DialogSettings_coords11_21:9">
 		<left>50</left>
+		<top>90</top>
 		<width>820</width>
-		<height>50</height>
+		<height>780</height>
 	</include>
 	<include name="DialogSettings_coords11_21:9_masked">
 		<left>50</left>
+		<top>90</top>
 		<width>820</width>
-		<height>50</height>
+		<height>780</height>
 	</include>
 	<include name="DialogSettings_coords11_4:3">
 		<left>50</left>
+		<top>90</top>
 		<width>820</width>
-		<height>50</height>
+		<height>780</height>
 	</include>
 	
 	<include name="DialogSettings_coords12">
@@ -307,26 +307,22 @@
 	<include name="DialogSettings_coords12_16:9">
 		<left>50</left>
 		<width>820</width>
-		<height>50</height>
-		<textwidth>782</textwidth>
+		<height>42</height>
 	</include>
 	<include name="DialogSettings_coords12_21:9">
 		<left>50</left>
 		<width>820</width>
-		<height>50</height>
-		<textwidth>782</textwidth>
+		<height>42</height>
 	</include>
 	<include name="DialogSettings_coords12_21:9_masked">
 		<left>50</left>
 		<width>820</width>
-		<height>50</height>
-		<textwidth>782</textwidth>
+		<height>42</height>
 	</include>
 	<include name="DialogSettings_coords12_4:3">
 		<left>50</left>
 		<width>820</width>
-		<height>50</height>
-		<textwidth>782</textwidth>
+		<height>42</height>
 	</include>
 	
 	<include name="DialogSettings_coords13">
@@ -338,22 +334,22 @@
 	<include name="DialogSettings_coords13_16:9">
 		<left>50</left>
 		<width>820</width>
-		<height>20</height>
+		<height>50</height>
 	</include>
 	<include name="DialogSettings_coords13_21:9">
 		<left>50</left>
 		<width>820</width>
-		<height>20</height>
+		<height>50</height>
 	</include>
 	<include name="DialogSettings_coords13_21:9_masked">
 		<left>50</left>
 		<width>820</width>
-		<height>20</height>
+		<height>50</height>
 	</include>
 	<include name="DialogSettings_coords13_4:3">
 		<left>50</left>
 		<width>820</width>
-		<height>20</height>
+		<height>50</height>
 	</include>
 	
 	<include name="DialogSettings_coords14">
@@ -365,19 +361,139 @@
 	<include name="DialogSettings_coords14_16:9">
 		<left>50</left>
 		<width>820</width>
-		<top>865</top>
+		<height>50</height>
+		<textwidth>782</textwidth>
 	</include>
 	<include name="DialogSettings_coords14_21:9">
 		<left>50</left>
 		<width>820</width>
-		<top>865</top>
+		<height>50</height>
+		<textwidth>782</textwidth>
 	</include>
 	<include name="DialogSettings_coords14_21:9_masked">
 		<left>50</left>
 		<width>820</width>
-		<top>865</top>
+		<height>50</height>
+		<textwidth>782</textwidth>
 	</include>
 	<include name="DialogSettings_coords14_4:3">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>782</textwidth>
+	</include>
+	
+	<include name="DialogSettings_coords15">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSettings_coords15_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSettings_coords15_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSettings_coords15_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords15_4:3</include>
+	</include>
+	<include name="DialogSettings_coords15_16:9">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>755</textwidth>
+	</include>
+	<include name="DialogSettings_coords15_21:9">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>755</textwidth>
+	</include>
+	<include name="DialogSettings_coords15_21:9_masked">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>755</textwidth>
+	</include>
+	<include name="DialogSettings_coords15_4:3">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>755</textwidth>
+	</include>
+	
+	<include name="DialogSettings_coords16">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSettings_coords16_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSettings_coords16_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSettings_coords16_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords16_4:3</include>
+	</include>
+	<include name="DialogSettings_coords16_16:9">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>540</textwidth>
+	</include>
+	<include name="DialogSettings_coords16_21:9">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>540</textwidth>
+	</include>
+	<include name="DialogSettings_coords16_21:9_masked">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>540</textwidth>
+	</include>
+	<include name="DialogSettings_coords16_4:3">
+		<left>50</left>
+		<width>820</width>
+		<height>50</height>
+		<textwidth>540</textwidth>
+	</include>
+	
+	<include name="DialogSettings_coords17">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSettings_coords17_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSettings_coords17_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSettings_coords17_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords17_4:3</include>
+	</include>
+	<include name="DialogSettings_coords17_16:9">
+		<left>50</left>
+		<width>820</width>
+		<height>20</height>
+	</include>
+	<include name="DialogSettings_coords17_21:9">
+		<left>50</left>
+		<width>820</width>
+		<height>20</height>
+	</include>
+	<include name="DialogSettings_coords17_21:9_masked">
+		<left>50</left>
+		<width>820</width>
+		<height>20</height>
+	</include>
+	<include name="DialogSettings_coords17_4:3">
+		<left>50</left>
+		<width>820</width>
+		<height>20</height>
+	</include>
+	
+	<include name="DialogSettings_coords18">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSettings_coords18_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSettings_coords18_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSettings_coords18_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSettings_coords18_4:3</include>
+	</include>
+	<include name="DialogSettings_coords18_16:9">
+		<left>50</left>
+		<width>820</width>
+		<top>865</top>
+	</include>
+	<include name="DialogSettings_coords18_21:9">
+		<left>50</left>
+		<width>820</width>
+		<top>865</top>
+	</include>
+	<include name="DialogSettings_coords18_21:9_masked">
+		<left>50</left>
+		<width>820</width>
+		<top>865</top>
+	</include>
+	<include name="DialogSettings_coords18_4:3">
 		<left>50</left>
 		<width>820</width>
 		<top>865</top>
