@@ -269,18 +269,22 @@
 	<include name="DialogAddonSettings_coords10_16:9">
 		<width>1170</width>
 		<height>66</height>
+		<textwidth>1105</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords10_21:9">
 		<width>1810</width>
 		<height>66</height>
+		<textwidth>1745</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords10_21:9_masked">
 		<width>1810</width>
 		<height>66</height>
+		<textwidth>1745</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords10_4:3">
 		<width>690</width>
 		<height>66</height>
+		<textwidth>625</textwidth>
 	</include>
 	
 	<include name="DialogAddonSettings_coords11">
@@ -290,24 +294,74 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogAddonSettings_coords11_4:3</include>
 	</include>
 	<include name="DialogAddonSettings_coords11_16:9">
+		<width>1170</width>
+		<height>66</height>
+		<textwidth>890</textwidth>
+	</include>
+	<include name="DialogAddonSettings_coords11_21:9">
+		<width>1810</width>
+		<height>66</height>
+		<textwidth>1530</textwidth>
+	</include>
+	<include name="DialogAddonSettings_coords11_21:9_masked">
+		<width>1810</width>
+		<height>66</height>
+		<textwidth>1530</textwidth>
+	</include>
+	<include name="DialogAddonSettings_coords11_4:3">
+		<width>690</width>
+		<height>66</height>
+		<textwidth>410</textwidth>
+	</include>
+	
+	<include name="DialogAddonSettings_coords12">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogAddonSettings_coords12_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogAddonSettings_coords12_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogAddonSettings_coords12_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogAddonSettings_coords12_4:3</include>
+	</include>
+	<include name="DialogAddonSettings_coords12_16:9">
+		<width>1170</width>
+		<height>66</height>
+	</include>
+	<include name="DialogAddonSettings_coords12_21:9">
+		<width>1810</width>
+		<height>66</height>
+	</include>
+	<include name="DialogAddonSettings_coords12_21:9_masked">
+		<width>1810</width>
+		<height>66</height>
+	</include>
+	<include name="DialogAddonSettings_coords12_4:3">
+		<width>690</width>
+		<height>66</height>
+	</include>
+	
+	<include name="DialogAddonSettings_coords13">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogAddonSettings_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogAddonSettings_coords13_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogAddonSettings_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogAddonSettings_coords13_4:3</include>
+	</include>
+	<include name="DialogAddonSettings_coords13_16:9">
 		<left>600</left>
 		<bottom>180</bottom>
 		<width>1170</width>
 		<height>36</height>
 	</include>
-	<include name="DialogAddonSettings_coords11_21:9">
+	<include name="DialogAddonSettings_coords13_21:9">
 		<left>600</left>
 		<bottom>180</bottom>
 		<width>1810</width>
 		<height>36</height>
 	</include>
-	<include name="DialogAddonSettings_coords11_21:9_masked">
+	<include name="DialogAddonSettings_coords13_21:9_masked">
 		<left>600</left>
 		<bottom>360</bottom>
 		<width>1810</width>
 		<height>36</height>
 	</include>
-	<include name="DialogAddonSettings_coords11_4:3">
+	<include name="DialogAddonSettings_coords13_4:3">
 		<left>600</left>
 		<bottom>180</bottom>
 		<width>690</width>

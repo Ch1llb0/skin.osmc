@@ -48,16 +48,16 @@
 		<height>66</height>
 		<align>left</align>
 		<aligny>center</aligny>
+		<font>Font33</font>
 		<label></label>
 		<textoffsetx>0</textoffsetx>
-		<font>Font33</font>
 		<textcolor>$VAR[TextColorNF]</textcolor>
 		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<texturenofocus></texturenofocus>
 		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
-		<alttexturenofocus></alttexturenofocus>
+		<texturenofocus></texturenofocus>
 		<alttexturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</alttexturefocus>
+		<alttexturenofocus></alttexturenofocus>
 		<pulseonselect>False</pulseonselect>
 		<include>WindowDepth</include>
 	</default>
@@ -69,19 +69,19 @@
 		<aligny>center</aligny>
 		<font>Font33</font>
 		<label></label>
+		<textoffsetx>0</textoffsetx>
 		<textcolor>$VAR[TextColorNF]</textcolor>
 		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<textwidth>362</textwidth>
 		<radiowidth>16</radiowidth>
 		<radioheight>16</radioheight>
-		<texturenofocus></texturenofocus>
 		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
+		<texturenofocus></texturenofocus>
 		<textureradioonfocus colordiffuse="$VAR[OverlayColorFO]">common/RadioOn.png</textureradioonfocus>
 		<textureradioonnofocus colordiffuse="$VAR[OverlayColorFO]">common/RadioOn.png</textureradioonnofocus>
 		<textureradioofffocus colordiffuse="$VAR[OverlayColorFO]">common/RadioOff.png</textureradioofffocus>
 		<textureradiooffnofocus colordiffuse="$VAR[OverlayColorFO]">common/RadioOff.png</textureradiooffnofocus>
-		<textoffsetx>0</textoffsetx>
 		<pulseonselect>False</pulseonselect>
 		<include>WindowDepth</include>
 	</default>
@@ -91,21 +91,24 @@
 		<height>66</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<label></label>
 		<font>Font33</font>
-		<spinwidth>35</spinwidth>
-		<spinheight>66</spinheight>
+		<label></label>
+		<textoffsetx>0</textoffsetx>
+		<textwidth>335</textwidth>
+		<spinwidth>43</spinwidth>
+		<spinheight>60</spinheight>
+		<textcolor>$VAR[TextColorNF]</textcolor>
+		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
+		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
+		<alttexturenofocus></alttexturenofocus>
 		<textureup colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpFO.png</textureup>
 		<texturedown colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownFO.png</texturedown>
 		<textureupfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</textureupfocus>
 		<texturedownfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texturedownfocus>
-		<textcolor>$VAR[TextColorNF]</textcolor>
-		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
-		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<textoffsetx>0</textoffsetx>
 		<reverse>yes</reverse>
 		<pulseonselect>False</pulseonselect>
-		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
 		<include>WindowDepth</include>
 	</default>
 
@@ -114,43 +117,46 @@
 		<width>66</width>
 		<align>left</align>
 		<aligny>center</aligny>
+		<font>Font33</font>
+		<textoffsetx>0</textoffsetx>
+		<textcolor>$VAR[TextColorNF]</textcolor>
+		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<spinwidth>43</spinwidth>
 		<spinheight>60</spinheight>
+		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
+		<alttexturenofocus></alttexturenofocus>
 		<textureup colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpFO.png</textureup>
 		<texturedown colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownFO.png</texturedown>
 		<textureupfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</textureupfocus>
 		<texturedownfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texturedownfocus>
-		<font>Font33</font>
-		<textcolor>$VAR[TextColorNF]</textcolor>
-		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
-		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<textoffsetx>0</textoffsetx>
 		<reverse>yes</reverse>
 		<pulseonselect>False</pulseonselect>
-		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
 		<include>WindowDepth</include>
 	</default>
 
 	<default type="sliderex">
+		<width>400</width>
 		<height>66</height>
-		<width>183</width>
 		<align>left</align>
 		<aligny>center</aligny>
+		<font>Font33</font>
+		<textoffsetx>0</textoffsetx>
+		<textcolor>$VAR[TextColorNF]</textcolor>
+		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
+		<textwidth>120</textwidth>
+		<sliderwidth>230</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
+		<alttexturenofocus></alttexturenofocus>
 		<texturesliderbar>osd/OSDSliderBack.png</texturesliderbar>
 		<texturesliderbardisabled colordiffuse="$VAR[DisabledColor]">osd/OSDSliderBack.png</texturesliderbardisabled>
 		<textureslidernib border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDSliderNibNF.png</textureslidernib>
 		<textureslidernibfocus border="10,0,10,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibFO.png</textureslidernibfocus>
 		<textureslidernibdisabled border="10,0,10,0" colordiffuse="$VAR[DisabledColor]">osd/OSDSliderNibFO.png</textureslidernibdisabled>
-		<sliderwidth>230</sliderwidth>
-		<sliderheight>20</sliderheight>
-		<font>Font33</font>
-		<textcolor>$VAR[TextColorNF]</textcolor>
-		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
-		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<textoffsetx>0</textoffsetx>
 		<orientation>horizontal</orientation>
-		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
 		<include>WindowDepth</include>
 	</default>
 	
@@ -159,17 +165,18 @@
 		<width>183</width>
 		<align>left</align>
 		<aligny>center</aligny>
-		<colorwidth>43</colorwidth>
-		<colorheight>43</colorheight>
-		<texturecolormask>common/white.png</texturecolormask>
-		<texturecolordisabledmask colordiffuse="$VAR[DisabledColor]">common/white.png</texturecolordisabledmask>
 		<font>Font33</font>
+		<textoffsetx>0</textoffsetx>
 		<textcolor>$VAR[TextColorNF]</textcolor>
 		<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-		<textoffsetx>0</textoffsetx>
-		<pulseonselect>False</pulseonselect>
+		<colorwidth>43</colorwidth>
+		<colorheight>43</colorheight>
 		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<texturecolormask>common/white.png</texturecolormask>
+		<texturecolordisabledmask colordiffuse="$VAR[DisabledColor]">common/white.png</texturecolordisabledmask>
+		<pulseonselect>False</pulseonselect>
 		<include>WindowDepth</include>
 	</default>
 
@@ -214,7 +221,8 @@
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<invalidcolor>$VAR[InvalidColor]</invalidcolor>
 		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
-		<pulseonselect>no</pulseonselect>
+		<texturenofocus></texturenofocus>
+		<pulseonselect>False</pulseonselect>
 		<include>WindowDepth</include>
 	</default>
 
