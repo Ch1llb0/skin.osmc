@@ -168,7 +168,7 @@
 
 				<!-- Default spincontrolex -->
 				<control type="spincontrolex" id="9">
-					<include>SettingsCategory_coords10</include>
+					<include>SettingsCategory_coords13</include>
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -177,7 +177,7 @@
 
 				<!-- Default sliderex -->
 				<control type="sliderex" id="13">
-					<include>SettingsCategory_coords10</include>
+					<include>SettingsCategory_coords14</include>
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<focusedcolor>$VAR[TextColorFO]</focusedcolor>

@@ -360,5 +360,59 @@
 		<height>66</height>
 		<textwidth>732</textwidth>
 	</include>
+	
+	<include name="SettingsCategory_coords13">
+		<include condition="$EXP[NonMaskedCoordinates]">SettingsCategory_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SettingsCategory_coords13_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">SettingsCategory_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SettingsCategory_coords13_4:3</include>
+	</include>
+	<include name="SettingsCategory_coords13_16:9">
+		<width>1250</width>
+		<height>66</height>
+		<textwidth>1185</textwidth>
+	</include>
+	<include name="SettingsCategory_coords13_21:9">
+		<width>1890</width>
+		<height>66</height>
+		<textwidth>1825</textwidth>
+	</include>
+	<include name="SettingsCategory_coords13_21:9_masked">
+		<width>1890</width>
+		<height>66</height>
+		<textwidth>1825</textwidth>
+	</include>
+	<include name="SettingsCategory_coords13_4:3">
+		<width>770</width>
+		<height>66</height>
+		<textwidth>705</textwidth>
+	</include>
+	
+	<include name="SettingsCategory_coords14">
+		<include condition="$EXP[NonMaskedCoordinates]">SettingsCategory_coords14_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SettingsCategory_coords14_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">SettingsCategory_coords14_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SettingsCategory_coords14_4:3</include>
+	</include>
+	<include name="SettingsCategory_coords14_16:9">
+		<width>1250</width>
+		<height>66</height>
+		<textwidth>970</textwidth>
+	</include>
+	<include name="SettingsCategory_coords14_21:9">
+		<width>1890</width>
+		<height>66</height>
+		<textwidth>1610</textwidth>
+	</include>
+	<include name="SettingsCategory_coords14_21:9_masked">
+		<width>1890</width>
+		<height>66</height>
+		<textwidth>1610</textwidth>
+	</include>
+	<include name="SettingsCategory_coords14_4:3">
+		<width>770</width>
+		<height>66</height>
+		<textwidth>490</textwidth>
+	</include>
 
 </includes>
