@@ -343,7 +343,8 @@
 		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
 		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
 		<value condition="VideoPlayer.Content(episodes) + String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Player.Title]</value>
-		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(files) + !String.IsEmpty(VideoPlayer.Premiered)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Premiered,[LIGHT] ($LOCALIZE[20416]: ,)[/LIGHT]]</value>
+		<value condition="VideoPlayer.Content(files) + !String.IsEmpty(VideoPlayer.Date)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Date,[LIGHT] ($LOCALIZE[570]: ,)[/LIGHT]]</value>
 		<value condition="VideoPlayer.HasVideoVersions">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.VideoVersionName, (,)]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 		<value>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 	</variable>
@@ -393,6 +394,8 @@
 
 	<variable name="VideoPlayerPlot">
 		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(12005).Property(shownext))">$INFO[VideoPlayer.NextPlot]</value>
+		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Premiered)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.Premiered,[LIGHT]$LOCALIZE[20416]: ,[/LIGHT]]</value>
+		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Date)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.Date,[LIGHT]$LOCALIZE[570]: ,[/LIGHT]]</value>
 		<value>$INFO[VideoPlayer.Plot]</value>
 	</variable>
 	
