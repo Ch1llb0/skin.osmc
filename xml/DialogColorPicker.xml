@@ -83,11 +83,19 @@
 				<itemgap>30</itemgap>
 				<onup>6</onup>
 				
-				<!-- Edit -->
-				<control type="button" id="8">
+				<!-- Manual input -->
+				<control type="button" id="5">
 					<width>auto</width>
 					<label>31405</label>
 					<onclick>Skin.SetString($INFO[Window(10035).Property(colorpickercolor)])</onclick>
+					<visible>!String.IsEmpty(Window(10035).Property(colorpicker))</visible>
+				</control>
+				
+				<!-- Slider input -->
+				<control type="button" id="8">
+					<width>auto</width>
+					<label>31188</label>
+					<onclick>ActivateWindow(1108)</onclick>
 					<visible>!String.IsEmpty(Window(10035).Property(colorpicker))</visible>
 				</control>
 				
@@ -96,7 +104,6 @@
 					<width>auto</width>
 					<label>13007</label>
 					<onclick>Skin.SetString($INFO[Window(10035).Property(colorpickercolor)],Default)</onclick>
-					<onclick>Dialog.Close(12008)</onclick>
 					<visible>!String.IsEmpty(Window(10035).Property(colorpicker))</visible>
 				</control>
 
