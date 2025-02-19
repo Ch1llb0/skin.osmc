@@ -914,6 +914,11 @@ msgctxt "#31187"
 msgid "Movie Genres"
 msgstr ""
 
+#: /DialogColorPicker.xml
+msgctxt "#31188"
+msgid "Manual colour value"
+msgstr ""
+
 #: /shortcuts/overrides.xml
 msgctxt "#31189"
 msgid "TV Shows"
@@ -1994,9 +1999,9 @@ msgctxt "#31404"
 msgid "Repository"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /DialogColorPicker.xml
 msgctxt "#31405"
-msgid "Edit colour value"
+msgid "Enter colour value"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -2137,6 +2142,11 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31433"
 msgid "Disable the genre based colour background of the TV/radio guide tiles for a more minimalistic look."
+msgstr ""
+
+#: /DialogColorPicker.xml
+msgctxt "#31434"
+msgid "Pick colour"
 msgstr ""
 
 #: /SkinSettings.xml
