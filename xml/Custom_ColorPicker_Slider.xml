@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1108">
+	<!-- Color slider picker dialog -->
+	<defaultcontrol always="true">10</defaultcontrol>
+	
+	<!-- Textbox scroll reset -->
+	<include>ResetScroll</include>
+	
+	<controls>
+
+		<!-- Dialog fanart -->
+		<include>DialogBackgroundImage</include>
+		
+		<control type="group">
+
+			<!-- Animation -->
+			<include>DialogZoomAnimation</include>
+			
+			<!-- Heading -->
+			<include content="Time">
+				<param name="heading">31188</param>
+				<param name="secondary">False</param>
+			</include>
+
+			<!-- Colour sliders -->
+			<control type="grouplist">
+				<include>Custom_ColorPicker_Slider_coords1</include>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+				<onup>noop</onup>
+				<ondown>9000</ondown>
+				
+				<!-- Alpha -->
+				<control type="slider" id="8001"/>
+				<control type="label" id="8101">
+					<include>Custom_ColorPicker_Slider_coords2</include>
+					<label>Alpha: $INFO[Control.GetLabel(8001)] (HEX: $VAR[ColorPicker_PercentToHEX_Alpha])</label>
+				</control>
+
+				<!-- Red -->
+				<control type="slider" id="8002"/>
+				<control type="label" id="8102">
+					<include>Custom_ColorPicker_Slider_coords2</include>
+					<label>$LOCALIZE[13343]: $INFO[Control.GetLabel(8002)] (HEX: $VAR[ColorPicker_PercentToHEX_Red])</label>
+				</control>
+
+				<!-- Green -->
+				<control type="slider" id="8003"/>
+				<control type="label" id="8103">
+					<include>Custom_ColorPicker_Slider_coords2</include>
+					<label>$LOCALIZE[13341]: $INFO[Control.GetLabel(8003)] (HEX: $VAR[ColorPicker_PercentToHEX_Green])</label>
+				</control>
+
+				<!-- Blue -->
+				<control type="slider" id="8004"/>
+				<control type="label" id="8104">
+					<include>Custom_ColorPicker_Slider_coords2</include>
+					<label>$LOCALIZE[762]: $INFO[Control.GetLabel(8004)] (HEX: $VAR[ColorPicker_PercentToHEX_Blue])</label>
+				</control>
+			
+			</control>
+			
+			<!-- Live Preview -->
+			<control type="image">
+				<include>Custom_ColorPicker_Slider_coords3</include>
+				<texture colordiffuse="$VAR[ColorPicker_PercentToHEX_Color]">common/white.png</texture>
+				<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
+				<aspectratio>keep</aspectratio>
+				<visible>!String.IsEqual(Control.GetLabel(1000),#00000000)</visible>
+			</control>
+			
+			<!-- Color name -->
+			<control type="fadelabel" id="1000">
+				<include>Custom_ColorPicker_Slider_coords4</include>
+				<font>Font27</font>
+				<align>center</align>
+				<label>#$VAR[ColorPicker_PercentToHEX_Color]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+			</control>
+
+			<!-- Buttons -->
+			<control type="grouplist" id="9000">
+				<include>DialogButtons</include>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>30</itemgap>
+				<onup>8001</onup>
+				
+				<!-- Apply -->
+				<control type="button" id="10">
+					<width>auto</width>
+					<label>732</label>
+					<onclick>Skin.SetString($INFO[Window(10035).Property(colorpickercolor)],$VAR[ColorPicker_PercentToHEX_Color])</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
+				</control>
+
+				<!-- Cancel -->
+				<control type="button" id="12">
+					<width>auto</width>
+					<label>222</label>
+					<onclick>Dialog.Close(1108)</onclick>
+				</control>
+				
+			</control>
+		
+		</control>
+
+		<include>MaskingBars</include>
+
+	</controls>
+
+</window>
