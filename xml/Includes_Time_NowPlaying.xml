@@ -125,7 +125,16 @@
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
 							<align>right</align>
-							<label>$INFO[VideoPlayer.TVShowTitle]</label>
+							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
+							<label>$INFO[VideoPlayer.EpisodeName]</label>
+							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + !String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+						</control>
+						
+						<control type="fadelabel">
+							<include>nowplaying_coords4</include>
+							<aligny>top</aligny>
+							<align>right</align>
+							<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]</label>
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + String.IsEmpty(VideoPlayer.EpisodeName) + !String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 						</control>
@@ -136,15 +145,6 @@
 							<align>right</align>
 							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
-						</control>
-						
-						<control type="fadelabel">
-							<include>nowplaying_coords4</include>
-							<aligny>top</aligny>
-							<align>right</align>
-							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
-							<label>$INFO[VideoPlayer.EpisodeName]</label>
-							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + !String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 						</control>
 						
 						<!-- Now Playing - Live TV -->
