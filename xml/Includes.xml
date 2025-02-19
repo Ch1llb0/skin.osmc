@@ -4,6 +4,7 @@
 	<!-- Includes/variables files -->
 	<include file="Coordinates_AddonBrowser.xml" />
 	<include file="Coordinates_Custom_Cache_Progress.xml" />
+	<include file="Coordinates_Custom_ColorPicker_Slider.xml" />
 	<include file="Coordinates_Custom_Confirm_Reset_Skin_Settings.xml" />
 	<include file="Coordinates_Custom_DialogMasking.xml" />
 	<include file="Coordinates_Custom_Debug_Grid.xml" />
