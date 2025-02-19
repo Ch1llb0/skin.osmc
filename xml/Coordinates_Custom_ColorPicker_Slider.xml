@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="Custom_ColorPicker_Slider_coords1">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_ColorPicker_Slider_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_ColorPicker_Slider_coords1_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_ColorPicker_Slider_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_ColorPicker_Slider_coords1_4:3</include>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords1_16:9">
+		<left>150</left>
+		<right>600</right>
+		<top>235</top>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords1_21:9">
+		<left>150</left>
+		<right>600</right>
+		<top>235</top>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords1_21:9_masked">
+		<left>150</left>
+		<right>600</right>
+		<top>415</top>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords1_4:3">
+		<left>150</left>
+		<right>600</right>
+		<top>235</top>
+	</include>
+	
+	<include name="Custom_ColorPicker_Slider_coords2">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_ColorPicker_Slider_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_ColorPicker_Slider_coords2_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_ColorPicker_Slider_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_ColorPicker_Slider_coords2_4:3</include>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords2_16:9">
+		<height>80</height>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords2_21:9">
+		<height>80</height>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords2_21:9_masked">
+		<height>80</height>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords2_4:3">
+		<height>80</height>
+	</include>
+	
+	<include name="Custom_ColorPicker_Slider_coords3">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_ColorPicker_Slider_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_ColorPicker_Slider_coords3_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_ColorPicker_Slider_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_ColorPicker_Slider_coords3_4:3</include>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords3_16:9">
+		<right>150</right>
+		<top>235</top>
+		<height>400</height>
+		<width>400</width>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords3_21:9">
+		<right>150</right>
+		<top>235</top>
+		<height>400</height>
+		<width>400</width>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords3_21:9_masked">
+		<right>150</right>
+		<top>415</top>
+		<height>400</height>
+		<width>400</width>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords3_4:3">
+		<right>150</right>
+		<top>235</top>
+		<height>400</height>
+		<width>400</width>
+	</include>
+	
+	<include name="Custom_ColorPicker_Slider_coords4">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_ColorPicker_Slider_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_ColorPicker_Slider_coords4_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_ColorPicker_Slider_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_ColorPicker_Slider_coords4_4:3</include>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords4_16:9">
+		<left>150</left>
+		<bottom>180</bottom>
+		<width>1620</width>
+		<height>36</height>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords4_21:9">
+		<left>150</left>
+		<bottom>180</bottom>
+		<width>2260</width>
+		<height>36</height>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords4_21:9_masked">
+		<left>150</left>
+		<bottom>360</bottom>
+		<width>2260</width>
+		<height>36</height>
+	</include>
+	<include name="Custom_ColorPicker_Slider_coords4_4:3">
+		<left>150</left>
+		<bottom>180</bottom>
+		<width>1140</width>
+		<height>36</height>
+	</include>
+
+</includes>

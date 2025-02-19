@@ -6,6 +6,7 @@
 
 _New_
 - add new views for images section
+- add new colour picker slider dialog
 
 _Improved_
 - adjust video addon views to work with multiple content types (videos, episodes, movies)
@@ -541,9 +542,12 @@ Release
 
 **Changelog v21.2.0**
 
+_add new Coordinates_Custom_ColorPicker_Slider.xml and Custom_ColorPicker.xml files_
+
 strings.po:
 - adjust plot/description setting description to mention new XL font size (31326)
-
+- add localizes for new colour picker slider dialog (31188, 31434)
+- adjust colour picker dialog localize for clearer differentiation from new colour picker slider dialog button (31405)
 
 Coordinates_DialogPVRChannelGuide.xml:
 - adjust coordinates includes for new XL plot font textbox control
@@ -620,16 +624,23 @@ Coordinates_Viewtype539.xml:
 - add new content type image includes
 - fix videos fallback icon
 
+DialogColorPicker.xml:
+- add new colour picker slider dialog button
+
 Font.xml:
 - remove line spacing from Font36
 
 Includes.xml:
 - adjust DefaultView include to work with multiple content types and specifically with video addons
+- add new includes files
 
 Includes_SubMenu.xml:
 - add fixed video addon views setting to side menu
 - adjust views menu to work together with fixed video addon views setting
 - add new images content type in views menu for viewtypes 523, 535 and 537
+
+Includes_Time_NowPlaying.xml:
+- adjust Now Playing - Video section
 
 MyPics.xml:
 - add new viewtypes
@@ -641,6 +652,9 @@ Variables.xml:
 - add new DefaultViewSettings variable for reworked views menu buttons
 - adjust HeadingLabelSecondary variable to show proper information on episodes level (TV show title and season, if useful)
 - adjust ContentType variable to show videos content type when a list of video addon items are shown
+
+Variables_Colours.xml:
+- add new ColorPicker_PercentToHEX_Alpha, ColorPicker_PercentToHEX_Red, ColorPicker_PercentToHEX_Green, ColorPicker_PercentToHEX_Blue and ColorPicker_PercentToHEX_Color variables for new colour picker slider dialog
 
 Viewtype51.xml:
 - adjust visibility conditions of images and list container to work with multiple with multiple video addons content type
