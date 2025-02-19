@@ -769,6 +769,10 @@ msgctxt "#31187"
 msgid "Movie Genres"
 msgstr "Generi Film"
 
+msgctxt "#31188"
+msgid "Manual colour value"
+msgstr ""
+
 msgctxt "#31189"
 msgid "TV Shows"
 msgstr "Serie TV"
@@ -1634,8 +1638,8 @@ msgid "Repository"
 msgstr ""
 
 msgctxt "#31405"
-msgid "Edit colour value"
-msgstr "Modifica volore colore"
+msgid "Enter colour value"
+msgstr ""
 
 msgctxt "#31406"
 msgid "Library Node Editor"
@@ -1749,6 +1753,10 @@ msgctxt "#31433"
 msgid "Disable the genre based colour background of the TV/radio guide tiles for a more minimalistic look."
 msgstr "Disabilità la colorazione basata sul genere nella guida TV/radio per un aspetto più minimalistico."
 
+msgctxt "#31434"
+msgid "Pick colour"
+msgstr ""
+
 msgctxt "#31435"
 msgid "Colour used for menu and OSD backgrounds[CR]Adjust colour opacity via the edit colour value button (the alpha channel - the first two hex digits adjust opacity)"
 msgstr "Colore usato per sfondo di menù e OSD[CR]Regola l'opacità del colore tramite il bottone di modifica dei valori (il canale alpha - i primi due valori esadecimali regolano l'opacità)"
@@ -1784,6 +1792,10 @@ msgstr "Azione eseguita quando si seleziona uno show TV nel menù principale (De
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr "Azione eseguita quando si seleziona un film nel menù principale (Default: Esplora)"
+
+#~ msgctxt "#31405"
+#~ msgid "Edit colour value"
+#~ msgstr "Modifica volore colore"
 
 #~ msgctxt "#31326"
 #~ msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"

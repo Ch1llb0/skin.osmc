@@ -769,6 +769,10 @@ msgctxt "#31187"
 msgid "Movie Genres"
 msgstr "Filmgenres"
 
+msgctxt "#31188"
+msgid "Manual colour value"
+msgstr ""
+
 msgctxt "#31189"
 msgid "TV Shows"
 msgstr "TV-series"
@@ -1634,8 +1638,8 @@ msgid "Repository"
 msgstr ""
 
 msgctxt "#31405"
-msgid "Edit colour value"
-msgstr "Bewerk kleurwaarde"
+msgid "Enter colour value"
+msgstr ""
 
 msgctxt "#31406"
 msgid "Library Node Editor"
@@ -1749,6 +1753,10 @@ msgctxt "#31433"
 msgid "Disable the genre based colour background of the TV/radio guide tiles for a more minimalistic look."
 msgstr "Uitschakelen van per genre gekleurde achtergronden van de tv-/radiogids tegels voor een minimalistischer uiterlijk."
 
+msgctxt "#31434"
+msgid "Pick colour"
+msgstr ""
+
 msgctxt "#31435"
 msgid "Colour used for menu and OSD backgrounds[CR]Adjust colour opacity via the edit colour value button (the alpha channel - the first two hex digits adjust opacity)"
 msgstr "Kleur gebruikt voor menu- en OSD-achtergronden[CR]Pas de kleurondoorzichtigheid aan via de knop Kleurwaarde bewerken (het alfakanaal - de eerste twee hexadecimale cijfers passen de ondoorzichtigheid aan)"
@@ -1784,6 +1792,10 @@ msgstr "Actie die wordt gebruikt bij het selecteren van een item in de TV-serie 
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr "Actie die wordt gebruikt bij het selecteren van een item in de filmset widget in het hoofdmenu (Standaard: Bladeren naar)"
+
+#~ msgctxt "#31405"
+#~ msgid "Edit colour value"
+#~ msgstr "Bewerk kleurwaarde"
 
 #~ msgctxt "#31326"
 #~ msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
