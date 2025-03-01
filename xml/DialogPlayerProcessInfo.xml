@@ -54,35 +54,35 @@
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(videodecoder),[LIGHT]$LOCALIZE[31087]:[/LIGHT] ,]$VAR[VideoHWDecoder,[LIGHT] (,)[/LIGHT]]</label>
+						<label>$INFO[Player.Process(videodecoder),[LIGHT]$LOCALIZE[31087]:[/LIGHT] [UPPERCASE],[/UPPERCASE]]$VAR[VideoHWDecoder,[LIGHT] ([UPPERCASE],[/UPPERCASE])[/LIGHT]]</label>
 						<font>Font25</font>
 						<visible>Player.HasVideo</visible>				
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(pixformat),[LIGHT]$LOCALIZE[31088]:[/LIGHT] ,]</label>
+						<label>$INFO[Player.Process(pixformat),[LIGHT]$LOCALIZE[31088]:[/LIGHT] [UPPERCASE],[/UPPERCASE]]</label>
 						<font>Font25</font>
 						<visible>Player.HasVideo</visible>					
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(deintmethod),[LIGHT]$LOCALIZE[16038]:[/LIGHT] ,]</label>
+						<label>$INFO[Player.Process(deintmethod),[LIGHT]$LOCALIZE[16038]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</label>
 						<font>Font25</font>
 						<visible>Player.HasVideo</visible>					
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(VideoDecoder),[LIGHT]$LOCALIZE[38031]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]][LIGHT] ($INFO[Player.Process(videowidth)]$INFO[Player.Process(videoheight),x,]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videodar),$COMMA ,:1]$INFO[Player.Process(videofps),$COMMA , fps])[/LIGHT]</label>
+						<label>$INFO[Player.Process(VideoDecoder),[LIGHT]$LOCALIZE[38031]:[/LIGHT] [UPPERCASE],[/UPPERCASE]][LIGHT] ($INFO[Player.Process(videowidth)]$INFO[Player.Process(videoheight),x,]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videodar),$COMMA ,:1]$INFO[Player.Process(videofps),$COMMA , fps])[/LIGHT]</label>
 						<font>Font25</font>
 						<visible>Player.HasVideo</visible>					
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(audiodecoder),[LIGHT]$LOCALIZE[460]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]][LIGHT] ($INFO[Player.Process(audiochannels),,]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz])[/LIGHT]</label>
+						<label>$INFO[Player.Process(audiodecoder),[LIGHT]$LOCALIZE[460]:[/LIGHT] [UPPERCASE],[/UPPERCASE]][LIGHT] ($INFO[Player.Process(audiochannels),,]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz])[/LIGHT]</label>
 						<font>Font25</font>
 					</control>
 					<control type="label">
@@ -102,42 +102,42 @@
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[PVR.ActStreamServiceName,[LIGHT]$LOCALIZE[19099]:[/LIGHT] ,]$INFO[PVR.ActStreamProviderName,  [LIGHT]$LOCALIZE[19101]:[/LIGHT] ,]</label>
+						<label>$INFO[PVR.ActStreamServiceName,[LIGHT]$LOCALIZE[19099]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]$INFO[PVR.ActStreamProviderName,  [LIGHT]$LOCALIZE[19101]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</label>
 						<font>Font25</font>			
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[PVR.ActStreamDevice,[LIGHT]$LOCALIZE[19006]:[/LIGHT] ,]$INFO[PVR.ActStreamStatus, [LIGHT](,)[/LIGHT]]</label>
+						<label>$INFO[PVR.ActStreamDevice,[LIGHT]$LOCALIZE[19006]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]$INFO[PVR.ActStreamStatus, [LIGHT]([CAPITALIZE],[/CAPITALIZE])[/LIGHT]]</label>
 						<font>Font25</font>				
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[PVR.ActStreamClient,[LIGHT]$LOCALIZE[19012]:[/LIGHT] ,]</label>
+						<label>$INFO[PVR.ActStreamClient,[LIGHT]$LOCALIZE[19012]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</label>
 						<font>Font25</font>				
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[PVR.ActStreamEncryptionName,[LIGHT]$LOCALIZE[19015]:[/LIGHT] ,]</label>
+						<label>$INFO[PVR.ActStreamEncryptionName,[LIGHT]$LOCALIZE[19015]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</label>
 						<font>Font25</font>			
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[PVR.ActStreamBer,[LIGHT]$LOCALIZE[19010]:[/LIGHT] ,]$INFO[PVR.ActStreamUnc,  [LIGHT]$LOCALIZE[19011]:[/LIGHT] ,]$INFO[PVR.ActStreamMux,  [LIGHT]$LOCALIZE[19100]:[/LIGHT] ,]</label>
+						<label>$INFO[PVR.ActStreamBer,[LIGHT]$LOCALIZE[19010]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]$INFO[PVR.ActStreamUnc,  [LIGHT]$LOCALIZE[19011]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]$INFO[PVR.ActStreamMux,  [LIGHT]$LOCALIZE[19100]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</label>
 						<font>Font25</font>			
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
 						<align>right</align>
-						<label>$INFO[PVR.ActStreamSignal,[LIGHT]$LOCALIZE[19008]:[/LIGHT] ,]$INFO[PVR.ActStreamSNR,  [LIGHT]$LOCALIZE[19009]:[/LIGHT] ,]</label>
+						<label>$INFO[PVR.ActStreamSignal,[LIGHT]$LOCALIZE[19008]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]$INFO[PVR.ActStreamSNR,  [LIGHT]$LOCALIZE[19009]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</label>
 						<font>Font25</font>
 					</control>
 				</control>
