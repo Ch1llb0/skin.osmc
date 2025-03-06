@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-01-28 14:21+0000\n"
+"PO-Revision-Date: 2025-03-04 06:31+0000\n"
 "Last-Translator: nixxo <translator-28@contribute-osmc.com>\n"
 "Language-Team: Italian <http://translate.osmc.tv/projects/osmc/osmc-skin/it_it/>\n"
 "Language: it_it\n"
@@ -771,7 +771,7 @@ msgstr "Generi Film"
 
 msgctxt "#31188"
 msgid "Manual colour value"
-msgstr ""
+msgstr "Valore colore manuale"
 
 msgctxt "#31189"
 msgid "TV Shows"
@@ -1191,7 +1191,7 @@ msgstr "Raccolte film"
 
 msgctxt "#31293"
 msgid "Disable TV/radio guide genre colours"
-msgstr ""
+msgstr "Disabilità colorazione basata sul genere nella guida TV/radio"
 
 msgctxt "#31294"
 msgid "Custom colour options"
@@ -1323,7 +1323,7 @@ msgstr "Quantità di oscuramento delle immagini non focalizzate, come la coperti
 
 msgctxt "#31326"
 msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L, XL"
-msgstr ""
+msgstr "Dimensione font della trama e descrizione nella visualizzazione Muro o Lista e dialoghi informativi OSD (default: S)[CR]Opzioni disponibili: S, M, L, XL"
 
 msgctxt "#31327"
 msgid "Hide the watched indicator shown on video fanart in wall views, wide views and widgets and in front of list view elements"
@@ -1639,7 +1639,7 @@ msgstr ""
 
 msgctxt "#31405"
 msgid "Enter colour value"
-msgstr ""
+msgstr "Inserisci valore colore"
 
 msgctxt "#31406"
 msgid "Library Node Editor"
@@ -1755,7 +1755,7 @@ msgstr "Disabilità la colorazione basata sul genere nella guida TV/radio per un
 
 msgctxt "#31434"
 msgid "Pick colour"
-msgstr ""
+msgstr "Scegli colore"
 
 msgctxt "#31435"
 msgid "Colour used for menu and OSD backgrounds[CR]Adjust colour opacity via the edit colour value button (the alpha channel - the first two hex digits adjust opacity)"
