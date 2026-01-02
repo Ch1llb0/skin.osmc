@@ -414,7 +414,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
+							<label>$VAR[Video]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -581,7 +581,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</label>
+							<label>$VAR[Video]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
