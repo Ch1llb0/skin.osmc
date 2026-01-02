@@ -308,7 +308,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
@@ -372,7 +372,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
@@ -436,7 +436,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
@@ -500,7 +500,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
@@ -596,7 +596,7 @@
 						<height>27</height>
 						<font>Font27-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 						<scroll>True</scroll>
 						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
@@ -687,7 +687,7 @@
 						<height>27</height>
 						<font>Font27-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 						<scroll>True</scroll>
 						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
@@ -778,7 +778,7 @@
 						<height>27</height>
 						<font>Font27-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 						<scroll>True</scroll>
 						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
@@ -869,7 +869,7 @@
 						<height>27</height>
 						<font>Font27-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration,, &#8226; ]$VAR[VideoCodec]$VAR[VideoResolution, &#8226; ,]$INFO[ListItem.VideoAspect, &#8226; ,:1] &#8226; $VAR[Audio]</label>
+						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 						<scroll>True</scroll>
 						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
