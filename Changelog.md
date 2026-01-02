@@ -6,6 +6,8 @@
 
 _Improved_
 - add new item limits to main menu widgets
+- improve rendering of video media flags all over the skin for edge cases
+- improve debug overlay
 
 _Fixed_
 - fix the date added sort order of main menu widgets
@@ -564,12 +566,36 @@ Release
 
 **Changelog v21.2.2**
 
+strings.po:
+- adjust widget limit description text for new widget item limit options (31375)
+
 overrides.xml:
 - turn case sensitive sort order properties to lower case
 - add new lower widget item limit
 
 script-skinshortcuts-static.xml:
 - turn case sensitive sort order properties to lower case
+
+Coordinates_Custom_Debug_Info.xml:
+- add new coordinates includes for reworked debug overlay
+
+Coordinates_DialogSelect.xml:
+- adjust video version secondary label to use new Video variable
+
+Coordinates_DialogVideoManager.xml:
+- adjust video version secondary label to use new Video variable
+
+Custom_Debug_Info.xml:
+- rework debug overlay to show information more clearly
+
+DialogVideoInfo.xml:
+- use new Video variable for video related information
+
+DialogVideoInfo.xml:
+- use new Video variable for video related information
+
+Variables.xml:
+- rework VideoResolution to general Video variable for edge cases e.g. with video add-ons
 
 Variables_Skinshortcuts.xml:
 - turn case sensitive sort order properties to lower case
