@@ -857,15 +857,16 @@
 		<value condition="!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))">$INFO[ListItem.Property(SubtitleLanguage.1),[CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.2),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.3),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.4),$COMMA [CAPITALIZE],[/CAPITALIZE] ...]</value>
 	</variable>
 	
-	<!-- Video Resolution labels -->
-	<variable name="VideoResolution">
-		<value condition="![String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)]">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]x$INFO[ListItem.VideoHeight]</value>
+	<!-- Video info label -->
+	<variable name="Video">
+		<value condition="![String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)]">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</value>
 		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,480) | String.IsEqual(ListItem.VideoResolution,576) | String.IsEqual(ListItem.VideoResolution,540)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]SD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,720)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]HD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,1080)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]Full HD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,4K)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]4K UHD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,8K)">$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]8K UHD</value>
-		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEmpty(ListItem.VideoResolution)">$VAR[HDRType,, &#8226; ]$VAR[3DMode]</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,720)">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]HD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,1080)">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]Full HD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,4K)">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]4K UHD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEqual(ListItem.VideoResolution,8K)">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]8K UHD</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEmpty(ListItem.VideoResolution) + !String.IsEmpty(ListItem.HdrType)">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode]</value>
+		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEmpty(ListItem.VideoResolution) + String.IsEmpty(ListItem.HdrType) + !String.IsEmpty(ListItem.VideoCodec)">$VAR[VideoCodec]$VAR[3DMode, &#8226; ,]</value>
 	</variable>
 	
 	<!-- Video Codec labels -->
@@ -884,6 +885,12 @@
 		<value condition="String.IsEqual(ListItem.VideoCodec,xvid)">XviD</value>
 		<value>$INFO[ListItem.VideoCodec,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
+	
+	<!-- HDR type labels -->
+	<variable name="HDRType">
+		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV</value>
+		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,[UPPERCASE],[/UPPERCASE]]</value>
+	</variable>
 
 	<!-- 3D Video label -->
 	<variable name="3DMode">
@@ -892,12 +899,6 @@
 		<value condition="String.Contains(ListItem.FileName,_ou-) | String.Contains(ListItem.FileName,_ou.) | String.Contains(ListItem.FileName,_ou_) | String.Contains(ListItem.FileName,_tab-) | String.Contains(ListItem.FileName,_tab.) | String.Contains(ListItem.FileName,_tab_) | String.Contains(ListItem.FileName,-ou-) | String.Contains(ListItem.FileName,-ou.) | String.Contains(ListItem.FileName,-ou_) | String.Contains(ListItem.FileName,-tab-) | String.Contains(ListItem.FileName,-tab.) | String.Contains(ListItem.FileName,-tab_) | String.Contains(ListItem.FileName,.ou-) | String.Contains(ListItem.FileName,.ou.) | String.Contains(ListItem.FileName,.ou_) | String.Contains(ListItem.FileName,.tab-) | String.Contains(ListItem.FileName,.tab.) | String.Contains(ListItem.FileName,.tab_)">3D (TAB)</value>
 		<value condition="String.Contains(ListItem.FileName,_sbs-) | String.Contains(ListItem.FileName,_sbs.) | String.Contains(ListItem.FileName,_sbs_) | String.Contains(ListItem.FileName,-sbs-) | String.Contains(ListItem.FileName,-sbs.) | String.Contains(ListItem.FileName,-sbs_) | String.Contains(ListItem.FileName,.sbs-) | String.Contains(ListItem.FileName,.sbs.) | String.Contains(ListItem.FileName,.sbs_)">3D (SBS)</value>
 		<value condition="ListItem.IsStereoscopic | String.Contains(ListItem.FileName,.3d-) | String.Contains(ListItem.FileName,.3d.) | String.Contains(ListItem.FileName,.3d_) | String.Contains(ListItem.FileName,-3d-) | String.Contains(ListItem.FileName,-3d.) | String.Contains(ListItem.FileName,-3d_) | String.Contains(ListItem.FileName,_3d-) | String.Contains(ListItem.FileName,_3d.) | String.Contains(ListItem.FileName,_3d_)">3D</value>
-	</variable>
-	
-	<!-- HDR type labels -->
-	<variable name="HDRType">
-		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV</value>
-		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<!-- Season/Episode label -->
