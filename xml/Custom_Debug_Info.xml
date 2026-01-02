@@ -10,924 +10,1016 @@
 		<control type="grouplist">
 			<include>Custom_Debug_Info_coords1</include>
 			<itemgap>12</itemgap>
+			
+			<control type="grouplist">
+				<include>Custom_Debug_Info_coords2</include>
+				<orientation>horizontal</orientation>
+				
+				<!-- Control label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords3</include>
+					<textcolor>FF00FF00</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<label>Current control: </label>
+					<visible>![String.IsEmpty(System.CurrentControl) + String.IsEmpty(System.CurrentControlID) + String.IsEmpty(Container.CurrentItem) + String.IsEmpty(ListItem.DBID)]</visible>
+				</control>
+				
+				<!-- Control label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords4</include>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<scroll>true</scroll>
+					<label>$INFO[System.CurrentControl]$INFO[System.CurrentControlID, (ID: ,)]$INFO[Container.CurrentItem, &#8226; Item: ,]$INFO[ListItem.DBID, &#8226; DBID: ,]</label>
+					<visible>![String.IsEmpty(System.CurrentControl) + String.IsEmpty(System.CurrentControlID) + String.IsEmpty(Container.CurrentItem) + String.IsEmpty(ListItem.DBID)]</visible>
+				</control>
+			</control>
+			
+			<control type="grouplist">
+				<include>Custom_Debug_Info_coords2</include>
+				<orientation>horizontal</orientation>
+				
+				<!-- Control label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords3</include>
+					<textcolor>FF00FF00</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<label>Folder: </label>
+					<visible>!String.IsEmpty(Container.FolderName)</visible>
+				</control>
+
+				<!-- Folder label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords4</include>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<scroll>true</scroll>
+					<label>$INFO[Container.FolderName]</label>
+					<visible>!String.IsEmpty(Container.FolderName)</visible>
+				</control>
+			
+			</control>
+			
+			<control type="grouplist">
+				<include>Custom_Debug_Info_coords2</include>
+				<orientation>horizontal</orientation>
+				
+				<!-- Control label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords3</include>
+					<textcolor>FF00FF00</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<label>Path: </label>
+					<visible>!String.IsEmpty(Container.FolderPath)</visible>
+				</control>
+			
+				<!-- Path label -->
+				<control type="fadelabel">
+					<include>Custom_Debug_Info_coords4</include>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<label>$INFO[Container.FolderPath]</label>
+					<visible>!String.IsEmpty(Container.FolderPath)</visible>
+				</control>
+			
+			</control>
+			
+			<control type="grouplist">
+				<include>Custom_Debug_Info_coords2</include>
+				<orientation>horizontal</orientation>
+				
+				<!-- Control label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords3</include>
+					<textcolor>FF00FF00</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<label>Content: </label>
+					<visible>!String.IsEmpty(Container.Content)</visible>
+				</control>
+			
+				<!-- Content label -->
+				<control type="label">
+					<include>Custom_Debug_Info_coords4</include>
+					<textcolor>FFFF0000</textcolor>
+					<shadowcolor>FF000000</shadowcolor>
+					<font>font13</font>
+					<align>left</align>
+					<scroll>true</scroll>
+					<label>$INFO[Container.Content]</label>
+					<visible>!String.IsEmpty(Container.Content)</visible>
+				</control>
+			
+			</control>
+
+		</control>
+		
+		<control type="grouplist">
+			<include>Custom_Debug_Info_coords6</include>
+			<itemgap>12</itemgap>
 
 			<!-- Window labels -->
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>$INFO[System.CurrentWindow]</label>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>AddonBrowser.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>EventLog.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(EventLog.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>FileManager.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(FileManager.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Home.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(Home.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>LoginScreen.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(LoginScreen.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF00FF00</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MusicVisualisation.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MusicVisualisation.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyFavourites.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyFavourites.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyGames.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyGames.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyMusicNav.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyMusicNav.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyMusicPlaylist.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyMusicPlaylistEditor.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPics.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPics.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPlaylist.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPlaylist.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPrograms.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPrograms.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPVRChannels.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRChannels.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPVRGuide.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPVRRecordings.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPVRSearch.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRSearch.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyPVRTimers.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRTimers.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyVideoNav.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyVideoNav.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MyWeather.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyWeather.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Settings.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(Settings.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SettingsCategory.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsCategory.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SettingsProfile.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsProfile.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SettingsScreenCalibration.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsScreenCalibration.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SettingsSystemInfo.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsSystemInfo.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SkinSettings.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SkinSettings.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>VideoFullScreen.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
 			</control>
 
 			<!-- Dialog labels -->
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_AutoMusicVis.xml</label>
 				<visible>Window.IsVisible(1115)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Backup.xml</label>
 				<visible>Window.IsVisible(1104)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Cache_Progress.xml</label>
 				<visible>Window.IsVisible(1100)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Confirm_Reset_Skin_Settings.xml</label>
 				<visible>Window.IsVisible(1107)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Customization.xml</label>
 				<visible>Window.IsVisible(1103)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_DialogMasking.xml</label>
 				<visible>Window.IsVisible(1105)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Disabled_Add-on.xml</label>
 				<visible>Window.IsVisible(1102)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Skin_Shortcuts_Help.xml</label>
 				<visible>Window.IsVisible(1106)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Custom_Welcome.xml</label>
 				<visible>Window.IsVisible(1101)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogAddonInfo.xml</label>
 				<visible>Window.IsVisible(DialogAddonInfo.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogAddonSettings.xml</label>
 				<visible>Window.IsVisible(DialogAddonSettings.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogBusy.xml</label>
 				<visible>Window.IsVisible(DialogBusy.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogButtonMenu.xml</label>
 				<visible>Window.IsVisible(DialogButtonMenu.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogColorPicker.xml</label>
 				<visible>Window.IsVisible(DialogColorPicker.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogConfirm.xml</label>
 				<visible>Window.IsVisible(DialogConfirm.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogContextMenu.xml</label>
 				<visible>Window.IsVisible(DialogContextMenu.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogExtendedProgressBar.xml</label>
 				<visible>Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogFavourites.xml</label>
 				<visible>Window.IsVisible(DialogFavourites.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogFullScreenInfo.xml</label>
 				<visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogGameControllers.xml</label>
 				<visible>Window.IsVisible(DialogGameControllers.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogKeyboard.xml</label>
 				<visible>Window.IsVisible(DialogKeyboard.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogMediaSource.xml</label>
 				<visible>Window.IsVisible(DialogMediaSource.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogMusicInfo.xml</label>
 				<visible>Window.IsVisible(DialogMusicInfo.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogNotification.xml</label>
 				<visible>Window.IsVisible(DialogNotification.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogNumeric.xml</label>
 				<visible>Window.IsVisible(DialogNumeric.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPictureInfo.xml</label>
 				<visible>Window.IsVisible(DialogPictureInfo.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPlayerProcessInfo.xml</label>
 				<visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRChannelGuide.xml</label>
 				<visible>Window.IsVisible(DialogPVRChannelGuide.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRChannelManager.xml</label>
 				<visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRChannelsOSD.xml</label>
 				<visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRGroupManager.xml</label>
 				<visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRGuideControls.xml</label>
 				<visible>Window.IsVisible(DialogPVRGuideControls.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRGuideSearch.xml</label>
 				<visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogPVRInfo.xml</label>
 				<visible>Window.IsVisible(DialogPVRInfo.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogSeekbar.xml</label>
 				<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogSelect.xml</label>
 				<visible>Window.IsVisible(DialogSelect.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogSettings.xml</label>
 				<visible>Window.IsVisible(DialogSettings.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogSlider.xml</label>
 				<visible>Window.IsVisible(DialogSlider.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogSubtitles.xml</label>
 				<visible>Window.IsVisible(DialogSubtitles.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogTextViewer.xml</label>
 				<visible>Window.IsVisible(DialogTextViewer.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogVideoInfo.xml</label>
 				<visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogVideoManager.xml</label>
 				<visible>Window.IsVisible(DialogVideoManager.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>DialogVolumeBar.xml</label>
 				<visible>Window.IsVisible(DialogVolumeBar.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>FileBrowser.xml</label>
 				<visible>Window.IsVisible(FileBrowser.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>GameOSD.xml</label>
 				<visible>Window.IsVisible(GameOSD.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>MusicOSD.xml</label>
 				<visible>Window.IsVisible(MusicOSD.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>PlayerControls.xml</label>
 				<visible>Window.IsVisible(PlayerControls.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>Pointer.xml</label>
 				<visible>Window.IsVisible(Pointer.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>script-skinshortcuts.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-skinshortcuts.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>script-upnext-stillwatching.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-stillwatching.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>script-upnext-stillwatching-simple.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-stillwatching-simple.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>script-upnext-upnext.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-upnext.xml)</visible>
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>script-upnext-upnext-simple.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-upnext-simple.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SlideShow.xml</label>
 				<visible>Window.IsVisible(SlideShow.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SmartPlaylistEditor.xml</label>
 				<visible>Window.IsVisible(SmartPlaylistEditor.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>SmartPlaylistRule.xml</label>
 				<visible>Window.IsVisible(SmartPlaylistRule.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>VideoOSD.xml</label>
 				<visible>Window.IsVisible(VideoOSD.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>VideoOSDBookmarks.xml</label>
 				<visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>VideoOSDSettings.xml</label>
 				<visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
+				<include>Custom_Debug_Info_coords5</include>
+				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
-				<align>left</align>
+				<align>right</align>
 				<label>VisualisationPresetList.xml</label>
 				<visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
-			</control>
-
-		</control>
-		
-		<control type="grouplist">
-			<include>Custom_Debug_Info_coords3</include>
-			<itemgap>12</itemgap>
-
-			<!-- Control label -->
-			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FF0000FF</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>right</align>
-				<label>$INFO[System.CurrentControl]$INFO[System.CurrentControlID, (,)]$INFO[Container.Content, ,]$INFO[Container.CurrentItem, (,)]$INFO[ListItem.DBID, DBID: ,]</label>
-				<visible>![String.IsEmpty(System.CurrentControl) + String.IsEmpty(System.CurrentControlID) + String.IsEmpty(Container.Content) + String.IsEmpty(Container.CurrentItem) + String.IsEmpty(ListItem.DBID)]</visible>
-			</control>
-
-			<!-- Folder & Path label -->
-			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords2</include>
-				<textcolor>FFFF0000</textcolor>
-				<shadowcolor>FF000000</shadowcolor>
-				<font>font13</font>
-				<align>right</align>
-				<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, &#8226; ][/COLOR]$INFO[Container.FolderPath]</label>
-				<visible>!String.IsEmpty(Container.FolderName)</visible>
 			</control>
 			
 		</control>
