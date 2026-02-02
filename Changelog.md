@@ -4,6 +4,9 @@
 
 **_v21.2.2_**
 
+_New_
+- add new DV profile info label
+
 _Improved_
 - add new item limits to main menu widgets
 - improve rendering of video media flags all over the skin for edge cases
