@@ -888,7 +888,8 @@
 	
 	<!-- HDR type labels -->
 	<variable name="HDRType">
-		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV$INFO[ListItem.DVProfile, (P,)]</value>
+		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision) + !String.IsEmpty(ListItem.DVProfile)">DV$INFO[ListItem.DVProfile, (P,)]</value>
+		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision) + String.IsEmpty(ListItem.DVProfile)">DV</value>
 		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 
