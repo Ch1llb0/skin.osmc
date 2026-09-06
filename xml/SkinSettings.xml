@@ -169,6 +169,17 @@
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
+						<!-- Show two widgets on screen at once -->
+						<control type="radiobutton" id="106">
+							<include>SkinSettings_coords17</include>
+							<font>Font33</font>
+							<label>31447</label>
+							<onclick>Skin.ToggleSetting(HomeWidgetsTwoRows)</onclick>
+							<onclick>ReloadSkin()</onclick>
+							<onclick>Control.SetFocus(9000,0,absolute)</onclick>
+							<onclick>Control.SetFocus(106,absolute)</onclick>
+							<selected>Skin.HasSetting(HomeWidgetsTwoRows)</selected>
+						</control>
 						<!-- Default select action for album widgets -->
 						<control type="button" id="103">
 							<include>SkinSettings_coords16</include>

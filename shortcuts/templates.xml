@@ -9,6 +9,28 @@
 			<values condition="layout=square-small" layoutWidth="240" layoutHeight="240" imageWidthNoFocus="216" imageHeightNoFocus="216" imageWidthFocus="240" imageHeightFocus="240" overlayHeight="24" overlaySlide="12" />
 			<values layoutWidth="240" layoutHeight="360" imageWidthNoFocus="216" imageHeightNoFocus="324" imageWidthFocus="240" imageHeightFocus="360" overlayHeight="24" overlaySlide="12" />
 		</preset>
+
+		<!-- The two row poster and the gap beside it are the same on every aspect ratio; only the
+		     box width, and so the number of icons, changes. A box has to leave the slot past its
+		     last poster outside itself: Kodi's scroll window is the whole slots the box holds, so
+		     a poster drawn beyond that would scroll the row a column early. rowHeight is the
+		     row's own box, which the focus zoom fills exactly; rowOffsetY is set from it, landing
+		     every layout's poster bottom on 445, and rowStride is the whole block below one
+		     poster, so row 1's art always starts twenty pixels under row 0's details. Each
+		     layout's art is the same fraction of its one widget art, so the four keep the sizes
+		     they have always had relative to one another; the 173 slot layouts set that fraction,
+		     since the 4:3 box holds their art below the nine tenths of a slot the skin fills
+		     elsewhere. rowImageLeft sits the art in its slot: centred, unless the box's leftover
+		     past its last whole slot is wider than that, in which case the art moves right by
+		     just enough that the slot after the last one starts its art outside the box. Kodi
+		     draws one item past the ones it pages, clipped, so anything nearer than that shows
+		     as a sliver of the next poster at the row's end. -->
+		<preset name="widgetLayoutTwoRow">
+			<values condition="layout=wide" rowOffsetY="-163" rowStride="289" rowWidth="213" rowHeight="148" rowImageWidthNoFocus="177" rowImageHeightNoFocus="133" rowImageWidthFocus="196" rowImageHeightFocus="148" rowImageLeft="18" rowOverlayHeight="20" rowOverlaySlide="10" />
+			<values condition="layout=square" rowOffsetY="-131" rowStride="333" rowWidth="213" rowHeight="196" rowImageWidthNoFocus="177" rowImageHeightNoFocus="177" rowImageWidthFocus="196" rowImageHeightFocus="196" rowImageLeft="18" rowOverlayHeight="20" rowOverlaySlide="10" />
+			<values condition="layout=square-small" rowOffsetY="-163" rowStride="289" rowWidth="173" rowHeight="148" rowImageWidthNoFocus="133" rowImageHeightNoFocus="133" rowImageWidthFocus="148" rowImageHeightFocus="148" rowImageLeft="29" rowOverlayHeight="16" rowOverlaySlide="8" />
+			<values rowOffsetY="-117" rowStride="356" rowWidth="173" rowHeight="222" rowImageWidthNoFocus="133" rowImageHeightNoFocus="200" rowImageWidthFocus="148" rowImageHeightFocus="222" rowImageLeft="29" rowOverlayHeight="16" rowOverlaySlide="8" />
+		</preset>
 	</presets>
 
 	<propertyGroups>
@@ -184,6 +206,7 @@
 				<skinshortcuts insert="onclickPrevious" />
 				<onfocus>SetProperty(changeWidget-1000$PROPERTY[index],True,10000)</onfocus>
 				<onfocus>AlarmClock(changeWidgetTimer,SetProperty(changeWidget-1000$PROPERTY[index],False,10000),00:03,silent)</onfocus>
+				<onfocus>SetProperty(widgetUp-1000$PROPERTY[index],True,10000)</onfocus>
 				<onfocus>Control.Move(1000$PROPERTY[index],-1)</onfocus>
 			</control>
 			<control type="button" id="9006">
@@ -204,13 +227,37 @@
 				<skinshortcuts insert="onclickNext" />
 				<onfocus>SetProperty(changeWidget-1000$PROPERTY[index],True,10000)</onfocus>
 				<onfocus>AlarmClock(changeWidgetTimer,SetProperty(changeWidget-1000$PROPERTY[index],False,10000),00:03,silent)</onfocus>
+				<onfocus>ClearProperty(widgetUp-1000$PROPERTY[index],10000)</onfocus>
 				<onfocus>Control.Move(1000$PROPERTY[index],1)</onfocus>
+			</control>
+
+			<!-- The second widget of an odd list is drawn on two pages, so up and down there turn
+			     the page and leave the selection where it is. Kodi reads a control's onup and
+			     ondown before it acts, so the branch is taken there rather than inside a button,
+			     where the first action would change what the rest of them test. -->
+			<control type="button" id="9008">
+				<description>Show the shared widget on its earlier page</description>
+				<left>1100</left>
+				<top>-10000</top>
+				<skinshortcuts>visibility</skinshortcuts>
+				<label>Page back</label>
+				<onfocus>ClearProperty(widgetUp-1000$PROPERTY[index],10000)</onfocus>
+				<onfocus>Control.SetFocus(10$PROPERTY[index]02)</onfocus>
+			</control>
+			<control type="button" id="9009">
+				<description>Show the shared widget on its later page</description>
+				<left>1300</left>
+				<top>-10000</top>
+				<skinshortcuts>visibility</skinshortcuts>
+				<label>Page on</label>
+				<onfocus>SetProperty(widgetUp-1000$PROPERTY[index],True,10000)</onfocus>
+				<onfocus>Control.SetFocus(10$PROPERTY[index]02)</onfocus>
 			</control>
 
 			<!-- Widget heading/details -->
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
-				<visible>Integer.IsGreater(Container(1000$PROPERTY[index]).NumItems,0)</visible>
+				<visible>Integer.IsGreater(Container(1000$PROPERTY[index]).NumItems,0) + ![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PROPERTY[index]).NumItems,1) + !Control.IsVisible(109$PROPERTY[index])]</visible>
 				<include content="widgetHeading">
 					<param name="container">1000$PROPERTY[index]</param>
 					<param name="container2">10$PROPERTY[index]01</param>
@@ -226,6 +273,8 @@
 				<label>$PROPERTY[widgetLabel]</label>
 				<visible>[Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0) | Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook)) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 				<property name="widgetID">$PARENT[index]-$PROPERTY[index]</property>
+				<property name="pageID">$PARENT[index]-$MATH[($PROPERTY[index] - 1) // 2]</property>
+				<property name="pageIDOdd">$PARENT[index]-$MATH[$PROPERTY[index] // 2]</property>
 				<property name="widgetContainer">10$PARENT[index]0$PROPERTY[index]</property>
 			</item>
 		</controls>
@@ -260,6 +309,15 @@
 
 	<template items="weatherWidget" source="widgets" filter="widgetPath~weather-widget">
 		<controls>
+			<!-- Says this menu entry holds a weather widget, which no other control can work out:
+			     a list reports how many widgets there are, not what any of them is. -->
+			<control type="label" id="109$PARENT[index]">
+				<skinshortcuts>visibility</skinshortcuts>
+				<left>-10000</left>
+				<top>-10000</top>
+				<label>weather</label>
+			</control>
+
 			<control type="list" id="10$PARENT[index]0$PROPERTY[index]">
 				<viewtype label="$LOCALIZE[535]">list</viewtype>
 				<orientation>horizontal</orientation>
@@ -272,6 +330,7 @@
 				<!-- Widget oncontrol -->
 				<include content="widgetOnControl">
 					<param name="container">1000$PARENT[index]</param>
+					<param name="menu">$PARENT[index]</param>
 				</include>
 				
 				<!-- Widget layout slide -->
@@ -283,6 +342,7 @@
 				<include content="widgetAnimation">
 					<param name="container1">1000$PARENT[index]</param>
 					<param name="container2">$PARENT[index]-$PROPERTY[index]</param>
+					<param name="twoup">False</param>
 				</include>
 
 				<itemlayout width="203" height="306">
@@ -476,6 +536,7 @@
 	<template items="libraryWidget" source="widgets" filter="widgetPath + !widgetPath~weather-widget">
 		<propertyGroup content="widgetArtwork" />
 		<preset content="widgetLayout" />
+		<preset content="widgetLayoutTwoRow" />
 		<controls>
 			<control type="list" id="10$PARENT[index]0$PROPERTY[index]">
 				<viewtype label="$LOCALIZE[535]">list</viewtype>
@@ -485,21 +546,33 @@
 
 				<!-- Widget layout -->
 				<include>widgetLayout-$PROPERTY[layout]</include>
+				<animation effect="slide" start="0,0" end="0,$MATH[(($PROPERTY[index] - 1) % 2) * rowStride + rowOffsetY]" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]">conditional</animation>
+				<animation effect="slide" start="0,0" end="0,$MATH[($PROPERTY[index] % 2) * rowStride + rowOffsetY]" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]">conditional</animation>
+				<animation type="Conditional" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Conditional" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
 
 				<!-- Widget oncontrol -->
 				<include content="widgetOnControl">
 					<param name="container">1000$PARENT[index]</param>
+					<param name="menu">$PARENT[index]</param>
 				</include>
 				
 				<!-- Widget layout slide -->
 				<include content="widgetLayoutSlide-$PROPERTY[layout]">
 					<param name="container">10$PARENT[index]0$PROPERTY[index]</param>
+					<param name="tworow">$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])</param>
 				</include>
 
 				<!-- Widget animation -->
 				<include content="widgetAnimation">
 					<param name="container1">1000$PARENT[index]</param>
 					<param name="container2">$PARENT[index]-$PROPERTY[index]</param>
+					<param name="shown">[[![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]] + [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(pageID),$PARENT[index]-$MATH[($PROPERTY[index] - 1) // 2])]] | [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]] + [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(pageIDOdd),$PARENT[index]-$MATH[$PROPERTY[index] // 2])]]</param>
+					<param name="twoup">$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])</param>
 				</include>
 				
 				<!-- Widget onclick -->
@@ -507,7 +580,7 @@
 				<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + !String.StartsWith(ListItem.FileNameAndPath,plugin://)">$VAR[WidgetOnClickTVShow]</onclick>
 				<onclick condition="String.IsEqual(ListItem.DBTYPE,set) + !String.StartsWith(ListItem.FileNameAndPath,plugin://)">$VAR[WidgetOnClickMovieSet]</onclick>
 
-				<itemlayout width="$PROPERTY[layoutWidth]" height="$PROPERTY[layoutHeight]">
+				<itemlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])]" width="$PROPERTY[layoutWidth]" height="$PROPERTY[layoutHeight]">
 					<include content="$PROPERTY[primaryArt]">
 						<description>Primary art</description>
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
@@ -549,7 +622,7 @@
 					</include>
 				</itemlayout>
 
-				<focusedlayout width="$PROPERTY[layoutWidth]" height="$PROPERTY[layoutHeight]">
+				<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])]" width="$PROPERTY[layoutWidth]" height="$PROPERTY[layoutHeight]">
 					<control type="group">
 						<animation effect="zoom" start="100" end="111" center="$MATH[imageWidthFocus / 2],$PROPERTY[imageHeightFocus]" time="300" tween="back" easing="out" reversible="false">Focus</animation>
 						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Control.HasFocus(9000)">Conditional</animation>
@@ -680,8 +753,237 @@
 
 				</focusedlayout>
 
+				<itemlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])]" width="$PROPERTY[rowWidth]" height="$PROPERTY[rowHeight]">
+					<include content="$PROPERTY[primaryArt]">
+						<description>Primary art</description>
+						<param name="left">$PROPERTY[rowImageLeft]</param>
+						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+						<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="fallback">$PROPERTY[artFallback]</param>
+						<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
+						<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
+					</include>
+					<include content="$PROPERTY[secondaryArt]">
+						<description>Fallback art</description>
+						<param name="left">$PROPERTY[rowImageLeft]</param>
+						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+						<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="fallback">$PROPERTY[artFallback]</param>
+						<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
+						<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
+					</include>
+					<include content="widget-image">
+						<description>Catch-all art</description>
+						<param name="left">$PROPERTY[rowImageLeft]</param>
+						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+						<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="fallback">$PROPERTY[artFallback]</param>
+						<param name="art">$INFO[ListItem.Icon]</param>
+						<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
+					</include>
+					
+					<include content="widgetOverlayBar">
+						<param name="left">$PROPERTY[rowImageLeft]</param>
+						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+						<param name="height">$PROPERTY[rowOverlayHeight]</param>
+						<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+						<param name="slide">$PROPERTY[rowOverlaySlide]</param>
+						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					</include>
+				</itemlayout>
+
+				<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])]" width="$PROPERTY[rowWidth]" height="$PROPERTY[rowHeight]">
+					<control type="group">
+						<animation effect="zoom" start="100" end="111" center="$MATH[rowImageLeft + (rowImageWidthNoFocus / 2)],$PROPERTY[rowHeight]" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+						<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Control.HasFocus(9000)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="0" reversible="false">Unfocus</animation>
+						<control type="group">
+							<visible>!System.HasActiveModalDialog + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
+							<include content="$PROPERTY[primaryArt]">
+								<description>Primary art</description>
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+								<param name="fallback">$PROPERTY[artFallback]</param>
+								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
+								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
+							</include>
+							<include content="$PROPERTY[secondaryArt]">
+								<description>Fallback art</description>
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+								<param name="fallback">$PROPERTY[artFallback]</param>
+								<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
+								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
+							</include>
+							<include content="widget-image">
+								<description>Catch-all art</description>
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+								<param name="fallback">$PROPERTY[artFallback]</param>
+								<param name="art">$INFO[ListItem.Icon]</param>
+								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
+							</include>
+							
+							<include content="widgetOverlayBar">
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowOverlayHeight]</param>
+								<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+								<param name="slide">$PROPERTY[rowOverlaySlide]</param>
+							</include>
+						</control>
+						<control type="group">
+							<visible>System.HasActiveModalDialog | !Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
+							<include content="$PROPERTY[primaryArt]">
+								<description>Primary art</description>
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+								<param name="fallback">$PROPERTY[artFallback]</param>
+								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
+								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
+							</include>
+							<include content="$PROPERTY[secondaryArt]">
+								<description>Fallback art</description>
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+								<param name="fallback">$PROPERTY[artFallback]</param>
+								<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
+								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
+							</include>
+							<include content="widget-image">
+								<description>Catch-all art</description>
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+								<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+								<param name="fallback">$PROPERTY[artFallback]</param>
+								<param name="art">$INFO[ListItem.Icon]</param>
+								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
+							</include>
+							
+							<include content="widgetOverlayBar">
+								<param name="left">$PROPERTY[rowImageLeft]</param>
+								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[rowOverlayHeight]</param>
+								<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+								<param name="slide">$PROPERTY[rowOverlaySlide]</param>
+								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							</include>
+						</control>
+					</control>
+					<control type="group">
+						<animation effect="fade" start="100" end="0" time="0" reversible="false">Focus</animation>
+						<include content="$PROPERTY[primaryArt]">
+							<description>Primary art</description>
+							<param name="left">$PROPERTY[rowImageLeft]</param>
+							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+							<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="fallback">$PROPERTY[artFallback]</param>
+							<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
+							<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
+						</include>
+						<include content="$PROPERTY[secondaryArt]">
+							<description>Fallback art</description>
+							<param name="left">$PROPERTY[rowImageLeft]</param>
+							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+							<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="fallback">$PROPERTY[artFallback]</param>
+							<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
+							<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
+						</include>
+						<include content="widget-image">
+							<description>Catch-all art</description>
+							<param name="left">$PROPERTY[rowImageLeft]</param>
+							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+							<param name="height">$PROPERTY[rowImageHeightNoFocus]</param>
+							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="fallback">$PROPERTY[artFallback]</param>
+							<param name="art">$INFO[ListItem.Icon]</param>
+							<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
+						</include>
+						
+						<include content="widgetOverlayBar">
+							<param name="left">$PROPERTY[rowImageLeft]</param>
+							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
+							<param name="height">$PROPERTY[rowOverlayHeight]</param>
+							<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+							<param name="slide">$PROPERTY[rowOverlaySlide]</param>
+							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						</include>
+					</control>
+
+				</focusedlayout>
+
 				<content limit="$PROPERTY[widgetLimit]" sortby="$PROPERTY[widgetSortBy]" sortorder="$PROPERTY[widgetSortOrder]" target="$PROPERTY[widgetTarget]" browse="never">$PROPERTY[widgetPath]</content>
 			</control>
+			<!-- More widgets above or below, shown with the same arrows the home menu uses for
+			     more menu items and placed exactly as its own are. It belongs to the widget holding
+			     focus, so it fades away with the menu entry list or a submenu in focus, where up and
+			     down no longer move between widgets. One widget holds focus at a time, so only one
+			     of these is ever drawn. -->
+			<control type="group">
+				<visible>Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + [Integer.IsGreater(Container(1000$PARENT[index]).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1)]]</visible>
+				<include content="widgetIndicators" />
+			</control>
+			<!-- Two row details: the widget's own name, then the same detail text the one widget
+			     view shows, which the focused widget alone carries. Row 1 slides by the same offset
+			     as its posters, and swaps with row 0 on the final page of an odd list. -->
+			<control type="group">
+				<include>widgetTwoRowDetails-row0</include>
+				<visible>Control.IsVisible(1000$PARENT[index]) + $EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [[[![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]] + [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(pageID),$PARENT[index]-$MATH[($PROPERTY[index] - 1) // 2])]] | [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]] + [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(pageIDOdd),$PARENT[index]-$MATH[$PROPERTY[index] // 2])]]]</visible>
+				<animation effect="slide" start="0,0" end="0,$MATH[(($PROPERTY[index] - 1) % 2) * rowStride]" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]">conditional</animation>
+				<animation effect="slide" start="0,0" end="0,$MATH[($PROPERTY[index] % 2) * rowStride]" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]">conditional</animation>
+				<animation type="Conditional" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Conditional" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]]" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="400" />
+				</animation>
+				<control type="label">
+					<include>widgetdetails_coords</include>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$PROPERTY[widgetLabel]</label>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+				</control>
+				<control type="textbox">
+					<top>44</top>
+					<include>widgetdetails_coords</include>
+					<height>80</height>
+					<autoscroll time="3000" delay="4000" repeat="4000" />
+					<font>Font33</font>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[Control.GetLabel(9988)]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<visible>Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
+					<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+				</control>
+			</control>
+
+
+
 		</controls>
 	</template>
 

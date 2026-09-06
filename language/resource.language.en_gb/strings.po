@@ -2208,3 +2208,11 @@ msgstr ""
 msgctxt "#31446"
 msgid "Parental rating"
 msgstr ""
+
+msgctxt "#31447"
+msgid "Show two widgets on screen"
+msgstr ""
+
+msgctxt "#31448"
+msgid "Show two of a menu entry's widgets at once, one above the other. Up and down move between them and page on to the next two. Entries with only one widget set keep the larger single widget."
+msgstr ""

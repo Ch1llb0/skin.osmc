@@ -12,6 +12,7 @@ _New_
 - add live bitrates, queue levels and subtitle decoder to the player process info dialog
 - add spinner to the weather widget while it updates
 - add last update time to the weather window
+- add an option to show two widgets on screen at once
 
 _Improved_
 - allow stepping through subtitles in both directions in the video OSD
@@ -621,6 +622,8 @@ strings.po:
 - add string for the parental rating of PVR items (31446)
 - adjust the widget item limit description text for the free-form number, saying that zero shows every available item (31375)
 - reword the reset button to name everything it clears, as it removes every menu and every view selection rather than only the main menu items (31399)
+- add string for the two widgets on screen setting (31447)
+- add string describing what the two widgets on screen setting does (31448)
 
 backgrounds.xml:
 - add the background list, splitting the v2 browse behaviour into the two v3 types the skin renders: browse for a single image, multi for a folder
@@ -683,6 +686,14 @@ templates.xml:
 - use v3's sets type for the movie sets widget and the visibility marker where the template wrote the condition out by hand
 - spell the emptiness test the way Kodi understands it
 - indent the propertyGroup values under their parent
+- emit a second layout per widget for the two row view, chosen at runtime by the setting, so both are always built and only an expression decides which is drawn
+- give the selector items both pages they could sit on beside their widgetID, so a widget's page is arithmetic on its index rather than something stored, and the pair sharing a page is drawn together
+- add the two buttons that turn the page under the shared widget of an odd numbered set without moving the selection, and have the movement buttons record which way they went
+- add the widgetLayoutTwoRow preset, each layout carrying the stride that closes the gap under its own details block and art that is the same fraction of the art it has in the single widget view, so the four keep their sizes relative to one another
+- sit the two row art in its slot through rowImageLeft, moving it right of centre where the box's leftover past its last whole slot would otherwise show a sliver of the next poster
+- turn the two row focus zoom about the art's centre, as the art is neither the width of its slot nor centred in it
+- draw each widget's own name below it and the detail text of its focused item, dropping both the moment focus leaves so neither flashes the next widget's item on the way out
+- leave the weather widget on the single layout, marking it with a hidden label the two row tests read, as its hand placed internals cannot share a row
 
 widgets.xml:
 - add the widget list, giving every widget a unique name, as v3 looks a widget up by name to re-derive its path, type and target on every build
@@ -707,6 +718,7 @@ script-skinshortcuts-static.xml:
 - rebuild the no-addon fallback from a v3 build of this skin's own configuration, replacing the v2 build it still carried
 - rebuild it against Skin Shortcuts 3.0.3 from a clean profile, taking it from 5,328 lines and 439 KB to 4,008 and 257 KB
 - store it with unix line endings, which is what the add-on writes
+- rebuild it again for the two row view, so it reaches the users the file exists for
 
 script-skinshortcuts.xml:
 - tell the three editing contexts apart by menuname, which always holds the menu being edited, where skinshortcuts-menutype is only set for menus the configuration declares
@@ -733,6 +745,12 @@ Coordinates_DialogSelect.xml:
 
 Coordinates_DialogVideoManager.xml:
 - hide the item sublabel under the generic select dialog, which stacks over the manager in Kodi v22
+
+Coordinates_Includes_Widgets.xml:
+- add the two row details top, one number for all four layouts, as each lands its poster bottom twelve pixels above it and the lower row is the same block slid down
+- add the widget arrow coordinates, at the home menu list's own height against the opposite margin
+- give each widget box a second set of right alignment offsets for the two row slot, taken by a tworow parameter the weather slide never passes
+- size every widget box to a whole number of slots in both layouts, as Kodi pages by the whole slots a box holds; 4:3 wide moves to a 640 box at 680, as square already was, which also ends the sliver of a third poster its 720 box has always shown
 
 Coordinates_LoginScreen.xml:
 - give the scrollbar its own LoginScreen_coords6 family, as its geometry was declared under the name the profile list already used and Kodi keeps only the first definition
@@ -799,6 +817,10 @@ Includes_Widgets.xml:
 - default the shared artwork include's parameters
 - remove the widget includes the v3 rewrite orphaned, and the long dead favourites widget include
 - take the window background over from the per-widget variable, reading it back through a hidden label as Kodi cannot test a variable for emptiness
+- add widgetIndicators, the home menu's own arrows at its own height mirrored to the right of the screen, drawn for the widget that holds focus, and drop the two arrow buttons from the heading row those replace
+- send up and down at the shared widget of an odd numbered set to the paging buttons, defaulting the menu name so a fallback built before this never takes that branch
+- select the fading widget by page rather than by widget when two are on screen, keeping the effects and timings that move between single widgets
+- hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
 
 Includes_Windows_Dialogs.xml:
 - read the home background from backgroundPath, which is where v3 stores the path
@@ -831,6 +853,7 @@ SkinSettings.xml:
 - remove the always show settings link setting
 - gate the entry points on the add-on being enabled, and drop the HasAddon conjunct that implies
 - reword the reset button for everything it clears
+- add the two widgets on screen setting, reloading the skin so the layout conditions are read again and putting focus back on the row
 
 Variables.xml:
 - reduce the codec and channel variables to map lookups, keeping the DSD sample rate rows
@@ -843,6 +866,7 @@ Variables.xml:
 - add extra title info, parental rating and, in multi client setups, the backend name to the PVR description variables
 - add a plain elapsed time row for live playback
 - separate genres, directors and writers with commas
+- name the two widgets on screen setting as the TwoRowWidgets expression, which is what every two row test and layout condition reads
 
 Variables_Settings.xml:
 - follow the renamed window property and the moved control ids in the dialog help texts
@@ -850,6 +874,7 @@ Variables_Settings.xml:
 - give the widget list's restore button its own help string; 31383 was written for it and 31385, describing the main menu, was used by mistake
 - follow the merged heading label and the dropped SendClick proxy
 - read the menu kind from the named expressions
+- add the help text for the two widgets on screen setting
 
 Variables_Skinshortcuts.xml:
 - drop the five lookup variables that mapped a stored value back to its localized string, now that the script publishes a resolved label per property

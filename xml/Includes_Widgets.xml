@@ -381,6 +381,38 @@
 		</definition>
 	</include>
 
+	<!-- The up and down column beside the widgets: the same arrows the home menu uses for more
+	     menu items, at the same top and bottom and the same 120 in from the screen edge, this
+	     time the right one. Both are always drawn - the caller shows the column only when there
+	     is more than one screenful, and which end you are at is not what it reports. -->
+	<include name="widgetIndicators">
+		<definition>
+			<control type="group">
+				<include>widgetindicators_coords</include>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="400" delay="400" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="400" />
+				</animation>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>30</width>
+					<height>16</height>
+					<texture colordiffuse="$VAR[OverlayColorNF]">up.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<bottom>0</bottom>
+					<width>30</width>
+					<height>16</height>
+					<texture colordiffuse="$VAR[OverlayColorNF]">down.png</texture>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 	<!-- Widget layout -->
 	<include name="widgetLayout-weather">
 		<include>widgetLayout-weather-OSMC</include>
@@ -404,19 +436,28 @@
 
 	<!-- Widget on control -->
 	<include name="widgetOnControl">
+		<param name="menu">none</param>
 		<definition>
 			<include content="widgetOnControl-OSMC">
 				<param name="container">$PARAM[container]</param>
+				<param name="menu">$PARAM[menu]</param>
 			</include>
 		</definition>
 	</include>
 	
 	<include name="widgetOnControl-OSMC">
+		<!-- The second widget of an odd list sits on two pages, so up and down there turn the
+		     page rather than move: 9008 back to the page it shares with the first widget, 9009
+		     on to the page it shares with the third. menu defaults to a name no menu has, so a
+		     fallback built before two row support, which passes none, never takes that branch. -->
+		<param name="menu">none</param>
 		<definition>
 			<onleft>9000</onleft>
 			<onback>9000</onback>
-			<onup condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1)">9005</onup>
-			<ondown condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1)">9007</ondown>
+			<onup condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + ![$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]">9005</onup>
+			<onup condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + [$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]">9008</onup>
+			<ondown condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + ![$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]]">9007</ondown>
+			<ondown condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + [$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]]">9009</ondown>
 			<onright>noop</onright>
 		</definition>
 	</include>
@@ -431,48 +472,72 @@
 	</include>
 	
 	<include name="widgetLayoutSlide-tall">
+		<!-- tworow defaults to False, so a fallback built before two row support, which passes
+		     nothing, keeps right aligning short widgets by the one widget slot. -->
+		<param name="tworow">False</param>
 		<definition>
 			<include content="widgetLayoutSlide-tall-OSMC">
 				<param name="container">$PARAM[container]</param>
+				<param name="tworow">$PARAM[tworow]</param>
 			</include>
 		</definition>
 	</include>
 	
 	<include name="widgetLayoutSlide-wide">
+		<!-- tworow defaults to False, so a fallback built before two row support, which passes
+		     nothing, keeps right aligning short widgets by the one widget slot. -->
+		<param name="tworow">False</param>
 		<definition>
 			<include content="widgetLayoutSlide-wide-OSMC">
 				<param name="container">$PARAM[container]</param>
+				<param name="tworow">$PARAM[tworow]</param>
 			</include>
 		</definition>
 	</include>
 	
 	<include name="widgetLayoutSlide-square">
+		<!-- tworow defaults to False, so a fallback built before two row support, which passes
+		     nothing, keeps right aligning short widgets by the one widget slot. -->
+		<param name="tworow">False</param>
 		<definition>
 			<include content="widgetLayoutSlide-square-OSMC">
 				<param name="container">$PARAM[container]</param>
+				<param name="tworow">$PARAM[tworow]</param>
 			</include>
 		</definition>
 	</include>
 	
 	<include name="widgetLayoutSlide-square-small">
+		<!-- tworow defaults to False, so a fallback built before two row support, which passes
+		     nothing, keeps right aligning short widgets by the one widget slot. -->
+		<param name="tworow">False</param>
 		<definition>
 			<include content="widgetLayoutSlide-square-small-OSMC">
 				<param name="container">$PARAM[container]</param>
+				<param name="tworow">$PARAM[tworow]</param>
 			</include>
 		</definition>
 	</include>
 	
 	<!-- Widget Animation -->
 	<include name="widgetAnimation">
+		<param name="twoup">False</param>
+		<param name="shown">False</param>
 		<definition>
 			<include content="widgetAnimation-OSMC">
 				<param name="container1">$PARAM[container1]</param>
 				<param name="container2">$PARAM[container2]</param>
+				<param name="twoup">$PARAM[twoup]</param>
+				<param name="shown">$PARAM[shown]</param>
 			</include>
 		</definition>
 	</include>
 
 	<include name="widgetAnimation-OSMC">
+		<!-- twoup defaults to False, so a fallback built before two row support, which passes
+		     neither twoup nor page, keeps selecting on the widget alone. -->
+		<param name="twoup">False</param>
+		<param name="shown">False</param>
 		<definition>
 			<!-- Visible/Hidden (group) animation -->
 			<animation type="Conditional" condition="Control.IsVisible($PARAM[container1])">
@@ -482,11 +547,12 @@
 				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
 
-			<!-- Selected/deselected widget animation -->
-			<animation type="Conditional" condition="String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])">
+			<!-- Selected/deselected widget animation. With two on screen the pair sharing a page
+			     fades together, so paging crossfades exactly as moving between single widgets does. -->
+			<animation type="Conditional" condition="[![$PARAM[twoup]] + String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])] | [[$PARAM[twoup]] + [$PARAM[shown]]]">
 				<effect type="fade" start="0" end="100" time="400" delay="400" />
 			</animation>
-			<animation type="Conditional" condition="!String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])">
+			<animation type="Conditional" condition="![[![$PARAM[twoup]] + String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])] | [[$PARAM[twoup]] + [$PARAM[shown]]]]">
 				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
 		</definition>
@@ -563,36 +629,16 @@
 						<label>$INFO[Container($PARAM[container]).ListItem.Label]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					<control type="button">
-						<top>15</top>
-						<width>30</width>
-						<height>16</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
-						<onup>9000</onup>
-						<ondown>9000</ondown>
-						<texturenofocus colordiffuse="$VAR[OverlayColorNF]">up.png</texturenofocus>
-						<texturefocus colordiffuse="$VAR[OverlayColorFO]">up.png</texturefocus>
-						<onclick>Control.Move($PARAM[container],-1)</onclick>
-					</control>
-					<control type="button">
-						<top>15</top>
-						<width>30</width>
-						<height>16</height>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
-						<onup>9000</onup>
-						<ondown>9000</ondown>
-						<texturenofocus colordiffuse="$VAR[OverlayColorNF]">down.png</texturenofocus>
-						<texturefocus colordiffuse="$VAR[OverlayColorFO]">down.png</texturefocus>
-						<onclick>Control.Move($PARAM[container],1)</onclick>
-					</control>
 				</control>
 
 				<!-- Widget details -->
 				<control type="textbox">
 					<include>widgetdetails_coords</include>
-					<height>auto</height>
+					<!-- Three rows of 39.75 for Font33, the most the text runs to: a PVR channel's
+					     name over its now and next line. One widget on screen has the room for all
+					     three, so nothing has to scroll here; two rows share the two they can fit. -->
+					<height>120</height>
+					<autoscroll time="3000" delay="4000" repeat="4000" />
 					<font>Font33</font>
 					<align>right</align>
 					<aligny>top</aligny>
