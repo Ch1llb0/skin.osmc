@@ -6,6 +6,7 @@
 
 _New_
 - add support for Kodi v22 (Piers)
+- add support for Skin Shortcuts v3
 - add Dolby Vision profile to the HDR media flag
 - add extra title info, parental rating and backend name to PVR items
 - add live bitrates, queue levels and subtitle decoder to the player process info dialog
@@ -20,9 +21,15 @@ _Improved_
 - separate genres, directors and writers with commas
 - hide duration based information during live playback
 - consolidate codec and audio channel labels into shared lookup maps
+- allow any item limit to be set for main menu widgets
+- localise the artwork type names in the main menu widget artwork pickers
+- offer every artwork type when picking main menu widget artwork, rather than only the ones the widget's content provides
+- remove the always show settings link setting, as the settings item can no longer be taken off the main menu
 
 _Fixed_
 - fix audio channel labels claiming layouts a channel count cannot identify
+- fix the recently added artists widget pointing at a playlist that does not exist
+- fix the music add-on widget resolving to nothing
 
 ---
 
@@ -594,13 +601,67 @@ strings.po:
 - add string for unnamed audio channel counts (31444)
 - add string for the player process info queue levels (31445)
 - add string for the parental rating of PVR items (31446)
+- adjust the widget item limit description text for the free-form number (31375)
+
+backgrounds.xml:
+- add the background list, splitting the v2 browse behaviour into the two v3 types the skin renders: browse for a single image, multi for a folder
+
+menus.xml:
+- add the menu structure: a menu for the main menu, a submenu per menu item, and a "<name>.widgets" submenu per widget list
+- open a widget list through a subdialog on the manage widgets button, which is how v3 edits a second menu
+- spell out the shortcut picker in groupings, as v3 owns no built-in shortcut list, and give the dynamic sources it used to resolve internally explicit content elements
+- declare the visibility conditions v2's builder inferred from an item's action, as v3 emits only what the skin declares
+- write out each seeded widget's path, type, target and artwork beside its name, as v3 derives those from the name only for items that carry no widget label yet
+- bind the settings submenu to its menu item, which v2's baked output carried but the declaration had lost
+- protect the settings item with required="true", replacing the v2 checkforshortcut probe and its always show settings link toggle
+
+overrides.xml:
+- remove the v2 groupings, widgets, backgrounds and property options, carried into menus.xml, widgets.xml, backgrounds.xml and properties.xml
+
+properties.xml:
+- add the widget property buttons mapped to their properties, which is how v3 opens a picker, stores the value and resolves its label
+- give sort order, sort direction and item limit real button ids (502, 503, 504) instead of sharing one hidden control through a chooseProperty window property
+- give the item limit v3's numeric type, so any limit can be set
+- move the artwork options to the skin's own strings, as v2 listed them in English in the picker while the button underneath showed the localized name
+- key the add-on sort options off widgetSource and the user rating option off the normalized "videos" target, neither of which the v2 conditions matched
 
 template.xml:
+- remove the v2 widget templates, carried into templates.xml
+
+templates.xml:
+- add the widget templates in the v3 template language, keeping the generated controls unchanged so the widgets render as before
+- address the main menu item and the widget as $PARENT[index] and $PROPERTY[index], replacing the v2 auto-rootID and id pair
+- let v3 skip a template for any item with no widgets, rather than gating on a property no template condition can see
+- replace $PYTHON with $MATH for the image geometry and with variables for the artwork selection
+- collapse the six parallel layout property lists into one widgetLayout preset with a row per layout, and the four conditional layout includes into one include whose name interpolates the layout
+- round the overlay bar's height and slide to the whole pixels v2 emitted, as $MATH keeps the fraction
 - show the widget reloading spinner while the weather widget updates
+- write the spinner's per menu item gate out explicitly, as the v2 marker that carried it only resolves in a menu template
+
+widgets.xml:
+- add the widget list, giving every widget a unique name, as v3 looks a widget up by name to re-derive its path, type and target on every build
+- resolve the four add-on categories through content source="addons" rather than restating their paths, which also offers the category root itself as an entry
+- drop the install and enable rows for Skin Helper Service and ExtendedInfo, as v3 has no equivalent of the ::INSTALL:: and ::ENABLE:: markers, and the upnp sources, which have no v3 source
+- point the recently added artists widget at extras/playlists/artists_recentlyadded.xsp, replacing a misplaced "s" that named a directory and a file that do not exist
+
+mainmenu.DATA.xml and the seventeen other seed files:
+- remove the v2 seed files, carried into menus.xml
 
 script-skinshortcuts-static.xml:
 - show the widget reloading spinner while the weather widget updates
 - separate genres with commas in the widget details
+- rebuild the no-addon fallback from a v3 build of this skin's own configuration, replacing the v2 build it still carried
+
+script-skinshortcuts.xml:
+- tell the three editing contexts apart by menuname, which always holds the menu being edited, where skinshortcuts-menutype is only set for menus the configuration declares
+- follow the v3 control ids: the widget picker moves 312 -> 309, restore moves 308 -> 311, and the hidden 404 property button goes along with the SetProperty(chooseProperty) calls that drove it
+- rename a widget by clicking 305, whose v3 handler writes the widget label, so the rename no longer needs script.skin.helper.service
+- treat a stored widget path as proof that a widget is configured, as the seeded add-on and PVR widgets carry a path but no name
+- read the label the script has already resolved for the widget rows and for the heading above the widget buttons, as Kodi does not evaluate a $LOCALIZE inside a property value
+- remove the hidden container that loaded a widget to offer only the art types it has, as v3 evaluates option conditions against an item's stored properties
+
+AddonBrowser.xml:
+- build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
 
 Coordinates_DialogPlayerProcessInfo.xml:
 - grow the info panel by two rows and move the debug overlay shortcut down accordingly
@@ -631,8 +692,15 @@ DialogPlayerProcessInfo.xml:
 DialogVideoInfo.xml:
 - separate genres, directors and writers with commas
 
+Home.xml:
+- build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
+
 Includes.xml:
 - pull in Includes_Maps.xml
+
+Includes_Home.xml:
+- read the home submenu from skinshortcuts-mainmenu-submenu, as v3 names a menu's submenu include after that menu
+- drop the settings fallback item, now that the settings item cannot be taken off the main menu
 
 Includes_Maps.xml:
 - add AudioCodecMap, AudioChannelsMap and VideoCodecMap as shared value to label maps
@@ -641,6 +709,9 @@ Includes_Maps.xml:
 
 Includes_Time_NowPlaying.xml:
 - hide duration based information during live playback
+
+Includes_Windows_Dialogs.xml:
+- read the home background from backgroundPath, which is where v3 stores the path
 
 MusicVisualisation.xml:
 - hide end time, position, progress and cache bar during live playback
@@ -653,6 +724,13 @@ MyPVRGuide.xml:
 MyWeather.xml:
 - add the last update time to the provider label
 
+SettingsCategory.xml:
+- build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
+
+SkinSettings.xml:
+- build with type=buildxml and manage with type=manage,menu=mainmenu, as v3 takes the menu from the configuration rather than from arguments
+- remove the always show settings link setting
+
 Variables.xml:
 - reduce the codec and channel variables to map lookups, keeping the DSD sample rate rows
 - keep file name detection for AURO-3D and DTS:X on DTS-HD HRA, which the stream cannot reveal
@@ -661,6 +739,15 @@ Variables.xml:
 - add extra title info, parental rating and, in multi client setups, the backend name to the PVR description variables
 - add a plain elapsed time row for live playback
 - separate genres, directors and writers with commas
+
+Variables_Settings.xml:
+- follow the renamed window property and the moved control ids in the dialog help texts
+- remove the help texts for the always show settings link setting
+- give the widget list's restore button its own help string; 31383 was written for it and 31385, describing the main menu, was used by mistake
+
+Variables_Skinshortcuts.xml:
+- drop the five lookup variables that mapped a stored value back to its localized string, now that the script publishes a resolved label per property
+- read the resolved label in the widget list, falling back to the script's own none string
 
 VideoFullScreen.xml:
 - hide end time, position, progress and cache bar during live playback
@@ -674,6 +761,7 @@ VideoOSD.xml:
 
 addon.xml:
 - require xbmc.gui 5.18.0
+- require script.skinshortcuts 3.0.1
 - bump version to 22.0.0
 - update changelog
 

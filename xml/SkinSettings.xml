@@ -11,7 +11,7 @@
 	<include>10035ResetScroll</include>
 	
 	<!-- Skin Shortcuts -->
-	<onunload condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;levels=1&amp;options=noGroups)</onunload>
+	<onunload condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
 	
 	<!-- Skin settings, background + colors -->
 	<include>Onloads</include>
@@ -154,7 +154,7 @@
 							<include>SkinSettings_coords16</include>
 							<label>31049</label>
 							<font>Font33</font>
-							<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+							<onclick>RunScript(script.skinshortcuts,type=manage,menu=mainmenu)</onclick>
 							<visible>System.HasAddon(script.skinshortcuts) + System.AddonIsEnabled(script.skinshortcuts)</visible>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
@@ -209,15 +209,6 @@
 							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetQueue)">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetBrowse)</onclick>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<!-- Always show settings link -->
-						<control type="radiobutton" id="106">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label>$LOCALIZE[31096]</label>
-							<onclick>Skin.ToggleSetting(AlwaysShowSettingsLink)</onclick>
-							<selected>!Skin.HasSetting(AlwaysShowSettingsLink)</selected>
-							<visible>System.HasAddon(script.skinshortcuts)</visible>
 						</control>
 						<!-- Show date above system time -->
 						<control type="radiobutton" id="107">

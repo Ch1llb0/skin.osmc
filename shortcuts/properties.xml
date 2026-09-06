@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+
+	<includes>
+		<!-- Shared by the artwork and fallback artwork pickers -->
+		<include name="artTypes">
+			<option value="Icon" label="$LOCALIZE[31261]" />
+			<option value="Art(poster)" label="$LOCALIZE[31243]" />
+			<option value="Art(tvshow.poster)" label="$LOCALIZE[31244]" />
+			<option value="Art(season.poster)" label="$LOCALIZE[31245]" />
+			<option value="Art(fanart)" label="$LOCALIZE[31246]" />
+			<option value="Art(season.fanart)" label="$LOCALIZE[31247]" />
+			<option value="Art(banner)" label="$LOCALIZE[31248]" />
+			<option value="Art(tvshow.banner)" label="$LOCALIZE[31249]" />
+			<option value="Art(season.banner)" label="$LOCALIZE[31250]" />
+			<option value="Art(clearlogo)" label="$LOCALIZE[31251]" />
+			<option value="Art(tvshow.clearlogo)" label="$LOCALIZE[31252]" />
+			<option value="Art(clearart)" label="$LOCALIZE[31253]" />
+			<option value="Art(tvshow.clearart)" label="$LOCALIZE[31254]" />
+			<option value="Art(characterart)" label="$LOCALIZE[31255]" />
+			<option value="Art(tvshow.characterart)" label="$LOCALIZE[31256]" />
+			<option value="Art(landscape)" label="$LOCALIZE[31257]" />
+			<option value="Art(tvshow.landscape)" label="$LOCALIZE[31258]" />
+			<option value="FAKELANDSCAPE" label="$LOCALIZE[31259]" />
+			<option value="FAKETVLANDSCAPE" label="$LOCALIZE[31260]" />
+		</include>
+	</includes>
+
+	<!-- Pickers -->
+	<property name="widget" type="widget" />
+	<property name="background" type="background" />
+
+	<!-- Widget layout -->
+	<property name="layout" type="options" requires="widget">
+		<options>
+			<option value="tall" label="$LOCALIZE[31240]" />
+			<option value="wide" label="$LOCALIZE[31241]" />
+			<option value="square" label="$LOCALIZE[31395]" />
+			<option value="square-small" label="$LOCALIZE[31396]" />
+		</options>
+	</property>
+
+	<!-- Widget artwork -->
+	<property name="widgetArt" type="options" requires="widget" templateonly="true">
+		<options>
+			<include content="artTypes" />
+		</options>
+	</property>
+
+	<property name="widgetFallbackArt" type="options" requires="widget" templateonly="true">
+		<options>
+			<include content="artTypes" />
+		</options>
+	</property>
+
+	<!-- Widget sorting and limit -->
+	<property name="widgetSortBy" type="options" requires="widget">
+		<options>
+			<option value="title" label="$LOCALIZE[369]" />
+			<option value="lastplayed" label="$LOCALIZE[568]" condition="!widgetSource=addon + !widgetType=program" />
+			<option value="lastused" label="$LOCALIZE[12012]" condition="widgetSource=addon | widgetType=program" />
+			<option value="installdate" label="$LOCALIZE[12013]" condition="widgetSource=addon | widgetType=program" />
+			<option value="lastupdated" label="$LOCALIZE[12014]" condition="widgetSource=addon | widgetType=program" />
+			<option value="tvshowtitle" label="$LOCALIZE[36902]" condition="widgetType=episodes" />
+			<option value="date" label="$LOCALIZE[552]" condition="widgetType=episodes" />
+			<option value="artist" label="$LOCALIZE[557]" condition="widgetType=musicvideos | artists | albums | songs" />
+			<option value="album" label="$LOCALIZE[558]" condition="widgetType=musicvideos | albums | songs" />
+			<option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType=songs" />
+			<option value="channelnumber" label="$LOCALIZE[19029]" condition="widgetType=pvr" />
+			<option value="year" label="$LOCALIZE[345]" condition="widgetType=movies | tvshows | musicvideos | albums" />
+			<option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType=pvr" />
+			<option value="random" label="$LOCALIZE[590]" />
+			<option value="genre" label="$LOCALIZE[515]" condition="widgetType=movies | tvshows | musicvideos | albums | songs" />
+			<option value="playcount" label="$LOCALIZE[567]" condition="widgetType=movies | tvshows | musicvideos | episodes" />
+			<option value="studio" label="$LOCALIZE[572]" condition="widgetType=movies | tvshows" />
+			<option value="country" label="$LOCALIZE[574]" condition="widgetType=movies" />
+			<option value="rating" label="$LOCALIZE[563]" condition="widgetType=movies | tvshows | episodes" />
+			<option value="userrating" label="$LOCALIZE[33067]" condition="widgetTarget=videos | music" />
+		</options>
+	</property>
+
+	<property name="widgetSortDirection" type="options" requires="widget">
+		<options>
+			<option value="ascending" label="$LOCALIZE[584]" />
+			<option value="descending" label="$LOCALIZE[585]" />
+		</options>
+	</property>
+
+	<property name="widgetLimit" type="number" />
+
+	<buttons>
+		<button id="309" property="widget" title="$ADDON[script.skinshortcuts 32044]" />
+		<button id="310" property="background" title="$ADDON[script.skinshortcuts 32045]" />
+		<button id="601" property="layout" title="$LOCALIZE[31172]" showNone="false" />
+		<button id="602" property="widgetArt" title="$LOCALIZE[31033]" showNone="false" />
+		<button id="603" property="widgetFallbackArt" title="$LOCALIZE[31029]" showNone="false" />
+		<button id="502" property="widgetSortBy" title="$LOCALIZE[31175]" showNone="true" />
+		<button id="503" property="widgetSortDirection" title="$LOCALIZE[31176]" showNone="true" />
+		<button id="504" property="widgetLimit" title="$LOCALIZE[31177]" showNone="true" />
+	</buttons>
+
+	<fallbacks>
+		<fallback property="layout">
+			<default>tall</default>
+		</fallback>
+		<fallback property="widgetArt">
+			<default>Icon</default>
+		</fallback>
+		<fallback property="widgetFallbackArt">
+			<default>Icon</default>
+		</fallback>
+	</fallbacks>
+
+</properties>
