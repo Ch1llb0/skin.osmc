@@ -284,31 +284,31 @@
 		</focusedlayout>
 	</include>
 	
-	<include name="LoginScreen_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords3_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords3_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords3_4:3</include>
+	<include name="LoginScreen_coords6">
+		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords6_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords6_4:3</include>
 	</include>
-	<include name="LoginScreen_coords3_16:9">
+	<include name="LoginScreen_coords6_16:9">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-	<include name="LoginScreen_coords3_21:9">
+	<include name="LoginScreen_coords6_21:9">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-	<include name="LoginScreen_coords3_21:9_masked">
+	<include name="LoginScreen_coords6_21:9_masked">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-	<include name="LoginScreen_coords3_4:3">
+	<include name="LoginScreen_coords6_4:3">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>

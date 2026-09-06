@@ -8,7 +8,7 @@
 
 		<!-- Global debug grid -->
 		<control type="image">
-			<include>Custom_Overlay_Debug_Grid_coords</include>
+			<include>Custom_Overlay_DebugGrid_coords</include>
 			<include>Custom_Overlay_Debug_Grid</include>
 			<colordiffuse>88FFFFFF</colordiffuse>
 		</control>

@@ -1,0 +1,32 @@
+name: Validate skin
+
+on:
+  pull_request:
+  push:
+    branches:
+      - omega
+      - piers
+      - PiersPort
+      - SkinshortcutsAdjustments
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Standard library only — no pip, no Kodi, no build step. Runs in about a second.
+      # Catches the failures Kodi itself reports silently or not at all: dangling
+      # <include>/$VAR names, include names defined twice, and translations whose
+      # source string has moved on without them.
+      #
+      # Translation findings are advisory and never fail the build — they are fixed
+      # in Weblate, and a hand-edit here is overwritten on the next sync.
+      #
+      # --warn-only is holding the door for the two VideoPlayerChannelNumber call
+      # sites, which need a decision rather than a rename. Drop the flag once those
+      # are settled and the reference checks become blocking.
+      - name: Reference integrity and translation drift
+        run: python3 .github/scripts/validate_skin.py --warn-only .

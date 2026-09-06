@@ -70,7 +70,7 @@
 				
 				<!-- Scrollbar (list) -->
 				<control type="scrollbar" id="60">
-					<include>LoginScreen_coords3</include>
+					<include>LoginScreen_coords6</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">ActivateWindow(shutdownmenu)</onleft>
 					<onright>52</onright>
 					<showonepage>false</showonepage>

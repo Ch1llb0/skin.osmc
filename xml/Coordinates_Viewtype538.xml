@@ -407,8 +407,8 @@
 				<param name="visible">Container.Content(albums)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Addons -->
 			<include content="MediaViewImageNF">
@@ -416,8 +416,8 @@
 				<param name="visible">Container.Content(addons)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Artists -->
 			<include content="MediaViewImageNF">
@@ -425,8 +425,8 @@
 				<param name="visible">Container.Content(artists)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Games -->
 			<include content="MediaViewImageNF">
@@ -434,8 +434,8 @@
 				<param name="visible">Container.Content(games)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -443,8 +443,8 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -452,8 +452,8 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Videos -->
 			<include content="MediaViewImageNF">
@@ -461,8 +461,8 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -474,8 +474,8 @@
 				<param name="visible">Container.Content(albums)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Addons -->
 			<include content="MediaViewImageNF">
@@ -483,8 +483,8 @@
 				<param name="visible">Container.Content(addons)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Artists -->
 			<include content="MediaViewImageNF">
@@ -492,8 +492,8 @@
 				<param name="visible">Container.Content(artists)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Games -->
 			<include content="MediaViewImageNF">
@@ -501,8 +501,8 @@
 				<param name="visible">Container.Content(games)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -510,8 +510,8 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -519,8 +519,8 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Videos -->
 			<include content="MediaViewImageNF">
@@ -528,8 +528,8 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -541,8 +541,8 @@
 				<param name="visible">Container.Content(albums)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Addons -->
 			<include content="MediaViewImageNF">
@@ -550,8 +550,8 @@
 				<param name="visible">Container.Content(addons)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Artists -->
 			<include content="MediaViewImageNF">
@@ -559,8 +559,8 @@
 				<param name="visible">Container.Content(artists)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Games -->
 			<include content="MediaViewImageNF">
@@ -568,8 +568,8 @@
 				<param name="visible">Container.Content(games)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -577,8 +577,8 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -586,8 +586,8 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Videos -->
 			<include content="MediaViewImageNF">
@@ -595,8 +595,8 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -608,8 +608,8 @@
 				<param name="visible">Container.Content(albums)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Addons -->
 			<include content="MediaViewImageNF">
@@ -617,8 +617,8 @@
 				<param name="visible">Container.Content(addons)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Artists -->
 			<include content="MediaViewImageNF">
@@ -626,8 +626,8 @@
 				<param name="visible">Container.Content(artists)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Games -->
 			<include content="MediaViewImageNF">
@@ -635,8 +635,8 @@
 				<param name="visible">Container.Content(games)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -644,8 +644,8 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -653,8 +653,8 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 			<!-- Image - Videos -->
 			<include content="MediaViewImageNF">
@@ -662,8 +662,8 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">538</param>
 				<param name="coords">Viewtype538_coords19</param>
-				<param name="coords2">Viewtype538_coords21</param>
-				<param name="coords3">Viewtype538_coords20</param>
+				<param name="coords2">Viewtype538_coords20</param>
+				<param name="coords3">Viewtype538_coords21</param>
 			</include>
 		</itemlayout>
 	</include>

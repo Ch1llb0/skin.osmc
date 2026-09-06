@@ -44,6 +44,10 @@ _Fixed_
 - fix the seeded live TV and radio widgets differing from the ones the picker writes
 - fix the three widget artwork slots drawing over one another
 - fix the Skin Shortcuts entry points showing while the add-on is disabled
+- fix the login screen scrollbar covering the profile list
+- fix the profile settings scrollbar rendering without a track or a bar
+- fix the watched status bar and its overlay swapping size in the video wall with small info
+- fix the debug grid ignoring its offset on the masked aspect ratios
 
 ---
 
@@ -730,14 +734,23 @@ Coordinates_DialogSelect.xml:
 Coordinates_DialogVideoManager.xml:
 - hide the item sublabel under the generic select dialog, which stacks over the manager in Kodi v22
 
+Coordinates_LoginScreen.xml:
+- give the scrollbar its own LoginScreen_coords6 family, as its geometry was declared under the name the profile list already used and Kodi keeps only the first definition
+
 Coordinates_MyPVRRecordings.xml:
 - read the watched state from the named expression rather than repeating it at twenty-four sites
 
 Coordinates_VideoOSD.xml:
 - widen the subtitle name to fill the reworked subtitle stream row
 
+Coordinates_Viewtype538.xml:
+- pass the watched status bar and its overlay in the order MediaViewImageNF reads them, matching Viewtype536
+
 Coordinates_script-skinshortcuts.xml:
 - collapse the arrow mirror pairs into one control each, keyed on the button rather than on the list item
+
+Custom_Debug_Grid.xml:
+- include the coordinates under the name they are defined with, restoring the offset the masked aspect ratios apply
 
 DialogMusicInfo.xml:
 - separate genres with commas
@@ -791,6 +804,9 @@ Includes_Windows_Dialogs.xml:
 - read the home background from backgroundPath, which is where v3 stores the path
 - read the watched state from the named expressions rather than spelling it out
 
+LoginScreen.xml:
+- point the scrollbar at LoginScreen_coords6
+
 MusicVisualisation.xml:
 - hide end time, position, progress and cache bar during live playback
 - separate genres with commas
@@ -801,10 +817,14 @@ MyPVRGuide.xml:
 
 MyWeather.xml:
 - add the last update time to the provider label
+- drop the spinner's coordinates include, which named a family that does not exist; DialogBusy renders the same spinner without one
 
 SettingsCategory.xml:
 - build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
 - gate the entry point on the add-on being enabled
+
+SettingsProfile.xml:
+- style the scrollbar through the BackgroundOverlayStyleScrollbarVertical include, as the two textures were read as variables and resolved to empty paths, leaving the scrollbar with no track and no bar
 
 SkinSettings.xml:
 - build with type=buildxml and manage with type=manage,menu=mainmenu, as v3 takes the menu from the configuration rather than from arguments
@@ -859,3 +879,11 @@ Changelog.md:
 CLAUDE.md:
 - describe the no-addon fallback: what it is for, how to regenerate it from a clean profile, and when a rebuild is actually needed
 - record the interface it sits in, the names it defines and the includes it calls, with the commands to re-derive both from a build
+
+validate.yml:
+- check the skin on every pull request, as nothing ran on them before
+
+validate_skin.py:
+- report include and variable names that are referenced but never defined, names defined twice in one file, and files that do not parse, none of which Kodi reports usefully at runtime
+- report each locale's msgid against en_gb and the Kodi markup tokens between msgid and msgstr, without failing on either, as translations come from Weblate and a hand-edit is overwritten on the next sync
+- leave definitions that are never used unreported, as names reached through a param value or a quoted expression are invisible to a structural parse

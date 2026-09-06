@@ -90,8 +90,7 @@
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
-					<texturesliderbackground border="0,5,0,5">$VAR[BackgroundOverlayStyleScrollbarVertical]</texturesliderbackground>
-					<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">$VAR[BackgroundOverlayStyleSliderBarVertical]</texturesliderbar>
+					<include>BackgroundOverlayStyleScrollbarVertical</include>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<textureslidernib></textureslidernib>
 					<textureslidernibfocus></textureslidernibfocus>
