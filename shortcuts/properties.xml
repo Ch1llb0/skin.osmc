@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
 
+	<!-- widgetSortDirection was this skin's own name for what v3 calls widgetSortOrder.
+	     Moves the key on menus users already saved; harmless once everyone has rebuilt. -->
+	<overrides>
+		<property replace="widgetSortDirection">widgetSortOrder</property>
+	</overrides>
+
 	<includes>
 		<!-- Shared by the artwork and fallback artwork pickers -->
 		<include name="artTypes">
@@ -25,6 +31,10 @@
 			<option value="FAKETVLANDSCAPE" label="$LOCALIZE[31260]" />
 		</include>
 	</includes>
+
+	<!-- Built-in the skin does not read: the item's first widget path. Declared here only
+	     to keep it out of the generated includes. -->
+	<property name="submenuPath" templateonly="true" />
 
 	<!-- Pickers -->
 	<property name="widget" type="widget" />
@@ -62,13 +72,13 @@
 			<option value="installdate" label="$LOCALIZE[12013]" condition="widgetSource=addon | widgetType=program" />
 			<option value="lastupdated" label="$LOCALIZE[12014]" condition="widgetSource=addon | widgetType=program" />
 			<option value="tvshowtitle" label="$LOCALIZE[36902]" condition="widgetType=episodes" />
-			<option value="date" label="$LOCALIZE[552]" condition="widgetType=episodes" />
+			<option value="date" label="$LOCALIZE[552]" condition="widgetType=episodes | tv | radio" />
 			<option value="artist" label="$LOCALIZE[557]" condition="widgetType=musicvideos | artists | albums | songs" />
 			<option value="album" label="$LOCALIZE[558]" condition="widgetType=musicvideos | albums | songs" />
 			<option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType=songs" />
-			<option value="channelnumber" label="$LOCALIZE[19029]" condition="widgetType=pvr" />
+			<option value="channelnumber" label="$LOCALIZE[19029]" condition="widgetType=tv | radio" />
 			<option value="year" label="$LOCALIZE[345]" condition="widgetType=movies | tvshows | musicvideos | albums" />
-			<option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType=pvr" />
+			<option value="dateadded" label="$LOCALIZE[570]" condition="![widgetType=tv | radio]" />
 			<option value="random" label="$LOCALIZE[590]" />
 			<option value="genre" label="$LOCALIZE[515]" condition="widgetType=movies | tvshows | musicvideos | albums | songs" />
 			<option value="playcount" label="$LOCALIZE[567]" condition="widgetType=movies | tvshows | musicvideos | episodes" />
@@ -79,24 +89,24 @@
 		</options>
 	</property>
 
-	<property name="widgetSortDirection" type="options" requires="widget">
+	<property name="widgetSortOrder" type="options" requires="widget">
 		<options>
 			<option value="ascending" label="$LOCALIZE[584]" />
 			<option value="descending" label="$LOCALIZE[585]" />
 		</options>
 	</property>
 
-	<property name="widgetLimit" type="number" />
+	<property name="widgetLimit" type="number" requires="widget" />
 
 	<buttons>
 		<button id="309" property="widget" title="$ADDON[script.skinshortcuts 32044]" />
 		<button id="310" property="background" title="$ADDON[script.skinshortcuts 32045]" />
-		<button id="601" property="layout" title="$LOCALIZE[31172]" showNone="false" />
-		<button id="602" property="widgetArt" title="$LOCALIZE[31033]" showNone="false" />
-		<button id="603" property="widgetFallbackArt" title="$LOCALIZE[31029]" showNone="false" />
-		<button id="502" property="widgetSortBy" title="$LOCALIZE[31175]" showNone="true" />
-		<button id="503" property="widgetSortDirection" title="$LOCALIZE[31176]" showNone="true" />
-		<button id="504" property="widgetLimit" title="$LOCALIZE[31177]" showNone="true" />
+		<button id="601" property="layout" title="$LOCALIZE[31172]" showNone="false" showIcons="false" />
+		<button id="602" property="widgetArt" title="$LOCALIZE[31033]" showNone="false" showIcons="false" />
+		<button id="603" property="widgetFallbackArt" title="$LOCALIZE[31029]" showNone="false" showIcons="false" />
+		<button id="502" property="widgetSortBy" title="$LOCALIZE[31175]" showIcons="false" />
+		<button id="503" property="widgetSortOrder" title="$LOCALIZE[31176]" showIcons="false" />
+		<button id="504" property="widgetLimit" title="$LOCALIZE[31177]" />
 	</buttons>
 
 	<fallbacks>

@@ -231,7 +231,7 @@
 		<item name="ripcd">
 			<label>$LOCALIZE[600]</label>
 			<action>RipCD</action>
-			<icon>RipCD.png</icon>
+			<icon>DefaultAddonAudioEncoder.png</icon>
 			<visible>System.HasMediaAudioCD</visible>
 		</item>
 		<item name="eject">
@@ -284,7 +284,7 @@
 			<property name="widgetTarget">videos</property>
 			<property name="widgetArt">Art(poster)</property>
 			<property name="widgetSortBy">dateadded</property>
-			<property name="widgetSortDirection">descending</property>
+			<property name="widgetSortOrder">descending</property>
 		</item>
 	</submenu>
 
@@ -306,7 +306,7 @@
 			<property name="widgetTarget">videos</property>
 			<property name="widgetArt">Art(poster)</property>
 			<property name="widgetSortBy">lastplayed</property>
-			<property name="widgetSortDirection">descending</property>
+			<property name="widgetSortOrder">descending</property>
 		</item>
 	</submenu>
 
@@ -328,7 +328,7 @@
 			<property name="widgetTarget">music</property>
 			<property name="layout">square-small</property>
 			<property name="widgetSortBy">dateadded</property>
-			<property name="widgetSortDirection">descending</property>
+			<property name="widgetSortOrder">descending</property>
 		</item>
 	</submenu>
 
@@ -337,7 +337,7 @@
 		<item name="game-addons" widget="GameWidget">
 			<label>$LOCALIZE[35049]</label>
 			<icon>DefaultAddonGame.png</icon>
-			<property name="widgetType">custom</property>
+			<property name="widgetType">games</property>
 			<property name="widgetPath">addons://sources/game/</property>
 			<property name="widgetTarget">games</property>
 			<property name="layout">square-small</property>
@@ -349,9 +349,10 @@
 		<item name="program-addons">
 			<label>$LOCALIZE[1043]</label>
 			<icon>DefaultAddonProgram.png</icon>
-			<property name="widgetType">program</property>
+			<property name="widgetType">addons</property>
 			<property name="widgetPath">addons://sources/executable/</property>
 			<property name="widgetTarget">programs</property>
+			<property name="widgetSource">addon</property>
 			<property name="layout">square-small</property>
 		</item>
 	</submenu>
@@ -361,7 +362,7 @@
 		<item name="weather" widget="WeatherWidget">
 			<label>$LOCALIZE[10508]</label>
 			<icon>DefaultWeather.png</icon>
-			<property name="widgetType">custom</property>
+			<property name="widgetType">weather</property>
 			<property name="widgetPath">$INCLUDE[weather-widget]</property>
 			<property name="widgetTarget">videos</property>
 		</item>
@@ -369,24 +370,24 @@
 
 	<submenu name="tv.widgets" type="widgets">
 		<allow widgets="true" backgrounds="false" submenus="false" />
-		<item name="tv-channels">
+		<item name="tv-channels" widget="AllChannels">
 			<label>$LOCALIZE[19217]</label>
-			<icon>DefaultAddonPVRClient.png</icon>
-			<property name="widgetType">pvr</property>
-			<property name="widgetPath">pvr://channels/tv/*/</property>
-			<property name="widgetTarget">videos</property>
+			<icon>DefaultLiveTV.png</icon>
+			<property name="widgetType">tv</property>
+			<property name="widgetPath">pvr://channels/tv/*</property>
+			<property name="widgetTarget">tvchannels</property>
 			<property name="layout">square</property>
 		</item>
 	</submenu>
 
 	<submenu name="radio.widgets" type="widgets">
 		<allow widgets="true" backgrounds="false" submenus="false" />
-		<item name="radio-channels">
+		<item name="radio-channels" widget="AllRadioChannels">
 			<label>$LOCALIZE[19216]</label>
-			<icon>DefaultAddonPVRClient.png</icon>
-			<property name="widgetType">pvr</property>
-			<property name="widgetPath">pvr://channels/radio/*/</property>
-			<property name="widgetTarget">videos</property>
+			<icon>DefaultRadio.png</icon>
+			<property name="widgetType">radio</property>
+			<property name="widgetPath">pvr://channels/radio/*</property>
+			<property name="widgetTarget">radiochannels</property>
 			<property name="layout">square</property>
 		</item>
 	</submenu>
@@ -394,40 +395,32 @@
 	<!-- Shortcut picker -->
 	<groupings>
 		<!-- Videos -->
-		<group name="videos" label="$LOCALIZE[3]">
+		<group name="videos" label="$LOCALIZE[3]" icon="DefaultVideo.png">
 			<shortcut name="videos" label="$LOCALIZE[3]" icon="DefaultFolder.png">
 				<action>ActivateWindow(Videos,root)</action>
 			</shortcut>
 			<content source="nodes" target="video" />
-			<group name="video-playlists" label="$LOCALIZE[136]">
-				<content source="playlists" target="video" />
-			</group>
-			<group name="video-sources" label="$ADDON[script.skinshortcuts 32075]">
-				<content source="sources" target="video" />
-			</group>
+			<content source="playlists" target="video" folder="$LOCALIZE[136]" />
+			<content source="sources" target="video" folder="$ADDON[script.skinshortcuts 32075]" />
 		</group>
 		<!-- Music -->
-		<group name="music" label="$LOCALIZE[2]">
+		<group name="music" label="$LOCALIZE[2]" icon="DefaultAudio.png">
 			<shortcut name="music" label="$LOCALIZE[2]" icon="DefaultFolder.png">
 				<action>ActivateWindow(Music,root)</action>
 			</shortcut>
 			<content source="nodes" target="music" />
-			<group name="music-playlists" label="$LOCALIZE[136]">
-				<content source="playlists" target="music" />
-			</group>
-			<group name="music-sources" label="$ADDON[script.skinshortcuts 32075]">
-				<content source="sources" target="music" />
-			</group>
+			<content source="playlists" target="music" folder="$LOCALIZE[136]" />
+			<content source="sources" target="music" folder="$ADDON[script.skinshortcuts 32075]" />
 		</group>
 		<!-- Pictures -->
-		<group name="pictures" label="$LOCALIZE[1]">
+		<group name="pictures" label="$LOCALIZE[1]" icon="DefaultPicture.png">
 			<shortcut name="pictures" label="$LOCALIZE[1]" icon="DefaultFolder.png">
 				<action>ActivateWindow(Pictures)</action>
 			</shortcut>
 			<content source="sources" target="pictures" />
 		</group>
 		<!-- Games -->
-		<group name="games" label="$LOCALIZE[10821]">
+		<group name="games" label="$LOCALIZE[10821]" icon="DefaultGameAddons.png">
 			<shortcut name="games" label="$LOCALIZE[10821]" icon="DefaultFolder.png">
 				<action>ActivateWindow(Games)</action>
 			</shortcut>
@@ -436,86 +429,88 @@
 			</shortcut>
 		</group>
 		<!-- TV -->
-		<group name="tv" label="$LOCALIZE[19020]" visible="PVR.HasTVChannels">
+		<group name="tv" label="$LOCALIZE[19020]" icon="DefaultLiveTV.png" visible="PVR.HasTVChannels">
 			<shortcut name="tv-guide" label="$LOCALIZE[19222]" icon="DefaultLiveTV.png">
 				<action>ActivateWindow(TVGuide)</action>
+				<visible>PVR.HasTVChannels</visible>
 			</shortcut>
 			<shortcut name="tv-channels" label="$LOCALIZE[19019]" icon="DefaultLiveTV.png">
 				<action>ActivateWindow(TVChannels)</action>
+				<visible>PVR.HasTVChannels</visible>
 			</shortcut>
 			<shortcut name="tv-recordings" label="$LOCALIZE[19163]" icon="DefaultLiveTV.png">
 				<action>ActivateWindow(TVRecordings)</action>
+				<visible>PVR.HasTVChannels</visible>
 			</shortcut>
 			<shortcut name="tv-timers" label="$LOCALIZE[19040]" icon="DefaultLiveTV.png">
 				<action>ActivateWindow(TVTimers)</action>
+				<visible>PVR.HasTVChannels</visible>
 			</shortcut>
 			<shortcut name="tv-search" label="$LOCALIZE[137]" icon="DefaultLiveTV.png">
 				<action>ActivateWindow(TVSearch)</action>
+				<visible>PVR.HasTVChannels</visible>
 			</shortcut>
-			<group name="tv-channel-list" label="$LOCALIZE[19023]">
-				<content source="pvr" target="tv" />
-			</group>
+			<content source="pvr" target="tv" folder="$LOCALIZE[19023]" />
 		</group>
 		<!-- Radio -->
-		<group name="radio" label="$LOCALIZE[19021]" visible="PVR.HasRadioChannels">
+		<group name="radio" label="$LOCALIZE[19021]" icon="DefaultRadio.png" visible="PVR.HasRadioChannels">
 			<shortcut name="radio-guide" label="$LOCALIZE[19222]" icon="DefaultRadio.png">
 				<action>ActivateWindow(RadioGuide)</action>
+				<visible>PVR.HasRadioChannels</visible>
 			</shortcut>
 			<shortcut name="radio-channels" label="$LOCALIZE[19019]" icon="DefaultRadio.png">
 				<action>ActivateWindow(RadioChannels)</action>
+				<visible>PVR.HasRadioChannels</visible>
 			</shortcut>
 			<shortcut name="radio-recordings" label="$LOCALIZE[19163]" icon="DefaultRadio.png">
 				<action>ActivateWindow(RadioRecordings)</action>
+				<visible>PVR.HasRadioChannels</visible>
 			</shortcut>
 			<shortcut name="radio-timers" label="$LOCALIZE[19040]" icon="DefaultRadio.png">
 				<action>ActivateWindow(RadioTimers)</action>
+				<visible>PVR.HasRadioChannels</visible>
 			</shortcut>
 			<shortcut name="radio-search" label="$LOCALIZE[137]" icon="DefaultRadio.png">
 				<action>ActivateWindow(RadioSearch)</action>
+				<visible>PVR.HasRadioChannels</visible>
 			</shortcut>
-			<group name="radio-channel-list" label="$LOCALIZE[19024]">
-				<content source="pvr" target="radio" />
-			</group>
+			<content source="pvr" target="radio" folder="$LOCALIZE[19024]" />
 		</group>
 		<!-- Add-ons -->
-		<group name="addons" label="$LOCALIZE[24001]">
+		<group name="addons" label="$LOCALIZE[24001]" icon="DefaultAddon.png">
 			<shortcut name="addonbrowser" label="$LOCALIZE[10040]" icon="DefaultFolder.png">
 				<action>ActivateWindow(addonbrowser)</action>
 			</shortcut>
 			<group name="video-addons" label="$LOCALIZE[1037]" icon="DefaultAddonVideo.png">
-				<content source="addons" target="video" label="$LOCALIZE[1037]" icon="DefaultAddonVideo.png" />
+				<content source="addons" target="video" />
 			</group>
 			<group name="music-addons" label="$LOCALIZE[1038]" icon="DefaultAddonMusic.png">
-				<content source="addons" target="music" label="$LOCALIZE[1038]" icon="DefaultAddonMusic.png" />
+				<content source="addons" target="music" />
 			</group>
 			<group name="picture-addons" label="$LOCALIZE[1039]" icon="DefaultAddonPicture.png">
-				<content source="addons" target="image" label="$LOCALIZE[1039]" icon="DefaultAddonPicture.png" />
+				<content source="addons" target="image" />
 			</group>
 			<group name="program-addons" label="$LOCALIZE[1043]" icon="DefaultAddonProgram.png">
-				<content source="addons" target="executable" label="$LOCALIZE[1043]" icon="DefaultAddonProgram.png" />
+				<content source="addons" target="executable" />
 			</group>
 		</group>
 		<!-- Favourites -->
-		<group name="favourites" label="$LOCALIZE[1036]">
+		<group name="favourites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png">
 			<shortcut name="favourites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png">
 				<action>ActivateWindow(FavouritesBrowser)</action>
 			</shortcut>
 			<content source="favourites" />
 		</group>
 		<!-- Settings -->
-		<group name="settings" label="$LOCALIZE[10004]">
-			<content source="settings" />
-		</group>
+		<content source="settings" folder="$LOCALIZE[10004]" />
 		<!-- Kodi commands -->
-		<group name="commands" label="$LOCALIZE[31232]">
-			<content source="commands" />
-		</group>
+		<content source="commands" folder="$LOCALIZE[31232]" />
 		<!-- Additional main menu items -->
-		<group name="additional-items" label="$LOCALIZE[31231]" visible="System.HasAddon(script.skin.helper.widgets) + System.AddonIsEnabled(script.skin.helper.widgets) | System.HasAddon(script.extendedinfo) + System.AddonIsEnabled(script.extendedinfo)">
-			<shortcut name="skinhelper-widgets" label="$LOCALIZE[31081]" icon="DefaultFolder.png" browse="videos" visible="System.HasAddon(script.skin.helper.widgets) + System.AddonIsEnabled(script.skin.helper.widgets)">
+		<group name="additional-items" label="$LOCALIZE[31231]" icon="DefaultShortcut.png" visible="String.IsEqual(Window.Property(menuname),mainmenu) + [System.AddonIsEnabled(script.skin.helper.widgets) | System.AddonIsEnabled(script.extendedinfo)]">
+			<shortcut name="skinhelper-widgets" label="$LOCALIZE[31081]" icon="DefaultFolder.png" browse="videos" visible="System.AddonIsEnabled(script.skin.helper.widgets)">
 				<path>plugin://script.skin.helper.service/?action=widgets&amp;path=scriptwidgets</path>
 			</shortcut>
-			<shortcut name="extendedinfo-widgets" label="$LOCALIZE[31236]" icon="DefaultFolder.png" browse="videos" visible="System.HasAddon(script.extendedinfo) + System.AddonIsEnabled(script.extendedinfo)">
+			<shortcut name="extendedinfo-widgets" label="$LOCALIZE[31236]" icon="DefaultFolder.png" browse="videos" visible="System.AddonIsEnabled(script.extendedinfo)">
 				<path>plugin://script.skin.helper.service/?action=widgets&amp;path=extendedinfo</path>
 			</shortcut>
 		</group>

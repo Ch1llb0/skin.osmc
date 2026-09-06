@@ -1851,7 +1851,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31375"
-msgid "Changes the maximum number of items shown by the widget. Leave empty to show all available items"
+msgid "Changes the maximum number of items shown by the widget. Set to 0 to show all available items"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1971,7 +1971,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31399"
-msgid "Reset all main menu items"
+msgid "Reset all menus and views"
 msgstr ""
 
 #: /MyVideoNav.xml

@@ -175,7 +175,7 @@
 			<texture background="true">$INFO[Container(9000).ListItem.Property(backgroundPath)]</texture>
 			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
 			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>!String.IsEmpty(Container(9000).ListItem.Property(backgroundPath)) + ![String.EndsWith(Container(9000).ListItem.Property(backgroundPath),\) | String.EndsWith(Container(9000).ListItem.Property(backgroundPath),/)] + Window.IsVisible(Home)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),browse) + Window.IsVisible(Home)</visible>
 			<aspectratio>scale</aspectratio>
 			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
@@ -189,7 +189,7 @@
 			<imagepath background="true">$INFO[Container(9000).ListItem.Property(backgroundPath)]</imagepath>
 			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
 			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>!String.IsEmpty(Container(9000).ListItem.Property(backgroundPath)) + [String.EndsWith(Container(9000).ListItem.Property(backgroundPath),\) | String.EndsWith(Container(9000).ListItem.Property(backgroundPath),/)] + Window.IsVisible(Home)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),multi) + Window.IsVisible(Home)</visible>
 			<aspectratio>scale</aspectratio>
 			<include>IndividualBackgroundFolderDuration</include>
 			<fadetime>2000</fadetime>
@@ -728,7 +728,7 @@
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-					<visible>[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)</visible>
+					<visible>$EXP[IsWatchedResumedOrPartial]</visible>
 					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
 				</control>
 				<control type="image">
@@ -766,7 +766,7 @@
 				<fadetime>200</fadetime>
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
-					<visible>[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)</visible>
+					<visible>$EXP[IsWatchedResumedOrPartial]</visible>
 					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
 				</control>
 				<control type="image">
@@ -781,7 +781,7 @@
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-					<visible>[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)</visible>
+					<visible>$EXP[IsWatchedResumedOrPartial]</visible>
 					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
 				</control>
 				<control type="image">

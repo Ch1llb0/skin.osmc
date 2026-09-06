@@ -102,3 +102,59 @@ There is no automated test/build/lint pipeline in this repo. To verify a change,
 Kodi/OSMC instance (or Kodi on desktop) pointed at this repo's directory and reload the skin, or package it
 as a zip and install via Kodi's "install from zip file". Check XML well-formedness before committing —
 malformed XML will silently fail to load the affected window in Kodi without a clear error in this repo.
+
+## The no-addon fallback (`xml/script-skinshortcuts-static.xml`)
+
+`script.skinshortcuts` is an optional dependency. When it is installed **and enabled** it generates
+`xml/script-skinshortcuts-includes.xml` into the skin folder (gitignored). When it is not,
+`xml/script-skinshortcuts-static.xml` stands in. `xml/Includes.xml` picks between the two.
+
+The static file holds **one default home menu layout, usable without the addon**. It is generated output
+that happens to be committed — never hand-edit it, and never regenerate it from a Kodi whose menu has been
+customised, or that customisation becomes everyone's default.
+
+### Regenerating it
+
+1. Start from a **clean profile**. This is the load-bearing step.
+2. Install this skin and `script.skinshortcuts` v3, then let the addon build — `Home.xml` fires
+   `RunScript(script.skinshortcuts,type=buildxml)` on load.
+3. The addon writes `xml/script-skinshortcuts-includes.xml`. Copy it over
+   `xml/script-skinshortcuts-static.xml` **verbatim**.
+4. Note in the commit message which addon version it was built against. The committed file is a 3.0.3
+   build; `addon.xml` pins 3.0.3. The floor is not cosmetic: `shortcuts/properties.xml` uses an
+   `<overrides>` block to rename `widgetSortDirection`, and property overrides did not exist before 3.0.2,
+   so on an older addon that rename is silently skipped.
+5. Re-check the interface below still lines up, and run `xmllint --noout` on the result.
+
+### When a rebuild is needed
+
+The bar is that the fallback stays a *valid* default menu, not that it matches the current templates. So:
+
+- **Must rebuild** — the change alters one of the 16 names the file defines (below), or removes/renames one
+  of the 14 includes it calls into. Otherwise the no-addon path breaks or double-defines.
+- **Should rebuild** — the change fixes a seeded *menu item* (an icon, a widget seed). Nothing breaks, but
+  the fix never reaches the users this file exists for.
+- **No rebuild** — everything else. Template refactors that keep the emitted names, changes to
+  `Includes_Widgets.xml` (the fallback calls those includes by name, so fixes propagate for free),
+  `<groupings>` and `widgets.xml` edits (picker-only), and all management-dialog work.
+
+### The interface it sits in
+
+It **defines**, for the skin to consume: includes `skinshortcuts-mainmenu`, `-mainmenu-submenu`,
+`-template-vertical`, `-template-reloading`, `-template-widgetControl`, and one per menu (`-movies`,
+`-tvshows`, `-music`, `-videos`, `-pictures`, `-tv`, `-radio`, `-disc`, `-settings`); plus the variables
+`widgetDetails` and `widgetWeatherBackground`. It does **not** define `widgetBackground` — that name is
+the skin's own, in `Variables_Skinshortcuts.xml`.
+
+It **calls into**, and these must exist in `xml/Includes_Widgets.xml`: `weather-widget`, `widget-image`,
+`widgetAnimation`, `widgetHeading`, `widgetOnControl`, `widgetOverlayBar`, the four `widgetLayout-*`
+(`-tall`, `-square`, `-square-small`, `-weather`) and the four `widgetLayoutSlide-*` (same four suffixes).
+
+To re-derive both lists from a build rather than trusting this one:
+
+```sh
+grep -o '<include name="[^"]*"' xml/script-skinshortcuts-static.xml | cut -d'"' -f2 | sort -u
+{ grep -o '<include content="[^"$]*"' xml/script-skinshortcuts-static.xml | cut -d'"' -f2
+  grep -o '<include>[a-zA-Z-]*</include>' xml/script-skinshortcuts-static.xml | sed 's/<[^>]*>//g'
+} | sort -u
+```

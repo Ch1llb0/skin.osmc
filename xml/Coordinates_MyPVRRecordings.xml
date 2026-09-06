@@ -196,7 +196,7 @@
 				<texture>pvr/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
@@ -207,7 +207,7 @@
 				<texture>pvr/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
@@ -218,7 +218,7 @@
 				<texture>pvr/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Watched status -->
 			<control type="image">
@@ -252,7 +252,7 @@
 				<texture>pvr/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
@@ -263,7 +263,7 @@
 				<texture>pvr/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
@@ -274,7 +274,7 @@
 				<texture>pvr/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Watched status -->
 			<control type="image">
@@ -308,7 +308,7 @@
 				<texture>pvr/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
@@ -319,7 +319,7 @@
 				<texture>pvr/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
@@ -330,7 +330,7 @@
 				<texture>pvr/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Watched status -->
 			<control type="image">
@@ -364,7 +364,7 @@
 				<texture>pvr/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
@@ -375,7 +375,7 @@
 				<texture>pvr/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
@@ -386,7 +386,7 @@
 				<texture>pvr/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 			</control>
 			<!-- Watched status -->
 			<control type="image">
@@ -459,7 +459,7 @@
 					<height>30</height>
 					<texture>pvr/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
@@ -470,7 +470,7 @@
 					<texture>pvr/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
@@ -481,7 +481,7 @@
 					<texture>pvr/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Watched status -->
 				<control type="image">
@@ -548,7 +548,7 @@
 					<height>30</height>
 					<texture>pvr/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
@@ -559,7 +559,7 @@
 					<texture>pvr/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
@@ -570,7 +570,7 @@
 					<texture>pvr/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Watched status -->
 				<control type="image">
@@ -637,7 +637,7 @@
 					<height>30</height>
 					<texture>pvr/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
@@ -648,7 +648,7 @@
 					<texture>pvr/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
@@ -659,7 +659,7 @@
 					<texture>pvr/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Watched status -->
 				<control type="image">
@@ -726,7 +726,7 @@
 					<height>30</height>
 					<texture>pvr/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
@@ -737,7 +737,7 @@
 					<texture>pvr/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
@@ -748,7 +748,7 @@
 					<texture>pvr/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)">Conditional</animation>
+					<animation effect="slide" end="0,-15" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed]">Conditional</animation>
 				</control>
 				<!-- Watched status -->
 				<control type="image">

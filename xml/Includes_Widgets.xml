@@ -1,70 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<!-- Favourites -->
-	<include name="favourites-widget">
-		<item>
-			<label>$INFO[Window(home).Property(favourite.1.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.1.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.1.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.1.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.2.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.2.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.2.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.2.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.3.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.3.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.3.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.3.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.4.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.4.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.4.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.4.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.5.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.5.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.5.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.5.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.6.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.6.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.6.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.6.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.7.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.7.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.7.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.7.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.8.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.8.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.8.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.8.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.9.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.9.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.9.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.9.name))</visible>
-		</item>
-		<item>
-			<label>$INFO[Window(home).Property(favourite.10.name)]</label>
-			<onclick>$INFO[Window(home).Property(favourite.10.path)]</onclick>
-			<thumb>$INFO[Window(home).Property(favourite.10.thumb)]</thumb>
-			<visible>!String.IsEmpty(Window(home).Property(favourite.10.name))</visible>
-		</item>
-	</include>
-
 	<include name="weather-widget">
 		<item>
 			<onclick>ActivateWindow(Weather)</onclick>
@@ -294,17 +230,9 @@
 
 	<include name="widget-image">
 		<param name="colordiffuse">FFFFFFFF</param>
+		<param name="bottom">0</param>
+		<param name="aspectratio">keep</param>
 		<definition>
-			<control type="image">
-				<left>$PARAM[left]</left>
-				<bottom>$PARAM[bottom]</bottom>
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-				<texture background="true" fallback="$PARAM[fallback]">$PARAM[art]</texture>
-				<aspectratio align="center" aligny="center">$PARAM[aspectratio]</aspectratio>
-				<visible>$PARAM[visible]</visible>
-			</control>
 			<control type="image">
 				<left>$PARAM[left]</left>
 				<bottom>$PARAM[bottom]</bottom>
@@ -320,6 +248,8 @@
 
 	<include name="widget-fakelandscape">
 		<param name="colordiffuse">FFFFFFFF</param>
+		<param name="bottom">0</param>
+		<param name="aspectratio">keep</param>
 		<definition>
 			<control type="image">
 				<left>$PARAM[left]</left>
@@ -359,6 +289,8 @@
 
 	<include name="widget-faketvlandscape">
 		<param name="colordiffuse">FFFFFFFF</param>
+		<param name="bottom">0</param>
+		<param name="aspectratio">keep</param>
 		<definition>
 			<control type="image">
 				<left>$PARAM[left]</left>
@@ -396,24 +328,56 @@
 		</definition>
 	</include>
 
-	<include name="widget-content">
+	<!-- The status bar along the bottom edge of a widget poster: the bar itself, the three
+	     PVR state icons, and the watched overlay. Recording, timer and reminder are mutually
+	     exclusive, so each slides aside by the same amount when a watched overlay shares the
+	     bar. Called four times per widget - item layout, and the three focused variants -
+	     which differ only in whether the poster is dimmed, hence the colordiffuse default. -->
+	<include name="widgetOverlayBar">
+		<param name="colordiffuse">FFFFFFFF</param>
 		<definition>
-			<content target="$PARAM[target]" browse="never">$PARAM[path]</content>
-		</definition>
-	</include>
-
-	<include name="widget-static">
-		<definition>
-			<content>
-				<item id="0">
-					<font>Font33-bold</font>
-					<label>$PARAM[itemLabel]</label>
-					<onclick>$PARAM[itemAction]</onclick>
-					<icon>$PARAM[itemIcon]</icon>
-					<property name="path">$PARAM[itemAction]</property>
-				</item>
-				<include>$PARAM[include]</include>
-			</content>
+			<control type="group">
+				<left>$PARAM[left]</left>
+				<bottom>0</bottom>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+					<visible>$EXP[IsWatchedResumedOrPartial] + $EXP[WatchedStatusVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<width>$PARAM[height]</width>
+					<centerleft>$PARAM[centerleft]</centerleft>
+					<texture background="true">pvr/Recording.png</texture>
+					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+					<visible>ListItem.IsRecording</visible>
+					<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>$PARAM[height]</width>
+					<centerleft>$PARAM[centerleft]</centerleft>
+					<texture background="true">pvr/Timer.png</texture>
+					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
+					<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>$PARAM[height]</width>
+					<centerleft>$PARAM[centerleft]</centerleft>
+					<texture background="true">pvr/Reminder.png</texture>
+					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+					<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>$PARAM[height]</width>
+					<centerleft>$PARAM[centerleft]</centerleft>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+					<animation effect="slide" end="$PARAM[slide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
+				</control>
+			</control>
 		</definition>
 	</include>
 
@@ -642,6 +606,14 @@
 				<control type="label" id="9988">
 					<font></font>
 					<label>$VAR[widgetDetails]</label>
+				</control>
+
+				<!-- Carries the focused weather widget's fanart so widgetBackground can test it
+				     for emptiness; Kodi cannot do that on a $VAR directly. Empty, and absent
+				     altogether outside Home, in every other case. -->
+				<control type="label" id="9987">
+					<font></font>
+					<label>$VAR[widgetWeatherBackground]</label>
 				</control>
 				
 			</control>

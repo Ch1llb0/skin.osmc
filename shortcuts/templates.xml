@@ -16,43 +16,50 @@
 			<!-- Fake landscape composes fanart with a logo, so it needs its own include
 			     and its own emptiness test; every other art type tests itself. -->
 			<var name="primaryArt">
-			<value condition="widgetArt=FAKELANDSCAPE">widget-fakelandscape</value>
-			<value condition="widgetArt=FAKETVLANDSCAPE">widget-faketvlandscape</value>
-			<value>widget-image</value>
+				<value condition="widgetArt=FAKELANDSCAPE">widget-fakelandscape</value>
+				<value condition="widgetArt=FAKETVLANDSCAPE">widget-faketvlandscape</value>
+				<value>widget-image</value>
 			</var>
 			<var name="secondaryArt">
-			<value condition="widgetFallbackArt=FAKELANDSCAPE">widget-fakelandscape</value>
-			<value condition="widgetFallbackArt=FAKETVLANDSCAPE">widget-faketvlandscape</value>
-			<value>widget-image</value>
+				<value condition="widgetFallbackArt=FAKELANDSCAPE">widget-fakelandscape</value>
+				<value condition="widgetFallbackArt=FAKETVLANDSCAPE">widget-faketvlandscape</value>
+				<value>widget-image</value>
 			</var>
 			<var name="secondaryVisibility">
-			<value condition="widgetArt=FAKELANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(clearlogo))</value>
-			<value condition="widgetArt=FAKETVLANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</value>
-			<value>String.IsEmpty(ListItem.$PROPERTY[widgetArt])</value>
+				<value condition="widgetArt=FAKELANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(clearlogo))</value>
+				<value condition="widgetArt=FAKETVLANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</value>
+				<value>String.IsEmpty(ListItem.$PROPERTY[widgetArt])</value>
 			</var>
 			<var name="fallbackVisibility">
-			<value condition="widgetFallbackArt=FAKELANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(clearlogo))</value>
-			<value condition="widgetFallbackArt=FAKETVLANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</value>
-			<value>String.IsEmpty(ListItem.$PROPERTY[widgetFallbackArt])</value>
+				<value condition="widgetFallbackArt=FAKELANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(clearlogo))</value>
+				<value condition="widgetFallbackArt=FAKETVLANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</value>
+				<value>String.IsEmpty(ListItem.$PROPERTY[widgetFallbackArt])</value>
 			</var>
 			<var name="artFallback">
-			<value condition="widgetType=movies">DefaultMovie.png</value>
-			<value condition="widgetType=tvshows">DefaultTVShows.png</value>
-			<value condition="widgetType=seasons">DefaultTVShows.png</value>
-			<value condition="widgetType=episodes">DefaultMovies.png</value>
-			<value condition="widgetType=albums">DefaultMusicAlbums.png</value>
-			<value condition="widgetType=artists">DefaultMusicArtist.png</value>
-			<value condition="widgetType=songs">DefaultMusicSongs.png</value>
-			<value condition="widgetType=musicvideos">DefaultMusicVideos.png</value>
-			<value condition="widgetType=tv">DefaultLiveTV.png</value>
-			<value condition="widgetType=radio">DefaultRadio.png</value>
-			<value condition="widgetType=games">DefaultGameAddons.png</value>
-			<value condition="widgetType=addons">DefaultAddonProgram.png</value>
-			<value>DefaultShortcut.png</value>
+				<value condition="widgetType=movies">DefaultMovie.png</value>
+				<value condition="widgetType=tvshows">DefaultTVShows.png</value>
+				<value condition="widgetType=seasons">DefaultTVShows.png</value>
+				<value condition="widgetType=episodes">DefaultMovies.png</value>
+				<value condition="widgetType=sets">DefaultSets.png</value>
+				<value condition="widgetType=music">DefaultMusicAlbums.png</value>
+				<value condition="widgetType=albums">DefaultMusicAlbums.png</value>
+				<value condition="widgetType=artists">DefaultMusicArtists.png</value>
+				<value condition="widgetType=songs">DefaultMusicSongs.png</value>
+				<value condition="widgetType=musicvideos">DefaultMusicVideos.png</value>
+				<value condition="widgetType=tv">DefaultLiveTV.png</value>
+				<value condition="widgetType=radio">DefaultRadio.png</value>
+				<value condition="widgetType=games">DefaultGameAddons.png</value>
+				<value condition="widgetType=addons">DefaultAddonProgram.png</value>
+				<value>DefaultShortcut.png</value>
 			</var>
+		</propertyGroup>
+
+		<!-- Not artwork: whether this row is the weather widget, which the reloading
+		     spinner and the detail variables need but the art slots do not. -->
+		<propertyGroup name="widgetWeather">
 			<var name="isWeather">
-			<value condition="widget=WeatherWidget">True</value>
-			<value>False</value>
+				<value condition="widgetPath~weather-widget">True</value>
+				<value>False</value>
 			</var>
 		</propertyGroup>
 	</propertyGroups>
@@ -60,70 +67,77 @@
 	<variables>
 		<variable name="widgetDetails">
 			<!-- Selected, not loaded -->
-			<value condition="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)">$LOCALIZE[20186]...</value>
+			<value condition="$PROPERTY[widgetFocus] + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)">$LOCALIZE[20186]...</value>
 			<!-- Weather -->
-			<value condition="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + $PROPERTY[isWeather]">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
+			<value condition="$PROPERTY[widgetFocus] + $PROPERTY[isWeather]">$INFO[$PROPERTY[widgetItem].Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 			<!-- Movies -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,movie) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Genre(comma), &#8226; ,][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,movie) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Genre(comma)][/LIGHT]</value>
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,movie) + $PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].Year)">$INFO[$PROPERTY[widgetItem].Title][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Year]$INFO[$PROPERTY[widgetItem].Genre(comma), &#8226; ,][/LIGHT]</value>
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,movie) + $PROPERTY[widgetFocus] + String.IsEmpty($PROPERTY[widgetItem].Year)">$INFO[$PROPERTY[widgetItem].Title][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Genre(comma)][/LIGHT]</value>
 			<!-- Movie sets -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,set) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])">$LOCALIZE[20457]</value>
-			<!-- TV Shows -->
-				<!-- Seasons + Episodes > 1 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),$LOCALIZE[16102]: , $LOCALIZE[1443] ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36907]][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36907]][/LIGHT]</value>
-				<!-- Seasons == 1 + Episodes > 1 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),$LOCALIZE[16102]: , $LOCALIZE[1443] ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36907]][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36907]][/LIGHT]</value>
-				<!-- Seasons > 1 + Episodes == 1 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),$LOCALIZE[16102]: , $LOCALIZE[1443] ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36906]][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36906]][/LIGHT]</value>
-				<!-- Seasons == 1 + Episodes == 1 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),$LOCALIZE[16102]: , $LOCALIZE[1443] ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36906]][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(WatchedEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36906]][/LIGHT]</value>
-				<!-- Seasons > 1 + Episodes == 0 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36907]][/LIGHT]</value>
-				<!-- Seasons == 1 + Episodes == 0 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),1) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalEpisodes),, $LOCALIZE[36907]][/LIGHT]</value>
-				<!-- Seasons == 0 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,tvshow) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),0)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year,, &#8226; ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(TotalSeasons),, $LOCALIZE[36905]][/LIGHT]</value>
-			<!-- Episodes Widget -->
-				<!-- Season + Episodes < 10 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered)">S0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered, &#8226; $LOCALIZE[20416]: ,][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date)">S0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date, &#8226; $LOCALIZE[570]: ,][/LIGHT]</value>
-				<!-- Season < 10 + Episodes > 10 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered)">S0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered, &#8226; $LOCALIZE[20416]: ,][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date)">S0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date, &#8226; $LOCALIZE[570]: ,][/LIGHT]</value>
-				<!-- Season > 10 + Episodes < 10 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered)">S$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered, &#8226; $LOCALIZE[20416]: ,][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + !Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date)">S$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E0$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date, &#8226; $LOCALIZE[570]: ,][/LIGHT]</value>
-				<!-- Season > 10 + Episodes > 10 -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered)">S$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered, &#8226; $LOCALIZE[20416]: ,][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,9) + Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,9) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date)">S$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season]E$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date, &#8226; $LOCALIZE[570]: ,][/LIGHT]</value>
-				<!-- Special -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,[UPPERCASE],[/UPPERCASE]] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Premiered, &#8226; $LOCALIZE[20416]: ,][/LIGHT]</value>
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,episode) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Season,0) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Episode,[UPPERCASE],[/UPPERCASE]] &#8226; $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TVShowTitle]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Date, &#8226; $LOCALIZE[570]: ,][/LIGHT]</value>
-			<!-- PVR Channels - With Info -->
-			<value condition="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.ChannelName) + [!String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title,$LOCALIZE[19055])] + !String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://recordings/tv/) + [String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://channels/) | String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://timers/)]">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.ChannelName]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.ChannelNumberLabel, (,)][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title] ($INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.StartTime] - $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.EndTime])[CR]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.NextTitle] ($INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.NextStartTime] - $INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.NextEndTime])[/LIGHT]</value>
-			<!-- PVR Channels - No Info -->
-			<value condition="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.ChannelName) + !String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://recordings/tv/) + [String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://channels/) | String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://timers/)]">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.ChannelName]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.ChannelNumberLabel, (,)]</value>
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,set) + $PROPERTY[widgetFocus]">$LOCALIZE[20457]</value>
+			<!-- TV Shows: the season, watched and episode phrases are fragments below -->
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,tvshow) + $PROPERTY[widgetFocus] + Integer.IsEqual($PROPERTY[widgetItem].Property(TotalSeasons),0)">$INFO[$PROPERTY[widgetItem].TVShowTitle][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Year,, &#8226; ]$INFO[$PROPERTY[widgetItem].Property(TotalSeasons),, $LOCALIZE[36905]][/LIGHT]</value>
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,tvshow) + $PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].TVShowTitle][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Year,, &#8226; ]$VAR[widgetTVSeasons]$VAR[widgetTVWatched]$VAR[widgetTVEpisodes][/LIGHT]</value>
+			<!-- Episodes Widget: the SxxExx code and the date line are fragments below. The row only
+			     applies when one of the two dates is set, as the enumerated rows did. -->
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,episode) + $PROPERTY[widgetFocus] + [!String.IsEmpty($PROPERTY[widgetItem].Premiered) | !String.IsEmpty($PROPERTY[widgetItem].Date)]">$VAR[widgetSeasonEpisode] &#8226; $INFO[$PROPERTY[widgetItem].Title][CR][LIGHT]$INFO[$PROPERTY[widgetItem].TVShowTitle]$VAR[widgetEpisodeDate][/LIGHT]</value>
+			<!-- PVR Channels. The now and next line is a fragment, so the row does not need a
+			     second copy of itself for channels that have no programme information. -->
+			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].ChannelName) + !String.StartsWith($PROPERTY[widgetItem].Path,pvr://recordings/tv/) + [String.StartsWith($PROPERTY[widgetItem].Path,pvr://channels/) | String.StartsWith($PROPERTY[widgetItem].Path,pvr://timers/)]">$INFO[$PROPERTY[widgetItem].ChannelName]$INFO[$PROPERTY[widgetItem].ChannelNumberLabel, (,)]$VAR[widgetPVRNowNext]</value>
 			<!-- PVR Recordings -->
-			<value condition="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.StartTime) + String.StartsWith(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Path,pvr://recordings/tv/)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Label][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.StartDate]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.StartTime, - ,][/LIGHT]</value>
+			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].StartTime) + String.StartsWith($PROPERTY[widgetItem].Path,pvr://recordings/tv/)">$INFO[$PROPERTY[widgetItem].Label][CR][LIGHT]$INFO[$PROPERTY[widgetItem].StartDate]$INFO[$PROPERTY[widgetItem].StartTime, - ,][/LIGHT]</value>
 			<!-- Songs/Music videos -->
-			<value condition="[String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,song) | String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Artist) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Album)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.TrackNumber,,. ]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Title][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Artist]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Album, &#8226; ,]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year, &#8226; ,][/LIGHT]</value>
+			<value condition="[String.IsEqual($PROPERTY[widgetItem].DBTYPE,song) | String.IsEqual($PROPERTY[widgetItem].DBTYPE,musicvideo)] + $PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].Artist) + !String.IsEmpty($PROPERTY[widgetItem].Album)">$INFO[$PROPERTY[widgetItem].TrackNumber,,. ]$INFO[$PROPERTY[widgetItem].Title][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Artist]$INFO[$PROPERTY[widgetItem].Album, &#8226; ,]$INFO[$PROPERTY[widgetItem].Year, &#8226; ,][/LIGHT]</value>
 			<!-- Albums -->
-			<value condition="String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.DBTYPE,album) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Artist) + !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Album)">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Album][CR][LIGHT]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Artist]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Year, &#8226; ,][/LIGHT]</value>
+			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,album) + $PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].Artist) + !String.IsEmpty($PROPERTY[widgetItem].Album)">$INFO[$PROPERTY[widgetItem].Album][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Artist]$INFO[$PROPERTY[widgetItem].Year, &#8226; ,][/LIGHT]</value>
 			<!-- Others -->
-			<value condition="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])">$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Label]</value>
+			<value condition="$PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].Label]</value>
 		</variable>
-		<variable name="widgetBackground">
-			<value condition="Window.Is(Home) + Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + $PROPERTY[isWeather]">$INFO[Skin.String(weatherFanart.path)]$INFO[Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(weatherFanart)]$INFO[Skin.String(weatherFanart.ext)]</value>
-			<value condition="Window.Is(visualisation)">$INFO[Player.Art(fanart)]</value>
-			<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<!-- The three phrases the TV show row is built from. Each is empty unless its own
+		     count is set, so the row needs no cross product of season, episode and watched. -->
+		<variable name="widgetTVSeasons">
+			<value condition="$PROPERTY[widgetFocus] + Integer.IsEqual($PROPERTY[widgetItem].Property(TotalSeasons),1)">$INFO[$PROPERTY[widgetItem].Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]</value>
+			<value condition="$PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]</value>
+		</variable>
+		<!-- Guarded on the episode count too: a show with no episodes shows no watched tally,
+		     which the enumerated rows achieved by simply not having a watched variant. -->
+		<variable name="widgetTVWatched">
+			<value condition="$PROPERTY[widgetFocus] + Integer.IsGreater($PROPERTY[widgetItem].Property(WatchedEpisodes),0) + Integer.IsGreater($PROPERTY[widgetItem].Property(TotalEpisodes),0)">$INFO[$PROPERTY[widgetItem].Property(WatchedEpisodes),$LOCALIZE[16102]: , $LOCALIZE[1443] ]</value>
+		</variable>
+		<variable name="widgetTVEpisodes">
+			<value condition="$PROPERTY[widgetFocus] + Integer.IsEqual($PROPERTY[widgetItem].Property(TotalEpisodes),1)">$INFO[$PROPERTY[widgetItem].Property(TotalEpisodes),, $LOCALIZE[36906]]</value>
+			<value condition="$PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].Property(TotalEpisodes),, $LOCALIZE[36907]]</value>
+		</variable>
+		<!-- SxxExx, zero padded below ten. Specials carry no season, so they show the episode
+		     name instead; that row must come first because the padding rows assume a season. -->
+		<variable name="widgetSeasonEpisode">
+			<value condition="$PROPERTY[widgetFocus] + String.IsEqual($PROPERTY[widgetItem].Season,0)">$INFO[$PROPERTY[widgetItem].Episode,[UPPERCASE],[/UPPERCASE]]</value>
+			<value condition="$PROPERTY[widgetFocus] + !Integer.IsGreater($PROPERTY[widgetItem].Season,9) + !Integer.IsGreater($PROPERTY[widgetItem].Episode,9)">S0$INFO[$PROPERTY[widgetItem].Season]E0$INFO[$PROPERTY[widgetItem].Episode]</value>
+			<value condition="$PROPERTY[widgetFocus] + !Integer.IsGreater($PROPERTY[widgetItem].Season,9)">S0$INFO[$PROPERTY[widgetItem].Season]E$INFO[$PROPERTY[widgetItem].Episode]</value>
+			<value condition="$PROPERTY[widgetFocus] + !Integer.IsGreater($PROPERTY[widgetItem].Episode,9)">S$INFO[$PROPERTY[widgetItem].Season]E0$INFO[$PROPERTY[widgetItem].Episode]</value>
+			<value condition="$PROPERTY[widgetFocus]">S$INFO[$PROPERTY[widgetItem].Season]E$INFO[$PROPERTY[widgetItem].Episode]</value>
+		</variable>
+		<variable name="widgetEpisodeDate">
+			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].Premiered)">$INFO[$PROPERTY[widgetItem].Premiered, &#8226; $LOCALIZE[20416]: ,]</value>
+			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].Date)">$INFO[$PROPERTY[widgetItem].Date, &#8226; $LOCALIZE[570]: ,]</value>
+		</variable>
+		<!-- The now and next line for a PVR channel, empty when the channel reports no
+		     programme or only the placeholder string. -->
+		<variable name="widgetPVRNowNext">
+			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].Title) + !String.IsEqual($PROPERTY[widgetItem].Title,$LOCALIZE[19055])">[CR][LIGHT]$INFO[$PROPERTY[widgetItem].Title] ($INFO[$PROPERTY[widgetItem].StartTime] - $INFO[$PROPERTY[widgetItem].EndTime])[CR]$INFO[$PROPERTY[widgetItem].NextTitle] ($INFO[$PROPERTY[widgetItem].NextStartTime] - $INFO[$PROPERTY[widgetItem].NextEndTime])[/LIGHT]</value>
+		</variable>
+		<variable name="widgetWeatherBackground">
+			<value condition="Window.Is(Home) + $PROPERTY[widgetFocus] + $PROPERTY[isWeather]">$INFO[Skin.String(weatherFanart.path)]$INFO[$PROPERTY[widgetItem].Property(weatherFanart)]$INFO[Skin.String(weatherFanart.ext)]</value>
 		</variable>
 		<variableGroup name="widgetVars">
 			<variable content="widgetDetails" />
-			<variable content="widgetBackground" />
+			<variable content="widgetTVSeasons" />
+			<variable content="widgetTVWatched" />
+			<variable content="widgetTVEpisodes" />
+			<variable content="widgetSeasonEpisode" />
+			<variable content="widgetEpisodeDate" />
+			<variable content="widgetPVRNowNext" />
+			<variable content="widgetWeatherBackground" />
 		</variableGroup>
 	</variables>
 
@@ -195,7 +209,8 @@
 
 			<!-- Widget heading/details -->
 			<control type="group">
-				<visible>String.IsEqual(Container(9000).ListItem.Property(name),$PROPERTY[name]) + Integer.IsGreater(Container(1000$PROPERTY[index]).NumItems,0)</visible>
+				<skinshortcuts>visibility</skinshortcuts>
+				<visible>Integer.IsGreater(Container(1000$PROPERTY[index]).NumItems,0)</visible>
 				<include content="widgetHeading">
 					<param name="container">1000$PROPERTY[index]</param>
 					<param name="container2">10$PROPERTY[index]01</param>
@@ -243,7 +258,7 @@
 		</controls>
 	</template>
 
-	<template items="weatherWidget" source="widgets" filter="widget=WeatherWidget">
+	<template items="weatherWidget" source="widgets" filter="widgetPath~weather-widget">
 		<controls>
 			<control type="list" id="10$PARENT[index]0$PROPERTY[index]">
 				<viewtype label="$LOCALIZE[535]">list</viewtype>
@@ -458,7 +473,7 @@
 		</controls>
 	</template>
 
-	<template items="libraryWidget" source="widgets" filter="widgetPath + !widget=WeatherWidget">
+	<template items="libraryWidget" source="widgets" filter="widgetPath + !widgetPath~weather-widget">
 		<propertyGroup content="widgetArtwork" />
 		<preset content="widgetLayout" />
 		<controls>
@@ -496,82 +511,42 @@
 					<include content="$PROPERTY[primaryArt]">
 						<description>Primary art</description>
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-						<param name="bottom">0</param>
 						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 						<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="fallback">$PROPERTY[artFallback]</param>
 						<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
-						<param name="aspectratio">keep</param>
 						<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 					</include>
 					<include content="$PROPERTY[secondaryArt]">
 						<description>Fallback art</description>
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-						<param name="bottom">0</param>
 						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 						<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="fallback">$PROPERTY[artFallback]</param>
 						<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
-						<param name="aspectratio">keep</param>
-						<param name="visible">$PROPERTY[secondaryVisibility]</param>
+						<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
 					</include>
 					<include content="widget-image">
 						<description>Catch-all art</description>
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-						<param name="bottom">0</param>
 						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 						<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="fallback">$PROPERTY[artFallback]</param>
 						<param name="art">$INFO[ListItem.Icon]</param>
-						<param name="aspectratio">keep</param>
 						<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
 					</include>
 					
-					<control type="group">
-						<left>$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</left>
-						<bottom>0</bottom>
-						<width>$PROPERTY[imageWidthNoFocus]</width>
-						<height>$PROPERTY[overlayHeight]</height>
-						<control type="image">
-							<texture background="true">views/OverlayBottomBar.png</texture>
-							<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-							<visible>[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
-						</control>
-						<control type="image">
-							<width>$PROPERTY[overlayHeight]</width>
-							<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-							<texture background="true">pvr/Recording.png</texture>
-							<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-							<visible>ListItem.IsRecording</visible>
-							<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-						</control>
-						<control type="image">
-							<width>$PROPERTY[overlayHeight]</width>
-							<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-							<texture background="true">pvr/Timer.png</texture>
-							<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-							<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-							<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-						</control>
-						<control type="image">
-							<width>$PROPERTY[overlayHeight]</width>
-							<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-							<texture background="true">pvr/Reminder.png</texture>
-							<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-							<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-							<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-						</control>
-						<control type="image">
-							<width>$PROPERTY[overlayHeight]</width>
-							<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-							<texture background="true">$VAR[StatusOverlayWide]</texture>
-							<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-							<animation effect="slide" end="$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
-						</control>
-					</control>
+					<include content="widgetOverlayBar">
+						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
+						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
+						<param name="height">$PROPERTY[overlayHeight]</param>
+						<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
+						<param name="slide">$PROPERTY[overlaySlide]</param>
+						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					</include>
 				</itemlayout>
 
 				<focusedlayout width="$PROPERTY[layoutWidth]" height="$PROPERTY[layoutHeight]">
@@ -584,156 +559,80 @@
 							<include content="$PROPERTY[primaryArt]">
 								<description>Primary art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-								<param name="bottom">0</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 								<param name="fallback">$PROPERTY[artFallback]</param>
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
-								<param name="aspectratio">keep</param>
 								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 							</include>
 							<include content="$PROPERTY[secondaryArt]">
 								<description>Fallback art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-								<param name="bottom">0</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 								<param name="fallback">$PROPERTY[artFallback]</param>
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
-								<param name="aspectratio">keep</param>
-								<param name="visible">$PROPERTY[secondaryVisibility]</param>
+								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
 							</include>
 							<include content="widget-image">
 								<description>Catch-all art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-								<param name="bottom">0</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 								<param name="fallback">$PROPERTY[artFallback]</param>
 								<param name="art">$INFO[ListItem.Icon]</param>
-								<param name="aspectratio">keep</param>
 								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
 							</include>
 							
-							<control type="group">
-								<left>$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</left>
-								<bottom>0</bottom>
-								<width>$PROPERTY[imageWidthNoFocus]</width>
-								<height>$PROPERTY[overlayHeight]</height>
-								<control type="image">
-									<texture background="true">views/OverlayBottomBar.png</texture>
-									<visible>[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">pvr/Recording.png</texture>
-									<visible>ListItem.IsRecording</visible>
-									<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">pvr/Timer.png</texture>
-									<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-									<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">pvr/Reminder.png</texture>
-									<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-									<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">$VAR[StatusOverlayWide]</texture>
-									<animation effect="slide" end="$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
-								</control>
-							</control>
+							<include content="widgetOverlayBar">
+								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
+								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[overlayHeight]</param>
+								<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
+								<param name="slide">$PROPERTY[overlaySlide]</param>
+							</include>
 						</control>
 						<control type="group">
 							<visible>System.HasActiveModalDialog | !Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
 							<include content="$PROPERTY[primaryArt]">
 								<description>Primary art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-								<param name="bottom">0</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 								<param name="fallback">$PROPERTY[artFallback]</param>
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
-								<param name="aspectratio">keep</param>
 								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 							</include>
 							<include content="$PROPERTY[secondaryArt]">
 								<description>Fallback art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-								<param name="bottom">0</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 								<param name="fallback">$PROPERTY[artFallback]</param>
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
-								<param name="aspectratio">keep</param>
-								<param name="visible">$PROPERTY[secondaryVisibility]</param>
+								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
 							</include>
 							<include content="widget-image">
 								<description>Catch-all art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-								<param name="bottom">0</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 								<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 								<param name="fallback">$PROPERTY[artFallback]</param>
 								<param name="art">$INFO[ListItem.Icon]</param>
-								<param name="aspectratio">keep</param>
 								<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
 							</include>
 							
-							<control type="group">
-								<left>$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</left>
-								<bottom>0</bottom>
-								<width>$PROPERTY[imageWidthNoFocus]</width>
-								<height>$PROPERTY[overlayHeight]</height>
-								<control type="image">
-									<texture background="true">views/OverlayBottomBar.png</texture>
-									<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-									<visible>[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">pvr/Recording.png</texture>
-									<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-									<visible>ListItem.IsRecording</visible>
-									<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">pvr/Timer.png</texture>
-									<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-									<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-									<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">pvr/Reminder.png</texture>
-									<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-									<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-									<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-								</control>
-								<control type="image">
-									<width>$PROPERTY[overlayHeight]</width>
-									<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-									<texture background="true">$VAR[StatusOverlayWide]</texture>
-									<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-									<animation effect="slide" end="$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
-								</control>
-							</control>
+							<include content="widgetOverlayBar">
+								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
+								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
+								<param name="height">$PROPERTY[overlayHeight]</param>
+								<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
+								<param name="slide">$PROPERTY[overlaySlide]</param>
+								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							</include>
 						</control>
 					</control>
 					<control type="group">
@@ -741,93 +640,59 @@
 						<include content="$PROPERTY[primaryArt]">
 							<description>Primary art</description>
 							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-							<param name="bottom">0</param>
 							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 							<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="fallback">$PROPERTY[artFallback]</param>
 							<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
-							<param name="aspectratio">keep</param>
 							<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 						</include>
 						<include content="$PROPERTY[secondaryArt]">
 							<description>Fallback art</description>
 							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-							<param name="bottom">0</param>
 							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 							<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="fallback">$PROPERTY[artFallback]</param>
 							<param name="art">$INFO[ListItem.$PROPERTY[widgetFallbackArt]]</param>
-							<param name="aspectratio">keep</param>
-							<param name="visible">$PROPERTY[secondaryVisibility]</param>
+							<param name="visible">[ $PROPERTY[secondaryVisibility] ] + ![ $PROPERTY[fallbackVisibility] ]</param>
 						</include>
 						<include content="widget-image">
 							<description>Catch-all art</description>
 							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
-							<param name="bottom">0</param>
 							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 							<param name="height">$PROPERTY[imageHeightNoFocus]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="fallback">$PROPERTY[artFallback]</param>
 							<param name="art">$INFO[ListItem.Icon]</param>
-							<param name="aspectratio">keep</param>
 							<param name="visible">[ $PROPERTY[secondaryVisibility] ] + [ $PROPERTY[fallbackVisibility] ]</param>
 						</include>
 						
-						<control type="group">
-							<left>$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</left>
-							<bottom>0</bottom>
-							<width>$PROPERTY[imageWidthNoFocus]</width>
-							<height>$PROPERTY[overlayHeight]</height>
-							<control type="image">
-								<texture background="true">views/OverlayBottomBar.png</texture>
-								<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-								<visible>[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
-							</control>
-							<control type="image">
-								<width>$PROPERTY[overlayHeight]</width>
-								<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-								<texture background="true">pvr/Recording.png</texture>
-								<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-								<visible>ListItem.IsRecording</visible>
-								<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-							</control>
-							<control type="image">
-								<width>$PROPERTY[overlayHeight]</width>
-								<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-								<texture background="true">pvr/Timer.png</texture>
-								<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-								<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-								<animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-							</control>
-							<control type="image">
-								<width>$PROPERTY[overlayHeight]</width>
-								<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-								<texture background="true">pvr/Reminder.png</texture>
-								<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-								<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible><animation effect="slide" end="-$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)] + [[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]">Conditional</animation>
-							</control>
-							<control type="image">
-								<width>$PROPERTY[overlayHeight]</width>
-								<centerleft>$MATH[imageWidthNoFocus / 2]</centerleft>
-								<texture background="true">$VAR[StatusOverlayWide]</texture>
-								<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-								<animation effect="slide" end="$PROPERTY[overlaySlide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
-							</control>
-						</control>
+						<include content="widgetOverlayBar">
+							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
+							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
+							<param name="height">$PROPERTY[overlayHeight]</param>
+							<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
+							<param name="slide">$PROPERTY[overlaySlide]</param>
+							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						</include>
 					</control>
 
 				</focusedlayout>
 
-				<content limit="$PROPERTY[widgetLimit]" sortby="$PROPERTY[widgetSortBy]" sortorder="$PROPERTY[widgetSortDirection]" target="$PROPERTY[widgetTarget]" browse="never">$PROPERTY[widgetPath]</content>
+				<content limit="$PROPERTY[widgetLimit]" sortby="$PROPERTY[widgetSortBy]" sortorder="$PROPERTY[widgetSortOrder]" target="$PROPERTY[widgetTarget]" browse="never">$PROPERTY[widgetPath]</content>
 			</control>
 		</controls>
 	</template>
 
 	<!-- Carries no controls; it exists to build the shared widget variables -->
 	<template items="widgetVariables" source="widgets">
-		<propertyGroup content="widgetArtwork" />
+		<!-- The focused widget's list item and the test that selects it. $PARENT and $PROPERTY
+		     both resolve here because this is an items template; the same trick inside a
+		     propertyGroup would leave $PARENT[index] in the emitted XML. -->
+		<property name="widgetItem" value="Container(10$PARENT[index]0$PROPERTY[index]).ListItem" />
+		<property name="widgetFocus" value="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])" />
+		<propertyGroup content="widgetWeather" />
 		<variableGroup content="widgetVars" />
 		<controls />
 	</template>
@@ -840,7 +705,7 @@
 	</template>
 
 	<template items="reloadingWidget" source="widgets">
-		<propertyGroup content="widgetArtwork" />
+		<propertyGroup content="widgetWeather" />
 		<controls>
 			<control type="image">
 				<animation type="Conditional" condition="String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + Weather.IsUpdating]">

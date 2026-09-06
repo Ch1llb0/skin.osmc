@@ -10,6 +10,13 @@
 
 	<controls>
 	
+		<!-- Control ids come from three places, and only the first is fixed:
+		     211, 301-305, 307, 311, 313, 401, 405   Skin Shortcuts built-ins, the add-on decides these
+		     309, 310, 502-504, 601-603              bound in shortcuts/properties.xml <buttons>
+		     406                                     subdialog trigger, bound in shortcuts/menus.xml
+		     1, 60, 80, 210, 314, 9000, 9001         this skin's own
+		     Renumbering anything in the middle two groups means editing shortcuts/ as well. -->
+	
 		<!-- Black background image -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -57,7 +64,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(211).ListItem.Property(backgroundPath)]</texture>
-			<visible>!String.IsEmpty(Container(211).ListItem.Property(backgroundPath)) + ![String.EndsWith(Container(211).ListItem.Property(backgroundPath),\) | String.EndsWith(Container(211).ListItem.Property(backgroundPath),/)]</visible>
+			<visible>String.IsEqual(Container(211).ListItem.Property(backgroundType),browse)</visible>
 			<aspectratio>scale</aspectratio>
 			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
@@ -68,7 +75,7 @@
 		<control type="multiimage">
 			<include>FullscreenDimensions</include>
 			<imagepath background="true">$INFO[Container(211).ListItem.Property(backgroundPath)]</imagepath>
-			<visible>!String.IsEmpty(Container(211).ListItem.Property(backgroundPath)) + [String.EndsWith(Container(211).ListItem.Property(backgroundPath),\) | String.EndsWith(Container(211).ListItem.Property(backgroundPath),/)]</visible>
+			<visible>String.IsEqual(Container(211).ListItem.Property(backgroundType),multi)</visible>
 			<aspectratio>scale</aspectratio>
 			<include>IndividualBackgroundFolderDuration</include>
 			<fadetime>2000</fadetime>
@@ -81,7 +88,7 @@
 		</control>
 		
 		<!-- Fanart -->
-		<control type="image" id="10000">
+		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(fanart)]</texture>
 			<aspectratio>scale</aspectratio>
@@ -214,21 +221,26 @@
 					<align>center</align>
 					<scroll>True</scroll>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<visible>!String.EndsWith(Window.Property(menuname),.widgets)</visible>
 				</control>
 				
 				<!-- Change shortcut -->
 				<control type="button" id="401">
 					<include>script-skinshortcuts_coords6</include>
 					<label>$ADDON[script.skinshortcuts 32048]</label>
-					<visible>!String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>!$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
+				<!-- Select widget -->
+				<control type="button" id="309">
+					<include>script-skinshortcuts_coords6</include>
+					<label>$ADDON[script.skinshortcuts 32044]</label>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
+				</control>
+				
 				
 				<!-- Change label -->
 				<control type="button" id="305">
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[528]</label>
-					<visible>!String.EndsWith(Window.Property(menuname),.widgets)</visible>
 				</control>
 				
 				<!-- Change action -->
@@ -236,7 +248,7 @@
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $ADDON[script.skinshortcuts 32027]</label>
 					<label2>$INFO[Container(211).ListItem.Property(action)]</label2>
-					<visible>!String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>!$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 				
 				<!-- Edit background -->
@@ -245,7 +257,7 @@
 					<label>  -  $ADDON[script.skinshortcuts 32045]</label>
 					<label2>$INFO[Container(211).ListItem.Property(backgroundLabel)]</label2>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
+					<visible>$EXP[SkinShortcutsMainMenu]</visible>
 				</control>
 				
 				<!-- Edit background duration -->
@@ -262,56 +274,31 @@
 					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),20s)">Skin.SetString(IndividualBackgroundFolderDuration,30s)</onclick>
 					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),30s)">Skin.SetString(IndividualBackgroundFolderDuration,1 min)</onclick>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
+					<visible>$EXP[SkinShortcutsMainMenu]</visible>
 				</control>
 
 				<!-- Edit submenu -->
 				<control type="button" id="405">
 					<include>script-skinshortcuts_coords6</include>
 					<label>$ADDON[script.skinshortcuts 32072]</label>
-					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
+					<visible>$EXP[SkinShortcutsMainMenu]</visible>
 				</control>
 
 				<!-- Manage widgets -->
 				<control type="button" id="406">
 					<include>script-skinshortcuts_coords6</include>
 					<label>$LOCALIZE[31095]</label>
-					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
-				</control>
-				
-				<!-- Heading -->
-				<control type="label" id="2">
-					<include>script-skinshortcuts_coords6</include>
-					<label>$INFO[Container(211).ListItem.Label]</label>
-					<align>center</align>
-					<scroll>True</scroll>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsMainMenu]</visible>
 				</control>
 
-				<!-- Select widget -->
-				<control type="button" id="309">
-					<include>script-skinshortcuts_coords6</include>
-					<label>$ADDON[script.skinshortcuts 32044]</label>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
-				</control>
-
-				<!-- Change label -->
-				<control type="button" id="604">
-					<include>script-skinshortcuts_coords6</include>
-					<label>  -  $LOCALIZE[528]</label>
-					<onclick>SendClick(305)</onclick>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
-				</control>
-				
 				<!-- Change layout -->
 				<control type="button" id="601">
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31172]</label>
 					<label2>$INFO[Container(211).ListItem.Property(layoutLabel)]</label2>
-					<enable>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</enable>
+					<enable>$EXP[SkinShortcutsWidgetEditable]</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 
 				<!-- Change artwork -->
@@ -319,9 +306,9 @@
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31033]</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetArtLabel)]</label2>
-					<enable>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</enable>
+					<enable>$EXP[SkinShortcutsWidgetEditable]</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 				
 				<!-- Fallback artwork -->
@@ -329,9 +316,9 @@
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31029]</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetFallbackArtLabel)]</label2>
-					<enable>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</enable>
+					<enable>$EXP[SkinShortcutsWidgetEditable]</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 
 				<!-- Widget sort by -->
@@ -339,19 +326,19 @@
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31175]</label>
 					<label2>$VAR[WidgetSortByLabel]</label2>
-					<enable>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</enable>
+					<enable>$EXP[SkinShortcutsWidgetEditable]</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 				
 				<!-- Widget sort direction -->
 				<control type="button" id="503">
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31176]</label>
-					<label2>$VAR[WidgetSortDirectionLabel]</label2>
-					<enable>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</enable>
+					<label2>$VAR[WidgetSortOrderLabel]</label2>
+					<enable>$EXP[SkinShortcutsWidgetEditable]</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 				
 				<!-- Widget limit items -->
@@ -359,9 +346,9 @@
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31177]</label>
 					<label2>$VAR[WidgetLimitLabel]</label2>
-					<enable>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEqual(Container(211).ListItem.Property(widget),WeatherWidget)</enable>
+					<enable>$EXP[SkinShortcutsWidgetEditable]</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-					<visible>String.EndsWith(Window.Property(menuname),.widgets)</visible>
+					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
 
 				<!-- Hide -->
@@ -369,12 +356,16 @@
 					<include>script-skinshortcuts_coords7</include>
 					<label>$LOCALIZE[31161]</label>
 					<selected>String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</selected>
+					<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-isRequired),True)</enable>
+					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 				</control>
 
 				<!-- Delete -->
 				<control type="button" id="302">
 					<include>script-skinshortcuts_coords6</include>
 					<label>$ADDON[script.skinshortcuts 32001]</label>
+					<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-isRequired),True)</enable>
+					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 				</control>
 				
 			</control>
@@ -424,15 +415,17 @@
 				<control type="button" id="311">
 					<width>auto</width>
 					<label>$ADDON[script.skinshortcuts 32028]</label>
+					<enable>!String.IsEmpty(Window.Property(skinshortcuts-hasdeleted))</enable>
+					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 				</control>
 
 				<!-- Help -->
 				<control type="button" id="314">
 					<label>10043</label>
 					<width>auto</width>
-					<onclick condition="String.EndsWith(Window.Property(menuname),.widgets)">SetProperty(Window,Widgetmenu,1106)</onclick>
-					<onclick condition="!String.IsEqual(Window.Property(menuname),mainmenu) + !String.EndsWith(Window.Property(menuname),.widgets)">SetProperty(Window,Submenu,1106)</onclick>
-					<onclick condition="String.IsEqual(Window.Property(menuname),mainmenu)">SetProperty(Window,Mainmenu,1106)</onclick>
+					<onclick condition="$EXP[SkinShortcutsWidgetMenu]">SetProperty(Window,Widgetmenu,1106)</onclick>
+					<onclick condition="!$EXP[SkinShortcutsMainMenu] + !$EXP[SkinShortcutsWidgetMenu]">SetProperty(Window,Submenu,1106)</onclick>
+					<onclick condition="$EXP[SkinShortcutsMainMenu]">SetProperty(Window,Mainmenu,1106)</onclick>
 					<onclick>ActivateWindow(1106)</onclick>
 				</control>
 			

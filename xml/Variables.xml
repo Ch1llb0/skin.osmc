@@ -6,6 +6,23 @@
 	<expression name="NonMaskedCoordinates">String.IsEqual(Skin.AspectRatio,16:9) + True</expression><!-- If masking should be available, this should be set to "False". -->
 	<expression name="MaskedCoordinates">String.IsEqual(Skin.AspectRatio,16:9) + False</expression><!-- If masking should be available, this should be set to "True". -->
 	
+	<!-- Skin Shortcuts: which kind of menu the management dialog is editing.
+	     The add-on names widget submenus <item>.widgets, so the suffix is the test. -->
+	<expression name="SkinShortcutsWidgetMenu">String.EndsWith(Window.Property(menuname),.widgets)</expression>
+	<expression name="SkinShortcutsMainMenu">String.IsEqual(Window.Property(menuname),mainmenu)</expression>
+	
+	<!-- Skin Shortcuts: a widget row whose properties the skin can actually restyle.
+	     The weather widget draws through its own template, so its layout, artwork,
+	     sorting and limit are not the user's to set. -->
+	<expression name="SkinShortcutsWidgetEditable">!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.Contains(Container(211).ListItem.Property(widgetPath),weather-widget)</expression>
+	
+	<!-- Watched state, and whether the user wants it drawn. Both halves are needed wherever a
+	     watched overlay is placed: the item's own state, and the per-media-kind setting that
+	     switches the indicator off. The Skin.HasSetting names read inverted - set means hide. -->
+	<expression name="IsWatchedOrResumed">[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)]</expression>
+	<expression name="IsWatchedResumedOrPartial">[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)]</expression>
+	<expression name="WatchedStatusVisible">[[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]</expression>
+	
 	<!-- Background overlay -->
 	<variable name="BackgroundOverlayStyle">
 		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2]</value>
@@ -407,7 +424,7 @@
 	<variable name="StatusOverlay">
 		<value condition="ListItem.IsParentFolder">noop</value>
 		<value condition="[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + Skin.HasSetting(MusicListenedToStatus)">noop</value>
-		<value condition="[String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + Skin.HasSetting(VideoWatchedStatus)">noop</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + Skin.HasSetting(VideoWatchedStatus)">noop</value>
 		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">views/OverlayProgressWatched.png</value>
 		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,76) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),76)">views/OverlayProgress7.png</value>
 		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,63) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),63)">views/OverlayProgress6.png</value>
@@ -423,7 +440,7 @@
 	<variable name="StatusOverlayWide">
 		<value condition="ListItem.IsParentFolder">noop</value>
 		<value condition="[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + Skin.HasSetting(MusicListenedToStatus)">noop</value>
-		<value condition="[String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + Skin.HasSetting(VideoWatchedStatus)">noop</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + Skin.HasSetting(VideoWatchedStatus)">noop</value>
 		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">views/OverlayProgressWideWatched.png</value>
 		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,76) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),76)">views/OverlayProgressWide7.png</value>
 		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,63) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),63)">views/OverlayProgressWide6.png</value>

@@ -11,7 +11,7 @@
 	<include>10035ResetScroll</include>
 	
 	<!-- Skin Shortcuts -->
-	<onunload condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
+	<onunload condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
 	
 	<!-- Skin settings, background + colors -->
 	<include>Onloads</include>
@@ -155,7 +155,7 @@
 							<label>31049</label>
 							<font>Font33</font>
 							<onclick>RunScript(script.skinshortcuts,type=manage,menu=mainmenu)</onclick>
-							<visible>System.HasAddon(script.skinshortcuts) + System.AddonIsEnabled(script.skinshortcuts)</visible>
+							<visible>System.AddonIsEnabled(script.skinshortcuts)</visible>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -926,7 +926,7 @@
 							<label2>$VAR[weather-icons]</label2>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.HasAddon(script.image.resource.select) + !System.AddonIsEnabled(script.image.resource.select)">EnableAddon(script.image.resource.select)</onclick>
-							<onclick condition="System.HasAddon(script.image.resource.select) + System.AddonIsEnabled(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherIcons&amp;type=resource.images.weathericons)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherIcons&amp;type=resource.images.weathericons)</onclick>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -936,7 +936,7 @@
 							<font>Font33</font>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.HasAddon(script.image.resource.select) + !System.AddonIsEnabled(script.image.resource.select)">EnableAddon(script.image.resource.select)</onclick>
-							<onclick condition="System.HasAddon(script.image.resource.select) + System.AddonIsEnabled(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherFanart&amp;type=resource.images.weatherfanart)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherFanart&amp;type=resource.images.weatherfanart)</onclick>
 							<label>$LOCALIZE[31068]</label>
 							<label2>$VAR[weather-fanart]</label2>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -1183,7 +1183,7 @@
 							<label2>$VAR[addon-skinshortcuts]</label2>
 							<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 							<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
-							<onclick condition="System.HasAddon(script.skinshortcuts) + System.AddonIsEnabled(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
 						</control>
 						<!-- Skin Helper Service -->
 						<control type="button" id="703">
@@ -1192,7 +1192,7 @@
 							<label2>$VAR[addon-skinhelper]</label2>
 							<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 							<onclick condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">EnableAddon(script.skin.helper.service)</onclick>
-							<onclick condition="System.HasAddon(script.skin.helper.service) + System.AddonIsEnabled(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
 						</control>
 						<!-- Skin Helper Service Widgets -->
 						<control type="button" id="704">
@@ -1201,7 +1201,7 @@
 							<label2>$VAR[addon-skinhelperwidgets]</label2>
 							<onclick condition="!System.HasAddon(script.skin.helper.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
 							<onclick condition="System.HasAddon(script.skin.helper.widgets) + !System.AddonIsEnabled(script.skin.helper.widgets)">EnableAddon(script.skin.helper.widgets)</onclick>
-							<onclick condition="System.HasAddon(script.skin.helper.widgets) + System.AddonIsEnabled(script.skin.helper.widgets)">Addon.OpenSettings(script.skin.helper.widgets)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.skin.helper.widgets)">Addon.OpenSettings(script.skin.helper.widgets)</onclick>
 						</control>
 						<!-- Skin Helper Service Skin Backup -->
 						<control type="button" id="705">
@@ -1210,7 +1210,7 @@
 							<label2>$VAR[addon-skinhelperbackup]</label2>
 							<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
 							<onclick condition="System.HasAddon(script.skin.helper.skinbackup) + !System.AddonIsEnabled(script.skin.helper.skinbackup)">EnableAddon(script.skin.helper.skinbackup)</onclick>
-							<onclick condition="System.HasAddon(script.skin.helper.skinbackup) + System.AddonIsEnabled(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
 						</control>
 						<!-- Divider -->
 						<control type="image" id="706">
@@ -1232,7 +1232,7 @@
 							<label2>$VAR[addon-autocompletion]</label2>
 							<onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
 							<onclick condition="System.HasAddon(plugin.program.autocompletion) + !System.AddonIsEnabled(plugin.program.autocompletion)">EnableAddon(plugin.program.autocompletion)</onclick>
-							<onclick condition="System.HasAddon(plugin.program.autocompletion) + System.AddonIsEnabled(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+							<onclick condition="System.AddonIsEnabled(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
 						</control>
 						<!-- Library Node Editor -->
 						<control type="button" id="709">
@@ -1241,7 +1241,7 @@
 							<label2>$VAR[addon-librarynodeeditor]</label2>
 							<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
 							<onclick condition="System.HasAddon(plugin.library.node.editor) + !System.AddonIsEnabled(plugin.library.node.editor)">EnableAddon(plugin.library.node.editor)</onclick>
-							<onclick condition="System.HasAddon(plugin.library.node.editor) + System.AddonIsEnabled(plugin.library.node.editor)">Addon.OpenSettings(plugin.library.node.editor)</onclick>
+							<onclick condition="System.AddonIsEnabled(plugin.library.node.editor)">Addon.OpenSettings(plugin.library.node.editor)</onclick>
 						</control>
 						<!-- Image Resource Select -->
 						<control type="button" id="710">
@@ -1250,7 +1250,7 @@
 							<label2>$VAR[addon-imageselect]</label2>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.HasAddon(script.image.resource.select) + !System.AddonIsEnabled(script.image.resource.select)">EnableAddon(script.image.resource.select)</onclick>
-							<onclick condition="System.HasAddon(script.image.resource.select) + System.AddonIsEnabled(script.image.resource.select)">Addon.OpenSettings(script.image.resource.select)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.image.resource.select)">Addon.OpenSettings(script.image.resource.select)</onclick>
 						</control>
 						<!-- Up Next -->
 						<control type="button" id="711">
@@ -1259,7 +1259,7 @@
 							<label2>$VAR[addon-upnext]</label2>
 							<onclick condition="!System.HasAddon(service.upnext)">InstallAddon(service.upnext)</onclick>
 							<onclick condition="System.HasAddon(service.upnext) + !System.AddonIsEnabled(service.upnext)">EnableAddon(service.upnext)</onclick>
-							<onclick condition="System.HasAddon(service.upnext) + System.AddonIsEnabled(service.upnext)">Addon.OpenSettings(service.upnext)</onclick>
+							<onclick condition="System.AddonIsEnabled(service.upnext)">Addon.OpenSettings(service.upnext)</onclick>
 						</control>
 						<!-- Artist Slideshow -->
 						<control type="button" id="712">
@@ -1268,7 +1268,7 @@
 							<label2>$VAR[addon-artistslideshow]</label2>
 							<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
 							<onclick condition="System.HasAddon(script.artistslideshow) + !System.AddonIsEnabled(script.artistslideshow)">EnableAddon(script.artistslideshow)</onclick>
-							<onclick condition="System.HasAddon(script.artistslideshow) + System.AddonIsEnabled(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
 						</control>
 					</control>
 
@@ -1289,17 +1289,17 @@
 							<include>SkinSettings_coords16</include>
 							<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
 							<onclick condition="System.HasAddon(script.skin.helper.skinbackup) + !System.AddonIsEnabled(script.skin.helper.skinbackup)">EnableAddon(script.skin.helper.skinbackup)</onclick>
-							<onclick condition="System.HasAddon(script.skin.helper.skinbackup) + System.AddonIsEnabled(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup)</onclick>
 							<label>31052</label>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
-						<!-- Reset all home menu items -->
+						<!-- Reset all menus and view selections: resetall deletes the add-on userdata -->
 						<control type="button" id="802">
 							<include>SkinSettings_coords16</include>
 							<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 							<label>31399</label>
-							<visible>System.HasAddon(script.skinshortcuts)</visible>
+							<visible>System.AddonIsEnabled(script.skinshortcuts)</visible>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>

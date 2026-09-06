@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <backgrounds>
 
-	<!-- The skin reads the stored path straight out of the background property and
-	     picks its renderer from the trailing slash: a file draws as a single image,
-	     a folder as a slideshow. Browse and multi both write the browsed path there. -->
+	<!-- The type below reaches the skin as the backgroundType property, which is what
+	     decides the renderer: browse draws a single image, multi a slideshow. -->
 	<background name="custom-image" label="$LOCALIZE[1030]" type="browse">
 		<icon>DefaultPicture.png</icon>
 	</background>

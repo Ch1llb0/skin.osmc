@@ -113,29 +113,13 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
-				<visible>!Control.HasFocus(304)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
-				<visible>!Control.HasFocus(303)</visible>
-			</control>
-			<control type="image">
-				<left>290</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
-				<visible>Control.HasFocus(304)</visible>
-			</control>
-			<control type="image">
-				<left>325</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
-				<visible>Control.HasFocus(303)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
 			</control>
 		</focusedlayout>
 	</include>
@@ -167,29 +151,13 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
-				<visible>!Control.HasFocus(304)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
-				<visible>!Control.HasFocus(303)</visible>
-			</control>
-			<control type="image">
-				<left>290</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
-				<visible>Control.HasFocus(304)</visible>
-			</control>
-			<control type="image">
-				<left>325</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
-				<visible>Control.HasFocus(303)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
 			</control>
 		</focusedlayout>
 	</include>
@@ -221,29 +189,13 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
-				<visible>!Control.HasFocus(304)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
-				<visible>!Control.HasFocus(303)</visible>
-			</control>
-			<control type="image">
-				<left>290</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
-				<visible>Control.HasFocus(304)</visible>
-			</control>
-			<control type="image">
-				<left>325</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
-				<visible>Control.HasFocus(303)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
 			</control>
 		</focusedlayout>
 	</include>
@@ -275,29 +227,13 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
-				<visible>!Control.HasFocus(304)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
-				<visible>!Control.HasFocus(303)</visible>
-			</control>
-			<control type="image">
-				<left>290</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
-				<visible>Control.HasFocus(304)</visible>
-			</control>
-			<control type="image">
-				<left>325</left>
-				<width>35</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
-				<visible>Control.HasFocus(303)</visible>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
 			</control>
 		</focusedlayout>
 	</include>

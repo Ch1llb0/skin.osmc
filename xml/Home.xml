@@ -13,7 +13,7 @@
 	<onload condition="String.IsEmpty(Skin.String(WelcomeDialogShown)) + !System.HasAddon(service.osmc.settings)">ActivateWindow(1101)</onload>
 
 	<!-- Skin Shortcuts -->
-	<onload condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onload>
+	<onload condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onload>
 
 	<!-- Skin Helper Service -->
 	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>

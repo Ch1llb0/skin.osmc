@@ -3,13 +3,13 @@
 
 	<!-- Variables for script-skinshortcuts.xml -->
 	<variable name="skinshortcuts-window">
-		<value condition="String.EndsWith(Window.Property(menuname),.widgets)">$LOCALIZE[31095]</value>
-		<value condition="!String.IsEqual(Window.Property(menuname),mainmenu)">$ADDON[script.skinshortcuts 32072]</value>
+		<value condition="$EXP[SkinShortcutsWidgetMenu]">$LOCALIZE[31095]</value>
+		<value condition="!$EXP[SkinShortcutsMainMenu]">$ADDON[script.skinshortcuts 32072]</value>
 		<value>$ADDON[script.skinshortcuts 32071]</value>
 	</variable>
 
 	<variable name="skinshortcuts-itemlabel">
-		<value condition="String.EndsWith(Window.Property(menuname),.widgets) + String.IsEmpty(ListItem.Property(widgetLabel))">$ADDON[script.skinshortcuts 32013]</value>
+		<value condition="$EXP[SkinShortcutsWidgetMenu] + String.IsEmpty(ListItem.Property(widgetLabel))">$ADDON[script.skinshortcuts 32013]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -23,8 +23,8 @@
 		<value>$LOCALIZE[16018]</value>
 	</variable>
 	
-	<variable name="WidgetSortDirectionLabel">
-		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortDirectionLabel))">$INFO[Container(211).ListItem.Property(widgetSortDirectionLabel)]</value>
+	<variable name="WidgetSortOrderLabel">
+		<value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetSortOrderLabel))">$INFO[Container(211).ListItem.Property(widgetSortOrderLabel)]</value>
 		<value>$LOCALIZE[16018]</value>
 	</variable>
 	
@@ -54,6 +54,28 @@
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetPlayFromBeginning)">PlayMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,noresume)</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetPlayNext)">QueueMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,playnext)</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetQueue)">QueueMedia(videodb://movies/sets/$INFO[ListItem.DBID]/)</value>
+	</variable>
+
+	<!-- The move up and down arrows swap texture on focus; one control each rather than
+	     a shown and a hidden copy. Keyed on the button, not on the list item. -->
+	<variable name="skinshortcuts-arrowdown">
+		<value condition="Control.HasFocus(304)">common/ArrowDownFO.png</value>
+		<value>common/ArrowDownNF.png</value>
+	</variable>
+
+	<variable name="skinshortcuts-arrowup">
+		<value condition="Control.HasFocus(303)">common/ArrowUpFO.png</value>
+		<value>common/ArrowUpNF.png</value>
+	</variable>
+
+	<!-- The window background. Only the first row is Skin Shortcuts' business: it hands over to the
+	     generated widgetWeatherBackground while a weather widget holds focus on Home, read back
+	     through label 9987 because Kodi cannot test a $VAR for emptiness. The other two rows are the
+	     skin's own fallbacks and belong here rather than inside per-widget generated output. -->
+	<variable name="widgetBackground">
+		<value condition="!String.IsEmpty(Control.GetLabel(9987))">$INFO[Control.GetLabel(9987)]</value>
+		<value condition="Window.Is(visualisation)">$INFO[Player.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 
 </includes>

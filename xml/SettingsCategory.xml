@@ -13,7 +13,7 @@
 	<onload condition="String.IsEmpty(Skin.String(WelcomeDialogShown)) + !System.HasAddon(service.osmc.settings)">ActivateWindow(1101)</onload>
 	
 	<!-- Skin Shortcuts -->
-	<onunload condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
+	<onunload condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
 	
 	<!-- Skin settings, background + colors -->
 	<include>Onloads</include>
