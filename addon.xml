@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.osmc" version="21.2.2" name="OSMC Skin" provider-name="OSMC">
+<addon id="skin.osmc" version="22.0.0" name="OSMC Skin" provider-name="OSMC">
 	<requires>
-		<import addon="xbmc.gui" version="5.17.0"/>
+		<import addon="xbmc.gui" version="5.18.0"/>
 		<import addon="script.skinshortcuts" version="2.0.3" optional="true"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
@@ -18,6 +18,6 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]Improved[/B][CR]- add new item limits to main menu widgets[CR]- improve rendering of video media flags all over the skin for edge cases[CR]- improve debug overlay[CR][CR][B]Fixed[/B][CR]- fix the date added sort order of main menu widgets</news>
+		<news>[B]New[/B][CR]- add support for Kodi v22 (Piers)[CR]- add Dolby Vision profile to the HDR media flag[CR]- add extra title info, parental rating and backend name to PVR items[CR]- add live bitrates, queue levels and subtitle decoder to the player process info dialog[CR]- add spinner to the weather widget while it updates[CR]- add last update time to the weather window[CR][CR][B]Improved[/B][CR]- allow stepping through subtitles in both directions in the video OSD[CR]- open the subtitle settings from the subtitle name in the video OSD[CR]- name audio and subtitle streams by their stream name in the video OSD and fullscreen info[CR]- detect Dolby Atmos and DTS:X from the stream instead of the file name[CR]- separate genres, directors and writers with commas[CR]- hide duration based information during live playback[CR]- consolidate codec and audio channel labels into shared lookup maps[CR][CR][B]Fixed[/B][CR]- fix audio channel labels claiming layouts a channel count cannot identify</news>
 	</extension>
 </addon>

@@ -103,6 +103,7 @@
 						<control type="fadelabel">
 							<include>MyPVRGuide_coords11</include>
 							<label>$INFO[ListItem.EpisodeName]</label>
+							<label>$INFO[ListItem.TitleExtraInfo]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>!String.IsEmpty(ListItem.EpisodeName)</visible>
 						</control>
@@ -110,7 +111,7 @@
 						<control type="fadelabel">
 							<include>MyPVRGuide_coords12</include>
 							<font>Font33-light</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>!String.IsEmpty(ListItem.EpisodeName) + !String.IsEmpty(ListItem.Genre)</visible>
 						</control>
@@ -125,7 +126,7 @@
 						<control type="fadelabel">
 							<include>MyPVRGuide_coords11</include>
 							<font>Font33-light</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>String.IsEmpty(ListItem.EpisodeName) + !String.IsEmpty(ListItem.Genre)</visible>
 						</control>

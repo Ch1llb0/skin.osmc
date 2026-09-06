@@ -247,7 +247,7 @@
 				<ondown>5</ondown>
 				<onback condition="Player.ShowInfo">Info</onback>
 				<orientation>horizontal</orientation>
-				<visible allowhiddenfocus="true">![Control.HasFocus(45) | Control.HasFocus(46) | Control.HasFocus(47) | Control.HasFocus(48)]</visible>
+				<visible allowhiddenfocus="true">![Control.HasFocus(47) | Control.HasFocus(48) | Control.HasFocus(49)]</visible>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
 				
@@ -303,8 +303,7 @@
 					<include>VideoOSD_coords8</include>
 					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDAudioNF.png</texturefocus>
 					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDAudioNF.png</texturenofocus>
-					<onclick condition="Integer.IsGreater(VideoPlayer.AudioStreamCount,1) + !Pvr.IsPlayingTv">Control.SetFocus(45)</onclick>
-					<onclick condition="!Integer.IsGreater(VideoPlayer.AudioStreamCount,1) | Pvr.IsPlayingTv">ActivateWindow(124)</onclick>
+					<onclick>ActivateWindow(124)</onclick>
 					<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 					<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
 				</control>
@@ -426,8 +425,8 @@
 			<control type="group">
 				<include>VideoOSD_coords10</include>
 				<visible>!Pvr.IsPlayingTv</visible>
-				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(45) | Control.HasFocus(46) | Control.HasFocus(47) | Control.HasFocus(48)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="200" delay="200" condition="![Control.HasFocus(45) | Control.HasFocus(46) | Control.HasFocus(47) | Control.HasFocus(48)]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(47) | Control.HasFocus(48) | Control.HasFocus(49)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="200" condition="![Control.HasFocus(47) | Control.HasFocus(48) | Control.HasFocus(49)]">Conditional</animation>
 				<animation effect="slide" end="120,0" time="0" condition="!Integer.IsGreater(VideoPlayer.PlaylistLength,1)">Conditional</animation>
 				<animation effect="slide" end="60,0" time="0" condition="!Control.IsVisible(26)">Conditional</animation>
 				<animation effect="slide" end="60,0" time="0" condition="!Control.IsVisible(25)">Conditional</animation>
@@ -477,8 +476,8 @@
 			<control type="group">
 				<include>VideoOSD_coords11</include>
 				<visible>Control.IsVisible(26)</visible>
-				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(45) | Control.HasFocus(46) | Control.HasFocus(47) | Control.HasFocus(48)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="200" delay="200" condition="![Control.HasFocus(45) | Control.HasFocus(46) | Control.HasFocus(47) | Control.HasFocus(48)]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(47) | Control.HasFocus(48) | Control.HasFocus(49)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="200" condition="![Control.HasFocus(47) | Control.HasFocus(48) | Control.HasFocus(49)]">Conditional</animation>
 
 				<control type="image">
 					<include>VideoOSD_coords8</include>
@@ -555,49 +554,6 @@
 
 			</control>
 			
-			<!-- Audio stream selection -->
-			<control type="grouplist" id="31">
-				<include>VideoOSD_coords9</include>
-				<align>right</align>
-				<itemgap>0</itemgap>
-				<onleft>11</onleft>
-				<onright>1</onright>
-				<onup condition="!Player.SeekEnabled">5</onup>
-				<onup condition="Player.SeekEnabled">100</onup>
-				<ondown>5</ondown>
-				<onback>16</onback>
-				<orientation>horizontal</orientation>
-				<visible>Control.HasFocus(45) | Control.HasFocus(46)</visible>
-				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
-				
-				<control type="button" id="45">
-					<include>VideoOSD_coords12</include>
-					<font>Font27-bold</font>
-					<align>center</align>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[VideoPlayerAudioCodec,, ]$VAR[VideoPlayerAudioChannels]$INFO[VideoPlayer.AudioLanguage, [CAPITALIZE](,)[/CAPITALIZE]]</label>
-					<onclick>Action(AudioNextLanguage)</onclick>
-					<onright>46</onright>
-					<onback>16</onback>
-					<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
-					<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
-				</control>
-				
-				<control type="button" id="46">
-					<include>VideoOSD_coords8</include>
-					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSettingsNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDSettingsNF.png</texturenofocus>
-					<onclick>ActivateWindow(124)</onclick>
-					<onleft>45</onleft>
-					<onback>16</onback>
-					<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
-					<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
-				</control>
-				
-			</control>
-			
 			<!-- Subtitle stream selection -->
 			<control type="grouplist" id="32">
 				<include>VideoOSD_coords9</include>
@@ -610,18 +566,15 @@
 				<ondown>5</ondown>
 				<onback>17</onback>
 				<orientation>horizontal</orientation>
-				<visible>Control.HasFocus(47) | Control.HasFocus(48)</visible>
+				<visible>Control.HasFocus(47) | Control.HasFocus(48) | Control.HasFocus(49)</visible>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
 				
-				<control type="button" id="47">
-					<include>VideoOSD_coords12</include>
-					<font>Font27-bold</font>
-					<align>center</align>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[SubtitleLanguageOSD]</label>
-					<onclick>Action(NextSubtitle)</onclick>
+				<control type="button" id="49">
+					<include>VideoOSD_coords8</include>
+					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPrevTrackNF.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPrevTrackNF.png</texturenofocus>
+					<onclick>Action(PreviousSubtitle)</onclick>
 					<onright>48</onright>
 					<onback>17</onback>
 					<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
@@ -629,15 +582,31 @@
 				</control>
 				
 				<control type="button" id="48">
-					<include>VideoOSD_coords8</include>
-					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSettingsNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDSettingsNF.png</texturenofocus>
+					<include>VideoOSD_coords12</include>
+					<font>Font27-bold</font>
+					<align>center</align>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$VAR[SubtitleLanguageOSD]</label>
 					<onclick>ActivateWindow(159)</onclick>
-					<onleft>47</onleft>
+					<onleft>49</onleft>
+					<onright>47</onright>
 					<onback>17</onback>
 					<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 					<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
 				</control>
+				
+				<control type="button" id="47">
+					<include>VideoOSD_coords8</include>
+					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDNextTrackNF.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDNextTrackNF.png</texturenofocus>
+					<onclick>Action(NextSubtitle)</onclick>
+					<onleft>48</onleft>
+					<onback>17</onback>
+					<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
+					<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
+				</control>
+
 				
 			</control>
 			

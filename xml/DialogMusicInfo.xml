@@ -239,7 +239,7 @@
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -517,7 +517,7 @@
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>

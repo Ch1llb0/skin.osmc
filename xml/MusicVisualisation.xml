@@ -133,19 +133,19 @@
 					<control type="image">
 						<include>MusicVisualisation_coords7</include>
 						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>MusicVisualisation_coords8</include>
 						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-						<visible>!Pvr.IsPlayingRadio + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
+						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>MusicVisualisation_coords9</include>
 						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-						<visible>!Pvr.IsPlayingRadio + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
+						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 
@@ -155,7 +155,7 @@
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-						<visible>!Pvr.IsPlayingRadio + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="label">
@@ -164,7 +164,7 @@
 						<align>center</align>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[Player.Time]</label>
-						<visible>!Pvr.IsPlayingRadio + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
+						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -187,7 +187,7 @@
 						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
-						<visible>!Pvr.IsPlayingRadio + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -213,7 +213,7 @@
 						<midtexture colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
-						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -263,7 +263,7 @@
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[System.Time,$LOCALIZE[555]: ,]$INFO[Player.FinishTime, / $LOCALIZE[19081]: ,]</label>
-						<visible>!Pvr.IsPlayingRadio + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="label">
@@ -272,7 +272,7 @@
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[System.Time,$LOCALIZE[555]: ,]</label>
-						<visible>!Pvr.IsPlayingRadio + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
+						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -414,7 +414,7 @@
 						<control type="fadelabel">
 							<include>MusicVisualisation_coords21</include>
 							<font>Font36</font>
-							<label>$INFO[MusicPlayer.Genre]</label>
+							<label>$INFO[MusicPlayer.Genre(comma)]</label>
 						</control>
 					</control>
 					
@@ -578,7 +578,7 @@
 						<control type="fadelabel">
 							<include>MusicVisualisation_coords21</include>
 							<font>Font36</font>
-							<label>$INFO[MusicPlayer.Genre]</label>
+							<label>$INFO[MusicPlayer.Genre(comma)]</label>
 						</control>
 					</control>
 					

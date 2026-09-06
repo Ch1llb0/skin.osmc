@@ -2,7 +2,31 @@
 
 ---
 
-**_v21.2.2_**
+**_v22.0.0_**
+
+_New_
+- add support for Kodi v22 (Piers)
+- add Dolby Vision profile to the HDR media flag
+- add extra title info, parental rating and backend name to PVR items
+- add live bitrates, queue levels and subtitle decoder to the player process info dialog
+- add spinner to the weather widget while it updates
+- add last update time to the weather window
+
+_Improved_
+- allow stepping through subtitles in both directions in the video OSD
+- open the subtitle settings from the subtitle name in the video OSD
+- name audio and subtitle streams by their stream name in the video OSD and fullscreen info
+- detect Dolby Atmos and DTS:X from the stream instead of the file name
+- separate genres, directors and writers with commas
+- hide duration based information during live playback
+- consolidate codec and audio channel labels into shared lookup maps
+
+_Fixed_
+- fix audio channel labels claiming layouts a channel count cannot identify
+
+---
+
+**_v21.2.2 - March 2026_**
 
 _Improved_
 - add new item limits to main menu widgets
@@ -564,44 +588,93 @@ Release
 
 ---
 
-**Changelog v21.2.2**
+**Changelog v22.0.0**
 
 strings.po:
-- adjust widget limit description text for new widget item limit options (31375)
+- add string for unnamed audio channel counts (31444)
+- add string for the player process info queue levels (31445)
+- add string for the parental rating of PVR items (31446)
 
-overrides.xml:
-- turn case sensitive sort order properties to lower case
-- add new lower widget item limit
+template.xml:
+- show the widget reloading spinner while the weather widget updates
 
 script-skinshortcuts-static.xml:
-- turn case sensitive sort order properties to lower case
+- show the widget reloading spinner while the weather widget updates
+- separate genres with commas in the widget details
 
-Coordinates_Custom_Debug_Info.xml:
-- add new coordinates includes for reworked debug overlay
+Coordinates_DialogPlayerProcessInfo.xml:
+- grow the info panel by two rows and move the debug overlay shortcut down accordingly
 
 Coordinates_DialogSelect.xml:
-- adjust video version secondary label to use new Video variable
+- remove the video version picker layouts, as Kodi v22 removed those windows
 
 Coordinates_DialogVideoManager.xml:
-- adjust video version secondary label to use new Video variable
+- hide the item sublabel under the generic select dialog, which stacks over the manager in Kodi v22
 
-Custom_Debug_Info.xml:
-- rework debug overlay to show information more clearly
+Coordinates_VideoOSD.xml:
+- widen the subtitle name to fill the reworked subtitle stream row
+
+DialogMusicInfo.xml:
+- separate genres with commas
+
+DialogPVRInfo.xml:
+- add extra title info above the plot
+- add the parental rating to the end of the plot
+- add the backend name to the channel row in multi client setups
+- separate genres with commas
+
+DialogPlayerProcessInfo.xml:
+- add the live bitrate to the video and audio rows
+- add a subtitle decoder row
+- add a queue level row
 
 DialogVideoInfo.xml:
-- use new Video variable for video related information
+- separate genres, directors and writers with commas
 
-DialogVideoInfo.xml:
-- use new Video variable for video related information
+Includes.xml:
+- pull in Includes_Maps.xml
+
+Includes_Maps.xml:
+- add AudioCodecMap, AudioChannelsMap and VideoCodecMap as shared value to label maps
+- add the immersive and profile codec values Kodi v22 reports e.g. Dolby Atmos and DTS:X
+- label ambiguous channel counts with every layout they may represent, as a channel count cannot identify one
+
+Includes_Time_NowPlaying.xml:
+- hide duration based information during live playback
+
+MusicVisualisation.xml:
+- hide end time, position, progress and cache bar during live playback
+- separate genres with commas
+
+MyPVRGuide.xml:
+- add extra title info to the episode name fadelabel
+- separate genres with commas
+
+MyWeather.xml:
+- add the last update time to the provider label
 
 Variables.xml:
-- rework VideoResolution to general Video variable for edge cases e.g. with video add-ons
+- reduce the codec and channel variables to map lookups, keeping the DSD sample rate rows
+- keep file name detection for AURO-3D and DTS:X on DTS-HD HRA, which the stream cannot reveal
+- add the Dolby Vision profile to the HDR media flag via HdrDetail
+- name audio and subtitle streams by their stream name, falling back to the English language name and then the legacy code
+- add extra title info, parental rating and, in multi client setups, the backend name to the PVR description variables
+- add a plain elapsed time row for live playback
+- separate genres, directors and writers with commas
 
-Variables_Skinshortcuts.xml:
-- turn case sensitive sort order properties to lower case
+VideoFullScreen.xml:
+- hide end time, position, progress and cache bar during live playback
+- name the audio and subtitle stream in the info line
+- separate genres with commas
+
+VideoOSD.xml:
+- rebuild the subtitle stream row as previous/name/next, using the new PreviousSubtitle action
+- open the subtitle settings from the subtitle name and drop the settings icon
+- remove the audio stream cycler, as audio has no backward action, and open the audio settings from the audio button
 
 addon.xml:
-- bump version to 21.2.2
+- require xbmc.gui 5.18.0
+- bump version to 22.0.0
 - update changelog
 
 Changelog.md:

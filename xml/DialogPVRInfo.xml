@@ -72,7 +72,7 @@
 						<control type="fadelabel">
 							<include>DialogPVRInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
+							<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]$VAR[PVRClientName, &#8226; ,]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -91,7 +91,7 @@
 						<control type="fadelabel">
 							<include>DialogPVRInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -181,7 +181,7 @@
 				<align>left</align>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
-				<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.10600)]</label>
+				<label>$INFO[ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Plot]$INFO[ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]$INFO[Window(Home).Property(ResetScroll.10600)]</label>
 				<autoscroll delay="10000" time="1700" repeat="12000">True</autoscroll>
 				<visible>[Window.IsVisible(10600) + [!String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + !String.IsEmpty(ListItem.Plot)] | [Window.IsVisible(10601) + [!String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + !String.IsEmpty(ListItem.Plot)]</visible>
 				<include>VisibleFadeAnimation</include>

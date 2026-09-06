@@ -737,20 +737,22 @@
 		<property name="id" tag="mainmenuid" />
 		<propertyGroup>mainmenuWidgets</propertyGroup>
 		<propertyGroup>lumosLayout</propertyGroup>
+		<property name="isWeather" tag="property" attribute="name|widget" value="WeatherWidget">True</property>
+		<property name="isWeather">False</property>
 
 		<controls>
 			<control type="image">
-				<animation type="Conditional" condition="String.IsEqual(Container(1000$SKINSHORTCUTS[auto-rootID]).ListItem.Property(widgetID),$SKINSHORTCUTS[auto-rootID]-$SKINSHORTCUTS[id]) + Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).IsUpdating">
+				<animation type="Conditional" condition="String.IsEqual(Container(1000$SKINSHORTCUTS[auto-rootID]).ListItem.Property(widgetID),$SKINSHORTCUTS[auto-rootID]-$SKINSHORTCUTS[id]) + [Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).IsUpdating | $SKINSHORTCUTS[isWeather] + Weather.IsUpdating]">
 					<effect type="fade" start="0" end="100" time="200" />
 				</animation>
-				<animation type="Conditional" condition="![String.IsEqual(Container(1000$SKINSHORTCUTS[auto-rootID]).ListItem.Property(widgetID),$SKINSHORTCUTS[auto-rootID]-$SKINSHORTCUTS[id]) + Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).IsUpdating]">
+				<animation type="Conditional" condition="![String.IsEqual(Container(1000$SKINSHORTCUTS[auto-rootID]).ListItem.Property(widgetID),$SKINSHORTCUTS[auto-rootID]-$SKINSHORTCUTS[id]) + [Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).IsUpdating | $SKINSHORTCUTS[isWeather] + Weather.IsUpdating]]">
 					<effect type="fade" start="100" end="0" time="200" />
 				</animation>
 				<width>36</width>
 				<height>36</height>
 				<texture>$VAR[BusySpinner]</texture>
 				<skinshortcuts>visibility</skinshortcuts>
-				<visible>String.IsEqual(Container(1000$SKINSHORTCUTS[auto-rootID]).ListItem.Property(widgetID),$SKINSHORTCUTS[auto-rootID]-$SKINSHORTCUTS[id]) + Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).IsUpdating</visible>
+				<visible>String.IsEqual(Container(1000$SKINSHORTCUTS[auto-rootID]).ListItem.Property(widgetID),$SKINSHORTCUTS[auto-rootID]-$SKINSHORTCUTS[id]) + [Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).IsUpdating | $SKINSHORTCUTS[isWeather] + Weather.IsUpdating]</visible>
 			</control>
 		</controls>
 	</submenuOther>
@@ -862,8 +864,8 @@
 				<!-- Weather -->
 				<value condition="Control.IsVisible(1000$SKINSHORTCUTS[auto-rootID]) + Control.HasFocus(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]) + $SKINSHORTCUTS[isWeather]">$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 				<!-- Movies -->
-				<value condition="String.IsEqual(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.DBTYPE,movie) + Control.IsVisible(1000$SKINSHORTCUTS[auto-rootID]) + Control.HasFocus(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]) + !String.IsEmpty(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Year)">$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Title][CR][LIGHT]$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Year]$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Genre, &#8226; ,][/LIGHT]</value>
-				<value condition="String.IsEqual(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.DBTYPE,movie) + Control.IsVisible(1000$SKINSHORTCUTS[auto-rootID]) + Control.HasFocus(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]) + String.IsEmpty(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Year)">$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Title][CR][LIGHT]$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Genre][/LIGHT]</value>
+				<value condition="String.IsEqual(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.DBTYPE,movie) + Control.IsVisible(1000$SKINSHORTCUTS[auto-rootID]) + Control.HasFocus(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]) + !String.IsEmpty(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Year)">$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Title][CR][LIGHT]$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Year]$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Genre(comma), &#8226; ,][/LIGHT]</value>
+				<value condition="String.IsEqual(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.DBTYPE,movie) + Control.IsVisible(1000$SKINSHORTCUTS[auto-rootID]) + Control.HasFocus(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]) + String.IsEmpty(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Year)">$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Title][CR][LIGHT]$INFO[Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.Genre(comma)][/LIGHT]</value>
 				<!-- Movie sets -->
 				<value condition="String.IsEqual(Container(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id]).ListItem.DBTYPE,set) + Control.IsVisible(1000$SKINSHORTCUTS[auto-rootID]) + Control.HasFocus(10$SKINSHORTCUTS[auto-rootID]0$SKINSHORTCUTS[id])">$LOCALIZE[20457]</value>
 				<!-- TV Shows -->

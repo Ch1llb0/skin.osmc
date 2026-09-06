@@ -171,9 +171,10 @@
 					<include>MyWeather_coords12</include>
 					<align>right</align>
 					<label>$INFO[Window(Weather).Property(WeatherProvider)]</label>
+					<label>$INFO[Weather.LastUpdated,$LOCALIZE[12014]: ,]</label>
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<visible>!String.IsEmpty(Window(Weather).Property(WeatherProvider))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(WeatherProvider)) | !String.IsEmpty(Weather.LastUpdated)</visible>
 				</control>
 				
 				<!-- Sub menu indicator -->

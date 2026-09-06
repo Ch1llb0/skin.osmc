@@ -267,10 +267,10 @@
 				<font>Font36-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+				<visible>String.IsEmpty(ListItem.Label2)</visible>
 			</control>
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+				<visible>!String.IsEmpty(ListItem.Label2)</visible>
 				<control type="label">
 					<left>140</left>
 					<top>10</top>
@@ -279,17 +279,6 @@
 					<font>Font36-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>10</top>
-					<width>880</width>
-					<height>36</height>
-					<font>Font36-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.VideoVersionName]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -299,17 +288,6 @@
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>54</top>
-					<width>880</width>
-					<height>27</height>
-					<font>Font27-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
 		</itemlayout>
@@ -331,10 +309,10 @@
 				<font>Font36-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+				<visible>String.IsEmpty(ListItem.Label2)</visible>
 			</control>
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+				<visible>!String.IsEmpty(ListItem.Label2)</visible>
 				<control type="label">
 					<left>140</left>
 					<top>10</top>
@@ -343,17 +321,6 @@
 					<font>Font36-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>10</top>
-					<width>1520</width>
-					<height>36</height>
-					<font>Font36-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.VideoVersionName]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -363,17 +330,6 @@
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>54</top>
-					<width>1520</width>
-					<height>27</height>
-					<font>Font27-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
 		</itemlayout>
@@ -395,10 +351,10 @@
 				<font>Font36-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+				<visible>String.IsEmpty(ListItem.Label2)</visible>
 			</control>
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+				<visible>!String.IsEmpty(ListItem.Label2)</visible>
 				<control type="label">
 					<left>140</left>
 					<top>10</top>
@@ -407,17 +363,6 @@
 					<font>Font36-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>10</top>
-					<width>1520</width>
-					<height>36</height>
-					<font>Font36-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.VideoVersionName]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -427,17 +372,6 @@
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>54</top>
-					<width>1520</width>
-					<height>27</height>
-					<font>Font27-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
 		</itemlayout>
@@ -459,10 +393,10 @@
 				<font>Font36-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+				<visible>String.IsEmpty(ListItem.Label2)</visible>
 			</control>
 			<control type="group">
-				<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+				<visible>!String.IsEmpty(ListItem.Label2)</visible>
 				<control type="label">
 					<left>140</left>
 					<top>10</top>
@@ -471,17 +405,6 @@
 					<font>Font36-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>10</top>
-					<width>400</width>
-					<height>36</height>
-					<font>Font36-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.VideoVersionName]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -491,17 +414,6 @@
 					<font>Font27-light</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
-					<visible>!Window.IsActive(selectvideoversion)</visible>
-				</control>
-				<control type="label">
-					<left>140</left>
-					<top>54</top>
-					<width>400</width>
-					<height>27</height>
-					<font>Font27-light</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-					<visible>Window.IsActive(selectvideoversion)</visible>
 				</control>
 			</control>
 		</itemlayout>
@@ -527,7 +439,7 @@
 					<texture>$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
-					<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+					<visible>String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<width>880</width>
@@ -547,7 +459,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<top>10</top>
@@ -557,18 +469,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>10</top>
-						<width>880</width>
-						<height>36</height>
-						<font>Font36-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[ListItem.VideoVersionName]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 					<control type="image">
 						<left>140</left>
@@ -587,18 +487,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>54</top>
-						<width>880</width>
-						<height>27</height>
-						<font>Font27-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 				</control>
 			</control>
@@ -618,7 +506,7 @@
 					<texture>$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
-					<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+					<visible>String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<width>1520</width>
@@ -638,7 +526,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<top>10</top>
@@ -648,18 +536,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>10</top>
-						<width>1520</width>
-						<height>36</height>
-						<font>Font36-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[ListItem.VideoVersionName]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 					<control type="image">
 						<left>140</left>
@@ -678,18 +554,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>54</top>
-						<width>1520</width>
-						<height>27</height>
-						<font>Font27-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 				</control>
 			</control>
@@ -709,7 +573,7 @@
 					<texture>$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
-					<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+					<visible>String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<width>1520</width>
@@ -729,7 +593,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<top>10</top>
@@ -739,18 +603,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>10</top>
-						<width>1520</width>
-						<height>36</height>
-						<font>Font36-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[ListItem.VideoVersionName]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 					<control type="image">
 						<left>140</left>
@@ -769,18 +621,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>54</top>
-						<width>1520</width>
-						<height>27</height>
-						<font>Font27-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 				</control>
 			</control>
@@ -800,7 +640,7 @@
 					<texture>$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
-					<visible>String.IsEmpty(ListItem.Label2) + !Window.IsActive(selectvideoversion)</visible>
+					<visible>String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<width>400</width>
@@ -820,7 +660,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.IsEmpty(ListItem.Label2) | Window.IsActive(selectvideoversion)</visible>
+					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
 						<left>140</left>
 						<top>10</top>
@@ -830,18 +670,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>10</top>
-						<width>400</width>
-						<height>36</height>
-						<font>Font36-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[ListItem.VideoVersionName]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 					<control type="image">
 						<left>140</left>
@@ -860,18 +688,6 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
-						<visible>!Window.IsActive(selectvideoversion)</visible>
-					</control>
-					<control type="label">
-						<left>140</left>
-						<top>54</top>
-						<width>400</width>
-						<height>27</height>
-						<font>Font27-bold</font>
-						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
-						<scroll>True</scroll>
-						<visible>Window.IsActive(selectvideoversion)</visible>
 					</control>
 				</control>
 			</control>

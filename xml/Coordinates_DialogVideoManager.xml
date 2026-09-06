@@ -127,7 +127,7 @@
 				<font>Font27-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label2]</label>
-				<visible>!Window.IsActive(selectvideoversion)</visible>
+				<visible>!Window.IsActive(selectdialog)</visible>
 			</control>
 			<control type="label">
 				<left>140</left>
@@ -167,7 +167,7 @@
 				<font>Font27-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label2]</label>
-				<visible>!Window.IsActive(selectvideoversion)</visible>
+				<visible>!Window.IsActive(selectdialog)</visible>
 			</control>
 			<control type="label">
 				<left>140</left>
@@ -207,7 +207,7 @@
 				<font>Font27-light</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label2]</label>
-				<visible>!Window.IsActive(selectvideoversion)</visible>
+				<visible>!Window.IsActive(selectdialog)</visible>
 			</control>
 			<control type="label">
 				<left>140</left>

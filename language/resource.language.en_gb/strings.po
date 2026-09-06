@@ -2193,3 +2193,18 @@ msgstr ""
 msgctxt "#31443"
 msgid "Action used when selecting a movie set widget item in the main menu (Default: Browse into)"
 msgstr ""
+
+#: /Variables.xml
+msgctxt "#31444"
+msgid "channels"
+msgstr ""
+
+#: /DialogPlayerProcessInfo.xml
+msgctxt "#31445"
+msgid "Queues"
+msgstr ""
+
+#: /DialogPVRInfo.xml
+msgctxt "#31446"
+msgid "Parental rating"
+msgstr ""

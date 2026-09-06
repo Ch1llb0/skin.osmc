@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- Value-to-label lookup maps ($MAP[MapName,Infolabel], Kodi v22+).
+	     On a lookup miss $MAP returns the raw infolabel value unchanged. -->
+
+	<!-- Audio codec labels (shared by ListItem, MusicPlayer, VideoPlayer and per-stream properties) -->
+	<map name="AudioCodecMap">
+		<entry key="aac">AAC</entry>
+		<entry key="aac_latm">AAC</entry>
+		<entry key="aac_lc">AAC</entry>
+		<entry key="aac_ltp">AAC</entry>
+		<entry key="aac_ssr">AAC</entry>
+		<entry key="ac3">Dolby Digital</entry>
+		<entry key="aif">AIFF</entry>
+		<entry key="aiff">AIFF</entry>
+		<entry key="alac">Apple</entry>
+		<entry key="ape">APE</entry>
+		<entry key="cdda">Audio-CD</entry>
+		<entry key="AC3">Dolby Digital</entry>
+		<entry key="DCA">DTS</entry>
+		<entry key="DTSHD_HRA">DTS-HD HRA</entry>
+		<entry key="DTSHD_MA">DTS-HD MA</entry>
+		<entry key="EAC3">Dolby Digital+</entry>
+		<entry key="TRUEHD">Dolby TrueHD</entry>
+		<entry key="dca">DTS</entry>
+		<entry key="dts">DTS</entry>
+		<entry key="dts_96_24">DTS 96/24</entry>
+		<entry key="dts_es">DTS-ES</entry>
+		<entry key="dts_express">DTS Express</entry>
+		<entry key="dolbydigital">Dolby Digital</entry>
+		<entry key="dsd">DSD</entry>
+		<entry key="dsd_lsbf">DSD</entry>
+		<entry key="dsd_lsbf_planar">DSD</entry>
+		<entry key="dsd_msbf">DSD</entry>
+		<entry key="dsd_msbf_planar">DSD</entry>
+		<entry key="dtshd_hra">DTS-HD HRA</entry>
+		<entry key="dtshd_ma">DTS-HD MA</entry>
+		<entry key="dtshd_ma_x">DTS:X &#8226; DTS-HD MA</entry>
+		<entry key="dtshd_ma_x_imax">DTS:X IMAX &#8226; DTS-HD MA</entry>
+		<entry key="dtsma">DTS-HD MA</entry>
+		<entry key="eac3">Dolby Digital+</entry>
+		<entry key="eac3_ddp_atmos">Dolby Atmos &#8226; Dolby Digital+</entry>
+		<entry key="flac">FLAC</entry>
+		<entry key="he_aac">HE-AAC</entry>
+		<entry key="he_aac_v2">HE-AAC v2</entry>
+		<entry key="mlp">MLP</entry>
+		<entry key="mp2">MP2</entry>
+		<entry key="mp3">MP3</entry>
+		<entry key="mp3float">MP3</entry>
+		<entry key="opus">Opus</entry>
+		<entry key="pcm">PCM</entry>
+		<entry key="pcm_bluray">PCM</entry>
+		<entry key="pcm_s16le">PCM</entry>
+		<entry key="pcm_s24le">PCM</entry>
+		<entry key="truehd">Dolby TrueHD</entry>
+		<entry key="truehd_atmos">Dolby Atmos &#8226; Dolby TrueHD</entry>
+		<entry key="vorbis">Vorbis</entry>
+		<entry key="wavpack">WAVP</entry>
+		<entry key="wma">WMA</entry>
+		<entry key="wmapro">WMA</entry>
+		<entry key="wmav2">WMA</entry>
+	</map>
+
+	<!-- Audio channel-count labels (shared by ListItem, MusicPlayer, VideoPlayer and the
+	     per-stream AudioChannels.N properties). Modeled on Kodi's DefaultLayout table
+	     (StreamUtils::GetDefaultLayout), but honest: a channel count cannot distinguish
+	     layouts that share it, so ambiguous entries carry every layout the count may
+	     represent. Unmapped counts display as the raw number. -->
+	<map name="AudioChannelsMap">
+		<entry key="1">1.0</entry>
+		<entry key="2">2.0</entry>
+		<entry key="3">2.1/3.0</entry>
+		<entry key="4">3.1/4.0</entry>
+		<entry key="5">4.1/5.0</entry>
+		<entry key="6">5.1/6.0</entry>
+		<entry key="7">6.1/7.0</entry>
+		<entry key="8">7.1/5.1.2</entry>
+		<entry key="9">8.1/9.0</entry>
+		<entry key="10">5.1.4/7.1.2/9.1</entry>
+		<entry key="11">10.1</entry>
+		<entry key="12">7.1.4/11.1</entry>
+		<entry key="13">12.1</entry>
+		<entry key="14">9.1.4/7.1.6/13.1</entry>
+		<entry key="16">9.1.6</entry>
+	</map>
+
+	<!-- Video codec labels -->
+	<map name="VideoCodecMap">
+		<entry key="DIVX">DivX</entry>
+		<entry key="DX50">DivX</entry>
+		<entry key="H264">H.264</entry>
+		<entry key="HEVC">H.265</entry>
+		<entry key="MPEG4">MPEG-4</entry>
+		<entry key="WVC1">VC-1</entry>
+		<entry key="XVID">XviD</entry>
+		<entry key="av1">AV1</entry>
+		<entry key="avc1">H.264</entry>
+		<entry key="bluray">Blu-ray</entry>
+		<entry key="div2">DivX</entry>
+		<entry key="div3">DivX</entry>
+		<entry key="divx">DivX</entry>
+		<entry key="divx 4">DivX</entry>
+		<entry key="dx50">DivX</entry>
+		<entry key="h264">H.264</entry>
+		<entry key="hddvd">HD-DVD</entry>
+		<entry key="hdmv">Blu-ray</entry>
+		<entry key="hev1">H.265</entry>
+		<entry key="hevc">H.265</entry>
+		<entry key="hvc1">H.265</entry>
+		<entry key="microsoft">MPEG-4</entry>
+		<entry key="mp42">MPEG-4</entry>
+		<entry key="mp43">MPEG-4</entry>
+		<entry key="mp4v">MPEG-4</entry>
+		<entry key="mpeg1">MPEG-1</entry>
+		<entry key="mpeg1video">MPEG-1</entry>
+		<entry key="mpeg2">MPEG-2</entry>
+		<entry key="mpeg2video">MPEG-2</entry>
+		<entry key="mpeg4">MPEG-4</entry>
+		<entry key="mpg4">MPEG-4</entry>
+		<entry key="theora">Theora</entry>
+		<entry key="vc1">VC-1</entry>
+		<entry key="vp8">VP8</entry>
+		<entry key="vp9">VP9</entry>
+		<entry key="wmv">WMV</entry>
+		<entry key="wmv2">WMV</entry>
+		<entry key="wmv3">WMV</entry>
+		<entry key="wvc1">VC-1</entry>
+		<entry key="xvid">XviD</entry>
+	</map>
+
+</includes>

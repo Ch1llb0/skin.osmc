@@ -372,12 +372,16 @@
 		<value condition="VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(12005).Property(shownext))">$LOCALIZE[19031]: $INFO[VideoPlayer.NextTitle] ($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])</value>
 	</variable>
 	
+	<variable name="PVRClientName">
+		<value condition="Integer.IsGreater(PVR.ClientCount,1)">$INFO[ListItem.PVRClientName]$INFO[ListItem.PVRInstanceName, (,)]</value>
+	</variable>
+
 	<variable name="PVRDescription">
-		<value>$INFO[ListItem.Title,[B],[/B][CR][CR]]$INFO[ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Genre,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Plot]</value>
+		<value>$INFO[ListItem.Title,[B],[/B][CR][CR]]$INFO[ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Genre(comma),[LIGHT],[/LIGHT][CR][CR]]$VAR[PVRClientName,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Plot]$INFO[ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
 	</variable>
 	
 	<variable name="PVRDescriptionDialogGuide">
-		<value>$INFO[Container(11).ListItem.Title,[B],[/B][CR][CR]]$INFO[Container(11).ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Genre,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Plot]</value>
+		<value>$INFO[Container(11).ListItem.Title,[B],[/B][CR][CR]]$INFO[Container(11).ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Genre(comma),[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
 	</variable>
 
 	<variable name="PVRChannelIcon">
@@ -394,6 +398,7 @@
 
 	<variable name="VideoPlayerPlot">
 		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(12005).Property(shownext))">$INFO[VideoPlayer.NextPlot]</value>
+		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.ParentalRatingCode)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.ParentalRatingCode,[LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Premiered)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.Premiered,[LIGHT]$LOCALIZE[20416]: ,[/LIGHT]]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Date)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.Date,[LIGHT]$LOCALIZE[570]: ,[/LIGHT]]</value>
 		<value>$INFO[VideoPlayer.Plot]</value>
@@ -514,8 +519,8 @@
 	</variable>
 
 	<variable name="Label2">
-		<value condition="Container.Content(movies) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]$INFO[ListItem.Genre, &#8226; ,]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEmpty(ListItem.Year)">$INFO[ListItem.Genre]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(movies) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]$INFO[ListItem.Genre(comma), &#8226; ,]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEmpty(ListItem.Year)">$INFO[ListItem.Genre(comma)]$VAR[LabelUserRating]</value>
 		<value condition="[Container.Content(sets) | ListItem.IsCollection] + !ListItem.IsParentFolder + Integer.IsGreater(ListItem.Property(Total),1) + Integer.IsGreater(ListItem.Property(Watched),0)">$INFO[ListItem.Property(Watched),$LOCALIZE[20457] &#8226; $LOCALIZE[16102]: , $LOCALIZE[1443] ]$INFO[ListItem.Property(Total),, $LOCALIZE[36900]]</value>
 		<value condition="[Container.Content(sets) | ListItem.IsCollection] + !ListItem.IsParentFolder + Integer.IsGreater(ListItem.Property(Total),1) + Integer.IsEqual(ListItem.Property(Watched),0)">$INFO[ListItem.Property(Total),$LOCALIZE[20457] &#8226; , $LOCALIZE[36901]]</value>
 		<value condition="[Container.Content(sets) | ListItem.IsCollection] + !ListItem.IsParentFolder + Integer.IsEqual(ListItem.Property(Total),1) + Integer.IsGreater(ListItem.Property(Watched),0)">$INFO[ListItem.Property(Watched),$LOCALIZE[20457] &#8226; $LOCALIZE[16102]: , $LOCALIZE[1443] ]$INFO[ListItem.Property(Total),, $LOCALIZE[36900]]</value>
@@ -557,9 +562,6 @@
 
 	<!-- Audio labels -->
 	<variable name="Audio">
-		<value condition="[String.Contains(ListItem.FileName,-atmos-) | String.Contains(ListItem.FileName,-atmos.) | String.Contains(ListItem.FileName,-atmos_) | String.Contains(ListItem.FileName,.atmos.) | String.Contains(ListItem.FileName,.atmos_) | String.Contains(ListItem.FileName,.atmos-) | String.Contains(ListItem.FileName,_atmos_) | String.Contains(ListItem.FileName,_atmos-) | String.Contains(ListItem.FileName,_atmos.)] + String.IsEqual(ListItem.AudioCodec,truehd)">Dolby Atmos &#8226; Dolby TrueHD $VAR[AudioChannels]</value>
-		<value condition="[String.Contains(ListItem.FileName,-atmos-) | String.Contains(ListItem.FileName,-atmos.) | String.Contains(ListItem.FileName,-atmos_) | String.Contains(ListItem.FileName,.atmos.) | String.Contains(ListItem.FileName,.atmos_) | String.Contains(ListItem.FileName,.atmos-) | String.Contains(ListItem.FileName,_atmos_) | String.Contains(ListItem.FileName,_atmos-) | String.Contains(ListItem.FileName,_atmos.)] + String.IsEqual(ListItem.AudioCodec,eac3)">Dolby Atmos &#8226; Dolby Digital+ $VAR[AudioChannels]</value>
-		<value condition="[String.Contains(ListItem.FileName,-dts-x-) | String.Contains(ListItem.FileName,-dts-x.) | String.Contains(ListItem.FileName,-dts-x_) | String.Contains(ListItem.FileName,-dtsx-) | String.Contains(ListItem.FileName,-dtsx.) | String.Contains(ListItem.FileName,-dtsx_) | String.Contains(ListItem.FileName,.dts-x.) | String.Contains(ListItem.FileName,.dts-x_) | String.Contains(ListItem.FileName,.dts-x-) | String.Contains(ListItem.FileName,.dtsx.) | String.Contains(ListItem.FileName,.dtsx_) | String.Contains(ListItem.FileName,.dtsx-) | String.Contains(ListItem.FileName,_dts-x_) | String.Contains(ListItem.FileName,_dts-x-) | String.Contains(ListItem.FileName,_dts-x.) | String.Contains(ListItem.FileName,_dtsx_) | String.Contains(ListItem.FileName,_dtsx-) | String.Contains(ListItem.FileName,_dtsx.)] + [String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma)]">DTS:X &#8226; DTS-HD MA $VAR[AudioChannels]</value>
 		<value condition="[String.Contains(ListItem.FileName,-dts-x-) | String.Contains(ListItem.FileName,-dts-x.) | String.Contains(ListItem.FileName,-dts-x_) | String.Contains(ListItem.FileName,-dtsx-) | String.Contains(ListItem.FileName,-dtsx.) | String.Contains(ListItem.FileName,-dtsx_) | String.Contains(ListItem.FileName,.dts-x.) | String.Contains(ListItem.FileName,.dts-x_) | String.Contains(ListItem.FileName,.dts-x-) | String.Contains(ListItem.FileName,.dtsx.) | String.Contains(ListItem.FileName,.dtsx_) | String.Contains(ListItem.FileName,.dtsx-) | String.Contains(ListItem.FileName,_dts-x_) | String.Contains(ListItem.FileName,_dts-x-) | String.Contains(ListItem.FileName,_dts-x.) | String.Contains(ListItem.FileName,_dtsx_) | String.Contains(ListItem.FileName,_dtsx-) | String.Contains(ListItem.FileName,_dtsx.)] + String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS:X &#8226; DTS-HD HRA $VAR[AudioChannels]</value>
 		<value condition="[String.Contains(ListItem.FileName,-auro-3d-) | String.Contains(ListItem.FileName,-auro-3d.) | String.Contains(ListItem.FileName,-auro-3d_) | String.Contains(ListItem.FileName,.auro-3d-) | String.Contains(ListItem.FileName,.auro-3d.) | String.Contains(ListItem.FileName,.auro-3d_) | String.Contains(ListItem.FileName,_auro-3d-) | String.Contains(ListItem.FileName,_auro-3d.) | String.Contains(ListItem.FileName,_auro-3d_) | String.Contains(ListItem.FileName,-auro3d-) | String.Contains(ListItem.FileName,-auro3d.) | String.Contains(ListItem.FileName,-auro3d_) | String.Contains(ListItem.FileName,.auro3d-) | String.Contains(ListItem.FileName,.auro3d.) | String.Contains(ListItem.FileName,.auro3d_) | String.Contains(ListItem.FileName,_auro3d-) | String.Contains(ListItem.FileName,_auro3d.) | String.Contains(ListItem.FileName,_auro3d_)] + [String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma)]">AURO-3D &#8226; DTS-HD MA $VAR[AudioChannels]</value>
 		<value condition="[String.Contains(ListItem.FileName,-auro-3d-) | String.Contains(ListItem.FileName,-auro-3d.) | String.Contains(ListItem.FileName,-auro-3d_) | String.Contains(ListItem.FileName,.auro-3d-) | String.Contains(ListItem.FileName,.auro-3d.) | String.Contains(ListItem.FileName,.auro-3d_) | String.Contains(ListItem.FileName,_auro-3d-) | String.Contains(ListItem.FileName,_auro-3d.) | String.Contains(ListItem.FileName,_auro-3d_) | String.Contains(ListItem.FileName,-auro3d-) | String.Contains(ListItem.FileName,-auro3d.) | String.Contains(ListItem.FileName,-auro3d_) | String.Contains(ListItem.FileName,.auro3d-) | String.Contains(ListItem.FileName,.auro3d.) | String.Contains(ListItem.FileName,.auro3d_) | String.Contains(ListItem.FileName,_auro3d-) | String.Contains(ListItem.FileName,_auro3d.) | String.Contains(ListItem.FileName,_auro3d_)] + [Integer.IsEqual(ListItem.AudioChannels,6) | Integer.IsEqual(ListItem.AudioChannels,8)]">AURO-3D &#8226; PCM $VAR[AudioChannels]</value>
@@ -573,174 +575,42 @@
 
 	<!-- Audio Codec labels -->
 	<variable name="AudioCodec">
-		<value condition="String.IsEqual(ListItem.AudioCodec,aac) | String.IsEqual(ListItem.AudioCodec,aac_latm)">AAC</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,aif) | String.IsEqual(ListItem.AudioCodec,aiff)">AIFF</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,alac)">Apple</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,dca) | String.IsEqual(ListItem.AudioCodec,dts)">DTS</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">Dolby Digital</value>
-		<value condition="String.StartsWith(ListItem.AudioCodec,dsd)">DSD</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,mp3float)">MP3</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,opus)">Opus</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,pcm) | String.IsEqual(ListItem.AudioCodec,pcm_bluray) | String.IsEqual(ListItem.AudioCodec,pcm_s16le) | String.IsEqual(ListItem.AudioCodec,pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,wavpack)">WAVP</value>
-		<value condition="String.IsEqual(ListItem.AudioCodec,wma) | String.IsEqual(ListItem.AudioCodec,wmapro) | String.IsEqual(ListItem.AudioCodec,wmav2)">WMA</value>
-		<value>$INFO[ListItem.AudioCodec,[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,ListItem.AudioCodec]</value>
 	</variable>
 
 	<variable name="MusicPlayerCodec">
-		<value condition="String.IsEqual(MusicPlayer.Codec,aac) | String.IsEqual(MusicPlayer.Codec,aac_latm)">AAC</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,aif) | String.IsEqual(MusicPlayer.Codec,aiff)">AIFF</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,alac)">Apple</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,dca) | String.IsEqual(MusicPlayer.Codec,dts)">DTS</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,dolbydigital)">Dolby Digital</value>
 		<value condition="String.StartsWith(MusicPlayer.Codec,dsd) + String.IsEqual(MusicPlayer.SampleRate,352.8)">DSD 64 (2.8MHz)</value>
 		<value condition="String.StartsWith(MusicPlayer.Codec,dsd) + String.IsEqual(MusicPlayer.SampleRate,705.6)">DSD 128 (5.6MHz)</value>
 		<value condition="String.StartsWith(MusicPlayer.Codec,dsd) + String.IsEqual(MusicPlayer.SampleRate,1411.2)">DSD 256 (11.2MHz)</value>
 		<value condition="String.StartsWith(MusicPlayer.Codec,dsd) + String.IsEqual(MusicPlayer.SampleRate,2822.4)">DSD 512 (22.6MHz)</value>
 		<value condition="String.StartsWith(MusicPlayer.Codec,dsd) + String.IsEqual(MusicPlayer.SampleRate,5644.8)">DSD 1024 (45.2MHz)</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,dsd_lsbf_planar)">DSD</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,dtshd_ma) | String.IsEqual(MusicPlayer.Codec,dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,mp3float)">MP3</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,opus)">Opus</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,pcm) | String.IsEqual(MusicPlayer.Codec,pcm_bluray) | String.IsEqual(MusicPlayer.Codec,pcm_s16le) | String.IsEqual(MusicPlayer.Codec,pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,wavpack)">WAVP</value>
-		<value condition="String.IsEqual(MusicPlayer.Codec,wma) | String.IsEqual(MusicPlayer.Codec,wmapro) | String.IsEqual(MusicPlayer.Codec,wmav2)">WMA</value>
-		<value>$INFO[MusicPlayer.Codec,[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,MusicPlayer.Codec]</value>
 	</variable>
-	
+
 	<variable name="VideoPlayerAudioCodec">
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aac) | String.IsEqual(VideoPlayer.AudioCodec,aac_latm)">AAC</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,aif) | String.IsEqual(VideoPlayer.AudioCodec,aiff)">AIFF</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,alac)">Apple</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts)">DTS</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dolbydigital)">Dolby Digital</value>
-		<value condition="String.StartsWith(VideoPlayer.AudioCodec,dsd)">DSD</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma) | String.IsEqual(VideoPlayer.AudioCodec,dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,mp3float)">MP3</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,opus)">Opus</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm) | String.IsEqual(VideoPlayer.AudioCodec,pcm_bluray) | String.IsEqual(VideoPlayer.AudioCodec,pcm_s16le) | String.IsEqual(VideoPlayer.AudioCodec,pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,wavpack)">WAVP</value>
-		<value condition="String.IsEqual(VideoPlayer.AudioCodec,wma) | String.IsEqual(VideoPlayer.AudioCodec,wmapro) | String.IsEqual(VideoPlayer.AudioCodec,wmav2)">WMA</value>
-		<value>$INFO[VideoPlayer.AudioCodec,[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,VideoPlayer.AudioCodec]</value>
 	</variable>
-	
+
 	<variable name="AudioCodec.1">
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),aac) | String.IsEqual(ListItem.Property(AudioCodec.1),aac_latm)">AAC</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),aif) | String.IsEqual(ListItem.Property(AudioCodec.1),aiff)">AIFF</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),alac)">Apple</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),dca) | String.IsEqual(ListItem.Property(AudioCodec.1),dts)">DTS</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),dolbydigital)">Dolby Digital</value>
-		<value condition="String.StartsWith(ListItem.Property(AudioCodec.1),dsd)">DSD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),dtshd_ma) | String.IsEqual(ListItem.Property(AudioCodec.1),dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),mp3float)">MP3</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),opus)">Opus</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),pcm) | String.IsEqual(ListItem.Property(AudioCodec.1),pcm_bluray) | String.IsEqual(ListItem.Property(AudioCodec.1),pcm_s16le) | String.IsEqual(ListItem.Property(AudioCodec.1),pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),wavpack)">WAVP</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.1),wma) | String.IsEqual(ListItem.Property(AudioCodec.1),wmapro) | String.IsEqual(ListItem.Property(AudioCodec.1),wmav2)">WMA</value>
-		<value>$INFO[ListItem.Property(AudioCodec.1),[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,ListItem.Property(AudioCodec.1)]</value>
 	</variable>
-	
+
 	<variable name="AudioCodec.2">
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),aac) | String.IsEqual(ListItem.Property(AudioCodec.2),aac_latm)">AAC</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),aif) | String.IsEqual(ListItem.Property(AudioCodec.2),aiff)">AIFF</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),alac)">Apple</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),dca) | String.IsEqual(ListItem.Property(AudioCodec.2),dts)">DTS</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),dolbydigital)">Dolby Digital</value>
-		<value condition="String.StartsWith(ListItem.Property(AudioCodec.2),dsd)">DSD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),dtshd_ma) | String.IsEqual(ListItem.Property(AudioCodec.2),dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),mp3float)">MP3</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),opus)">Opus</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),pcm) | String.IsEqual(ListItem.Property(AudioCodec.2),pcm_bluray) | String.IsEqual(ListItem.Property(AudioCodec.2),pcm_s16le) | String.IsEqual(ListItem.Property(AudioCodec.2),pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),wavpack)">WAVP</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.2),wma) | String.IsEqual(ListItem.Property(AudioCodec.2),wmapro) | String.IsEqual(ListItem.Property(AudioCodec.2),wmav2)">WMA</value>
-		<value>$INFO[ListItem.Property(AudioCodec.2),[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,ListItem.Property(AudioCodec.2)]</value>
 	</variable>
-	
+
 	<variable name="AudioCodec.3">
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),aac) | String.IsEqual(ListItem.Property(AudioCodec.3),aac_latm)">AAC</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),aif) | String.IsEqual(ListItem.Property(AudioCodec.3),aiff)">AIFF</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),alac)">Apple</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),dca) | String.IsEqual(ListItem.Property(AudioCodec.3),dts)">DTS</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),dolbydigital)">Dolby Digital</value>
-		<value condition="String.StartsWith(ListItem.Property(AudioCodec.3),dsd)">DSD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),dtshd_ma) | String.IsEqual(ListItem.Property(AudioCodec.3),dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),mp3float)">MP3</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),opus)">Opus</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),pcm) | String.IsEqual(ListItem.Property(AudioCodec.3),pcm_bluray) | String.IsEqual(ListItem.Property(AudioCodec.3),pcm_s16le) | String.IsEqual(ListItem.Property(AudioCodec.3),pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),wavpack)">WAVP</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.3),wma) | String.IsEqual(ListItem.Property(AudioCodec.3),wmapro) | String.IsEqual(ListItem.Property(AudioCodec.3),wmav2)">WMA</value>
-		<value>$INFO[ListItem.Property(AudioCodec.3),[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,ListItem.Property(AudioCodec.3)]</value>
 	</variable>
-	
+
 	<variable name="AudioCodec.4">
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),aac) | String.IsEqual(ListItem.Property(AudioCodec.4),aac_latm)">AAC</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),ac3)">Dolby Digital</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),aif) | String.IsEqual(ListItem.Property(AudioCodec.4),aiff)">AIFF</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),alac)">Apple</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),cdda)">Audio-CD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),dca) | String.IsEqual(ListItem.Property(AudioCodec.4),dts)">DTS</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),dolbydigital)">Dolby Digital</value>
-		<value condition="String.StartsWith(ListItem.Property(AudioCodec.4),dsd)">DSD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),dtshd_hra)">DTS-HD HRA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),dtshd_ma) | String.IsEqual(ListItem.Property(AudioCodec.4),dtsma)">DTS-HD MA</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),eac3)">Dolby Digital+</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),mp3float)">MP3</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),opus)">Opus</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),pcm) | String.IsEqual(ListItem.Property(AudioCodec.4),pcm_bluray) | String.IsEqual(ListItem.Property(AudioCodec.4),pcm_s16le) | String.IsEqual(ListItem.Property(AudioCodec.4),pcm_s24le)">PCM</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),truehd)">Dolby TrueHD</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),vorbis)">Vorbis</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),wavpack)">WAVP</value>
-		<value condition="String.IsEqual(ListItem.Property(AudioCodec.4),wma) | String.IsEqual(ListItem.Property(AudioCodec.4),wmapro) | String.IsEqual(ListItem.Property(AudioCodec.4),wmav2)">WMA</value>
-		<value>$INFO[ListItem.Property(AudioCodec.4),[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[AudioCodecMap,ListItem.Property(AudioCodec.4)]</value>
 	</variable>
 
 	<!-- Audio Channel labels -->
 	<variable name="AudioChannels">
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,1)">1.0</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,2)">2.0</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,6)">5.1</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,7)">6.1</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,15) | Integer.IsGreater(ListItem.AudioChannels,16)">($INFO[ListItem.AudioChannels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.AudioChannels,0)">$MAP[AudioChannelsMap,ListItem.AudioChannels]</value>
 	</variable>
 
 	<variable name="AudioChannelsSimple">
@@ -750,80 +620,38 @@
 	</variable>
 	
 	<variable name="MusicChannels">
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,1)">1.0</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,2)">2.0</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,6)">5.1</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,7)">6.1</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,15) | Integer.IsGreater(ListItem.MusicChannels,16)">($INFO[ListItem.MusicChannels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.MusicChannels,0)">$MAP[AudioChannelsMap,ListItem.MusicChannels]</value>
 	</variable>
 
 	<variable name="MusicPlayerChannels">
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,1)">1.0</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,2)">2.0</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,6)">5.1</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,7)">6.1</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,8)">7.1</value>
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,10)">9.1</value>
+		<value condition="Integer.IsEqual(MusicPlayer.Channels,15) | Integer.IsGreater(MusicPlayer.Channels,16)">($INFO[MusicPlayer.Channels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(MusicPlayer.Channels,0)">$MAP[AudioChannelsMap,MusicPlayer.Channels]</value>
 	</variable>
 	
 	<variable name="VideoPlayerAudioChannels">
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,1)">1.0</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,2)">2.0</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,6)">5.1</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,7)">6.1</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,8)">7.1</value>
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,10)">9.1</value>
+		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,15) | Integer.IsGreater(VideoPlayer.AudioChannels,16)">($INFO[VideoPlayer.AudioChannels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(VideoPlayer.AudioChannels,0)">$MAP[AudioChannelsMap,VideoPlayer.AudioChannels]</value>
 	</variable>
 	
 	<variable name="AudioChannels.1">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),1)">1.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),2)">2.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),6)">5.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),7)">6.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),15) | Integer.IsGreater(ListItem.Property(AudioChannels.1),16)">($INFO[ListItem.Property(AudioChannels.1)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.1),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.1)]</value>
 	</variable>
 	
 	<variable name="AudioChannels.2">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),1)">1.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),2)">2.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),6)">5.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),7)">6.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),15) | Integer.IsGreater(ListItem.Property(AudioChannels.2),16)">($INFO[ListItem.Property(AudioChannels.2)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.2),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.2)]</value>
 	</variable>
 	
 	<variable name="AudioChannels.3">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),1)">1.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),2)">2.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),6)">5.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),7)">6.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),15) | Integer.IsGreater(ListItem.Property(AudioChannels.3),16)">($INFO[ListItem.Property(AudioChannels.3)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.3),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.3)]</value>
 	</variable>
 	
 	<variable name="AudioChannels.4">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),1)">1.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),2)">2.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),4)">3.1/4.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),5)">4.1/5.0</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),6)">5.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),7)">6.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),8)">7.1</value>
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),10)">9.1</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),15) | Integer.IsGreater(ListItem.Property(AudioChannels.4),16)">($INFO[ListItem.Property(AudioChannels.4)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.4),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.4)]</value>
 	</variable>
 
 	<!-- Audio/Video Duration -->
@@ -840,14 +668,24 @@
 		<value condition="Integer.IsEqual(ListItem.Duration(h),0) + Integer.IsLess(ListItem.Duration(m),1)">$INFO[ListItem.Duration(secs),, sec]</value>
 	</variable>
 	
+	<!-- Audio stream label -->
+	<variable name="VideoPlayerAudioLanguage">
+		<value condition="!String.IsEmpty(VideoPlayer.AudioName)">$INFO[VideoPlayer.AudioName, (,)]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.AudioLanguageEx)">$INFO[VideoPlayer.AudioLanguageEx, (,)]</value>
+		<value>$INFO[VideoPlayer.AudioLanguage, [CAPITALIZE](,)[/CAPITALIZE]]</value>
+	</variable>
+
 	<!-- Subtitle language labels -->
 	<variable name="SubtitleLanguage">
 		<value condition="!VideoPlayer.SubtitlesEnabled">   [LIGHT]$LOCALIZE[24012]:[/LIGHT] $LOCALIZE[1223]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.SubtitleLanguageEx)">$INFO[VideoPlayer.SubtitleLanguageEx,   [LIGHT]$LOCALIZE[24012]:[/LIGHT] ,]</value>
 		<value>$INFO[VideoPlayer.SubtitlesLanguage,   [LIGHT]$LOCALIZE[24012]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</value>
 	</variable>
-	
+
 	<variable name="SubtitleLanguageOSD">
 		<value condition="!VideoPlayer.SubtitlesEnabled">$LOCALIZE[1223]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.SubtitleName)">$INFO[VideoPlayer.SubtitleName]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.SubtitleLanguageEx)">$INFO[VideoPlayer.SubtitleLanguageEx]</value>
 		<value condition="String.IsEmpty(VideoPlayer.SubtitlesLanguage)">Unk</value>
 		<value>$INFO[VideoPlayer.SubtitlesLanguage,[CAPITALIZE],[/CAPITALIZE]]</value>
 	</variable>
@@ -871,24 +709,12 @@
 	
 	<!-- Video Codec labels -->
 	<variable name="VideoCodec">
-		<value condition="String.IsEqual(ListItem.VideoCodec,avc1) | String.IsEqual(ListItem.VideoCodec,h264)">H.264</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,bluray) | String.IsEqual(ListItem.VideoCodec,hdmv)">Blu-ray</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,div2) | String.IsEqual(ListItem.VideoCodec,div3) | String.IsEqual(ListItem.VideoCodec,divx) | String.IsEqual(ListItem.VideoCodec,divx 4) | String.IsEqual(ListItem.VideoCodec,dx50)">DivX</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,hddvd)">HD-DVD</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,hev1) | String.IsEqual(ListItem.VideoCodec,hevc) | String.IsEqual(ListItem.VideoCodec,hvc1)">H.265</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,microsoft) | String.IsEqual(ListItem.VideoCodec,mp42) | String.IsEqual(ListItem.VideoCodec,mp43) | String.IsEqual(ListItem.VideoCodec,mp4v) | String.IsEqual(ListItem.VideoCodec,mpg4) | String.IsEqual(ListItem.VideoCodec,mpeg4)">MPEG-4</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,mpeg1) | String.IsEqual(ListItem.VideoCodec,mpeg1video)">MPEG-1</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,mpeg2) | String.IsEqual(ListItem.VideoCodec,mpeg2video)">MPEG-2</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,theora)">Theora</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,wvc1)">VC-1</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,wmv) | String.IsEqual(ListItem.VideoCodec,wmv2) | String.IsEqual(ListItem.VideoCodec,wmv3)">WMV</value>
-		<value condition="String.IsEqual(ListItem.VideoCodec,xvid)">XviD</value>
-		<value>$INFO[ListItem.VideoCodec,[UPPERCASE],[/UPPERCASE]]</value>
+		<value>$MAP[VideoCodecMap,ListItem.VideoCodec]</value>
 	</variable>
 	
 	<!-- HDR type labels -->
 	<variable name="HDRType">
-		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV</value>
+		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV$INFO[ListItem.HdrDetail, (P,)]</value>
 		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 

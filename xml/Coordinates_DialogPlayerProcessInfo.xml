@@ -11,25 +11,25 @@
 		<left>150</left>
 		<top>75</top>
 		<width>1620</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords1_21:9">
 		<left>150</left>
 		<top>75</top>
 		<width>2260</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords1_21:9_masked">
 		<left>150</left>
 		<top>255</top>
 		<width>2260</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords1_4:3">
 		<left>150</left>
 		<top>75</top>
 		<width>1140</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords2">
@@ -40,19 +40,19 @@
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_16:9">
 		<width>1620</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_21:9">
 		<width>2260</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_21:9_masked">
 		<width>2260</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_4:3">
 		<width>1140</width>
-		<height>234</height>
+		<height>304</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords3">
@@ -140,25 +140,25 @@
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_16:9">
 		<left>150</left>
-		<top>324</top>
+		<top>394</top>
 		<width>1620</width>
 		<height>40</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_21:9">
 		<left>150</left>
-		<top>324</top>
+		<top>394</top>
 		<width>2260</width>
 		<height>40</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_21:9_masked">
 		<left>150</left>
-		<top>504</top>
+		<top>574</top>
 		<width>2260</width>
 		<height>40</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_4:3">
 		<left>150</left>
-		<top>324</top>
+		<top>394</top>
 		<width>1140</width>
 		<height>40</height>
 	</include>

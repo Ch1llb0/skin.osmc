@@ -75,15 +75,36 @@
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(VideoDecoder),[LIGHT]$LOCALIZE[38031]:[/LIGHT] [UPPERCASE],[/UPPERCASE]][LIGHT] ($INFO[Player.Process(videowidth)]$INFO[Player.Process(videoheight),x,]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videodar),$COMMA ,:1]$INFO[Player.Process(videofps),$COMMA , fps])[/LIGHT]</label>
+						<label>$INFO[Player.Process(VideoDecoder),[LIGHT]$LOCALIZE[38031]:[/LIGHT] [UPPERCASE],[/UPPERCASE]][LIGHT] ($INFO[Player.Process(videowidth)]$INFO[Player.Process(videoheight),x,]$INFO[Player.Process(videoscantype)]$INFO[Player.Process(videodar),$COMMA ,:1]$INFO[Player.Process(videofps),$COMMA , fps]$INFO[Player.Process(videolivebitrate),$COMMA ,])[/LIGHT]</label>
 						<font>Font25</font>
 						<visible>Player.HasVideo</visible>					
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>
 						<aligny>bottom</aligny>
-						<label>$INFO[Player.Process(audiodecoder),[LIGHT]$LOCALIZE[460]:[/LIGHT] [UPPERCASE],[/UPPERCASE]][LIGHT] ($INFO[Player.Process(audiochannels),,]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz])[/LIGHT]</label>
+						<label>$INFO[Player.Process(audiodecoder),[LIGHT]$LOCALIZE[460]:[/LIGHT] [UPPERCASE],[/UPPERCASE]][LIGHT] ($INFO[Player.Process(audiochannels),,]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]$INFO[Player.Process(audiolivebitrate),$COMMA ,])[/LIGHT]</label>
 						<font>Font25</font>
+					</control>
+					<control type="label">
+						<include>DialogPlayerProcessInfo_coords5</include>
+						<aligny>bottom</aligny>
+						<label>$INFO[Player.Process(subtitledecoder),[LIGHT]$LOCALIZE[24012]:[/LIGHT] [UPPERCASE],[/UPPERCASE]]</label>
+						<font>Font25</font>
+						<visible>!String.IsEmpty(Player.Process(subtitledecoder))</visible>
+					</control>
+					<control type="label">
+						<include>DialogPlayerProcessInfo_coords5</include>
+						<aligny>bottom</aligny>
+						<label>[LIGHT]$LOCALIZE[31445]:[/LIGHT] $LOCALIZE[291] $INFO[Player.Process(videoqueuelevel),,%]$INFO[Player.Process(videoqueuedatalevel), (,%)]  $LOCALIZE[292] $INFO[Player.Process(audioqueuelevel),,%]$INFO[Player.Process(audioqueuedatalevel), (,%)]</label>
+						<font>Font25</font>
+						<visible>Player.HasVideo</visible>
+					</control>
+					<control type="label">
+						<include>DialogPlayerProcessInfo_coords5</include>
+						<aligny>bottom</aligny>
+						<label>[LIGHT]$LOCALIZE[31445]:[/LIGHT] $INFO[Player.Process(audioqueuelevel),,%]$INFO[Player.Process(audioqueuedatalevel), (,%)]</label>
+						<font>Font25</font>
+						<visible>!Player.HasVideo</visible>
 					</control>
 					<control type="label">
 						<include>DialogPlayerProcessInfo_coords5</include>

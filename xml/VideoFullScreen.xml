@@ -209,19 +209,19 @@
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords15</include>
 						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-						<visible>Pvr.IsPlayingTv + VideoPlayer.HasEpg | !Pvr.IsPlayingTv + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>Pvr.IsPlayingTv + VideoPlayer.HasEpg | !Pvr.IsPlayingTv + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords16</include>
 						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-						<visible>!Pvr.IsPlayingTv + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
+						<visible>!Pvr.IsPlayingTv + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords17</include>
 						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-						<visible>!Pvr.IsPlayingTv + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
+						<visible>!Pvr.IsPlayingTv + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 
@@ -231,7 +231,7 @@
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-						<visible>!Pvr.IsPlayingTv + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>!Pvr.IsPlayingTv + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="label" id="1">
@@ -240,7 +240,7 @@
 						<align>center</align>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[Player.Time]</label>
-						<visible>!Pvr.IsPlayingTv + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
+						<visible>!Pvr.IsPlayingTv + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -263,7 +263,7 @@
 						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
-						<visible>!Pvr.IsPlayingTv + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>!Pvr.IsPlayingTv + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -289,7 +289,7 @@
 						<midtexture colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
-						<visible>!Pvr.IsTimeShift + Pvr.IsPlayingTv + VideoPlayer.HasEpg | Integer.IsGreater(Player.Duration,0) + !Pvr.IsPlayingTv</visible>
+						<visible>!Pvr.IsTimeShift + Pvr.IsPlayingTv + VideoPlayer.HasEpg | Integer.IsGreater(Player.Duration,0) + !Player.IsLive + !Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -357,7 +357,7 @@
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[System.Time,$LOCALIZE[555]: ,]$INFO[Player.FinishTime, / $LOCALIZE[19081]: ,]</label>
-						<visible>!Pvr.IsPlayingTv + Integer.IsGreater(Player.Duration,0)</visible>
+						<visible>!Pvr.IsPlayingTv + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="label" id="1">
@@ -366,7 +366,7 @@
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[System.Time,$LOCALIZE[555]: ,]</label>
-						<visible>!Pvr.IsPlayingTv + !Integer.IsGreater(Player.Duration,0) | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
+						<visible>!Pvr.IsPlayingTv + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					
@@ -495,7 +495,7 @@
 						
 						<!-- Genre -->
 						<control type="fadelabel" id="1">
-							<label>$INFO[VideoPlayer.Genre,[LIGHT],[/LIGHT]]</label>
+							<label>$INFO[VideoPlayer.Genre(comma),[LIGHT],[/LIGHT]]</label>
 							<visible>!String.IsEmpty(VideoPlayer.Genre)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -509,7 +509,7 @@
 					<include>VideoFullScreen_coords35</include>
 					<font>Font27</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>[LIGHT]$LOCALIZE[292]:[/LIGHT] $VAR[VideoPlayerAudioCodec,, ]$VAR[VideoPlayerAudioChannels]$INFO[VideoPlayer.AudioLanguage, [CAPITALIZE](,)[/CAPITALIZE]]$VAR[SubtitleLanguage]</label>
+					<label>[LIGHT]$LOCALIZE[292]:[/LIGHT] $VAR[VideoPlayerAudioCodec,, ]$VAR[VideoPlayerAudioChannels]$VAR[VideoPlayerAudioLanguage]$VAR[SubtitleLanguage]</label>
 					<visible>!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>

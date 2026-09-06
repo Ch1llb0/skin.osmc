@@ -81,7 +81,7 @@
 				<include>DialogVideoInfo_coords2</include>
 				<font>Font27</font>
 				<align>center</align>
-				<label>$INFO[ListItem.Director]</label>
+				<label>$INFO[ListItem.Director(comma)]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<visible>Control.HasFocus(13) + [!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) | !String.IsEmpty(Window(12003).Property(cast))]</visible>
 				<include>VisibleFadeAnimation</include>
@@ -215,7 +215,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Director]</label>
+							<label>$INFO[ListItem.Director(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -234,7 +234,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Writer]</label>
+							<label>$INFO[ListItem.Writer(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -319,7 +319,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
@@ -506,7 +506,7 @@
 						<control type="fadelabel">
 							<include>DialogVideoInfo_coords7</include>
 							<font>Font36</font>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>

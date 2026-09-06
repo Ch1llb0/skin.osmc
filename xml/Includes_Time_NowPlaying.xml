@@ -279,7 +279,7 @@
 							<aligny>top</aligny>
 							<align>right</align>
 							<label>$INFO[Player.Time]$INFO[Player.Duration, / ,] ($INFO[System.Time,[LIGHT]$LOCALIZE[555]: ,[/LIGHT]]$INFO[Player.FinishTime,[LIGHT] / $LOCALIZE[19081]: [/LIGHT]])</label>
-							<visible>!Player.HasGame + [!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio | [Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + !VideoPlayer.HasEpg] + Integer.IsGreater(Player.Duration,0)</visible>
+							<visible>!Player.HasGame + [!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio | [Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + !VideoPlayer.HasEpg] + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						</control>
 						
 						<control type="label">
@@ -287,7 +287,7 @@
 							<aligny>top</aligny>
 							<align>right</align>
 							<label>$INFO[Player.Time] ($INFO[System.Time,[LIGHT]$LOCALIZE[555]: ,[/LIGHT]])</label>
-							<visible>!Player.HasGame + [!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio | [Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + !VideoPlayer.HasEpg] + !Integer.IsGreater(Player.Duration,0)</visible>
+							<visible>!Player.HasGame + [!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio | [Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + !VideoPlayer.HasEpg] + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive]</visible>
 						</control>
 						
 						<!-- Now Playing - Progress PVR -->
