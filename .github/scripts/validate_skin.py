@@ -13,12 +13,13 @@ land while one is outstanding:
   1. include/variable/expression names referenced but never defined
   2. names defined more than once in the same file
   3. every .xml/.xsp parses
+  4. a widget's declared sort matching what its source actually sorts by
 
 Advisory checks — real findings, but the fix belongs in Weblate rather than in a
 commit, so they are reported and never fail the build:
 
-  4. .po: locale msgid differing from en_gb, and ids missing from a locale
-  5. .po: Kodi markup tokens ([B], [CR], [COLOR]...) unbalanced between msgid/msgstr
+  5. .po: locale msgid differing from en_gb, and ids missing from a locale
+  6. .po: Kodi markup tokens ([B], [CR], [COLOR]...) unbalanced between msgid/msgstr
 
 Translations arrive from translate.osmc.tv and a commit that edits them by hand
 is overwritten on the next sync, so failing a build on them would only train
@@ -49,6 +50,15 @@ INCLUDE_TEXT_RE = re.compile(r"<include(?:\s+condition=\"[^\"]*\")?\s*>([^<$][^<
 INCLUDE_CONTENT_RE = re.compile(r"<include[^>]*\scontent=\"([^\"]+)\"")
 VAR_RE = re.compile(r"\$VAR\[([^\],]+)")
 EXP_RE = re.compile(r"\$EXP\[([^\]]+)")
+
+WIDGET_RE = re.compile(r"<widget name=\"([^\"]+)\"(.*?)</widget>", re.S)
+ITEM_RE = re.compile(r"<item name=\"([^\"]+)\"([^>]*)>(.*?)</item>", re.S)
+PATH_RE = re.compile(r"<path>([^<]*)</path>")
+SORTBY_RE = re.compile(r"<sortby>([^<]*)</sortby>")
+SORTORDER_RE = re.compile(r"<sortorder>([^<]*)</sortorder>")
+SEED_SORTBY_RE = re.compile(r"name=\"widgetSortBy\">([^<]*)<")
+SEED_SORTORDER_RE = re.compile(r"name=\"widgetSortOrder\">([^<]*)<")
+PLAYLIST_RE = re.compile(r"special://skin/(\S+\.xsp)$")
 
 PO_CTXT_RE = re.compile(r'^msgctxt\s+"#(\d+)"', re.M)
 MARKUP_RE = re.compile(r"\[/?(?:B|I|CR|UPPERCASE|LOWERCASE|CAPITALIZE|COLOR[^\]]*|LIGHT)\]")
@@ -125,6 +135,85 @@ def check_references(root):
         for rel, name, first, second in duplicates
     ]
     return dangling, dupes
+
+
+def playlist_order(root, path):
+    """The <order> a bundled smart playlist sorts itself by, if it is one of ours."""
+    match = PLAYLIST_RE.match(path.strip())
+    if not match:
+        return None
+    full = os.path.join(root, *match.group(1).split("/"))
+    if not os.path.exists(full):
+        return None
+    try:
+        order = ET.parse(full).getroot().find("order")
+    except ET.ParseError:
+        return None
+    if order is None or not order.text:
+        return None
+    return (order.text.strip(), order.get("direction") or "ascending")
+
+
+def check_widget_sorts(root):
+    """A widget's sort has to say the same thing everywhere it is written down.
+
+    It is written down up to three times: the bundled playlist's own <order>, the
+    widget definition the picker copies onto an item, and the menu seed. The add-on
+    re-derives a widget's path, type and target on every build but never its sort,
+    so nothing keeps the three in step. A disagreement is invisible from the skin --
+    the widget still fills -- but the row sorts one way while the management dialog
+    says another, and a seed that omits what its definition declares leaves the
+    dialog blank for the seeded copy of a widget a picked copy would populate.
+    """
+    problems = []
+    widgets_path = os.path.join(root, "shortcuts", "widgets.xml")
+    if not os.path.exists(widgets_path):
+        return problems
+
+    with open(widgets_path, encoding="utf-8") as handle:
+        text = handle.read()
+
+    declared = {}
+    for name, body in WIDGET_RE.findall(text):
+        sortby = SORTBY_RE.search(body)
+        sortorder = SORTORDER_RE.search(body)
+        if bool(sortby) != bool(sortorder):
+            problems.append("shortcuts/widgets.xml: %s declares a sort %s"
+                            % (name, "field with no direction" if sortby
+                               else "direction with no field"))
+            continue
+        declared[name] = (sortby.group(1), sortorder.group(1)) if sortby else None
+
+        path = PATH_RE.search(body)
+        own = playlist_order(root, path.group(1)) if path else None
+        if own and declared[name] and declared[name] != own:
+            problems.append(
+                "shortcuts/widgets.xml: %s declares %s/%s but %s orders by %s/%s"
+                % (name, declared[name][0], declared[name][1],
+                   os.path.basename(path.group(1)), own[0], own[1]))
+
+    menus_path = os.path.join(root, "shortcuts", "menus.xml")
+    if not os.path.exists(menus_path):
+        return problems
+    with open(menus_path, encoding="utf-8") as handle:
+        text = handle.read()
+
+    for name, attrs, body in ITEM_RE.findall(text):
+        widget = re.search(r'widget="([^"]+)"', attrs)
+        if not widget or widget.group(1) not in declared:
+            continue
+        sortby = SEED_SORTBY_RE.search(body)
+        sortorder = SEED_SORTORDER_RE.search(body)
+        seeded = (sortby.group(1), sortorder.group(1)) if sortby and sortorder else None
+        wanted = declared[widget.group(1)]
+        if seeded != wanted:
+            problems.append(
+                "shortcuts/menus.xml: %s seeds %s but the %s definition declares %s"
+                % (name,
+                   "%s/%s" % seeded if seeded else "no sort",
+                   widget.group(1),
+                   "%s/%s" % wanted if wanted else "none"))
+    return problems
 
 
 def parse_po(path):
@@ -212,6 +301,7 @@ def main(argv):
         ("Malformed XML", check_parse(root)),
         ("References to names that are never defined", dangling),
         ("Names defined twice in one file", dupes),
+        ("Widget sorts that disagree with their source", check_widget_sorts(root)),
     ]
 
     stale, markup = check_translations(root)

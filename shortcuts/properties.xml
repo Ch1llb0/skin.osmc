@@ -77,11 +77,12 @@
 			<option value="album" label="$LOCALIZE[558]" condition="widgetType=musicvideos | albums | songs" />
 			<option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType=songs" />
 			<option value="channelnumber" label="$LOCALIZE[19029]" condition="widgetType=tv | radio" />
-			<option value="year" label="$LOCALIZE[345]" condition="widgetType=movies | tvshows | musicvideos | albums" />
+			<option value="year" label="$LOCALIZE[345]" condition="widgetType=movies | tvshows | musicvideos | albums | songs" />
 			<option value="dateadded" label="$LOCALIZE[570]" condition="![widgetType=tv | radio]" />
 			<option value="random" label="$LOCALIZE[590]" />
+			<option value="top250" label="$LOCALIZE[13409]" condition="widgetType=movies" />
 			<option value="genre" label="$LOCALIZE[515]" condition="widgetType=movies | tvshows | musicvideos | albums | songs" />
-			<option value="playcount" label="$LOCALIZE[567]" condition="widgetType=movies | tvshows | musicvideos | episodes" />
+			<option value="playcount" label="$LOCALIZE[567]" condition="widgetType=movies | tvshows | musicvideos | episodes | albums | songs" />
 			<option value="studio" label="$LOCALIZE[572]" condition="widgetType=movies | tvshows" />
 			<option value="country" label="$LOCALIZE[574]" condition="widgetType=movies" />
 			<option value="rating" label="$LOCALIZE[563]" condition="widgetType=movies | tvshows | episodes" />
@@ -109,11 +110,21 @@
 		<button id="504" property="widgetLimit" title="$LOCALIZE[31177]" />
 	</buttons>
 
+	<!-- layout and widgetArt are the skin's own, so a widget definition has nowhere to carry
+	     them and the picker never writes them: every widget but the eleven the menu seeds took
+	     whatever the default here was. Keying the default on the widget's type gives a picked
+	     widget the same shape as the seeded one it duplicates, and leaves the seeds nothing to
+	     spell out. A value the user has set still wins; these only fill what is absent. -->
 	<fallbacks>
 		<fallback property="layout">
+			<when condition="widgetType=episodes | musicvideos">wide</when>
+			<when condition="widgetType=tv | radio">square</when>
+			<when condition="widgetType=albums | artists | songs | music | games | programs | addons | files | pictures | favourite | osmc">square-small</when>
+			<when condition="widgetSource=addon">square-small</when>
 			<default>tall</default>
 		</fallback>
 		<fallback property="widgetArt">
+			<when condition="widgetType=movies | tvshows | sets">Art(poster)</when>
 			<default>Icon</default>
 		</fallback>
 		<fallback property="widgetFallbackArt">

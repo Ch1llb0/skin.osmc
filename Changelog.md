@@ -30,6 +30,9 @@ _Improved_
 - disable the delete and hide buttons on menu items that cannot be removed, and the restore button while nothing has been deleted
 - give every group in the shortcut and widget pickers its own icon
 - name the reset button in the skin settings for everything it clears, which is every menu and every view selection
+- carry the sort of every pre-configured widget into the widget management dialog, so it shows what the widget already does and a change starts from the truth
+- sort the unwatched music videos widget by title, as the other unwatched widgets are, rather than at random
+- drop the fifty item cap on the most played album and song playlists, leaving the item limit the widget's own to set
 
 _Fixed_
 - fix audio channel labels claiming layouts a channel count cannot identify
@@ -49,6 +52,11 @@ _Fixed_
 - fix the profile settings scrollbar rendering without a track or a bar
 - fix the watched status bar and its overlay swapping size in the video wall with small info
 - fix the debug grid ignoring its offset on the masked aspect ratios
+- fix widgets picked from the picker drawing icons on the poster layout whatever their content
+- fix the games widget not offering the sort orders it lists add-ons for
+- fix the random movie, TV show and album widgets being named one thing in the picker and another on the menu
+- fix the widget management dialog offering no sort order for the pre-configured widgets, which were sorted all along
+- fix the random movie and music video widgets sorting the opposite way round to every other random widget
 
 ---
 
@@ -642,6 +650,8 @@ menus.xml:
 - drop the content labels that only restate the group above them, and wrap dynamic picker content in a folder through the built-in attribute
 - drop the HasAddon conjunct that AddonIsEnabled already implies
 - give every group in the shortcut picker its own icon, as an unset group falls back to a plain folder
+- drop the layout and artwork the seeded widgets spelled out, which the type keyed defaults now resolve to the same values, so the seeds no longer freeze a default that has moved on
+- seed the sort of the five widgets whose definitions declare one and whose rows did not, as the add-on re-derives a widget's path, type and target on every build but never its sort
 
 overrides.xml:
 - remove the v2 groupings, widgets, backgrounds and property options, carried into menus.xml, widgets.xml, backgrounds.xml and properties.xml
@@ -659,6 +669,10 @@ properties.xml:
 - drop showNone where true is already the default
 - declare submenuPath templateonly, keeping a property the skin never reads out of the generated includes
 - turn the icon column off on the five option pickers, as an option with no icon of its own is given a crossed circle
+- key the layout and artwork defaults on the widget's type, so a picked widget takes the shape its content calls for rather than the poster layout with an icon
+- note why those two need a default at all: neither has a home in a widget definition, so the picker never writes them and only the widgets the menu seeds carried them
+- offer year for songs and playcount for albums and songs, the sorts the recently released and most played widgets of those types are ordered by and could not otherwise have shown
+- offer top250 for movies under Kodi's own 13409, which is the label Kodi gives that sort method itself, so the Top 250 widget can say what it is ordered by
 
 template.xml:
 - remove the v2 widget templates, carried into templates.xml
@@ -704,6 +718,16 @@ widgets.xml:
 - spell the video target the way the rest of the configuration does
 - drop the content labels that only restate their group, and wrap dynamic content in a folder through the built-in attribute
 - drop the HasAddon conjunct that AddonIsEnabled already implies
+- give the games widget the add-on source it lists add-ons through, so it offers the last used, install date and last updated sort orders the program add-ons widget already does
+- label the random movie, TV show and album widgets with the strings the menu seeds use, so one widget carries one name; 31181, 31192 and 31211 held a title cased duplicate of each
+- declare the sort of the fifty-three widgets whose order is knowable: thirty-one from the bundled playlist each points at, copied from its own <order>, and twenty-two from Kodi, whose PVR recording and timer defaults are read from its view states and whose remaining paths name their own order
+- leave the eleven undeclared where a sort would reorder a list the user arranged: the node lists, the game sources, the channel groups, favourites, the two browse-into entry points and the two widgets whose path is an include rather than a directory
+- sort the game and program add-on widgets by last used, as an add-on list is most useful with what was opened last at the front
+
+movies_random.xsp and four other playlists:
+- order the random movie and music video playlists ascending, as the six other random playlists are; the direction means nothing to a random sort, but the dialog shows it
+- order the unwatched music videos playlist by title, matching the other unwatched playlists, rather than at random
+- drop the fifty item limit from the most played album and song playlists; a limit applies after the order, so it left the order deciding which rows appear rather than only their order, and both already exclude anything unplayed
 
 mainmenu.DATA.xml and the seventeen other seed files:
 - remove the v2 seed files, carried into menus.xml
@@ -715,6 +739,7 @@ script-skinshortcuts-static.xml:
 - rebuild it against Skin Shortcuts 3.0.3 from a clean profile, taking it from 5,328 lines and 439 KB to 4,008 and 257 KB
 - store it with unix line endings, which is what the add-on writes
 - rebuild it again for the two row view, so it reaches the users the file exists for
+- rebuild it once more for the seeded sorts, which reach the generated content elements of the five widgets that gained one
 
 script-skinshortcuts.xml:
 - tell the three editing contexts apart by menuname, which always holds the menu being edited, where skinshortcuts-menutype is only set for menus the configuration declares
@@ -918,3 +943,4 @@ validate_skin.py:
 - report include and variable names that are referenced but never defined, names defined twice in one file, and files that do not parse, none of which Kodi reports usefully at runtime
 - report each locale's msgid against en_gb and the Kodi markup tokens between msgid and msgstr, without failing on either, as translations come from Weblate and a hand-edit is overwritten on the next sync
 - leave definitions that are never used unreported, as names reached through a param value or a quoted expression are invisible to a structural parse
+- check a widget's sort against what it actually sorts by, across the bundled playlist's own order, the widget definition the picker copies from and the menu seed; nothing else keeps the three in step and a disagreement is invisible from the skin

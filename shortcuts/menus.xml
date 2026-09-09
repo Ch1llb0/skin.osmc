@@ -274,7 +274,8 @@
 			<property name="widgetType">movies</property>
 			<property name="widgetPath">special://skin/extras/playlists/movies_random.xsp</property>
 			<property name="widgetTarget">videos</property>
-			<property name="widgetArt">Art(poster)</property>
+			<property name="widgetSortBy">random</property>
+			<property name="widgetSortOrder">ascending</property>
 		</item>
 		<item name="new-movies" widget="NewMovies">
 			<label>$LOCALIZE[31179]</label>
@@ -282,7 +283,6 @@
 			<property name="widgetType">movies</property>
 			<property name="widgetPath">special://skin/extras/playlists/movies_recentlyadded.xsp</property>
 			<property name="widgetTarget">videos</property>
-			<property name="widgetArt">Art(poster)</property>
 			<property name="widgetSortBy">dateadded</property>
 			<property name="widgetSortOrder">descending</property>
 		</item>
@@ -296,7 +296,8 @@
 			<property name="widgetType">tvshows</property>
 			<property name="widgetPath">special://skin/extras/playlists/tvshows_random.xsp</property>
 			<property name="widgetTarget">videos</property>
-			<property name="widgetArt">Art(poster)</property>
+			<property name="widgetSortBy">random</property>
+			<property name="widgetSortOrder">ascending</property>
 		</item>
 		<item name="inprogress-tvshows" widget="InProgressTVShows">
 			<label>$LOCALIZE[31193]</label>
@@ -304,7 +305,6 @@
 			<property name="widgetType">tvshows</property>
 			<property name="widgetPath">library://video/tvshows/inprogressshows.xml</property>
 			<property name="widgetTarget">videos</property>
-			<property name="widgetArt">Art(poster)</property>
 			<property name="widgetSortBy">lastplayed</property>
 			<property name="widgetSortOrder">descending</property>
 		</item>
@@ -318,7 +318,8 @@
 			<property name="widgetType">albums</property>
 			<property name="widgetPath">special://skin/extras/playlists/albums_random.xsp</property>
 			<property name="widgetTarget">music</property>
-			<property name="layout">square-small</property>
+			<property name="widgetSortBy">random</property>
+			<property name="widgetSortOrder">ascending</property>
 		</item>
 		<item name="new-albums" widget="NewAlbums">
 			<label>$LOCALIZE[31207]</label>
@@ -326,7 +327,6 @@
 			<property name="widgetType">albums</property>
 			<property name="widgetPath">musicdb://recentlyaddedalbums/</property>
 			<property name="widgetTarget">music</property>
-			<property name="layout">square-small</property>
 			<property name="widgetSortBy">dateadded</property>
 			<property name="widgetSortOrder">descending</property>
 		</item>
@@ -340,7 +340,8 @@
 			<property name="widgetType">games</property>
 			<property name="widgetPath">addons://sources/game/</property>
 			<property name="widgetTarget">games</property>
-			<property name="layout">square-small</property>
+			<property name="widgetSortBy">lastused</property>
+			<property name="widgetSortOrder">descending</property>
 		</item>
 	</submenu>
 
@@ -352,8 +353,9 @@
 			<property name="widgetType">addons</property>
 			<property name="widgetPath">addons://sources/executable/</property>
 			<property name="widgetTarget">programs</property>
+			<property name="widgetSortBy">lastused</property>
+			<property name="widgetSortOrder">descending</property>
 			<property name="widgetSource">addon</property>
-			<property name="layout">square-small</property>
 		</item>
 	</submenu>
 
@@ -376,7 +378,8 @@
 			<property name="widgetType">tv</property>
 			<property name="widgetPath">pvr://channels/tv/*</property>
 			<property name="widgetTarget">tvchannels</property>
-			<property name="layout">square</property>
+			<property name="widgetSortBy">channelnumber</property>
+			<property name="widgetSortOrder">ascending</property>
 		</item>
 	</submenu>
 
@@ -388,7 +391,8 @@
 			<property name="widgetType">radio</property>
 			<property name="widgetPath">pvr://channels/radio/*</property>
 			<property name="widgetTarget">radiochannels</property>
-			<property name="layout">square</property>
+			<property name="widgetSortBy">channelnumber</property>
+			<property name="widgetSortOrder">ascending</property>
 		</item>
 	</submenu>
 

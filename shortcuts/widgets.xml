@@ -13,42 +13,64 @@
 				</widget>
 				<widget name="RecentMovies" label="$LOCALIZE[31180]" type="movies" target="videos" icon="DefaultMovies.png">
 					<path>special://skin/extras/playlists/movies_recentlyplayed.xsp</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
-				<widget name="RandomMovies" label="$LOCALIZE[31181]" type="movies" target="videos" icon="DefaultMovies.png">
+				<widget name="RandomMovies" label="$LOCALIZE[31054]" type="movies" target="videos" icon="DefaultMovies.png">
 					<path>special://skin/extras/playlists/movies_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="InProgressMovies" label="$LOCALIZE[31182]" type="movies" target="videos" icon="DefaultInProgressShows.png">
 					<path>special://skin/extras/playlists/movies_inprogress.xsp</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="TopRatedMovies" label="$LOCALIZE[31183]" type="movies" target="videos" icon="DefaultMovies.png">
 					<path>special://skin/extras/playlists/movies_toprated.xsp</path>
+					<sortby>rating</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="Top250Movies" label="$LOCALIZE[31184]" type="movies" target="videos" icon="DefaultMovies.png">
 					<path>special://skin/extras/playlists/movies_top250.xsp</path>
+					<sortby>top250</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="UnwatchedMovies" label="$LOCALIZE[31185]" type="movies" target="videos" icon="DefaultMovies.png">
 					<path>special://skin/extras/playlists/movies_unwatched.xsp</path>
+					<sortby>title</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="MovieNodes" label="$LOCALIZE[31186]" type="movies" target="videos" icon="DefaultMovies.png">
 					<path>library://video/movies/</path>
 				</widget>
 				<widget name="MovieGenres" label="$LOCALIZE[31187]" type="movies" target="videos" icon="DefaultGenre.png">
 					<path>library://video/movies/genres.xml</path>
+					<sortby>title</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="MovieSets" label="$LOCALIZE[31292]" type="sets" target="videos" icon="DefaultSets.png">
 					<path>videodb://movies/sets/</path>
+					<sortby>title</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 			</group>
 			<!-- TV Shows -->
 			<group name="tvshow-widgets" label="$LOCALIZE[31189]" icon="DefaultTVShows.png" visible="Library.HasContent(tvshows)">
 				<widget name="NewTvShows" label="$LOCALIZE[31190]" type="tvshows" target="videos" icon="DefaultRecentlyAddedEpisodes.png">
 					<path>special://skin/extras/playlists/tvshows_recentlyadded.xsp</path>
+					<sortby>dateadded</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RecentTvShows" label="$LOCALIZE[31191]" type="tvshows" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/tvshows_recentlyplayed.xsp</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
-				<widget name="RandomTvShows" label="$LOCALIZE[31192]" type="tvshows" target="videos" icon="DefaultTVShows.png">
+				<widget name="RandomTvShows" label="$LOCALIZE[31118]" type="tvshows" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/tvshows_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="InProgressTVShows" label="$LOCALIZE[31193]" type="tvshows" target="videos" icon="DefaultInProgressShows.png">
 					<path>library://video/tvshows/inprogressshows.xml</path>
@@ -57,36 +79,54 @@
 				</widget>
 				<widget name="TopRatedTvShows" label="$LOCALIZE[31194]" type="tvshows" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/tvshows_toprated.xsp</path>
+					<sortby>rating</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="UnwatchedTVShows" label="$LOCALIZE[31195]" type="tvshows" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/tvshows_unwatched.xsp</path>
+					<sortby>title</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="TvShowNodes" label="$LOCALIZE[31196]" type="tvshows" target="videos" icon="DefaultTVShows.png">
 					<path>library://video/tvshows/</path>
 				</widget>
 				<widget name="TvShowGenres" label="$LOCALIZE[31197]" type="tvshows" target="videos" icon="DefaultGenre.png">
 					<path>library://video/tvshows/genres.xml</path>
+					<sortby>title</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 			</group>
 			<!-- Episodes -->
 			<group name="episode-widgets" label="$LOCALIZE[20360]" icon="DefaultTVShowTitle.png" visible="Library.HasContent(tvshows)">
 				<widget name="NewEpisodes" label="$LOCALIZE[31198]" type="episodes" target="videos" icon="DefaultRecentlyAddedEpisodes.png">
 					<path>special://skin/extras/playlists/episodes_recentlyadded.xsp</path>
+					<sortby>dateadded</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RecentEpisodes" label="$LOCALIZE[31199]" type="episodes" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/episodes_recentlyplayed.xsp</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RandomEpisodes" label="$LOCALIZE[31200]" type="episodes" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/episodes_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="InProgressEpisodes" label="$LOCALIZE[31201]" type="episodes" target="videos" icon="DefaultInProgressShows.png">
 					<path>special://skin/extras/playlists/episodes_inprogress.xsp</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="TopRatedEpisodes" label="$LOCALIZE[31202]" type="episodes" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/episodes_toprated.xsp</path>
+					<sortby>rating</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="UnwatchedEpisodes" label="$LOCALIZE[31203]" type="episodes" target="videos" icon="DefaultTVShows.png">
 					<path>special://skin/extras/playlists/episodes_unwatched.xsp</path>
+					<sortby>dateadded</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 			</group>
 		</group>
@@ -102,9 +142,13 @@
 			<group name="artist-widgets" label="$LOCALIZE[133]" icon="DefaultMusicArtists.png" visible="Library.HasContent(music)">
 				<widget name="NewArtists" label="$LOCALIZE[31204]" type="artists" target="music" icon="DefaultMusicArtists.png">
 					<path>special://skin/extras/playlists/artists_recentlyadded.xsp</path>
+					<sortby>dateadded</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RandomArtists" label="$LOCALIZE[31205]" type="artists" target="music" icon="DefaultMusicArtists.png">
 					<path>special://skin/extras/playlists/artists_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="MusicNodes" label="$LOCALIZE[31206]" type="music" target="music" icon="DefaultMusicAlbums.png">
 					<path>library://music/</path>
@@ -119,48 +163,74 @@
 				</widget>
 				<widget name="RecentAlbums" label="$LOCALIZE[31208]" type="albums" target="music" icon="DefaultMusicRecentlyPlayed.png">
 					<path>musicdb://recentlyplayedalbums/</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RecentlyReleasedAlbums" label="$LOCALIZE[31209]" type="albums" target="music" icon="DefaultMusicAlbums.png">
 					<path>special://skin/extras/playlists/albums_recentlyreleased.xsp</path>
+					<sortby>year</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="TopAlbums" label="$LOCALIZE[31210]" type="albums" target="music" icon="DefaultMusicTop100Albums.png">
 					<path>musicdb://top100/albums/</path>
+					<sortby>playcount</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
-				<widget name="RandomAlbums" label="$LOCALIZE[31211]" type="albums" target="music" icon="DefaultMusicAlbums.png">
+				<widget name="RandomAlbums" label="$LOCALIZE[31056]" type="albums" target="music" icon="DefaultMusicAlbums.png">
 					<path>special://skin/extras/playlists/albums_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="MostPlayedAlbums" label="$LOCALIZE[31212]" type="albums" target="music" icon="DefaultMusicRecentlyPlayed.png">
 					<path>special://skin/extras/playlists/albums_mostplayed.xsp</path>
+					<sortby>playcount</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 			</group>
 			<!-- Songs -->
 			<group name="song-widgets" label="$LOCALIZE[134]" icon="DefaultMusicSongs.png" visible="Library.HasContent(music)">
 				<widget name="NewSongs" label="$LOCALIZE[31213]" type="songs" target="music" icon="DefaultMusicSongs.png">
 					<path>special://skin/extras/playlists/songs_recentlyadded.xsp</path>
+					<sortby>dateadded</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RecentlyReleasedSongs" label="$LOCALIZE[31214]" type="songs" target="music" icon="DefaultMusicSongs.png">
 					<path>special://skin/extras/playlists/songs_recentlyreleased.xsp</path>
+					<sortby>year</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="MostPlayedSongs" label="$LOCALIZE[31215]" type="songs" target="music" icon="DefaultMusicSongs.png">
 					<path>special://skin/extras/playlists/songs_mostplayed.xsp</path>
+					<sortby>playcount</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RandomSongs" label="$LOCALIZE[31216]" type="songs" target="music" icon="DefaultMusicSongs.png">
 					<path>special://skin/extras/playlists/songs_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 			</group>
 			<!-- Music videos -->
 			<group name="musicvideo-widgets" label="$LOCALIZE[20389]" icon="DefaultMusicVideos.png" visible="Library.HasContent(musicvideos)">
 				<widget name="NewMusicVideos" label="$LOCALIZE[31217]" type="musicvideos" target="videos" icon="DefaultRecentlyAddedMusicVideos.png">
 					<path>special://skin/extras/playlists/musicvideos_recentlyadded.xsp</path>
+					<sortby>dateadded</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="InProgressMusicVideos" label="$LOCALIZE[31218]" type="musicvideos" target="videos" icon="DefaultMusicVideos.png">
 					<path>special://skin/extras/playlists/musicvideos_inprogress.xsp</path>
+					<sortby>lastplayed</sortby>
+					<sortorder>descending</sortorder>
 				</widget>
 				<widget name="RandomMusicVideos" label="$LOCALIZE[31219]" type="musicvideos" target="videos" icon="DefaultMusicVideos.png">
 					<path>special://skin/extras/playlists/musicvideos_random.xsp</path>
+					<sortby>random</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 				<widget name="UnwatchedMusicVideos" label="$LOCALIZE[31220]" type="musicvideos" target="videos" icon="DefaultMusicVideos.png">
 					<path>special://skin/extras/playlists/musicvideos_unwatched.xsp</path>
+					<sortby>title</sortby>
+					<sortorder>ascending</sortorder>
 				</widget>
 			</group>
 		</group>
@@ -176,8 +246,10 @@
 
 	<!-- Games -->
 	<group name="games" label="$LOCALIZE[10821]" icon="DefaultGameAddons.png">
-		<widget name="GameWidget" label="$LOCALIZE[35049]" type="games" target="games" icon="DefaultAddonGame.png">
+		<widget name="GameWidget" label="$LOCALIZE[35049]" type="games" target="games" source="addon" icon="DefaultAddonGame.png">
 			<path>addons://sources/game/</path>
+			<sortby>lastused</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="gamesources" label="$LOCALIZE[10821]" type="games" target="games" icon="DefaultFolder.png">
 			<path>sources://games/</path>
@@ -188,27 +260,41 @@
 	<group name="tv" label="$LOCALIZE[19020]" icon="DefaultLiveTV.png" visible="PVR.HasTVChannels">
 		<widget name="LastPlayedChannels" label="$LOCALIZE[31222]" type="tv" target="tvchannels" icon="DefaultLiveTV.png">
 			<path>pvr://channels/tv/*?view=lastplayed</path>
+			<sortby>lastplayed</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="AllChannels" label="$LOCALIZE[19217]" type="tv" target="tvchannels" icon="DefaultLiveTV.png">
 			<path>pvr://channels/tv/*</path>
+			<sortby>channelnumber</sortby>
+			<sortorder>ascending</sortorder>
 		</widget>
 		<widget name="TVChannelGroups" label="$LOCALIZE[19173]" type="tv" target="tvguide" icon="DefaultLiveTV.png">
 			<path>pvr://channels/tv/</path>
 		</widget>
 		<widget name="ActiveRecordings" label="$LOCALIZE[31223]" type="tv" target="tvrecordings" icon="DefaultLiveTV.png">
 			<path>pvr://recordings/tv/active?view=flat</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="GroupedActiveRecordings" label="$LOCALIZE[31224]" type="tv" target="tvrecordings" icon="DefaultLiveTV.png">
 			<path>pvr://recordings/tv/active?view=grouped</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="DeletedRecordings" label="$LOCALIZE[19184]" type="tv" target="tvrecordings" icon="DefaultLiveTV.png">
 			<path>pvr://recordings/tv/deleted?view=flat</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="GroupedDeletedRecordings" label="$LOCALIZE[31225]" type="tv" target="tvrecordings" icon="DefaultLiveTV.png">
 			<path>pvr://recordings/tv/deleted?view=grouped</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="TVTimers" label="$LOCALIZE[10703]" type="tv" target="tvtimers" icon="DefaultLiveTV.png">
 			<path>pvr://timers/tv/timers</path>
+			<sortby>date</sortby>
+			<sortorder>ascending</sortorder>
 		</widget>
 	</group>
 
@@ -216,27 +302,41 @@
 	<group name="radio" label="$LOCALIZE[19021]" icon="DefaultRadio.png" visible="PVR.HasRadioChannels">
 		<widget name="LastPlayedRadioChannels" label="$LOCALIZE[31226]" type="radio" target="radiochannels" icon="DefaultRadio.png">
 			<path>pvr://channels/radio/*?view=lastplayed</path>
+			<sortby>lastplayed</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="AllRadioChannels" label="$LOCALIZE[19216]" type="radio" target="radiochannels" icon="DefaultRadio.png">
 			<path>pvr://channels/radio/*</path>
+			<sortby>channelnumber</sortby>
+			<sortorder>ascending</sortorder>
 		</widget>
 		<widget name="RadioChannelGroups" label="$LOCALIZE[19174]" type="radio" target="radioguide" icon="DefaultRadio.png">
 			<path>pvr://channels/radio/</path>
 		</widget>
 		<widget name="ActiveRadioRecordings" label="$LOCALIZE[31227]" type="radio" target="radiorecordings" icon="DefaultRadio.png">
 			<path>pvr://recordings/radio/active?view=flat</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="GroupedActiveRadioRecordings" label="$LOCALIZE[31228]" type="radio" target="radiorecordings" icon="DefaultRadio.png">
 			<path>pvr://recordings/radio/active?view=grouped</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="DeletedRadioRecordings" label="$LOCALIZE[19184]" type="radio" target="radiorecordings" icon="DefaultRadio.png">
 			<path>pvr://recordings/radio/deleted?view=flat</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="GroupedDeletedRadioRecordings" label="$LOCALIZE[31229]" type="radio" target="radiorecordings" icon="DefaultRadio.png">
 			<path>pvr://recordings/radio/deleted?view=grouped</path>
+			<sortby>date</sortby>
+			<sortorder>descending</sortorder>
 		</widget>
 		<widget name="RadioTimers" label="$LOCALIZE[10708]" type="radio" target="radiotimers" icon="DefaultRadio.png">
 			<path>pvr://timers/radio/timers</path>
+			<sortby>date</sortby>
+			<sortorder>ascending</sortorder>
 		</widget>
 	</group>
 

@@ -2344,7 +2344,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="videos" browse="never">special://skin/extras/playlists/movies_random.xsp</content>
+			<content limit="" sortby="random" sortorder="ascending" target="videos" browse="never">special://skin/extras/playlists/movies_random.xsp</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(10001) + Control.HasFocus(10101) + [Integer.IsGreater(Container(10001).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(10001).NumItems,1)]]</visible>
@@ -3164,7 +3164,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="videos" browse="never">special://skin/extras/playlists/tvshows_random.xsp</content>
+			<content limit="" sortby="random" sortorder="ascending" target="videos" browse="never">special://skin/extras/playlists/tvshows_random.xsp</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(10002) + Control.HasFocus(10201) + [Integer.IsGreater(Container(10002).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(10002).NumItems,1)]]</visible>
@@ -3984,7 +3984,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="music" browse="never">special://skin/extras/playlists/albums_random.xsp</content>
+			<content limit="" sortby="random" sortorder="ascending" target="music" browse="never">special://skin/extras/playlists/albums_random.xsp</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(10004) + Control.HasFocus(10401) + [Integer.IsGreater(Container(10004).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(10004).NumItems,1)]]</visible>
@@ -4804,7 +4804,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="games" browse="never">addons://sources/game/</content>
+			<content limit="" sortby="lastused" sortorder="descending" target="games" browse="never">addons://sources/game/</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(10006) + Control.HasFocus(10601) + [Integer.IsGreater(Container(10006).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(10006).NumItems,1)]]</visible>
@@ -5214,7 +5214,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="programs" browse="never">addons://sources/executable/</content>
+			<content limit="" sortby="lastused" sortorder="descending" target="programs" browse="never">addons://sources/executable/</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(10008) + Control.HasFocus(10801) + [Integer.IsGreater(Container(10008).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(10008).NumItems,1)]]</visible>
@@ -5833,7 +5833,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="tvchannels" browse="never">pvr://channels/tv/*</content>
+			<content limit="" sortby="channelnumber" sortorder="ascending" target="tvchannels" browse="never">pvr://channels/tv/*</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(100010) + Control.HasFocus(101001) + [Integer.IsGreater(Container(100010).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(100010).NumItems,1)]]</visible>
@@ -6243,7 +6243,7 @@
 					</include>
 				</control>
 			</focusedlayout>
-			<content limit="" sortby="" sortorder="" target="radiochannels" browse="never">pvr://channels/radio/*</content>
+			<content limit="" sortby="channelnumber" sortorder="ascending" target="radiochannels" browse="never">pvr://channels/radio/*</content>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(100011) + Control.HasFocus(101101) + [Integer.IsGreater(Container(100011).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(100011).NumItems,1)]]</visible>

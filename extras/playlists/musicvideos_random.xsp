@@ -2,5 +2,5 @@
 <smartplaylist type="musicvideos">
     <name>Random Music Videos</name>
     <match>all</match>
-    <order direction="descending">random</order>
+    <order direction="ascending">random</order>
 </smartplaylist>
