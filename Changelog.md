@@ -592,10 +592,6 @@ _Fixed_
 
 ---
 
-**_v16.9.3 - January 2017_**
-
----
-
 **_v16.9.2 - November 2016_**
 
 Fix crash in PVR guide window; Font updates
@@ -740,6 +736,9 @@ AddonBrowser.xml:
 Coordinates_DialogPlayerProcessInfo.xml:
 - grow the info panel by two rows and move the debug overlay shortcut down accordingly
 
+Coordinates_DialogSeekBar.xml:
+- remove the file, as every family in it was an unreferenced 0x0 stub and DialogSeekBar.xml holds no coordinates include at all
+
 Coordinates_DialogSelect.xml:
 - remove the video version picker layouts, as Kodi v22 removed those windows
 
@@ -794,7 +793,8 @@ Home.xml:
 Includes.xml:
 - pull in Includes_Maps.xml
 - load the generated includes only while the add-on is enabled, and the static fallback otherwise, as a disabled add-on leaves its last build behind
-- point at the regeneration notes for the fallback in CLAUDE.md
+- point at the regeneration notes for the fallback in the repository documentation
+- stop loading Coordinates_DialogSeekBar.xml, which is removed
 
 Includes_Home.xml:
 - read the home submenu from skinshortcuts-mainmenu-submenu, as v3 names a menu's submenu include after that menu
@@ -855,6 +855,9 @@ SkinSettings.xml:
 - reword the reset button for everything it clears
 - add the two widgets on screen setting, reloading the skin so the layout conditions are read again and putting focus back on the row
 
+Startup.xml:
+- drop the HideSettings reset, as nothing has read that setting since 2019
+
 Variables.xml:
 - reduce the codec and channel variables to map lookups, keeping the DSD sample rate rows
 - name the watched state, the partially watched series and the per media kind setting gate as expressions, replacing the same test spelled out at forty-three sites across four files
@@ -900,13 +903,16 @@ addon.xml:
 
 Changelog.md:
 - update changelog
+- remove the duplicate v16.9.3 heading
 
-CLAUDE.md:
-- describe the no-addon fallback: what it is for, how to regenerate it from a clean profile, and when a rebuild is actually needed
-- record the interface it sits in, the names it defines and the includes it calls, with the commands to re-derive both from a build
+sync-translations.yml:
+- fire on the development branch as well, as the trigger named only omega and translations therefore stopped propagating when work moved
+- run only when language/ changes, which is all the sync copies
+- pin actions/checkout to v4 and repo-file-sync-action to a commit, as both floated and the second is handed a token with write access across the sibling branches
 
 validate.yml:
 - check the skin on every pull request, as nothing ran on them before
+- follow the live branches on push, dropping a branch that no longer exists and adding the aspect ratio siblings
 
 validate_skin.py:
 - report include and variable names that are referenced but never defined, names defined twice in one file, and files that do not parse, none of which Kodi reports usefully at runtime

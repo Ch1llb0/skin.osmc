@@ -19,24 +19,37 @@ commands in this repo.
 - `xml/` — all skin windows, dialogs, includes and variables (see architecture below).
 - `colors/defaults.xml` — base color theme values referenced by `Variables_Colours.xml`.
 - `language/resource.language.<locale>/` — per-locale translation strings, one folder per language.
-- `media/` — icons/images referenced by skin XML via `<texture>`/`<icon>` (mostly `Default*.png`).
+- `media/` — icons/images referenced by skin XML via `<texture>`/`<icon>` (mostly `Default*.png`), plus
+  `media/Textures.xbt`, the TexturePacker bundle of that same folder. `addon.xml` declares the bundle as
+  `defaultthemename`, and Kodi checks bundles *before* the filesystem, so the loose files are shadowed at
+  runtime: editing a PNG and reloading shows no change until the bundle is rebuilt, while *adding* one works.
 - `fonts/` — TTF files declared in `xml/Font.xml`.
-- `shortcuts/` — config for the `script.skinshortcuts` addon (main menu / submenu structure, e.g.
-  `mainmenu.DATA.xml`, `overrides.xml`, `template.xml`).
+- `shortcuts/` — config for the `script.skinshortcuts` addon: `menus.xml` (menu and submenu structure),
+  `widgets.xml`, `backgrounds.xml`, `properties.xml` (widget property pickers) and `templates.xml`.
 - `extras/` — bundled smart playlists (`extras/playlists/*.xsp`), background images, debug grid overlays,
-  and an example custom color scheme (`extras/colors/colors.xml`).
+  and `extras/colors/colors.xml`.
 - `resources/` — addon icon/fanart shown in the Kodi addon browser.
 
 ## Branch model (important — read before editing coordinates)
 
-`omega` is the default/main branch for this repo, developed at 1920x1080 16:9. There are **sibling branches
-for other aspect ratios/variants**: `omega-scope`, `omega-21to9`, `omega-4to3`. `.github/sync.yml` +
-`.github/workflows/sync-translations.yml` automatically sync the `language/` folder from `omega` to those
-branches on every push — so translation changes only need to be made once, on `omega`.
+`PiersPort` is the development branch, developed at 1920x1080 16:9; `piers` and `omega` are the release
+lines. There are **sibling branches for other aspect ratios/variants**: `omega-scope`, `omega-21to9`,
+`omega-4to3`. Each sibling publishes under its own addon id — `skin.osmc.scope`, `skin.osmc.21to9`,
+`skin.osmc.4to3` — so they are four separately installed Kodi addons, not one addon with four layouts.
 
-Everything else (layout/coordinate XML) is maintained independently per branch. When a change affects
-positions or sizing, check whether it needs a parallel change on the other aspect-ratio branches — this repo
-does not do that for you automatically.
+**The siblings do not carry their own layout XML.** `git rev-parse origin/<branch>:xml` returns the same
+tree hash for `omega`, `omega-21to9`, `omega-4to3` and `piers`; `omega-scope` differs by three lines of
+`xml/Variables.xml`. Every branch already contains all four aspect variants of every coordinate include,
+and which one applies is decided at load time by `Skin.AspectRatio`, which comes from the single uncommented
+`<res>` in that branch's `addon.xml`. Note that `omega-scope` declares 2560x1440 `aspect="16:9"`, so it
+selects the `_21:9_masked` leaves through `$EXP[MaskedCoordinates]` rather than the 21:9 ones.
+
+So a coordinate change is made **once**, on the development branch, including all four aspect variants — do
+not hand-edit `xml/` on a sibling, as it is propagated wholesale and an edit there is overwritten. The four
+genuinely per-branch files are `addon.xml`, `README.md`, `CLAUDE.md` and `.github/`.
+
+`.github/sync.yml` + `.github/workflows/sync-translations.yml` sync the `language/` folder out to the
+siblings, so translation changes only need to be made once.
 
 ## Skin XML architecture
 
@@ -87,21 +100,62 @@ Two layers control color:
    account the user's selected color scheme (`Skin.HasSetting(DefaultColorSetOSMCBlue)` etc.) or custom
    per-element overrides stored as `Skin.String(color.*)`.
 
-`extras/colors/colors.xml` is a sample custom scheme demonstrating the override format end users can install.
+`extras/colors/colors.xml` is **not** a sample scheme — it is the live palette the colour pickers read. It
+holds 513 named colour values and is passed as the palette argument to all 11 `Skin.Setcolor` calls in
+`xml/SkinSettings.xml`. It contains no skin-role names (`TextColorFO` and the like), so it cannot serve as an
+override scheme; trimming or regenerating it empties every colour picker in the skin settings.
 
 ## Translations
 
 Each `language/resource.language.<locale>/strings.po` supplies localized strings referenced in skin XML as
-`$LOCALIZE[<id>]`. Only edit translation content on the `omega` branch — it is synced outward to the other
-aspect-ratio branches by CI (see Branch model above), so edits made directly on a sibling branch will be
-overwritten.
+`$LOCALIZE[<id>]`. Only edit them on the development branch — they are synced outward to the sibling
+branches by CI (see Branch model above), so edits made directly on a sibling will be overwritten.
+
+**Translated content comes from Weblate**, at the project named in every `.po` header
+(`X-Generator: Weblate`, and a `Language-Team` URL). Over a hundred commits in this repo are Weblate's, so a
+commit that hand-edits a `msgstr` is overwritten on the next sync. The split to respect:
+
+- **New source strings** go in `language/resource.language.en_gb/strings.po` in the normal commit, alongside
+  the XML that uses them. String ids are **append-only**: take `max(id) + 1`, and never reassign a retired id,
+  because Kodi keys on `msgctxt` alone and reusing an id silently repoints every locale's translation.
+  Skin ids are confined to 31000-31999.
+- **Translations** of those strings come back through Weblate. Do not PR them.
+
+Changing an existing `msgid` invalidates every translation of it, so avoid cosmetic rewording — a hyphen
+costs 26 retranslations.
 
 ## Verifying changes
 
-There is no automated test/build/lint pipeline in this repo. To verify a change, install the skin into a
-Kodi/OSMC instance (or Kodi on desktop) pointed at this repo's directory and reload the skin, or package it
-as a zip and install via Kodi's "install from zip file". Check XML well-formedness before committing —
-malformed XML will silently fail to load the affected window in Kodi without a clear error in this repo.
+There is no build step and no test suite. To verify a change, install the skin into a Kodi/OSMC instance (or
+Kodi on desktop) pointed at this repo's directory and reload the skin, or package it as a zip and install via
+Kodi's "install from zip file". Remember that `media/Textures.xbt` shadows the loose images, so a change to an
+existing PNG needs the bundle rebuilt before it is visible.
+
+What *is* automated is `.github/workflows/validate.yml`, which runs `.github/scripts/validate_skin.py` on
+every pull request. It catches the three things Kodi reports poorly or not at all:
+
+- an `<include>` or `$VAR[]` name that is referenced but never defined — Kodi logs a warning at most for the
+  first and nothing at all for the second
+- a name defined twice in one file — Kodi keeps the first definition and discards the second in silence
+- a file that does not parse — malformed XML silently fails to load the affected window
+
+It also reports each locale's `msgid` against `en_gb` and the Kodi markup tokens (`[B]`, `[CR]`, `[COLOR]`)
+between `msgid` and `msgstr`, but never fails on those, since they are Weblate's to fix.
+
+The workflow currently passes `--warn-only`, so nothing fails the build yet: the two
+`$VAR[VideoPlayerChannelNumber]` call sites are outstanding and need a decision rather than a rename. Drop
+the flag once they are settled and the three checks above become blocking; the translation reports stay
+advisory either way.
+
+Run it locally before committing — standard library only, no arguments beyond the repo root:
+
+```sh
+python3 .github/scripts/validate_skin.py .
+```
+
+It deliberately does **not** report definitions that are never used: names reached through
+`<param name="x">Name</param>` element text or through a quoted expression are invisible to a structural
+parse, and that check reports false positives by the hundred.
 
 ## The no-addon fallback (`xml/script-skinshortcuts-static.xml`)
 

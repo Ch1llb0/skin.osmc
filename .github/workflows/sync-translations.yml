@@ -2,16 +2,23 @@ name: Sync Files
 on:
   push:
     branches:
+      - PiersPort
+      - piers
       - omega
+    paths:
+      - 'language/**'
   workflow_dispatch:
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
       - name: Run GitHub File Sync
-        uses: BetaHuhn/repo-file-sync-action@v1
+        # Pinned to a commit: this action receives a PAT with write access across the
+        # sibling branches, and a floating tag would let that credential run code
+        # nobody here reviewed.
+        uses: BetaHuhn/repo-file-sync-action@8d7590ac8bf240686428959b8fd060a34d508b3f # v1.9.4
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
           SKIP_PR: true

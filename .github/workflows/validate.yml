@@ -4,10 +4,12 @@ on:
   pull_request:
   push:
     branches:
-      - omega
-      - piers
       - PiersPort
-      - SkinshortcutsAdjustments
+      - piers
+      - omega
+      - omega-scope
+      - omega-21to9
+      - omega-4to3
   workflow_dispatch:
 
 jobs:
