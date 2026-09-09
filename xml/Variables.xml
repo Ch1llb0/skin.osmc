@@ -405,6 +405,16 @@
 		<value>$INFO[Container(11).ListItem.Title,[B],[/B][CR][CR]]$INFO[Container(11).ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Genre(comma),[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
 	</variable>
 
+	<variable name="PVRChannelLabel">
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</value>
+	</variable>
+
+	<variable name="PVRChannelLabelDialogGuide">
+		<value condition="!String.IsEmpty(Container(11).ListItem.ChannelName)">$INFO[Container(11).ListItem.ChannelName]$INFO[Container(11).ListItem.ChannelNumberLabel, (,)]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</value>
+		<value condition="MusicPlayer.Content(LiveTV)">$INFO[MusicPlayer.ChannelName]$INFO[MusicPlayer.ChannelNumberLabel, (,)]</value>
+	</variable>
+
 	<variable name="PVRChannelIcon">
 		<value condition="Skin.HasSetting(PVRShowLock) + ListItem.IsEncrypted">pvr/encrypted.png</value>
 		<value condition="!String.IsEmpty(ListItem.EPGEventIcon)">$INFO[ListItem.EPGEventIcon]</value>

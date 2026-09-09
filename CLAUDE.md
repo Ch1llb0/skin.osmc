@@ -132,20 +132,20 @@ Kodi's "install from zip file". Remember that `media/Textures.xbt` shadows the l
 existing PNG needs the bundle rebuilt before it is visible.
 
 What *is* automated is `.github/workflows/validate.yml`, which runs `.github/scripts/validate_skin.py` on
-every pull request. It catches the three things Kodi reports poorly or not at all:
+every pull request. It catches four things that fail silently:
 
 - an `<include>` or `$VAR[]` name that is referenced but never defined — Kodi logs a warning at most for the
   first and nothing at all for the second
 - a name defined twice in one file — Kodi keeps the first definition and discards the second in silence
 - a file that does not parse — malformed XML silently fails to load the affected window
+- a widget whose declared sort disagrees with its source — the widget still fills, so nothing looks wrong,
+  but the row sorts one way while the management dialog says another
 
 It also reports each locale's `msgid` against `en_gb` and the Kodi markup tokens (`[B]`, `[CR]`, `[COLOR]`)
 between `msgid` and `msgstr`, but never fails on those, since they are Weblate's to fix.
 
-The workflow currently passes `--warn-only`, so nothing fails the build yet: the two
-`$VAR[VideoPlayerChannelNumber]` call sites are outstanding and need a decision rather than a rename. Drop
-the flag once they are settled and the three checks above become blocking; the translation reports stay
-advisory either way.
+The structural checks fail the build. The translation reports stay advisory either way, as a hand-edit
+here is overwritten on the next Weblate sync.
 
 Run it locally before committing — standard library only, no arguments beyond the repo root:
 

@@ -57,6 +57,9 @@ _Fixed_
 - fix the random movie, TV show and album widgets being named one thing in the picker and another on the menu
 - fix the widget management dialog offering no sort order for the pre-configured widgets, which were sorted all along
 - fix the random movie and music video widgets sorting the opposite way round to every other random widget
+- fix rows in the video and music OSD moving nowhere when the button they pointed at was not on screen
+- fix left and right leaving the subtitle stream row in the video OSD instead of moving between its buttons
+- fix the channel label in the fullscreen OSD and the channel guide dialog being blank
 
 ---
 
@@ -797,6 +800,9 @@ Custom_Debug_Grid.xml:
 DialogMusicInfo.xml:
 - separate genres with commas
 
+DialogPVRChannelGuide.xml:
+- read the channel from the guide container, which is where the dialog's other labels read theirs, filling the heading on radio channels as well
+
 DialogPVRInfo.xml:
 - add extra title info above the plot
 - add the parental rating to the end of the plot
@@ -854,6 +860,10 @@ Includes_Windows_Dialogs.xml:
 LoginScreen.xml:
 - point the scrollbar at LoginScreen_coords6
 
+MusicOSD.xml:
+- name the button row so the option row moves to whichever of its buttons is on screen, rather than to a channel up button that only exists on radio
+- send the seek slider to it as well, as it named a play button that is not built when the player cannot pause
+
 MusicVisualisation.xml:
 - hide end time, position, progress and cache bar during live playback
 - separate genres with commas
@@ -895,6 +905,7 @@ Variables.xml:
 - add a plain elapsed time row for live playback
 - separate genres, directors and writers with commas
 - name the two widgets on screen setting as the TwoRowWidgets expression, which is what every two row test and layout condition reads
+- add the channel label variables the fullscreen OSD and the guide dialog have called since 2023 without them existing, split per site as the dialog reads its channel from the guide container
 
 Variables_Settings.xml:
 - follow the renamed window property and the moved control ids in the dialog help texts
@@ -914,11 +925,15 @@ VideoFullScreen.xml:
 - hide end time, position, progress and cache bar during live playback
 - name the audio and subtitle stream in the info line
 - separate genres with commas
+- call the channel label variable by the name it is defined under
 
 VideoOSD.xml:
 - rebuild the subtitle stream row as previous/name/next, using the new PreviousSubtitle action
 - open the subtitle settings from the subtitle name and drop the settings icon
 - remove the audio stream cycler, as audio has no backward action, and open the audio settings from the audio button
+- name the button row so the rows around it move to whichever of its buttons is on screen, rather than to a play button that is not built when the player cannot pause
+- send the option row, the subtitle stream row and the seek slider to it, as all three named that play button
+- wrap left and right between the three buttons of the subtitle stream row, which stepped out to the record and skip back buttons at its ends
 
 addon.xml:
 - require xbmc.gui 5.18.0
@@ -938,6 +953,7 @@ sync-translations.yml:
 validate.yml:
 - check the skin on every pull request, as nothing ran on them before
 - follow the live branches on push, dropping a branch that no longer exists and adding the aspect ratio siblings
+- fail on dangling include and variable references, now that the last two are gone
 
 validate_skin.py:
 - report include and variable names that are referenced but never defined, names defined twice in one file, and files that do not parse, none of which Kodi reports usefully at runtime

@@ -27,7 +27,7 @@
 				<include>DialogPVRChannelGuide_coords3</include>
 				<font>Font33-bold</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
-				<label>$VAR[VideoPlayerChannelNumber]</label>
+				<label>$VAR[PVRChannelLabelDialogGuide]</label>
 			</control>
 
 			<!-- Date label -->

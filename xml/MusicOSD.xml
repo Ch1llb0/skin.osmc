@@ -26,8 +26,8 @@
 		
 		<control type="button" id="100">
 			<include>MusicOSD_coords1</include>
-			<onup>5</onup>
-			<ondown>5</ondown>
+			<onup>29</onup>
+			<ondown>29</ondown>
 			<onleft>StepBack</onleft>
 			<onright>StepForward</onright>
 			<onfocus>SetProperty(MusicOSDSlider,True,12006)</onfocus>
@@ -62,7 +62,7 @@
 			</control>
 
 			<!-- Controls -->
-			<control type="grouplist">
+			<control type="grouplist" id="29">
 				<include>MusicOSD_coords4</include>
 				<itemgap>0</itemgap>
 				<onleft>20</onleft>
@@ -226,9 +226,9 @@
 				<itemgap>0</itemgap>
 				<onleft>11</onleft>
 				<onright>1</onright>
-				<onup condition="!Player.SeekEnabled">4</onup>
+				<onup condition="!Player.SeekEnabled">29</onup>
 				<onup condition="Player.SeekEnabled">100</onup>
-				<ondown>4</ondown>
+				<ondown>29</ondown>
 				<orientation>horizontal</orientation>
 
 				<!-- Repeat -->

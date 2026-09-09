@@ -425,7 +425,7 @@
 					<font>Font33-bold</font>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>$VAR[VideoPlayerChannelNumber]</label>
+					<label>$VAR[PVRChannelLabel]</label>
 					<visible>Pvr.IsPlayingTv</visible>
 					<include>VisibleFadeAnimation</include>
 				</control>

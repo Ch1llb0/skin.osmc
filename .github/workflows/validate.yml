@@ -26,9 +26,5 @@ jobs:
       #
       # Translation findings are advisory and never fail the build — they are fixed
       # in Weblate, and a hand-edit here is overwritten on the next sync.
-      #
-      # --warn-only is holding the door for the two VideoPlayerChannelNumber call
-      # sites, which need a decision rather than a rename. Drop the flag once those
-      # are settled and the reference checks become blocking.
       - name: Reference integrity and translation drift
-        run: python3 .github/scripts/validate_skin.py --warn-only .
+        run: python3 .github/scripts/validate_skin.py .
