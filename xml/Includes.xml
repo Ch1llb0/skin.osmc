@@ -66,6 +66,7 @@
 	<include file="Coordinates_MyPrograms.xml" />
 	<include file="Coordinates_MyPVRChannels.xml" />
 	<include file="Coordinates_MyPVRGuide.xml" />
+	<include file="Coordinates_MyPVRProviders.xml" />
 	<include file="Coordinates_MyPVRRecordings.xml" />
 	<include file="Coordinates_MyPVRSearch.xml" />
 	<include file="Coordinates_MyPVRTimers.xml" />

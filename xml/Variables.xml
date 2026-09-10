@@ -210,6 +210,8 @@
 		<value condition="Window.IsVisible(RadioTimers)">$LOCALIZE[10708]</value>
 		<value condition="Window.IsVisible(TVSearch)">$LOCALIZE[10704]</value>
 		<value condition="Window.IsVisible(RadioSearch)">$LOCALIZE[10709]</value>
+		<value condition="Window.IsVisible(TVProviders)">$LOCALIZE[19334]</value>
+		<value condition="Window.IsVisible(RadioProviders)">$LOCALIZE[19334]</value>
 		<value condition="Window.IsVisible(Music)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(Videos) | [Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]</value>
@@ -256,6 +258,8 @@
 		<value condition="Window.IsVisible(RadioRecordings)"></value>
 		<value condition="Window.IsVisible(TVTimers)"></value>
 		<value condition="Window.IsVisible(RadioTimers)"></value>
+		<value condition="Window.IsVisible(TVProviders)">$INFO[Control.GetLabel(29)]</value>
+		<value condition="Window.IsVisible(RadioProviders)">$INFO[Control.GetLabel(29)]</value>
 		<value condition="Window.IsVisible(TVSearch)"></value>
 		<value condition="Window.IsVisible(RadioSearch)"></value>
 		<value condition="Window.IsVisible(Music)">$INFO[Container.FolderName]</value>
@@ -413,6 +417,12 @@
 		<value condition="!String.IsEmpty(Container(11).ListItem.ChannelName)">$INFO[Container(11).ListItem.ChannelName]$INFO[Container(11).ListItem.ChannelNumberLabel, (,)]</value>
 		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</value>
 		<value condition="MusicPlayer.Content(LiveTV)">$INFO[MusicPlayer.ChannelName]$INFO[MusicPlayer.ChannelNumberLabel, (,)]</value>
+	</variable>
+
+	<variable name="PVRProviderItemInfo">
+		<value condition="!String.IsEmpty(ListItem.Property(totalcount))">$INFO[ListItem.Property(totalcount)]</value>
+		<value condition="!String.IsEmpty(ListItem.ChannelNumberLabel)">$INFO[ListItem.ChannelNumberLabel]</value>
+		<value>$INFO[ListItem.StartDate]</value>
 	</variable>
 
 	<variable name="PVRChannelIcon">

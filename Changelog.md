@@ -15,6 +15,7 @@ _New_
 - add an option to show two widgets on screen at once
 - add the ungroup button to the video versions manager
 - add the controller image to the peripheral settings dialog
+- add the PVR providers window, which lists the broadcasters behind the channels and recordings
 
 _Improved_
 - allow stepping through subtitles in both directions in the video OSD
@@ -792,6 +793,10 @@ Coordinates_Includes_Widgets.xml:
 Coordinates_LoginScreen.xml:
 - give the scrollbar its own LoginScreen_coords6 family, as its geometry was declared under the name the profile list already used and Kodi keeps only the first definition
 
+Coordinates_MyPVRProviders.xml:
+- add the provider list, its layouts and its scrollbar, taking the geometry of the timers list so the PVR windows stay of a piece
+- draw each row's icon from the item itself, which is a provider logo at the top level and a channel or recording icon below it
+
 Coordinates_MyPVRRecordings.xml:
 - read the watched state from the named expression rather than repeating it at twenty-four sites
 
@@ -838,6 +843,7 @@ Includes.xml:
 - pull in Includes_Maps.xml
 - load the generated includes only while the add-on is enabled, and the static fallback otherwise, as a disabled add-on leaves its last build behind
 - point at the regeneration notes for the fallback in the repository documentation
+- pull in Coordinates_MyPVRProviders.xml
 - stop loading Coordinates_DialogSeekBar.xml, which is removed
 
 Includes_DialogSettings.xml:
@@ -854,6 +860,7 @@ Includes_Maps.xml:
 
 Includes_SubMenu.xml:
 - drop the HasAddon conjunct that AddonIsEnabled already implies
+- add the provider window's sub menu, listing the other PVR sections as every PVR window does; nothing points into providers, which is reached from the TV and radio listings
 
 Includes_Time_NowPlaying.xml:
 - hide duration based information during live playback
@@ -887,6 +894,10 @@ MusicVisualisation.xml:
 MyPVRGuide.xml:
 - add extra title info to the episode name fadelabel
 - separate genres with commas
+
+MyPVRProviders.xml:
+- add the window Kodi has had since the provider browser landed and the skin never drew, so the entry in the TV and radio listings opens something
+- read the provider name core writes into control 29 through a hidden label, as the other PVR windows do for their group name
 
 MyWeather.xml:
 - add the last update time to the provider label
@@ -925,6 +936,7 @@ Variables.xml:
 - separate genres, directors and writers with commas
 - name the two widgets on screen setting as the TwoRowWidgets expression, which is what every two row test and layout condition reads
 - add the channel label variables the fullscreen OSD and the guide dialog have called since 2023 without them existing, split per site as the dialog reads its channel from the guide container
+- name the provider window's heading, breadcrumb and secondary column
 
 Variables_Settings.xml:
 - follow the renamed window property and the moved control ids in the dialog help texts

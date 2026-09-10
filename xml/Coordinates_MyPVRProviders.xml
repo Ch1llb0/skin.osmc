@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="MyPVRProviders_coords1">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRProviders_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRProviders_coords1_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRProviders_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRProviders_coords1_4:3</include>
+	</include>
+	<include name="MyPVRProviders_coords1_16:9">
+		<left>120</left>
+		<centertop>50%</centertop>
+		<width>1680</width>
+		<height>648</height>
+	</include>
+	<include name="MyPVRProviders_coords1_21:9">
+		<left>120</left>
+		<centertop>50%</centertop>
+		<width>2320</width>
+		<height>648</height>
+	</include>
+	<include name="MyPVRProviders_coords1_21:9_masked">
+		<left>120</left>
+		<centertop>50%</centertop>
+		<width>2320</width>
+		<height>648</height>
+	</include>
+	<include name="MyPVRProviders_coords1_4:3">
+		<left>120</left>
+		<centertop>50%</centertop>
+		<width>1200</width>
+		<height>648</height>
+	</include>
+	
+	<include name="MyPVRProviders_coords2">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRProviders_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRProviders_coords2_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRProviders_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRProviders_coords2_4:3</include>
+	</include>
+	<include name="MyPVRProviders_coords2_16:9">
+		<itemlayout width="1680" height="108">
+			<!-- Provider icon -->
+			<control type="image">
+				<left>0</left>
+				<top>24</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+			</control>
+
+			<!-- Name -->
+			<control type="label">
+				<left>90</left>
+				<top>30</top>
+				<width>1270</width>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+
+			<!-- Channel number, item count or date -->
+			<control type="label">
+				<left>1380</left>
+				<top>30</top>
+				<width>300</width>
+				<align>right</align>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[PVRProviderItemInfo]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="MyPVRProviders_coords2_21:9">
+		<itemlayout width="2320" height="108">
+			<!-- Provider icon -->
+			<control type="image">
+				<left>0</left>
+				<top>24</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+			</control>
+
+			<!-- Name -->
+			<control type="label">
+				<left>90</left>
+				<top>30</top>
+				<width>1910</width>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+
+			<!-- Channel number, item count or date -->
+			<control type="label">
+				<left>2020</left>
+				<top>30</top>
+				<width>300</width>
+				<align>right</align>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[PVRProviderItemInfo]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="MyPVRProviders_coords2_21:9_masked">
+		<itemlayout width="2320" height="108">
+			<!-- Provider icon -->
+			<control type="image">
+				<left>0</left>
+				<top>24</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+			</control>
+
+			<!-- Name -->
+			<control type="label">
+				<left>90</left>
+				<top>30</top>
+				<width>1910</width>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+
+			<!-- Channel number, item count or date -->
+			<control type="label">
+				<left>2020</left>
+				<top>30</top>
+				<width>300</width>
+				<align>right</align>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[PVRProviderItemInfo]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="MyPVRProviders_coords2_4:3">
+		<itemlayout width="1200" height="108">
+			<!-- Provider icon -->
+			<control type="image">
+				<left>0</left>
+				<top>24</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+			</control>
+
+			<!-- Name -->
+			<control type="label">
+				<left>90</left>
+				<top>30</top>
+				<width>790</width>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+
+			<!-- Channel number, item count or date -->
+			<control type="label">
+				<left>900</left>
+				<top>30</top>
+				<width>300</width>
+				<align>right</align>
+				<font>Font33-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[PVRProviderItemInfo]</label>
+			</control>
+		</itemlayout>
+	</include>
+	
+	<include name="MyPVRProviders_coords3">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRProviders_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRProviders_coords3_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRProviders_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRProviders_coords3_4:3</include>
+	</include>
+	<include name="MyPVRProviders_coords3_16:9">
+		<focusedlayout width="1680" height="108">
+			<control type="group">
+				<include content="NonFocusWindowFadeAnimation">
+					<param name="id">50</param>
+				</include>
+
+				<!-- Provider icon -->
+				<control type="image">
+					<left>0</left>
+					<top>24</top>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<!-- Name -->
+				<control type="label">
+					<left>90</left>
+					<top>30</top>
+					<width>1270</width>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scroll>True</scroll>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<!-- Channel number, item count or date -->
+				<control type="label">
+					<left>1380</left>
+					<top>30</top>
+					<width>300</width>
+					<align>right</align>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[PVRProviderItemInfo]</label>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="MyPVRProviders_coords3_21:9">
+		<focusedlayout width="2320" height="108">
+			<control type="group">
+				<include content="NonFocusWindowFadeAnimation">
+					<param name="id">50</param>
+				</include>
+
+				<!-- Provider icon -->
+				<control type="image">
+					<left>0</left>
+					<top>24</top>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<!-- Name -->
+				<control type="label">
+					<left>90</left>
+					<top>30</top>
+					<width>1910</width>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scroll>True</scroll>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<!-- Channel number, item count or date -->
+				<control type="label">
+					<left>2020</left>
+					<top>30</top>
+					<width>300</width>
+					<align>right</align>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[PVRProviderItemInfo]</label>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="MyPVRProviders_coords3_21:9_masked">
+		<focusedlayout width="2320" height="108">
+			<control type="group">
+				<include content="NonFocusWindowFadeAnimation">
+					<param name="id">50</param>
+				</include>
+
+				<!-- Provider icon -->
+				<control type="image">
+					<left>0</left>
+					<top>24</top>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<!-- Name -->
+				<control type="label">
+					<left>90</left>
+					<top>30</top>
+					<width>1910</width>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scroll>True</scroll>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<!-- Channel number, item count or date -->
+				<control type="label">
+					<left>2020</left>
+					<top>30</top>
+					<width>300</width>
+					<align>right</align>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[PVRProviderItemInfo]</label>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="MyPVRProviders_coords3_4:3">
+		<focusedlayout width="1200" height="108">
+			<control type="group">
+				<include content="NonFocusWindowFadeAnimation">
+					<param name="id">50</param>
+				</include>
+
+				<!-- Provider icon -->
+				<control type="image">
+					<left>0</left>
+					<top>24</top>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultPVRProvider.png">$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<!-- Name -->
+				<control type="label">
+					<left>90</left>
+					<top>30</top>
+					<width>790</width>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scroll>True</scroll>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<!-- Channel number, item count or date -->
+				<control type="label">
+					<left>900</left>
+					<top>30</top>
+					<width>300</width>
+					<align>right</align>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[PVRProviderItemInfo]</label>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	
+	<include name="MyPVRProviders_coords4">
+		<include condition="$EXP[NonMaskedCoordinates]">MyPVRProviders_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRProviders_coords4_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">MyPVRProviders_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRProviders_coords4_4:3</include>
+	</include>
+	<include name="MyPVRProviders_coords4_16:9">
+		<left>90</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>608</height>
+	</include>
+	<include name="MyPVRProviders_coords4_21:9">
+		<left>90</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>608</height>
+	</include>
+	<include name="MyPVRProviders_coords4_21:9_masked">
+		<left>90</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>608</height>
+	</include>
+	<include name="MyPVRProviders_coords4_4:3">
+		<left>90</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>608</height>
+	</include>
+
+</includes>

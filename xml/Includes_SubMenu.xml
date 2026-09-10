@@ -42,6 +42,7 @@
 				<include condition="Window.IsVisible(MyPrograms.xml)">SubMenu_MyPrograms</include>
 				<include condition="Window.IsVisible(MyPVRChannels.xml)">SubMenu_MyPVRChannels</include>
 				<include condition="Window.IsVisible(MyPVRGuide.xml)">SubMenu_MyPVRGuide</include>
+				<include condition="Window.IsVisible(MyPVRProviders.xml)">SubMenu_MyPVRProviders</include>
 				<include condition="Window.IsVisible(MyPVRRecordings.xml)">SubMenu_MyPVRRecordings</include>
 				<include condition="Window.IsVisible(MyPVRSearch.xml)">SubMenu_MyPVRSearch</include>
 				<include condition="Window.IsVisible(MyPVRTimers.xml)">SubMenu_MyPVRTimers</include>
@@ -942,6 +943,68 @@
 	</include>
 	
 	<!-- My PVR recordings sub menu -->
+	<include name="SubMenu_MyPVRProviders">
+		<control type="grouplist" id="3001">
+			<include>SubMenu_coords4</include>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onback>50</onback>
+			<include>SubMenuResetScroll</include>
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+			<defaultcontrol always="true">100</defaultcontrol>
+
+			<include content="SubMenuAnimation">
+				<param name="containerID">3001</param>
+			</include>
+
+			<!-- Channels -->
+			<control type="button" id="100">
+				<include>SubMenu_coords5</include>
+				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+				<onclick>SetFocus(10)</onclick>
+				<label>19019</label>
+			</control>
+			<!-- Guide -->
+			<control type="button" id="102">
+				<include>SubMenu_coords5</include>
+				<label>22020</label>
+				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+				<onclick>SetFocus(10)</onclick>
+			</control>
+			<!-- Recordings -->
+			<control type="button" id="103">
+				<include>SubMenu_coords5</include>
+				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+				<onclick>SetFocus(10)</onclick>
+				<label>19163</label>
+			</control>
+			<!-- Timers -->
+			<control type="button" id="104">
+				<include>SubMenu_coords5</include>
+				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+				<onclick>SetFocus(10)</onclick>
+				<label>19040</label>
+			</control>
+			<!-- Search -->
+			<control type="button" id="37">
+				<include>SubMenu_coords5</include>
+				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+				<onclick>SetFocus(50)</onclick>
+				<label>137</label>
+			</control>
+
+			<include>SubMenuControls</include>
+
+		</control>
+	</include>
+
 	<include name="SubMenu_MyPVRRecordings">
 		<control type="grouplist" id="3001">
 			<include>SubMenu_coords4</include>
