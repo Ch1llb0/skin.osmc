@@ -191,6 +191,13 @@
 						<aligny>top</aligny>
 					</control>
 
+					<control type="label" id="13">
+						<include>SettingsSystemInfo_coords5</include>
+						<font>SystemInfo</font>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<aligny>top</aligny>
+					</control>
+
 				</control>
 
 				<!-- Kodi info -->

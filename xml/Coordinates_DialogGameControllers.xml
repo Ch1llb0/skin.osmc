@@ -42,25 +42,25 @@
 		<left>600</left>
 		<top>200</top>
 		<width>560</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	<include name="DialogGameControllers_coords2_21:9">
 		<left>600</left>
 		<top>200</top>
 		<width>880</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	<include name="DialogGameControllers_coords2_21:9_masked">
 		<left>600</left>
 		<top>380</top>
 		<width>880</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	<include name="DialogGameControllers_coords2_4:3">
 		<left>600</left>
 		<top>200</top>
 		<width>320</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	
 	<include name="DialogGameControllers_coords3">
@@ -73,25 +73,25 @@
 		<left>570</left>
 		<top>220</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	<include name="DialogGameControllers_coords3_21:9">
 		<left>570</left>
 		<top>220</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	<include name="DialogGameControllers_coords3_21:9_masked">
 		<left>570</left>
 		<top>400</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	<include name="DialogGameControllers_coords3_4:3">
 		<left>570</left>
 		<top>220</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	
 	<include name="DialogGameControllers_coords4">
@@ -104,25 +104,25 @@
 		<left>1210</left>
 		<top>200</top>
 		<width>560</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	<include name="DialogGameControllers_coords4_21:9">
 		<left>1530</left>
 		<top>200</top>
 		<width>880</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	<include name="DialogGameControllers_coords4_21:9_masked">
 		<left>1530</left>
 		<top>380</top>
 		<width>880</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	<include name="DialogGameControllers_coords4_4:3">
 		<left>970</left>
 		<top>200</top>
 		<width>320</width>
-		<height>654</height>
+		<height>660</height>
 	</include>
 	
 	<include name="DialogGameControllers_coords5">
@@ -135,25 +135,25 @@
 		<left>1180</left>
 		<top>220</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	<include name="DialogGameControllers_coords5_21:9">
 		<left>1500</left>
 		<top>220</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	<include name="DialogGameControllers_coords5_21:9_masked">
 		<left>1500</left>
 		<top>400</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	<include name="DialogGameControllers_coords5_4:3">
 		<left>940</left>
 		<top>220</top>
 		<width>20</width>
-		<height>614</height>
+		<height>620</height>
 	</include>
 	
 	<include name="DialogGameControllers_coords6">
@@ -187,19 +187,19 @@
 	</include>
 	<include name="DialogGameControllers_coords7_16:9">
 		<width>560</width>
-		<height>42</height>
+		<height>66</height>
 	</include>
 	<include name="DialogGameControllers_coords7_21:9">
 		<width>880</width>
-		<height>42</height>
+		<height>66</height>
 	</include>
 	<include name="DialogGameControllers_coords7_21:9_masked">
 		<width>880</width>
-		<height>42</height>
+		<height>66</height>
 	</include>
 	<include name="DialogGameControllers_coords7_4:3">
 		<width>320</width>
-		<height>42</height>
+		<height>66</height>
 	</include>
 	
 	<include name="DialogGameControllers_coords8">

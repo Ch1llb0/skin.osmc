@@ -13,6 +13,8 @@ _New_
 - add spinner to the weather widget while it updates
 - add last update time to the weather window
 - add an option to show two widgets on screen at once
+- add the ungroup button to the video versions manager
+- add the controller image to the peripheral settings dialog
 
 _Improved_
 - allow stepping through subtitles in both directions in the video OSD
@@ -60,6 +62,8 @@ _Fixed_
 - fix rows in the video and music OSD moving nowhere when the button they pointed at was not on screen
 - fix left and right leaving the subtitle stream row in the video OSD instead of moving between its buttons
 - fix the channel label in the fullscreen OSD and the channel guide dialog being blank
+- fix the twelfth line of system information not being shown
+- fix the last row of the game controller lists being cut through
 
 ---
 
@@ -761,6 +765,9 @@ AddonBrowser.xml:
 - build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
 - gate the entry point on the add-on being enabled
 
+Coordinates_DialogGameControllers.xml:
+- give the group title the height of every other row and make both lists ten whole rows, as a list 654 high could not divide into rows of 66 and 42 and cut the bottom one wherever the sum happened to land
+
 Coordinates_DialogPlayerProcessInfo.xml:
 - grow the info panel by two rows and move the debug overlay shortcut down accordingly
 
@@ -769,6 +776,9 @@ Coordinates_DialogSeekBar.xml:
 
 Coordinates_DialogSelect.xml:
 - remove the video version picker layouts, as Kodi v22 removed those windows
+
+Coordinates_DialogSettings.xml:
+- add the controller image coordinates in the column left of the settings list, and move the OSD variant's coordinates up by one to keep them in order of appearance
 
 Coordinates_DialogVideoManager.xml:
 - hide the item sublabel under the generic select dialog, which stacks over the manager in Kodi v22
@@ -817,6 +827,9 @@ DialogPlayerProcessInfo.xml:
 DialogVideoInfo.xml:
 - separate genres, directors and writers with commas
 
+DialogVideoManager.xml:
+- add the ungroup button, which returns a version to the library as a standalone movie; versions only, as it has no effect on extras
+
 Home.xml:
 - build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
 - gate the entry point on the add-on being enabled
@@ -826,6 +839,9 @@ Includes.xml:
 - load the generated includes only while the add-on is enabled, and the static fallback otherwise, as a disabled add-on leaves its last build behind
 - point at the regeneration notes for the fallback in the repository documentation
 - stop loading Coordinates_DialogSeekBar.xml, which is removed
+
+Includes_DialogSettings.xml:
+- draw the controller being configured beside the settings, which the peripheral settings dialog fills through control 100
 
 Includes_Home.xml:
 - read the home submenu from skinshortcuts-mainmenu-submenu, as v3 names a menu's submenu include after that menu
@@ -882,6 +898,9 @@ SettingsCategory.xml:
 
 SettingsProfile.xml:
 - style the scrollbar through the BackgroundOverlayStyleScrollbarVertical include, as the two textures were read as variables and resolved to empty paths, leaving the scrollbar with no track and no bar
+
+SettingsSystemInfo.xml:
+- add the twelfth information line, which the window has offered since a core change and the skin never drew
 
 SkinSettings.xml:
 - build with type=buildxml and manage with type=manage,menu=mainmenu, as v3 takes the menu from the configuration rather than from arguments

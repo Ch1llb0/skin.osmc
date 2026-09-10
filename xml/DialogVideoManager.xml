@@ -125,6 +125,13 @@
 					<visible>Window.IsActive(managevideoversions)</visible>
 				</control>
 				
+				<!-- Ungroup Version Button -->
+				<control type="button" id="29">
+					<width>Auto</width>
+					<label>40046</label>
+					<visible>Window.IsActive(managevideoversions)</visible>
+				</control>
+				
 				<!-- Remove Button -->
 				<control type="button" id="26">
 					<width>Auto</width>
