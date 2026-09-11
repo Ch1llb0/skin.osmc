@@ -25,6 +25,7 @@
 				<aligny>top</aligny>
 				<label>$PARAM[heading]</label>
 				<font>Font33</font>
+				<scrollspeed>55</scrollspeed>
 				<include>WindowFadeAnimation</include>
 				<animation effect="slide" time="0" end="0,33" condition="String.IsEmpty(Control.GetLabel(9999)) | ![$PARAM[secondary]]">Conditional</animation>
 			</control>
@@ -36,6 +37,7 @@
 				<aligny>top</aligny>
 				<label>$VAR[HeadingLabelSecondary]</label>
 				<font>Font33-light</font>
+				<scrollspeed>55</scrollspeed>
 				<include>WindowFadeAnimation</include>
 				<visible>$PARAM[secondary]</visible>
 			</control>
@@ -119,6 +121,7 @@
 							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]</label>
 							<label>$INFO[VideoPlayer.EpisodeName]</label>
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + !String.IsEmpty(VideoPlayer.EpisodeName) + !String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -128,6 +131,7 @@
 							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<label>$INFO[VideoPlayer.EpisodeName]</label>
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + !String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -137,6 +141,7 @@
 							<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]</label>
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + String.IsEmpty(VideoPlayer.EpisodeName) + !String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -145,6 +150,7 @@
 							<align>right</align>
 							<label>$VAR[SEplaying,, &#8226; ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<!-- Now Playing - Live TV -->
@@ -155,6 +161,7 @@
 							<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</label>
 							<label>$INFO[VideoPlayer.Title] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</label>
 							<visible>!Player.HasGame + Player.HasVideo + Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -164,6 +171,7 @@
 							<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</label>
 							<label>$INFO[VideoPlayer.Title]</label>
 							<visible>!Player.HasGame + Player.HasVideo + Pvr.IsPlayingTv + !VideoPlayer.HasEpg + !String.IsEqual(VideoPlayer.ChannelName,VideoPlayer.Title)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -172,6 +180,7 @@
 							<align>right</align>
 							<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</label>
 							<visible>!Player.HasGame + Player.HasVideo + Pvr.IsPlayingTv + !VideoPlayer.HasEpg + String.IsEqual(VideoPlayer.ChannelName,VideoPlayer.Title)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<!-- Now Playing - Musicvideo -->
@@ -182,6 +191,7 @@
 							<label>$INFO[VideoPlayer.Title]</label>
 							<label>$INFO[VideoPlayer.Artist,[LIGHT],:  [/LIGHT]]$INFO[VideoPlayer.Album]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + !String.IsEmpty(VideoPlayer.Artist) + !String.IsEmpty(VideoPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -191,6 +201,7 @@
 							<label>$INFO[VideoPlayer.Title]</label>
 							<label>$INFO[VideoPlayer.Artist,[LIGHT],[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + !String.IsEmpty(VideoPlayer.Artist) + String.IsEmpty(VideoPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -200,6 +211,7 @@
 							<label>$INFO[VideoPlayer.Title]</label>
 							<label>$INFO[VideoPlayer.Album]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + String.IsEmpty(VideoPlayer.Artist) + !String.IsEmpty(VideoPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -208,6 +220,7 @@
 							<align>right</align>
 							<label>$INFO[VideoPlayer.Title]</label>
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + String.IsEmpty(VideoPlayer.Artist) + String.IsEmpty(VideoPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 
 						<!-- Now Playing - Audio -->
@@ -218,6 +231,7 @@
 							<label>$INFO[MusicPlayer.TrackNumber,[LIGHT],. [/LIGHT]]$INFO[MusicPlayer.Title]</label>
 							<label>$INFO[MusicPlayer.Artist,[LIGHT],:  [/LIGHT]]$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + !String.IsEmpty(MusicPlayer.Artist) + !String.IsEmpty(MusicPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -227,6 +241,7 @@
 							<label>$INFO[MusicPlayer.TrackNumber,[LIGHT],. [/LIGHT]]$INFO[MusicPlayer.Title]</label>
 							<label>$INFO[MusicPlayer.Artist,[LIGHT],[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + !String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -236,6 +251,7 @@
 							<label>$INFO[MusicPlayer.TrackNumber,[LIGHT],. [/LIGHT]]$INFO[MusicPlayer.Title]</label>
 							<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + String.IsEmpty(MusicPlayer.Artist) + !String.IsEmpty(MusicPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -244,6 +260,7 @@
 							<align>right</align>
 							<label>$INFO[MusicPlayer.TrackNumber,[LIGHT],. [/LIGHT]]$INFO[MusicPlayer.Title]</label>
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<!-- Now Playing - Radio -->
@@ -254,6 +271,7 @@
 							<label>$INFO[MusicPlayer.ChannelName]$INFO[MusicPlayer.ChannelNumberLabel, (,)]</label>
 							<label>$INFO[MusicPlayer.Title] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</label>
 							<visible>!Player.HasGame + Player.HasAudio + Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -263,6 +281,7 @@
 							<label>$INFO[MusicPlayer.ChannelName]$INFO[MusicPlayer.ChannelNumberLabel, (,)]</label>
 							<label>$INFO[MusicPlayer.Title]</label>
 							<visible>!Player.HasGame + Player.HasAudio + Pvr.IsPlayingRadio + !VideoPlayer.HasEpg + !String.IsEqual(MusicPlayer.ChannelName,MusicPlayer.Title)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
@@ -271,6 +290,7 @@
 							<align>right</align>
 							<label>$INFO[MusicPlayer.ChannelName]$INFO[MusicPlayer.ChannelNumberLabel, (,)]</label>
 							<visible>!Player.HasGame + Player.HasAudio + Pvr.IsPlayingRadio + !VideoPlayer.HasEpg + String.IsEqual(MusicPlayer.ChannelName,MusicPlayer.Title)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<!-- Now Playing - Progress -->

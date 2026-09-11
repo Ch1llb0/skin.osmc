@@ -70,6 +70,7 @@
 						<include>MyPVRSearch_coords6</include>
 						<label>$INFO[Container(50).ListItem.Title]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
+						<scrollspeed>55</scrollspeed>
 					</control>
 
 					<control type="group">
@@ -121,6 +122,7 @@
 						<control type="fadelabel">
 							<include>MyPVRSearch_coords13</include>
 							<font>Font30</font>
+							<scrollspeed>49</scrollspeed>
 							<align>right</align>
 							<label>$INFO[Container(50).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(11).ListItem.NextStartTime, (,)]</label>
 						</control>

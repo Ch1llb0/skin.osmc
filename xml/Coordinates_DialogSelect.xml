@@ -491,6 +491,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 			</control>
@@ -558,6 +559,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 			</control>
@@ -625,6 +627,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 			</control>
@@ -692,6 +695,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 			</control>
@@ -948,6 +952,7 @@
 				<align>center</align>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<include content="NonFocusDialogFadeAnimation">
 					<param name="id">10811</param>
 				</include>
@@ -985,6 +990,7 @@
 				<align>center</align>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<include content="NonFocusDialogFadeAnimation">
 					<param name="id">10811</param>
 				</include>
@@ -1022,6 +1028,7 @@
 				<align>center</align>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<include content="NonFocusDialogFadeAnimation">
 					<param name="id">10811</param>
 				</include>
@@ -1059,6 +1066,7 @@
 				<align>center</align>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<include content="NonFocusDialogFadeAnimation">
 					<param name="id">10811</param>
 				</include>

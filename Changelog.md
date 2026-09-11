@@ -16,6 +16,7 @@ _New_
 - add the ungroup button to the video versions manager
 - add the controller image to the peripheral settings dialog
 - add the PVR providers window, which lists the broadcasters behind the channels and recordings
+- add an option to show titles on the artwork, in the wall views and on the home widgets, from the skin settings or from a media view's sub menu while a wall view is on screen
 
 _Improved_
 - allow stepping through subtitles in both directions in the video OSD
@@ -40,6 +41,9 @@ _Improved_
 - place the line under a focused row with the control rather than with empty rows in its texture, so it stays sharp however the screen is scaled
 - stop windows and dialogs drawing a full screen fanart layer while there is no fanart to draw
 - clear the screen on the windows that fill it, rather than drawing each frame over the one before
+- scroll every label at a speed set by its own font size rather than the single speed Kodi applies to all of them, so small text no longer races past and large text no longer crawls
+- return to the sub menu when the view picker is left with back, rather than closing both at once
+- offer the artwork titles setting, and the watched and listened to indicator settings, from a media view's own sub menu as well as from the skin settings, so a view can be adjusted without leaving it
 
 _Fixed_
 - fix audio channel labels claiming layouts a channel count cannot identify
@@ -71,6 +75,7 @@ _Fixed_
 - fix the last row of the game controller lists being cut through
 - fix drop shadows on the home menu icons and the PVR timer icon, which the icon set does not use elsewhere
 - fix the PVR providers list leaving the focused row unmarked, which every other list in the skin underlines
+- fix the focused status badge in the music wall low view being mis-sized and mis-placed at 16:9, where a width was written as a left offset
 
 ---
 
@@ -642,6 +647,7 @@ strings.po:
 - reword the reset button to name everything it clears, as it removes every menu and every view selection rather than only the main menu items (31399)
 - add string for the two widgets on screen setting (31447)
 - add string describing what the two widgets on screen setting does (31448)
+- add string for the artwork titles setting (31449)
 
 backgrounds.xml:
 - add the background list, splitting the v2 browse behaviour into the two v3 types the skin renders: browse for a single image, multi for a folder
@@ -692,6 +698,8 @@ template.xml:
 - remove the v2 widget templates, carried into templates.xml
 
 templates.xml:
+- carry the title font, scroll speed and spacing in the layout presets, beside the strip height and slide they belong with
+- pass them at all eight overlay bar call sites, four single row and four two row
 - add the widget templates in the v3 template language, keeping the generated controls unchanged so the widgets render as before
 - address the main menu item and the widget as $PARENT[index] and $PROPERTY[index], replacing the v2 auto-rootID and id pair
 - let v3 skip a template for any item with no widgets, rather than gating on a property no template condition can see
@@ -747,6 +755,7 @@ mainmenu.DATA.xml and the seventeen other seed files:
 - remove the v2 seed files, carried into menus.xml
 
 script-skinshortcuts-static.xml:
+- pass the same title metrics at all eighty overlay bar call sites, so the fallback the skin falls back to matches what the template builds
 - show the widget reloading spinner while the weather widget updates
 - separate genres with commas in the widget details
 - rebuild the no-addon fallback from a v3 build of this skin's own configuration, replacing the v2 build it still carried
@@ -814,6 +823,11 @@ Coordinates_VideoOSD.xml:
 Coordinates_Viewtype538.xml:
 - pass the watched status bar and its overlay in the order MediaViewImageNF reads them, matching Viewtype536
 
+Coordinates_Viewtype53.xml, Coordinates_Viewtype531.xml, Coordinates_Viewtype532.xml, Coordinates_Viewtype533.xml, Coordinates_Viewtype534.xml, Coordinates_Viewtype535.xml, Coordinates_Viewtype536.xml, Coordinates_Viewtype537.xml, Coordinates_Viewtype538.xml, Coordinates_Viewtype539.xml:
+- hand the title strip the size of the strip the view already draws, once for the item layout and once for the focused one, so the title and its strip grow with the artwork as the focus animation runs
+- call the strip from all eight layouts of each view, after the artwork, and inside the group the focus zoom is on, so it is carried by that animation rather than snapping to the focused size beside it
+- give the focused badge in the music wall low view a width, which was written as a left offset on the 16:9 variant alone
+
 Coordinates_script-skinshortcuts.xml:
 - collapse the arrow mirror pairs into one control each, keyed on the button rather than on the list item
 
@@ -847,6 +861,12 @@ DialogVideoInfo.xml:
 DialogVideoManager.xml:
 - add the ungroup button, which returns a version to the library as a standalone movie; versions only, as it has no effect on extras
 
+Every file with a scrolling label:
+- set a scroll speed from the font, at the rate the skin already scrolled its largest one, which works out at about one and three quarter times the font size a second; Font36 is left alone, as Kodi's own default already matches it, and the three wall fadelabels that scrolled at the largest font's speed come down to their own
+
+Font.xml:
+- add six sizes below Font25, one per strip height the wall views and the home widgets use, so a title fits the strip it is in rather than the strip growing to fit the title
+
 Home.xml:
 - build with type=buildxml, as v3 takes the menu from the configuration rather than from arguments
 - gate the entry point on the add-on being enabled
@@ -871,6 +891,9 @@ Includes_Maps.xml:
 - label ambiguous channel counts with every layout they may represent, as a channel count cannot identify one
 
 Includes_SubMenu.xml:
+- offer the artwork titles setting in the seven sub menus that carry a view button, shown while a wall view is on screen
+- offer the watched status setting in the video sub menu and the listened to status setting in the music one, beside it, as both change what a view draws over its artwork
+- send back from the view picker to the sub menu it was opened from rather than out to the list, which closed both
 - drop the HasAddon conjunct that AddonIsEnabled already implies
 - add the provider window's sub menu, listing the other PVR sections as every PVR window does; nothing points into providers, which is reached from the TV and radio listings
 
@@ -878,6 +901,8 @@ Includes_Time_NowPlaying.xml:
 - hide duration based information during live playback
 
 Includes_Widgets.xml:
+- carry the title in the widget overlay bar, which is the same strip over the same artwork the wall views draw, with the badges slid to the right hand end to make room
+- take the title metrics as parameters, so each widget layout hands over the size of the strip it already draws
 - add widgetOverlayBar, holding the status bar the widget templates repeated four times per widget
 - draw each widget texture once, removing the second byte-identical image control in widget-image
 - default the shared artwork include's parameters
@@ -889,6 +914,9 @@ Includes_Widgets.xml:
 - hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
 
 Includes_Windows_Dialogs.xml:
+- add MediaViewTitleStripNF and MediaViewTitleStripFO, which draw the title over the bottom of the artwork with the status badge to its right, taking their geometry as numbers so each view can hand over the strip size it already has
+- scroll the focused title at the pace the skin scrolls everything else, which is about one and three quarter times the font size a second, rather than the flat sixty pixels a second Kodi falls back to
+- stand the status strip down in the views the title strip serves, as the two occupy the same place
 - draw the window and dialog fanart layers only when there is fanart to draw, and drop the transparent fallback that kept them covering the screen the rest of the time
 - read the home background from backgroundPath, which is where v3 stores the path
 - read the watched state from the named expressions rather than spelling it out
@@ -927,6 +955,7 @@ SettingsSystemInfo.xml:
 - add the twelfth information line, which the window has offered since a core change and the skin never drew
 
 SkinSettings.xml:
+- add the artwork titles setting, beside the other library display toggles
 - build with type=buildxml and manage with type=manage,menu=mainmenu, as v3 takes the menu from the configuration rather than from arguments
 - remove the always show settings link setting
 - gate the entry points on the add-on being enabled, and drop the HasAddon conjunct that implies
@@ -937,6 +966,9 @@ Startup.xml:
 - drop the HideSettings reset, as nothing has read that setting since 2019
 
 Variables.xml:
+- name the pair of conditions that decide whether an item shows a status badge, which four controls repeated between them
+- name the condition for a wall view being on screen, which is where the ten wall views are listed, and read the title setting against it
+- name the widget badge condition, reminders included, so a title makes room for a badge the strip itself does not draw behind
 - replace the fourteen focus variables, one per row height, with focusline and focuslinecenter, as the control now places the line
 - reduce the codec and channel variables to map lookups, keeping the DSD sample rate rows
 - name the watched state, the partially watched series and the per media kind setting gate as expressions, replacing the same test spelled out at forty-three sites across four files

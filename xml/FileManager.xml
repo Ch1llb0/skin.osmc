@@ -81,6 +81,7 @@
 						<align>left</align>
 						<label>$INFO[Container(20).NumItems]$VAR[ContentTypeFileManager20, ,]</label>
 						<font>Font33</font>
+						<scrollspeed>55</scrollspeed>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<visible>!String.IsEmpty(Container(20).NumItems)</visible>
 						<include>VisibleFadeAnimation</include>
@@ -143,6 +144,7 @@
 						<align>right</align>
 						<label>$INFO[Container(21).NumItems]$VAR[ContentTypeFileManager21, ,]</label>
 						<font>Font33</font>
+						<scrollspeed>55</scrollspeed>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<visible>!String.IsEmpty(Container(21).NumItems)</visible>
 						<include>VisibleFadeAnimation</include>

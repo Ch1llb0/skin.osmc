@@ -38,6 +38,7 @@
 					<label>21433</label>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scrollspeed>55</scrollspeed>
 				</control>
 
 				<!-- Rules label -->
@@ -46,6 +47,7 @@
 					<label>21434</label>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scrollspeed>55</scrollspeed>
 				</control>
 
 				<!-- Name Label -->
@@ -54,6 +56,7 @@
 					<label>31048</label>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scrollspeed>55</scrollspeed>
 				</control>
 
 			</control>

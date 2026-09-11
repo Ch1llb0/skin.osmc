@@ -420,6 +420,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$VAR[Label1]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -438,6 +439,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -448,6 +450,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.StartDate] [LIGHT]$INFO[ListItem.StartTime]$INFO[ListItem.Duration, (,)][/LIGHT]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -509,6 +512,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$VAR[Label1]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -527,6 +531,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -537,6 +542,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.StartDate] [LIGHT]$INFO[ListItem.StartTime]$INFO[ListItem.Duration, (,)][/LIGHT]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -598,6 +604,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$VAR[Label1]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -616,6 +623,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -626,6 +634,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.StartDate] [LIGHT]$INFO[ListItem.StartTime]$INFO[ListItem.Duration, (,)][/LIGHT]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -687,6 +696,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$VAR[Label1]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -705,6 +715,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -715,6 +726,7 @@
 					<height>27</height>
 					<font>Font27-light</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.StartDate] [LIGHT]$INFO[ListItem.StartTime]$INFO[ListItem.Duration, (,)][/LIGHT]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>

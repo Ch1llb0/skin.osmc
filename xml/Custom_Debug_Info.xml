@@ -34,6 +34,7 @@
 					<font>font13</font>
 					<align>left</align>
 					<scroll>true</scroll>
+					<scrollspeed>37</scrollspeed>
 					<label>$INFO[System.CurrentControl]$INFO[System.CurrentControlID, (ID: ,)]$INFO[Container.CurrentItem, &#8226; Item: ,]$INFO[ListItem.DBID, &#8226; DBID: ,]</label>
 					<visible>![String.IsEmpty(System.CurrentControl) + String.IsEmpty(System.CurrentControlID) + String.IsEmpty(Container.CurrentItem) + String.IsEmpty(ListItem.DBID)]</visible>
 				</control>
@@ -62,6 +63,7 @@
 					<font>font13</font>
 					<align>left</align>
 					<scroll>true</scroll>
+					<scrollspeed>37</scrollspeed>
 					<label>$INFO[Container.FolderName]</label>
 					<visible>!String.IsEmpty(Container.FolderName)</visible>
 				</control>
@@ -89,6 +91,7 @@
 					<textcolor>FFFF0000</textcolor>
 					<shadowcolor>FF000000</shadowcolor>
 					<font>font13</font>
+					<scrollspeed>37</scrollspeed>
 					<align>left</align>
 					<label>$INFO[Container.FolderPath]</label>
 					<visible>!String.IsEmpty(Container.FolderPath)</visible>
@@ -119,6 +122,7 @@
 					<font>font13</font>
 					<align>left</align>
 					<scroll>true</scroll>
+					<scrollspeed>37</scrollspeed>
 					<label>$INFO[Container.Content]</label>
 					<visible>!String.IsEmpty(Container.Content)</visible>
 				</control>
@@ -137,6 +141,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>$INFO[System.CurrentWindow]</label>
 			</control>
@@ -146,6 +151,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>AddonBrowser.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
@@ -156,6 +162,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>EventLog.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(EventLog.xml)</visible>
@@ -166,6 +173,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>FileManager.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(FileManager.xml)</visible>
@@ -176,6 +184,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Home.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(Home.xml)</visible>
@@ -186,6 +195,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>LoginScreen.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(LoginScreen.xml)</visible>
@@ -196,6 +206,7 @@
 				<textcolor>FF00FF00</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MusicVisualisation.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MusicVisualisation.xml)</visible>
@@ -206,6 +217,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyFavourites.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyFavourites.xml)</visible>
@@ -216,6 +228,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyGames.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyGames.xml)</visible>
@@ -226,6 +239,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyMusicNav.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyMusicNav.xml)</visible>
@@ -236,6 +250,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyMusicPlaylist.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
@@ -246,6 +261,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyMusicPlaylistEditor.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
@@ -256,6 +272,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPics.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPics.xml)</visible>
@@ -266,6 +283,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPlaylist.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPlaylist.xml)</visible>
@@ -276,6 +294,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPrograms.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPrograms.xml)</visible>
@@ -286,6 +305,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPVRChannels.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRChannels.xml)</visible>
@@ -296,6 +316,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPVRGuide.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
@@ -306,6 +327,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPVRRecordings.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
@@ -316,6 +338,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPVRSearch.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRSearch.xml)</visible>
@@ -326,6 +349,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyPVRTimers.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyPVRTimers.xml)</visible>
@@ -336,6 +360,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyVideoNav.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyVideoNav.xml)</visible>
@@ -346,6 +371,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MyWeather.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(MyWeather.xml)</visible>
@@ -356,6 +382,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Settings.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(Settings.xml)</visible>
@@ -366,6 +393,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SettingsCategory.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsCategory.xml)</visible>
@@ -376,6 +404,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SettingsProfile.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsProfile.xml)</visible>
@@ -386,6 +415,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SettingsScreenCalibration.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsScreenCalibration.xml)</visible>
@@ -396,6 +426,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SettingsSystemInfo.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SettingsSystemInfo.xml)</visible>
@@ -406,6 +437,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SkinSettings.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(SkinSettings.xml)</visible>
@@ -416,6 +448,7 @@
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>VideoFullScreen.xml $INFO[Container.Viewmode,(,]$INFO[Container.SortMethod, &#8226; ,]$INFO[Container.SortOrder, &#8226; ,)]</label>
 				<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
@@ -427,6 +460,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_AutoMusicVis.xml</label>
 				<visible>Window.IsVisible(1115)</visible>
@@ -437,6 +471,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Backup.xml</label>
 				<visible>Window.IsVisible(1104)</visible>
@@ -447,6 +482,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Cache_Progress.xml</label>
 				<visible>Window.IsVisible(1100)</visible>
@@ -457,6 +493,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Confirm_Reset_Skin_Settings.xml</label>
 				<visible>Window.IsVisible(1107)</visible>
@@ -467,6 +504,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Customization.xml</label>
 				<visible>Window.IsVisible(1103)</visible>
@@ -477,6 +515,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_DialogMasking.xml</label>
 				<visible>Window.IsVisible(1105)</visible>
@@ -487,6 +526,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Disabled_Add-on.xml</label>
 				<visible>Window.IsVisible(1102)</visible>
@@ -497,6 +537,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Skin_Shortcuts_Help.xml</label>
 				<visible>Window.IsVisible(1106)</visible>
@@ -507,6 +548,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Custom_Welcome.xml</label>
 				<visible>Window.IsVisible(1101)</visible>
@@ -517,6 +559,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogAddonInfo.xml</label>
 				<visible>Window.IsVisible(DialogAddonInfo.xml)</visible>
@@ -527,6 +570,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogAddonSettings.xml</label>
 				<visible>Window.IsVisible(DialogAddonSettings.xml)</visible>
@@ -537,6 +581,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogBusy.xml</label>
 				<visible>Window.IsVisible(DialogBusy.xml)</visible>
@@ -547,6 +592,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogButtonMenu.xml</label>
 				<visible>Window.IsVisible(DialogButtonMenu.xml)</visible>
@@ -557,6 +603,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogColorPicker.xml</label>
 				<visible>Window.IsVisible(DialogColorPicker.xml)</visible>
@@ -567,6 +614,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogConfirm.xml</label>
 				<visible>Window.IsVisible(DialogConfirm.xml)</visible>
@@ -577,6 +625,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogContextMenu.xml</label>
 				<visible>Window.IsVisible(DialogContextMenu.xml)</visible>
@@ -587,6 +636,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogExtendedProgressBar.xml</label>
 				<visible>Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
@@ -597,6 +647,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogFavourites.xml</label>
 				<visible>Window.IsVisible(DialogFavourites.xml)</visible>
@@ -607,6 +658,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogFullScreenInfo.xml</label>
 				<visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
@@ -617,6 +669,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogGameControllers.xml</label>
 				<visible>Window.IsVisible(DialogGameControllers.xml)</visible>
@@ -627,6 +680,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogKeyboard.xml</label>
 				<visible>Window.IsVisible(DialogKeyboard.xml)</visible>
@@ -637,6 +691,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogMediaSource.xml</label>
 				<visible>Window.IsVisible(DialogMediaSource.xml)</visible>
@@ -647,6 +702,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogMusicInfo.xml</label>
 				<visible>Window.IsVisible(DialogMusicInfo.xml)</visible>
@@ -657,6 +713,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogNotification.xml</label>
 				<visible>Window.IsVisible(DialogNotification.xml)</visible>
@@ -667,6 +724,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogNumeric.xml</label>
 				<visible>Window.IsVisible(DialogNumeric.xml)</visible>
@@ -677,6 +735,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPictureInfo.xml</label>
 				<visible>Window.IsVisible(DialogPictureInfo.xml)</visible>
@@ -687,6 +746,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPlayerProcessInfo.xml</label>
 				<visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
@@ -697,6 +757,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRChannelGuide.xml</label>
 				<visible>Window.IsVisible(DialogPVRChannelGuide.xml)</visible>
@@ -707,6 +768,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRChannelManager.xml</label>
 				<visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
@@ -717,6 +779,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRChannelsOSD.xml</label>
 				<visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
@@ -727,6 +790,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRGroupManager.xml</label>
 				<visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
@@ -737,6 +801,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRGuideControls.xml</label>
 				<visible>Window.IsVisible(DialogPVRGuideControls.xml)</visible>
@@ -747,6 +812,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRGuideSearch.xml</label>
 				<visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
@@ -757,6 +823,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogPVRInfo.xml</label>
 				<visible>Window.IsVisible(DialogPVRInfo.xml)</visible>
@@ -767,6 +834,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogSeekbar.xml</label>
 				<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
@@ -777,6 +845,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogSelect.xml</label>
 				<visible>Window.IsVisible(DialogSelect.xml)</visible>
@@ -787,6 +856,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogSettings.xml</label>
 				<visible>Window.IsVisible(DialogSettings.xml)</visible>
@@ -797,6 +867,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogSlider.xml</label>
 				<visible>Window.IsVisible(DialogSlider.xml)</visible>
@@ -807,6 +878,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogSubtitles.xml</label>
 				<visible>Window.IsVisible(DialogSubtitles.xml)</visible>
@@ -817,6 +889,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogTextViewer.xml</label>
 				<visible>Window.IsVisible(DialogTextViewer.xml)</visible>
@@ -827,6 +900,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogVideoInfo.xml</label>
 				<visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
@@ -837,6 +911,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogVideoManager.xml</label>
 				<visible>Window.IsVisible(DialogVideoManager.xml)</visible>
@@ -847,6 +922,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>DialogVolumeBar.xml</label>
 				<visible>Window.IsVisible(DialogVolumeBar.xml)</visible>
@@ -857,6 +933,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>FileBrowser.xml</label>
 				<visible>Window.IsVisible(FileBrowser.xml)</visible>
@@ -867,6 +944,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>GameOSD.xml</label>
 				<visible>Window.IsVisible(GameOSD.xml)</visible>
@@ -877,6 +955,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>MusicOSD.xml</label>
 				<visible>Window.IsVisible(MusicOSD.xml)</visible>
@@ -887,6 +966,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>PlayerControls.xml</label>
 				<visible>Window.IsVisible(PlayerControls.xml)</visible>
@@ -897,6 +977,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>Pointer.xml</label>
 				<visible>Window.IsVisible(Pointer.xml)</visible>
@@ -907,6 +988,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>script-skinshortcuts.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-skinshortcuts.xml)</visible>
@@ -917,6 +999,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>script-upnext-stillwatching.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-stillwatching.xml)</visible>
@@ -927,6 +1010,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>script-upnext-stillwatching-simple.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-stillwatching-simple.xml)</visible>
@@ -937,6 +1021,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>script-upnext-upnext.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-upnext.xml)</visible>
@@ -947,6 +1032,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>script-upnext-upnext-simple.xml</label>
 				<visible>String.IsEqual(Window(10000).Property(scriptdialog),script-upnext-upnext-simple.xml)</visible>
@@ -957,6 +1043,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SlideShow.xml</label>
 				<visible>Window.IsVisible(SlideShow.xml)</visible>
@@ -967,6 +1054,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SmartPlaylistEditor.xml</label>
 				<visible>Window.IsVisible(SmartPlaylistEditor.xml)</visible>
@@ -977,6 +1065,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>SmartPlaylistRule.xml</label>
 				<visible>Window.IsVisible(SmartPlaylistRule.xml)</visible>
@@ -987,6 +1076,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>VideoOSD.xml</label>
 				<visible>Window.IsVisible(VideoOSD.xml)</visible>
@@ -997,6 +1087,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>VideoOSDBookmarks.xml</label>
 				<visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible>
@@ -1007,6 +1098,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>VideoOSDSettings.xml</label>
 				<visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
@@ -1017,6 +1109,7 @@
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
+				<scrollspeed>37</scrollspeed>
 				<align>right</align>
 				<label>VisualisationPresetList.xml</label>
 				<visible>Window.IsVisible(VisualisationPresetList.xml)</visible>

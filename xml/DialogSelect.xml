@@ -55,6 +55,7 @@
 				<control type="fadelabel">
 					<include>DialogVideoInfo_coords2</include>
 					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
 					<align>center</align>
 					<label>$LOCALIZE[35255] $INFO[Control.GetLabel(10823)]</label>
 					<textcolor>$VAR[TextColorNF]</textcolor>

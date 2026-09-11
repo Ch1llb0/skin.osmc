@@ -366,6 +366,7 @@
 					<width>282</width>
 					<height>69</height>
 					<font>Font33-bold</font>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -427,6 +428,7 @@
 					<width>282</width>
 					<height>69</height>
 					<font>Font33-bold</font>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -488,6 +490,7 @@
 					<width>282</width>
 					<height>69</height>
 					<font>Font33-bold</font>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -549,6 +552,7 @@
 					<width>282</width>
 					<height>69</height>
 					<font>Font33-bold</font>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -909,6 +913,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-bold</font>
+				<scrollspeed>55</scrollspeed>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<include content="NonFocusWindowFadeAnimation">
@@ -995,6 +1000,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-bold</font>
+				<scrollspeed>55</scrollspeed>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<include content="NonFocusWindowFadeAnimation">
@@ -1081,6 +1087,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-bold</font>
+				<scrollspeed>55</scrollspeed>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<include content="NonFocusWindowFadeAnimation">
@@ -1167,6 +1174,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-bold</font>
+				<scrollspeed>55</scrollspeed>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<include content="NonFocusWindowFadeAnimation">

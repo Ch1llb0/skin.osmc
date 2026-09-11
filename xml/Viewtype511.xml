@@ -81,18 +81,21 @@
 				<control type="fadelabel">
 					<include>Viewtype511_coords9</include>
 					<font>Font42</font>
+					<scrollspeed>71</scrollspeed>
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 				<control type="fadelabel">
 					<include>Viewtype511_coords10</include>
 					<font>Font33</font>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Title]</label>
 				</control>
 				<control type="fadelabel">
 					<include>Viewtype511_coords11</include>
 					<font>Font30</font>
+					<scrollspeed>49</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[SEListView]</label>
 				</control>

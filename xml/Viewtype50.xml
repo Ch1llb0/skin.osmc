@@ -99,18 +99,21 @@
 				<control type="fadelabel">
 					<include>Viewtype50_coords2</include>
 					<font>Font42</font>
+					<scrollspeed>71</scrollspeed>
 					<label>$INFO[ListItem.Album]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT]]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 				<control type="fadelabel">
 					<include>Viewtype50_coords3</include>
 					<font>Font33</font>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Artist]</label>
 				</control>
 				<control type="fadelabel">
 					<include>Viewtype50_coords4</include>
 					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.UserRating,$LOCALIZE[38018]: ,]</label>
 					<visible>Skin.HasSetting(UserRating)</visible>

@@ -78,6 +78,7 @@
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[19141]: ,]</label>
 				<font>Font33</font>
+				<scrollspeed>55</scrollspeed>
 			</control>
 
 			<!-- List -->

@@ -403,6 +403,7 @@
 				<control type="fadelabel" id="1">
 					<include>VideoFullScreen_coords27</include>
 					<font>Font33</font>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[VideoPlayerTitle]</label>
 					<visible>!Pvr.IsPlayingTv</visible>
@@ -413,6 +414,7 @@
 				<control type="fadelabel" id="1">
 					<include>VideoFullScreen_coords28</include>
 					<font>Font33</font>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[VideoPlayerTitle]</label>
 					<visible>Pvr.IsPlayingTv</visible>
@@ -423,6 +425,7 @@
 				<control type="fadelabel" id="1">
 					<include>VideoFullScreen_coords29</include>
 					<font>Font33-bold</font>
+					<scrollspeed>55</scrollspeed>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[PVRChannelLabel]</label>
@@ -491,6 +494,7 @@
 							<label>$INFO[VideoPlayer.Artist,[LIGHT],: [/LIGHT]]$INFO[VideoPlayer.Album]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 							<visible>![String.IsEmpty(VideoPlayer.Album) + String.IsEmpty(VideoPlayer.Artist)]</visible>
 							<include>VisibleFadeAnimation</include>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<!-- Genre -->
@@ -498,6 +502,7 @@
 							<label>$INFO[VideoPlayer.Genre(comma),[LIGHT],[/LIGHT]]</label>
 							<visible>!String.IsEmpty(VideoPlayer.Genre)</visible>
 							<include>VisibleFadeAnimation</include>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 					</control>

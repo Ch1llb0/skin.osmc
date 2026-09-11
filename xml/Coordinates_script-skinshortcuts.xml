@@ -91,6 +91,7 @@
 				<width>285</width>
 				<height>66</height>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
@@ -131,6 +132,7 @@
 				<width>285</width>
 				<height>66</height>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
@@ -171,6 +173,7 @@
 				<width>285</width>
 				<height>66</height>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
@@ -211,6 +214,7 @@
 				<width>285</width>
 				<height>66</height>
 				<scroll>True</scroll>
+				<scrollspeed>55</scrollspeed>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>

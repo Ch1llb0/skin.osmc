@@ -206,6 +206,7 @@
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 
@@ -256,6 +257,7 @@
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 
@@ -306,6 +308,7 @@
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 
@@ -356,6 +359,7 @@
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 

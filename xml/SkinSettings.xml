@@ -1062,6 +1062,14 @@
 							<onclick>Skin.ToggleSetting(UserRating)</onclick>
 							<selected>Skin.HasSetting(UserRating)</selected>
 						</control>
+						<!-- Show titles on artwork -->
+						<control type="radiobutton" id="623">
+							<include>SkinSettings_coords17</include>
+							<font>Font33</font>
+							<label>31449</label>
+							<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+							<selected>Skin.HasSetting(ArtworkTitles)</selected>
+						</control>
 						<!-- Adjust representation of video duration -->
 						<control type="button" id="611">
 							<include>SkinSettings_coords16</include>

@@ -484,6 +484,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -502,6 +503,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,: ][/LIGHT]$INFO[ListItem.Title]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -512,6 +514,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$LOCALIZE[19055]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>String.IsEmpty(ListItem.StartTime) + String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.ChannelName)</visible>
@@ -523,6 +526,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,: ][/LIGHT]$INFO[ListItem.NextTitle]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
@@ -535,6 +539,7 @@
 					<font>Font48</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -583,6 +588,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -601,6 +607,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,: ][/LIGHT]$INFO[ListItem.Title]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -612,6 +619,7 @@
 					<font>Font27</font>
 					<label>$LOCALIZE[19055]</label>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>String.IsEmpty(ListItem.StartTime) + String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.ChannelName)</visible>
 				</control>
@@ -622,6 +630,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,: ][/LIGHT]$INFO[ListItem.NextTitle]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
@@ -634,6 +643,7 @@
 					<font>Font48</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -682,6 +692,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -700,6 +711,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,: ][/LIGHT]$INFO[ListItem.Title]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -710,6 +722,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$LOCALIZE[19055]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>String.IsEmpty(ListItem.StartTime) + String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.ChannelName)</visible>
@@ -721,6 +734,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,: ][/LIGHT]$INFO[ListItem.NextTitle]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -732,6 +746,7 @@
 					<font>Font48</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -780,6 +795,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelName]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -798,6 +814,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,: ][/LIGHT]$INFO[ListItem.Title]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
@@ -808,6 +825,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$LOCALIZE[19055]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>String.IsEmpty(ListItem.StartTime) + String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.ChannelName)</visible>
@@ -819,6 +837,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,: ][/LIGHT]$INFO[ListItem.NextTitle]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
@@ -831,6 +850,7 @@
 					<font>Font48</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>81</scrollspeed>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>

@@ -2216,3 +2216,8 @@ msgstr ""
 msgctxt "#31448"
 msgid "Show two of a menu entry's widgets at once, one above the other. Up and down move between them and page on to the next two. Entries with only one widget set keep the larger single widget."
 msgstr ""
+
+#: /SkinSettings.xml
+msgctxt "#31449"
+msgid "Show titles on artwork"
+msgstr ""

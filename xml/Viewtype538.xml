@@ -16,6 +16,7 @@
 				<control type="fadelabel">
 					<include>Viewtype538_coords2</include>
 					<font>Font42</font>
+					<scrollspeed>71</scrollspeed>
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Label1]</label>
@@ -26,6 +27,7 @@
 				<control type="fadelabel">
 					<include>Viewtype538_coords3</include>
 					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]</label>
@@ -37,6 +39,7 @@
 				<control type="fadelabel">
 					<include>Viewtype538_coords4</include>
 					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$INFO[ListItem.UserRating,$LOCALIZE[38018]: ,]</label>
@@ -48,6 +51,7 @@
 				<control type="fadelabel">
 					<include>Viewtype538_coords5</include>
 					<font>Font42</font>
+					<scrollspeed>71</scrollspeed>
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Label1]</label>

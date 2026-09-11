@@ -35,13 +35,14 @@
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Label1]</label>
-					<scrollspeed>120</scrollspeed>
+					<scrollspeed>71</scrollspeed>
 				</control>
 
 				<!-- Details -->
 				<control type="fadelabel">
 					<include>Viewtype534_coords6</include>
 					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]</label>

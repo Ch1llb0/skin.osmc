@@ -68,6 +68,7 @@
 			<control type="fadelabel">
 				<include>DialogColorPicker_coords5</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>$INFO[Container(6).ListItem.Label]$INFO[Container(6).ListItem.Label2, (#,)]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>

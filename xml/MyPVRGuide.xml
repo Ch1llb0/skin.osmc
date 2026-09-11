@@ -99,6 +99,7 @@
 						<control type="fadelabel">
 							<include>MyPVRGuide_coords10</include>
 							<font>Font33-bold</font>
+							<scrollspeed>55</scrollspeed>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
@@ -109,11 +110,13 @@
 							<label>$INFO[ListItem.TitleExtraInfo]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>!String.IsEmpty(ListItem.EpisodeName)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 						
 						<control type="fadelabel">
 							<include>MyPVRGuide_coords12</include>
 							<font>Font33-light</font>
+							<scrollspeed>55</scrollspeed>
 							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>!String.IsEmpty(ListItem.EpisodeName) + !String.IsEmpty(ListItem.Genre)</visible>
@@ -129,6 +132,7 @@
 						<control type="fadelabel">
 							<include>MyPVRGuide_coords11</include>
 							<font>Font33-light</font>
+							<scrollspeed>55</scrollspeed>
 							<label>$INFO[ListItem.Genre(comma)]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>String.IsEmpty(ListItem.EpisodeName) + !String.IsEmpty(ListItem.Genre)</visible>
@@ -146,6 +150,7 @@
 							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 							<textcolor>$VAR[TextColorFO]</textcolor>
 							<visible>String.IsEmpty(ListItem.EpisodeName) + String.IsEmpty(ListItem.Genre)</visible>
+							<scrollspeed>55</scrollspeed>
 						</control>
 
 						<!-- Plot -->
@@ -198,6 +203,7 @@
 						<align>right</align>
 						<label>$INFO[Container(10).NumItems]$VAR[ContentType, ,]</label>
 						<font>Font30</font>
+						<scrollspeed>49</scrollspeed>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<visible>!String.IsEmpty(Container(10).NumItems)</visible>
 						<include>VisibleFadeAnimation</include>

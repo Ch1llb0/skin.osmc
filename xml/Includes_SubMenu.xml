@@ -82,6 +82,15 @@
 				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
+			</control>
 
 			<!-- Seperator -->
 			<control type="image" id="80">
@@ -173,6 +182,15 @@
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
 			</control>
 
 			<!-- Seperator -->
@@ -285,6 +303,15 @@
 				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
+			</control>
 
 			<!-- Seperator -->
 			<control type="image" id="80">
@@ -375,6 +402,23 @@
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
+			</control>
+			
+			<!-- Disable music listened to status in library -->
+			<control type="radiobutton" id="73">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31149]</label>
+				<onclick>Skin.ToggleSetting(MusicListenedToStatus)</onclick>
+				<selected>Skin.HasSetting(MusicListenedToStatus)</selected>
 			</control>
 
 			<!-- Seperator -->
@@ -501,6 +545,15 @@
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
 			</control>
 
 			<!-- Seperator -->
@@ -696,6 +749,15 @@
 				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 				<onclick>Control.SetFocus(3002)</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
 			</control>
 
 			<!-- Seperator -->
@@ -1310,6 +1372,23 @@
 				<selected>Skin.HasSetting(FixedVideosView)</selected>
 				<visible>Integer.IsGreater(Container.ViewCount,1) + String.StartsWith(Container.FolderPath,plugin://plugin.video)</visible>
 			</control>
+			
+			<!-- Show titles on artwork -->
+			<control type="radiobutton" id="97">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31449]</label>
+				<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
+				<selected>Skin.HasSetting(ArtworkTitles)</selected>
+				<visible>$EXP[WallViewActive]</visible>
+			</control>
+			
+			<!-- Disable video watched status in library -->
+			<control type="radiobutton" id="72">
+				<include>SubMenu_coords5</include>
+				<label>$LOCALIZE[31148]</label>
+				<onclick>Skin.ToggleSetting(VideoWatchedStatus)</onclick>
+				<selected>Skin.HasSetting(VideoWatchedStatus)</selected>
+			</control>
 
 			<!-- Seperator -->
 			<control type="image" id="80">
@@ -1614,7 +1693,7 @@
 					<include>SubMenu_coords4</include>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onback>50</onback>
+					<onback>3001</onback>
 					<include>SubMenuResetScroll</include>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>

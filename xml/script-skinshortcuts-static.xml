@@ -2050,6 +2050,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091)]" width="240" height="360">
@@ -2092,6 +2098,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -2133,6 +2145,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -2175,6 +2193,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -2216,6 +2240,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091)]" width="173" height="222">
@@ -2258,6 +2288,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -2299,6 +2335,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -2341,6 +2383,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -2460,6 +2508,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091)]" width="240" height="360">
@@ -2502,6 +2556,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -2543,6 +2603,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -2585,6 +2651,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -2626,6 +2698,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091)]" width="173" height="222">
@@ -2668,6 +2746,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -2709,6 +2793,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -2751,6 +2841,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -2870,6 +2966,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092)]" width="240" height="360">
@@ -2912,6 +3014,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -2953,6 +3061,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -2995,6 +3109,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -3036,6 +3156,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092)]" width="173" height="222">
@@ -3078,6 +3204,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -3119,6 +3251,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -3161,6 +3299,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -3280,6 +3424,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092)]" width="240" height="360">
@@ -3322,6 +3472,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -3363,6 +3519,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -3405,6 +3567,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -3446,6 +3614,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092)]" width="173" height="222">
@@ -3488,6 +3662,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -3529,6 +3709,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -3571,6 +3757,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -3690,6 +3882,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094)]" width="240" height="240">
@@ -3732,6 +3930,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -3773,6 +3977,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -3815,6 +4025,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -3856,6 +4072,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094)]" width="173" height="148">
@@ -3898,6 +4120,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -3939,6 +4167,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -3981,6 +4215,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -4100,6 +4340,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094)]" width="240" height="240">
@@ -4142,6 +4388,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -4183,6 +4435,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -4225,6 +4483,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -4266,6 +4530,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094)]" width="173" height="148">
@@ -4308,6 +4578,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -4349,6 +4625,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -4391,6 +4673,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -4510,6 +4798,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10006).NumItems,1) + !Control.IsVisible(1096)]" width="240" height="240">
@@ -4552,6 +4846,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -4593,6 +4893,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -4635,6 +4941,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -4676,6 +4988,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10006).NumItems,1) + !Control.IsVisible(1096)]" width="173" height="148">
@@ -4718,6 +5036,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -4759,6 +5083,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -4801,6 +5131,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -4920,6 +5256,12 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font23</param>
+					<param name="scrollspeed">37</param>
+					<param name="pad">8</param>
+					<param name="titleright">56</param>
+					<param name="badgeshift">76</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10008).NumItems,1) + !Control.IsVisible(1098)]" width="240" height="240">
@@ -4962,6 +5304,12 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -5003,6 +5351,12 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font23</param>
+							<param name="scrollspeed">37</param>
+							<param name="pad">8</param>
+							<param name="titleright">56</param>
+							<param name="badgeshift">76</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -5045,6 +5399,12 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font23</param>
+						<param name="scrollspeed">37</param>
+						<param name="pad">8</param>
+						<param name="titleright">56</param>
+						<param name="badgeshift">76</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -5086,6 +5446,12 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font16</param>
+					<param name="scrollspeed">25</param>
+					<param name="pad">5</param>
+					<param name="titleright">37</param>
+					<param name="badgeshift">45.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10008).NumItems,1) + !Control.IsVisible(1098)]" width="173" height="148">
@@ -5128,6 +5494,12 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -5169,6 +5541,12 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font16</param>
+							<param name="scrollspeed">25</param>
+							<param name="pad">5</param>
+							<param name="titleright">37</param>
+							<param name="badgeshift">45.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -5211,6 +5589,12 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font16</param>
+						<param name="scrollspeed">25</param>
+						<param name="pad">5</param>
+						<param name="titleright">37</param>
+						<param name="badgeshift">45.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -5539,6 +5923,12 @@
 					<param name="centerleft">144</param>
 					<param name="slide">16</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font30</param>
+					<param name="scrollspeed">49</param>
+					<param name="pad">11</param>
+					<param name="titleright">75</param>
+					<param name="badgeshift">101</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100010).NumItems,1) + !Control.IsVisible(10910)]" width="320" height="320">
@@ -5581,6 +5971,12 @@
 							<param name="height">32</param>
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
+							<param name="font">Font30</param>
+							<param name="scrollspeed">49</param>
+							<param name="pad">11</param>
+							<param name="titleright">75</param>
+							<param name="badgeshift">101</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -5622,6 +6018,12 @@
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font30</param>
+							<param name="scrollspeed">49</param>
+							<param name="pad">11</param>
+							<param name="titleright">75</param>
+							<param name="badgeshift">101</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -5664,6 +6066,12 @@
 						<param name="centerleft">144</param>
 						<param name="slide">16</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font30</param>
+						<param name="scrollspeed">49</param>
+						<param name="pad">11</param>
+						<param name="titleright">75</param>
+						<param name="badgeshift">101</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -5705,6 +6113,12 @@
 					<param name="centerleft">88.5</param>
 					<param name="slide">10</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font20</param>
+					<param name="scrollspeed">32</param>
+					<param name="pad">7</param>
+					<param name="titleright">47</param>
+					<param name="badgeshift">61.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100010).NumItems,1) + !Control.IsVisible(10910)]" width="213" height="196">
@@ -5747,6 +6161,12 @@
 							<param name="height">20</param>
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
+							<param name="font">Font20</param>
+							<param name="scrollspeed">32</param>
+							<param name="pad">7</param>
+							<param name="titleright">47</param>
+							<param name="badgeshift">61.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -5788,6 +6208,12 @@
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font20</param>
+							<param name="scrollspeed">32</param>
+							<param name="pad">7</param>
+							<param name="titleright">47</param>
+							<param name="badgeshift">61.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -5830,6 +6256,12 @@
 						<param name="centerleft">88.5</param>
 						<param name="slide">10</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font20</param>
+						<param name="scrollspeed">32</param>
+						<param name="pad">7</param>
+						<param name="titleright">47</param>
+						<param name="badgeshift">61.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -5949,6 +6381,12 @@
 					<param name="centerleft">144</param>
 					<param name="slide">16</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font30</param>
+					<param name="scrollspeed">49</param>
+					<param name="pad">11</param>
+					<param name="titleright">75</param>
+					<param name="badgeshift">101</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100011).NumItems,1) + !Control.IsVisible(10911)]" width="320" height="320">
@@ -5991,6 +6429,12 @@
 							<param name="height">32</param>
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
+							<param name="font">Font30</param>
+							<param name="scrollspeed">49</param>
+							<param name="pad">11</param>
+							<param name="titleright">75</param>
+							<param name="badgeshift">101</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -6032,6 +6476,12 @@
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font30</param>
+							<param name="scrollspeed">49</param>
+							<param name="pad">11</param>
+							<param name="titleright">75</param>
+							<param name="badgeshift">101</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -6074,6 +6524,12 @@
 						<param name="centerleft">144</param>
 						<param name="slide">16</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font30</param>
+						<param name="scrollspeed">49</param>
+						<param name="pad">11</param>
+						<param name="titleright">75</param>
+						<param name="badgeshift">101</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>
@@ -6115,6 +6571,12 @@
 					<param name="centerleft">88.5</param>
 					<param name="slide">10</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+					<param name="font">Font20</param>
+					<param name="scrollspeed">32</param>
+					<param name="pad">7</param>
+					<param name="titleright">47</param>
+					<param name="badgeshift">61.5</param>
+					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100011).NumItems,1) + !Control.IsVisible(10911)]" width="213" height="196">
@@ -6157,6 +6619,12 @@
 							<param name="height">20</param>
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
+							<param name="font">Font20</param>
+							<param name="scrollspeed">32</param>
+							<param name="pad">7</param>
+							<param name="titleright">47</param>
+							<param name="badgeshift">61.5</param>
+							<param name="scroll">True</param>
 						</include>
 					</control>
 					<control type="group">
@@ -6198,6 +6666,12 @@
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">Font20</param>
+							<param name="scrollspeed">32</param>
+							<param name="pad">7</param>
+							<param name="titleright">47</param>
+							<param name="badgeshift">61.5</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 				</control>
@@ -6240,6 +6714,12 @@
 						<param name="centerleft">88.5</param>
 						<param name="slide">10</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">Font20</param>
+						<param name="scrollspeed">32</param>
+						<param name="pad">7</param>
+						<param name="titleright">47</param>
+						<param name="badgeshift">61.5</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
 			</focusedlayout>

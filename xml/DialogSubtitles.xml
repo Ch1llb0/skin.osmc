@@ -42,6 +42,7 @@
 				<include>DialogSubtitles_coords1</include>
 				<label>24018</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
+				<scrollspeed>55</scrollspeed>
 			</control>
 
 			<!-- Seperator -->
@@ -89,6 +90,7 @@
 				<include>DialogSubtitles_coords7</include>
 				<label>$INFO[Player.Filename]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
+				<scrollspeed>55</scrollspeed>
 			</control>
 
 			<!-- Number label -->
@@ -96,6 +98,7 @@
 				<include>DialogSubtitles_coords8</include>
 				<align>right</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
+				<scrollspeed>55</scrollspeed>
 			</control>
 
 			<!-- Seperator -->

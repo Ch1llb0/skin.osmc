@@ -22,6 +22,18 @@
 	<expression name="IsWatchedOrResumed">[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)]</expression>
 	<expression name="IsWatchedResumedOrPartial">[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)]</expression>
 	<expression name="WatchedStatusVisible">[[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]</expression>
+	<expression name="StatusOverlayVisible">$EXP[IsWatchedResumedOrPartial] + $EXP[WatchedStatusVisible]</expression>
+	<expression name="WidgetBadgeVisible">$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</expression>
+	
+	<!-- Wall view titles. The title strip takes the place of the status strip, so the strip it
+	     replaces, the title and the badge beside it all read the same two conditions. The ten
+	     views listed here are every wall the skin has, in both the video and the music set. -->
+	<expression name="WallViewActive">Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(532) | Control.IsVisible(533) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(536) | Control.IsVisible(537) | Control.IsVisible(538) | Control.IsVisible(539)</expression>
+	<!-- The strip is only called from a wall layout, so it needs no test for one being on
+	     screen; a control in a layout carries parent id 0, and Control.IsVisible would ask
+	     whichever window is active, going false under a dialog. WallViewActive is read from
+	     the sub menu, which is a window control and resolves properly. -->
+	<expression name="WallTitlesVisible">Skin.HasSetting(ArtworkTitles)</expression>
 	
 	<!-- Home widgets: two on screen at once. An entry with a single widget always draws the
 	     large layout, so every use pairs this with the widget count of that entry's selector. -->

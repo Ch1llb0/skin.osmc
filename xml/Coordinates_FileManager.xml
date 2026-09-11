@@ -238,6 +238,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -248,6 +249,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -257,6 +259,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -281,6 +284,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -291,6 +295,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -300,6 +305,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -324,6 +330,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -334,6 +341,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -343,6 +351,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -367,6 +376,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -377,6 +387,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -386,6 +397,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -706,6 +718,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -716,6 +729,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -725,6 +739,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -749,6 +764,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -759,6 +775,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -768,6 +785,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -792,6 +810,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -802,6 +821,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -811,6 +831,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">
@@ -835,6 +856,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 				</control>
 				<control type="group">
@@ -845,6 +867,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 					<control type="label">
 						<right>0</right>
@@ -854,6 +877,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<scroll>True</scroll>
+						<scrollspeed>55</scrollspeed>
 					</control>
 				</control>
 				<control type="image">

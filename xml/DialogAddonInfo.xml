@@ -38,6 +38,7 @@
 			<control type="fadelabel">
 				<include>DialogAddonInfo_coords2</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>$INFO[ListItem.AddonLastUsed,$LOCALIZE[12012]: ,]$INFO[ListItem.AddonLastUpdated, &#8226; $LOCALIZE[12014]: ,]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -47,6 +48,7 @@
 			<control type="fadelabel">
 				<include>DialogAddonInfo_coords2</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>$INFO[ListItem.AddonLastUsed,$LOCALIZE[12012]: ,]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -56,6 +58,7 @@
 			<control type="fadelabel">
 				<include>DialogAddonInfo_coords2</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>$INFO[ListItem.AddonLastUpdated,$LOCALIZE[12014]: ,]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>

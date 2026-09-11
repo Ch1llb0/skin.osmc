@@ -4,10 +4,10 @@
 	<!-- Widget dimensions, one row per layout -->
 	<presets>
 		<preset name="widgetLayout">
-			<values condition="layout=wide" layoutWidth="320" layoutHeight="240" imageWidthNoFocus="288" imageHeightNoFocus="216" imageWidthFocus="320" imageHeightFocus="240" overlayHeight="32" overlaySlide="16" />
-			<values condition="layout=square" layoutWidth="320" layoutHeight="320" imageWidthNoFocus="288" imageHeightNoFocus="288" imageWidthFocus="320" imageHeightFocus="320" overlayHeight="32" overlaySlide="16" />
-			<values condition="layout=square-small" layoutWidth="240" layoutHeight="240" imageWidthNoFocus="216" imageHeightNoFocus="216" imageWidthFocus="240" imageHeightFocus="240" overlayHeight="24" overlaySlide="12" />
-			<values layoutWidth="240" layoutHeight="360" imageWidthNoFocus="216" imageHeightNoFocus="324" imageWidthFocus="240" imageHeightFocus="360" overlayHeight="24" overlaySlide="12" />
+			<values condition="layout=wide" layoutWidth="320" layoutHeight="240" imageWidthNoFocus="288" imageHeightNoFocus="216" imageWidthFocus="320" imageHeightFocus="240" overlayHeight="32" overlayFont="Font30" overlayScrollSpeed="49" overlayPad="11" overlayTitleRight="75" overlayBadgeShift="101" overlaySlide="16" />
+			<values condition="layout=square" layoutWidth="320" layoutHeight="320" imageWidthNoFocus="288" imageHeightNoFocus="288" imageWidthFocus="320" imageHeightFocus="320" overlayHeight="32" overlayFont="Font30" overlayScrollSpeed="49" overlayPad="11" overlayTitleRight="75" overlayBadgeShift="101" overlaySlide="16" />
+			<values condition="layout=square-small" layoutWidth="240" layoutHeight="240" imageWidthNoFocus="216" imageHeightNoFocus="216" imageWidthFocus="240" imageHeightFocus="240" overlayHeight="24" overlayFont="Font23" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
+			<values layoutWidth="240" layoutHeight="360" imageWidthNoFocus="216" imageHeightNoFocus="324" imageWidthFocus="240" imageHeightFocus="360" overlayHeight="24" overlayFont="Font23" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
 		</preset>
 
 		<!-- The two row poster and the gap beside it are the same on every aspect ratio; only the
@@ -26,10 +26,10 @@
 		     draws one item past the ones it pages, clipped, so anything nearer than that shows
 		     as a sliver of the next poster at the row's end. -->
 		<preset name="widgetLayoutTwoRow">
-			<values condition="layout=wide" rowOffsetY="-163" rowStride="289" rowWidth="213" rowHeight="148" rowImageWidthNoFocus="177" rowImageHeightNoFocus="133" rowImageWidthFocus="196" rowImageHeightFocus="148" rowImageLeft="18" rowOverlayHeight="20" rowOverlaySlide="10" />
-			<values condition="layout=square" rowOffsetY="-131" rowStride="333" rowWidth="213" rowHeight="196" rowImageWidthNoFocus="177" rowImageHeightNoFocus="177" rowImageWidthFocus="196" rowImageHeightFocus="196" rowImageLeft="18" rowOverlayHeight="20" rowOverlaySlide="10" />
-			<values condition="layout=square-small" rowOffsetY="-163" rowStride="289" rowWidth="173" rowHeight="148" rowImageWidthNoFocus="133" rowImageHeightNoFocus="133" rowImageWidthFocus="148" rowImageHeightFocus="148" rowImageLeft="29" rowOverlayHeight="16" rowOverlaySlide="8" />
-			<values rowOffsetY="-117" rowStride="356" rowWidth="173" rowHeight="222" rowImageWidthNoFocus="133" rowImageHeightNoFocus="200" rowImageWidthFocus="148" rowImageHeightFocus="222" rowImageLeft="29" rowOverlayHeight="16" rowOverlaySlide="8" />
+			<values condition="layout=wide" rowOffsetY="-163" rowStride="289" rowWidth="213" rowHeight="148" rowImageWidthNoFocus="177" rowImageHeightNoFocus="133" rowImageWidthFocus="196" rowImageHeightFocus="148" rowImageLeft="18" rowOverlayHeight="20" rowoverlayFont="Font20" rowoverlayScrollSpeed="32" rowoverlayPad="7" rowoverlayTitleRight="47" rowoverlayBadgeShift="61.5" rowOverlaySlide="10" />
+			<values condition="layout=square" rowOffsetY="-131" rowStride="333" rowWidth="213" rowHeight="196" rowImageWidthNoFocus="177" rowImageHeightNoFocus="177" rowImageWidthFocus="196" rowImageHeightFocus="196" rowImageLeft="18" rowOverlayHeight="20" rowoverlayFont="Font20" rowoverlayScrollSpeed="32" rowoverlayPad="7" rowoverlayTitleRight="47" rowoverlayBadgeShift="61.5" rowOverlaySlide="10" />
+			<values condition="layout=square-small" rowOffsetY="-163" rowStride="289" rowWidth="173" rowHeight="148" rowImageWidthNoFocus="133" rowImageHeightNoFocus="133" rowImageWidthFocus="148" rowImageHeightFocus="148" rowImageLeft="29" rowOverlayHeight="16" rowoverlayFont="Font16" rowoverlayScrollSpeed="25" rowoverlayPad="5" rowoverlayTitleRight="37" rowoverlayBadgeShift="45.5" rowOverlaySlide="8" />
+			<values rowOffsetY="-117" rowStride="356" rowWidth="173" rowHeight="222" rowImageWidthNoFocus="133" rowImageHeightNoFocus="200" rowImageWidthFocus="148" rowImageHeightFocus="222" rowImageLeft="29" rowOverlayHeight="16" rowoverlayFont="Font16" rowoverlayScrollSpeed="25" rowoverlayPad="5" rowoverlayTitleRight="37" rowoverlayBadgeShift="45.5" rowOverlaySlide="8" />
 		</preset>
 	</presets>
 
@@ -619,6 +619,12 @@
 						<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 						<param name="slide">$PROPERTY[overlaySlide]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">$PROPERTY[overlayFont]</param>
+						<param name="scrollspeed">$PROPERTY[overlayScrollSpeed]</param>
+						<param name="pad">$PROPERTY[overlayPad]</param>
+						<param name="titleright">$PROPERTY[overlayTitleRight]</param>
+						<param name="badgeshift">$PROPERTY[overlayBadgeShift]</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</itemlayout>
 
@@ -663,6 +669,12 @@
 								<param name="height">$PROPERTY[overlayHeight]</param>
 								<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 								<param name="slide">$PROPERTY[overlaySlide]</param>
+								<param name="font">$PROPERTY[overlayFont]</param>
+								<param name="scrollspeed">$PROPERTY[overlayScrollSpeed]</param>
+								<param name="pad">$PROPERTY[overlayPad]</param>
+								<param name="titleright">$PROPERTY[overlayTitleRight]</param>
+								<param name="badgeshift">$PROPERTY[overlayBadgeShift]</param>
+								<param name="scroll">True</param>
 							</include>
 						</control>
 						<control type="group">
@@ -705,6 +717,12 @@
 								<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 								<param name="slide">$PROPERTY[overlaySlide]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+								<param name="font">$PROPERTY[overlayFont]</param>
+								<param name="scrollspeed">$PROPERTY[overlayScrollSpeed]</param>
+								<param name="pad">$PROPERTY[overlayPad]</param>
+								<param name="titleright">$PROPERTY[overlayTitleRight]</param>
+								<param name="badgeshift">$PROPERTY[overlayBadgeShift]</param>
+								<param name="textcolor">$VAR[TextColorNF]</param>
 							</include>
 						</control>
 					</control>
@@ -748,6 +766,12 @@
 							<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 							<param name="slide">$PROPERTY[overlaySlide]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">$PROPERTY[overlayFont]</param>
+							<param name="scrollspeed">$PROPERTY[overlayScrollSpeed]</param>
+							<param name="pad">$PROPERTY[overlayPad]</param>
+							<param name="titleright">$PROPERTY[overlayTitleRight]</param>
+							<param name="badgeshift">$PROPERTY[overlayBadgeShift]</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 
@@ -792,6 +816,12 @@
 						<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
 						<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+						<param name="font">$PROPERTY[rowoverlayFont]</param>
+						<param name="scrollspeed">$PROPERTY[rowoverlayScrollSpeed]</param>
+						<param name="pad">$PROPERTY[rowoverlayPad]</param>
+						<param name="titleright">$PROPERTY[rowoverlayTitleRight]</param>
+						<param name="badgeshift">$PROPERTY[rowoverlayBadgeShift]</param>
+						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</itemlayout>
 
@@ -836,6 +866,12 @@
 								<param name="height">$PROPERTY[rowOverlayHeight]</param>
 								<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
 								<param name="slide">$PROPERTY[rowOverlaySlide]</param>
+								<param name="font">$PROPERTY[rowoverlayFont]</param>
+								<param name="scrollspeed">$PROPERTY[rowoverlayScrollSpeed]</param>
+								<param name="pad">$PROPERTY[rowoverlayPad]</param>
+								<param name="titleright">$PROPERTY[rowoverlayTitleRight]</param>
+								<param name="badgeshift">$PROPERTY[rowoverlayBadgeShift]</param>
+								<param name="scroll">True</param>
 							</include>
 						</control>
 						<control type="group">
@@ -878,6 +914,12 @@
 								<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
 								<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+								<param name="font">$PROPERTY[rowoverlayFont]</param>
+								<param name="scrollspeed">$PROPERTY[rowoverlayScrollSpeed]</param>
+								<param name="pad">$PROPERTY[rowoverlayPad]</param>
+								<param name="titleright">$PROPERTY[rowoverlayTitleRight]</param>
+								<param name="badgeshift">$PROPERTY[rowoverlayBadgeShift]</param>
+								<param name="textcolor">$VAR[TextColorNF]</param>
 							</include>
 						</control>
 					</control>
@@ -921,6 +963,12 @@
 							<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
 							<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
+							<param name="font">$PROPERTY[rowoverlayFont]</param>
+							<param name="scrollspeed">$PROPERTY[rowoverlayScrollSpeed]</param>
+							<param name="pad">$PROPERTY[rowoverlayPad]</param>
+							<param name="titleright">$PROPERTY[rowoverlayTitleRight]</param>
+							<param name="badgeshift">$PROPERTY[rowoverlayBadgeShift]</param>
+							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
 

@@ -37,6 +37,7 @@
 					<include>script-upnext-stillwatching_coords4</include>
 					<align>left</align>
 					<font>Font27-light</font>
+					<scrollspeed>44</scrollspeed>
 					<label>$VAR[UpNextTitle]</label>
 				</control>
 				

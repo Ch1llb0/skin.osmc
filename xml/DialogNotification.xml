@@ -29,6 +29,7 @@
 				<include>DialogNotification_coords3</include>
 				<align>left</align>
 				<scroll>True</scroll>
+				<scrollspeed>44</scrollspeed>
 				<font>Font27</font>
 			</control>
 
@@ -38,6 +39,7 @@
 				<align>left</align>
 				<aligny>top</aligny>
 				<font>Font27-light</font>
+				<scrollspeed>44</scrollspeed>
 			</control>
 
 		</control>

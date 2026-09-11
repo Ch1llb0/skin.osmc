@@ -297,6 +297,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 				</control>
 			</control>
 		</focusedlayout>
@@ -341,6 +342,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 				</control>
 			</control>
 		</focusedlayout>
@@ -385,6 +387,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 				</control>
 			</control>
 		</focusedlayout>
@@ -429,6 +432,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[Duration]$VAR[Video, &#8226; ,]$VAR[Audio, &#8226; ,]</label>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 				</control>
 			</control>
 		</focusedlayout>

@@ -27,6 +27,7 @@
 				<include>Custom_Cache_Progress_coords2</include>
 				<align>left</align>
 				<scroll>True</scroll>
+				<scrollspeed>44</scrollspeed>
 				<font>Font27</font>
 				<label>$LOCALIZE[15107]</label>
 			</control>

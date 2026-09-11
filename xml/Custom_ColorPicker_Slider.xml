@@ -75,6 +75,7 @@
 			<control type="fadelabel" id="1000">
 				<include>Custom_ColorPicker_Slider_coords4</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>#$VAR[ColorPicker_PercentToHEX_Color]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>

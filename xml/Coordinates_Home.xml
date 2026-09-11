@@ -170,6 +170,7 @@
 					<font>Font50-bold</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>88</scrollspeed>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -196,6 +197,7 @@
 					<font>Font50-bold</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>88</scrollspeed>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -222,6 +224,7 @@
 					<font>Font50-bold</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>88</scrollspeed>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -248,6 +251,7 @@
 					<font>Font50-bold</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>88</scrollspeed>
 				</control>
 				<control type="image">
 					<left>0</left>

@@ -220,6 +220,7 @@
 					<label>$INFO[Container(211).ListItem.Label]</label>
 					<align>center</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 				</control>
 				
@@ -390,6 +391,7 @@
 			<control type="fadelabel">
 				<include>script-skinshortcuts_coords9</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<label>$VAR[SkinShortcutsExplanation1]</label>
 			</control>
 

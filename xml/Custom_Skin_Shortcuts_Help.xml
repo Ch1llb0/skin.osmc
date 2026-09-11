@@ -65,6 +65,7 @@
 			<control type="fadelabel">
 				<include>Custom_Skin_Shortcuts_Help_coords9</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<label>$VAR[SkinShortcutsExplanation2]</label>
 			</control>
 

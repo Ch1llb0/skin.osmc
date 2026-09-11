@@ -28,6 +28,7 @@
 				<include>DialogSlider_coords3</include>
 				<align>center</align>
 				<scroll>True</scroll>
+				<scrollspeed>44</scrollspeed>
 				<font>Font27</font>
 			</control>
 
@@ -37,6 +38,7 @@
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>True</scroll>
+				<scrollspeed>44</scrollspeed>
 				<font>Font27-light</font>
 			</control>
 

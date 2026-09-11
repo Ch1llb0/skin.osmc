@@ -335,6 +335,8 @@
 	     which differ only in whether the poster is dimmed, hence the colordiffuse default. -->
 	<include name="widgetOverlayBar">
 		<param name="colordiffuse">FFFFFFFF</param>
+		<param name="textcolor">$VAR[TextColorFO]</param>
+		<param name="scroll">False</param>
 		<definition>
 			<control type="group">
 				<left>$PARAM[left]</left>
@@ -344,38 +346,65 @@
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-					<visible>$EXP[IsWatchedResumedOrPartial] + $EXP[WatchedStatusVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
+					<visible>$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording | Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder</visible>
 				</control>
-				<control type="image">
-					<width>$PARAM[height]</width>
-					<centerleft>$PARAM[centerleft]</centerleft>
-					<texture background="true">pvr/Recording.png</texture>
-					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-					<visible>ListItem.IsRecording</visible>
-					<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<right>$PARAM[pad]</right>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[textcolor]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>$PARAM[scroll]</scroll>
+					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+					<visible>Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder + !$EXP[WidgetBadgeVisible]</visible>
 				</control>
-				<control type="image">
-					<width>$PARAM[height]</width>
-					<centerleft>$PARAM[centerleft]</centerleft>
-					<texture background="true">pvr/Timer.png</texture>
-					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-					<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<right>$PARAM[titleright]</right>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[textcolor]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>$PARAM[scroll]</scroll>
+					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+					<visible>Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder + $EXP[WidgetBadgeVisible]</visible>
 				</control>
-				<control type="image">
-					<width>$PARAM[height]</width>
-					<centerleft>$PARAM[centerleft]</centerleft>
-					<texture background="true">pvr/Reminder.png</texture>
-					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
-					<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
-				</control>
-				<control type="image">
-					<width>$PARAM[height]</width>
-					<centerleft>$PARAM[centerleft]</centerleft>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
-					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-					<animation effect="slide" end="$PARAM[slide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
+				<control type="group">
+					<animation effect="slide" end="$PARAM[badgeshift],0" time="0" reversible="false" condition="Skin.HasSetting(ArtworkTitles)">Conditional</animation>
+					<control type="image">
+						<width>$PARAM[height]</width>
+						<centerleft>$PARAM[centerleft]</centerleft>
+						<texture background="true">pvr/Recording.png</texture>
+						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+						<visible>ListItem.IsRecording</visible>
+						<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+					</control>
+					<control type="image">
+						<width>$PARAM[height]</width>
+						<centerleft>$PARAM[centerleft]</centerleft>
+						<texture background="true">pvr/Timer.png</texture>
+						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+						<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
+						<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+					</control>
+					<control type="image">
+						<width>$PARAM[height]</width>
+						<centerleft>$PARAM[centerleft]</centerleft>
+						<texture background="true">pvr/Reminder.png</texture>
+						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+						<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+						<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
+					</control>
+					<control type="image">
+						<width>$PARAM[height]</width>
+						<centerleft>$PARAM[centerleft]</centerleft>
+						<texture background="true">$VAR[StatusOverlayWide]</texture>
+						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+						<animation effect="slide" end="$PARAM[slide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
+					</control>
 				</control>
 			</control>
 		</definition>
@@ -609,6 +638,7 @@
 					<label>$INFO[Container($PARAM[container]).ListItem.Label]</label>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				
 				<!-- Indicators + Widget heading -->

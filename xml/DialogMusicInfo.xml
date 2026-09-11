@@ -59,6 +59,7 @@
 			<control type="fadelabel">
 				<include>DialogVideoInfo_coords2</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>$INFO[ListItem.FileNameAndPath]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -70,6 +71,7 @@
 			<control type="fadelabel">
 				<include>DialogMusicInfo_coords2</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 				<align>center</align>
 				<label>$INFO[ListItem.LastPlayed,$LOCALIZE[568]: ,]$INFO[ListItem.PlayCount, &#8226; $LOCALIZE[576]: ,]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>

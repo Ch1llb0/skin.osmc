@@ -547,6 +547,7 @@
 					<width>300</width>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.StartDate]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -562,6 +563,7 @@
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
 				<visible>!String.IsEmpty(ListItem.Date)</visible>
 				</control>
@@ -618,6 +620,7 @@
 					<width>754</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -630,6 +633,7 @@
 					<width>410</width>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Comment]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -653,6 +657,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.EpgEventTitle]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -665,6 +670,7 @@
 					<width>1680</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
@@ -697,6 +703,7 @@
 					<width>426</width>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.StartDate]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -711,6 +718,7 @@
 					<font>Font27</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -768,6 +776,7 @@
 					<width>1093</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -781,6 +790,7 @@
 					<font>Font33-bold</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Comment]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -804,6 +814,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.EpgEventTitle]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -816,6 +827,7 @@
 					<width>2320</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
@@ -848,6 +860,7 @@
 					<width>426</width>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.StartDate]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -862,6 +875,7 @@
 					<font>Font27</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -919,6 +933,7 @@
 					<width>1093</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -932,6 +947,7 @@
 					<font>Font33-bold</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Comment]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -955,6 +971,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.EpgEventTitle]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -967,6 +984,7 @@
 					<width>2300</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
@@ -999,6 +1017,7 @@
 					<width>205</width>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.StartDate]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -1013,6 +1032,7 @@
 					<font>Font27</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -1070,6 +1090,7 @@
 					<width>498</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -1083,6 +1104,7 @@
 					<font>Font33-bold</font>
 					<align>right</align>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<label>$INFO[ListItem.Comment]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -1106,6 +1128,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<scroll>True</scroll>
+					<scrollspeed>44</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.EpgEventTitle]</label>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
@@ -1118,6 +1141,7 @@
 					<width>1200</width>
 					<font>Font33-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>String.IsEmpty(ListItem.Date)</visible>

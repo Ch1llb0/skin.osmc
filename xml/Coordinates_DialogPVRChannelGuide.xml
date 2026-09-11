@@ -537,6 +537,7 @@
 					<height>51</height>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>49</scrollspeed>
 					<align>left</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]</label>
@@ -549,6 +550,7 @@
 					<height>51</height>
 					<font>Font42</font>
 					<scroll>True</scroll>
+					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -610,6 +612,7 @@
 					<height>51</height>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>49</scrollspeed>
 					<align>left</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]</label>
@@ -622,6 +625,7 @@
 					<height>51</height>
 					<font>Font42</font>
 					<scroll>True</scroll>
+					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -683,6 +687,7 @@
 					<height>51</height>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>49</scrollspeed>
 					<align>left</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]</label>
@@ -695,6 +700,7 @@
 					<height>51</height>
 					<font>Font42</font>
 					<scroll>True</scroll>
+					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
@@ -756,6 +762,7 @@
 					<height>51</height>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
+					<scrollspeed>49</scrollspeed>
 					<align>left</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.StartTime]</label>
@@ -768,6 +775,7 @@
 					<height>51</height>
 					<font>Font42</font>
 					<scroll>True</scroll>
+					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>

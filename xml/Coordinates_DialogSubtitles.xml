@@ -221,6 +221,7 @@
 					<height>66</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="image">
 					<top>58</top>
@@ -551,6 +552,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="label">
 					<left>217</left>
@@ -559,6 +561,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[SubtitleDownload]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="image">
 					<top>58</top>
@@ -596,6 +599,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="label">
 					<left>217</left>
@@ -604,6 +608,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[SubtitleDownload]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="image">
 					<top>58</top>
@@ -641,6 +646,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="label">
 					<left>217</left>
@@ -649,6 +655,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[SubtitleDownload]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="image">
 					<top>58</top>
@@ -686,6 +693,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="label">
 					<left>217</left>
@@ -694,6 +702,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[SubtitleDownload]</label>
 					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
 				</control>
 				<control type="image">
 					<left>9</left>

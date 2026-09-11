@@ -45,6 +45,7 @@
 				<control type="fadelabel">
 					<include>Viewtype524_coords6</include>
 					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]</label>

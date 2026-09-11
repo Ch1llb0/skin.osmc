@@ -464,6 +464,8 @@
 				<param name="coords2">Viewtype536_coords20</param>
 				<param name="coords3">Viewtype536_coords21</param>
 			</include>
+			<!-- Title strip -->
+			<include>Viewtype536_coords25</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype536_coords17_21:9">
@@ -531,6 +533,8 @@
 				<param name="coords2">Viewtype536_coords20</param>
 				<param name="coords3">Viewtype536_coords21</param>
 			</include>
+			<!-- Title strip -->
+			<include>Viewtype536_coords25</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype536_coords17_21:9_masked">
@@ -598,6 +602,8 @@
 				<param name="coords2">Viewtype536_coords20</param>
 				<param name="coords3">Viewtype536_coords21</param>
 			</include>
+			<!-- Title strip -->
+			<include>Viewtype536_coords25</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype536_coords17_4:3">
@@ -665,6 +671,8 @@
 				<param name="coords2">Viewtype536_coords20</param>
 				<param name="coords3">Viewtype536_coords21</param>
 			</include>
+			<!-- Title strip -->
+			<include>Viewtype536_coords25</include>
 		</itemlayout>
 	</include>
 	
@@ -741,6 +749,8 @@
 					<param name="coords2">Viewtype536_coords23</param>
 					<param name="coords3">Viewtype536_coords24</param>
 				</include>
+				<!-- Title strip -->
+				<include>Viewtype536_coords26</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -811,6 +821,8 @@
 					<param name="coords2">Viewtype536_coords23</param>
 					<param name="coords3">Viewtype536_coords24</param>
 				</include>
+				<!-- Title strip -->
+				<include>Viewtype536_coords26</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -881,6 +893,8 @@
 					<param name="coords2">Viewtype536_coords23</param>
 					<param name="coords3">Viewtype536_coords24</param>
 				</include>
+				<!-- Title strip -->
+				<include>Viewtype536_coords26</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -951,6 +965,8 @@
 					<param name="coords2">Viewtype536_coords23</param>
 					<param name="coords3">Viewtype536_coords24</param>
 				</include>
+				<!-- Title strip -->
+				<include>Viewtype536_coords26</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -1123,6 +1139,35 @@
 	<include name="Viewtype536_coords24_4:3">
 		<width>26</width>
 		<centerleft>116</centerleft>
+	</include>	
+	<include name="Viewtype536_coords25">
+		<include content="MediaViewTitleStripNF">
+			<param name="coords">Viewtype536_coords20</param>
+			<param name="font">Font23</param>
+			<param name="height">23</param>
+			<param name="pad">8</param>
+			<param name="titlewide">193</param>
+			<param name="titlenarrow">162</param>
+			<param name="badge">23</param>
+			<param name="badgeleft">178</param>
+			<param name="badgetop">0</param>
+		</include>
+	</include>
+	
+	<include name="Viewtype536_coords26">
+		<include content="MediaViewTitleStripFO">
+			<param name="id">536</param>
+			<param name="coords">Viewtype536_coords23</param>
+			<param name="font">Font26</param>
+			<param name="scrollspeed">42</param>
+			<param name="height">26</param>
+			<param name="pad">9</param>
+			<param name="titlewide">214</param>
+			<param name="titlenarrow">179</param>
+			<param name="badge">26</param>
+			<param name="badgeleft">197</param>
+			<param name="badgetop">0</param>
+		</include>
 	</include>
 
 </includes>

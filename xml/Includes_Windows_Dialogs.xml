@@ -725,6 +725,7 @@
 			<!-- Watched status -->
 			<control type="group">
 				<include>$PARAM[coords2]</include>
+				<visible>!$EXP[WallTitlesVisible]</visible>
 				<fadetime>200</fadetime>
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
@@ -763,6 +764,7 @@
 			<!-- Watched status -->
 			<control type="group">
 				<visible>!System.HasActiveModalDialog + Control.HasFocus($PARAM[id])</visible>
+				<visible>!$EXP[WallTitlesVisible]</visible>
 				<include>$PARAM[coords2]</include>
 				<fadetime>200</fadetime>
 				<control type="image">
@@ -777,6 +779,7 @@
 			</control>
 			<control type="group">
 				<visible>System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])</visible>
+				<visible>!$EXP[WallTitlesVisible]</visible>
 				<include>$PARAM[coords2]</include>
 				<fadetime>200</fadetime>
 				<control type="image">
@@ -789,6 +792,134 @@
 					<include>$PARAM[coords3]</include>
 					<texture background="true">$VAR[StatusOverlayWide]</texture>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<!-- Wall view title strip. Takes the place of the status strip and keeps its size, so the
+	     title grows with the artwork beneath it as the focus animation runs. The title has the
+	     strip to itself, and gives way to the badge on items that carry one. -->
+	<include name="MediaViewTitleStripNF">
+		<definition>
+			<control type="group">
+				<include>$PARAM[coords]</include>
+				<visible>$EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
+				<fadetime>200</fadetime>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				</control>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<width>$PARAM[titlewide]</width>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!$EXP[StatusOverlayVisible]</visible>
+				</control>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<width>$PARAM[titlenarrow]</width>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>$EXP[StatusOverlayVisible]</visible>
+				</control>
+				<control type="image">
+					<left>$PARAM[badgeleft]</left>
+					<top>$PARAM[badgetop]</top>
+					<width>$PARAM[badge]</width>
+					<height>$PARAM[badge]</height>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+	
+	<include name="MediaViewTitleStripFO">
+		<definition>
+			<control type="group">
+				<include>$PARAM[coords]</include>
+				<visible>$EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
+				<visible>!System.HasActiveModalDialog + Control.HasFocus($PARAM[id])</visible>
+				<fadetime>200</fadetime>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+				</control>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<width>$PARAM[titlewide]</width>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+					<visible>!$EXP[StatusOverlayVisible]</visible>
+				</control>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<width>$PARAM[titlenarrow]</width>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+					<visible>$EXP[StatusOverlayVisible]</visible>
+				</control>
+				<control type="image">
+					<left>$PARAM[badgeleft]</left>
+					<top>$PARAM[badgetop]</top>
+					<width>$PARAM[badge]</width>
+					<height>$PARAM[badge]</height>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<include>$PARAM[coords]</include>
+				<visible>$EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
+				<visible>System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])</visible>
+				<fadetime>200</fadetime>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				</control>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<width>$PARAM[titlewide]</width>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!$EXP[StatusOverlayVisible]</visible>
+				</control>
+				<control type="label">
+					<left>$PARAM[pad]</left>
+					<width>$PARAM[titlenarrow]</width>
+					<height>$PARAM[height]</height>
+					<font>$PARAM[font]</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>$EXP[StatusOverlayVisible]</visible>
+				</control>
+				<control type="image">
+					<left>$PARAM[badgeleft]</left>
+					<top>$PARAM[badgetop]</top>
+					<width>$PARAM[badge]</width>
+					<height>$PARAM[badge]</height>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
 		</definition>

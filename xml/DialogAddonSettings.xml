@@ -183,6 +183,7 @@
 			<control type="fadelabel" id="6">
 				<include>DialogAddonSettings_coords13</include>
 				<font>Font27</font>
+				<scrollspeed>44</scrollspeed>
 			</control>
 
 			<!-- Buttons -->

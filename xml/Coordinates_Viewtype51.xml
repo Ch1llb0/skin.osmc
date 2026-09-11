@@ -176,6 +176,7 @@
 						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>81</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
@@ -194,6 +195,7 @@
 						<label>$VAR[Label2]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 				<!-- Watched status -->
@@ -248,6 +250,7 @@
 						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>81</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
@@ -266,6 +269,7 @@
 						<label>$VAR[Label2]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 				<!-- Watched status -->
@@ -320,6 +324,7 @@
 						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>81</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
@@ -338,6 +343,7 @@
 						<label>$VAR[Label2]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 				<!-- Watched status -->
@@ -392,6 +398,7 @@
 						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>81</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
@@ -410,6 +417,7 @@
 						<label>$VAR[Label2]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
+						<scrollspeed>44</scrollspeed>
 					</control>
 				</control>
 				<!-- Watched status -->
