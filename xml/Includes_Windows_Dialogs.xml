@@ -825,7 +825,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<visible>!$EXP[StatusOverlayVisible]</visible>
 				</control>
 
@@ -836,7 +836,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<visible>$EXP[StatusOverlayVisible]</visible>
 				</control>
 
@@ -870,7 +870,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<scroll>True</scroll>
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
 					<visible>!$EXP[StatusOverlayVisible]</visible>
@@ -883,7 +883,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<scroll>True</scroll>
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
 					<visible>$EXP[StatusOverlayVisible]</visible>
@@ -915,7 +915,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<visible>!$EXP[StatusOverlayVisible]</visible>
 				</control>
 
@@ -926,7 +926,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[TextColorNF]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<visible>$EXP[StatusOverlayVisible]</visible>
 				</control>
 

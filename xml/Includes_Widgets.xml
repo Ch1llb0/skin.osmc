@@ -276,7 +276,7 @@
 				<bottom>$PARAM[bottom]</bottom>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$VAR[ListLabel]</label>
 				<textcolor>FFFFFFFF</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -317,7 +317,7 @@
 				<bottom>$PARAM[bottom]</bottom>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$VAR[ListLabel]</label>
 				<textcolor>FFFFFFFF</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -356,7 +356,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$PARAM[textcolor]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<scroll>$PARAM[scroll]</scroll>
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
 					<visible>Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder + !$EXP[WidgetBadgeVisible]</visible>
@@ -369,7 +369,7 @@
 					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<textcolor>$PARAM[textcolor]</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$VAR[ListLabel]</label>
 					<scroll>$PARAM[scroll]</scroll>
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
 					<visible>Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder + $EXP[WidgetBadgeVisible]</visible>
@@ -641,7 +641,7 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<visible>Integer.IsEqual(Container($PARAM[container]).NumItems,1)</visible>
-					<label>$INFO[Container($PARAM[container]).ListItem.Label]</label>
+					<label>$VAR[ListLabelContainer$PARAM[container]]</label>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<scroll>True</scroll>
 					<scrollspeed>55</scrollspeed>
@@ -662,7 +662,7 @@
 						<font>Font33</font>
 						<align>right</align>
 						<aligny>top</aligny>
-						<label>$INFO[Container($PARAM[container]).ListItem.Label]</label>
+						<label>$VAR[ListLabelContainer$PARAM[container]]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
 				</control>
