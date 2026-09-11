@@ -96,16 +96,18 @@
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="darkred">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="darkred">$VAR[focusline]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
@@ -134,16 +136,18 @@
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="darkred">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="darkred">$VAR[focusline]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
@@ -172,16 +176,18 @@
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="darkred">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="darkred">$VAR[focusline]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
@@ -210,16 +216,18 @@
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>
 			<control type="image">
+				<top>58</top>
 				<width>285</width>
-				<height>66</height>
-				<texture colordiffuse="darkred">$VAR[focus66]</texture>
+				<height>3</height>
+				<texture colordiffuse="darkred">$VAR[focusline]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
 				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60) | Control.HasFocus(80)">Conditional</animation>
 			</control>

@@ -3,6 +3,9 @@
 	<!-- profiles -->
 	<defaultcontrol always="true">4</defaultcontrol>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>ResetScroll</include>
 

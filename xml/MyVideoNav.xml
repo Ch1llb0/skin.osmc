@@ -4,6 +4,9 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50,51,511,52,521,522,523,524,525,53,531,532,533,534,535,536,537,538,539</views>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>MediaWindowResetScroll</include>
 

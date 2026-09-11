@@ -131,9 +131,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>513</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -153,9 +154,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>727</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -175,9 +177,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>727</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -197,9 +200,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>353</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -406,9 +410,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>420</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -437,9 +442,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>640</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -468,9 +474,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>640</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -499,9 +506,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>266</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -717,9 +725,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>421</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -748,9 +757,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>639</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -779,9 +789,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>639</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -810,9 +821,10 @@
 				</control>
 				<!-- Highlighting -->
 				<control type="image">
+					<top>50</top>
 					<width>267</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">

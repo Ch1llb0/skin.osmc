@@ -4,6 +4,9 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<views>10</views>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>10702ResetScroll</include>
 

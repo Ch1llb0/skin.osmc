@@ -37,6 +37,9 @@ _Improved_
 - carry the sort of every pre-configured widget into the widget management dialog, so it shows what the widget already does and a change starts from the truth
 - sort the unwatched music videos widget by title, as the other unwatched widgets are, rather than at random
 - drop the fifty item cap on the most played album and song playlists, leaving the item limit the widget's own to set
+- place the line under a focused row with the control rather than with empty rows in its texture, so it stays sharp however the screen is scaled
+- stop windows and dialogs drawing a full screen fanart layer while there is no fanart to draw
+- clear the screen on the windows that fill it, rather than drawing each frame over the one before
 
 _Fixed_
 - fix audio channel labels claiming layouts a channel count cannot identify
@@ -67,6 +70,7 @@ _Fixed_
 - fix the twelfth line of system information not being shown
 - fix the last row of the game controller lists being cut through
 - fix drop shadows on the home menu icons and the PVR timer icon, which the icon set does not use elsewhere
+- fix the PVR providers list leaving the focused row unmarked, which every other list in the skin underlines
 
 ---
 
@@ -752,6 +756,7 @@ script-skinshortcuts-static.xml:
 - rebuild it once more for the seeded sorts, which reach the generated content elements of the five widgets that gained one
 
 script-skinshortcuts.xml:
+- draw the fanart layer only when the item has fanart, and drop the transparent fallback behind it
 - tell the three editing contexts apart by menuname, which always holds the menu being edited, where skinshortcuts-menutype is only set for menus the configuration declares
 - follow the v3 control ids: the widget picker moves 312 -> 309, restore moves 308 -> 311, and the hidden 404 property button goes along with the SetProperty(chooseProperty) calls that drove it
 - rename a widget by clicking 305, whose v3 handler writes the widget label, so the rename no longer needs script.skin.helper.service
@@ -797,6 +802,7 @@ Coordinates_LoginScreen.xml:
 
 Coordinates_MyPVRProviders.xml:
 - add the provider list, its layouts and its scrollbar, taking the geometry of the timers list so the PVR windows stay of a piece
+- underline the focused row, as the timers list the layout was taken from does
 - draw each row's icon from the item itself, which is a provider logo at the top level and a channel or recording icon below it
 
 Coordinates_MyPVRRecordings.xml:
@@ -810,6 +816,10 @@ Coordinates_Viewtype538.xml:
 
 Coordinates_script-skinshortcuts.xml:
 - collapse the arrow mirror pairs into one control each, keyed on the button rather than on the list item
+
+Coordinates_*.xml:
+- place the focus line by the control: three pixels tall, eight pixels above the bottom of the row, rather than a texture as tall as the row with the line drawn into it and every other row left empty; 208 layouts across 32 files
+- resolve the twenty-eight centred focus lines to an explicit top, as a three pixel control cannot be centred where a full height one was
 
 Custom_Debug_Grid.xml:
 - include the coordinates under the name they are defined with, restoring the offset the masked aspect ratios apply
@@ -879,6 +889,7 @@ Includes_Widgets.xml:
 - hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
 
 Includes_Windows_Dialogs.xml:
+- draw the window and dialog fanart layers only when there is fanart to draw, and drop the transparent fallback that kept them covering the screen the rest of the time
 - read the home background from backgroundPath, which is where v3 stores the path
 - read the watched state from the named expressions rather than spelling it out
 
@@ -926,6 +937,7 @@ Startup.xml:
 - drop the HideSettings reset, as nothing has read that setting since 2019
 
 Variables.xml:
+- replace the fourteen focus variables, one per row height, with focusline and focuslinecenter, as the control now places the line
 - reduce the codec and channel variables to map lookups, keeping the DSD sample rate rows
 - name the watched state, the partially watched series and the per media kind setting gate as expressions, replacing the same test spelled out at forty-three sites across four files
 - add movie sets to the video types the watched status setting covers, which every other list in the skin already included
@@ -968,12 +980,17 @@ VideoOSD.xml:
 - send the option row, the subtitle stream row and the seek slider to it, as all three named that play button
 - wrap left and right between the three buttons of the subtitle stream row, which stepped out to the record and skip back buttons at its ends
 
+Windows that fill the screen:
+- set a black background colour on all twenty-seven, so Kodi clears the screen rather than leaving each frame to draw over the one before
+
 media/:
+- add focusline.png and focuslinec.png, the three pixel focus line and its centred variant
+- remove the eleven focus textures the layouts no longer name, six of which nothing had referenced for some time
 - whiten the colour channels under every transparent pixel, so the packer can store a white-on-alpha texture in one channel instead of four; provably lossless, as no visible pixel is touched
 - store the greyscale textures as grey plus alpha rather than RGBA, matching how Estuary keeps its own
 - remove the drop shadows from the home menu icons and the PVR timer icon
 - flatten the focus textures to white, which the 27c, 52c and 66c variants already were
-- repack Textures.xbt with the Kodi v22 texture packer, which writes XBT 3 and picks a channel count per texture; 240 frames are now single channel and 194 dual, leaving 82 in full colour
+- repack Textures.xbt with the Kodi v22 texture packer, which writes XBT 3 and picks a channel count per texture; 231 frames are now single channel and 194 dual, leaving 82 in full colour
 
 addon.xml:
 - require xbmc.gui 5.18.0

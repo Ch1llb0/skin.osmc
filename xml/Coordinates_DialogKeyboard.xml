@@ -422,10 +422,11 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
+					<top>42</top>
 					<width>405</width>
-					<height>50</height>
+					<height>3</height>
 					<align>center</align>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52center]</texture>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focuslinecenter]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -444,10 +445,11 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
+					<top>42</top>
 					<width>452</width>
-					<height>50</height>
+					<height>3</height>
 					<align>center</align>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52center]</texture>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focuslinecenter]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -466,10 +468,11 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
+					<top>42</top>
 					<width>452</width>
-					<height>50</height>
+					<height>3</height>
 					<align>center</align>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52center]</texture>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focuslinecenter]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -488,10 +491,11 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
+					<top>42</top>
 					<width>380</width>
-					<height>50</height>
+					<height>3</height>
 					<align>center</align>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52center]</texture>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focuslinecenter]</texture>
 				</control>
 			</control>
 		</focusedlayout>

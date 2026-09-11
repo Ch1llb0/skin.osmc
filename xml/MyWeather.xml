@@ -3,6 +3,9 @@
 	<!-- weather -->
 	<defaultcontrol always="true">100</defaultcontrol>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>12600ResetScroll</include>
 

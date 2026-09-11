@@ -219,6 +219,15 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[PVRProviderItemInfo]</label>
 				</control>
+
+				<!-- Highlighting -->
+				<control type="image">
+					<left>90</left>
+					<top>73</top>
+					<width>1590</width>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
 			</control>
 		</focusedlayout>
 	</include>
@@ -259,6 +268,15 @@
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[PVRProviderItemInfo]</label>
+				</control>
+
+				<!-- Highlighting -->
+				<control type="image">
+					<left>90</left>
+					<top>73</top>
+					<width>2230</width>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -301,6 +319,15 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[PVRProviderItemInfo]</label>
 				</control>
+
+				<!-- Highlighting -->
+				<control type="image">
+					<left>90</left>
+					<top>73</top>
+					<width>2230</width>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
 			</control>
 		</focusedlayout>
 	</include>
@@ -341,6 +368,15 @@
 					<font>Font33</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[PVRProviderItemInfo]</label>
+				</control>
+
+				<!-- Highlighting -->
+				<control type="image">
+					<left>90</left>
+					<top>73</top>
+					<width>1110</width>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>

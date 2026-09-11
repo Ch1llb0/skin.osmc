@@ -4,6 +4,9 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(settings).Property(ChangeSettingsLevel))">ClearProperty(ChangeSettingsLevel)</onload>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>10004ResetScroll</include>
 

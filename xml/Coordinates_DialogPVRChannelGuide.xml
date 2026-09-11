@@ -555,10 +555,10 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>6</top>
+					<top>49</top>
 					<width>692</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
@@ -628,10 +628,10 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>6</top>
+					<top>49</top>
 					<width>692</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
@@ -701,10 +701,10 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>6</top>
+					<top>49</top>
 					<width>692</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
@@ -774,10 +774,10 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>6</top>
+					<top>49</top>
 					<width>452</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->

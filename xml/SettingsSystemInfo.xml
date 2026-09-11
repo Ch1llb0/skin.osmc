@@ -3,6 +3,9 @@
 	<!-- systeminfo -->
 	<defaultcontrol always="true">95</defaultcontrol>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>ResetScroll</include>
 

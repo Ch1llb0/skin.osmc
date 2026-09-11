@@ -243,9 +243,10 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 				<control type="image">
+					<top>68</top>
 					<width>1170</width>
-					<height>76</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus76]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
@@ -271,9 +272,10 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 				<control type="image">
+					<top>68</top>
 					<width>1810</width>
-					<height>76</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus76]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
@@ -299,9 +301,10 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 				<control type="image">
+					<top>68</top>
 					<width>1810</width>
-					<height>76</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus76]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
@@ -327,9 +330,10 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 				<control type="image">
+					<top>68</top>
 					<width>690</width>
-					<height>76</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus76]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>

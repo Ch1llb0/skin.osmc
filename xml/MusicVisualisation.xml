@@ -8,6 +8,9 @@
 	<onunload>ClearProperty(extended,12006)</onunload>
 	<onunload>ClearProperty(VideoOSDFresh,12006)</onunload>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>12006ResetScroll</include>
 

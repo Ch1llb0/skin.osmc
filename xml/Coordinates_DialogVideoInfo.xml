@@ -355,9 +355,10 @@
 				<visible>Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>1170</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -377,9 +378,10 @@
 				<visible>!Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>1170</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>
@@ -403,9 +405,10 @@
 				<visible>Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>1780</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -425,9 +428,10 @@
 				<visible>!Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>1780</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>
@@ -451,9 +455,10 @@
 				<visible>Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>1780</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -473,9 +478,10 @@
 				<visible>!Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>1780</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>
@@ -501,9 +507,10 @@
 				<scroll>True</scroll>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>660</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -525,9 +532,10 @@
 				<scroll>True</scroll>
 			</control>
 			<control type="image">
+				<top>50</top>
 				<width>660</width>
-				<height>58</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focus58]</texture>
+				<height>3</height>
+				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>

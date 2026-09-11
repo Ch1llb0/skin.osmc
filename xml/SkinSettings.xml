@@ -7,6 +7,9 @@
 	<onunload>ClearProperty(colorpicker,10035)</onunload>
 	<onunload>ClearProperty(colorpickercolor,10035)</onunload>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>10035ResetScroll</include>
 	

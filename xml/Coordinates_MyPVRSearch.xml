@@ -579,10 +579,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>489</left>
-					<top>12</top>
+					<top>55</top>
 					<width>531</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
 				</control>
 				
@@ -614,10 +614,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>0</left>
-					<top>36</top>
+					<top>79</top>
 					<width>1020</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
 				</control>
 
@@ -717,10 +717,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>636</left>
-					<top>12</top>
+					<top>55</top>
 					<width>574</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
 				</control>
 				
@@ -752,10 +752,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>0</left>
-					<top>36</top>
+					<top>79</top>
 					<width>1210</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
 				</control>
 
@@ -855,10 +855,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>636</left>
-					<top>12</top>
+					<top>55</top>
 					<width>574</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
 				</control>
 				
@@ -890,10 +890,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>0</left>
-					<top>36</top>
+					<top>79</top>
 					<width>1210</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
 				</control>
 
@@ -993,10 +993,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>435</left>
-					<top>12</top>
+					<top>55</top>
 					<width>345</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!String.IsEmpty(ListItem.Date)</visible>
 				</control>
 				
@@ -1028,10 +1028,10 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>0</left>
-					<top>36</top>
+					<top>79</top>
 					<width>780</width>
-					<height>51</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus52]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>String.IsEmpty(ListItem.Date)</visible>
 				</control>
 

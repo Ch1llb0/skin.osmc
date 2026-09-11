@@ -3,6 +3,9 @@
 	<!-- home -->
 	<defaultcontrol always="true">9000</defaultcontrol>
 	
+	<!-- Screen clear -->
+	<backgroundcolor>FF000000</backgroundcolor>
+	
 	<!-- Textbox scroll reset -->
 	<include>ResetScroll</include>
 

@@ -231,10 +231,11 @@
 		<!-- Fanart -->
 		<control type="image" id="11000">
 			<include>FullscreenDimensions</include>
-			<texture background="true" fallback="transparent.png">$VAR[widgetBackground]</texture>
+			<texture background="true">$VAR[widgetBackground]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<visible>!Skin.HasSetting(HideFanart)</visible>
+			<visible>!String.IsEmpty(Control.GetLabel(9987)) | [Window.Is(visualisation) + !String.IsEmpty(Player.Art(fanart))] | [!Window.Is(visualisation) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
 			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
 			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
 			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
@@ -321,8 +322,8 @@
 		<!-- Fanart -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(fanart)]</texture>
-			<visible>!Skin.HasSetting(HideFanart)</visible>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<visible>!Skin.HasSetting(HideFanart) + !String.IsEmpty(ListItem.Art(fanart))</visible>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>DialogZoomAnimation</include>

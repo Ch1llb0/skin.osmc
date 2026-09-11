@@ -494,11 +494,11 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<centertop>50%</centertop>
+						<top>69</top>
 						<left>140</left>
 						<width>880</width>
-						<height>58</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -516,10 +516,10 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>12</top>
+						<top>48</top>
 						<width>880</width>
-						<height>44</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus44]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -563,11 +563,11 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<centertop>50%</centertop>
+						<top>69</top>
 						<left>140</left>
 						<width>1520</width>
-						<height>58</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -585,10 +585,10 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>12</top>
+						<top>48</top>
 						<width>1520</width>
-						<height>44</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus44]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -632,11 +632,11 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<centertop>50%</centertop>
+						<top>69</top>
 						<left>140</left>
 						<width>1520</width>
-						<height>58</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -654,10 +654,10 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>12</top>
+						<top>48</top>
 						<width>1520</width>
-						<height>44</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus44]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -700,11 +700,11 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<centertop>50%</centertop>
+						<top>69</top>
 						<left>140</left>
 						<width>400</width>
-						<height>58</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -722,10 +722,10 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>12</top>
+						<top>48</top>
 						<width>400</width>
-						<height>44</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus44]</texture>
+						<height>3</height>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -982,11 +982,11 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<centertop>50%</centertop>
+					<top>69</top>
 					<left>0</left>
 					<width>372</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
@@ -1031,11 +1031,11 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<centertop>50%</centertop>
+					<top>69</top>
 					<left>0</left>
 					<width>412</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
@@ -1080,11 +1080,11 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<centertop>50%</centertop>
+					<top>69</top>
 					<left>0</left>
 					<width>412</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
@@ -1129,11 +1129,11 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<centertop>50%</centertop>
+					<top>69</top>
 					<left>0</left>
 					<width>267</width>
-					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<height>3</height>
+					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
