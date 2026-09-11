@@ -396,32 +396,32 @@
 		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),20s)">IndividualBackgroundFolderDuration20</include>
 		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),30s)">IndividualBackgroundFolderDuration30</include>
 		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),1 min)">IndividualBackgroundFolderDuration60</include>
-    </include>
+	</include>
 	
 	<include name="IndividualBackgroundFolderDuration5">
 		<timeperimage>5000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration6">
+	</include>
+	<include name="IndividualBackgroundFolderDuration6">
 		<timeperimage>6000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration8">
+	</include>
+	<include name="IndividualBackgroundFolderDuration8">
 		<timeperimage>8000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration10">
+	</include>
+	<include name="IndividualBackgroundFolderDuration10">
 		<timeperimage>10000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration15">
+	</include>
+	<include name="IndividualBackgroundFolderDuration15">
 		<timeperimage>15000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration20">
+	</include>
+	<include name="IndividualBackgroundFolderDuration20">
 		<timeperimage>20000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration30">
+	</include>
+	<include name="IndividualBackgroundFolderDuration30">
 		<timeperimage>30000</timeperimage>
-    </include>
-    <include name="IndividualBackgroundFolderDuration60">
+	</include>
+	<include name="IndividualBackgroundFolderDuration60">
 		<timeperimage>60000</timeperimage>
-    </include>
+	</include>
 	
 	<!-- Multi image custom background duration -->
 	<include name="CustomBackgroundFolderDuration">
@@ -433,32 +433,32 @@
 		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),20s)">CustomBackgroundFolderDuration20</include>
 		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),30s)">CustomBackgroundFolderDuration30</include>
 		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),1 min)">CustomBackgroundFolderDuration60</include>
-    </include>
+	</include>
 	
 	<include name="CustomBackgroundFolderDuration5">
 		<timeperimage>5000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration6">
+	</include>
+	<include name="CustomBackgroundFolderDuration6">
 		<timeperimage>6000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration8">
+	</include>
+	<include name="CustomBackgroundFolderDuration8">
 		<timeperimage>8000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration10">
+	</include>
+	<include name="CustomBackgroundFolderDuration10">
 		<timeperimage>10000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration15">
+	</include>
+	<include name="CustomBackgroundFolderDuration15">
 		<timeperimage>15000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration20">
+	</include>
+	<include name="CustomBackgroundFolderDuration20">
 		<timeperimage>20000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration30">
+	</include>
+	<include name="CustomBackgroundFolderDuration30">
 		<timeperimage>30000</timeperimage>
-    </include>
-    <include name="CustomBackgroundFolderDuration60">
+	</include>
+	<include name="CustomBackgroundFolderDuration60">
 		<timeperimage>60000</timeperimage>
-    </include>
+	</include>
 	
 	<!-- 3D depth -->
 	
@@ -817,6 +817,7 @@
 					<texture background="true">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
+
 				<control type="label">
 					<left>$PARAM[pad]</left>
 					<width>$PARAM[titlewide]</width>
@@ -827,6 +828,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<visible>!$EXP[StatusOverlayVisible]</visible>
 				</control>
+
 				<control type="label">
 					<left>$PARAM[pad]</left>
 					<width>$PARAM[titlenarrow]</width>
@@ -837,6 +839,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<visible>$EXP[StatusOverlayVisible]</visible>
 				</control>
+
 				<control type="image">
 					<left>$PARAM[badgeleft]</left>
 					<top>$PARAM[badgetop]</top>
@@ -859,6 +862,7 @@
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
 				</control>
+
 				<control type="label">
 					<left>$PARAM[pad]</left>
 					<width>$PARAM[titlewide]</width>
@@ -871,6 +875,7 @@
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
 					<visible>!$EXP[StatusOverlayVisible]</visible>
 				</control>
+
 				<control type="label">
 					<left>$PARAM[pad]</left>
 					<width>$PARAM[titlenarrow]</width>
@@ -883,6 +888,7 @@
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
 					<visible>$EXP[StatusOverlayVisible]</visible>
 				</control>
+
 				<control type="image">
 					<left>$PARAM[badgeleft]</left>
 					<top>$PARAM[badgetop]</top>
@@ -891,6 +897,7 @@
 					<texture background="true">$VAR[StatusOverlayWide]</texture>
 				</control>
 			</control>
+
 			<control type="group">
 				<include>$PARAM[coords]</include>
 				<visible>$EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
@@ -900,6 +907,7 @@
 					<texture background="true">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
+
 				<control type="label">
 					<left>$PARAM[pad]</left>
 					<width>$PARAM[titlewide]</width>
@@ -910,6 +918,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<visible>!$EXP[StatusOverlayVisible]</visible>
 				</control>
+
 				<control type="label">
 					<left>$PARAM[pad]</left>
 					<width>$PARAM[titlenarrow]</width>
@@ -920,6 +929,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<visible>$EXP[StatusOverlayVisible]</visible>
 				</control>
+
 				<control type="image">
 					<left>$PARAM[badgeleft]</left>
 					<top>$PARAM[badgetop]</top>

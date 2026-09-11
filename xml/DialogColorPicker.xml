@@ -29,7 +29,7 @@
 				<font></font>
 			</control>
 
-	        <!-- Color picker panel -->
+			<!-- Color picker panel -->
 			<control type="panel" id="6">
 				<include>DialogColorPicker_coords1</include>
 				<orientation>vertical</orientation>
@@ -45,7 +45,7 @@
 				
 				<include>DialogColorPicker_coords3</include>
 				
-	        </control>
+			</control>
 			
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="60">

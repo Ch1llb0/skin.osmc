@@ -507,7 +507,8 @@
 	<include name="Viewtype534_coords12_4:3">
 		<width>15</width>
 		<centerleft>67</centerleft>
-	</include>	
+	</include>
+
 	<include name="Viewtype534_coords13">
 		<include content="MediaViewTitleStripNF">
 			<param name="coords">Viewtype534_coords8</param>
