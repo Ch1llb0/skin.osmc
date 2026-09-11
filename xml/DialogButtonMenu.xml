@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">7000</defaultcontrol>
 	<onload>Dialog.Close(1110)</onload>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

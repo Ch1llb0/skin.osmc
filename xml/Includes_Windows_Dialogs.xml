@@ -79,6 +79,13 @@
 		<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
 	</include>
 	
+	<!-- Scroll reset. Flipped as each window loads, so a text box or a scrolling label
+	     returns to the start on the next visit even when it is showing the same item. -->
+	<include name="ResetScroll">
+		<onload condition="String.IsEmpty(Window(Home).Property(ResetScroll))">SetProperty(ResetScroll," ",Home)</onload>
+		<onload condition="!String.IsEmpty(Window(Home).Property(ResetScroll))">ClearProperty(ResetScroll,Home)</onload>
+	</include>
+	
 	<!-- Backgrounds -->
 
 	<!-- Window background image -->

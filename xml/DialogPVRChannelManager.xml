@@ -3,7 +3,7 @@
 	<!-- pvrchannelmanager -->
 	<defaultcontrol always="true">9001</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

@@ -6,8 +6,8 @@
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
 	
-	<!-- Textbox scroll reset -->
-	<include>12600ResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 
 	<!-- Sub menu menucontrol -->
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>
@@ -151,7 +151,7 @@
 					</control>
 					<control type="textbox">
 						<include>MyWeather_coords11</include>
-						<label>$LOCALIZE[33030]: $INFO[Window(Weather).Property(Day0.Outlook)]$INFO[Window(Home).Property(ResetScroll.12600)]</label>
+						<label>$LOCALIZE[33030]: $INFO[Window(Weather).Property(Day0.Outlook)]$VAR[ResetScroll]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<autoscroll>false</autoscroll>
 					</control>

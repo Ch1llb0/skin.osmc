@@ -7,8 +7,8 @@
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
 	
-	<!-- Textbox scroll reset -->
-	<include>10702ResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 
 	<!-- Sub menu menucontrol -->
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>
@@ -160,7 +160,7 @@
 								<include>MyPVRGuide_coords15</include>
 								<font>Font27</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.10702)]</label>
+								<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
 								<textcolor>$VAR[TextColorFO]</textcolor>
 								<autoscroll delay="8000" time="1800" repeat="10000">true</autoscroll>
 								<visible>Skin.String(PlotFont,S)</visible>
@@ -169,7 +169,7 @@
 								<include>MyPVRGuide_coords16</include>
 								<font>Font30</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.10702)]</label>
+								<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
 								<textcolor>$VAR[TextColorFO]</textcolor>
 								<autoscroll delay="8000" time="1700" repeat="10000">true</autoscroll>
 								<visible>Skin.String(PlotFont,M)</visible>
@@ -178,7 +178,7 @@
 								<include>MyPVRGuide_coords17</include>
 								<font>Font33</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.10702)]</label>
+								<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
 								<textcolor>$VAR[TextColorFO]</textcolor>
 								<autoscroll delay="8000" time="1600" repeat="10000">true</autoscroll>
 								<visible>Skin.String(PlotFont,L)</visible>
@@ -187,7 +187,7 @@
 								<include>MyPVRGuide_coords18</include>
 								<font>Font36</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Plot]$INFO[Window(Home).Property(ResetScroll.10702)]</label>
+								<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
 								<textcolor>$VAR[TextColorFO]</textcolor>
 								<autoscroll delay="8000" time="1500" repeat="10000">true</autoscroll>
 								<visible>Skin.String(PlotFont,XL)</visible>

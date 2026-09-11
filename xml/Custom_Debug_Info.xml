@@ -4,6 +4,9 @@
 	<zorder>100</zorder>
 	<visible>!Window.IsVisible(startup) + Skin.HasSetting(DebugInfo)</visible>
 	
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
+	
 	<controls>
 
 		<!-- Window/Dialog debug -->

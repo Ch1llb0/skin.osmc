@@ -3,7 +3,7 @@
 	<!-- PVRGuideControls -->
 	<defaultcontrol always="true">7000</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

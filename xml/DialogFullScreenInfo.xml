@@ -6,8 +6,8 @@
 	<onload>SetProperty(FullScreenInfo,True,12005)</onload>
 	<onunload>ClearProperty(FullScreenInfo,12005)</onunload>
 	
-	<!-- Textbox scroll reset -->
-	<include>12005ResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 
 	<controls>
 	

@@ -3,7 +3,7 @@
 	<!-- GameOSD -->
 	<defaultcontrol always="true">5</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 	
 	<controls>

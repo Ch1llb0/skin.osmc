@@ -6,6 +6,9 @@
 	<onload>AlarmClock(isCachingTimer,SetProperty(isCaching,True,10000),00:01,silent)</onload>
 	<onunload>SetProperty(isCaching,False,10000)</onunload>
 	<onunload>CancelAlarm(isCachingTimer,silent)</onunload>
+	
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 	<zorder>100</zorder>
 	
 	<controls>

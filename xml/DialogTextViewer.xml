@@ -3,7 +3,7 @@
 	<!-- textviewer -->
 	<defaultcontrol always="true">61</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

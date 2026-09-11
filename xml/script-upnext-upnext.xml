@@ -6,6 +6,9 @@
 	<animation effect="slide" end="550,0" time="200">WindowClose</animation>
 	<zorder>100</zorder>
 	
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
+	
 	<controls>
 		<control type="group">
 			<include>NotificationDepth</include>

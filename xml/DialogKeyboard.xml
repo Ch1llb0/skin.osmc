@@ -3,7 +3,7 @@
 	<!-- virtualkeyboard -->
 	<defaultcontrol always="true">312</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

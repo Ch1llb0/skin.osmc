@@ -3,7 +3,7 @@
 	<!-- dialogsettings -->
 	<defaultcontrol always="true">5</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<include condition="!Window.IsVisible(osdaudiosettings) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdsubtitlesettings)">DialogSettings_Default</include>

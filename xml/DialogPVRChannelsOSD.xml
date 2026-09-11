@@ -4,8 +4,8 @@
 	<defaultcontrol always="true">11</defaultcontrol>
 	<zorder>0</zorder>
 	
-	<!-- Textbox scroll reset -->
-	<include>10608ResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 
 	<controls>
 
@@ -37,7 +37,7 @@
 					<include>DialogPVRChannelsOSD_coords5</include>
 					<align>left</align>
 					<font>Font27</font>
-					<label>$VAR[PVRDescriptionDialogGuide]$INFO[Window(Home).Property(ResetScroll.10608)]</label>
+					<label>$VAR[PVRDescriptionDialogGuide]$VAR[ResetScroll]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,S)</visible>
@@ -46,7 +46,7 @@
 					<include>DialogPVRChannelsOSD_coords6</include>
 					<align>left</align>
 					<font>Font30</font>
-					<label>$VAR[PVRDescriptionDialogGuide]$INFO[Window(Home).Property(ResetScroll.10608)]</label>
+					<label>$VAR[PVRDescriptionDialogGuide]$VAR[ResetScroll]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<autoscroll delay="5000" time="1300" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,M)</visible>
@@ -55,7 +55,7 @@
 					<include>DialogPVRChannelsOSD_coords7</include>
 					<align>left</align>
 					<font>Font33</font>
-					<label>$VAR[PVRDescriptionDialogGuide]$INFO[Window(Home).Property(ResetScroll.10608)]</label>
+					<label>$VAR[PVRDescriptionDialogGuide]$VAR[ResetScroll]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,L)</visible>
@@ -64,7 +64,7 @@
 					<include>DialogPVRChannelsOSD_coords8</include>
 					<align>left</align>
 					<font>Font36</font>
-					<label>$VAR[PVRDescriptionDialogGuide]$INFO[Window(Home).Property(ResetScroll.10608)]</label>
+					<label>$VAR[PVRDescriptionDialogGuide]$VAR[ResetScroll]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,XL)</visible>

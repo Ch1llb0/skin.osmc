@@ -2,7 +2,7 @@
 <window>
 	<!-- busydialog -->
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

@@ -44,6 +44,8 @@ _Improved_
 - scroll every label at a speed set by its own font size rather than the single speed Kodi applies to all of them, so small text no longer races past and large text no longer crawls
 - return to the sub menu when the view picker is left with back, rather than closing both at once
 - offer the artwork titles setting, and the watched and listened to indicator settings, from a media view's own sub menu as well as from the skin settings, so a view can be adjusted without leaving it
+- put a scrolled text box back to the start when a dialog, the sub menu, the view picker or the context menu closes over it, not only when a window is opened
+- drive every scroll reset from one token instead of twenty five window properties and the alarm clocks that cleared them, which fired twenty six times on each window change
 
 _Fixed_
 - fix audio channel labels claiming layouts a channel count cannot identify
@@ -861,7 +863,6 @@ DialogVideoInfo.xml:
 DialogVideoManager.xml:
 - add the ungroup button, which returns a version to the library as a standalone movie; versions only, as it has no effect on extras
 
-Every file with a scrolling label:
 - set a scroll speed from the font, at the rate the skin already scrolled its largest one, which works out at about one and three quarter times the font size a second; Font36 is left alone, as Kodi's own default already matches it, and the three wall fadelabels that scrolled at the largest font's speed come down to their own
 
 Font.xml:
@@ -872,6 +873,7 @@ Home.xml:
 - gate the entry point on the add-on being enabled
 
 Includes.xml:
+- drop the scroll reset file, which is now one include and one variable
 - pull in Includes_Maps.xml
 - load the generated includes only while the add-on is enabled, and the static fallback otherwise, as a disabled add-on leaves its last build behind
 - point at the regeneration notes for the fallback in the repository documentation
@@ -891,6 +893,7 @@ Includes_Maps.xml:
 - label ambiguous channel counts with every layout they may represent, as a channel count cannot identify one
 
 Includes_SubMenu.xml:
+- drop the eighteen sub menu scroll resets, as the token now reads the sub menu and view picker focus itself
 - offer the artwork titles setting in the seven sub menus that carry a view button, shown while a wall view is on screen
 - offer the watched status setting in the video sub menu and the listened to status setting in the music one, beside it, as both change what a view draws over its artwork
 - send back from the view picker to the sub menu it was opened from rather than out to the list, which closed both
@@ -914,6 +917,7 @@ Includes_Widgets.xml:
 - hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
 
 Includes_Windows_Dialogs.xml:
+- add the scroll reset include: two conditional actions that flip one property as a window loads, in place of twenty includes that set twenty five properties and cleared each one from an alarm clock a frame later
 - add MediaViewTitleStripNF and MediaViewTitleStripFO, which draw the title over the bottom of the artwork with the status badge to its right, taking their geometry as numbers so each view can hand over the strip size it already has
 - scroll the focused title at the pace the skin scrolls everything else, which is about one and three quarter times the font size a second, rather than the flat sixty pixels a second Kodi falls back to
 - stand the status strip down in the views the title strip serves, as the two occupy the same place
@@ -925,6 +929,7 @@ LoginScreen.xml:
 - point the scrollbar at LoginScreen_coords6
 
 MusicOSD.xml:
+- flip the shared token once where the extended page button reset four text boxes by name, and drop the alarm clocks that cleared them
 - name the button row so the option row moves to whichever of its buttons is on screen, rather than to a channel up button that only exists on radio
 - send the seek slider to it as well, as it named a play button that is not built when the player cannot pause
 
@@ -966,6 +971,7 @@ Startup.xml:
 - drop the HideSettings reset, as nothing has read that setting since 2019
 
 Variables.xml:
+- name the scroll reset token, which carries the window flip and gains an empty bold tag, drawn as nothing, while a dialog or a menu is over the window, so closing one resets what is under it
 - name the pair of conditions that decide whether an item shows a status badge, which four controls repeated between them
 - name the condition for a wall view being on screen, which is where the ten wall views are listed, and read the title setting against it
 - name the widget badge condition, reminders included, so a title makes room for a badge the strip itself does not draw behind

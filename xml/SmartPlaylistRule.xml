@@ -3,7 +3,7 @@
 	<!-- smartplaylistrule -->
 	<defaultcontrol always="true">15</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

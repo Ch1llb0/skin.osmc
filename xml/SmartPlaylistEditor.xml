@@ -3,7 +3,7 @@
 	<!-- smartplaylisteditor -->
 	<defaultcontrol always="true">22</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

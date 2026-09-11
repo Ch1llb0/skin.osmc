@@ -5,7 +5,7 @@
 	<onload>SetProperty(HelpPage,first,1106)</onload>
 	<onunload>SetProperty(HelpPage,first,1106)</onunload>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

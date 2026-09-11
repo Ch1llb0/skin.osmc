@@ -3,7 +3,7 @@
 	<!-- pvrguidesearch -->
 	<defaultcontrol always="true">9</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

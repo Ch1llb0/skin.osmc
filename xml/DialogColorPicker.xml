@@ -5,7 +5,7 @@
 	<onunload>ClearProperty(colorpicker,10035)</onunload>
 	<onunload>ClearProperty(colorpickercolor,10035)</onunload>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 	
 	<controls>

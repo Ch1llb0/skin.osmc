@@ -3,7 +3,7 @@
 	<!-- gamecontrollersettings -->
 	<defaultcontrol always="true">3</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 	
 	<include condition="Window.IsDialogTopMost(gamecontrollers)">DialogGameControllers_Default</include>

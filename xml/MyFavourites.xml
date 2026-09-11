@@ -7,8 +7,8 @@
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
 	
-	<!-- Textbox scroll reset -->
-	<include>MediaWindowResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 	
 	<!-- Sub menu menucontrol -->
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>

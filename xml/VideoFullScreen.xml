@@ -22,7 +22,7 @@
 	<onunload>ClearProperty(VideoOSDBookmarksSeekBar,12005)</onunload>
 	<onunload>ClearProperty(VideoOSDBookmarksVideoInfo,12005)</onunload>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
@@ -443,7 +443,7 @@
 						<include>VideoFullScreen_coords31</include>
 						<align>left</align>
 						<font>Font27</font>
-						<label>$VAR[VideoPlayerPlot]$INFO[Window(Home).Property(ResetScroll.12005)]</label>
+						<label>$VAR[VideoPlayerPlot]$VAR[ResetScroll]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<autoscroll delay="8000" time="1800" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,S)</visible>
@@ -453,7 +453,7 @@
 						<include>VideoFullScreen_coords32</include>
 						<align>left</align>
 						<font>Font30</font>
-						<label>$VAR[VideoPlayerPlot]$INFO[Window(Home).Property(ResetScroll.12005)]</label>
+						<label>$VAR[VideoPlayerPlot]$VAR[ResetScroll]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<autoscroll delay="8000" time="1700" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,M)</visible>
@@ -463,7 +463,7 @@
 						<include>VideoFullScreen_coords33</include>
 						<align>left</align>
 						<font>Font33</font>
-						<label>$VAR[VideoPlayerPlot]$INFO[Window(Home).Property(ResetScroll.12005)]</label>
+						<label>$VAR[VideoPlayerPlot]$VAR[ResetScroll]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<autoscroll delay="8000" time="1600" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
@@ -473,7 +473,7 @@
 						<include>VideoFullScreen_coords34</include>
 						<align>left</align>
 						<font>Font36</font>
-						<label>$VAR[VideoPlayerPlot]$INFO[Window(Home).Property(ResetScroll.12005)]</label>
+						<label>$VAR[VideoPlayerPlot]$VAR[ResetScroll]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<autoscroll delay="8000" time="1500" repeat="10000">true</autoscroll>
 						<visible>Skin.String(PlotFont,XL)</visible>

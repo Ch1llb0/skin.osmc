@@ -11,8 +11,8 @@
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
 	
-	<!-- Textbox scroll reset -->
-	<include>12006ResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 
 	<controls>
 
@@ -737,7 +737,7 @@
 						<align>left</align>
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Home).Property(ResetScroll.12006Artist)]</label>
+						<label>$INFO[MusicPlayer.Property(Artist_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1400" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,S)</visible>
 					</control>
@@ -746,7 +746,7 @@
 						<align>left</align>
 						<font>Font30</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Home).Property(ResetScroll.12006Artist)]</label>
+						<label>$INFO[MusicPlayer.Property(Artist_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1300" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,M)</visible>
 					</control>
@@ -755,7 +755,7 @@
 						<align>left</align>
 						<font>Font33</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Home).Property(ResetScroll.12006Artist)]</label>
+						<label>$INFO[MusicPlayer.Property(Artist_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
@@ -764,7 +764,7 @@
 						<align>left</align>
 						<font>Font36</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Home).Property(ResetScroll.12006Artist)]</label>
+						<label>$INFO[MusicPlayer.Property(Artist_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
@@ -791,7 +791,7 @@
 						<align>left</align>
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Album_Description)]$INFO[Window(Home).Property(ResetScroll.12006Album)]</label>
+						<label>$INFO[MusicPlayer.Property(Album_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1400" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,S)</visible>
 					</control>
@@ -800,7 +800,7 @@
 						<align>left</align>
 						<font>Font30</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Album_Description)]$INFO[Window(Home).Property(ResetScroll.12006Album)]</label>
+						<label>$INFO[MusicPlayer.Property(Album_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1300" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,M)</visible>
 					</control>
@@ -809,7 +809,7 @@
 						<align>left</align>
 						<font>Font33</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Album_Description)]$INFO[Window(Home).Property(ResetScroll.12006Album)]</label>
+						<label>$INFO[MusicPlayer.Property(Album_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
@@ -818,7 +818,7 @@
 						<align>left</align>
 						<font>Font36</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[MusicPlayer.Property(Album_Description)]$INFO[Window(Home).Property(ResetScroll.12006Album)]</label>
+						<label>$INFO[MusicPlayer.Property(Album_Description)]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
@@ -845,7 +845,7 @@
 						<align>left</align>
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.Plot]$INFO[Window(Home).Property(ResetScroll.12006PlotNow)]</label>
+						<label>$INFO[VideoPlayer.Plot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1400" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,S)</visible>
 					</control>
@@ -854,7 +854,7 @@
 						<align>left</align>
 						<font>Font30</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.Plot]$INFO[Window(Home).Property(ResetScroll.12006PlotNow)]</label>
+						<label>$INFO[VideoPlayer.Plot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1300" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,M)</visible>
 					</control>
@@ -863,7 +863,7 @@
 						<align>left</align>
 						<font>Font33</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.Plot]$INFO[Window(Home).Property(ResetScroll.12006PlotNow)]</label>
+						<label>$INFO[VideoPlayer.Plot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
@@ -872,7 +872,7 @@
 						<align>left</align>
 						<font>Font36</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.Plot]$INFO[Window(Home).Property(ResetScroll.12006PlotNow)]</label>
+						<label>$INFO[VideoPlayer.Plot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
@@ -899,7 +899,7 @@
 						<align>left</align>
 						<font>Font27</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.NextPlot]$INFO[Window(Home).Property(ResetScroll.12006PlotNext)]</label>
+						<label>$INFO[VideoPlayer.NextPlot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1400" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,S)</visible>
 					</control>
@@ -908,7 +908,7 @@
 						<align>left</align>
 						<font>Font30</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.NextPlot]$INFO[Window(Home).Property(ResetScroll.12006PlotNext)]</label>
+						<label>$INFO[VideoPlayer.NextPlot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1300" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,M)</visible>
 					</control>
@@ -917,7 +917,7 @@
 						<align>left</align>
 						<font>Font33</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.NextPlot]$INFO[Window(Home).Property(ResetScroll.12006PlotNext)]</label>
+						<label>$INFO[VideoPlayer.NextPlot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1200" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,L)</visible>
 					</control>
@@ -926,7 +926,7 @@
 						<align>left</align>
 						<font>Font36</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
-						<label>$INFO[VideoPlayer.NextPlot]$INFO[Window(Home).Property(ResetScroll.12006PlotNext)]</label>
+						<label>$INFO[VideoPlayer.NextPlot]$VAR[ResetScroll]</label>
 						<autoscroll delay="10000" time="1100" repeat="12000">True</autoscroll>
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>

@@ -5,7 +5,7 @@
 	<onload>SetProperty(scriptdialog,script-skinshortcuts.xml,10000)</onload>
 	<onunload>ClearProperty(scriptdialog,10000)</onunload>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

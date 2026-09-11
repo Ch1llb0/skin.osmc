@@ -7,8 +7,8 @@
 	<onunload condition="Window.IsVisible(10600)">ClearProperty(description,10600)</onunload>
 	<onunload condition="Window.IsVisible(10601)">ClearProperty(description,10601)</onunload>
 	
-	<!-- Textbox scroll reset -->
-	<include>10600ResetScroll</include>
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
 	
 	<controls>
 
@@ -181,7 +181,7 @@
 				<align>left</align>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
-				<label>$INFO[ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Plot]$INFO[ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]$INFO[Window(Home).Property(ResetScroll.10600)]</label>
+				<label>$INFO[ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Plot]$INFO[ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]$VAR[ResetScroll]</label>
 				<autoscroll delay="10000" time="1700" repeat="12000">True</autoscroll>
 				<visible>[Window.IsVisible(10600) + [!String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + !String.IsEmpty(ListItem.Plot)] | [Window.IsVisible(10601) + [!String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + !String.IsEmpty(ListItem.Plot)]</visible>
 				<include>VisibleFadeAnimation</include>

@@ -3,7 +3,7 @@
 	<!-- mediasource -->
 	<defaultcontrol always="true">10</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

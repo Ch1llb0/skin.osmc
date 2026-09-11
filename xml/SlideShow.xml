@@ -3,7 +3,7 @@
 	<!-- slideshow -->
 	<defaultcontrol always="true">2</defaultcontrol>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 	
 </window>

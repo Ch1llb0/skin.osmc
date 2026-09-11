@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">5</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

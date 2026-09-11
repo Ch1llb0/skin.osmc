@@ -6,7 +6,7 @@
 		<origin x="0" y="0"/>
 	</coordinates>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>

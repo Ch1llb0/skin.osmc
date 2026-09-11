@@ -6,7 +6,7 @@
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
 	
-	<!-- Textbox scroll reset -->
+	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<!-- Sidemenu menucontrol -->
