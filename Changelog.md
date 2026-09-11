@@ -78,6 +78,7 @@ _Fixed_
 - fix drop shadows on the home menu icons and the PVR timer icon, which the icon set does not use elsewhere
 - fix the PVR providers list leaving the focused row unmarked, which every other list in the skin underlines
 - fix the focused status badge in the music wall low view being mis-sized and mis-placed at 16:9, where a width was written as a left offset
+- fix the music window fading twice on open, as it ran the shared window fade as well as the conditional pair that was meant to replace it
 
 ---
 
@@ -936,6 +937,9 @@ MusicOSD.xml:
 MusicVisualisation.xml:
 - hide end time, position, progress and cache bar during live playback
 - separate genres with commas
+
+MyMusicNav.xml:
+- drop the shared window fade, which ran alongside the conditional pair that suppresses the fade to and from the playlist editor, so the fade played twice and the condition counted for nothing
 
 MyPVRGuide.xml:
 - add extra title info to the episode name fadelabel
