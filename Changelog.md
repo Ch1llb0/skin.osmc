@@ -33,6 +33,7 @@ _Improved_
 - disable the delete and hide buttons on menu items that cannot be removed, and the restore button while nothing has been deleted
 - give every group in the shortcut and widget pickers its own icon
 - name the reset button in the skin settings for everything it clears, which is every menu and every view selection
+- reduce the skin's textures to the channels they actually use, cutting the texture memory the skin holds on the graphics card by roughly two thirds
 - carry the sort of every pre-configured widget into the widget management dialog, so it shows what the widget already does and a change starts from the truth
 - sort the unwatched music videos widget by title, as the other unwatched widgets are, rather than at random
 - drop the fifty item cap on the most played album and song playlists, leaving the item limit the widget's own to set
@@ -65,6 +66,7 @@ _Fixed_
 - fix the channel label in the fullscreen OSD and the channel guide dialog being blank
 - fix the twelfth line of system information not being shown
 - fix the last row of the game controller lists being cut through
+- fix drop shadows on the home menu icons and the PVR timer icon, which the icon set does not use elsewhere
 
 ---
 
@@ -965,6 +967,13 @@ VideoOSD.xml:
 - name the button row so the rows around it move to whichever of its buttons is on screen, rather than to a play button that is not built when the player cannot pause
 - send the option row, the subtitle stream row and the seek slider to it, as all three named that play button
 - wrap left and right between the three buttons of the subtitle stream row, which stepped out to the record and skip back buttons at its ends
+
+media/:
+- whiten the colour channels under every transparent pixel, so the packer can store a white-on-alpha texture in one channel instead of four; provably lossless, as no visible pixel is touched
+- store the greyscale textures as grey plus alpha rather than RGBA, matching how Estuary keeps its own
+- remove the drop shadows from the home menu icons and the PVR timer icon
+- flatten the focus textures to white, which the 27c, 52c and 66c variants already were
+- repack Textures.xbt with the Kodi v22 texture packer, which writes XBT 3 and picks a channel count per texture; 240 frames are now single channel and 194 dual, leaving 82 in full colour
 
 addon.xml:
 - require xbmc.gui 5.18.0
