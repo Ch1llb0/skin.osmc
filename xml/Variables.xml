@@ -46,6 +46,14 @@
 	     large layout, so every use pairs this with the widget count of that entry's selector. -->
 	<expression name="TwoRowWidgets">Skin.HasSetting(HomeWidgetsTwoRows)</expression>
 	
+	<!-- Neither extension is in the stream, so the file name is the only evidence there is.
+	     Kodi reads DTS:X off a DTS-HD MA bed itself and names the codec dtshd_ma_x, so the
+	     name is only consulted for the HRA bed it cannot read, and for Auro-3D, which it
+	     does not know at all. Each list is written once here and read by the Audio flag. -->
+	<expression name="DTSXFileName">[String.Contains(ListItem.FileName,-dts-x-) | String.Contains(ListItem.FileName,-dts-x.) | String.Contains(ListItem.FileName,-dts-x_) | String.Contains(ListItem.FileName,-dtsx-) | String.Contains(ListItem.FileName,-dtsx.) | String.Contains(ListItem.FileName,-dtsx_) | String.Contains(ListItem.FileName,.dts-x.) | String.Contains(ListItem.FileName,.dts-x_) | String.Contains(ListItem.FileName,.dts-x-) | String.Contains(ListItem.FileName,.dtsx.) | String.Contains(ListItem.FileName,.dtsx_) | String.Contains(ListItem.FileName,.dtsx-) | String.Contains(ListItem.FileName,_dts-x_) | String.Contains(ListItem.FileName,_dts-x-) | String.Contains(ListItem.FileName,_dts-x.) | String.Contains(ListItem.FileName,_dtsx_) | String.Contains(ListItem.FileName,_dtsx-) | String.Contains(ListItem.FileName,_dtsx.)]</expression>
+	
+	<expression name="Auro3DFileName">[String.Contains(ListItem.FileName,-auro-3d-) | String.Contains(ListItem.FileName,-auro-3d.) | String.Contains(ListItem.FileName,-auro-3d_) | String.Contains(ListItem.FileName,.auro-3d-) | String.Contains(ListItem.FileName,.auro-3d.) | String.Contains(ListItem.FileName,.auro-3d_) | String.Contains(ListItem.FileName,_auro-3d-) | String.Contains(ListItem.FileName,_auro-3d.) | String.Contains(ListItem.FileName,_auro-3d_) | String.Contains(ListItem.FileName,-auro3d-) | String.Contains(ListItem.FileName,-auro3d.) | String.Contains(ListItem.FileName,-auro3d_) | String.Contains(ListItem.FileName,.auro3d-) | String.Contains(ListItem.FileName,.auro3d.) | String.Contains(ListItem.FileName,.auro3d_) | String.Contains(ListItem.FileName,_auro3d-) | String.Contains(ListItem.FileName,_auro3d.) | String.Contains(ListItem.FileName,_auro3d_)]</expression>
+	
 	<!-- Background overlay -->
 	<variable name="BackgroundOverlayStyle">
 		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2]</value>
@@ -591,9 +599,8 @@
 
 	<!-- Audio labels -->
 	<variable name="Audio">
-		<value condition="[String.Contains(ListItem.FileName,-dts-x-) | String.Contains(ListItem.FileName,-dts-x.) | String.Contains(ListItem.FileName,-dts-x_) | String.Contains(ListItem.FileName,-dtsx-) | String.Contains(ListItem.FileName,-dtsx.) | String.Contains(ListItem.FileName,-dtsx_) | String.Contains(ListItem.FileName,.dts-x.) | String.Contains(ListItem.FileName,.dts-x_) | String.Contains(ListItem.FileName,.dts-x-) | String.Contains(ListItem.FileName,.dtsx.) | String.Contains(ListItem.FileName,.dtsx_) | String.Contains(ListItem.FileName,.dtsx-) | String.Contains(ListItem.FileName,_dts-x_) | String.Contains(ListItem.FileName,_dts-x-) | String.Contains(ListItem.FileName,_dts-x.) | String.Contains(ListItem.FileName,_dtsx_) | String.Contains(ListItem.FileName,_dtsx-) | String.Contains(ListItem.FileName,_dtsx.)] + String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS:X &#8226; DTS-HD HRA $VAR[AudioChannels]</value>
-		<value condition="[String.Contains(ListItem.FileName,-auro-3d-) | String.Contains(ListItem.FileName,-auro-3d.) | String.Contains(ListItem.FileName,-auro-3d_) | String.Contains(ListItem.FileName,.auro-3d-) | String.Contains(ListItem.FileName,.auro-3d.) | String.Contains(ListItem.FileName,.auro-3d_) | String.Contains(ListItem.FileName,_auro-3d-) | String.Contains(ListItem.FileName,_auro-3d.) | String.Contains(ListItem.FileName,_auro-3d_) | String.Contains(ListItem.FileName,-auro3d-) | String.Contains(ListItem.FileName,-auro3d.) | String.Contains(ListItem.FileName,-auro3d_) | String.Contains(ListItem.FileName,.auro3d-) | String.Contains(ListItem.FileName,.auro3d.) | String.Contains(ListItem.FileName,.auro3d_) | String.Contains(ListItem.FileName,_auro3d-) | String.Contains(ListItem.FileName,_auro3d.) | String.Contains(ListItem.FileName,_auro3d_)] + [String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma)]">AURO-3D &#8226; DTS-HD MA $VAR[AudioChannels]</value>
-		<value condition="[String.Contains(ListItem.FileName,-auro-3d-) | String.Contains(ListItem.FileName,-auro-3d.) | String.Contains(ListItem.FileName,-auro-3d_) | String.Contains(ListItem.FileName,.auro-3d-) | String.Contains(ListItem.FileName,.auro-3d.) | String.Contains(ListItem.FileName,.auro-3d_) | String.Contains(ListItem.FileName,_auro-3d-) | String.Contains(ListItem.FileName,_auro-3d.) | String.Contains(ListItem.FileName,_auro-3d_) | String.Contains(ListItem.FileName,-auro3d-) | String.Contains(ListItem.FileName,-auro3d.) | String.Contains(ListItem.FileName,-auro3d_) | String.Contains(ListItem.FileName,.auro3d-) | String.Contains(ListItem.FileName,.auro3d.) | String.Contains(ListItem.FileName,.auro3d_) | String.Contains(ListItem.FileName,_auro3d-) | String.Contains(ListItem.FileName,_auro3d.) | String.Contains(ListItem.FileName,_auro3d_)] + [Integer.IsEqual(ListItem.AudioChannels,6) | Integer.IsEqual(ListItem.AudioChannels,8)]">AURO-3D &#8226; PCM $VAR[AudioChannels]</value>
+		<value condition="$EXP[DTSXFileName] + String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS:X &#8226; $VAR[AudioCodec,, ]$VAR[AudioChannels]</value>
+		<value condition="$EXP[Auro3DFileName] + [String.IsEqual(ListItem.AudioCodec,dtshd_ma) | String.IsEqual(ListItem.AudioCodec,dtsma) | String.StartsWith(ListItem.AudioCodec,pcm)] + [Integer.IsEqual(ListItem.AudioChannels,6) | Integer.IsEqual(ListItem.AudioChannels,8)]">AURO-3D &#8226; $VAR[AudioCodec,, ]$VAR[AudioChannels]</value>
 		<value>$VAR[AudioCodec,, ]$VAR[AudioChannels]</value>
 	</variable>
 
@@ -638,7 +645,7 @@
 
 	<!-- Audio Channel labels -->
 	<variable name="AudioChannels">
-		<value condition="Integer.IsEqual(ListItem.AudioChannels,15) | Integer.IsGreater(ListItem.AudioChannels,16)">($INFO[ListItem.AudioChannels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.AudioChannels,8)">($INFO[ListItem.AudioChannels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.AudioChannels,0)">$MAP[AudioChannelsMap,ListItem.AudioChannels]</value>
 	</variable>
 
@@ -649,37 +656,37 @@
 	</variable>
 	
 	<variable name="MusicChannels">
-		<value condition="Integer.IsEqual(ListItem.MusicChannels,15) | Integer.IsGreater(ListItem.MusicChannels,16)">($INFO[ListItem.MusicChannels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.MusicChannels,8)">($INFO[ListItem.MusicChannels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.MusicChannels,0)">$MAP[AudioChannelsMap,ListItem.MusicChannels]</value>
 	</variable>
 
 	<variable name="MusicPlayerChannels">
-		<value condition="Integer.IsEqual(MusicPlayer.Channels,15) | Integer.IsGreater(MusicPlayer.Channels,16)">($INFO[MusicPlayer.Channels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(MusicPlayer.Channels,8)">($INFO[MusicPlayer.Channels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(MusicPlayer.Channels,0)">$MAP[AudioChannelsMap,MusicPlayer.Channels]</value>
 	</variable>
 	
 	<variable name="VideoPlayerAudioChannels">
-		<value condition="Integer.IsEqual(VideoPlayer.AudioChannels,15) | Integer.IsGreater(VideoPlayer.AudioChannels,16)">($INFO[VideoPlayer.AudioChannels] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(VideoPlayer.AudioChannels,8)">($INFO[VideoPlayer.AudioChannels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(VideoPlayer.AudioChannels,0)">$MAP[AudioChannelsMap,VideoPlayer.AudioChannels]</value>
 	</variable>
 	
 	<variable name="AudioChannels.1">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),15) | Integer.IsGreater(ListItem.Property(AudioChannels.1),16)">($INFO[ListItem.Property(AudioChannels.1)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.1),8)">($INFO[ListItem.Property(AudioChannels.1)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.1),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.1)]</value>
 	</variable>
 	
 	<variable name="AudioChannels.2">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),15) | Integer.IsGreater(ListItem.Property(AudioChannels.2),16)">($INFO[ListItem.Property(AudioChannels.2)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.2),8)">($INFO[ListItem.Property(AudioChannels.2)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.2),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.2)]</value>
 	</variable>
 	
 	<variable name="AudioChannels.3">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),15) | Integer.IsGreater(ListItem.Property(AudioChannels.3),16)">($INFO[ListItem.Property(AudioChannels.3)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.3),8)">($INFO[ListItem.Property(AudioChannels.3)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.3),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.3)]</value>
 	</variable>
 	
 	<variable name="AudioChannels.4">
-		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),15) | Integer.IsGreater(ListItem.Property(AudioChannels.4),16)">($INFO[ListItem.Property(AudioChannels.4)] $LOCALIZE[31444])</value>
+		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.4),8)">($INFO[ListItem.Property(AudioChannels.4)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.4),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.4)]</value>
 	</variable>
 
