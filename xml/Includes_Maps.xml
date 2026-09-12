@@ -124,4 +124,13 @@
 		<entry key="xvid">XviD</entry>
 	</map>
 
+	<!-- Dolby Vision profile labels. Kodi hands the profile over as a bare number, with the
+	     base layer compatibility appended for profile 8 and the enhancement layer type for
+	     profile 7, so only the profile 7 pair needs the space that makes it read as two
+	     things. Every other profile passes through on the miss. -->
+	<map name="DolbyVisionProfileMap">
+		<entry key="7FEL">7 FEL</entry>
+		<entry key="7MEL">7 MEL</entry>
+	</map>
+
 </includes>

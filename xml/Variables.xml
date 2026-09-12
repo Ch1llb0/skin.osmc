@@ -750,7 +750,7 @@
 	
 	<!-- HDR type labels -->
 	<variable name="HDRType">
-		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV$INFO[ListItem.HdrDetail, (P,)]</value>
+		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV$MAP[DolbyVisionProfileMap,ListItem.HdrDetail, (P,)]</value>
 		<value condition="!String.IsEmpty(ListItem.HdrType)">$INFO[ListItem.HdrType,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 
