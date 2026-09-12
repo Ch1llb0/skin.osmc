@@ -393,10 +393,45 @@
 				<include>OSDVisibleHiddenAnimation</include>
 				<include>WindowFadeAnimation</include>
 
-				<!-- Background -->
-				<control type="image" id="1">
+				<!-- Background and cover, as tall as the rows beside them need -->
+				<control type="group" id="1">
 					<include>VideoFullScreen_coords26</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<visible>VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]</visible>
+
+					<control type="image" id="1">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<control type="image" id="1">
+						<include>VideoFullScreen_coords36</include>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture background="true">$VAR[PlayerIcon]</texture>
+						<include>VisibleFadeAnimation</include>
+					</control>
+				</control>
+
+				<control type="group" id="1">
+					<include>VideoFullScreen_coords46</include>
+					<visible>!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]</visible>
+
+					<control type="image" id="1">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<control type="image" id="1">
+						<include>VideoFullScreen_coords36</include>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture background="true">$VAR[PlayerIcon]</texture>
+						<include>VisibleFadeAnimation</include>
+					</control>
 				</control>
 
 				<!-- Title -->
@@ -509,14 +544,50 @@
 
 				</control>
 				
-				<!-- Audio/subtitle stream -->
-				<control type="label" id="1">
+				<!-- Audio stream -->
+				<control type="group" id="1">
 					<include>VideoFullScreen_coords35</include>
-					<font>Font27</font>
-					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>[LIGHT]$LOCALIZE[292]:[/LIGHT] $VAR[VideoPlayerAudioCodec,, ]$VAR[VideoPlayerAudioChannels]$VAR[VideoPlayerAudioLanguage]$VAR[SubtitleLanguage]</label>
 					<visible>!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]</visible>
 					<include>VisibleFadeAnimation</include>
+
+					<control type="label" id="1">
+						<include>VideoFullScreen_coords44</include>
+						<font>Font27</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>[LIGHT]$LOCALIZE[292]:[/LIGHT]</label>
+					</control>
+
+					<control type="fadelabel" id="1">
+						<include>VideoFullScreen_coords45</include>
+						<font>Font27</font>
+						<scrollspeed>44</scrollspeed>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$VAR[VideoPlayerAudioCodec,, ]$VAR[VideoPlayerAudioChannels]$VAR[VideoPlayerAudioLanguage]</label>
+					</control>
+
+				</control>
+				
+				<!-- Subtitle stream -->
+				<control type="group" id="1">
+					<include>VideoFullScreen_coords43</include>
+					<visible>!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]</visible>
+					<include>VisibleFadeAnimation</include>
+
+					<control type="label" id="1">
+						<include>VideoFullScreen_coords44</include>
+						<font>Font27</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>[LIGHT]$LOCALIZE[24012]:[/LIGHT]</label>
+					</control>
+
+					<control type="fadelabel" id="1">
+						<include>VideoFullScreen_coords45</include>
+						<font>Font27</font>
+						<scrollspeed>44</scrollspeed>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$VAR[SubtitleLanguage]</label>
+					</control>
+
 				</control>
 				
 				<!-- Audio information -->
@@ -529,14 +600,6 @@
 					<include>VisibleFadeAnimation</include>
 				</control>
 
-				<!-- Icon -->
-				<control type="image" id="1">
-					<include>VideoFullScreen_coords36</include>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true">$VAR[PlayerIcon]</texture>
-					<include>VisibleFadeAnimation</include>
-				</control>
-				
 			</control>
 				
 			<!-- Live TV next information -->

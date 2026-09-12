@@ -705,17 +705,22 @@
 	</variable>
 	
 	<!-- Audio stream label -->
+	<!-- The stream selection dialogs write a track as language, then a dash and the track
+	     name where it has one, and fall back to Unknown for a language they cannot expand.
+	     AudioLanguageEx and SubtitleLanguageEx do that expansion and that fallback already,
+	     so reading them keeps the player reading the same way the dialog does. -->
 	<variable name="VideoPlayerAudioLanguage">
+		<value condition="!String.IsEmpty(VideoPlayer.AudioLanguageEx) + !String.IsEmpty(VideoPlayer.AudioName)">$INFO[VideoPlayer.AudioLanguageEx, (,]$INFO[VideoPlayer.AudioName, - ,)]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.AudioName)">$INFO[VideoPlayer.AudioName, (,)]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.AudioLanguageEx)">$INFO[VideoPlayer.AudioLanguageEx, (,)]</value>
-		<value>$INFO[VideoPlayer.AudioLanguage, [CAPITALIZE](,)[/CAPITALIZE]]</value>
+		<value>$INFO[VideoPlayer.AudioLanguageEx, (,)]</value>
 	</variable>
 
 	<!-- Subtitle language labels -->
 	<variable name="SubtitleLanguage">
-		<value condition="!VideoPlayer.SubtitlesEnabled">   [LIGHT]$LOCALIZE[24012]:[/LIGHT] $LOCALIZE[1223]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.SubtitleLanguageEx)">$INFO[VideoPlayer.SubtitleLanguageEx,   [LIGHT]$LOCALIZE[24012]:[/LIGHT] ,]</value>
-		<value>$INFO[VideoPlayer.SubtitlesLanguage,   [LIGHT]$LOCALIZE[24012]:[/LIGHT] [CAPITALIZE],[/CAPITALIZE]]</value>
+		<value condition="!VideoPlayer.SubtitlesEnabled">$LOCALIZE[1223]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.SubtitleLanguageEx) + !String.IsEmpty(VideoPlayer.SubtitleName)">$INFO[VideoPlayer.SubtitleLanguageEx]$INFO[VideoPlayer.SubtitleName, - ,]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.SubtitleName)">$INFO[VideoPlayer.SubtitleName]</value>
+		<value>$INFO[VideoPlayer.SubtitleLanguageEx]</value>
 	</variable>
 
 	<variable name="SubtitleLanguageOSD">

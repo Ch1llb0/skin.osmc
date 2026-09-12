@@ -959,26 +959,26 @@
 	<include name="VideoFullScreen_coords36_16:9">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>238</height>
 	</include>
 	<include name="VideoFullScreen_coords36_21:9">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>238</height>
 	</include>
 	<include name="VideoFullScreen_coords36_21:9_masked">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>238</height>
 	</include>
 	<include name="VideoFullScreen_coords36_4:3">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>238</height>
 	</include>
 
 	<include name="VideoFullScreen_coords37">
@@ -1145,6 +1145,98 @@
 		<centertop>50%</centertop>
 		<width>140</width>
 		<height>140</height>
+	</include>
+
+	
+	<!-- The audio and the subtitle stream take a row each, a heading of its own width and
+	     the stream beside it, so a long stream name scrolls without dragging its heading
+	     along. The panel grows by the row it gained; a music video names no subtitle and
+	     keeps the height it had. -->
+	<include name="VideoFullScreen_coords43">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords43_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords43_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords43_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords43_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords43_16:9">
+		<left>20</left>
+		<top>263</top>
+		<width>1280</width>
+		<height>30</height>
+	</include>
+	<include name="VideoFullScreen_coords43_21:9">
+		<left>20</left>
+		<top>263</top>
+		<width>1920</width>
+		<height>30</height>
+	</include>
+	<include name="VideoFullScreen_coords43_21:9_masked">
+		<left>20</left>
+		<top>263</top>
+		<width>1920</width>
+		<height>30</height>
+	</include>
+	<include name="VideoFullScreen_coords43_4:3">
+		<left>20</left>
+		<top>263</top>
+		<width>800</width>
+		<height>30</height>
+	</include>
+	
+	<include name="VideoFullScreen_coords44">
+		<left>0</left>
+		<width>140</width>
+		<height>30</height>
+	</include>
+	
+	<include name="VideoFullScreen_coords45">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords45_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords45_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords45_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords45_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords45_16:9">
+		<left>140</left>
+		<width>1140</width>
+		<height>30</height>
+	</include>
+	<include name="VideoFullScreen_coords45_21:9">
+		<left>140</left>
+		<width>1780</width>
+		<height>30</height>
+	</include>
+	<include name="VideoFullScreen_coords45_21:9_masked">
+		<left>200</left>
+		<width>1720</width>
+		<height>30</height>
+	</include>
+	<include name="VideoFullScreen_coords45_4:3">
+		<left>140</left>
+		<width>660</width>
+		<height>30</height>
+	</include>
+	
+	<include name="VideoFullScreen_coords46">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords46_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords46_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords46_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords46_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords46_16:9">
+		<width>1620</width>
+		<height>308</height>
+	</include>
+	<include name="VideoFullScreen_coords46_21:9">
+		<width>2260</width>
+		<height>308</height>
+	</include>
+	<include name="VideoFullScreen_coords46_21:9_masked">
+		<width>2260</width>
+		<height>308</height>
+	</include>
+	<include name="VideoFullScreen_coords46_4:3">
+		<width>1140</width>
+		<height>308</height>
 	</include>
 
 </includes>
