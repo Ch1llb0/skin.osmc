@@ -18,33 +18,85 @@
 				<include>OSDVisibleHiddenAnimation</include>
 				<include>OSDOpenCloseAnimation</include>
 
-				<!-- Background -->
-				<control type="image">
+				<!-- Background and cover, as tall as the rows beside them need -->
+				<control type="group">
 					<include>DialogPlayerProcessInfo_coords2</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<include>DialogPlayerProcessInfo_coords2_tall</include>
+					<visible>Player.HasVideo + !String.IsEmpty(Player.Process(subtitledecoder))</visible>
+
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<include>PlayerProcessInfoIcon</include>
 				</control>
 
-				<!-- Icon -->
-				<control type="image">
-					<include>DialogPlayerProcessInfo_coords3</include>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<fadetime>200</fadetime>
-					<texture background="true">$VAR[PlayerIcon]</texture>
-					<visible>!VideoPlayer.Content(LiveTV) + !MusicPlayer.Content(LiveTV)</visible>
+				<control type="group">
+					<include>DialogPlayerProcessInfo_coords2</include>
+					<include>DialogPlayerProcessInfo_coords2_medium</include>
+					<visible>Player.HasVideo + String.IsEmpty(Player.Process(subtitledecoder))</visible>
+
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<include>PlayerProcessInfoIcon</include>
 				</control>
-				<control type="image">
-					<include>DialogPlayerProcessInfo_coords3</include>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<fadetime>200</fadetime>
-					<texture background="true" fallback="DefaultLiveTV.png">$VAR[PlayerIcon]</texture>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
+
+				<control type="group">
+					<include>DialogPlayerProcessInfo_coords2</include>
+					<include>DialogPlayerProcessInfo_coords2_short</include>
+					<visible>!Player.HasVideo + MusicPlayer.Content(LiveTV)</visible>
+
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<include>PlayerProcessInfoIcon</include>
 				</control>
-				<control type="image">
-					<include>DialogPlayerProcessInfo_coords3</include>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<fadetime>200</fadetime>
-					<texture background="true" fallback="DefaultRadio.png">$VAR[PlayerIcon]</texture>
-					<visible>MusicPlayer.Content(LiveTV)</visible>
+
+				<control type="group">
+					<include>DialogPlayerProcessInfo_coords2</include>
+					<include>DialogPlayerProcessInfo_coords2_shorter</include>
+					<visible>!Player.HasVideo + !MusicPlayer.Content(LiveTV) + !String.IsEmpty(Player.Process(subtitledecoder))</visible>
+
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<include>PlayerProcessInfoIcon</include>
+				</control>
+
+				<control type="group">
+					<include>DialogPlayerProcessInfo_coords2</include>
+					<include>DialogPlayerProcessInfo_coords2_shortest</include>
+					<visible>!Player.HasVideo + !MusicPlayer.Content(LiveTV) + String.IsEmpty(Player.Process(subtitledecoder))</visible>
+
+					<control type="image">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<bottom>0</bottom>
+						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					</control>
+
+					<include>PlayerProcessInfoIcon</include>
 				</control>
 
 				<!-- Video/Audio info -->
@@ -170,6 +222,7 @@
 				<include>DialogPlayerProcessInfo_coords6</include>
 				<visible>Player.HasVideo</visible>
 				<visible>!Window.IsVisible(shutdownmenu)</visible>
+				<animation effect="slide" start="0,0" end="0,-35" time="0" reversible="false" condition="String.IsEmpty(Player.Process(subtitledecoder))">Conditional</animation>
 				<include>OSDVisibleHiddenAnimation</include>
 				<include>OSDOpenCloseAnimation</include>
 				

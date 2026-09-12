@@ -81,6 +81,35 @@
 	
 	<!-- Scroll reset. Flipped as each window loads, so a text box or a scrolling label
 	     returns to the start on the next visit even when it is showing the same item. -->
+	<!-- The cover the process info dialog shows, held twenty inside the panel it is given
+	     so that it grows and shrinks with it. Three of them, because the artwork a live
+	     channel or a radio station falls back to is not the one a file falls back to. -->
+	<include name="PlayerProcessInfoIcon">
+		<control type="image">
+			<include>DialogPlayerProcessInfo_coords3</include>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<fadetime>200</fadetime>
+			<texture background="true">$VAR[PlayerIcon]</texture>
+			<visible>!VideoPlayer.Content(LiveTV) + !MusicPlayer.Content(LiveTV)</visible>
+		</control>
+
+		<control type="image">
+			<include>DialogPlayerProcessInfo_coords3</include>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<fadetime>200</fadetime>
+			<texture background="true" fallback="DefaultLiveTV.png">$VAR[PlayerIcon]</texture>
+			<visible>VideoPlayer.Content(LiveTV)</visible>
+		</control>
+
+		<control type="image">
+			<include>DialogPlayerProcessInfo_coords3</include>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<fadetime>200</fadetime>
+			<texture background="true" fallback="DefaultRadio.png">$VAR[PlayerIcon]</texture>
+			<visible>MusicPlayer.Content(LiveTV)</visible>
+		</control>
+	</include>
+
 	<include name="ResetScroll">
 		<onload condition="String.IsEmpty(Window(Home).Property(ResetScroll))">SetProperty(ResetScroll," ",Home)</onload>
 		<onload condition="!String.IsEmpty(Window(Home).Property(ResetScroll))">ClearProperty(ResetScroll,Home)</onload>

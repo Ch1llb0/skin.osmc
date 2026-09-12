@@ -40,19 +40,40 @@
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_16:9">
 		<width>1620</width>
-		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_21:9">
 		<width>2260</width>
-		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_21:9_masked">
 		<width>2260</width>
-		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_4:3">
 		<width>1140</width>
+	</include>
+	
+	<!-- The dialog is as tall as the taller of its two columns. A row is thirty five, on
+	     fourteen above the first and ten below the last, so the height is twenty four and a
+	     row for every row there is: eight with a video and a subtitle to describe, seven
+	     with a video alone, six on a radio stream where the PVR column is the longer of
+	     the two, and four or three on a file with nothing but sound. -->
+	<include name="DialogPlayerProcessInfo_coords2_tall">
 		<height>304</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords2_medium">
+		<height>269</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords2_short">
+		<height>234</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords2_shorter">
+		<height>164</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords2_shortest">
+		<height>129</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords3">
@@ -64,26 +85,26 @@
 	<include name="DialogPlayerProcessInfo_coords3_16:9">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>194</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords3_21:9">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>194</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords3_21:9_masked">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>194</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords3_4:3">
 		<right>20</right>
 		<top>20</top>
+		<bottom>20</bottom>
 		<width>234</width>
-		<height>194</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords4">
