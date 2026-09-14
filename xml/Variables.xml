@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<!-- Masking -->
-	<expression name="Masking">False</expression><!-- If masking should be available, this should be set to "True". -->
-	<expression name="NonMaskedCoordinates">String.IsEqual(Skin.AspectRatio,16:9) + True</expression><!-- If masking should be available, this should be set to "False". -->
-	<expression name="MaskedCoordinates">String.IsEqual(Skin.AspectRatio,16:9) + False</expression><!-- If masking should be available, this should be set to "True". -->
-	
-	<!-- Skin Shortcuts: which kind of menu the management dialog is editing.
-	     The add-on names widget submenus <item>.widgets, so the suffix is the test. -->
-	<expression name="SkinShortcutsWidgetMenu">String.EndsWith(Window.Property(menuname),.widgets)</expression>
-	<expression name="SkinShortcutsMainMenu">String.IsEqual(Window.Property(menuname),mainmenu)</expression>
-	
-	<!-- Skin Shortcuts: a widget row whose properties the skin can actually restyle.
-	     The weather widget draws through its own template, so its layout, artwork,
-	     sorting and limit are not the user's to set. -->
-	<expression name="SkinShortcutsWidgetEditable">!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.Contains(Container(211).ListItem.Property(widgetPath),weather-widget)</expression>
-	
-	<!-- Watched state, and whether the user wants it drawn. Both halves are needed wherever a
-	     watched overlay is placed: the item's own state, and the per-media-kind setting that
-	     switches the indicator off. The Skin.HasSetting names read inverted - set means hide. -->
-	<expression name="IsWatchedOrResumed">[String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)]</expression>
-	<expression name="IsWatchedResumedOrPartial">[[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)]</expression>
-	<expression name="WatchedStatusVisible">[[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)]</expression>
-	<expression name="StatusOverlayVisible">$EXP[IsWatchedResumedOrPartial] + $EXP[WatchedStatusVisible]</expression>
-	<expression name="WidgetBadgeVisible">$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</expression>
-	
-	<!-- Wall view titles. The title strip takes the place of the status strip, so the strip it
-	     replaces, the title and the badge beside it all read the same two conditions. The ten
-	     views listed here are every wall the skin has, in both the video and the music set. -->
-	<!-- Scroll reset. Any change to a control's raw text puts its scroll back to the start,
-	     which is all a reset is. Every scrolling label and text box therefore ends in this
-	     token: it carries the flip each window makes as it loads, and gains an empty bold
-	     tag, which draws nothing, while a dialog or a menu is over the window, so closing
-	     one resets what was underneath it as well. -->
-	<expression name="ResetScrollOverlay">System.HasActiveModalDialog | ControlGroup(9002).HasFocus | ControlGroup(9003).HasFocus | ControlGroup(9010).HasFocus</expression>
-	
-	<expression name="WallViewActive">Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(532) | Control.IsVisible(533) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(536) | Control.IsVisible(537) | Control.IsVisible(538) | Control.IsVisible(539)</expression>
-	<!-- The strip is only called from a wall layout, so it needs no test for one being on
-	     screen; a control in a layout carries parent id 0, and Control.IsVisible would ask
-	     whichever window is active, going false under a dialog. WallViewActive is read from
-	     the sub menu, which is a window control and resolves properly. -->
-	<!-- A fixed view for video add-ons is the absence of the answer that says not to have
-	     one. The setting used to be a switch of its own above the list of views; the list
-	     holds that answer now, and one of its eleven is always the one in force. -->
 	<!-- The view a video add-on page is put into once the list has been answered. The sub
 	     menu runs this after the dialog closes rather than a row of conditional actions,
 	     because a control decides which of its actions to run before the first of them
@@ -61,24 +19,6 @@
 		<value condition="Skin.HasSetting(DefaultVideosViewWalllow)">Container.SetViewMode(539)</value>
 		<value>noop</value>
 	</variable>
-
-	<expression name="FixedVideosView">!Skin.HasSetting(NoFixedVideosView)</expression>
-
-	<expression name="ArtworkTitlesAny">Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes) | Skin.HasSetting(ArtworkTitlesMusicVideos) | Skin.HasSetting(ArtworkTitlesAlbums) | Skin.HasSetting(ArtworkTitlesArtists)</expression>
-	
-	<expression name="WallTitlesVisible">Skin.HasSetting(ArtworkTitlesMovies) + String.IsEqual(ListItem.DBTYPE,movie) | Skin.HasSetting(ArtworkTitlesTVShows) + String.IsEqual(ListItem.DBTYPE,tvshow) | Skin.HasSetting(ArtworkTitlesSeasons) + String.IsEqual(ListItem.DBTYPE,season) | Skin.HasSetting(ArtworkTitlesEpisodes) + String.IsEqual(ListItem.DBTYPE,episode) | Skin.HasSetting(ArtworkTitlesMusicVideos) + String.IsEqual(ListItem.DBTYPE,musicvideo) | Skin.HasSetting(ArtworkTitlesAlbums) + String.IsEqual(ListItem.DBTYPE,album) | Skin.HasSetting(ArtworkTitlesArtists) + String.IsEqual(ListItem.DBTYPE,artist)</expression>
-	
-	<!-- Home widgets: two on screen at once. An entry with a single widget always draws the
-	     large layout, so every use pairs this with the widget count of that entry's selector. -->
-	<expression name="TwoRowWidgets">Skin.HasSetting(HomeWidgetsTwoRows)</expression>
-	
-	<!-- Neither extension is in the stream, so the file name is the only evidence there is.
-	     Kodi reads DTS:X off a DTS-HD MA bed itself and names the codec dtshd_ma_x, so the
-	     name is only consulted for the HRA bed it cannot read, and for Auro-3D, which it
-	     does not know at all. Each list is written once here and read by the Audio flag. -->
-	<expression name="DTSXFileName">[String.Contains(ListItem.FileName,-dts-x-) | String.Contains(ListItem.FileName,-dts-x.) | String.Contains(ListItem.FileName,-dts-x_) | String.Contains(ListItem.FileName,-dtsx-) | String.Contains(ListItem.FileName,-dtsx.) | String.Contains(ListItem.FileName,-dtsx_) | String.Contains(ListItem.FileName,.dts-x.) | String.Contains(ListItem.FileName,.dts-x_) | String.Contains(ListItem.FileName,.dts-x-) | String.Contains(ListItem.FileName,.dtsx.) | String.Contains(ListItem.FileName,.dtsx_) | String.Contains(ListItem.FileName,.dtsx-) | String.Contains(ListItem.FileName,_dts-x_) | String.Contains(ListItem.FileName,_dts-x-) | String.Contains(ListItem.FileName,_dts-x.) | String.Contains(ListItem.FileName,_dtsx_) | String.Contains(ListItem.FileName,_dtsx-) | String.Contains(ListItem.FileName,_dtsx.)]</expression>
-	
-	<expression name="Auro3DFileName">[String.Contains(ListItem.FileName,-auro-3d-) | String.Contains(ListItem.FileName,-auro-3d.) | String.Contains(ListItem.FileName,-auro-3d_) | String.Contains(ListItem.FileName,.auro-3d-) | String.Contains(ListItem.FileName,.auro-3d.) | String.Contains(ListItem.FileName,.auro-3d_) | String.Contains(ListItem.FileName,_auro-3d-) | String.Contains(ListItem.FileName,_auro-3d.) | String.Contains(ListItem.FileName,_auro-3d_) | String.Contains(ListItem.FileName,-auro3d-) | String.Contains(ListItem.FileName,-auro3d.) | String.Contains(ListItem.FileName,-auro3d_) | String.Contains(ListItem.FileName,.auro3d-) | String.Contains(ListItem.FileName,.auro3d.) | String.Contains(ListItem.FileName,.auro3d_) | String.Contains(ListItem.FileName,_auro3d-) | String.Contains(ListItem.FileName,_auro3d.) | String.Contains(ListItem.FileName,_auro3d_)]</expression>
 	
 	<!-- Background overlay -->
 	<variable name="BackgroundOverlayStyle">

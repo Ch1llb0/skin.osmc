@@ -135,12 +135,12 @@
 		</control>
 		
 		<control type="grouplist">
-			<include>Custom_Debug_Info_coords6</include>
+			<include>Custom_Debug_Info_coords5</include>
 			<itemgap>12</itemgap>
 
 			<!-- Window labels -->
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -150,7 +150,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -161,7 +161,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -172,7 +172,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -183,7 +183,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -194,7 +194,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -205,7 +205,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF00FF00</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -216,7 +216,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -227,7 +227,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -238,7 +238,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -249,7 +249,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -260,7 +260,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -271,7 +271,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -282,7 +282,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -293,7 +293,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -304,7 +304,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -315,7 +315,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -326,7 +326,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -337,7 +337,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -348,7 +348,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -359,7 +359,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -370,7 +370,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -381,7 +381,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -392,7 +392,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -403,7 +403,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -414,7 +414,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -425,7 +425,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -436,7 +436,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -447,7 +447,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FFE8E8FF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -459,7 +459,7 @@
 
 			<!-- Dialog labels -->
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -470,7 +470,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -481,7 +481,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -492,7 +492,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -503,7 +503,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -514,7 +514,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -525,7 +525,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -536,7 +536,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -547,7 +547,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -558,7 +558,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -569,7 +569,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -580,7 +580,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -591,7 +591,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -602,7 +602,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -613,7 +613,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -624,7 +624,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -635,7 +635,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -646,7 +646,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -657,7 +657,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -668,7 +668,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -679,7 +679,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -690,7 +690,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -701,7 +701,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -712,7 +712,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -723,7 +723,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -734,7 +734,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -745,7 +745,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -756,7 +756,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -767,7 +767,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -778,7 +778,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -789,7 +789,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -800,7 +800,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -811,7 +811,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -822,7 +822,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -833,7 +833,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -844,7 +844,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -855,7 +855,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -866,7 +866,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -877,7 +877,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -888,7 +888,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -899,7 +899,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -910,7 +910,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -921,7 +921,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -932,7 +932,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -943,7 +943,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -954,7 +954,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -965,7 +965,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -976,7 +976,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -987,7 +987,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -998,7 +998,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1009,7 +1009,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1020,7 +1020,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1031,7 +1031,7 @@
 			</control>
 			
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1042,7 +1042,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1053,7 +1053,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1064,7 +1064,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1075,7 +1075,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1086,7 +1086,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1097,7 +1097,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>
@@ -1108,7 +1108,7 @@
 			</control>
 
 			<control type="fadelabel">
-				<include>Custom_Debug_Info_coords5</include>
+				<include>Custom_Debug_Info_coords6</include>
 				<textcolor>FF8F8FFF</textcolor>
 				<shadowcolor>FF000000</shadowcolor>
 				<font>font13</font>

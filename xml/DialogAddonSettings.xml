@@ -152,7 +152,7 @@
 
 			<!-- Default seperator -->
 			<control type="image" id="11">
-				<include>DialogAddonSettings_coords12</include>
+				<include>DialogAddonSettings_coords11</include>
 				<texture border="2" colordiffuse="$VAR[OverlayColorNF]">common/Divider.png</texture>
 			</control>
 			
@@ -163,7 +163,7 @@
 
 			<!-- Default slider -->
 			<control type="sliderex" id="13">
-				<include>DialogAddonSettings_coords11</include>
+				<include>DialogAddonSettings_coords12</include>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<focusedcolor>$VAR[TextColorFO]</focusedcolor>

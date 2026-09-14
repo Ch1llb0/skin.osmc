@@ -173,18 +173,18 @@
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
 						<!-- Show two widgets on screen at once -->
-						<control type="radiobutton" id="106">
+						<control type="radiobutton" id="103">
 							<include>SkinSettings_coords17</include>
 							<font>Font33</font>
 							<label>31447</label>
 							<onclick>Skin.ToggleSetting(HomeWidgetsTwoRows)</onclick>
 							<onclick>ReloadSkin()</onclick>
 							<onclick>Control.SetFocus(9000,0,absolute)</onclick>
-							<onclick>Control.SetFocus(106,absolute)</onclick>
+							<onclick>Control.SetFocus(103,absolute)</onclick>
 							<selected>Skin.HasSetting(HomeWidgetsTwoRows)</selected>
 						</control>
 						<!-- Default select action for album widgets -->
-						<control type="button" id="103">
+						<control type="button" id="104">
 							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
 							<label> - $LOCALIZE[31438]</label>
@@ -194,7 +194,7 @@
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
 						<!-- Default select action for TV show widgets -->
-						<control type="button" id="104">
+						<control type="button" id="105">
 							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
 							<label> - $LOCALIZE[31439]</label>
@@ -204,7 +204,7 @@
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
 						<!-- Default select action for movie set widgets -->
-						<control type="button" id="105">
+						<control type="button" id="106">
 							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
 							<label> - $LOCALIZE[31440]</label>

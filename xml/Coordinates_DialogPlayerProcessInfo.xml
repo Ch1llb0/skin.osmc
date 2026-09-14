@@ -32,6 +32,12 @@
 		<height>304</height>
 	</include>
 	
+	<!-- The dialog is as tall as the taller of its two columns. A row is thirty five, on
+	     fourteen above the first and ten below the last, so the height is twenty four and a
+	     row for every row there is: eight with a video and a subtitle to describe, seven
+	     with a video alone, six on a radio stream where the PVR column is the longer of
+	     the two, and four or three on a file with nothing but sound. The other four
+	     heights are coords4 to coords7, the cover having come between them. -->
 	<include name="DialogPlayerProcessInfo_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPlayerProcessInfo_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPlayerProcessInfo_coords2_21:9</include>
@@ -40,40 +46,19 @@
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_16:9">
 		<width>1620</width>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_21:9">
 		<width>2260</width>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_21:9_masked">
 		<width>2260</width>
+		<height>304</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords2_4:3">
 		<width>1140</width>
-	</include>
-	
-	<!-- The dialog is as tall as the taller of its two columns. A row is thirty five, on
-	     fourteen above the first and ten below the last, so the height is twenty four and a
-	     row for every row there is: eight with a video and a subtitle to describe, seven
-	     with a video alone, six on a radio stream where the PVR column is the longer of
-	     the two, and four or three on a file with nothing but sound. -->
-	<include name="DialogPlayerProcessInfo_coords2_tall">
 		<height>304</height>
-	</include>
-	
-	<include name="DialogPlayerProcessInfo_coords2_medium">
-		<height>269</height>
-	</include>
-	
-	<include name="DialogPlayerProcessInfo_coords2_short">
-		<height>234</height>
-	</include>
-	
-	<include name="DialogPlayerProcessInfo_coords2_shorter">
-		<height>164</height>
-	</include>
-	
-	<include name="DialogPlayerProcessInfo_coords2_shortest">
-		<height>129</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords3">
@@ -114,20 +99,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords4_4:3</include>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords4_16:9">
-		<left>20</left>
-		<top>14</top>
+		<width>1620</width>
+		<height>269</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords4_21:9">
-		<left>20</left>
-		<top>14</top>
+		<width>2260</width>
+		<height>269</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords4_21:9_masked">
-		<left>20</left>
-		<top>14</top>
+		<width>2260</width>
+		<height>269</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords4_4:3">
-		<left>20</left>
-		<top>14</top>
+		<width>1140</width>
+		<height>269</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords5">
@@ -137,20 +122,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords5_4:3</include>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords5_16:9">
-		<width>1280</width>
-		<height>35</height>
+		<width>1620</width>
+		<height>234</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords5_21:9">
-		<width>1920</width>
-		<height>35</height>
+		<width>2260</width>
+		<height>234</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords5_21:9_masked">
-		<width>1920</width>
-		<height>35</height>
+		<width>2260</width>
+		<height>234</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords5_4:3">
-		<width>800</width>
-		<height>35</height>
+		<width>1140</width>
+		<height>234</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords6">
@@ -160,28 +145,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords6_4:3</include>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_16:9">
-		<left>150</left>
-		<top>394</top>
 		<width>1620</width>
-		<height>40</height>
+		<height>164</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_21:9">
-		<left>150</left>
-		<top>394</top>
 		<width>2260</width>
-		<height>40</height>
+		<height>164</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_21:9_masked">
-		<left>150</left>
-		<top>574</top>
 		<width>2260</width>
-		<height>40</height>
+		<height>164</height>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords6_4:3">
-		<left>150</left>
-		<top>394</top>
 		<width>1140</width>
-		<height>40</height>
+		<height>164</height>
 	</include>
 	
 	<include name="DialogPlayerProcessInfo_coords7">
@@ -191,18 +168,118 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords7_4:3</include>
 	</include>
 	<include name="DialogPlayerProcessInfo_coords7_16:9">
+		<width>1620</width>
+		<height>129</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords7_21:9">
+		<width>2260</width>
+		<height>129</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords7_21:9_masked">
+		<width>2260</width>
+		<height>129</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords7_4:3">
+		<width>1140</width>
+		<height>129</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords8">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogPlayerProcessInfo_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPlayerProcessInfo_coords8_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogPlayerProcessInfo_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords8_4:3</include>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords8_16:9">
+		<left>20</left>
+		<top>14</top>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords8_21:9">
+		<left>20</left>
+		<top>14</top>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords8_21:9_masked">
+		<left>20</left>
+		<top>14</top>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords8_4:3">
+		<left>20</left>
+		<top>14</top>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords9">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogPlayerProcessInfo_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPlayerProcessInfo_coords9_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogPlayerProcessInfo_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords9_4:3</include>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords9_16:9">
+		<width>1280</width>
+		<height>35</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords9_21:9">
+		<width>1920</width>
+		<height>35</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords9_21:9_masked">
+		<width>1920</width>
+		<height>35</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords9_4:3">
+		<width>800</width>
+		<height>35</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords10">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogPlayerProcessInfo_coords10_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPlayerProcessInfo_coords10_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogPlayerProcessInfo_coords10_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords10_4:3</include>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords10_16:9">
+		<left>150</left>
+		<top>394</top>
+		<width>1620</width>
+		<height>40</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords10_21:9">
+		<left>150</left>
+		<top>394</top>
+		<width>2260</width>
+		<height>40</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords10_21:9_masked">
+		<left>150</left>
+		<top>574</top>
+		<width>2260</width>
+		<height>40</height>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords10_4:3">
+		<left>150</left>
+		<top>394</top>
+		<width>1140</width>
+		<height>40</height>
+	</include>
+	
+	<include name="DialogPlayerProcessInfo_coords11">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogPlayerProcessInfo_coords11_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPlayerProcessInfo_coords11_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogPlayerProcessInfo_coords11_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPlayerProcessInfo_coords11_4:3</include>
+	</include>
+	<include name="DialogPlayerProcessInfo_coords11_16:9">
 		<width>1580</width>
 		<left>20</left>
 	</include>
-	<include name="DialogPlayerProcessInfo_coords7_21:9">
+	<include name="DialogPlayerProcessInfo_coords11_21:9">
 		<width>2220</width>
 		<left>20</left>
 	</include>
-	<include name="DialogPlayerProcessInfo_coords7_21:9_masked">
+	<include name="DialogPlayerProcessInfo_coords11_21:9_masked">
 		<width>2220</width>
 		<left>20</left>
 	</include>
-	<include name="DialogPlayerProcessInfo_coords7_4:3">
+	<include name="DialogPlayerProcessInfo_coords11_4:3">
 		<width>1100</width>
 		<left>20</left>
 	</include>

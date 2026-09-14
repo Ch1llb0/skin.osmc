@@ -1851,7 +1851,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31375"
-msgid "Changes the maximum number of items shown by the widget. Set to 0 to show all available items"
+msgid "Changes the maximum number of items shown by the widget. Set to 0 to show all available items."
 msgstr ""
 
 #: /SkinSettings.xml
@@ -2224,7 +2224,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31450"
-msgid "Write the title over the artwork in wall views and on home widgets, for the kinds of media you choose."
+msgid "The title is written over the artwork in wall views and on home widgets, for the kinds of media selected here."
 msgstr ""
 
 #: /Custom_Setting_Select.xml
@@ -2249,10 +2249,10 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31455"
-msgid "Choose which kinds of video show their information when playback begins."
+msgid "Information is shown when playback begins only for the kinds of video selected here."
 msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31456"
-msgid "Choose which kinds of video show their information before playback ends."
+msgid "Information is shown before playback ends only for the kinds of video selected here."
 msgstr ""

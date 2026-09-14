@@ -512,7 +512,7 @@
 	<include name="Viewtype532_coords13">
 		<include content="MediaViewTitleStripNF">
 			<param name="coords">Viewtype532_coords8</param>
-			<param name="font">Font16</param>
+			<param name="font">Font16-title</param>
 			<param name="height">15</param>
 			<param name="pad">5</param>
 			<param name="titlewide">123</param>
@@ -527,7 +527,7 @@
 		<include content="MediaViewTitleStripFO">
 			<param name="id">532</param>
 			<param name="coords">Viewtype532_coords11</param>
-			<param name="font">Font16</param>
+			<param name="font">Font16-title</param>
 			<param name="scrollspeed">25</param>
 			<param name="height">16</param>
 			<param name="pad">5</param>

@@ -296,22 +296,18 @@
 	<include name="DialogAddonSettings_coords11_16:9">
 		<width>1170</width>
 		<height>66</height>
-		<textwidth>890</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords11_21:9">
 		<width>1810</width>
 		<height>66</height>
-		<textwidth>1530</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords11_21:9_masked">
 		<width>1810</width>
 		<height>66</height>
-		<textwidth>1530</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords11_4:3">
 		<width>690</width>
 		<height>66</height>
-		<textwidth>410</textwidth>
 	</include>
 	
 	<include name="DialogAddonSettings_coords12">
@@ -323,18 +319,22 @@
 	<include name="DialogAddonSettings_coords12_16:9">
 		<width>1170</width>
 		<height>66</height>
+		<textwidth>890</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords12_21:9">
 		<width>1810</width>
 		<height>66</height>
+		<textwidth>1530</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords12_21:9_masked">
 		<width>1810</width>
 		<height>66</height>
+		<textwidth>1530</textwidth>
 	</include>
 	<include name="DialogAddonSettings_coords12_4:3">
 		<width>690</width>
 		<height>66</height>
+		<textwidth>410</textwidth>
 	</include>
 	
 	<include name="DialogAddonSettings_coords13">

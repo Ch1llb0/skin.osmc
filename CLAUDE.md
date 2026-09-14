@@ -73,6 +73,9 @@ Kodi skin XML separates *layout logic* from *positioning*, and this skin leans o
 - **`xml/Includes*.xml`** (no `Coordinates_` prefix, e.g. `Includes.xml`, `Includes_Widgets.xml`,
   `Includes_MediaFlags.xml`, `Includes_SubMenu.xml`) hold reusable, non-positional includes: animations,
   common control groups, widget templates, media flag rendering, etc.
+- **`xml/Expressions.xml`** holds every `<expression>` in the skin, the `$EXP[...]` conditions shared
+  between files. Expressions live there and nowhere else — not beside the variables or the include that
+  first needed them.
 - **`xml/Variables*.xml`** define `$VAR[...]` skin variables:
   - `Variables.xml` — general-purpose variables.
   - `Variables_Colours.xml` — resolves the active color scheme (theme color sets like
@@ -92,6 +95,28 @@ When adding a new positioned element: add the control to the relevant window/inc
 matching `Coordinates_*.xml` file, then ensure that file is pulled in via `xml/Includes.xml` if it isn't
 already.
 
+**Coordinate includes are numbered, never named.** A window's coordinate includes are
+`<Window>_coords`, `_coords2`, `_coords3` and so on, each with the four aspect-ratio branches above, and a
+control pulls in exactly one of them. When a control needs a variant — a second height, a narrower width —
+give it the next free number and let that include carry the whole geometry. Do not add a descriptive
+suffix (`_coords2_tall`, `_coords2_short`) and do not make a control pull in two coordinate includes to
+assemble its geometry from parts; the suffix collides with the aspect-ratio names and the pairs hide from
+a reader which include actually positions a control.
+
+**They are numbered by first appearance.** The order of the numbers is the order the window
+file uses them in: the first coordinate include a window reaches for is `_coords`, the next one
+`_coords2`, and so on, counting an include that a control pulls in through a shared include at the
+point that shared include appears. Adding a coordinate include in the middle of a window therefore
+renumbers the ones below it, in the window file and in `Coordinates_*.xml` alike, and the
+`Coordinates_*.xml` file lists its includes in that same numeric order. Never append a new number at
+the end and use it near the top.
+
+**Control ids in a settings list run in document order.** `xml/SkinSettings.xml` numbers the controls of
+each settings page in the order they appear. A new setting inserted in the middle takes the id of the
+position it occupies, and the controls after it move down by one — including their `Control.HasFocus`
+entries in `Variables_Settings.xml` and any `Control.SetFocus` that names them. Never give a new setting
+the next free number at the end of the range and drop it into the middle.
+
 ## Colors
 
 Two layers control color:
@@ -106,6 +131,11 @@ holds 513 named colour values and is passed as the palette argument to all 11 `S
 override scheme; trimming or regenerating it empties every colour picker in the skin settings.
 
 ## Translations
+
+**Never address the user as "you".** Setting labels, setting explanations and every other string in
+`strings.po` are written about the skin, not to the reader: "The title is written over the artwork",
+not "Write the title over the artwork" or "the kinds of media you choose". Say what the setting does
+or what happens when it is on, in the passive where a subject would otherwise be the reader.
 
 Each `language/resource.language.<locale>/strings.po` supplies localized strings referenced in skin XML as
 `$LOCALIZE[<id>]`. Only edit them on the development branch — they are synced outward to the sibling

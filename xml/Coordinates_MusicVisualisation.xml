@@ -58,7 +58,7 @@
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords3_21:9</include>
@@ -81,7 +81,7 @@
 		<width>140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords4_21:9</include>
@@ -108,7 +108,7 @@
 		<width>60</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords5_21:9</include>
@@ -135,7 +135,7 @@
 		<width>140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords6_21:9</include>
@@ -162,7 +162,7 @@
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords7_21:9</include>
@@ -185,7 +185,7 @@
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords8_21:9</include>
@@ -208,7 +208,7 @@
 		<width>180</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords9_21:9</include>
@@ -235,7 +235,7 @@
 		<width>340</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords10_21:9</include>
@@ -262,7 +262,7 @@
 		<width>260</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords11_21:9</include>
@@ -289,7 +289,7 @@
 		<width>140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords12_21:9</include>
@@ -320,7 +320,7 @@
 		<width>440</width>
 		<height>20</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords13_21:9</include>
@@ -351,7 +351,7 @@
 		<width>440</width>
 		<height>20</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords14_21:9</include>
@@ -378,7 +378,7 @@
 		<width>600</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords15">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords15_21:9</include>
@@ -405,7 +405,7 @@
 		<width>300</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords16">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords16_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords16_21:9</include>
@@ -455,7 +455,7 @@
 		<width>470</width>
 		<height>516</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords18">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords18_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords18_21:9</include>
@@ -482,7 +482,7 @@
 		<top>177</top>
 		<height>324</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords19">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords19_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords19_21:9</include>
@@ -490,22 +490,26 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MusicVisualisation_coords19_4:3</include>
 	</include>
 	<include name="MusicVisualisation_coords19_16:9">
-		<width>1100</width>
+		<left>220</left>
+		<width>880</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords19_21:9">
-		<width>1740</width>
+		<left>220</left>
+		<width>1520</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords19_21:9_masked">
-		<width>1740</width>
+		<left>220</left>
+		<width>1520</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords19_4:3">
-		<width>620</width>
+		<left>220</left>
+		<width>400</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords20">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords20_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords20_21:9</include>
@@ -513,22 +517,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MusicVisualisation_coords20_4:3</include>
 	</include>
 	<include name="MusicVisualisation_coords20_16:9">
-		<width>200</width>
+		<width>1100</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords20_21:9">
-		<width>200</width>
+		<width>1740</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords20_21:9_masked">
-		<width>200</width>
+		<width>1740</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords20_4:3">
-		<width>200</width>
+		<width>620</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords21">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords21_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords21_21:9</include>
@@ -536,26 +540,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MusicVisualisation_coords21_4:3</include>
 	</include>
 	<include name="MusicVisualisation_coords21_16:9">
-		<left>220</left>
-		<width>880</width>
+		<width>200</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords21_21:9">
-		<left>220</left>
-		<width>1520</width>
+		<width>200</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords21_21:9_masked">
-		<left>220</left>
-		<width>1520</width>
+		<width>200</width>
 		<height>36</height>
 	</include>
 	<include name="MusicVisualisation_coords21_4:3">
-		<left>220</left>
-		<width>400</width>
+		<width>200</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords22">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords22_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords22_21:9</include>
@@ -582,7 +582,7 @@
 		<top>513</top>
 		<height>180</height>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords23">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords23_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords23_21:9</include>
@@ -613,7 +613,7 @@
 		<height>516</height>
 		<width>620</width>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords24">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords24_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords24_21:9</include>
@@ -640,7 +640,7 @@
 		<height>440</height>
 		<width>620</width>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords25">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords25_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords25_21:9</include>
@@ -667,7 +667,7 @@
 		<height>455</height>
 		<width>620</width>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords26">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords26_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords26_21:9</include>
@@ -694,7 +694,7 @@
 		<height>437</height>
 		<width>620</width>
 	</include>
-	
+
 	<include name="MusicVisualisation_coords27">
 		<include condition="$EXP[NonMaskedCoordinates]">MusicVisualisation_coords27_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MusicVisualisation_coords27_21:9</include>

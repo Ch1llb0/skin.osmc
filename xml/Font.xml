@@ -261,39 +261,43 @@
 			<style>italics</style>
 		</font>
 		
-		<!-- Wall view titles -->
+		<!-- Wall view titles, one size per strip height the walls and the home widgets use.
+		     They carry the suffix because the smallest of them cannot go without it: font
+		     lookup ignores case, so a font called Font13 answers to font13, the name Kodi
+		     gives its own default font, and an eleven pixel font would be handed to
+		     everything that asks for the default one. -->
 		<font>
-			<name>Font13</name>
+			<name>Font13-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>11</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
-			<name>Font16</name>
+			<name>Font16-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>14</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
-			<name>Font18</name>
+			<name>Font18-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>16</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
-			<name>Font20</name>
+			<name>Font20-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>18</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
-			<name>Font23</name>
+			<name>Font23-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>21</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
-			<name>Font26</name>
+			<name>Font26-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
 			<size>24</size>
 			<linespacing>1.3</linespacing>
@@ -633,44 +637,48 @@
 			<aspect>0.92</aspect>
 		</font>
 		
-		<!-- Wall view titles -->
+		<!-- Wall view titles, one size per strip height the walls and the home widgets use.
+		     They carry the suffix because the smallest of them cannot go without it: font
+		     lookup ignores case, so a font called Font13 answers to font13, the name Kodi
+		     gives its own default font, and an eleven pixel font would be handed to
+		     everything that asks for the default one. -->
 		<font>
-			<name>Font13</name>
+			<name>Font13-title</name>
 			<filename>Arial.ttf</filename>
 			<size>8</size>
 			<linespacing>1.3</linespacing>
 			<aspect>0.92</aspect>
 		</font>
 		<font>
-			<name>Font16</name>
+			<name>Font16-title</name>
 			<filename>Arial.ttf</filename>
 			<size>11</size>
 			<linespacing>1.3</linespacing>
 			<aspect>0.92</aspect>
 		</font>
 		<font>
-			<name>Font18</name>
+			<name>Font18-title</name>
 			<filename>Arial.ttf</filename>
 			<size>13</size>
 			<linespacing>1.3</linespacing>
 			<aspect>0.92</aspect>
 		</font>
 		<font>
-			<name>Font20</name>
+			<name>Font20-title</name>
 			<filename>Arial.ttf</filename>
 			<size>15</size>
 			<linespacing>1.3</linespacing>
 			<aspect>0.92</aspect>
 		</font>
 		<font>
-			<name>Font23</name>
+			<name>Font23-title</name>
 			<filename>Arial.ttf</filename>
 			<size>18</size>
 			<linespacing>1.3</linespacing>
 			<aspect>0.92</aspect>
 		</font>
 		<font>
-			<name>Font26</name>
+			<name>Font26-title</name>
 			<filename>Arial.ttf</filename>
 			<size>21</size>
 			<linespacing>1.3</linespacing>

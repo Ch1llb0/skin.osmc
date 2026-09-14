@@ -2050,7 +2050,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -2098,7 +2098,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -2145,7 +2145,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -2193,7 +2193,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -2240,7 +2240,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -2288,7 +2288,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -2335,7 +2335,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -2383,7 +2383,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -2508,7 +2508,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -2556,7 +2556,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -2603,7 +2603,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -2651,7 +2651,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -2698,7 +2698,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -2746,7 +2746,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -2793,7 +2793,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -2841,7 +2841,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -2966,7 +2966,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -3014,7 +3014,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -3061,7 +3061,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -3109,7 +3109,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -3156,7 +3156,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -3204,7 +3204,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -3251,7 +3251,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -3299,7 +3299,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -3424,7 +3424,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -3472,7 +3472,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -3519,7 +3519,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -3567,7 +3567,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -3614,7 +3614,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -3662,7 +3662,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -3709,7 +3709,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -3757,7 +3757,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -3882,7 +3882,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -3930,7 +3930,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -3977,7 +3977,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -4025,7 +4025,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -4072,7 +4072,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -4120,7 +4120,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -4167,7 +4167,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -4215,7 +4215,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -4340,7 +4340,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -4388,7 +4388,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -4435,7 +4435,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -4483,7 +4483,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -4530,7 +4530,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -4578,7 +4578,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -4625,7 +4625,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -4673,7 +4673,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -4798,7 +4798,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -4846,7 +4846,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -4893,7 +4893,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -4941,7 +4941,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -4988,7 +4988,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -5036,7 +5036,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -5083,7 +5083,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -5131,7 +5131,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -5256,7 +5256,7 @@
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font23</param>
+					<param name="font">Font23-title</param>
 					<param name="scrollspeed">37</param>
 					<param name="pad">8</param>
 					<param name="titleright">56</param>
@@ -5304,7 +5304,7 @@
 							<param name="height">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -5351,7 +5351,7 @@
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font23</param>
+							<param name="font">Font23-title</param>
 							<param name="scrollspeed">37</param>
 							<param name="pad">8</param>
 							<param name="titleright">56</param>
@@ -5399,7 +5399,7 @@
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font23</param>
+						<param name="font">Font23-title</param>
 						<param name="scrollspeed">37</param>
 						<param name="pad">8</param>
 						<param name="titleright">56</param>
@@ -5446,7 +5446,7 @@
 					<param name="centerleft">66.5</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font16</param>
+					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
 					<param name="pad">5</param>
 					<param name="titleright">37</param>
@@ -5494,7 +5494,7 @@
 							<param name="height">16</param>
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -5541,7 +5541,7 @@
 							<param name="centerleft">66.5</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font16</param>
+							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
 							<param name="pad">5</param>
 							<param name="titleright">37</param>
@@ -5589,7 +5589,7 @@
 						<param name="centerleft">66.5</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font16</param>
+						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
 						<param name="pad">5</param>
 						<param name="titleright">37</param>
@@ -6113,7 +6113,7 @@
 					<param name="centerleft">88.5</param>
 					<param name="slide">10</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font20</param>
+					<param name="font">Font20-title</param>
 					<param name="scrollspeed">32</param>
 					<param name="pad">7</param>
 					<param name="titleright">47</param>
@@ -6161,7 +6161,7 @@
 							<param name="height">20</param>
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
-							<param name="font">Font20</param>
+							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
 							<param name="pad">7</param>
 							<param name="titleright">47</param>
@@ -6208,7 +6208,7 @@
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font20</param>
+							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
 							<param name="pad">7</param>
 							<param name="titleright">47</param>
@@ -6256,7 +6256,7 @@
 						<param name="centerleft">88.5</param>
 						<param name="slide">10</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font20</param>
+						<param name="font">Font20-title</param>
 						<param name="scrollspeed">32</param>
 						<param name="pad">7</param>
 						<param name="titleright">47</param>
@@ -6571,7 +6571,7 @@
 					<param name="centerleft">88.5</param>
 					<param name="slide">10</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-					<param name="font">Font20</param>
+					<param name="font">Font20-title</param>
 					<param name="scrollspeed">32</param>
 					<param name="pad">7</param>
 					<param name="titleright">47</param>
@@ -6619,7 +6619,7 @@
 							<param name="height">20</param>
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
-							<param name="font">Font20</param>
+							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
 							<param name="pad">7</param>
 							<param name="titleright">47</param>
@@ -6666,7 +6666,7 @@
 							<param name="centerleft">88.5</param>
 							<param name="slide">10</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-							<param name="font">Font20</param>
+							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
 							<param name="pad">7</param>
 							<param name="titleright">47</param>
@@ -6714,7 +6714,7 @@
 						<param name="centerleft">88.5</param>
 						<param name="slide">10</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
-						<param name="font">Font20</param>
+						<param name="font">Font20-title</param>
 						<param name="scrollspeed">32</param>
 						<param name="pad">7</param>
 						<param name="titleright">47</param>

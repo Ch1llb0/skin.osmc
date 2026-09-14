@@ -34,7 +34,7 @@
 					
 					<!-- EPG Grid -->
 					<control type="epggrid" id="10">
-						<include>MyPVRGuide_coords2</include>
+						<include>MyPVRGuide_coords1</include>
 						<onup>10</onup>
 						<ondown>10</ondown>
 						<onleft>10</onleft>
@@ -48,6 +48,8 @@
 						<progresstexture border="4,61,4,4" colordiffuse="$VAR[epggridunfocusdim]">pvr/ProgressTimeline.png</progresstexture>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 
+						<include>MyPVRGuide_coords2</include>
+
 						<include>MyPVRGuide_coords3</include>
 
 						<include>MyPVRGuide_coords4</include>
@@ -56,13 +58,11 @@
 
 						<include>MyPVRGuide_coords6</include>
 
-						<include>MyPVRGuide_coords7</include>
-
 					</control>
 					
 					<!-- Scrollbar -->
 					<control type="scrollbar" id="60">
-						<include>MyPVRGuide_coords1</include>
+						<include>MyPVRGuide_coords7</include>
 						<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 						<onright>10</onright>
 						<showonepage>false</showonepage>
