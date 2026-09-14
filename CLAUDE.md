@@ -23,6 +23,9 @@ commands in this repo.
   `media/Textures.xbt`, the TexturePacker bundle of that same folder. `addon.xml` declares the bundle as
   `defaultthemename`, and Kodi checks bundles *before* the filesystem, so the loose files are shadowed at
   runtime: editing a PNG and reloading shows no change until the bundle is rebuilt, while *adding* one works.
+- `icons/` — the vector originals for the icons the skin draws itself, plus a README. Kodi never reads
+  them; they exist so an icon can be redrawn when a control's size changes, which a PNG cannot be.
+  `.github/scripts/render-icons.py` renders one to the PNG in `media/` at a given size.
 - `fonts/` — TTF files declared in `xml/Font.xml`.
 - `shortcuts/` — config for the `script.skinshortcuts` addon: `menus.xml` (menu and submenu structure),
   `widgets.xml`, `backgrounds.xml`, `properties.xml` (widget property pickers) and `templates.xml`.
@@ -116,6 +119,26 @@ each settings page in the order they appear. A new setting inserted in the middl
 position it occupies, and the controls after it move down by one — including their `Control.HasFocus`
 entries in `Variables_Settings.xml` and any `Control.SetFocus` that names them. Never give a new setting
 the next free number at the end of the range and drop it into the middle.
+
+## Icon sizes
+
+An icon is authored at the size the **largest** control that draws it uses, and no larger. Work that
+size out before adding or resizing one — it is not a round number and it is not the same for every
+icon, because it comes from the coordinate includes:
+
+- a control's own `<width>`/`<height>`, and on `<aspectratio>keep` a square texture is drawn at
+  `min(width, height)`;
+- a `<param name="fallback">` reaches the box of the include it is passed to, which is usually a
+  `_coords` name to follow;
+- `$VAR[mediaImages]` puts `DefaultFolderBack.png` and `DefaultTVShows.png` into every art slot the
+  skin has, the largest of which is 405 × 600.
+
+A texture drawn at a fraction of its own size is resampled every frame and looks soft even though it
+is not being enlarged: a 52 px file in a 50 px box is a rescale, not a 1:1 draw. Match the two.
+
+Textures are white with the shape in the alpha channel, and the skin tints them through
+`colordiffuse`. Do not bake a state's fade into a texture as well — a half-transparent "NF" copy
+diffused with `$VAR[OverlayColorNF]` renders at a ninth of full strength, not a third.
 
 ## Colors
 

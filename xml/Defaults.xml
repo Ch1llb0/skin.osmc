@@ -102,10 +102,10 @@
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
 		<alttexturenofocus></alttexturenofocus>
-		<textureup colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpFO.png</textureup>
-		<texturedown colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownFO.png</texturedown>
-		<textureupfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</textureupfocus>
-		<texturedownfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texturedownfocus>
+		<textureup colordiffuse="$VAR[OverlayColorNF]">common/ArrowUp.png</textureup>
+		<texturedown colordiffuse="$VAR[OverlayColorNF]">common/ArrowDown.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowUp.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowDown.png</texturedownfocus>
 		<textoffsetx>0</textoffsetx>
 		<reverse>yes</reverse>
 		<pulseonselect>False</pulseonselect>
@@ -126,10 +126,10 @@
 		<spinheight>60</spinheight>
 		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus.png</texturefocus>
 		<alttexturenofocus></alttexturenofocus>
-		<textureup colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpFO.png</textureup>
-		<texturedown colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownFO.png</texturedown>
-		<textureupfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</textureupfocus>
-		<texturedownfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texturedownfocus>
+		<textureup colordiffuse="$VAR[OverlayColorNF]">common/ArrowUp.png</textureup>
+		<texturedown colordiffuse="$VAR[OverlayColorNF]">common/ArrowDown.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowUp.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[OverlayColorFO]">common/ArrowDown.png</texturedownfocus>
 		<reverse>yes</reverse>
 		<pulseonselect>False</pulseonselect>
 		<include>WindowDepth</include>

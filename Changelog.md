@@ -83,6 +83,10 @@ _Fixed_
 - fix the subtitle position marker in the video calibration screen being stretched half as tall again as the image it draws, which both blurred the line and set it below the position it marks
 - fix the watched status flag in the PVR recordings list being drawn from the small icon at half again its size, where every other list in the skin draws it at its own
 - redraw the padlock that stands in for an encrypted channel's logo at the size the largest slot draws it, rather than at a fifth of it
+- draw every icon the skin owns from a vector original, and render each to the size the largest control on screen actually draws it at, so none of them is enlarged any more
+- fix the OSMC logo on the home and login screens being a 52 pixel image in a 50 pixel box, which resampled it every frame
+- fix the sub menu arrows being a 32 pixel image in a 30 pixel box, for the same reason
+- fix the arrows that move a menu entry in the shortcut management dialog rendering at a ninth of full strength, the unfocused copy carrying a fade of its own as well as the one the skin applies
 
 ---
 
