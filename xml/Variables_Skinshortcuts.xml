@@ -56,18 +56,6 @@
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetQueue)">QueueMedia(videodb://movies/sets/$INFO[ListItem.DBID]/)</value>
 	</variable>
 
-	<!-- The move up and down arrows swap texture on focus; one control each rather than
-	     a shown and a hidden copy. Keyed on the button, not on the list item. -->
-	<variable name="skinshortcuts-arrowdown">
-		<value condition="Control.HasFocus(304)">common/ArrowDownFO.png</value>
-		<value>common/ArrowDownNF.png</value>
-	</variable>
-
-	<variable name="skinshortcuts-arrowup">
-		<value condition="Control.HasFocus(303)">common/ArrowUpFO.png</value>
-		<value>common/ArrowUpNF.png</value>
-	</variable>
-
 	<!-- The window background. Only the first row is Skin Shortcuts' business: it hands over to the
 	     generated widgetWeatherBackground while a weather widget holds focus on Home, read back
 	     through label 9987 because Kodi cannot test a $VAR for emptiness. The other two rows are the

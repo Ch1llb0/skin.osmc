@@ -88,8 +88,6 @@
 
 	<variables>
 		<variable name="widgetDetails">
-			<!-- Selected, not loaded -->
-			<value condition="$PROPERTY[widgetFocus] + Integer.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)">$LOCALIZE[20186]...</value>
 			<!-- Weather -->
 			<value condition="$PROPERTY[widgetFocus] + $PROPERTY[isWeather]">$INFO[$PROPERTY[widgetItem].Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 			<!-- Movies -->
@@ -269,9 +267,17 @@
 
 	<template items="controlItems" source="widgets">
 		<controls>
+			<!-- The row a widget is chosen by, and what the heading and the spinner above it
+			     are counted from: no row, no widget, and nothing is drawn for it. A widget
+			     holds one while it has items or is fetching them. The weather widget is a
+			     list of skin items reading the properties the weather add-on writes, and
+			     Kodi clears those properties before every fetch, so during an update it has
+			     neither items nor an outlook, and it never reports itself as updating. It
+			     holds its row while Kodi is fetching a forecast, or while it has yet to
+			     return one, and the spinner has something to sit beside. -->
 			<item id="$PROPERTY[index]">
 				<label>$PROPERTY[widgetLabel]</label>
-				<visible>[Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0) | Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook)) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+				<visible>[Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0) | Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook)) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 				<property name="widgetID">$PARENT[index]-$PROPERTY[index]</property>
 				<property name="pageID">$PARENT[index]-$MATH[($PROPERTY[index] - 1) // 2]</property>
 				<property name="pageIDOdd">$PARENT[index]-$MATH[$PROPERTY[index] // 2]</property>
@@ -323,6 +329,9 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
+				<!-- Nothing to look at and nothing to choose until it has loaded, so nothing to
+				     focus either: the heading names it and the spinner says it is coming. -->
+				<enable>Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)</enable>
 
 				<!-- Widget layout -->
 				<include>widgetLayout-weather</include>
@@ -543,6 +552,9 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
+				<!-- Nothing to look at and nothing to choose until it has loaded, so nothing to
+				     focus either: the heading names it and the spinner says it is coming. -->
+				<enable>Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)</enable>
 
 				<!-- Widget layout -->
 				<include>widgetLayout-$PROPERTY[layout]</include>
@@ -1054,20 +1066,27 @@
 		</controls>
 	</template>
 
+	<!-- A widget says it is loading while its container is being filled. The weather widget
+	     has no container to fill - it is a list of skin items reading the properties the
+	     weather add-on writes - so it says so while Kodi is fetching a forecast, or while it
+	     has yet to return one. Both are needed: Weather.IsUpdating is the loader's busy flag,
+	     and the loader is only ever set busy by something reading a weather info label, so a
+	     forecast that has never arrived leaves it false from first boot to the first request.
+	     Weather.IsFetched is such a read, and it starts the loader as it answers. -->
 	<template items="reloadingWidget" source="widgets">
 		<propertyGroup content="widgetWeather" />
 		<controls>
 			<control type="image">
-				<animation type="Conditional" condition="String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + Weather.IsUpdating]">
+				<animation type="Conditional" condition="String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + [Weather.IsUpdating | !Weather.IsFetched]]">
 					<effect type="fade" start="0" end="100" time="200" />
 				</animation>
-				<animation type="Conditional" condition="![String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + Weather.IsUpdating]]">
+				<animation type="Conditional" condition="![String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + [Weather.IsUpdating | !Weather.IsFetched]]]">
 					<effect type="fade" start="100" end="0" time="200" />
 				</animation>
 				<width>36</width>
 				<height>36</height>
 				<texture>$VAR[BusySpinner]</texture>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(name),$PARENT[name]) + String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + Weather.IsUpdating]</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(name),$PARENT[name]) + String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 			</control>
 		</controls>
 	</template>

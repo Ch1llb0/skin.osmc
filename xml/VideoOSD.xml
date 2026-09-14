@@ -570,8 +570,8 @@
 				
 				<control type="button" id="49">
 					<include>VideoOSD_coords8</include>
-					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPrevTrackNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPrevTrackNF.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDLeftNF.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDLeftNF.png</texturenofocus>
 					<onclick>Action(PreviousSubtitle)</onclick>
 					<onleft>47</onleft>
 					<onright>48</onright>
@@ -597,8 +597,8 @@
 				
 				<control type="button" id="47">
 					<include>VideoOSD_coords8</include>
-					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDNextTrackNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDNextTrackNF.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDRightNF.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDRightNF.png</texturenofocus>
 					<onclick>Action(NextSubtitle)</onclick>
 					<onleft>48</onleft>
 					<onright>49</onright>

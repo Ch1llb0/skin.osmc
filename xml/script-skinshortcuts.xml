@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- script-skinshortcuts -->
-	<defaultcontrol always="true">303</defaultcontrol>
+	<defaultcontrol always="true">304</defaultcontrol>
 	<onload>SetProperty(scriptdialog,script-skinshortcuts.xml,10000)</onload>
 	<onunload>ClearProperty(scriptdialog,10000)</onunload>
 	
@@ -10,6 +10,10 @@
 
 	<controls>
 	
+		<!-- The two move buttons are the arrows drawn at the right of the row the list is on,
+		     and each goes when there is nowhere to move: no up on the first entry, no down on
+		     the last. Disabled, they are stepped over, so right from the list lands on
+		     whichever of them is left. -->
 		<!-- Control ids come from three places, and only the first is fixed:
 		     211, 301-305, 307, 311, 313, 401, 405   Skin Shortcuts built-ins, the add-on decides these
 		     309, 310, 502-504, 601-603              bound in shortcuts/properties.xml <buttons>
@@ -145,6 +149,15 @@
 				<param name="secondary">False</param>
 			</include>
 
+			<!-- The two move buttons are the arrows drawn at the right of the row the list is
+			     on, and each one is only there while it has somewhere to move to: no up on
+			     the first row, no down on the last. Neither is ever disabled. A control that
+			     turns itself off is no good as a target, because a skin condition is read
+			     once a frame and focus is set inside the same frame as the move that would
+			     free it, so the focus would be refused and land nowhere. Instead the two
+			     step over each other, and every move that spends the button under the cursor
+			     hands it to the other: a click that lands its own row at an end, and a step
+			     that arrives at one - including the step that wraps the list right round. -->
 			<!-- Move down -->
 			<control type="button" id="304">
 				<left>-1000</left>
@@ -152,26 +165,35 @@
 				<width>1</width>
 				<height>1</height>
 				<onleft>60</onleft>
-				<onright>303</onright>
+				<onright condition="!Integer.IsEqual(Container(211).CurrentItem,1)">303</onright>
+				<onright condition="Integer.IsEqual(Container(211).CurrentItem,1)">80</onright>
+				<onclick condition="String.IsEmpty(Container(211).ListItemNoWrap(2).Label)">Control.SetFocus(303)</onclick>
 				<onup>Control.Move(211,-1)</onup>
+				<onup condition="Integer.IsEqual(Container(211).CurrentItem,1)">Control.SetFocus(303)</onup>
 				<ondown>Control.Move(211,1)</ondown>
+				<ondown condition="String.IsEmpty(Container(211).ListItemNoWrap(2).Label) + !Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">Control.SetFocus(303)</ondown>
 			</control>
-
+			
 			<!-- Move up -->
 			<control type="button" id="303">
 				<left>-1000</left>
 				<top>-1000</top>
 				<width>1</width>
 				<height>1</height>
-				<onleft>304</onleft>
+				<onleft condition="!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">304</onleft>
+				<onleft condition="Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">60</onleft>
 				<onright>80</onright>
+				<onclick condition="String.IsEmpty(Container(211).ListItemNoWrap(-2).Label)">Control.SetFocus(304)</onclick>
 				<onup>Control.Move(211,-1)</onup>
+				<onup condition="Integer.IsEqual(Container(211).CurrentItem,2)">Control.SetFocus(304)</onup>
 				<ondown>Control.Move(211,1)</ondown>
+				<ondown condition="Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">Control.SetFocus(304)</ondown>
 			</control>
-
+			
 			<!-- Left list -->
 			<control type="list" id="211">
 				<include>script-skinshortcuts_coords1</include>
+				<enable>false</enable>
 				<onleft>60</onleft>
 				<onright>304</onright>
 				<onup>211</onup>
@@ -189,7 +211,8 @@
 			<control type="scrollbar" id="60">
 				<include>script-skinshortcuts_coords4</include>
 				<onleft>9001</onleft>
-				<onright>304</onright>
+				<onright condition="!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">304</onright>
+				<onright condition="Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">303</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
@@ -368,7 +391,8 @@
 			<control type="scrollbar" id="80">
 				<include>script-skinshortcuts_coords8</include>
 				<onright>9000</onright>
-				<onleft>303</onleft>
+				<onleft condition="!Integer.IsEqual(Container(211).CurrentItem,1)">303</onleft>
+				<onleft condition="Integer.IsEqual(Container(211).CurrentItem,1)">304</onleft>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>

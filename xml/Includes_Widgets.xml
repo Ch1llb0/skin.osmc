@@ -593,6 +593,99 @@
 		</definition>
 	</include>
 
+	<!-- The heading names the item the widget has focus on, and numbers an episode the way
+	     every other list in the skin does. It reads a container the include carries as a
+	     parameter, so the numbering cannot come out of a variable - a variable takes no
+	     parameter, and a menu has as many widget containers as it has entries. One label
+	     per form instead, chosen by visibility, which is read per control and takes the
+	     parameter with it. The wide form fills the row and scrolls; the inline one sits
+	     in the grouplist beside the indicators and is as wide as its text. -->
+	<include name="widgetHeadingTitleWide">
+		<include>widgetdetails_coords</include>
+		<scroll>True</scroll>
+		<scrollspeed>55</scrollspeed>
+	</include>
+	
+	<include name="widgetHeadingTitleInline">
+		<width>auto</width>
+	</include>
+	
+	<include name="widgetHeadingTitle">
+		<definition>
+			<control type="label">
+				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
+				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<height>46</height>
+				<font>Font33</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container($PARAM[container]).ListItem.Season,S0,]$INFO[Container($PARAM[container]).ListItem.Episode,E0, &#8226; ]$INFO[Container($PARAM[container]).ListItem.Title]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>String.IsEqual(Container($PARAM[container]).ListItem.DBTYPE,episode) + !String.IsEmpty(Container($PARAM[container]).ListItem.Title) + Integer.IsLessOrEqual(Container($PARAM[container]).ListItem.Season,9) + Integer.IsLessOrEqual(Container($PARAM[container]).ListItem.Episode,9) + !String.IsEqual(Container($PARAM[container]).ListItem.Season,0)</visible>
+			</control>
+			
+			<control type="label">
+				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
+				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<height>46</height>
+				<font>Font33</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container($PARAM[container]).ListItem.Season,S0,]$INFO[Container($PARAM[container]).ListItem.Episode,E, &#8226; ]$INFO[Container($PARAM[container]).ListItem.Title]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>String.IsEqual(Container($PARAM[container]).ListItem.DBTYPE,episode) + !String.IsEmpty(Container($PARAM[container]).ListItem.Title) + Integer.IsLessOrEqual(Container($PARAM[container]).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container($PARAM[container]).ListItem.Episode,10) + !String.IsEqual(Container($PARAM[container]).ListItem.Season,0)</visible>
+			</control>
+			
+			<control type="label">
+				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
+				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<height>46</height>
+				<font>Font33</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container($PARAM[container]).ListItem.Season,S,]$INFO[Container($PARAM[container]).ListItem.Episode,E0, &#8226; ]$INFO[Container($PARAM[container]).ListItem.Title]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>String.IsEqual(Container($PARAM[container]).ListItem.DBTYPE,episode) + !String.IsEmpty(Container($PARAM[container]).ListItem.Title) + Integer.IsGreaterOrEqual(Container($PARAM[container]).ListItem.Season,10) + Integer.IsLessOrEqual(Container($PARAM[container]).ListItem.Episode,9) + !String.IsEqual(Container($PARAM[container]).ListItem.Season,0)</visible>
+			</control>
+			
+			<control type="label">
+				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
+				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<height>46</height>
+				<font>Font33</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container($PARAM[container]).ListItem.Season,S,]$INFO[Container($PARAM[container]).ListItem.Episode,E, &#8226; ]$INFO[Container($PARAM[container]).ListItem.Title]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>String.IsEqual(Container($PARAM[container]).ListItem.DBTYPE,episode) + !String.IsEmpty(Container($PARAM[container]).ListItem.Title) + Integer.IsGreaterOrEqual(Container($PARAM[container]).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container($PARAM[container]).ListItem.Episode,10) + !String.IsEqual(Container($PARAM[container]).ListItem.Season,0)</visible>
+			</control>
+			
+			<control type="label">
+				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
+				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<height>46</height>
+				<font>Font33</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container($PARAM[container]).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container($PARAM[container]).ListItem.Title]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>String.IsEqual(Container($PARAM[container]).ListItem.DBTYPE,episode) + !String.IsEmpty(Container($PARAM[container]).ListItem.Title) + String.IsEqual(Container($PARAM[container]).ListItem.Season,0)</visible>
+			</control>
+			
+			<control type="label">
+				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
+				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<height>46</height>
+				<font>Font33</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[Container($PARAM[container]).ListItem.Label]</label>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<visible>![String.IsEqual(Container($PARAM[container]).ListItem.DBTYPE,episode) + !String.IsEmpty(Container($PARAM[container]).ListItem.Title)]</visible>
+			</control>
+		</definition>
+	</include>
+	
 	<!-- Widget heading/details -->
 	<include name="widgetHeading">
 		<definition>
@@ -621,32 +714,24 @@
 			<animation type="Hidden">
 				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
-			<animation type="Conditional" condition="!String.IsEmpty(Container($PARAM[container2]).ListItem.Property(outlook)) + !String.IsEqual(Container($PARAM[container2]).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)">
-				<effect type="fade" start="0" end="100" time="400" delay="400"  />
-			</animation>
-			<animation type="Conditional" condition="[String.IsEmpty(Container($PARAM[container2]).ListItem.Property(outlook)) | String.IsEqual(Container($PARAM[container2]).ListItem.Property(outlook),$LOCALIZE[10006])] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)">
-				<effect type="fade" start="100" end="0" time="400" />
-			</animation>
-
 			<!-- Widget has focus -->
 			<control type="grouplist">
 				<orientation>vertical</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
-				
-				<!-- Widget heading -->
-				<control type="label">
-					<include>widgetdetails_coords</include>
+			
+				<!-- Widget heading. The group is here to put one condition on all six labels,
+				     and carries the row's height because a grouplist reads the height of the
+				     control it is given: a group has none of its own, and the details below
+				     would be laid out on top of the heading. -->
+				<control type="group">
 					<height>46</height>
-					<font>Font33</font>
-					<align>right</align>
-					<aligny>top</aligny>
 					<visible>Integer.IsEqual(Container($PARAM[container]).NumItems,1)</visible>
-					<label>$VAR[ListLabelContainer$PARAM[container]]</label>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<scroll>True</scroll>
-					<scrollspeed>55</scrollspeed>
+					<include content="widgetHeadingTitle">
+						<param name="container">$PARAM[container]</param>
+						<param name="fit">wide</param>
+					</include>
 				</control>
-				
+			
 				<!-- Indicators + Widget heading -->
 				<control type="grouplist">
 					<height>46</height>
@@ -656,15 +741,10 @@
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>Integer.IsGreater(Container($PARAM[container]).NumItems,1)</visible>
-					<control type="label">
-						<width>auto</width>
-						<height>46</height>
-						<font>Font33</font>
-						<align>right</align>
-						<aligny>top</aligny>
-						<label>$VAR[ListLabelContainer$PARAM[container]]</label>
-						<textcolor>$VAR[TextColorNF]</textcolor>
-					</control>
+					<include content="widgetHeadingTitle">
+						<param name="container">$PARAM[container]</param>
+						<param name="fit">inline</param>
+					</include>
 				</control>
 
 				<!-- Widget details -->
@@ -683,8 +763,18 @@
 					<visible>!String.IsEmpty(Control.GetLabel(9988))</visible>
 					<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+					<!-- The weather widget has nothing to say until it has an outlook, and this
+					     row goes with it rather than standing empty. It is the row that waits,
+					     not the heading above: the heading names the widget, which is known
+					     before any forecast is, and it arrives with every other widget's. -->
+					<animation type="Conditional" condition="!String.IsEmpty(Container($PARAM[container2]).ListItem.Property(outlook)) + !String.IsEqual(Container($PARAM[container2]).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)">
+						<effect type="fade" start="0" end="100" time="400" delay="400" />
+					</animation>
+					<animation type="Conditional" condition="[String.IsEmpty(Container($PARAM[container2]).ListItem.Property(outlook)) | String.IsEqual(Container($PARAM[container2]).ListItem.Property(outlook),$LOCALIZE[10006])] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)">
+						<effect type="fade" start="100" end="0" time="400" />
+					</animation>
 				</control>
-				
+			
 				<control type="label" id="9988">
 					<font></font>
 					<label>$VAR[widgetDetails]</label>
@@ -697,7 +787,7 @@
 					<font></font>
 					<label>$VAR[widgetWeatherBackground]</label>
 				</control>
-				
+			
 			</control>
 			
 			<!-- Reloading indicator -->

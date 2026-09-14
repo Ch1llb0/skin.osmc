@@ -756,96 +756,19 @@
 		<value condition="String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 
-	<!-- Recently added spans every show, so there the number needs the show in front. -->
-	<variable name="SElist">
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle] &#8226; $VAR[SEnumber]</value>
-		<value>$VAR[SEnumber]</value>
-	</variable>
-	
-	<!-- The widget heading names the item the widget has focus on, and reads it through a
-	     container id the include carries as a parameter, so it cannot use ListLabel: a
-	     variable takes no parameter. One per widget instead, named after the container the
-	     heading already reads, so the numbering and the title can never come from two
-	     different lists. $PARAM resolves while the include is read, leaving a plain name. -->
-	<variable name="ListLabelContainer10001">
-		<value condition="String.IsEqual(Container(10001).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10001).ListItem.Title) + Integer.IsLessOrEqual(Container(10001).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10001).ListItem.Episode,9) + !String.IsEqual(Container(10001).ListItem.Season,0)">$INFO[Container(10001).ListItem.Season,S0,]$INFO[Container(10001).ListItem.Episode,E0, &#8226; ]$INFO[Container(10001).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10001).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10001).ListItem.Title) + Integer.IsLessOrEqual(Container(10001).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10001).ListItem.Episode,10) + !String.IsEqual(Container(10001).ListItem.Season,0)">$INFO[Container(10001).ListItem.Season,S0,]$INFO[Container(10001).ListItem.Episode,E, &#8226; ]$INFO[Container(10001).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10001).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10001).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10001).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10001).ListItem.Episode,9) + !String.IsEqual(Container(10001).ListItem.Season,0)">$INFO[Container(10001).ListItem.Season,S,]$INFO[Container(10001).ListItem.Episode,E0, &#8226; ]$INFO[Container(10001).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10001).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10001).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10001).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10001).ListItem.Episode,10) + !String.IsEqual(Container(10001).ListItem.Season,0)">$INFO[Container(10001).ListItem.Season,S,]$INFO[Container(10001).ListItem.Episode,E, &#8226; ]$INFO[Container(10001).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10001).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10001).ListItem.Title) + String.IsEqual(Container(10001).ListItem.Season,0)">$INFO[Container(10001).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(10001).ListItem.Title]</value>
-		<value>$INFO[Container(10001).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer10002">
-		<value condition="String.IsEqual(Container(10002).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10002).ListItem.Title) + Integer.IsLessOrEqual(Container(10002).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10002).ListItem.Episode,9) + !String.IsEqual(Container(10002).ListItem.Season,0)">$INFO[Container(10002).ListItem.Season,S0,]$INFO[Container(10002).ListItem.Episode,E0, &#8226; ]$INFO[Container(10002).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10002).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10002).ListItem.Title) + Integer.IsLessOrEqual(Container(10002).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10002).ListItem.Episode,10) + !String.IsEqual(Container(10002).ListItem.Season,0)">$INFO[Container(10002).ListItem.Season,S0,]$INFO[Container(10002).ListItem.Episode,E, &#8226; ]$INFO[Container(10002).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10002).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10002).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10002).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10002).ListItem.Episode,9) + !String.IsEqual(Container(10002).ListItem.Season,0)">$INFO[Container(10002).ListItem.Season,S,]$INFO[Container(10002).ListItem.Episode,E0, &#8226; ]$INFO[Container(10002).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10002).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10002).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10002).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10002).ListItem.Episode,10) + !String.IsEqual(Container(10002).ListItem.Season,0)">$INFO[Container(10002).ListItem.Season,S,]$INFO[Container(10002).ListItem.Episode,E, &#8226; ]$INFO[Container(10002).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10002).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10002).ListItem.Title) + String.IsEqual(Container(10002).ListItem.Season,0)">$INFO[Container(10002).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(10002).ListItem.Title]</value>
-		<value>$INFO[Container(10002).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer10004">
-		<value condition="String.IsEqual(Container(10004).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10004).ListItem.Title) + Integer.IsLessOrEqual(Container(10004).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10004).ListItem.Episode,9) + !String.IsEqual(Container(10004).ListItem.Season,0)">$INFO[Container(10004).ListItem.Season,S0,]$INFO[Container(10004).ListItem.Episode,E0, &#8226; ]$INFO[Container(10004).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10004).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10004).ListItem.Title) + Integer.IsLessOrEqual(Container(10004).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10004).ListItem.Episode,10) + !String.IsEqual(Container(10004).ListItem.Season,0)">$INFO[Container(10004).ListItem.Season,S0,]$INFO[Container(10004).ListItem.Episode,E, &#8226; ]$INFO[Container(10004).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10004).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10004).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10004).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10004).ListItem.Episode,9) + !String.IsEqual(Container(10004).ListItem.Season,0)">$INFO[Container(10004).ListItem.Season,S,]$INFO[Container(10004).ListItem.Episode,E0, &#8226; ]$INFO[Container(10004).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10004).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10004).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10004).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10004).ListItem.Episode,10) + !String.IsEqual(Container(10004).ListItem.Season,0)">$INFO[Container(10004).ListItem.Season,S,]$INFO[Container(10004).ListItem.Episode,E, &#8226; ]$INFO[Container(10004).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10004).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10004).ListItem.Title) + String.IsEqual(Container(10004).ListItem.Season,0)">$INFO[Container(10004).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(10004).ListItem.Title]</value>
-		<value>$INFO[Container(10004).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer10006">
-		<value condition="String.IsEqual(Container(10006).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10006).ListItem.Title) + Integer.IsLessOrEqual(Container(10006).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10006).ListItem.Episode,9) + !String.IsEqual(Container(10006).ListItem.Season,0)">$INFO[Container(10006).ListItem.Season,S0,]$INFO[Container(10006).ListItem.Episode,E0, &#8226; ]$INFO[Container(10006).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10006).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10006).ListItem.Title) + Integer.IsLessOrEqual(Container(10006).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10006).ListItem.Episode,10) + !String.IsEqual(Container(10006).ListItem.Season,0)">$INFO[Container(10006).ListItem.Season,S0,]$INFO[Container(10006).ListItem.Episode,E, &#8226; ]$INFO[Container(10006).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10006).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10006).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10006).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10006).ListItem.Episode,9) + !String.IsEqual(Container(10006).ListItem.Season,0)">$INFO[Container(10006).ListItem.Season,S,]$INFO[Container(10006).ListItem.Episode,E0, &#8226; ]$INFO[Container(10006).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10006).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10006).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10006).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10006).ListItem.Episode,10) + !String.IsEqual(Container(10006).ListItem.Season,0)">$INFO[Container(10006).ListItem.Season,S,]$INFO[Container(10006).ListItem.Episode,E, &#8226; ]$INFO[Container(10006).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10006).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10006).ListItem.Title) + String.IsEqual(Container(10006).ListItem.Season,0)">$INFO[Container(10006).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(10006).ListItem.Title]</value>
-		<value>$INFO[Container(10006).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer10008">
-		<value condition="String.IsEqual(Container(10008).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10008).ListItem.Title) + Integer.IsLessOrEqual(Container(10008).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10008).ListItem.Episode,9) + !String.IsEqual(Container(10008).ListItem.Season,0)">$INFO[Container(10008).ListItem.Season,S0,]$INFO[Container(10008).ListItem.Episode,E0, &#8226; ]$INFO[Container(10008).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10008).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10008).ListItem.Title) + Integer.IsLessOrEqual(Container(10008).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10008).ListItem.Episode,10) + !String.IsEqual(Container(10008).ListItem.Season,0)">$INFO[Container(10008).ListItem.Season,S0,]$INFO[Container(10008).ListItem.Episode,E, &#8226; ]$INFO[Container(10008).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10008).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10008).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10008).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10008).ListItem.Episode,9) + !String.IsEqual(Container(10008).ListItem.Season,0)">$INFO[Container(10008).ListItem.Season,S,]$INFO[Container(10008).ListItem.Episode,E0, &#8226; ]$INFO[Container(10008).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10008).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10008).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10008).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10008).ListItem.Episode,10) + !String.IsEqual(Container(10008).ListItem.Season,0)">$INFO[Container(10008).ListItem.Season,S,]$INFO[Container(10008).ListItem.Episode,E, &#8226; ]$INFO[Container(10008).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10008).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10008).ListItem.Title) + String.IsEqual(Container(10008).ListItem.Season,0)">$INFO[Container(10008).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(10008).ListItem.Title]</value>
-		<value>$INFO[Container(10008).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer10009">
-		<value condition="String.IsEqual(Container(10009).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10009).ListItem.Title) + Integer.IsLessOrEqual(Container(10009).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10009).ListItem.Episode,9) + !String.IsEqual(Container(10009).ListItem.Season,0)">$INFO[Container(10009).ListItem.Season,S0,]$INFO[Container(10009).ListItem.Episode,E0, &#8226; ]$INFO[Container(10009).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10009).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10009).ListItem.Title) + Integer.IsLessOrEqual(Container(10009).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10009).ListItem.Episode,10) + !String.IsEqual(Container(10009).ListItem.Season,0)">$INFO[Container(10009).ListItem.Season,S0,]$INFO[Container(10009).ListItem.Episode,E, &#8226; ]$INFO[Container(10009).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10009).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10009).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10009).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10009).ListItem.Episode,9) + !String.IsEqual(Container(10009).ListItem.Season,0)">$INFO[Container(10009).ListItem.Season,S,]$INFO[Container(10009).ListItem.Episode,E0, &#8226; ]$INFO[Container(10009).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10009).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10009).ListItem.Title) + Integer.IsGreaterOrEqual(Container(10009).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10009).ListItem.Episode,10) + !String.IsEqual(Container(10009).ListItem.Season,0)">$INFO[Container(10009).ListItem.Season,S,]$INFO[Container(10009).ListItem.Episode,E, &#8226; ]$INFO[Container(10009).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(10009).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(10009).ListItem.Title) + String.IsEqual(Container(10009).ListItem.Season,0)">$INFO[Container(10009).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(10009).ListItem.Title]</value>
-		<value>$INFO[Container(10009).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer100010">
-		<value condition="String.IsEqual(Container(100010).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100010).ListItem.Title) + Integer.IsLessOrEqual(Container(100010).ListItem.Season,9) + Integer.IsLessOrEqual(Container(100010).ListItem.Episode,9) + !String.IsEqual(Container(100010).ListItem.Season,0)">$INFO[Container(100010).ListItem.Season,S0,]$INFO[Container(100010).ListItem.Episode,E0, &#8226; ]$INFO[Container(100010).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100010).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100010).ListItem.Title) + Integer.IsLessOrEqual(Container(100010).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(100010).ListItem.Episode,10) + !String.IsEqual(Container(100010).ListItem.Season,0)">$INFO[Container(100010).ListItem.Season,S0,]$INFO[Container(100010).ListItem.Episode,E, &#8226; ]$INFO[Container(100010).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100010).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100010).ListItem.Title) + Integer.IsGreaterOrEqual(Container(100010).ListItem.Season,10) + Integer.IsLessOrEqual(Container(100010).ListItem.Episode,9) + !String.IsEqual(Container(100010).ListItem.Season,0)">$INFO[Container(100010).ListItem.Season,S,]$INFO[Container(100010).ListItem.Episode,E0, &#8226; ]$INFO[Container(100010).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100010).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100010).ListItem.Title) + Integer.IsGreaterOrEqual(Container(100010).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(100010).ListItem.Episode,10) + !String.IsEqual(Container(100010).ListItem.Season,0)">$INFO[Container(100010).ListItem.Season,S,]$INFO[Container(100010).ListItem.Episode,E, &#8226; ]$INFO[Container(100010).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100010).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100010).ListItem.Title) + String.IsEqual(Container(100010).ListItem.Season,0)">$INFO[Container(100010).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(100010).ListItem.Title]</value>
-		<value>$INFO[Container(100010).ListItem.Label]</value>
-	</variable>
-
-	<variable name="ListLabelContainer100011">
-		<value condition="String.IsEqual(Container(100011).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100011).ListItem.Title) + Integer.IsLessOrEqual(Container(100011).ListItem.Season,9) + Integer.IsLessOrEqual(Container(100011).ListItem.Episode,9) + !String.IsEqual(Container(100011).ListItem.Season,0)">$INFO[Container(100011).ListItem.Season,S0,]$INFO[Container(100011).ListItem.Episode,E0, &#8226; ]$INFO[Container(100011).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100011).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100011).ListItem.Title) + Integer.IsLessOrEqual(Container(100011).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(100011).ListItem.Episode,10) + !String.IsEqual(Container(100011).ListItem.Season,0)">$INFO[Container(100011).ListItem.Season,S0,]$INFO[Container(100011).ListItem.Episode,E, &#8226; ]$INFO[Container(100011).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100011).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100011).ListItem.Title) + Integer.IsGreaterOrEqual(Container(100011).ListItem.Season,10) + Integer.IsLessOrEqual(Container(100011).ListItem.Episode,9) + !String.IsEqual(Container(100011).ListItem.Season,0)">$INFO[Container(100011).ListItem.Season,S,]$INFO[Container(100011).ListItem.Episode,E0, &#8226; ]$INFO[Container(100011).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100011).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100011).ListItem.Title) + Integer.IsGreaterOrEqual(Container(100011).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(100011).ListItem.Episode,10) + !String.IsEqual(Container(100011).ListItem.Season,0)">$INFO[Container(100011).ListItem.Season,S,]$INFO[Container(100011).ListItem.Episode,E, &#8226; ]$INFO[Container(100011).ListItem.Title]</value>
-		<value condition="String.IsEqual(Container(100011).ListItem.DBTYPE,episode) + !String.IsEmpty(Container(100011).ListItem.Title) + String.IsEqual(Container(100011).ListItem.Season,0)">$INFO[Container(100011).ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Container(100011).ListItem.Title]</value>
-		<value>$INFO[Container(100011).ListItem.Label]</value>
-	</variable>
-	
 	<!-- The big list view has the room to spell the season and the episode out, and does so
 	     deliberately. Everywhere else the skin writes SxxExx from SEnumber. -->
 	<variable name="SEListView">
 		<value condition="!String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Season,$LOCALIZE[20373] , &#8226; ]$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
 		<value condition="String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
-
+	
+	<!-- Recently added spans every show, so there the number needs the show in front. -->
+	<variable name="SElist">
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle] &#8226; $VAR[SEnumber]</value>
+		<value>$VAR[SEnumber]</value>
+	</variable>
+	
 	<!-- Subtitle download label -->
 	<variable name="SubtitleDownload">
 		<value condition="ListItem.Property(hearingimp) + ListItem.Property(sync)">[CC] (SYNC) $INFO[ListItem.Label2]</value>

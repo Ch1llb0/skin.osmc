@@ -116,13 +116,29 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + !Control.HasFocus(304)</visible>
+			</control>
+			<control type="image">
+				<left>290</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + !Control.HasFocus(303)</visible>
+			</control>
+			<control type="image">
+				<left>325</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
 	</include>
@@ -157,13 +173,29 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + !Control.HasFocus(304)</visible>
+			</control>
+			<control type="image">
+				<left>290</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + !Control.HasFocus(303)</visible>
+			</control>
+			<control type="image">
+				<left>325</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
 	</include>
@@ -198,13 +230,29 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + !Control.HasFocus(304)</visible>
+			</control>
+			<control type="image">
+				<left>290</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + !Control.HasFocus(303)</visible>
+			</control>
+			<control type="image">
+				<left>325</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
 	</include>
@@ -239,13 +287,29 @@
 				<left>290</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowdown]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowDownNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + !Control.HasFocus(304)</visible>
+			</control>
+			<control type="image">
+				<left>290</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems) + Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>325</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[skinshortcuts-arrowup]</texture>
+				<texture colordiffuse="$VAR[OverlayColorNF]">common/ArrowUpNF.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + !Control.HasFocus(303)</visible>
+			</control>
+			<control type="image">
+				<left>325</left>
+				<width>35</width>
+				<height>66</height>
+				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<visible>!Integer.IsEqual(Container(211).CurrentItem,1) + Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
 	</include>
