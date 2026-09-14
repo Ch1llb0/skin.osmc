@@ -226,7 +226,7 @@
 				<top>30</top>
 				<width>30</width>
 				<height>30</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<texture>$VAR[StatusOverlayWide]</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 			</control>
@@ -282,7 +282,7 @@
 				<top>30</top>
 				<width>30</width>
 				<height>30</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<texture>$VAR[StatusOverlayWide]</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 			</control>
@@ -338,7 +338,7 @@
 				<top>30</top>
 				<width>30</width>
 				<height>30</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<texture>$VAR[StatusOverlayWide]</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 			</control>
@@ -394,7 +394,7 @@
 				<top>30</top>
 				<width>30</width>
 				<height>30</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<texture>$VAR[StatusOverlayWide]</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 			</control>
@@ -492,7 +492,7 @@
 					<top>75</top>
 					<width>30</width>
 					<height>30</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<texture>$VAR[StatusOverlayWide]</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 				</control>
@@ -584,7 +584,7 @@
 					<top>75</top>
 					<width>30</width>
 					<height>30</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<texture>$VAR[StatusOverlayWide]</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 				</control>
@@ -676,7 +676,7 @@
 					<top>75</top>
 					<width>30</width>
 					<height>30</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<texture>$VAR[StatusOverlayWide]</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 				</control>
@@ -768,7 +768,7 @@
 					<top>75</top>
 					<width>30</width>
 					<height>30</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<texture>$VAR[StatusOverlayWide]</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<animation effect="slide" end="0,15" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 				</control>

@@ -71,19 +71,19 @@
 	</include>
 	<include name="SettingsScreenCalibration_coords3_16:9">
 		<width>384</width>
-		<height>128</height>
+		<height>86</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords3_21:9">
 		<width>384</width>
-		<height>128</height>
+		<height>86</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords3_21:9_masked">
 		<width>384</width>
-		<height>128</height>
+		<height>86</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords3_4:3">
 		<width>384</width>
-		<height>128</height>
+		<height>86</height>
 	</include>
 	
 	<include name="SettingsScreenCalibration_coords4">

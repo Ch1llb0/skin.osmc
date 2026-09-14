@@ -79,6 +79,10 @@ _Fixed_
 - fix the PVR providers list leaving the focused row unmarked, which every other list in the skin underlines
 - fix the focused status badge in the music wall low view being mis-sized and mis-placed at 16:9, where a width was written as a left offset
 - fix the music window fading twice on open, as it ran the shared window fade as well as the conditional pair that was meant to replace it
+- fix the movie artwork placeholder never being drawn, the file sitting in the home folder while a hundred and twelve references ask for it beside the other placeholders
+- fix the subtitle position marker in the video calibration screen being stretched half as tall again as the image it draws, which both blurred the line and set it below the position it marks
+- fix the watched status flag in the PVR recordings list being drawn from the small icon at half again its size, where every other list in the skin draws it at its own
+- redraw the padlock that stands in for an encrypted channel's logo at the size the largest slot draws it, rather than at a fifth of it
 
 ---
 
