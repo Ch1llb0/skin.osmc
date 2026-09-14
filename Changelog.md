@@ -92,6 +92,7 @@ _Fixed_
 - add a spinner sized for the places that draw one small - the widget reloading indicator, the progress dialog and the now playing heading - rather than scaling the large one down
 - fix the busy spinner sitting twenty five pixels below and right of the middle of the screen, its box declaring a size the image never took
 - make the error icon monochrome, the one icon in the set that carried a colour of its own
+- fix there being no way out of the TV guide when the scrollbar is hidden, back having run between the grid and the sub menu with nothing to close the window
 
 ---
 

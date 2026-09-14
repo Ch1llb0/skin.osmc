@@ -908,7 +908,16 @@
 			<include>SubMenu_coords4</include>
 			<onleft>10</onleft>
 			<onright>10</onright>
-			<onback>10</onback>
+			<!-- Back returns to the grid while the scrollbar is there to be the outermost step,
+			     and leaves the window when it is not - otherwise back runs between the grid and
+			     this menu for ever and the guide cannot be left on a remote at all. Left and
+			     right still return to the grid either way.
+
+			     previousmenu rather than back: a focused control is offered ACTION_NAV_BACK and
+			     would hand it straight back to this list, while ACTION_PREVIOUS_MENU is not
+			     offered to controls at all and is answered by the window itself. -->
+			<onback condition="Control.IsVisible(60)">10</onback>
+			<onback condition="!Control.IsVisible(60)">Action(previousmenu)</onback>
 			<scrolltime>200</scrolltime>
 			<orientation>vertical</orientation>
 			<itemgap>0</itemgap>
