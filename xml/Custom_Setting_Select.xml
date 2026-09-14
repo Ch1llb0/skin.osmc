@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1102">
+
+	<!-- Setting select -->
+	<defaultcontrol always="true">9002</defaultcontrol>
+	
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
+	
+	<!-- Where the cursor starts -->
+	<include>SettingSelectFocus</include>
+	
+	<controls>
+
+		<!-- Dialog fanart -->
+		<include>DialogBackgroundImage</include>
+		
+		<control type="group">
+
+			<include>DialogDepth</include>
+			
+			<!-- Animation -->
+			<include>DialogZoomAnimation</include>
+			
+			<!-- Heading -->
+			<include content="Time">
+				<param name="heading">$INFO[Window(Home).Property(SettingSelect.Heading)]</param>
+				<param name="secondary">False</param>
+			</include>
+
+			<!-- Options -->
+			<control type="grouplist" id="9002">
+				<include>Custom_Setting_Select_coords</include>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+
+				<include content="SettingSelectRow">
+					<param name="row">1</param>
+					<param name="id">9101</param>
+					<param name="up">9130</param>
+					<param name="down">9102</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">2</param>
+					<param name="id">9102</param>
+					<param name="up">9101</param>
+					<param name="down">9103</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">3</param>
+					<param name="id">9103</param>
+					<param name="up">9102</param>
+					<param name="down">9104</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">4</param>
+					<param name="id">9104</param>
+					<param name="up">9103</param>
+					<param name="down">9105</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">5</param>
+					<param name="id">9105</param>
+					<param name="up">9104</param>
+					<param name="down">9106</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">6</param>
+					<param name="id">9106</param>
+					<param name="up">9105</param>
+					<param name="down">9107</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">7</param>
+					<param name="id">9107</param>
+					<param name="up">9106</param>
+					<param name="down">9108</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">8</param>
+					<param name="id">9108</param>
+					<param name="up">9107</param>
+					<param name="down">9109</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">9</param>
+					<param name="id">9109</param>
+					<param name="up">9108</param>
+					<param name="down">9110</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">10</param>
+					<param name="id">9110</param>
+					<param name="up">9109</param>
+					<param name="down">9111</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">11</param>
+					<param name="id">9111</param>
+					<param name="up">9110</param>
+					<param name="down">9112</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">12</param>
+					<param name="id">9112</param>
+					<param name="up">9111</param>
+					<param name="down">9113</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">13</param>
+					<param name="id">9113</param>
+					<param name="up">9112</param>
+					<param name="down">9114</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">14</param>
+					<param name="id">9114</param>
+					<param name="up">9113</param>
+					<param name="down">9115</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">15</param>
+					<param name="id">9115</param>
+					<param name="up">9114</param>
+					<param name="down">9116</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">16</param>
+					<param name="id">9116</param>
+					<param name="up">9115</param>
+					<param name="down">9117</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">17</param>
+					<param name="id">9117</param>
+					<param name="up">9116</param>
+					<param name="down">9118</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">18</param>
+					<param name="id">9118</param>
+					<param name="up">9117</param>
+					<param name="down">9119</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">19</param>
+					<param name="id">9119</param>
+					<param name="up">9118</param>
+					<param name="down">9120</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">20</param>
+					<param name="id">9120</param>
+					<param name="up">9119</param>
+					<param name="down">9121</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">21</param>
+					<param name="id">9121</param>
+					<param name="up">9120</param>
+					<param name="down">9122</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">22</param>
+					<param name="id">9122</param>
+					<param name="up">9121</param>
+					<param name="down">9123</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">23</param>
+					<param name="id">9123</param>
+					<param name="up">9122</param>
+					<param name="down">9124</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">24</param>
+					<param name="id">9124</param>
+					<param name="up">9123</param>
+					<param name="down">9125</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">25</param>
+					<param name="id">9125</param>
+					<param name="up">9124</param>
+					<param name="down">9126</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">26</param>
+					<param name="id">9126</param>
+					<param name="up">9125</param>
+					<param name="down">9127</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">27</param>
+					<param name="id">9127</param>
+					<param name="up">9126</param>
+					<param name="down">9128</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">28</param>
+					<param name="id">9128</param>
+					<param name="up">9127</param>
+					<param name="down">9129</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">29</param>
+					<param name="id">9129</param>
+					<param name="up">9128</param>
+					<param name="down">9130</param>
+				</include>
+
+				<include content="SettingSelectRow">
+					<param name="row">30</param>
+					<param name="id">9130</param>
+					<param name="up">9129</param>
+					<param name="down">9101</param>
+				</include>
+
+			</control>
+
+			<!-- Scrollbar -->
+			<control type="scrollbar" id="60">
+				<include>Custom_Setting_Select_coords4</include>
+				<onleft>9001</onleft>
+				<onright>9002</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
+				<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+				<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<textureslidernib></textureslidernib>
+				<textureslidernibfocus></textureslidernibfocus>
+				<visible>!Skin.HasSetting(Scrollbars)</visible>
+			</control>
+
+			<!-- Buttons -->
+			<include>SettingSelectFrame</include>
+			
+		</control>
+
+		<include>MaskingBars</include>
+
+	</controls>
+
+</window>

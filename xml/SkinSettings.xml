@@ -189,10 +189,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31438]</label>
 							<label2>$VAR[WidgetOnClickAlbumLabel]</label2>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetBrowse)">Skin.SetString(WidgetOnClickAlbum,AlbumWidgetPlay)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetPlay)">Skin.SetString(WidgetOnClickAlbum,AlbumWidgetPlayNext)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetPlayNext)">Skin.SetString(WidgetOnClickAlbum,AlbumWidgetQueue)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetQueue)">Skin.SetString(WidgetOnClickAlbum,AlbumWidgetBrowse)</onclick>
+							<include>OpenWidgetOnClickAlbum</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -202,11 +199,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31439]</label>
 							<label2>$VAR[WidgetOnClickTVShowLabel]</label2>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetBrowse)">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetContinueWatching)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetContinueWatching)">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetPlayFromBeginning)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetPlayFromBeginning)">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetPlayNext)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetPlayNext)">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetQueue)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetQueue)">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetBrowse)</onclick>
+							<include>OpenWidgetOnClickTVShow</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -216,11 +209,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31440]</label>
 							<label2>$VAR[WidgetOnClickMovieSetLabel]</label2>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetBrowse)">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetContinueWatching)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetContinueWatching)">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetPlayFromBeginning)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetPlayFromBeginning)">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetPlayNext)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetPlayNext)">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetQueue)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetQueue)">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetBrowse)</onclick>
+							<include>OpenWidgetOnClickMovieSet</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -238,11 +227,7 @@
 							<font>Font33</font>
 							<label>$LOCALIZE[31065]</label>
 							<label2>$VAR[MaskingBars]</label2>
-							<onclick condition="String.IsEqual(Skin.String(MaskingBars),2.40:1)">Skin.SetString(MaskingBars,2.35:1)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(MaskingBars),2.35:1)">Skin.SetString(MaskingBars,2.33:1)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(MaskingBars),2.33:1)">Skin.SetString(MaskingBars,2.00:1)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(MaskingBars),2.00:1)">Skin.SetString(MaskingBars,1.78:1)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(MaskingBars),1.78:1)">Skin.SetString(MaskingBars,2.40:1)</onclick>
+							<include>OpenMaskingBars</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>$EXP[Masking]</visible>
@@ -283,10 +268,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[33068]</label>
 							<label2>$INFO[Skin.String(BackgroundImage)]</label2>
-							<onclick condition="String.IsEqual(Skin.String(BackgroundImage),1)">Skin.SetString(BackgroundImage,2)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(BackgroundImage),2)">Skin.SetString(BackgroundImage,3)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(BackgroundImage),3)">Skin.SetString(BackgroundImage,4)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(BackgroundImage),4)">Skin.SetString(BackgroundImage,1)</onclick>
+							<include>OpenBackgroundImage</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),yes)</visible>
@@ -358,14 +340,7 @@
 							<font>Font33</font>
 							<label>    - $LOCALIZE[31137]</label>
 							<label2>$INFO[Skin.String(CustomBackgroundFolderDuration)]</label2>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),1 min)">Skin.SetString(CustomBackgroundFolderDuration,5s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),5s)">Skin.SetString(CustomBackgroundFolderDuration,6s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),6s)">Skin.SetString(CustomBackgroundFolderDuration,8s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),8s)">Skin.SetString(CustomBackgroundFolderDuration,10s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),10s)">Skin.SetString(CustomBackgroundFolderDuration,15s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),15s)">Skin.SetString(CustomBackgroundFolderDuration,20s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),20s)">Skin.SetString(CustomBackgroundFolderDuration,30s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),30s)">Skin.SetString(CustomBackgroundFolderDuration,1 min)</onclick>
+							<include>OpenCustomBackgroundFolderDuration</include>
 							<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),no)</visible>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
@@ -457,7 +432,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31108]</label>
 							<label2>$VAR[DefaultColorSet]</label2>
-							<onclick>Skin.SelectBool(31108, 31070|DefaultColorSetOSMCLightblue, 31061|DefaultColorSetOSMCBlue, 31152|DefaultColorSetOSMCBlack, 31153|DefaultColorSetOSMCRosered, 31154|DefaultColorSetOSMCSunsetYellow, 31168|DefaultColorSetOSMCLimegreen, 31235|DefaultColorSetDarkBlue, 31319|DefaultColorSetOrange, 31413|DefaultColorSetRed, 31414|DefaultColorSetPurple)</onclick>
+							<include>OpenDefaultColorSet</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -467,10 +442,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31109]</label>
 							<label2>$VAR[DefaultBackgroundOpacity]</label2>
-							<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">Skin.SetString(DefaultBackgroundOpacity,Medium)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">Skin.SetString(DefaultBackgroundOpacity,Low)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">Skin.SetString(DefaultBackgroundOpacity,Highest)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">Skin.SetString(DefaultBackgroundOpacity,High)</onclick>
+							<include>OpenDefaultBackgroundOpacity</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -480,10 +452,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31110]</label>
 							<label2>$VAR[DefaultMenuOSDOpacity]</label2>
-							<onclick condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),High)">Skin.SetString(DefaultMenuOSDOpacity,Medium)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Medium)">Skin.SetString(DefaultMenuOSDOpacity,Low)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Low)">Skin.SetString(DefaultMenuOSDOpacity,Highest)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Highest)">Skin.SetString(DefaultMenuOSDOpacity,High)</onclick>
+							<include>OpenDefaultMenuOSDOpacity</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -739,49 +708,15 @@
 							<onclick>Skin.ToggleSetting(videoinfostart)</onclick>
 							<selected>Skin.HasSetting(videoinfostart)</selected>
 						</control>
-						<!-- Movies -->
-						<control type="radiobutton" id="403">
-							<include>SkinSettings_coords17</include>
+						<!-- Active for -->
+						<control type="button" id="403">
+							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
-							<label> - $LOCALIZE[31124]</label>
-							<onclick>Skin.ToggleSetting(videoinfostartmovies)</onclick>
-							<selected>Skin.HasSetting(videoinfostartmovies)</selected>
-							<visible>Skin.HasSetting(videoinfostart)</visible>
-						</control>
-						<!-- TV shows -->
-						<control type="radiobutton" id="404">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31125]</label>
-							<onclick>Skin.ToggleSetting(videoinfostarttvshow)</onclick>
-							<selected>Skin.HasSetting(videoinfostarttvshow)</selected>
-							<visible>Skin.HasSetting(videoinfostart)</visible>
-						</control>
-						<!-- Live TV -->
-						<control type="radiobutton" id="405">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31126]</label>
-							<onclick>Skin.ToggleSetting(videoinfostartlivetv)</onclick>
-							<selected>Skin.HasSetting(videoinfostartlivetv)</selected>
-							<visible>Skin.HasSetting(videoinfostart)</visible>
-						</control>
-						<!-- Music videos -->
-						<control type="radiobutton" id="406">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31127]</label>
-							<onclick>Skin.ToggleSetting(videoinfostartmusicvideo)</onclick>
-							<selected>Skin.HasSetting(videoinfostartmusicvideo)</selected>
-							<visible>Skin.HasSetting(videoinfostart)</visible>
-						</control>
-						<!-- Other videos -->
-						<control type="radiobutton" id="407">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31128]</label>
-							<onclick>Skin.ToggleSetting(videoinfostartfiles)</onclick>
-							<selected>Skin.HasSetting(videoinfostartfiles)</selected>
+							<label> - $LOCALIZE[31452]</label>
+							<label2>$VAR[VideoInfoStartLabel]</label2>
+							<include>OpenVideoInfoStart</include>
+							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>Skin.HasSetting(videoinfostart)</visible>
 						</control>
 						<!-- OSD info video start duration -->
@@ -790,10 +725,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31129]</label>
 							<label2>$INFO[Skin.String(videoinfostartduration)]</label2>
-							<onclick condition="String.IsEqual(Skin.String(videoinfostartduration),10s)">Skin.SetString(videoinfostartduration,15s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videoinfostartduration),15s)">Skin.SetString(videoinfostartduration,20s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videoinfostartduration),20s)">Skin.SetString(videoinfostartduration,5s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videoinfostartduration),5s)">Skin.SetString(videoinfostartduration,10s)</onclick>
+							<include>Openvideoinfostartduration</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>Skin.HasSetting(videoinfostart)</visible>
@@ -806,52 +738,24 @@
 							<onclick>Skin.ToggleSetting(videoinfoend)</onclick>
 							<selected>Skin.HasSetting(videoinfoend)</selected>
 						</control>
-						<!-- Movies -->
-						<control type="radiobutton" id="410">
-							<include>SkinSettings_coords17</include>
+						<!-- Active for -->
+						<control type="button" id="410">
+							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
-							<label> - $LOCALIZE[31124]</label>
-							<onclick>Skin.ToggleSetting(videoinfoendmovie)</onclick>
-							<selected>Skin.HasSetting(videoinfoendmovie)</selected>
+							<label> - $LOCALIZE[31452]</label>
+							<label2>$VAR[VideoInfoEndLabel]</label2>
+							<include>OpenVideoInfoEnd</include>
+							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>Skin.HasSetting(videoinfoend)</visible>
 						</control>
-						<!-- TV shows -->
-						<control type="radiobutton" id="411">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31125]</label>
-							<onclick>Skin.ToggleSetting(videoinfoendtvshow)</onclick>
-							<selected>Skin.HasSetting(videoinfoendtvshow)</selected>
-							<visible>Skin.HasSetting(videoinfoend)</visible>
-						</control>
-						<!-- Music videos -->
-						<control type="radiobutton" id="412">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31127]</label>
-							<onclick>Skin.ToggleSetting(videoinfoendmusicvideo)</onclick>
-							<selected>Skin.HasSetting(videoinfoendmusicvideo)</selected>
-							<visible>Skin.HasSetting(videoinfoend)</visible>
-						</control>
-						<!-- Other videos -->
-						<control type="radiobutton" id="413">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label> - $LOCALIZE[31128]</label>
-							<onclick>Skin.ToggleSetting(videoinfoendfiles)</onclick>
-							<selected>Skin.HasSetting(videoinfoendfiles)</selected>
-							<visible>Skin.HasSetting(videoinfoend)</visible>
-						</control>
-						<!-- OSD info video start duration -->
+						<!-- OSD info video end duration -->
 						<control type="button" id="414">
 							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
 							<label> - $LOCALIZE[31132]</label>
 							<label2>$INFO[Skin.String(videoinfoendduration)]</label2>
-							<onclick condition="String.IsEqual(Skin.String(videoinfoendduration),10s)">Skin.SetString(videoinfoendduration,15s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videoinfoendduration),15s)">Skin.SetString(videoinfoendduration,20s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videoinfoendduration),20s)">Skin.SetString(videoinfoendduration,5s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videoinfoendduration),5s)">Skin.SetString(videoinfoendduration,10s)</onclick>
+							<include>Openvideoinfoendduration</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>Skin.HasSetting(videoinfoend)</visible>
@@ -862,16 +766,7 @@
 							<font>Font33</font>
 							<label>$LOCALIZE[31102]</label>
 							<label2>$VAR[HideOSD]</label2>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),Always)">Skin.SetString(HideOSD,5s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),5s)">Skin.SetString(HideOSD,10s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),10s)">Skin.SetString(HideOSD,20s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),20s)">Skin.SetString(HideOSD,30s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),30s)">Skin.SetString(HideOSD,1 min)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),1 min)">Skin.SetString(HideOSD,2 min)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),2 min)">Skin.SetString(HideOSD,3 min)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),3 min)">Skin.SetString(HideOSD,5 min)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),5 min)">Skin.SetString(HideOSD,Disabled)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(HideOSD),Disabled)">Skin.SetString(HideOSD,Always)</onclick>
+							<include>OpenHideOSD</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -901,11 +796,7 @@
 							<font>Font33</font>
 							<label> - $LOCALIZE[31143]</label>
 							<label2>$INFO[Skin.String(AutoMusicVisPlaybackDuration)]</label2>
-							<onclick condition="String.IsEqual(Skin.String(AutoMusicVisPlaybackDuration),1 min)">Skin.SetString(AutoMusicVisPlaybackDuration,10s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(AutoMusicVisPlaybackDuration),10s)">Skin.SetString(AutoMusicVisPlaybackDuration,15s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(AutoMusicVisPlaybackDuration),15s)">Skin.SetString(AutoMusicVisPlaybackDuration,20s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(AutoMusicVisPlaybackDuration),20s)">Skin.SetString(AutoMusicVisPlaybackDuration,30s)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(AutoMusicVisPlaybackDuration),30s)">Skin.SetString(AutoMusicVisPlaybackDuration,1 min)</onclick>
+							<include>OpenAutoMusicVisPlaybackDuration</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 							<visible>Skin.HasSetting(AutoMusicVisPlayback)</visible>
@@ -992,12 +883,7 @@
 							<font>Font33</font>
 							<label>$LOCALIZE[31104]</label>
 							<label2>$INFO[Skin.String(NFDimOpac),,%]</label2>
-							<onclick condition="String.IsEqual(Skin.String(NFDimOpac),133)">Skin.SetString(NFDimOpac,100)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(NFDimOpac),100)">Skin.SetString(NFDimOpac,66)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(NFDimOpac),66)">Skin.SetString(NFDimOpac,33)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(NFDimOpac),33)">Skin.SetString(NFDimOpac,0)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(NFDimOpac),0)">Skin.SetString(NFDimOpac,133)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(NFDimOpac),133)">Skin.SetString(NFDimOpac,100)</onclick>
+							<include>OpenNFDimOpac</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -1007,10 +893,7 @@
 							<font>Font33</font>
 							<label>$LOCALIZE[31100]</label>
 							<label2>$VAR[PlotFont]</label2>
-							<onclick condition="String.IsEqual(Skin.String(PlotFont),S)">Skin.SetString(PlotFont,M)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(PlotFont),M)">Skin.SetString(PlotFont,L)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(PlotFont),L)">Skin.SetString(PlotFont,XL)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(PlotFont),XL)">Skin.SetString(PlotFont,S)</onclick>
+							<include>OpenPlotFont</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -1049,8 +932,7 @@
 							<font>Font33</font>
 							<label>$LOCALIZE[31170]</label>
 							<label2>$VAR[infodialogfirstpage]</label2>
-							<onclick condition="String.IsEqual(Skin.String(infodialogfirstpage),Details)">Skin.SetString(infodialogfirstpage,Description)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(infodialogfirstpage),Description)">Skin.SetString(infodialogfirstpage,Details)</onclick>
+							<include>Openinfodialogfirstpage</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -1063,12 +945,12 @@
 							<selected>Skin.HasSetting(UserRating)</selected>
 						</control>
 						<!-- Show titles on artwork -->
-						<control type="radiobutton" id="623">
-							<include>SkinSettings_coords17</include>
+						<control type="button" id="623">
+							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
 							<label>31449</label>
-							<onclick>Skin.ToggleSetting(ArtworkTitles)</onclick>
-							<selected>Skin.HasSetting(ArtworkTitles)</selected>
+							<label2>$VAR[ArtworkTitlesLabel]</label2>
+							<include>OpenArtworkTitles</include>
 						</control>
 						<!-- Adjust representation of video duration -->
 						<control type="button" id="611">
@@ -1076,8 +958,7 @@
 							<font>Font33</font>
 							<label>$LOCALIZE[31134]</label>
 							<label2>$VAR[videodurationformat]</label2>
-							<onclick condition="String.IsEqual(Skin.String(videodurationformat),Minutes)">Skin.SetString(videodurationformat,Hours and minutes)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(videodurationformat),Hours and minutes)">Skin.SetString(videodurationformat,Minutes)</onclick>
+							<include>Openvideodurationformat</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -1087,12 +968,7 @@
 							<font>Font33</font>
 							<label>31237</label>
 							<label2>$VAR[mediaflags]</label2>
-							<onclick condition="String.IsEqual(Skin.String(mediaflags),File first)">Skin.SetString(mediaflags,File only)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(mediaflags),File only)">Skin.SetString(mediaflags,Language first)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(mediaflags),Language first)">Skin.SetString(mediaflags,Language only)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(mediaflags),Language only)">Skin.SetString(mediaflags,Duration only)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(mediaflags),Duration only)">Skin.SetString(mediaflags,None)</onclick>
-							<onclick condition="String.IsEqual(Skin.String(mediaflags),None)">Skin.SetString(mediaflags,File first)</onclick>
+							<include>Openmediaflags</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
 						</control>
@@ -1104,24 +980,15 @@
 							<onclick>Skin.ToggleSetting(ItemCount)</onclick>
 							<selected>Skin.HasSetting(ItemCount)</selected>
 						</control>
-						<!-- Set fixed video addon view -->
-						<control type="radiobutton" id="614">
-							<include>SkinSettings_coords17</include>
-							<font>Font33</font>
-							<label>31409</label>
-							<onclick>Skin.ToggleSetting(FixedVideosView)</onclick>
-							<selected>Skin.HasSetting(FixedVideosView)</selected>
-						</control>
 						<!-- Set default video addon view -->
-						<control type="button" id="615">
+						<control type="button" id="614">
 							<include>SkinSettings_coords16</include>
 							<font>Font33</font>
-							<label> - $LOCALIZE[31410]</label>
+							<label>$LOCALIZE[31409]</label>
 							<label2>$VAR[DefaultVideosView]</label2>
-							<onclick>Skin.SelectBool(31410, 535|DefaultVideosViewList, 31117|DefaultVideosViewListinfo, 31241|DefaultVideosViewWide, 31112|DefaultVideosViewWidelow, 31392|DefaultVideosViewWidelowinfo, 31078|DefaultVideosViewWall, 31133|DefaultVideosViewWallinfo, 31114|DefaultVideosViewWallsmall, 31116|DefaultVideosViewWallsmallinfo, 31113|DefaultVideosViewWalllow)</onclick>
+							<include>OpenDefaultVideosView</include>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 							<textcolor>$VAR[TextColorNF]</textcolor>
-							<visible>Skin.HasSetting(FixedVideosView)</visible>
 						</control>
 						<!-- Divider -->
 						<control type="image" id="616">

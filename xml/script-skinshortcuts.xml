@@ -266,14 +266,7 @@
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[31137]</label>
 					<label2>$INFO[Skin.String(IndividualBackgroundFolderDuration)]</label2>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),1 min)">Skin.SetString(IndividualBackgroundFolderDuration,5s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),5s)">Skin.SetString(IndividualBackgroundFolderDuration,6s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),6s)">Skin.SetString(IndividualBackgroundFolderDuration,8s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),8s)">Skin.SetString(IndividualBackgroundFolderDuration,10s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),10s)">Skin.SetString(IndividualBackgroundFolderDuration,15s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),15s)">Skin.SetString(IndividualBackgroundFolderDuration,20s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),20s)">Skin.SetString(IndividualBackgroundFolderDuration,30s)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),30s)">Skin.SetString(IndividualBackgroundFolderDuration,1 min)</onclick>
+					<include>OpenIndividualBackgroundFolderDuration</include>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					<visible>$EXP[SkinShortcutsMainMenu]</visible>
 				</control>

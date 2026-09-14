@@ -40,7 +40,33 @@
 	     screen; a control in a layout carries parent id 0, and Control.IsVisible would ask
 	     whichever window is active, going false under a dialog. WallViewActive is read from
 	     the sub menu, which is a window control and resolves properly. -->
-	<expression name="WallTitlesVisible">Skin.HasSetting(ArtworkTitles)</expression>
+	<!-- A fixed view for video add-ons is the absence of the answer that says not to have
+	     one. The setting used to be a switch of its own above the list of views; the list
+	     holds that answer now, and one of its eleven is always the one in force. -->
+	<!-- The view a video add-on page is put into once the list has been answered. The sub
+	     menu runs this after the dialog closes rather than a row of conditional actions,
+	     because a control decides which of its actions to run before the first of them
+	     starts - and the first of them is the dialog. A variable is read when the action
+	     runs, by which time the answer is the new one. -->
+	<variable name="DefaultVideosViewMode">
+		<value condition="Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWide)">Container.SetViewMode(523)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">Container.SetViewMode(525)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWall)">Container.SetViewMode(535)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallinfo)">Container.SetViewMode(536)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallsmall)">Container.SetViewMode(537)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Container.SetViewMode(538)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWalllow)">Container.SetViewMode(539)</value>
+		<value>noop</value>
+	</variable>
+
+	<expression name="FixedVideosView">!Skin.HasSetting(NoFixedVideosView)</expression>
+
+	<expression name="ArtworkTitlesAny">Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes) | Skin.HasSetting(ArtworkTitlesMusicVideos) | Skin.HasSetting(ArtworkTitlesAlbums) | Skin.HasSetting(ArtworkTitlesArtists)</expression>
+	
+	<expression name="WallTitlesVisible">Skin.HasSetting(ArtworkTitlesMovies) + String.IsEqual(ListItem.DBTYPE,movie) | Skin.HasSetting(ArtworkTitlesTVShows) + String.IsEqual(ListItem.DBTYPE,tvshow) | Skin.HasSetting(ArtworkTitlesSeasons) + String.IsEqual(ListItem.DBTYPE,season) | Skin.HasSetting(ArtworkTitlesEpisodes) + String.IsEqual(ListItem.DBTYPE,episode) | Skin.HasSetting(ArtworkTitlesMusicVideos) + String.IsEqual(ListItem.DBTYPE,musicvideo) | Skin.HasSetting(ArtworkTitlesAlbums) + String.IsEqual(ListItem.DBTYPE,album) | Skin.HasSetting(ArtworkTitlesArtists) + String.IsEqual(ListItem.DBTYPE,artist)</expression>
 	
 	<!-- Home widgets: two on screen at once. An entry with a single widget always draws the
 	     large layout, so every use pairs this with the widget count of that entry's selector. -->
@@ -597,6 +623,7 @@
 		<value condition="!Skin.HasSetting(UserRating)"></value>
 	</variable>
 
+	
 	<!-- Audio labels -->
 	<variable name="Audio">
 		<value condition="$EXP[DTSXFileName] + String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS:X &#8226; $VAR[AudioCodec,, ]$VAR[AudioChannels]</value>

@@ -346,7 +346,7 @@
 				<control type="image">
 					<texture background="true">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-					<visible>$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording | Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder</visible>
+					<visible>$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording | Skin.HasSetting(ArtworkTitlesWidgets) + $EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
 				</control>
 
 				<control type="label">
@@ -359,7 +359,7 @@
 					<label>$VAR[ListLabel]</label>
 					<scroll>$PARAM[scroll]</scroll>
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-					<visible>Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder + !$EXP[WidgetBadgeVisible]</visible>
+					<visible>Skin.HasSetting(ArtworkTitlesWidgets) + $EXP[WallTitlesVisible] + !ListItem.IsParentFolder + !$EXP[WidgetBadgeVisible]</visible>
 				</control>
 
 				<control type="label">
@@ -372,11 +372,11 @@
 					<label>$VAR[ListLabel]</label>
 					<scroll>$PARAM[scroll]</scroll>
 					<scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-					<visible>Skin.HasSetting(ArtworkTitles) + !ListItem.IsParentFolder + $EXP[WidgetBadgeVisible]</visible>
+					<visible>Skin.HasSetting(ArtworkTitlesWidgets) + $EXP[WallTitlesVisible] + !ListItem.IsParentFolder + $EXP[WidgetBadgeVisible]</visible>
 				</control>
 
 				<control type="group">
-					<animation effect="slide" end="$PARAM[badgeshift],0" time="0" reversible="false" condition="Skin.HasSetting(ArtworkTitles)">Conditional</animation>
+					<animation effect="slide" end="$PARAM[badgeshift],0" time="0" reversible="false" condition="Skin.HasSetting(ArtworkTitlesWidgets) + $EXP[WallTitlesVisible]">Conditional</animation>
 					<control type="image">
 						<width>$PARAM[height]</width>
 						<centerleft>$PARAM[centerleft]</centerleft>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- The select dialog's own list, to the pixel: the same left edge, the same twelve
+	     rows of fifty eight, and the same bar to its left for when a caller brings more
+	     options than that. A caller that brings fewer leaves the rest of the height empty,
+	     which is what the select dialog does too. -->
+	<include name="Custom_Setting_Select_coords">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Setting_Select_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords_4:3</include>
+	</include>
+	<include name="Custom_Setting_Select_coords_16:9">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1020</width>
+		<height>696</height>
+	</include>
+	<include name="Custom_Setting_Select_coords_21:9">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1660</width>
+		<height>696</height>
+	</include>
+	<include name="Custom_Setting_Select_coords_21:9_masked">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1660</width>
+		<height>696</height>
+	</include>
+	<include name="Custom_Setting_Select_coords_4:3">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>540</width>
+		<height>696</height>
+	</include>
+	
+	<!-- One row -->
+	<include name="Custom_Setting_Select_coords2">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords2_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Setting_Select_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords2_4:3</include>
+	</include>
+	<include name="Custom_Setting_Select_coords2_16:9">
+		<width>1020</width>
+		<height>58</height>
+	</include>
+	<include name="Custom_Setting_Select_coords2_21:9">
+		<width>1660</width>
+		<height>58</height>
+	</include>
+	<include name="Custom_Setting_Select_coords2_21:9_masked">
+		<width>1660</width>
+		<height>58</height>
+	</include>
+	<include name="Custom_Setting_Select_coords2_4:3">
+		<width>540</width>
+		<height>58</height>
+	</include>
+	
+	<!-- The line under the row the list is on -->
+	<include name="Custom_Setting_Select_coords3">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords3_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Setting_Select_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords3_4:3</include>
+	</include>
+	<include name="Custom_Setting_Select_coords3_16:9">
+		<top>50</top>
+		<width>1020</width>
+		<height>3</height>
+	</include>
+	<include name="Custom_Setting_Select_coords3_21:9">
+		<top>50</top>
+		<width>1660</width>
+		<height>3</height>
+	</include>
+	<include name="Custom_Setting_Select_coords3_21:9_masked">
+		<top>50</top>
+		<width>1660</width>
+		<height>3</height>
+	</include>
+	<include name="Custom_Setting_Select_coords3_4:3">
+		<top>50</top>
+		<width>540</width>
+		<height>3</height>
+	</include>
+	
+	<!-- The scroll bar, left of the list as it is in the select dialog -->
+	<include name="Custom_Setting_Select_coords4">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords4_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Setting_Select_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords4_4:3</include>
+	</include>
+	<include name="Custom_Setting_Select_coords4_16:9">
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
+	</include>
+	<include name="Custom_Setting_Select_coords4_21:9">
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
+	</include>
+	<include name="Custom_Setting_Select_coords4_21:9_masked">
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
+	</include>
+	<include name="Custom_Setting_Select_coords4_4:3">
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
+	</include>
+
+</includes>

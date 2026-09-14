@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- The setting select dialog, and what every setting that uses it hands over.
+
+	     Kodi can pop up a select list of its own, but Skin.SelectBool writes bools, takes a
+	     single answer and keeps no list of its own, so it can serve neither a setting held as
+	     a string nor a setting whose answer is any number of answers at once. This dialog
+	     serves both, and knows nothing about any setting: a caller writes what it wants into
+	     window properties and opens it.
+
+	     SettingSelect.Mode says which of the three it is.
+
+	     one - a list of answers of which one is the setting's, the setting being a string.
+	     Clicking a row writes the setting and closes the dialog, so there is nothing to
+	     confirm and no OK button:
+
+	       SetProperty(SettingSelect.Mode,one,Home)
+	       SetProperty(SettingSelect.Heading,$LOCALIZE[31102],Home)
+	       SetProperty(SettingSelect.Setting,HideOSD,Home)
+	       SetProperty(SettingSelect.Current,$INFO[Skin.String(HideOSD)],Home)
+	       SetProperty(SettingSelect.Rows,2,Home)
+	       SetProperty(SettingSelect.1.Label,$LOCALIZE[13108],Home)
+	       SetProperty(SettingSelect.1.Value,Always,Home)
+	       ...
+	       ActivateWindow(1102)
+
+	     The row whose Value reads the same as Current is the one the setting is on. The two
+	     are compared against each other rather than against anything written here, which is
+	     what lets a caller name its answers and leave the dialog to find the current one.
+
+	     onebool - the same list, but the answer is which one of a set of switches is on
+	     rather than what a string says. A row's Value is the name of its switch, and a
+	     click turns every one of them off and that one on. This is what Skin.SelectBool
+	     does, and the only reason to prefer it is a setting already written as switches:
+
+	       SetProperty(SettingSelect.Mode,onebool,Home)
+	       SetProperty(SettingSelect.Heading,$LOCALIZE[31410],Home)
+	       SetProperty(SettingSelect.Rows,2,Home)
+	       ClearProperty(SettingSelect.Current,Home)
+	       SetProperty(SettingSelect.1.Label,$LOCALIZE[535],Home)
+	       SetProperty(SettingSelect.1.Value,DefaultVideosViewList,Home)
+	       SetProperty(SettingSelect.Current,DefaultVideosViewList,Home)  when that one is on
+	       ...
+	       ActivateWindow(1102)
+
+	     many - the same set of switches, but any number of them can be on. Clicking a row writes its
+	     State property and nothing else; OK writes every row and closes, Cancel and Back
+	     close and leave the settings as they were found:
+
+	       SetProperty(SettingSelect.Mode,many,Home)
+	       SetProperty(SettingSelect.Heading,$LOCALIZE[31449],Home)
+	       SetProperty(SettingSelect.Rows,8,Home)
+	       SetProperty(SettingSelect.1.Label,$LOCALIZE[342],Home)
+	       SetProperty(SettingSelect.1.Setting,ArtworkTitlesMovies,Home)
+	       SetProperty(SettingSelect.1.State,on,Home)   when the setting is on
+	       SetProperty(SettingSelect.1.State,off,Home)  when it is not
+	       ActivateWindow(1102)
+
+	     A row past the Rows count is not drawn and counts for nothing, which is what keeps
+	     one caller's rows out of the next one's. In many mode a row whose Requires property
+	     is set is greyed out until some row that requires nothing is on.
+
+	     A row is a label and a state and nothing else: there is no icon beside it and no
+	     artwork for a caller to hand over, so the text starts at the same left edge as the
+	     line that marks it. The dialog sits where the select dialog's own list sits and is
+	     lettered the same way, the row under the cursor written in bold over a line.
+
+	     A row that is on is written in the selected colour whether the cursor stands on it or
+	     not, since that colour is the only thing that says it is on. A row that is off takes
+	     the focus colour under the cursor and the plain one away from it.
+
+	     The dialog draws 30 rows. It cannot draw an unbounded number: a skin declares its
+	     controls once, when the skin is loaded, and has no way to grow a list at runtime. An
+	     unused row is invisible and takes part in neither layout nor navigation, so the count
+	     costs nothing but the markup below and can be raised by adding rows here and in
+	     Custom_Setting_Select.xml. -->
+
+	<expression name="SettingSelectAnyOn">String.IsEqual(Window(Home).Property(SettingSelect.1.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.1.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),1) | String.IsEqual(Window(Home).Property(SettingSelect.2.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.2.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),2) | String.IsEqual(Window(Home).Property(SettingSelect.3.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.3.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),3) | String.IsEqual(Window(Home).Property(SettingSelect.4.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.4.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),4) | String.IsEqual(Window(Home).Property(SettingSelect.5.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.5.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),5) | String.IsEqual(Window(Home).Property(SettingSelect.6.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.6.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),6) | String.IsEqual(Window(Home).Property(SettingSelect.7.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.7.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),7) | String.IsEqual(Window(Home).Property(SettingSelect.8.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.8.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),8) | String.IsEqual(Window(Home).Property(SettingSelect.9.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.9.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),9) | String.IsEqual(Window(Home).Property(SettingSelect.10.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.10.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),10) | String.IsEqual(Window(Home).Property(SettingSelect.11.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.11.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),11) | String.IsEqual(Window(Home).Property(SettingSelect.12.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.12.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),12) | String.IsEqual(Window(Home).Property(SettingSelect.13.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.13.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),13) | String.IsEqual(Window(Home).Property(SettingSelect.14.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.14.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),14) | String.IsEqual(Window(Home).Property(SettingSelect.15.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.15.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),15) | String.IsEqual(Window(Home).Property(SettingSelect.16.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.16.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),16) | String.IsEqual(Window(Home).Property(SettingSelect.17.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.17.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),17) | String.IsEqual(Window(Home).Property(SettingSelect.18.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.18.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),18) | String.IsEqual(Window(Home).Property(SettingSelect.19.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.19.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),19) | String.IsEqual(Window(Home).Property(SettingSelect.20.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.20.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),20) | String.IsEqual(Window(Home).Property(SettingSelect.21.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.21.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),21) | String.IsEqual(Window(Home).Property(SettingSelect.22.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.22.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),22) | String.IsEqual(Window(Home).Property(SettingSelect.23.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.23.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),23) | String.IsEqual(Window(Home).Property(SettingSelect.24.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.24.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),24) | String.IsEqual(Window(Home).Property(SettingSelect.25.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.25.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),25) | String.IsEqual(Window(Home).Property(SettingSelect.26.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.26.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),26) | String.IsEqual(Window(Home).Property(SettingSelect.27.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.27.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),27) | String.IsEqual(Window(Home).Property(SettingSelect.28.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.28.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),28) | String.IsEqual(Window(Home).Property(SettingSelect.29.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.29.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),29) | String.IsEqual(Window(Home).Property(SettingSelect.30.State),on) + String.IsEmpty(Window(Home).Property(SettingSelect.30.Requires)) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30)</expression>
+
+	<include name="SettingSelectRow">
+		<definition>
+			<control type="group">
+				<include>Custom_Setting_Select_coords2</include>
+				<visible>Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),$PARAM[row])</visible>
+
+				<!-- What is clicked. A button carries one font and one colour for every state it
+				     can be in, and a row has five, so the button draws nothing at all: it keeps
+				     the clicking and the navigation, and the text is drawn over it. -->
+				<control type="button" id="$PARAM[id]">
+					<include>Custom_Setting_Select_coords2</include>
+					<label></label>
+					<texturefocus></texturefocus>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].State),on)">SetProperty(SettingSelect.$PARAM[row].State,off,Home)</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + !String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].State),on)">SetProperty(SettingSelect.$PARAM[row].State,on,Home)</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),one)">Skin.SetString($INFO[Window(Home).Property(SettingSelect.Setting)],$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),1)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.1.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),2)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.2.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),3)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.3.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),4)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.4.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),5)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.5.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),6)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.6.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),7)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.7.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),8)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.8.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),9)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.9.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),10)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.10.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),11)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.11.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),12)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.12.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),13)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.13.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),14)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.14.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),15)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.15.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),16)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.16.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),17)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.17.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),18)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.18.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),19)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.19.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),20)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.20.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),21)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.21.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),22)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.22.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),23)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.23.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),24)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.24.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),25)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.25.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),26)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.26.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),27)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.27.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),28)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.28.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),29)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.29.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool) + Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.30.Value)])</onclick>
+					<onclick condition="String.IsEqual(Window(Home).Property(SettingSelect.Mode),onebool)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.$PARAM[row].Value)])</onclick>
+					<onclick condition="!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many)">Dialog.Close(1102)</onclick>
+					<onup>$PARAM[up]</onup>
+					<ondown>$PARAM[down]</ondown>
+					<onleft>60</onleft>
+					<onright>9001</onright>
+					<enable>!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) | $EXP[SettingSelectAnyOn]</enable>
+				</control>
+
+				<!-- Switched on, or the answer the setting is on -->
+				<control type="group">
+					<visible>[[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].Value),Window(Home).Property(SettingSelect.Current))]] + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) | $EXP[SettingSelectAnyOn]]</visible>
+
+					<control type="label">
+						<include>Custom_Setting_Select_coords2</include>
+						<font>Font36-light</font>
+						<textcolor>$VAR[SelectedColor]</textcolor>
+						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
+						<visible>!Control.HasFocus($PARAM[id])</visible>
+					</control>
+
+					<control type="label">
+						<include>Custom_Setting_Select_coords2</include>
+						<font>Font36-bold</font>
+						<textcolor>$VAR[SelectedColor]</textcolor>
+						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
+						<scroll>True</scroll>
+						<visible>Control.HasFocus($PARAM[id])</visible>
+					</control>
+
+					<control type="image">
+						<include>Custom_Setting_Select_coords3</include>
+						<texture colordiffuse="$VAR[SelectedColor]">$VAR[focusline]</texture>
+						<visible>Control.HasFocus($PARAM[id])</visible>
+					</control>
+
+				</control>
+
+				<!-- Neither of those -->
+				<control type="group">
+					<visible>![[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].Value),Window(Home).Property(SettingSelect.Current))]] + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) | $EXP[SettingSelectAnyOn]]</visible>
+
+					<control type="label">
+						<include>Custom_Setting_Select_coords2</include>
+						<font>Font36-light</font>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
+						<visible>!Control.HasFocus($PARAM[id])</visible>
+					</control>
+
+					<control type="label">
+						<include>Custom_Setting_Select_coords2</include>
+						<font>Font36-bold</font>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
+						<scroll>True</scroll>
+						<visible>Control.HasFocus($PARAM[id])</visible>
+					</control>
+
+					<control type="image">
+						<include>Custom_Setting_Select_coords3</include>
+						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<visible>Control.HasFocus($PARAM[id])</visible>
+					</control>
+
+				</control>
+
+				<!-- Out of reach until some row that requires nothing is on -->
+				<control type="label">
+					<include>Custom_Setting_Select_coords2</include>
+					<font>Font36-light</font>
+					<textcolor>$VAR[DisabledColor]</textcolor>
+					<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
+					<visible>String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + !String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) + !$EXP[SettingSelectAnyOn]</visible>
+				</control>
+
+			</control>
+		</definition>
+	</include>
+
+	<include name="SettingSelectFrame">
+		<control type="grouplist" id="9001">
+			<include>DialogButtons</include>
+			<orientation>horizontal</orientation>
+			<align>center</align>
+			<itemgap>30</itemgap>
+			<onup>9002</onup>
+			<onleft>9002</onleft>
+			<onright>9002</onright>
+			
+			<!-- OK. In many mode nothing has been written until this is clicked, so every row is
+			     written here, the ones that were never touched along with the ones that were. In
+			     one mode the click on the row has already written the setting and closed. -->
+			<control type="button" id="10">
+				<width>auto</width>
+				<font>Font36</font>
+				<align>center</align>
+				<label>$LOCALIZE[186]</label>
+				<visible>String.IsEqual(Window(Home).Property(SettingSelect.Mode),many)</visible>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),1) + String.IsEqual(Window(Home).Property(SettingSelect.1.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.1.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),1) + !String.IsEqual(Window(Home).Property(SettingSelect.1.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.1.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),2) + String.IsEqual(Window(Home).Property(SettingSelect.2.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.2.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),2) + !String.IsEqual(Window(Home).Property(SettingSelect.2.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.2.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),3) + String.IsEqual(Window(Home).Property(SettingSelect.3.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.3.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),3) + !String.IsEqual(Window(Home).Property(SettingSelect.3.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.3.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),4) + String.IsEqual(Window(Home).Property(SettingSelect.4.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.4.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),4) + !String.IsEqual(Window(Home).Property(SettingSelect.4.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.4.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),5) + String.IsEqual(Window(Home).Property(SettingSelect.5.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.5.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),5) + !String.IsEqual(Window(Home).Property(SettingSelect.5.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.5.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),6) + String.IsEqual(Window(Home).Property(SettingSelect.6.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.6.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),6) + !String.IsEqual(Window(Home).Property(SettingSelect.6.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.6.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),7) + String.IsEqual(Window(Home).Property(SettingSelect.7.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.7.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),7) + !String.IsEqual(Window(Home).Property(SettingSelect.7.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.7.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),8) + String.IsEqual(Window(Home).Property(SettingSelect.8.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.8.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),8) + !String.IsEqual(Window(Home).Property(SettingSelect.8.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.8.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),9) + String.IsEqual(Window(Home).Property(SettingSelect.9.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.9.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),9) + !String.IsEqual(Window(Home).Property(SettingSelect.9.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.9.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),10) + String.IsEqual(Window(Home).Property(SettingSelect.10.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.10.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),10) + !String.IsEqual(Window(Home).Property(SettingSelect.10.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.10.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),11) + String.IsEqual(Window(Home).Property(SettingSelect.11.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.11.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),11) + !String.IsEqual(Window(Home).Property(SettingSelect.11.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.11.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),12) + String.IsEqual(Window(Home).Property(SettingSelect.12.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.12.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),12) + !String.IsEqual(Window(Home).Property(SettingSelect.12.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.12.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),13) + String.IsEqual(Window(Home).Property(SettingSelect.13.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.13.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),13) + !String.IsEqual(Window(Home).Property(SettingSelect.13.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.13.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),14) + String.IsEqual(Window(Home).Property(SettingSelect.14.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.14.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),14) + !String.IsEqual(Window(Home).Property(SettingSelect.14.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.14.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),15) + String.IsEqual(Window(Home).Property(SettingSelect.15.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.15.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),15) + !String.IsEqual(Window(Home).Property(SettingSelect.15.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.15.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),16) + String.IsEqual(Window(Home).Property(SettingSelect.16.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.16.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),16) + !String.IsEqual(Window(Home).Property(SettingSelect.16.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.16.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),17) + String.IsEqual(Window(Home).Property(SettingSelect.17.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.17.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),17) + !String.IsEqual(Window(Home).Property(SettingSelect.17.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.17.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),18) + String.IsEqual(Window(Home).Property(SettingSelect.18.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.18.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),18) + !String.IsEqual(Window(Home).Property(SettingSelect.18.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.18.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),19) + String.IsEqual(Window(Home).Property(SettingSelect.19.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.19.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),19) + !String.IsEqual(Window(Home).Property(SettingSelect.19.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.19.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),20) + String.IsEqual(Window(Home).Property(SettingSelect.20.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.20.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),20) + !String.IsEqual(Window(Home).Property(SettingSelect.20.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.20.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),21) + String.IsEqual(Window(Home).Property(SettingSelect.21.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.21.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),21) + !String.IsEqual(Window(Home).Property(SettingSelect.21.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.21.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),22) + String.IsEqual(Window(Home).Property(SettingSelect.22.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.22.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),22) + !String.IsEqual(Window(Home).Property(SettingSelect.22.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.22.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),23) + String.IsEqual(Window(Home).Property(SettingSelect.23.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.23.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),23) + !String.IsEqual(Window(Home).Property(SettingSelect.23.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.23.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),24) + String.IsEqual(Window(Home).Property(SettingSelect.24.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.24.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),24) + !String.IsEqual(Window(Home).Property(SettingSelect.24.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.24.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),25) + String.IsEqual(Window(Home).Property(SettingSelect.25.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.25.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),25) + !String.IsEqual(Window(Home).Property(SettingSelect.25.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.25.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),26) + String.IsEqual(Window(Home).Property(SettingSelect.26.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.26.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),26) + !String.IsEqual(Window(Home).Property(SettingSelect.26.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.26.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),27) + String.IsEqual(Window(Home).Property(SettingSelect.27.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.27.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),27) + !String.IsEqual(Window(Home).Property(SettingSelect.27.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.27.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),28) + String.IsEqual(Window(Home).Property(SettingSelect.28.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.28.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),28) + !String.IsEqual(Window(Home).Property(SettingSelect.28.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.28.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),29) + String.IsEqual(Window(Home).Property(SettingSelect.29.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.29.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),29) + !String.IsEqual(Window(Home).Property(SettingSelect.29.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.29.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30) + String.IsEqual(Window(Home).Property(SettingSelect.30.State),on)">Skin.SetBool($INFO[Window(Home).Property(SettingSelect.30.Setting)])</onclick>
+				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30) + !String.IsEqual(Window(Home).Property(SettingSelect.30.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.30.Setting)])</onclick>
+				<onclick>Dialog.Close(1102)</onclick>
+			</control>
+			
+			<!-- Cancel -->
+			<control type="button" id="11">
+				<width>auto</width>
+				<font>Font36</font>
+				<align>center</align>
+				<label>$LOCALIZE[222]</label>
+				<onclick>Dialog.Close(1102)</onclick>
+			</control>
+			
+		</control>
+
+		<!-- The arrows that say the buttons are a step sideways -->
+		<include content="dialogButtonIndicator">
+			<param name="visibility">!ControlGroup(9001).HasFocus</param>
+		</include>
+	</include>
+
+	<!-- What the titles on artwork setting hands the dialog. Everything the dialog knows
+	     about this setting is written here and nowhere else. -->
+	<include name="OpenArtworkTitles">
+		<onclick>SetProperty(SettingSelect.Mode,many,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31449],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,8,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[342],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Setting,ArtworkTitlesMovies,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesMovies)">SetProperty(SettingSelect.1.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesMovies)">SetProperty(SettingSelect.1.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.1.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[20343],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Setting,ArtworkTitlesTVShows,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesTVShows)">SetProperty(SettingSelect.2.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesTVShows)">SetProperty(SettingSelect.2.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.2.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[33054],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Setting,ArtworkTitlesSeasons,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesSeasons)">SetProperty(SettingSelect.3.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesSeasons)">SetProperty(SettingSelect.3.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.3.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[20360],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Setting,ArtworkTitlesEpisodes,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesEpisodes)">SetProperty(SettingSelect.4.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesEpisodes)">SetProperty(SettingSelect.4.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.4.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[20389],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Setting,ArtworkTitlesMusicVideos,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesMusicVideos)">SetProperty(SettingSelect.5.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesMusicVideos)">SetProperty(SettingSelect.5.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.5.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,$LOCALIZE[132],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Setting,ArtworkTitlesAlbums,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesAlbums)">SetProperty(SettingSelect.6.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesAlbums)">SetProperty(SettingSelect.6.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.6.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,$LOCALIZE[133],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Setting,ArtworkTitlesArtists,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesArtists)">SetProperty(SettingSelect.7.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesArtists)">SetProperty(SettingSelect.7.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.7.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,$LOCALIZE[31451],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Setting,ArtworkTitlesWidgets,Home)</onclick>
+		<onclick condition="Skin.HasSetting(ArtworkTitlesWidgets)">SetProperty(SettingSelect.8.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(ArtworkTitlesWidgets)">SetProperty(SettingSelect.8.State,off,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Requires,any,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<!-- Which kinds of video show their information when playback begins, and which show
+	     it before playback ends. Five switches and four, each of which was a row of its
+	     own under the setting it belongs to, so a settings page that is long already
+	     carried nine rows of the same question. -->
+	<include name="OpenVideoInfoStart">
+		<onclick>SetProperty(SettingSelect.Mode,many,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31123],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,5,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[342],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Setting,videoinfostartmovies,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfostartmovies)">SetProperty(SettingSelect.1.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfostartmovies)">SetProperty(SettingSelect.1.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.1.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[20343],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Setting,videoinfostarttvshow,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfostarttvshow)">SetProperty(SettingSelect.2.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfostarttvshow)">SetProperty(SettingSelect.2.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.2.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31453],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Setting,videoinfostartlivetv,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfostartlivetv)">SetProperty(SettingSelect.3.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfostartlivetv)">SetProperty(SettingSelect.3.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.3.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[20389],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Setting,videoinfostartmusicvideo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfostartmusicvideo)">SetProperty(SettingSelect.4.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfostartmusicvideo)">SetProperty(SettingSelect.4.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.4.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31454],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Setting,videoinfostartfiles,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfostartfiles)">SetProperty(SettingSelect.5.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfostartfiles)">SetProperty(SettingSelect.5.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.5.Requires,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenVideoInfoEnd">
+		<onclick>SetProperty(SettingSelect.Mode,many,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31131],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[342],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Setting,videoinfoendmovie,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfoendmovie)">SetProperty(SettingSelect.1.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfoendmovie)">SetProperty(SettingSelect.1.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.1.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[20343],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Setting,videoinfoendtvshow,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfoendtvshow)">SetProperty(SettingSelect.2.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfoendtvshow)">SetProperty(SettingSelect.2.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.2.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[20389],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Setting,videoinfoendmusicvideo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfoendmusicvideo)">SetProperty(SettingSelect.3.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfoendmusicvideo)">SetProperty(SettingSelect.3.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.3.Requires,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31454],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Setting,videoinfoendfiles,Home)</onclick>
+		<onclick condition="Skin.HasSetting(videoinfoendfiles)">SetProperty(SettingSelect.4.State,on,Home)</onclick>
+		<onclick condition="!Skin.HasSetting(videoinfoendfiles)">SetProperty(SettingSelect.4.State,off,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.4.Requires,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<!-- What each setting that takes one answer out of a list hands the dialog. Every one
+	     of them used to be a button that stepped to the next answer on every click, which
+	     says nothing about what the other answers are and takes eight clicks to get past a
+	     wrong one. The button still shows the answer the setting is on; clicking it now
+	     shows the list. -->
+
+	<include name="OpenWidgetOnClickAlbum">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31438],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,WidgetOnClickAlbum,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(WidgetOnClickAlbum)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[37015],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,AlbumWidgetBrowse,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[208],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,AlbumWidgetPlay,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[10008],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,AlbumWidgetPlayNext,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[13347],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,AlbumWidgetQueue,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenWidgetOnClickTVShow">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31439],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,WidgetOnClickTVShow,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(WidgetOnClickTVShow)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,5,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[37015],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,TVShowWidgetBrowse,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[13362],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,TVShowWidgetContinueWatching,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[12021],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,TVShowWidgetPlayFromBeginning,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[10008],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,TVShowWidgetPlayNext,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[13347],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,TVShowWidgetQueue,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenWidgetOnClickMovieSet">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31440],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,WidgetOnClickMovieSet,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(WidgetOnClickMovieSet)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,5,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[37015],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,MovieSetWidgetBrowse,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[13362],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,MovieSetWidgetContinueWatching,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[12021],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,MovieSetWidgetPlayFromBeginning,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[10008],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,MovieSetWidgetPlayNext,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[13347],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,MovieSetWidgetQueue,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenMaskingBars">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31065],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,MaskingBars,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(MaskingBars)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,5,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31428],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,2.40:1,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31429],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,2.35:1,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31430],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,2.33:1,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31431],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,2.00:1,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31432],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,1.78:1,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenBackgroundImage">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[33068],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,BackgroundImage,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(BackgroundImage)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,1,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,1,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,2,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,2,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,3,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,3,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,4,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenCustomBackgroundFolderDuration">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31137],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,CustomBackgroundFolderDuration,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(CustomBackgroundFolderDuration)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,8,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,6s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,6s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,8s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,8s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Value,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,1 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Value,1 min,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenIndividualBackgroundFolderDuration">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31137],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,IndividualBackgroundFolderDuration,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(IndividualBackgroundFolderDuration)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,8,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,6s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,6s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,8s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,8s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Value,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,1 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Value,1 min,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenDefaultBackgroundOpacity">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31109],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,DefaultBackgroundOpacity,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(DefaultBackgroundOpacity)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31415],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,Highest,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31416],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,High,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31417],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,Medium,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31418],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,Low,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenDefaultMenuOSDOpacity">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31110],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,DefaultMenuOSDOpacity,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(DefaultMenuOSDOpacity)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31415],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,Highest,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31416],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,High,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31417],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,Medium,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31418],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,Low,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="Openvideoinfostartduration">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31129],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,videoinfostartduration,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(videoinfostartduration)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,20s,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="Openvideoinfoendduration">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31132],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,videoinfoendduration,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(videoinfoendduration)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,20s,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenHideOSD">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31102],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,HideOSD,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(HideOSD)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,10,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[13108],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,Always,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,5s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,1 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,1 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,2 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Value,2 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,3 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Value,3 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Label,5 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Value,5 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Label,$LOCALIZE[13113],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Value,Disabled,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenAutoMusicVisPlaybackDuration">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31143],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,AutoMusicVisPlaybackDuration,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(AutoMusicVisPlaybackDuration)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,5,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,10s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,15s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,20s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,30s,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,1 min,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,1 min,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenNFDimOpac">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31104],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,NFDimOpac,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(NFDimOpac)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,5,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,133%,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,133,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,100%,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,100,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,66%,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,66,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,33%,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,33,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,0%,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,0,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenPlotFont">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31100],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,PlotFont,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(PlotFont)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,4,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[289] S,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,S,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[289] M,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,M,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[289] L,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,L,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[289] XL,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,XL,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="Openinfodialogfirstpage">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31170],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,infodialogfirstpage,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(infodialogfirstpage)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,2,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31419],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,Details,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31420],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,Description,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="Openvideodurationformat">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31134],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,videodurationformat,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(videodurationformat)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,2,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31421],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,Minutes,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31422],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,Hours and minutes,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="Openmediaflags">
+		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31237],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Setting,mediaflags,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Current,$INFO[Skin.String(mediaflags)],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,6,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31423],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,File first,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31424],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,File only,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31425],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,Language first,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31426],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,Language only,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31427],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,Duration only,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,$LOCALIZE[13113],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,None,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<!-- What each setting whose answer is one switch out of a set hands the dialog. These
+	     two were the skinning engine's own select list, which draws the answers but writes
+	     bools and knows nothing of the rest of the dialog; they read the same way as the
+	     settings above now. -->
+
+	<include name="OpenDefaultColorSet">
+		<onclick>SetProperty(SettingSelect.Mode,onebool,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31108],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,10,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.Current,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[31070],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,DefaultColorSetOSMCLightblue,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOSMCLightblue)">SetProperty(SettingSelect.Current,DefaultColorSetOSMCLightblue,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[31061],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,DefaultColorSetOSMCBlue,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOSMCBlue)">SetProperty(SettingSelect.Current,DefaultColorSetOSMCBlue,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31152],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,DefaultColorSetOSMCBlack,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOSMCBlack)">SetProperty(SettingSelect.Current,DefaultColorSetOSMCBlack,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31153],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,DefaultColorSetOSMCRosered,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOSMCRosered)">SetProperty(SettingSelect.Current,DefaultColorSetOSMCRosered,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31154],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,DefaultColorSetOSMCSunsetYellow,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOSMCSunsetYellow)">SetProperty(SettingSelect.Current,DefaultColorSetOSMCSunsetYellow,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,$LOCALIZE[31168],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,DefaultColorSetOSMCLimegreen,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOSMCLimegreen)">SetProperty(SettingSelect.Current,DefaultColorSetOSMCLimegreen,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,$LOCALIZE[31235],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Value,DefaultColorSetDarkBlue,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetDarkBlue)">SetProperty(SettingSelect.Current,DefaultColorSetDarkBlue,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,$LOCALIZE[31319],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Value,DefaultColorSetOrange,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetOrange)">SetProperty(SettingSelect.Current,DefaultColorSetOrange,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Label,$LOCALIZE[31413],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Value,DefaultColorSetRed,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetRed)">SetProperty(SettingSelect.Current,DefaultColorSetRed,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Label,$LOCALIZE[31414],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Value,DefaultColorSetPurple,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultColorSetPurple)">SetProperty(SettingSelect.Current,DefaultColorSetPurple,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<include name="OpenDefaultVideosView">
+		<onclick>SetProperty(SettingSelect.Mode,onebool,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31409],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,11,Home)</onclick>
+		<onclick>ClearProperty(SettingSelect.Current,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[13113],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.1.Value,NoFixedVideosView,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Label,$LOCALIZE[535],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.2.Value,DefaultVideosViewList,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Label,$LOCALIZE[31117],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.3.Value,DefaultVideosViewListinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31241],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.4.Value,DefaultVideosViewWide,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31112],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,DefaultVideosViewWidelow,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,$LOCALIZE[31392],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,DefaultVideosViewWidelowinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,$LOCALIZE[31078],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Value,DefaultVideosViewWall,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,$LOCALIZE[31133],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Value,DefaultVideosViewWallinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Label,$LOCALIZE[31114],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Value,DefaultVideosViewWallsmall,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Label,$LOCALIZE[31116],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Value,DefaultVideosViewWallsmallinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.11.Label,$LOCALIZE[31113],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.11.Value,DefaultVideosViewWalllow,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewList)">SetProperty(SettingSelect.Current,DefaultVideosViewList,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewListinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewListinfo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWide)">SetProperty(SettingSelect.Current,DefaultVideosViewWide,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWidelow)">SetProperty(SettingSelect.Current,DefaultVideosViewWidelow,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewWidelowinfo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWall)">SetProperty(SettingSelect.Current,DefaultVideosViewWall,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWallinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewWallinfo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWallsmall)">SetProperty(SettingSelect.Current,DefaultVideosViewWallsmall,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewWallsmallinfo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWalllow)">SetProperty(SettingSelect.Current,DefaultVideosViewWalllow,Home)</onclick>
+		<!-- Last, so that it outranks the view the skin keeps seeding while there is none -->
+		<onclick condition="Skin.HasSetting(NoFixedVideosView)">SetProperty(SettingSelect.Current,NoFixedVideosView,Home)</onclick>
+		<onclick>ActivateWindow(1102)</onclick>
+	</include>
+
+	<!-- Where the cursor starts. The select dialog puts it on the first answer that is
+	     on and on the first row when none of them is, and these run after the window has
+	     focused its default control, so they are what decides. They are written backwards
+	     so that the lowest row that is on runs last and has the final say; written the
+	     other way round each row would have to say that no row above it is on. A row the
+	     caller did not fill in, or one that is out of reach, is no place to start. -->
+	<include name="SettingSelectFocus">
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.30.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.30.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.30.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9130)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),29) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.29.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.29.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.29.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9129)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),28) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.28.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.28.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.28.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9128)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),27) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.27.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.27.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.27.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9127)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),26) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.26.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.26.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.26.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9126)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),25) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.25.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.25.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.25.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9125)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),24) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.24.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.24.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.24.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9124)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),23) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.23.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.23.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.23.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9123)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),22) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.22.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.22.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.22.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9122)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),21) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.21.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.21.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.21.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9121)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),20) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.20.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.20.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.20.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9120)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),19) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.19.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.19.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.19.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9119)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),18) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.18.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.18.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.18.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9118)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),17) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.17.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.17.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.17.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9117)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),16) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.16.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.16.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.16.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9116)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),15) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.15.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.15.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.15.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9115)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),14) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.14.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.14.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.14.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9114)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),13) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.13.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.13.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.13.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9113)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),12) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.12.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.12.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.12.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9112)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),11) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.11.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.11.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.11.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9111)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),10) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.10.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.10.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.10.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9110)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),9) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.9.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.9.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.9.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9109)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),8) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.8.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.8.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.8.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9108)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),7) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.7.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.7.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.7.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9107)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),6) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.6.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.6.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.6.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9106)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),5) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.5.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.5.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.5.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9105)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),4) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.4.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.4.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.4.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9104)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),3) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.3.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.3.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.3.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9103)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),2) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.2.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.2.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.2.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9102)</onload>
+		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),1) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.1.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.1.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.1.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9101)</onload>
+	</include>
+
+</includes>

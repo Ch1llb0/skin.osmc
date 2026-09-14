@@ -67,17 +67,10 @@
 		<value condition="Control.HasFocus(327)">$LOCALIZE[31433]</value>
 		<value condition="Container(9000).HasFocus(4) + !ControlGroup(10000).HasFocus">$LOCALIZE[31301]</value>
 		<value condition="Control.HasFocus(402)">$LOCALIZE[31302]</value>
-		<value condition="Control.HasFocus(403)">$LOCALIZE[31303]</value>
-		<value condition="Control.HasFocus(404)">$LOCALIZE[31304]</value>
-		<value condition="Control.HasFocus(405)">$LOCALIZE[31305]</value>
-		<value condition="Control.HasFocus(406)">$LOCALIZE[31306]</value>
-		<value condition="Control.HasFocus(407)">$LOCALIZE[31307]</value>
+		<value condition="Control.HasFocus(403)">$LOCALIZE[31455]</value>
 		<value condition="Control.HasFocus(408)">$LOCALIZE[31308]</value>
 		<value condition="Control.HasFocus(409)">$LOCALIZE[31309]</value>
-		<value condition="Control.HasFocus(410)">$LOCALIZE[31310]</value>
-		<value condition="Control.HasFocus(411)">$LOCALIZE[31311]</value>
-		<value condition="Control.HasFocus(412)">$LOCALIZE[31312]</value>
-		<value condition="Control.HasFocus(413)">$LOCALIZE[31313]</value>
+		<value condition="Control.HasFocus(410)">$LOCALIZE[31456]</value>
 		<value condition="Control.HasFocus(414)">$LOCALIZE[31314]</value>
 		<value condition="Control.HasFocus(415)">$LOCALIZE[31315]</value>
 		<value condition="Control.HasFocus(418)">$LOCALIZE[31316]</value>
@@ -98,12 +91,12 @@
 		<value condition="Control.HasFocus(612)">$LOCALIZE[31332]</value>
 		<value condition="Control.HasFocus(613)">$LOCALIZE[31391]</value>
 		<value condition="Control.HasFocus(614)">$LOCALIZE[31411]</value>
-		<value condition="Control.HasFocus(615)">$LOCALIZE[31412]</value>
 		<value condition="Control.HasFocus(618)">$LOCALIZE[31333] $LOCALIZE[551], $LOCALIZE[561], $LOCALIZE[558], $LOCALIZE[557], $LOCALIZE[556], $LOCALIZE[563], $LOCALIZE[566]</value>
 		<value condition="Control.HasFocus(619)">$LOCALIZE[31334]</value>
 		<value condition="Control.HasFocus(620)">$LOCALIZE[31335]</value>
 		<value condition="Control.HasFocus(621)">$LOCALIZE[31336]</value>
 		<value condition="Control.HasFocus(622)">$LOCALIZE[31337]</value>
+		<value condition="Control.HasFocus(623)">$LOCALIZE[31450]</value>
 		<value condition="Container(9000).HasFocus(7) + !ControlGroup(10000).HasFocus">$LOCALIZE[31338]</value>
 		<value condition="Control.HasFocus(702)">$LOCALIZE[31339]</value>
 		<value condition="Control.HasFocus(703)">$LOCALIZE[31340]</value>
@@ -265,7 +258,11 @@
 		<value condition="String.IsEqual(Skin.String(mediaflags),None)">$LOCALIZE[13113]</value>
 	</variable>
 	
+	<!-- The answer the video add-on view setting is on. Not having a fixed view is one of
+	     the answers now, and it comes first because the skin keeps a view seeded underneath
+	     it for when one is wanted again. -->
 	<variable name="DefaultVideosView">
+		<value condition="Skin.HasSetting(NoFixedVideosView)">$LOCALIZE[13113]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">$LOCALIZE[535]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">$LOCALIZE[31117]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWide)">$LOCALIZE[31241]</value>
@@ -340,4 +337,109 @@
 		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
 	</variable>
 
+	<!-- What the titles on artwork setting shows beside its button: the kinds of media
+	     chosen, in the order the dialog lists them. A variable answers with one thing or
+	     another and cannot join a list together, so there is one per kind that answers
+	     with its own name or with nothing, and the label sets them end to end. Each one
+	     writes the comma in front of itself, which it can only do by knowing whether any
+	     kind above it was chosen. Widgets has nothing but that test: a widget follows the
+	     kinds chosen above it and shows no title while none of them is chosen, so on its
+	     own it is not a choice and the label says so by naming nothing. -->
+	<variable name="ArtworkTitlesMoviesLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesMovies)">$LOCALIZE[342]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesTVShowsLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesTVShows) + [Skin.HasSetting(ArtworkTitlesMovies)]">, $LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(ArtworkTitlesTVShows)">$LOCALIZE[20343]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesSeasonsLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesSeasons) + [Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows)]">, $LOCALIZE[33054]</value>
+		<value condition="Skin.HasSetting(ArtworkTitlesSeasons)">$LOCALIZE[33054]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesEpisodesLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesEpisodes) + [Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons)]">, $LOCALIZE[20360]</value>
+		<value condition="Skin.HasSetting(ArtworkTitlesEpisodes)">$LOCALIZE[20360]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesMusicVideosLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesMusicVideos) + [Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes)]">, $LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(ArtworkTitlesMusicVideos)">$LOCALIZE[20389]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesAlbumsLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesAlbums) + [Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes) | Skin.HasSetting(ArtworkTitlesMusicVideos)]">, $LOCALIZE[132]</value>
+		<value condition="Skin.HasSetting(ArtworkTitlesAlbums)">$LOCALIZE[132]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesArtistsLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesArtists) + [Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes) | Skin.HasSetting(ArtworkTitlesMusicVideos) | Skin.HasSetting(ArtworkTitlesAlbums)]">, $LOCALIZE[133]</value>
+		<value condition="Skin.HasSetting(ArtworkTitlesArtists)">$LOCALIZE[133]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesWidgetsLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesWidgets) + [Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes) | Skin.HasSetting(ArtworkTitlesMusicVideos) | Skin.HasSetting(ArtworkTitlesAlbums) | Skin.HasSetting(ArtworkTitlesArtists)]">, $LOCALIZE[31451]</value>
+	</variable>
+
+	<variable name="ArtworkTitlesLabel">
+		<value condition="Skin.HasSetting(ArtworkTitlesMovies) | Skin.HasSetting(ArtworkTitlesTVShows) | Skin.HasSetting(ArtworkTitlesSeasons) | Skin.HasSetting(ArtworkTitlesEpisodes) | Skin.HasSetting(ArtworkTitlesMusicVideos) | Skin.HasSetting(ArtworkTitlesAlbums) | Skin.HasSetting(ArtworkTitlesArtists)">$VAR[ArtworkTitlesMoviesLabel]$VAR[ArtworkTitlesTVShowsLabel]$VAR[ArtworkTitlesSeasonsLabel]$VAR[ArtworkTitlesEpisodesLabel]$VAR[ArtworkTitlesMusicVideosLabel]$VAR[ArtworkTitlesAlbumsLabel]$VAR[ArtworkTitlesArtistsLabel]$VAR[ArtworkTitlesWidgetsLabel]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+
+	<!-- The same for the two video OSD settings: which kinds of video show their
+	     information when playback begins, and which show it before it ends. -->
+	<variable name="VideoInfoStartMoviesLabel">
+		<value condition="Skin.HasSetting(videoinfostartmovies)">$LOCALIZE[342]</value>
+	</variable>
+
+	<variable name="VideoInfoStartTVShowsLabel">
+		<value condition="Skin.HasSetting(videoinfostarttvshow) + [Skin.HasSetting(videoinfostartmovies)]">, $LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(videoinfostarttvshow)">$LOCALIZE[20343]</value>
+	</variable>
+
+	<variable name="VideoInfoStartLiveTVLabel">
+		<value condition="Skin.HasSetting(videoinfostartlivetv) + [Skin.HasSetting(videoinfostartmovies) | Skin.HasSetting(videoinfostarttvshow)]">, $LOCALIZE[31453]</value>
+		<value condition="Skin.HasSetting(videoinfostartlivetv)">$LOCALIZE[31453]</value>
+	</variable>
+
+	<variable name="VideoInfoStartMusicVideosLabel">
+		<value condition="Skin.HasSetting(videoinfostartmusicvideo) + [Skin.HasSetting(videoinfostartmovies) | Skin.HasSetting(videoinfostarttvshow) | Skin.HasSetting(videoinfostartlivetv)]">, $LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(videoinfostartmusicvideo)">$LOCALIZE[20389]</value>
+	</variable>
+
+	<variable name="VideoInfoStartFilesLabel">
+		<value condition="Skin.HasSetting(videoinfostartfiles) + [Skin.HasSetting(videoinfostartmovies) | Skin.HasSetting(videoinfostarttvshow) | Skin.HasSetting(videoinfostartlivetv) | Skin.HasSetting(videoinfostartmusicvideo)]">, $LOCALIZE[31454]</value>
+		<value condition="Skin.HasSetting(videoinfostartfiles)">$LOCALIZE[31454]</value>
+	</variable>
+
+	<variable name="VideoInfoStartLabel">
+		<value condition="Skin.HasSetting(videoinfostartmovies) | Skin.HasSetting(videoinfostarttvshow) | Skin.HasSetting(videoinfostartlivetv) | Skin.HasSetting(videoinfostartmusicvideo) | Skin.HasSetting(videoinfostartfiles)">$VAR[VideoInfoStartMoviesLabel]$VAR[VideoInfoStartTVShowsLabel]$VAR[VideoInfoStartLiveTVLabel]$VAR[VideoInfoStartMusicVideosLabel]$VAR[VideoInfoStartFilesLabel]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
+
+	<variable name="VideoInfoEndMoviesLabel">
+		<value condition="Skin.HasSetting(videoinfoendmovie)">$LOCALIZE[342]</value>
+	</variable>
+
+	<variable name="VideoInfoEndTVShowsLabel">
+		<value condition="Skin.HasSetting(videoinfoendtvshow) + [Skin.HasSetting(videoinfoendmovie)]">, $LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(videoinfoendtvshow)">$LOCALIZE[20343]</value>
+	</variable>
+
+	<variable name="VideoInfoEndMusicVideosLabel">
+		<value condition="Skin.HasSetting(videoinfoendmusicvideo) + [Skin.HasSetting(videoinfoendmovie) | Skin.HasSetting(videoinfoendtvshow)]">, $LOCALIZE[20389]</value>
+		<value condition="Skin.HasSetting(videoinfoendmusicvideo)">$LOCALIZE[20389]</value>
+	</variable>
+
+	<variable name="VideoInfoEndFilesLabel">
+		<value condition="Skin.HasSetting(videoinfoendfiles) + [Skin.HasSetting(videoinfoendmovie) | Skin.HasSetting(videoinfoendtvshow) | Skin.HasSetting(videoinfoendmusicvideo)]">, $LOCALIZE[31454]</value>
+		<value condition="Skin.HasSetting(videoinfoendfiles)">$LOCALIZE[31454]</value>
+	</variable>
+
+	<variable name="VideoInfoEndLabel">
+		<value condition="Skin.HasSetting(videoinfoendmovie) | Skin.HasSetting(videoinfoendtvshow) | Skin.HasSetting(videoinfoendmusicvideo) | Skin.HasSetting(videoinfoendfiles)">$VAR[VideoInfoEndMoviesLabel]$VAR[VideoInfoEndTVShowsLabel]$VAR[VideoInfoEndMusicVideosLabel]$VAR[VideoInfoEndFilesLabel]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
 </includes>

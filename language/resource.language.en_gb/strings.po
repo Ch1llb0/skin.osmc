@@ -2221,3 +2221,38 @@ msgstr ""
 msgctxt "#31449"
 msgid "Show titles on artwork"
 msgstr ""
+
+#: /SkinSettings.xml
+msgctxt "#31450"
+msgid "Write the title over the artwork in wall views and on home widgets, for the kinds of media you choose."
+msgstr ""
+
+#: /Custom_Setting_Select.xml
+msgctxt "#31451"
+msgid "Widgets"
+msgstr ""
+
+#: /SkinSettings.xml
+msgctxt "#31452"
+msgid "Active for"
+msgstr ""
+
+#: /Includes_SettingSelect.xml
+msgctxt "#31453"
+msgid "Live TV"
+msgstr ""
+
+#: /Includes_SettingSelect.xml
+msgctxt "#31454"
+msgid "Other videos"
+msgstr ""
+
+#: /SkinSettings.xml
+msgctxt "#31455"
+msgid "Choose which kinds of video show their information when playback begins."
+msgstr ""
+
+#: /SkinSettings.xml
+msgctxt "#31456"
+msgid "Choose which kinds of video show their information before playback ends."
+msgstr ""
