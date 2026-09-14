@@ -87,6 +87,7 @@ _Fixed_
 - fix the OSMC logo on the home and login screens being a 52 pixel image in a 50 pixel box, which resampled it every frame
 - fix the sub menu arrows being a 32 pixel image in a 30 pixel box, for the same reason
 - fix the arrows that move a menu entry in the shortcut management dialog rendering at a ninth of full strength, the unfocused copy carrying a fade of its own as well as the one the skin applies
+- render the video, duration, timer and reminder flags at the size they are drawn rather than a fraction above it
 
 ---
 
