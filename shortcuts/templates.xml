@@ -1085,7 +1085,7 @@
 				</animation>
 				<width>36</width>
 				<height>36</height>
-				<texture>$VAR[BusySpinner]</texture>
+				<texture>$VAR[BusySpinnerSmall]</texture>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(name),$PARENT[name]) + String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-$PROPERTY[index]) + [Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating | $PROPERTY[isWeather] + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 			</control>
 		</controls>

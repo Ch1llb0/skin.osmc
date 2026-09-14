@@ -120,9 +120,17 @@
 	</variable>
 	
 	<!-- Busy spinner -->
+	<!-- Two sizes of the same spinner: the dialog draws it at 200, everything else at 60 or
+	     below, and an unsized image control takes the texture's own size, so the small one has
+	     to be a texture of its own rather than the large one scaled down. -->
 	<variable name="BusySpinner">
 		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.gif</value>
 		<value>busy.gif</value>
+	</variable>
+
+	<variable name="BusySpinnerSmall">
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-small.gif</value>
+		<value>busy-small.gif</value>
 	</variable>
 	
 	<!-- Media images -->

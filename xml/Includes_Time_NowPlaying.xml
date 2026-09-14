@@ -13,7 +13,7 @@
 			<!-- Window heading -->
 			<control type="image">
 				<include>heading_coords1</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinner]</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerSmall]</texture>
 				<visible>$PARAM[busyspinner]</visible>
 				<animation effect="slide" time="0" end="0,17" condition="String.IsEmpty(Control.GetLabel(9999)) | ![$PARAM[secondary]]">Conditional</animation>
 			</control>

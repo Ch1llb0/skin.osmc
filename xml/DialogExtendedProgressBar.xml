@@ -23,7 +23,7 @@
 			<!-- Busy spinner -->
 			<control type="image">
 				<include>DialogExtendedProgressBar_coords2</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinner]</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerSmall]</texture>
 			</control>
 
 			<!-- Heading -->

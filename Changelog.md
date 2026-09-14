@@ -88,6 +88,10 @@ _Fixed_
 - fix the sub menu arrows being a 32 pixel image in a 30 pixel box, for the same reason
 - fix the arrows that move a menu entry in the shortcut management dialog rendering at a ninth of full strength, the unfocused copy carrying a fade of its own as well as the one the skin applies
 - render the video, duration, timer and reminder flags at the size they are drawn rather than a fraction above it
+- redraw the busy spinner with antialiased edges, in place of the two tone shape whose diagonals stepped
+- add a spinner sized for the places that draw one small - the widget reloading indicator, the progress dialog and the now playing heading - rather than scaling the large one down
+- fix the busy spinner sitting twenty five pixels below and right of the middle of the screen, its box declaring a size the image never took
+- make the error icon monochrome, the one icon in the set that carried a colour of its own
 
 ---
 

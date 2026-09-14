@@ -10,26 +10,26 @@
 	<include name="DialogBusy_coords1_16:9">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
-		<width>150</width>
-		<height>150</height>
+		<width>200</width>
+		<height>200</height>
 	</include>
 	<include name="DialogBusy_coords1_21:9">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
-		<width>150</width>
-		<height>150</height>
+		<width>200</width>
+		<height>200</height>
 	</include>
 	<include name="DialogBusy_coords1_21:9_masked">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
-		<width>150</width>
-		<height>150</height>
+		<width>200</width>
+		<height>200</height>
 	</include>
 	<include name="DialogBusy_coords1_4:3">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
-		<width>150</width>
-		<height>150</height>
+		<width>200</width>
+		<height>200</height>
 	</include>
 
 </includes>
