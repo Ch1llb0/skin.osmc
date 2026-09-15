@@ -70,8 +70,7 @@
 			<texture background="true">$INFO[Container(211).ListItem.Property(backgroundPath)]</texture>
 			<visible>String.IsEqual(Container(211).ListItem.Property(backgroundType),browse)</visible>
 			<aspectratio>scale</aspectratio>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>DialogZoomAnimation</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
@@ -85,8 +84,7 @@
 			<fadetime>2000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>DialogZoomAnimation</include>
 			<include>DialogBackgroundDepth</include>
 		</control>

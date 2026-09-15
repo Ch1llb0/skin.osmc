@@ -505,7 +505,7 @@
 	<include name="Viewtype533_coords18_16:9">
 		<focusedlayout width="170" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultMovie.png</param>
@@ -532,7 +532,7 @@
 	<include name="Viewtype533_coords18_21:9">
 		<focusedlayout width="166" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultMovie.png</param>
@@ -559,7 +559,7 @@
 	<include name="Viewtype533_coords18_21:9_masked">
 		<focusedlayout width="166" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultMovie.png</param>
@@ -586,7 +586,7 @@
 	<include name="Viewtype533_coords18_4:3">
 		<focusedlayout width="180" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultMovie.png</param>

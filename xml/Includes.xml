@@ -111,6 +111,7 @@
 	<include file="Coordinates_VideoOSDBookmarks.xml" />
 	<include file="Defaults.xml" />
 	<include file="Expressions.xml" />
+	<include file="Includes_Animations.xml" />
 	<include file="Includes_DialogSettings.xml" />
 	<include file="Includes_GameControllers.xml" />
 	<include file="Includes_Home.xml" />

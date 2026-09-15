@@ -3,81 +3,14 @@
 	
 	<!-- Animations -->
 	
-	<!-- Window animation -->
-	<include name="WindowFadeAnimation">
-		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-	</include>
 	
-	<!-- Window fulscreen dialog overlay animation -->
-	<include name="WindowFullscreenDialogFadeAnimation">
-		<animation effect="fade" start="100" end="0" time="1" delay="300" reversible="false" condition="Window.IsActive(Custom_Confirm_Reset_Skin_Settings.xml) | Window.IsActive(Custom_Welcome.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(DialogGameControllers.xml) | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(script-skin_helper_service-ColorPicker.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(SmartPlaylistRule.xml)">Conditional</animation>
-	</include>
 
-	<!-- Visible animation -->
-	<include name="VisibleFadeAnimation">
-		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-	</include>
 	
-	<!-- Dialog animation -->
-	<include name="DialogZoomAnimation">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="70" center="auto" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-		</animation>
-	</include>
 
-	<!-- Options animation -->
-	<include name="OptionsAnimation">
-		<animation type="Visible">
-			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
-			<effect type="fade" start="0" end="100" time="150" delay="150" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="zoom" start="100" end="70" center="auto" time="300" />
-			<effect type="fade" start="100" end="0" time="150" delay="150" />
-		</animation>
-	</include>
-
-	<!-- OSD animations -->
-	<include name="OSDOpenCloseAnimation">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
-			<effect type="fade" start="0" end="100" time="200" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
-	</include>
 	
-	<include name="OSDVisibleHiddenAnimation">
-		<animation type="Visible">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
-			<effect type="fade" start="0" end="100" time="200" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
-	</include>
 	
-	<!-- Nonfocus focused control animation -->
-	<include name="NonFocusWindowFadeAnimation">
-		<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])">Conditional</animation>
-	</include>
 	
-	<include name="NonFocusDialogFadeAnimation">
-		<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-	</include>
 	
-	<include name="NonFocusImageFadeAnimation">
-		<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
-	</include>
 	
 	<!-- The cover the process info dialog shows, held twenty inside the panel it is given
 	     so that it grows and shrinks with it. Three of them, because the artwork a live
@@ -169,8 +102,7 @@
 			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
 			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
 			<aspectratio>scale</aspectratio>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
 		
@@ -182,8 +114,7 @@
 			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
 			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
 			<aspectratio>scale</aspectratio>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
 		
@@ -199,8 +130,7 @@
 			<fadetime>2000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
@@ -213,8 +143,7 @@
 			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),browse) + Window.IsVisible(Home)</visible>
 			<aspectratio>scale</aspectratio>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
@@ -231,8 +160,7 @@
 			<fadetime>2000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
@@ -244,8 +172,7 @@
 			<fadetime>400</fadetime>
 			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
 			<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
@@ -258,8 +185,7 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
@@ -275,8 +201,7 @@
 			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
 			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
 			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>
@@ -285,8 +210,7 @@
 		<control type="visualisation">
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasAudio + [Skin.HasSetting(BackgroundVisualisation) | Window.IsVisible(visualisation)]</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>VisibleHiddenFadeAnimation</include>
 			<include>WindowFadeAnimation</include>
 			<include>BackgroundDepth</include>
 		</control>

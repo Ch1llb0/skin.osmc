@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- volumebar -->
-	<animation effect="slide" start="550,0" time="200">WindowOpen</animation>
-	<animation effect="slide" end="550,0" time="200">WindowClose</animation>
+	<include>CornerWindowAnimation</include>
 	<zorder>100</zorder>
 	
 	<!-- Scroll reset -->
@@ -12,7 +11,7 @@
 	
 		<control type="group">
 			<include>DialogDepth</include>
-			<animation effect="slide" end="0,50" time="200" condition="String.IsEqual(Window(10000).Property(isCaching),True)">Conditional</animation>
+			<include>CornerWindowLift</include>
 			
 			<!-- Background -->
 			<control type="image">

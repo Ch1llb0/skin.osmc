@@ -685,7 +685,7 @@
 	<include name="Viewtype536_coords18_16:9">
 		<focusedlayout width="255" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Albums -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultAlbumCover.png</param>
@@ -757,7 +757,7 @@
 	<include name="Viewtype536_coords18_21:9">
 		<focusedlayout width="237" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Albums -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultAlbumCover.png</param>
@@ -829,7 +829,7 @@
 	<include name="Viewtype536_coords18_21:9_masked">
 		<focusedlayout width="237" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Albums -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultAlbumCover.png</param>
@@ -901,7 +901,7 @@
 	<include name="Viewtype536_coords18_4:3">
 		<focusedlayout width="270" height="240">
 			<control type="group">
-				<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
+				<include>FocusZoomAnimation</include>
 				<!-- Image - Albums -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultAlbumCover.png</param>

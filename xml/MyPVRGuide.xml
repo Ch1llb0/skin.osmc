@@ -219,8 +219,7 @@
 				<control type="group">
 					<visible>!Window.IsVisible(contextmenu) + Control.HasFocus(10)</visible>
 					<include>VisibleFadeAnimation</include>
-					<animation effect="slide" time="200" start="-200,0" end="0,0">WindowOpen</animation>
-					<animation effect="slide" time="200" start="0,0" end="-200,0">WindowClose</animation>
+					<include>SidePanelSlideAnimation</include>
 					<control type="image">
 						<include>SubMenu_coords13</include>
 						<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-return.png</texture>
@@ -230,8 +229,7 @@
 				<control type="group">
 					<visible>!Window.IsVisible(contextmenu) + !Skin.HasSetting(KioskMode) + Control.HasFocus(60)</visible>
 					<include>VisibleFadeAnimation</include>
-					<animation effect="slide" time="200" start="-200,0" end="0,0">WindowOpen</animation>
-					<animation effect="slide" time="200" start="0,0" end="-200,0">WindowClose</animation>
+					<include>SidePanelSlideAnimation</include>
 					<control type="image">
 						<include>SubMenu_coords13</include>
 						<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
