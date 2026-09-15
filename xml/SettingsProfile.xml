@@ -52,7 +52,6 @@
 					<!-- Auto login -->
 					<control type="button" id="5">
 						<include>SettingsProfile_coords3</include>
-						<font>Font33</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<invalidcolor>$VAR[InvalidColor]</invalidcolor>

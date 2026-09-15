@@ -88,7 +88,6 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 					<label>15067</label>
-					<font>Font33</font>
 					<onclick>Dialog.Close(videobookmarks)</onclick>
 					<oninfo>noop</oninfo>
 				</control>
@@ -99,7 +98,6 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 					<label>294</label>
-					<font>Font33</font>
 					<oninfo>noop</oninfo>
 				</control>
 
@@ -109,7 +107,6 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 					<label>296</label>
-					<font>Font33</font>
 					<oninfo>noop</oninfo>
 				</control>
 
@@ -119,7 +116,6 @@
 					<align>center</align>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 					<label>20406</label>
-					<font>Font33</font>
 					<oninfo>noop</oninfo>
 				</control>
 

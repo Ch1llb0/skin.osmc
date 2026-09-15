@@ -156,7 +156,6 @@
 						<control type="button" id="101">
 							<include>SkinSettings_coords16</include>
 							<label>31049</label>
-							<font>Font33</font>
 							<onclick>RunScript(script.skinshortcuts,type=manage,menu=mainmenu)</onclick>
 							<visible>System.AddonIsEnabled(script.skinshortcuts)</visible>
 							<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -165,7 +164,6 @@
 						<control type="button" id="102">
 							<include>SkinSettings_coords16</include>
 							<label>$LOCALIZE[31030]</label>
-							<font>Font33</font>
 							<onclick>InstallAddon(script.skinshortcuts)</onclick>
 							<onclick condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">EnableAddon(script.skinshortcuts)</onclick>
 							<visible>!System.AddonIsEnabled(script.skinshortcuts)</visible>
@@ -186,7 +184,6 @@
 						<!-- Default select action for album widgets -->
 						<control type="button" id="104">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31438]</label>
 							<label2>$VAR[WidgetOnClickAlbumLabel]</label2>
 							<include>OpenWidgetOnClickAlbum</include>
@@ -196,7 +193,6 @@
 						<!-- Default select action for TV show widgets -->
 						<control type="button" id="105">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31439]</label>
 							<label2>$VAR[WidgetOnClickTVShowLabel]</label2>
 							<include>OpenWidgetOnClickTVShow</include>
@@ -206,7 +202,6 @@
 						<!-- Default select action for movie set widgets -->
 						<control type="button" id="106">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31440]</label>
 							<label2>$VAR[WidgetOnClickMovieSetLabel]</label2>
 							<include>OpenWidgetOnClickMovieSet</include>
@@ -224,7 +219,6 @@
 						<!-- Toggle masking -->
 						<control type="button" id="108">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31065]</label>
 							<label2>$VAR[MaskingBars]</label2>
 							<include>OpenMaskingBars</include>
@@ -265,7 +259,6 @@
 						</control>
 						<control type="button" id="202">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[33068]</label>
 							<label2>$INFO[Skin.String(BackgroundImage)]</label2>
 							<include>OpenBackgroundImage</include>
@@ -292,7 +285,6 @@
 						</control>
 						<control type="button" id="205">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>    - $LOCALIZE[1024]</label>
 							<label2>$INFO[Skin.String(CustomBackground)]</label2>
 							<onclick>Skin.SetImage(CustomBackground)</onclick>
@@ -302,7 +294,6 @@
 						</control>
 						<control type="button" id="206">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>    - $LOCALIZE[31139]</label>
 							<onclick>Skin.Reset(CustomBackground)</onclick>
 							<onclick>Control.SetFocus(205)</onclick>
@@ -319,7 +310,6 @@
 						</control>
 						<control type="button" id="208">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>    - $LOCALIZE[1024]</label>
 							<label2>$INFO[Skin.String(CustomBackgroundFolder)]</label2>
 							<onclick>Skin.SetPath(CustomBackgroundFolder)</onclick>
@@ -329,7 +319,6 @@
 						</control>
 						<control type="button" id="209">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>    - $LOCALIZE[31139]</label>
 							<onclick>Skin.Reset(CustomBackgroundFolder)</onclick>
 							<onclick>Control.SetFocus(208)</onclick>
@@ -337,7 +326,6 @@
 						</control>
 						<control type="button" id="210">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>    - $LOCALIZE[31137]</label>
 							<label2>$INFO[Skin.String(CustomBackgroundFolderDuration)]</label2>
 							<include>OpenCustomBackgroundFolderDuration</include>
@@ -356,7 +344,6 @@
 						</control>
 						<control type="button" id="212">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label>    - $LOCALIZE[21435]</label>
 							<label2>#$VAR[SolidBackgroundColor]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -429,7 +416,6 @@
 						<!-- Default color sets -->
 						<control type="button" id="302">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31108]</label>
 							<label2>$VAR[DefaultColorSet]</label2>
 							<include>OpenDefaultColorSet</include>
@@ -439,7 +425,6 @@
 						<!-- Background opacity -->
 						<control type="button" id="303">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31109]</label>
 							<label2>$VAR[DefaultBackgroundOpacity]</label2>
 							<include>OpenDefaultBackgroundOpacity</include>
@@ -449,7 +434,6 @@
 						<!-- Menu/OSD opacity -->
 						<control type="button" id="304">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31110]</label>
 							<label2>$VAR[DefaultMenuOSDOpacity]</label2>
 							<include>OpenDefaultMenuOSDOpacity</include>
@@ -467,7 +451,6 @@
 						<!-- Custom background color -->
 						<control type="button" id="306">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31162]</label>
 							<label2>$VAR[BackgroundColor-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -487,7 +470,6 @@
 						<!-- Custom menu/OSD color -->
 						<control type="button" id="308">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31062]</label>
 							<label2>$VAR[MenuOSDColor-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -507,7 +489,6 @@
 						<!-- Custom focus text color -->
 						<control type="button" id="310">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31163]</label>
 							<label2>$VAR[TextColorFO-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -527,7 +508,6 @@
 						<!-- Custom non-focus text color -->
 						<control type="button" id="312">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31164]</label>
 							<label2>$VAR[TextColorNF-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -547,7 +527,6 @@
 						<!-- Custom selected text color -->
 						<control type="button" id="314">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31165]</label>
 							<label2>$VAR[SelectedColor-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -567,7 +546,6 @@
 						<!-- Custom disabled text color -->
 						<control type="button" id="316">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31166]</label>
 							<label2>$VAR[DisabledColor-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -587,7 +565,6 @@
 						<!-- Custom focus control color -->
 						<control type="button" id="318">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31023]</label>
 							<label2>$VAR[OverlayColorFO-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -607,7 +584,6 @@
 						<!-- Custom non-focus control color -->
 						<control type="button" id="320">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31024]</label>
 							<label2>$VAR[OverlayColorNF-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -627,7 +603,6 @@
 						<!-- Custom OSD cache bar color -->
 						<control type="button" id="322">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31025]</label>
 							<label2>$VAR[OSDCacheColor-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -646,7 +621,6 @@
 						<!-- Custom masking color -->
 						<control type="button" id="324">
 							<include>SkinSettings_coords18</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31150]</label>
 							<label2>$VAR[MaskingColor-Name]</label2>
 							<onclick>SetProperty(colorpicker,more,10035)</onclick>
@@ -711,7 +685,6 @@
 						<!-- Active for -->
 						<control type="button" id="403">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31452]</label>
 							<label2>$VAR[VideoInfoStartLabel]</label2>
 							<include>OpenVideoInfoStart</include>
@@ -722,7 +695,6 @@
 						<!-- OSD info video start duration -->
 						<control type="button" id="408">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31129]</label>
 							<label2>$INFO[Skin.String(videoinfostartduration)]</label2>
 							<include>Openvideoinfostartduration</include>
@@ -741,7 +713,6 @@
 						<!-- Active for -->
 						<control type="button" id="410">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31452]</label>
 							<label2>$VAR[VideoInfoEndLabel]</label2>
 							<include>OpenVideoInfoEnd</include>
@@ -752,7 +723,6 @@
 						<!-- OSD info video end duration -->
 						<control type="button" id="414">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31132]</label>
 							<label2>$INFO[Skin.String(videoinfoendduration)]</label2>
 							<include>Openvideoinfoendduration</include>
@@ -763,7 +733,6 @@
 						<!-- Adjust OSD on-time during video pause -->
 						<control type="button" id="415">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31102]</label>
 							<label2>$VAR[HideOSD]</label2>
 							<include>OpenHideOSD</include>
@@ -793,7 +762,6 @@
 						</control>
 						<control type="button" id="419">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label> - $LOCALIZE[31143]</label>
 							<label2>$INFO[Skin.String(AutoMusicVisPlaybackDuration)]</label2>
 							<include>OpenAutoMusicVisPlaybackDuration</include>
@@ -826,7 +794,6 @@
 						<!-- Weather icons-->
 						<control type="button" id="501">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31067]</label>
 							<label2>$VAR[weather-icons]</label2>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
@@ -838,7 +805,6 @@
 						<!-- Weather fanart -->
 						<control type="button" id="502">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.HasAddon(script.image.resource.select) + !System.AddonIsEnabled(script.image.resource.select)">EnableAddon(script.image.resource.select)</onclick>
 							<onclick condition="System.AddonIsEnabled(script.image.resource.select)">RunScript(script.image.resource.select,property=weatherFanart&amp;type=resource.images.weatherfanart)</onclick>
@@ -880,7 +846,6 @@
 						<!-- Adjust non-focus dim opacity -->
 						<control type="button" id="603">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31104]</label>
 							<label2>$INFO[Skin.String(NFDimOpac),,%]</label2>
 							<include>OpenNFDimOpac</include>
@@ -890,7 +855,6 @@
 						<!-- Adjust plot/description text font size -->
 						<control type="button" id="604">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31100]</label>
 							<label2>$VAR[PlotFont]</label2>
 							<include>OpenPlotFont</include>
@@ -929,7 +893,6 @@
 						<!-- Show description/details first -->
 						<control type="button" id="609">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31170]</label>
 							<label2>$VAR[infodialogfirstpage]</label2>
 							<include>Openinfodialogfirstpage</include>
@@ -947,7 +910,6 @@
 						<!-- Show titles on artwork -->
 						<control type="button" id="623">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>31449</label>
 							<label2>$VAR[ArtworkTitlesLabel]</label2>
 							<include>OpenArtworkTitles</include>
@@ -955,7 +917,6 @@
 						<!-- Adjust representation of video duration -->
 						<control type="button" id="611">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31134]</label>
 							<label2>$VAR[videodurationformat]</label2>
 							<include>Openvideodurationformat</include>
@@ -965,7 +926,6 @@
 						<!-- Edit video media flags -->
 						<control type="button" id="612">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>31237</label>
 							<label2>$VAR[mediaflags]</label2>
 							<include>Openmediaflags</include>
@@ -983,7 +943,6 @@
 						<!-- Set default video addon view -->
 						<control type="button" id="614">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>$LOCALIZE[31409]</label>
 							<label2>$VAR[DefaultVideosView]</label2>
 							<include>OpenDefaultVideosView</include>
@@ -1219,7 +1178,6 @@
 						<!-- Reload skin -->
 						<control type="button" id="806">
 							<include>SkinSettings_coords16</include>
-							<font>Font33</font>
 							<label>20183</label>
 							<onclick>ReloadSkin()</onclick>
 							<onclick>Control.SetFocus(9000,7,absolute)</onclick>

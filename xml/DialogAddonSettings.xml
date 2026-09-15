@@ -44,7 +44,6 @@
 			<!-- Default group button -->
 			<control type="button" id="10">
 				<include>DialogAddonSettings_coords2</include>
-				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<focusedcolor>$VAR[addonsettingsbuttonunfocusdim]</focusedcolor>
 				<invalidcolor>$VAR[InvalidColor]</invalidcolor>
@@ -74,7 +73,6 @@
 			<control type="button" id="20">
 				<include>DialogAddonSettings_coords5</include>
 				<align>center</align>
-				<font>Font33</font>
 				<onup>3</onup>
 				<onclick>SettingsLevelChange</onclick>
 				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
@@ -117,7 +115,6 @@
 			<!-- Default button -->
 			<control type="button" id="7">
 				<include>DialogAddonSettings_coords8</include>
-				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 				<invalidcolor>$VAR[InvalidColor]</invalidcolor>

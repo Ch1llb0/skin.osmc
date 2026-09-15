@@ -44,7 +44,6 @@
 					<!-- Toggle masking -->
 					<control type="button" id="10">
 						<include>Custom_DialogMasking_coords5</include>
-						<font>Font33</font>
 						<label>$LOCALIZE[31065]</label>
 						<label2>$INFO[Skin.String(MaskingBars)]</label2>
 						<include>OpenMaskingBars</include>
@@ -78,7 +77,6 @@
 					<!-- OK Button -->
 					<control type="button" id="14">
 						<width>Auto</width>
-						<font>Font33</font>
 						<label>$LOCALIZE[15067]</label>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<textcolor>$VAR[TextColorNF]</textcolor>

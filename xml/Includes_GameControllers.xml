@@ -50,7 +50,6 @@
 					<!-- Default button -->
 					<control type="button" id="10">
 						<include>DialogGameControllers_coords6</include>
-						<font>Font33</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[gamecontrollersbuttonunfocusdim]</focusedcolor>
 						<invalidcolor>$VAR[InvalidColor]</invalidcolor>
@@ -115,7 +114,6 @@
 					<!-- Default button -->
 					<control type="button" id="7">
 						<include>DialogGameControllers_coords6</include>
-						<font>Font33</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<invalidcolor>$VAR[InvalidColor]</invalidcolor>

@@ -33,102 +33,90 @@
 						<param name="containerID">7000</param>
 					</include>
 					
-					<control type="button" id="600">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19063</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(FirstProgramme)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">600</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19063</param>
+						<param name="onclick">PVR.EpgGridControl(FirstProgramme)</param>
+					</include>
 					
-					<control type="button" id="601">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19317</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(-12)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">601</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19317</param>
+						<param name="onclick">PVR.EpgGridControl(-12)</param>
+					</include>
 					
-					<control type="button" id="602">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19070</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(CurrentProgramme)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">602</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19070</param>
+						<param name="onclick">PVR.EpgGridControl(CurrentProgramme)</param>
+					</include>
 					
-					<control type="button" id="603">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19318</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(+12)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">603</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19318</param>
+						<param name="onclick">PVR.EpgGridControl(+12)</param>
+					</include>
 					
-					<control type="button" id="604">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19064</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(LastProgramme)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">604</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19064</param>
+						<param name="onclick">PVR.EpgGridControl(LastProgramme)</param>
+					</include>
 					
-					<control type="button" id="605">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19288</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(SelectDate)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">605</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19288</param>
+						<param name="onclick">PVR.EpgGridControl(SelectDate)</param>
+					</include>
 					
-					<control type="button" id="606">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19322</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(FirstChannel)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">606</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19322</param>
+						<param name="onclick">PVR.EpgGridControl(FirstChannel)</param>
+					</include>
 					
-					<control type="button" id="607">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19323</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(PlayingChannel)</onclick>
-						<align>center</align>
-						<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio | PVR.IsPlayingEpgTag</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">607</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19323</param>
+						<param name="onclick">PVR.EpgGridControl(PlayingChannel)</param>
+						<param name="visible">PVR.IsPlayingTV | PVR.IsPlayingRadio | PVR.IsPlayingEpgTag</param>
+					</include>
 					
-					<control type="button" id="608">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19324</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(LastChannel)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">608</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19324</param>
+						<param name="onclick">PVR.EpgGridControl(LastChannel)</param>
+					</include>
 					
-					<control type="button" id="609">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19319</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(PreviousGroup)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">609</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19319</param>
+						<param name="onclick">PVR.EpgGridControl(PreviousGroup)</param>
+					</include>
 					
-					<control type="button" id="610">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19320</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(NextGroup)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">610</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19320</param>
+						<param name="onclick">PVR.EpgGridControl(NextGroup)</param>
+					</include>
 					
-					<control type="button" id="611">
-						<include>DialogPVRGuideControls_coords3</include>
-						<label>19321</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>PVR.EpgGridControl(SelectGroup)</onclick>
-						<align>center</align>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">611</param>
+						<param name="coords">DialogPVRGuideControls_coords3</param>
+						<param name="label">19321</param>
+						<param name="onclick">PVR.EpgGridControl(SelectGroup)</param>
+					</include>
 
 				</control>
 			</control>

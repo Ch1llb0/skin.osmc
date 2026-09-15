@@ -445,6 +445,28 @@
 		<depth>0.55</depth>
 	</include>
 	
+	<!-- Buttons -->
+	
+	<!-- What a button looks like is in Defaults.xml; what a button is for is here. A role earns
+	     a place when it is used in more than one window and the controls agree on everything but
+	     where they sit and what they say. -->
+	
+	<!-- A row in a dialog that offers a short list of choices: the button menu, the guide
+	     controls, the bookmark list. Centred, on the 52 high focus bar. -->
+	<include name="DialogRowButton">
+		<param name="visible">true</param>
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<include>$PARAM[coords]</include>
+				<align>center</align>
+				<label>$PARAM[label]</label>
+				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+				<onclick>$PARAM[onclick]</onclick>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	
 	<!-- Dialog button indicator -->
 	<include name="dialogButtonIndicator">
 		<definition>

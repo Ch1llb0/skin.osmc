@@ -38,7 +38,6 @@
 					<!-- Summary -->
 					<control type="button" id="95">
 						<include>SettingsSystemInfo_coords2</include>
-						<font>Font33</font>
 						<label>20037</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -56,7 +55,6 @@
 					<!-- Network -->
 					<control type="button" id="96">
 						<include>SettingsSystemInfo_coords2</include>
-						<font>Font33</font>
 						<label>13279</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -65,7 +63,6 @@
 					<!-- Video -->
 					<control type="button" id="97">
 						<include>SettingsSystemInfo_coords2</include>
-						<font>Font33</font>
 						<label>13280</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -74,7 +71,6 @@
 					<!-- Hardware -->
 					<control type="button" id="98">
 						<include>SettingsSystemInfo_coords2</include>
-						<font>Font33</font>
 						<label>13281</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -83,7 +79,6 @@
 					<!-- PVR -->
 					<control type="button" id="99">
 						<include>SettingsSystemInfo_coords2</include>
-						<font>Font33</font>
 						<label>19191</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
@@ -92,7 +87,6 @@
 					<!-- Privacy -->
 					<control type="button" id="100">
 						<include>SettingsSystemInfo_coords2</include>
-						<font>Font33</font>
 						<label>12389</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>

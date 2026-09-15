@@ -109,7 +109,6 @@
 				<control type="button" id="20">
 					<include>SettingsCategory_coords9</include>
 					<align>center</align>
-					<font>Font33</font>
 					<onup>3</onup>
 					<onclick>SettingsLevelChange</onclick>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
@@ -141,7 +140,6 @@
 				<!-- Default group button -->
 				<control type="button" id="10">
 					<include>SettingsCategory_coords11</include>
-					<font>Font33</font>
 					<onclick>SetFocus(5)</onclick>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<focusedcolor>$VAR[settingsbuttonunfocusdim]</focusedcolor>
@@ -152,7 +150,6 @@
 				<!-- Default button -->
 				<control type="button" id="7">
 					<include>SettingsCategory_coords10</include>
-					<font>Font33</font>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 					<invalidcolor>$VAR[InvalidColor]</invalidcolor>

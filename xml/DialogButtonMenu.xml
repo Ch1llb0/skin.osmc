@@ -34,50 +34,45 @@
 						<param name="containerID">7000</param>
 					</include>
 
-					<control type="button" id="600">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13012</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>Quit</onclick>
-						<align>center</align>
-						<visible>System.ShowExitButton</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">600</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13012</param>
+						<param name="onclick">Quit</param>
+						<param name="visible">System.ShowExitButton</param>
+					</include>
 					
-					<control type="button" id="601">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13016</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>Powerdown</onclick>
-						<align>center</align>
-						<visible>System.CanPowerDown</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">601</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13016</param>
+						<param name="onclick">Powerdown</param>
+						<param name="visible">System.CanPowerDown</param>
+					</include>
 					
-					<control type="button" id="602">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13011</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>Suspend</onclick>
-						<align>center</align>
-						<visible>System.CanSuspend</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">602</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13011</param>
+						<param name="onclick">Suspend</param>
+						<param name="visible">System.CanSuspend</param>
+					</include>
 					
-					<control type="button" id="603">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13010</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>Hibernate</onclick>
-						<align>center</align>
-						<visible>System.CanHibernate</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">603</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13010</param>
+						<param name="onclick">Hibernate</param>
+						<param name="visible">System.CanHibernate</param>
+					</include>
 					
-					<control type="button" id="604">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13013</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>Reset</onclick>
-						<align>center</align>
-						<visible>System.CanReboot</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">604</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13013</param>
+						<param name="onclick">Reset</param>
+						<param name="visible">System.CanReboot</param>
+					</include>
 					
 					<control type="button" id="605">
 						<include>DialogButtonMenu_coords3</include>
@@ -90,14 +85,13 @@
 						<visible>System.Loggedon</visible>
 					</control>
 					
-					<control type="button" id="606">
-						<include>DialogButtonMenu_coords3</include>
-						<label>20046</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>Mastermode</onclick>
-						<align>center</align>
-						<visible>System.HasLocks + System.IsMaster</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">606</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">20046</param>
+						<param name="onclick">Mastermode</param>
+						<param name="visible">System.HasLocks + System.IsMaster</param>
+					</include>
 					
 					<control type="button" id="607">
 						<include>DialogButtonMenu_coords3</include>
@@ -108,23 +102,21 @@
 						<visible>System.HasLocks + !System.IsMaster</visible>
 					</control>
 					
-					<control type="button" id="608">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13017</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>InhibitIdleShutdown(true)</onclick>
-						<align>center</align>
-						<visible>System.HasShutdown +!System.IsInhibit</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">608</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13017</param>
+						<param name="onclick">InhibitIdleShutdown(true)</param>
+						<param name="visible">System.HasShutdown +!System.IsInhibit</param>
+					</include>
 					
-					<control type="button" id="609">
-						<include>DialogButtonMenu_coords3</include>
-						<label>13018</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>InhibitIdleShutdown(false)</onclick>
-						<align>center</align>
-						<visible>System.HasShutdown + System.IsInhibit</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">609</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">13018</param>
+						<param name="onclick">InhibitIdleShutdown(false)</param>
+						<param name="visible">System.HasShutdown + System.IsInhibit</param>
+					</include>
 					
 					<control type="button" id="610">
 						<include>DialogButtonMenu_coords3</include>
@@ -136,14 +128,13 @@
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</control>
 					
-					<control type="button" id="611">
-						<include>DialogButtonMenu_coords3</include>
-						<label>20151 $INFO[System.Alarmpos,T-]</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
-						<onclick>CancelAlarm(shutdowntimer)</onclick>
-						<align>center</align>
-						<visible>System.HasAlarm(shutdowntimer)</visible>
-					</control>
+					<include content="DialogRowButton">
+						<param name="id">611</param>
+						<param name="coords">DialogButtonMenu_coords3</param>
+						<param name="label">20151 $INFO[System.Alarmpos,T-]</param>
+						<param name="onclick">CancelAlarm(shutdowntimer)</param>
+						<param name="visible">System.HasAlarm(shutdowntimer)</param>
+					</include>
 					
 					<control type="button" id="612">
 						<include>DialogButtonMenu_coords3</include>

@@ -68,7 +68,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35224]</label>
-						<font>Font33</font>
 						<label2>Select + X</label2>
 						<onclick>Play</onclick>
 					</control>
@@ -79,7 +78,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35249]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(InGameSaves)</onclick>
 					</control>
 					
@@ -89,7 +87,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[13007]</label>
-						<font>Font33</font>
 						<label2>Select + B</label2>
 						<onclick>PlayerControl(Reset)</onclick>
 					</control>
@@ -100,7 +97,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35222]</label>
-						<font>Font33</font>
 						<label2>Select + Start</label2>
 						<onclick>Stop</onclick>
 					</control>
@@ -117,7 +113,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35225]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(GameVideoFilter)</onclick>
 					</control>
 					
@@ -127,7 +122,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35233]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(GameStretchMode)</onclick>
 					</control>
 					
@@ -137,7 +131,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35227]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(GameVideoRotation)</onclick>
 					</control>
 					
@@ -147,7 +140,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[13376]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(GameVolume)</onclick>
 					</control>
 					
@@ -163,7 +155,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35234]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(GameAgents)</onclick>
 					</control>
 					
@@ -173,7 +164,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35226]</label>
-						<font>Font33</font>
 						<onclick>ActivateWindow(GameAdvancedSettings)</onclick>
 					</control>
 					
