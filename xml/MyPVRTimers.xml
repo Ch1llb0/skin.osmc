@@ -50,14 +50,10 @@
 					<include>MyPVRTimers_coords4</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 					<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
 

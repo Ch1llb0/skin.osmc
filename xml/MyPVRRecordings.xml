@@ -104,7 +104,6 @@
 					<focusposition>3</focusposition>
 					<orientation>vertical</orientation>
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
-					<scrolltime tween="sine" easing="out">240</scrolltime>
 
 					<include>MyPVRRecordings_coords8</include>
 
@@ -117,13 +116,9 @@
 					<include>MyPVRRecordings_coords10</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarVertical</include>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
 

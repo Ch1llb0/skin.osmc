@@ -211,14 +211,10 @@
 				<onleft>9001</onleft>
 				<onright condition="!Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">304</onright>
 				<onright condition="Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">303</onright>
-				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-				<textureslidernib></textureslidernib>
-				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
 
@@ -391,14 +387,10 @@
 				<onright>9000</onright>
 				<onleft condition="!Integer.IsEqual(Container(211).CurrentItem,1)">303</onleft>
 				<onleft condition="Integer.IsEqual(Container(211).CurrentItem,1)">304</onleft>
-				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-				<textureslidernib></textureslidernib>
-				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
 

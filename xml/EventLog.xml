@@ -46,7 +46,6 @@
 					<pagecontrol>60</pagecontrol>
 					<focusposition>3</focusposition>
 					<orientation>vertical</orientation>
-					<scrolltime tween="sine" easing="out">240</scrolltime>
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
 
 					<include>EventLog_coords3</include>
@@ -60,13 +59,9 @@
 					<include>EventLog_coords5</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>570</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarVertical</include>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
 			

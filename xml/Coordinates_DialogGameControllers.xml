@@ -833,10 +833,6 @@
 				<enable>false</enable>
 				<itemlayout width="96" height="96">
 					<control type="gamecontroller">
-						<texture>$INFO[ListItem.Icon]</texture>
-						<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-						<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-						<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						<include>NonFocusImageFadeAnimation</include>
 					</control>
 				</itemlayout>
@@ -870,10 +866,6 @@
 				<enable>false</enable>
 				<itemlayout width="96" height="96">
 					<control type="gamecontroller">
-						<texture>$INFO[ListItem.Icon]</texture>
-						<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-						<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-						<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						<include>NonFocusImageFadeAnimation</include>
 					</control>
 				</itemlayout>
@@ -907,10 +899,6 @@
 				<enable>false</enable>
 				<itemlayout width="96" height="96">
 					<control type="gamecontroller">
-						<texture>$INFO[ListItem.Icon]</texture>
-						<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-						<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-						<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						<include>NonFocusImageFadeAnimation</include>
 					</control>
 				</itemlayout>
@@ -944,10 +932,6 @@
 				<enable>false</enable>
 				<itemlayout width="21" height="96">
 					<control type="gamecontroller">
-						<texture>$INFO[ListItem.Icon]</texture>
-						<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-						<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-						<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						<include>NonFocusImageFadeAnimation</include>
 					</control>
 				</itemlayout>
@@ -1001,10 +985,6 @@
 					<enable>false</enable>
 					<itemlayout width="96" height="96">
 						<control type="gamecontroller">
-							<texture>$INFO[ListItem.Icon]</texture>
-							<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-							<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-							<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						</control>
 					</itemlayout>
 					<focusedlayout width="96" height="96">
@@ -1050,10 +1030,6 @@
 					<enable>false</enable>
 					<itemlayout width="96" height="96">
 						<control type="gamecontroller">
-							<texture>$INFO[ListItem.Icon]</texture>
-							<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-							<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-							<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						</control>
 					</itemlayout>
 					<focusedlayout width="96" height="96">
@@ -1099,10 +1075,6 @@
 					<enable>false</enable>
 					<itemlayout width="96" height="96">
 						<control type="gamecontroller">
-							<texture>$INFO[ListItem.Icon]</texture>
-							<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-							<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-							<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						</control>
 					</itemlayout>
 					<focusedlayout width="96" height="96">
@@ -1148,10 +1120,6 @@
 					<enable>false</enable>
 					<itemlayout width="21" height="96">
 						<control type="gamecontroller">
-							<texture>$INFO[ListItem.Icon]</texture>
-							<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
-							<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
-							<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
 						</control>
 					</itemlayout>
 					<focusedlayout width="21" height="96">

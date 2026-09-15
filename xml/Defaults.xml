@@ -228,6 +228,7 @@
 
 	<default type="fixedlist">
 		<preloaditems>2</preloaditems>
+		<scrolltime tween="sine" easing="out">240</scrolltime>
 		<include>WindowDepth</include>
 	</default>
 	
@@ -247,6 +248,34 @@
 		<include>WindowDepth</include>
 	</default>
 	
+	<!-- Every scrollbar in the skin looks like this; only where it sits, which way it runs
+	     and whether the setting hides it belong to the control. -->
+	<default type="scrollbar">
+		<showonepage>false</showonepage>
+		<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
+		<textureslidernib></textureslidernib>
+		<textureslidernibfocus></textureslidernibfocus>
+		<include>WindowDepth</include>
+	</default>
+
+	<default type="gamecontrollerlist">
+		<texture>$INFO[ListItem.Icon]</texture>
+		<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+		<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+		<controllerdiffuse>$VAR[SelectedColor]</controllerdiffuse>
+		<include>WindowDepth</include>
+	</default>
+
+	<!-- What the game window shows is the same wherever it is shown; its size is not, and
+	     stays with the control as every other size in the skin does. -->
+	<default type="gamewindow">
+		<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
+		<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+		<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+		<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+		<include>WindowDepth</include>
+	</default>
+
 	<default type="image">
 		<include>WindowDepth</include>
 	</default>
@@ -260,10 +289,6 @@
 	</default>
 	
 	<default type="wraplist">
-		<include>WindowDepth</include>
-	</default>
-	
-	<default type="fixedlist">
 		<include>WindowDepth</include>
 	</default>
 	

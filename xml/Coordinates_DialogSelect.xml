@@ -838,10 +838,6 @@
 				<left>47</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>47</left>
@@ -861,10 +857,6 @@
 				<left>66</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>66</left>
@@ -884,10 +876,6 @@
 				<left>66</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>66</left>
@@ -907,10 +895,6 @@
 				<left>42</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>42</left>
@@ -937,10 +921,6 @@
 				<left>47</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>47</left>
@@ -975,10 +955,6 @@
 				<left>66</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>66</left>
@@ -1013,10 +989,6 @@
 				<left>66</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>66</left>
@@ -1051,10 +1023,6 @@
 				<left>42</left>
 				<width>356</width>
 				<height>200</height>
-				<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
-				<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
-				<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
-				<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 			</control>
 			<control type="label">
 				<left>42</left>

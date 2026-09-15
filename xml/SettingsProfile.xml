@@ -90,13 +90,9 @@
 					<include>SettingsProfile_coords8</include>
 					<onleft>3001</onleft>
 					<onright>2</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarVertical</include>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
 				

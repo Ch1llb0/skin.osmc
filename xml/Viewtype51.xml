@@ -62,7 +62,6 @@
 			<focusposition>4</focusposition>
 			<orientation>vertical</orientation>
 			<viewtype label="$LOCALIZE[535]">list</viewtype>
-			<scrolltime tween="sine" easing="out">240</scrolltime>
 			<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(albums) | Container.Content(videos) | Container.Content(addons) | Container.Content(images) | Container.Content(games)</visible>
 			<include>DefaultView</include>
 

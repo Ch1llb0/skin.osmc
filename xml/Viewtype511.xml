@@ -153,7 +153,6 @@
 				<focusposition>4</focusposition>
 				<orientation>vertical</orientation>
 				<viewtype label="$LOCALIZE[31117]">list</viewtype>
-				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos)</visible>
 				<include>DefaultView</include>
 

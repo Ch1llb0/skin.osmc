@@ -46,13 +46,9 @@
 					<include>AddonBrowser_coords1</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarVertical</include>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 				</control>
 

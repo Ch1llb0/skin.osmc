@@ -54,13 +54,9 @@
 					<include>MyPrograms_coords1</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarVertical</include>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(511) | Control.IsVisible(531) | Control.IsVisible(533) | Control.IsVisible(536) | Control.IsVisible(538)]</visible>
 				</control>
 				
@@ -69,13 +65,9 @@
 					<include>MyPrograms_coords2</include>
 					<onup>50</onup>
 					<ondown condition="!Skin.HasSetting(KioskMode)">3001</ondown>
-					<showonepage>false</showonepage>
 					<orientation>horizontal</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarHorizontal</include>
 					<texturesliderbarfocus border="5,0,5,0" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripHorizontalFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(523) | Control.IsVisible(524)]</visible>
 				</control>
 				
@@ -84,13 +76,9 @@
 					<include>MyPrograms_coords3</include>
 					<onup>50</onup>
 					<ondown condition="!Skin.HasSetting(KioskMode)">3001</ondown>
-					<showonepage>false</showonepage>
 					<orientation>horizontal</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<include>BackgroundOverlayStyleScrollbarHorizontal</include>
 					<texturesliderbarfocus border="5,0,5,0" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripHorizontalFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(522) | Control.IsVisible(525)]</visible>
 					<visible>!Skin.HasSetting(BackgroundOverlayStyle)</visible>
 				</control>
@@ -100,14 +88,10 @@
 					<include>MyPrograms_coords4</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 					<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(535) | Control.IsVisible(537)]</visible>
 				</control>
 				
@@ -116,14 +100,10 @@
 					<include>MyPrograms_coords5</include>
 					<onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
 					<onright>50</onright>
-					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 					<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 					<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(534) | Control.IsVisible(539)]</visible>
 				</control>
 

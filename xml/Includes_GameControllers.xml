@@ -62,14 +62,10 @@
 						<include>DialogGameControllers_coords3</include>
 						<onleft>9001</onleft>
 						<onright>3</onright>
-						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
-						<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-						<textureslidernib></textureslidernib>
-						<textureslidernibfocus></textureslidernibfocus>
 						<visible>!Skin.HasSetting(Scrollbars)</visible>
 					</control>
 
@@ -91,14 +87,10 @@
 						<include>DialogGameControllers_coords5</include>
 						<onright>5</onright>
 						<onleft>3</onleft>
-						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
-						<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-						<textureslidernib></textureslidernib>
-						<textureslidernibfocus></textureslidernibfocus>
 						<visible>!Skin.HasSetting(Scrollbars)</visible>
 					</control>
 
@@ -245,14 +237,10 @@
 						<include>DialogGameControllers_coords13</include>
 						<onleft>9001</onleft>
 						<onright>3</onright>
-						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
-						<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-						<textureslidernib></textureslidernib>
-						<textureslidernibfocus></textureslidernibfocus>
 						<visible>!Skin.HasSetting(Scrollbars)</visible>
 					</control>
 
@@ -340,14 +328,10 @@
 						<include>DialogGameControllers_coords13</include>
 						<onleft>9001</onleft>
 						<onright>7</onright>
-						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
-						<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-						<textureslidernib></textureslidernib>
-						<textureslidernibfocus></textureslidernibfocus>
 						<visible>!Skin.HasSetting(Scrollbars)</visible>
 					</control>
 
