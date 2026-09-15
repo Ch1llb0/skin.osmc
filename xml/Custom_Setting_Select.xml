@@ -17,15 +17,8 @@
 		
 		<control type="group">
 
-			<include>DialogDepth</include>
-			
-			<!-- Animation -->
-			<include>DialogZoomAnimation</include>
-			
-			<!-- Heading -->
-			<include content="Time">
+			<include content="DialogFrame">
 				<param name="heading">$INFO[Window(Home).Property(SettingSelect.Heading)]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- Options -->

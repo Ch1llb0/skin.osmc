@@ -431,6 +431,22 @@
 	</include>
 	
 	<!-- Dialog depth -->
+	<!-- What every dialog begins with once its group is open: it sits at dialog depth, it zooms
+	     in and out with the rest of them, and it carries a heading. Only the heading differs, so
+	     only the heading is passed. A dialog that wants a second line, a spinner or a heading
+	     that changes with the window writes the three out itself. -->
+	<include name="DialogFrame">
+		<param name="heading">$INFO[Control.GetLabel(1)]</param>
+		<definition>
+			<include>DialogDepth</include>
+			<include>DialogZoomAnimation</include>
+			<include content="Time">
+				<param name="heading">$PARAM[heading]</param>
+				<param name="secondary">False</param>
+			</include>
+		</definition>
+	</include>
+
 	<include name="DialogDepth">
 		<depth>0.35</depth>
 	</include>

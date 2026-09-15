@@ -12,16 +12,7 @@
 		<include>DialogBackgroundImage</include>
 
 		<control type="group">
-			<include>DialogDepth</include>
-
-			<!-- Animation -->
-			<include>DialogZoomAnimation</include>
-			
-			<!-- Heading -->
-			<include content="Time">
-				<param name="heading">$INFO[Control.GetLabel(1)]</param>
-				<param name="secondary">False</param>
-			</include>
+			<include>DialogFrame</include>
 
 			<!-- Heading -->
 			<control type="label" id="1">

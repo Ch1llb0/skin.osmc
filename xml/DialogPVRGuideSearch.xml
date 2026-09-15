@@ -12,15 +12,8 @@
 		<include>DialogBackgroundImage</include>
 
 		<control type="group">
-			<include>DialogDepth</include>
-
-			<!-- Animation -->
-			<include>DialogZoomAnimation</include>
-			
-			<!-- Heading -->
-			<include content="Time">
+			<include content="DialogFrame">
 				<param name="heading">$LOCALIZE[19142]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- Search -->

@@ -16,15 +16,8 @@
 		<include>DialogBackgroundImage</include>
 
 		<control type="group">
-			<include>DialogDepth</include>
-
-			<!-- Animation -->
-			<include>DialogZoomAnimation</include>
-			
-			<!-- Heading -->
-			<include content="Time">
+			<include content="DialogFrame">
 				<param name="heading">$INFO[ListItem.Title]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT]]</param>
-				<param name="secondary">False</param>
 			</include>
 			
 			<!-- TV image -->

@@ -136,15 +136,8 @@
 		</control>
 
 		<control type="group">
-			<include>DialogDepth</include>
-		
-			<!-- Animation -->
-			<include>DialogZoomAnimation</include>
-			
-			<!-- Heading -->
-			<include content="Time">
+			<include content="DialogFrame">
 				<param name="heading">$VAR[skinshortcuts-window]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- The two move buttons are the arrows drawn at the right of the row the list is
