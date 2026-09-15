@@ -58,65 +58,221 @@
 	</include>
 	
 	<!-- Addon browser sub menu -->
-	<include name="SubMenu_AddonBrowser">
-		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
+	<!-- The rows a sub menu is built from. A row that appears in more than three sub menus is
+	     written here once and called by name; a row that belongs to one window is written out
+	     where it is used, because a name for it would only be one more thing to look up. -->
+
+	<!-- View -->
+	<include name="SubMenuRowView">
+		<control type="button" id="99">
+			<include>SubMenu_coords5</include>
+			<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
+			<onclick>Control.SetFocus(3002)</onclick>
+			<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+		</control>
+	</include>
+
+	<!-- Show titles on artwork -->
+	<include name="SubMenuRowArtworkTitles">
+		<control type="button" id="97">
+			<include>SubMenu_coords5</include>
+			<label>$LOCALIZE[31449]</label>
+			<include>OpenArtworkTitles</include>
+			<visible>$EXP[WallViewActive]</visible>
+		</control>
+	</include>
+
+	<!-- Sort by -->
+	<include name="SubMenuRowSortBy">
+		<control type="button" id="3">
+			<include>SubMenu_coords5</include>
+			<label>103</label>
+			<visible>Control.IsEnabled(3)</visible>
+		</control>
+	</include>
+
+	<!-- Sort ascending/descending -->
+	<include name="SubMenuRowSortDirection">
+		<control type="togglebutton" id="4">
+			<include>SubMenu_coords5</include>
+			<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
+			<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
+			<usealttexture>Container.SortDirection(Descending)</usealttexture>
+			<visible>Control.IsEnabled(4)</visible>
+		</control>
+	</include>
+
+	<!-- Filter -->
+	<include name="SubMenuRowFilter">
+		<control type="edit" id="19">
+			<include>SubMenu_coords5</include>
+			<label>587</label>
+			<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+		</control>
+	</include>
+
+	<!-- Filter -->
+	<include name="SubMenuRowFilterAdvanced">
+		<control type="radiobutton" id="93">
+			<include>SubMenu_coords6</include>
+			<label>587</label>
+			<onclick>Right</onclick>
+			<onclick>Right</onclick>
+			<onclick>Filter</onclick>
+			<selected>Container.Filtered</selected>
+			<visible>Container.CanFilterAdvanced</visible>
+		</control>
+	</include>
+
+	<!-- Channel Groups -->
+	<include name="SubMenuRowChannelGroups">
+		<control type="button" id="28">
+			<include>SubMenu_coords5</include>
+			<label></label>
+			<visible>Control.IsEnabled(28)</visible>
+		</control>
+	</include>
+
+	<!-- Channels -->
+	<include name="SubMenuRowChannels">
+		<control type="button" id="100">
+			<include>SubMenu_coords5</include>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+			<onclick>SetFocus(10)</onclick>
+			<label>19019</label>
+		</control>
+	</include>
+
+	<!-- Guide -->
+	<include name="SubMenuRowGuide">
+		<control type="button" id="102">
+			<include>SubMenu_coords5</include>
+			<label>22020</label>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+			<onclick>SetFocus(10)</onclick>
+		</control>
+	</include>
+
+	<!-- Recordings -->
+	<include name="SubMenuRowRecordings">
+		<control type="button" id="103">
+			<include>SubMenu_coords5</include>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+			<onclick>SetFocus(10)</onclick>
+			<label>19163</label>
+		</control>
+	</include>
+
+	<!-- Timers -->
+	<include name="SubMenuRowTimers">
+		<control type="button" id="35">
+			<include>SubMenu_coords5</include>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<label>19040</label>
+		</control>
+	</include>
+
+	<!-- Search -->
+	<include name="SubMenuRowSearch">
+		<control type="button" id="37">
+			<include>SubMenu_coords5</include>
+			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+			<onclick>SetFocus(50)</onclick>
+			<label>137</label>
+		</control>
+	</include>
+
+	<!-- Addon Settings -->
+	<include name="SubMenuRowAddonSettings">
+		<control type="button" id="624">
+			<include>SubMenu_coords5</include>
+			<label>$LOCALIZE[10140]</label>
+			<visible>Control.IsEnabled(624)</visible>
+			<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+			<visible>!String.IsEmpty(Container.PluginName)</visible>
+		</control>
+	</include>
+
+	<!-- The gap between groups of rows. Two of them exist because they are two controls, 80
+	     above the sorting rows and 81 below them, and a row can be told to appear only when
+	     the view picker has something to pick from. -->
+	<include name="SubMenuSeparator">
+		<param name="id">81</param>
+		<definition>
+			<control type="image" id="$PARAM[id]">
+				<include>SubMenu_coords7</include>
+				<texture>transparent.png</texture>
+			</control>
+		</definition>
+	</include>
+
+	<include name="SubMenuSeparatorWithViews">
+		<control type="image" id="80">
+			<include>SubMenu_coords7</include>
+			<texture>transparent.png</texture>
+			<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
+		</control>
+	</include>
+
+	<!-- What every sub menu is: a column against the left edge that hands every direction
+	     back to the list it belongs to. The windows that offer more than one view make room
+	     for the view picker above it. -->
+	<include name="SubMenuFrame">
+		<param name="nav">50</param>
+		<param name="default">3</param>
+		<definition>
+			<include>SubMenu_coords4</include>
+			<onleft>$PARAM[nav]</onleft>
+			<onright>$PARAM[nav]</onright>
+			<onback>$PARAM[nav]</onback>
 			<scrolltime>200</scrolltime>
 			<orientation>vertical</orientation>
 			<itemgap>0</itemgap>
-			<defaultcontrol always="true">99</defaultcontrol>
-
+			<defaultcontrol always="true">$PARAM[default]</defaultcontrol>
 			<include content="SubMenuAnimation">
 				<param name="containerID">3001</param>
 			</include>
-			
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
-			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+		</definition>
+	</include>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+	<include name="SubMenuFrameWithViews">
+		<param name="nav">50</param>
+		<param name="default">99</param>
+		<definition>
+			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
+			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
+			<onleft>$PARAM[nav]</onleft>
+			<onright>$PARAM[nav]</onright>
+			<onback>$PARAM[nav]</onback>
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+			<defaultcontrol always="true">$PARAM[default]</defaultcontrol>
+			<include content="SubMenuAnimation">
+				<param name="containerID">3001</param>
+			</include>
+		</definition>
+	</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
+	<include name="SubMenu_AddonBrowser">
+		<control type="grouplist" id="3001">
+			<include>SubMenuFrameWithViews</include>
+			
+			<include>SubMenuRowView</include>
+			
+			<include>SubMenuRowArtworkTitles</include>
+
+			<include>SubMenuSeparatorWithViews</include>
+
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
 			<!-- Filter -->
 			<control type="radiobutton" id="93">
 				<include>SubMenu_coords6</include>
@@ -127,11 +283,7 @@
 				<visible>Container.CanFilterAdvanced</visible>
 			</control>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 
 			<!-- Check for updates -->
 			<control type="button" id="9">
@@ -160,62 +312,17 @@
 	<!-- Favourites browser sub menu -->
 	<include name="SubMenu_FavouritesBrowser">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrameWithViews</include>
 			
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuRowView</include>
 			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+			<include>SubMenuRowArtworkTitles</include>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuSeparatorWithViews</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
 			<!-- Filter -->
 			<control type="radiobutton" id="93">
 				<include>SubMenu_coords6</include>
@@ -234,27 +341,12 @@
 	<!-- Event log sub menu -->
 	<include name="SubMenu_EventLog">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>60</onleft>
-			<onright>60</onright>
-			<onback>60</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">4</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
+			<include content="SubMenuFrame">
+				<param name="nav">60</param>
+				<param name="default">4</param>
 			</include>
 			
-			<!-- Sort by -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
+			<include>SubMenuRowSortDirection</include>
 			<!-- Level -->
 			<control type="button" id="21">
 				<include>SubMenu_coords5</include>
@@ -277,87 +369,24 @@
 	<!-- My games sub menu -->
 	<include name="SubMenu_MyGames">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">99</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
+			<include content="SubMenuFrame">
+				<param name="default">99</param>
 			</include>
 			
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuRowView</include>
 			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+			<include>SubMenuRowArtworkTitles</include>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuSeparatorWithViews</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
-			<!-- Filter -->
-			<control type="radiobutton" id="93">
-				<include>SubMenu_coords6</include>
-				<label>587</label>
-				<onclick>Right</onclick>
-				<onclick>Right</onclick>
-				<onclick>Filter</onclick>
-				<selected>Container.Filtered</selected>
-				<visible>Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
+			<include>SubMenuRowFilterAdvanced</include>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 
-			<!-- Addon Settings -->
-			<control type="button" id="624">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[10140]</label>
-				<visible>Control.IsEnabled(624)</visible>
-				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-				<visible>!String.IsEmpty(Container.PluginName)</visible>
-			</control>
+			<include>SubMenuRowAddonSettings</include>
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
@@ -374,35 +403,11 @@
 	<!-- My music nav sub menu -->
 	<include name="SubMenu_MyMusicNav">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">99</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrameWithViews</include>
 			
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuRowView</include>
 			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+			<include>SubMenuRowArtworkTitles</include>
 			
 			<!-- Disable music listened to status in library -->
 			<control type="radiobutton" id="73">
@@ -412,49 +417,14 @@
 				<selected>Skin.HasSetting(MusicListenedToStatus)</selected>
 			</control>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuSeparatorWithViews</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
-			<!-- Filter -->
-			<control type="radiobutton" id="93">
-				<include>SubMenu_coords6</include>
-				<label>587</label>
-				<onclick>Right</onclick>
-				<onclick>Right</onclick>
-				<onclick>Filter</onclick>
-				<selected>Container.Filtered</selected>
-				<visible>Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
+			<include>SubMenuRowFilterAdvanced</include>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 			
 			<!-- Open playlist -->
 			<control type="button" id="91">
@@ -491,14 +461,7 @@
 				<onclick condition="System.AddonIsEnabled(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
 				<visible>Container.Content() + String.IsEmpty(Container.PluginName)</visible>
 			</control>
-			<!-- Addon Settings -->
-			<control type="button" id="624">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[10140]</label>
-				<visible>Control.IsEnabled(624)</visible>
-				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-				<visible>!String.IsEmpty(Container.PluginName)</visible>
-			</control>
+			<include>SubMenuRowAddonSettings</include>
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
@@ -515,79 +478,20 @@
 	<!-- My pics nav sub menu -->
 	<include name="SubMenu_MyPics">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">99</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrameWithViews</include>
 			
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuRowView</include>
 			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+			<include>SubMenuRowArtworkTitles</include>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuSeparatorWithViews</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
-			<!-- Filter -->
-			<control type="radiobutton" id="93">
-				<include>SubMenu_coords6</include>
-				<label>587</label>
-				<onclick>Right</onclick>
-				<onclick>Right</onclick>
-				<onclick>Filter</onclick>
-				<selected>Container.Filtered</selected>
-				<visible>Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
+			<include>SubMenuRowFilterAdvanced</include>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 			
 			<!-- Slideshow -->
 			<control type="button" id="6">
@@ -607,14 +511,7 @@
 				<label>13319</label>
 				<visible>Control.IsEnabled(9)</visible>
 			</control>
-			<!-- Addon Settings -->
-			<control type="button" id="624">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[10140]</label>
-				<visible>Control.IsEnabled(624)</visible>
-				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-				<visible>!String.IsEmpty(Container.PluginName)</visible>
-			</control>
+			<include>SubMenuRowAddonSettings</include>
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
@@ -631,56 +528,16 @@
 	<!-- My playlist sub menu -->
 	<include name="SubMenu_MyPlaylist">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
+			<include content="SubMenuFrameWithViews">
+				<param name="default">3</param>
 			</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
-			<!-- Filter -->
-			<control type="radiobutton" id="93">
-				<include>SubMenu_coords6</include>
-				<label>587</label>
-				<onclick>Right</onclick>
-				<onclick>Right</onclick>
-				<onclick>Filter</onclick>
-				<selected>Container.Filtered</selected>
-				<visible>Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
+			<include>SubMenuRowFilterAdvanced</include>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 			
 			<!-- Shuffle -->
 			<control type="radiobutton" id="20">
@@ -716,88 +573,22 @@
 	<!-- My programs sub menu -->
 	<include name="SubMenu_MyPrograms">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">99</defaultcontrol>
+			<include>SubMenuFrameWithViews</include>
 
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
-
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuRowView</include>
 			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+			<include>SubMenuRowArtworkTitles</include>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuSeparatorWithViews</include>
 			
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
-			<!-- Filter -->
-			<control type="radiobutton" id="93">
-				<include>SubMenu_coords6</include>
-				<label>587</label>
-				<onclick>Right</onclick>
-				<onclick>Right</onclick>
-				<onclick>Filter</onclick>
-				<selected>Container.Filtered</selected>
-				<visible>Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowFilter</include>
+			<include>SubMenuRowFilterAdvanced</include>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 			
-			<!-- Addon Settings -->
-			<control type="button" id="624">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[10140]</label>
-				<visible>Control.IsEnabled(624)</visible>
-				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-				<visible>!String.IsEmpty(Container.PluginName)</visible>
-			</control>
+			<include>SubMenuRowAddonSettings</include>
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
@@ -814,39 +605,11 @@
 	<!-- My PVR channels sub menu -->
 	<include name="SubMenu_MyPVRChannels">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrame</include>
 			
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Channel Groups -->
-			<control type="button" id="28">
-				<include>SubMenu_coords5</include>
-				<label></label>
-				<visible>Control.IsEnabled(28)</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowChannelGroups</include>
 			<!-- Show hidden channels -->
 			<control type="radiobutton" id="6">
 				<include>SubMenu_coords6</include>
@@ -859,43 +622,14 @@
 			</control>
 
 			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include content="SubMenuSeparator">
+				<param name="id">80</param>
+			</include>
 			
-			<!-- Guide -->
-			<control type="button" id="102">
-				<include>SubMenu_coords5</include>
-				<label>22020</label>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				<onclick>SetFocus(10)</onclick>
-			</control>
-			<!-- Recordings -->
-			<control type="button" id="103">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19163</label>
-			</control>
-			<!-- Timers -->
-			<control type="button" id="35">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>19040</label>
-			</control>
-			<!-- Search -->
-			<control type="button" id="37">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>137</label>
-			</control>
+			<include>SubMenuRowGuide</include>
+			<include>SubMenuRowRecordings</include>
+			<include>SubMenuRowTimers</include>
+			<include>SubMenuRowSearch</include>
 			
 			<include>SubMenuControls</include>
 		
@@ -927,26 +661,9 @@
 				<param name="containerID">3001</param>
 			</include>
 			
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Channel Groups -->
-			<control type="button" id="28">
-				<include>SubMenu_coords5</include>
-				<label></label>
-				<visible>Control.IsEnabled(28)</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowChannelGroups</include>
 			<!-- Filter -->
 			<control type="radiobutton" id="31">
 				<include>SubMenu_coords6</include>
@@ -954,43 +671,14 @@
 			</control>
 
 			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include content="SubMenuSeparator">
+				<param name="id">80</param>
+			</include>
 			
-			<!-- Channels -->
-			<control type="button" id="100">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19019</label>
-			</control>
-			<!-- Recordings -->
-			<control type="button" id="103">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19163</label>
-			</control>
-			<!-- Timers -->
-			<control type="button" id="35">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>19040</label>
-			</control>
-			<!-- Search -->
-			<control type="button" id="37">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>137</label>
-			</control>
+			<include>SubMenuRowChannels</include>
+			<include>SubMenuRowRecordings</include>
+			<include>SubMenuRowTimers</include>
+			<include>SubMenuRowSearch</include>
 			
 			<include>SubMenuControls</include>
 		
@@ -1000,43 +688,13 @@
 	<!-- My PVR recordings sub menu -->
 	<include name="SubMenu_MyPVRProviders">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">100</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
+			<include content="SubMenuFrame">
+				<param name="default">100</param>
 			</include>
 
-			<!-- Channels -->
-			<control type="button" id="100">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19019</label>
-			</control>
-			<!-- Guide -->
-			<control type="button" id="102">
-				<include>SubMenu_coords5</include>
-				<label>22020</label>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				<onclick>SetFocus(10)</onclick>
-			</control>
-			<!-- Recordings -->
-			<control type="button" id="103">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19163</label>
-			</control>
+			<include>SubMenuRowChannels</include>
+			<include>SubMenuRowGuide</include>
+			<include>SubMenuRowRecordings</include>
 			<!-- Timers -->
 			<control type="button" id="104">
 				<include>SubMenu_coords5</include>
@@ -1045,14 +703,7 @@
 				<onclick>SetFocus(10)</onclick>
 				<label>19040</label>
 			</control>
-			<!-- Search -->
-			<control type="button" id="37">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>137</label>
-			</control>
+			<include>SubMenuRowSearch</include>
 
 			<include>SubMenuControls</include>
 
@@ -1061,45 +712,17 @@
 
 	<include name="SubMenu_MyPVRRecordings">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrame</include>
 			
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
 			<!-- Watched toggle -->
 			<control type="button" id="10">
 				<include>SubMenu_coords5</include>
 				<label>20367</label>
 				<visible>Control.IsEnabled(10)</visible>
 			</control>
-			<!-- Channel Groups -->
-			<control type="button" id="28">
-				<include>SubMenu_coords5</include>
-				<label></label>
-				<visible>Control.IsEnabled(28)</visible>
-			</control>
+			<include>SubMenuRowChannelGroups</include>
 			<!-- Group recording items by folder structure -->
 			<control type="radiobutton" id="5">
 				<include>SubMenu_coords6</include>
@@ -1112,43 +735,14 @@
 			</control>
 
 			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include content="SubMenuSeparator">
+				<param name="id">80</param>
+			</include>
 			
-			<!-- Channels -->
-			<control type="button" id="100">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19019</label>
-			</control>
-			<!-- Guide -->
-			<control type="button" id="102">
-				<include>SubMenu_coords5</include>
-				<label>22020</label>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				<onclick>SetFocus(10)</onclick>
-			</control>
-			<!-- Timers -->
-			<control type="button" id="35">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>19040</label>
-			</control>
-			<!-- Search -->
-			<control type="button" id="37">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>137</label>
-			</control>
+			<include>SubMenuRowChannels</include>
+			<include>SubMenuRowGuide</include>
+			<include>SubMenuRowTimers</include>
+			<include>SubMenuRowSearch</include>
 			
 			<include>SubMenuControls</include>
 		
@@ -1158,78 +752,21 @@
 	<!-- My PVR search sub menu -->
 	<include name="SubMenu_MyPVRSearch">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrame</include>
 			
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Channel Groups -->
-			<control type="button" id="28">
-				<include>SubMenu_coords5</include>
-				<label></label>
-				<visible>Control.IsEnabled(28)</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowChannelGroups</include>
 
 			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include content="SubMenuSeparator">
+				<param name="id">80</param>
+			</include>
 			
-			<!-- Channels -->
-			<control type="button" id="100">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19019</label>
-			</control>
-			<!-- Guide -->
-			<control type="button" id="102">
-				<include>SubMenu_coords5</include>
-				<label>22020</label>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				<onclick>SetFocus(10)</onclick>
-			</control>
-			<!-- Recordings -->
-			<control type="button" id="103">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19163</label>
-			</control>
-			<!-- Timers -->
-			<control type="button" id="35">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>19040</label>
-			</control>
+			<include>SubMenuRowChannels</include>
+			<include>SubMenuRowGuide</include>
+			<include>SubMenuRowRecordings</include>
+			<include>SubMenuRowTimers</include>
 			
 			<include>SubMenuControls</include>
 		
@@ -1239,78 +776,21 @@
 	<!-- My PVR timers sub menu -->
 	<include name="SubMenu_MyPVRTimers">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrame</include>
 			
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
-			<!-- Channel Groups -->
-			<control type="button" id="28">
-				<include>SubMenu_coords5</include>
-				<label></label>
-				<visible>Control.IsEnabled(28)</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
+			<include>SubMenuRowChannelGroups</include>
 
 			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include content="SubMenuSeparator">
+				<param name="id">80</param>
+			</include>
 			
-			<!-- Channels -->
-			<control type="button" id="100">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19019</label>
-			</control>
-			<!-- Guide -->
-			<control type="button" id="102">
-				<include>SubMenu_coords5</include>
-				<label>22020</label>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				<onclick>SetFocus(10)</onclick>
-			</control>
-			<!-- Recordings -->
-			<control type="button" id="103">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-				<onclick>SetFocus(10)</onclick>
-				<label>19163</label>
-			</control>
-			<!-- Search -->
-			<control type="button" id="37">
-				<include>SubMenu_coords5</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-				<onclick>SetFocus(50)</onclick>
-				<label>137</label>
-			</control>
+			<include>SubMenuRowChannels</include>
+			<include>SubMenuRowGuide</include>
+			<include>SubMenuRowRecordings</include>
+			<include>SubMenuRowSearch</include>
 			
 			<include>SubMenuControls</include>
 		
@@ -1320,27 +800,9 @@
 	<!-- My video nav sub menu -->
 	<include name="SubMenu_MyVideoNav">
 		<control type="grouplist" id="3001">
-			<include condition="Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords3</include>
-			<include condition="!Integer.IsGreater(Container.ViewCount,1)">SubMenu_coords4</include>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onback>50</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">99</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
-			</include>
+			<include>SubMenuFrameWithViews</include>
 			
-			<!-- View -->
-			<control type="button" id="99">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
-				<onclick>Control.SetFocus(3002)</onclick>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuRowView</include>
 			
 			<!-- Set default view for video add-ons -->
 			<control type="button" id="98">
@@ -1351,13 +813,7 @@
 				<visible>Integer.IsGreater(Container.ViewCount,1) + String.StartsWith(Container.FolderPath,plugin://plugin.video)</visible>
 			</control>
 			
-			<!-- Show titles on artwork -->
-			<control type="button" id="97">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31449]</label>
-				<include>OpenArtworkTitles</include>
-				<visible>$EXP[WallViewActive]</visible>
-			</control>
+			<include>SubMenuRowArtworkTitles</include>
 			
 			<!-- Disable video watched status in library -->
 			<control type="radiobutton" id="72">
@@ -1367,55 +823,20 @@
 				<selected>Skin.HasSetting(VideoWatchedStatus)</selected>
 			</control>
 
-			<!-- Seperator -->
-			<control type="image" id="80">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
-			</control>
+			<include>SubMenuSeparatorWithViews</include>
 
-			<!-- Sort by -->
-			<control type="button" id="3">
-				<include>SubMenu_coords5</include>
-				<label>103</label>
-				<visible>Control.IsEnabled(3)</visible>
-			</control>
-			<!-- Sort ascending/descending -->
-			<control type="togglebutton" id="4">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-				<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
-				<usealttexture>Container.SortDirection(Descending)</usealttexture>
-				<visible>Control.IsEnabled(4)</visible>
-			</control>
+			<include>SubMenuRowSortBy</include>
+			<include>SubMenuRowSortDirection</include>
 			<!-- Watched toggle -->
 			<control type="radiobutton" id="14">
 				<include>SubMenu_coords6</include>
 				<label>20367</label>
 				<visible>Control.IsEnabled(14)</visible>
 			</control>
-			<!-- Filter -->
-			<control type="edit" id="19">
-				<include>SubMenu_coords5</include>
-				<label>587</label>
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-			</control>
-			<!-- Filter -->
-			<control type="radiobutton" id="93">
-				<include>SubMenu_coords6</include>
-				<label>587</label>
-				<onclick>Right</onclick>
-				<onclick>Right</onclick>
-				<onclick>Filter</onclick>
-				<selected>Container.Filtered</selected>
-				<visible>Container.CanFilterAdvanced</visible>
-			</control>
+			<include>SubMenuRowFilter</include>
+			<include>SubMenuRowFilterAdvanced</include>
 
-			<!-- Seperator -->
-			<control type="image" id="81">
-				<include>SubMenu_coords7</include>
-				<texture>transparent.png</texture>
-			</control>
+			<include>SubMenuSeparator</include>
 			
 			<!-- Open playlist -->
 			<control type="button" id="91">
@@ -1460,14 +881,7 @@
 				<onclick condition="System.AddonIsEnabled(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
 				<visible>Container.Content() + String.IsEmpty(Container.PluginName)</visible>
 			</control>
-			<!-- Addon Settings -->
-			<control type="button" id="624">
-				<include>SubMenu_coords5</include>
-				<label>$LOCALIZE[10140]</label>
-				<visible>Control.IsEnabled(624)</visible>
-				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-				<visible>!String.IsEmpty(Container.PluginName)</visible>
-			</control>
+			<include>SubMenuRowAddonSettings</include>
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
@@ -1484,17 +898,8 @@
 	<!-- My weather sub menu -->
 	<include name="SubMenu_MyWeather">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>100</onleft>
-			<onright>100</onright>
-			<onback>100</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
+			<include content="SubMenuFrame">
+				<param name="nav">100</param>
 			</include>
 
 			<!-- Location control -->
@@ -1518,17 +923,8 @@
 	<!-- Settings sub menu -->
 	<include name="SubMenu_Settings">
 		<control type="grouplist" id="3001">
-			<include>SubMenu_coords4</include>
-			<onleft>3</onleft>
-			<onright>3</onright>
-			<onback>3</onback>
-			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<defaultcontrol always="true">3</defaultcontrol>
-
-			<include content="SubMenuAnimation">
-				<param name="containerID">3001</param>
+			<include content="SubMenuFrame">
+				<param name="nav">3</param>
 			</include>
 
 			<!-- Interface -->
