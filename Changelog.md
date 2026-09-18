@@ -794,6 +794,7 @@ script-skinshortcuts-static.xml:
 - store it with unix line endings, which is what the add-on writes
 - rebuild it again for the two row view, so it reaches the users the file exists for
 - rebuild it once more for the seeded sorts, which reach the generated content elements of the five widgets that gained one
+- rebuild it against Skin Shortcuts 3.0.3 from a clean profile, picking up everything the configuration gained on this branch
 
 script-skinshortcuts.xml:
 - draw the fanart layer only when the item has fanart, and drop the transparent fallback behind it
