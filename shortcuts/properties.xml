@@ -19,16 +19,12 @@
 			<option value="Art(banner)" label="$LOCALIZE[31248]" />
 			<option value="Art(tvshow.banner)" label="$LOCALIZE[31249]" />
 			<option value="Art(season.banner)" label="$LOCALIZE[31250]" />
-			<option value="Art(clearlogo)" label="$LOCALIZE[31251]" />
-			<option value="Art(tvshow.clearlogo)" label="$LOCALIZE[31252]" />
 			<option value="Art(clearart)" label="$LOCALIZE[31253]" />
 			<option value="Art(tvshow.clearart)" label="$LOCALIZE[31254]" />
 			<option value="Art(characterart)" label="$LOCALIZE[31255]" />
 			<option value="Art(tvshow.characterart)" label="$LOCALIZE[31256]" />
 			<option value="Art(landscape)" label="$LOCALIZE[31257]" />
 			<option value="Art(tvshow.landscape)" label="$LOCALIZE[31258]" />
-			<option value="FAKELANDSCAPE" label="$LOCALIZE[31259]" />
-			<option value="FAKETVLANDSCAPE" label="$LOCALIZE[31260]" />
 		</include>
 	</includes>
 

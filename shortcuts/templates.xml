@@ -35,26 +35,12 @@
 
 	<propertyGroups>
 		<propertyGroup name="widgetArtwork">
-			<!-- Fake landscape composes fanart with a logo, so it needs its own include
-			     and its own emptiness test; every other art type tests itself. -->
-			<var name="primaryArt">
-				<value condition="widgetArt=FAKELANDSCAPE">widget-fakelandscape</value>
-				<value condition="widgetArt=FAKETVLANDSCAPE">widget-faketvlandscape</value>
-				<value>widget-image</value>
-			</var>
-			<var name="secondaryArt">
-				<value condition="widgetFallbackArt=FAKELANDSCAPE">widget-fakelandscape</value>
-				<value condition="widgetFallbackArt=FAKETVLANDSCAPE">widget-faketvlandscape</value>
-				<value>widget-image</value>
-			</var>
+			<!-- Every art type is an info label suffix, so one image include draws them all and each
+			     tests itself for emptiness. -->
 			<var name="secondaryVisibility">
-				<value condition="widgetArt=FAKELANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(clearlogo))</value>
-				<value condition="widgetArt=FAKETVLANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</value>
 				<value>String.IsEmpty(ListItem.$PROPERTY[widgetArt])</value>
 			</var>
 			<var name="fallbackVisibility">
-				<value condition="widgetFallbackArt=FAKELANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(clearlogo))</value>
-				<value condition="widgetFallbackArt=FAKETVLANDSCAPE">String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</value>
 				<value>String.IsEmpty(ListItem.$PROPERTY[widgetFallbackArt])</value>
 			</var>
 			<var name="artFallback">
@@ -593,7 +579,7 @@
 				<onclick condition="String.IsEqual(ListItem.DBTYPE,set) + !String.StartsWith(ListItem.FileNameAndPath,plugin://)">$VAR[WidgetOnClickMovieSet]</onclick>
 
 				<itemlayout condition="![$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])]" width="$PROPERTY[layoutWidth]" height="$PROPERTY[layoutHeight]">
-					<include content="$PROPERTY[primaryArt]">
+					<include content="widget-image">
 						<description>Primary art</description>
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -603,7 +589,7 @@
 						<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 						<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 					</include>
-					<include content="$PROPERTY[secondaryArt]">
+					<include content="widget-image">
 						<description>Fallback art</description>
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -647,7 +633,7 @@
 						<animation effect="fade" start="100" end="0" time="0" reversible="false">Unfocus</animation>
 						<control type="group">
 							<visible>!System.HasActiveModalDialog + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
-							<include content="$PROPERTY[primaryArt]">
+							<include content="widget-image">
 								<description>Primary art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -656,7 +642,7 @@
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 							</include>
-							<include content="$PROPERTY[secondaryArt]">
+							<include content="widget-image">
 								<description>Fallback art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -691,7 +677,7 @@
 						</control>
 						<control type="group">
 							<visible>System.HasActiveModalDialog | !Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
-							<include content="$PROPERTY[primaryArt]">
+							<include content="widget-image">
 								<description>Primary art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -701,7 +687,7 @@
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 							</include>
-							<include content="$PROPERTY[secondaryArt]">
+							<include content="widget-image">
 								<description>Fallback art</description>
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -740,7 +726,7 @@
 					</control>
 					<control type="group">
 						<animation effect="fade" start="100" end="0" time="0" reversible="false">Focus</animation>
-						<include content="$PROPERTY[primaryArt]">
+						<include content="widget-image">
 							<description>Primary art</description>
 							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -750,7 +736,7 @@
 							<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 							<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 						</include>
-						<include content="$PROPERTY[secondaryArt]">
+						<include content="widget-image">
 							<description>Fallback art</description>
 							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
@@ -790,7 +776,7 @@
 				</focusedlayout>
 
 				<itemlayout condition="[$EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index])]" width="$PROPERTY[rowWidth]" height="$PROPERTY[rowHeight]">
-					<include content="$PROPERTY[primaryArt]">
+					<include content="widget-image">
 						<description>Primary art</description>
 						<param name="left">$PROPERTY[rowImageLeft]</param>
 						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -800,7 +786,7 @@
 						<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 						<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 					</include>
-					<include content="$PROPERTY[secondaryArt]">
+					<include content="widget-image">
 						<description>Fallback art</description>
 						<param name="left">$PROPERTY[rowImageLeft]</param>
 						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -844,7 +830,7 @@
 						<animation effect="fade" start="100" end="0" time="0" reversible="false">Unfocus</animation>
 						<control type="group">
 							<visible>!System.HasActiveModalDialog + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
-							<include content="$PROPERTY[primaryArt]">
+							<include content="widget-image">
 								<description>Primary art</description>
 								<param name="left">$PROPERTY[rowImageLeft]</param>
 								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -853,7 +839,7 @@
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 							</include>
-							<include content="$PROPERTY[secondaryArt]">
+							<include content="widget-image">
 								<description>Fallback art</description>
 								<param name="left">$PROPERTY[rowImageLeft]</param>
 								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -888,7 +874,7 @@
 						</control>
 						<control type="group">
 							<visible>System.HasActiveModalDialog | !Control.HasFocus(10$PARENT[index]0$PROPERTY[index])</visible>
-							<include content="$PROPERTY[primaryArt]">
+							<include content="widget-image">
 								<description>Primary art</description>
 								<param name="left">$PROPERTY[rowImageLeft]</param>
 								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -898,7 +884,7 @@
 								<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 								<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 							</include>
-							<include content="$PROPERTY[secondaryArt]">
+							<include content="widget-image">
 								<description>Fallback art</description>
 								<param name="left">$PROPERTY[rowImageLeft]</param>
 								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -937,7 +923,7 @@
 					</control>
 					<control type="group">
 						<animation effect="fade" start="100" end="0" time="0" reversible="false">Focus</animation>
-						<include content="$PROPERTY[primaryArt]">
+						<include content="widget-image">
 							<description>Primary art</description>
 							<param name="left">$PROPERTY[rowImageLeft]</param>
 							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
@@ -947,7 +933,7 @@
 							<param name="art">$INFO[ListItem.$PROPERTY[widgetArt]]</param>
 							<param name="visible">![$PROPERTY[secondaryVisibility]]</param>
 						</include>
-						<include content="$PROPERTY[secondaryArt]">
+						<include content="widget-image">
 							<description>Fallback art</description>
 							<param name="left">$PROPERTY[rowImageLeft]</param>
 							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>

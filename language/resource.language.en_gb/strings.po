@@ -1230,16 +1230,6 @@ msgid "Season Banner"
 msgstr ""
 
 #: /Variables.xml
-msgctxt "#31251"
-msgid "Clear Logo"
-msgstr ""
-
-#: /Variables.xml
-msgctxt "#31252"
-msgid "TV Show Clear Logo"
-msgstr ""
-
-#: /Variables.xml
 msgctxt "#31253"
 msgid "Clear Art"
 msgstr ""
@@ -1267,16 +1257,6 @@ msgstr ""
 #: /Variables.xml
 msgctxt "#31258"
 msgid "TV Show Landscape"
-msgstr ""
-
-#: /Variables.xml
-msgctxt "#31259"
-msgid "Fake Landscape"
-msgstr ""
-
-#: /Variables.xml
-msgctxt "#31260"
-msgid "Fake TV Show Landscape"
 msgstr ""
 
 #: /Variables.xml

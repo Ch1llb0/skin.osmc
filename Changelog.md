@@ -28,7 +28,8 @@ _Improved_
 - consolidate codec and audio channel labels into shared lookup maps
 - allow any item limit to be set for main menu widgets
 - localise the artwork type names in the main menu widget artwork pickers
-- offer every artwork type when picking main menu widget artwork, rather than only the ones the widget's content provides
+- stop the widget artwork picker hiding the types the preview items lack
+- remove the clear logo and fake landscape widget artwork types
 - remove the always show settings link setting, as the settings item can no longer be taken off the main menu
 - offer date sorting on live TV and radio widgets
 - disable the delete and hide buttons on menu items that cannot be removed, and the restore button while nothing has been deleted
@@ -667,6 +668,7 @@ strings.po:
 - add string for the two widgets on screen setting (31447)
 - add string describing what the two widgets on screen setting does (31448)
 - add string for the artwork titles setting (31449)
+- retire the clear logo, TV show clear logo, fake landscape and fake TV show landscape labels (31251, 31252, 31259, 31260)
 
 backgrounds.xml:
 - add the background list, splitting the v2 browse behaviour into the two v3 types the skin renders: browse for a single image, multi for a folder
@@ -712,6 +714,7 @@ properties.xml:
 - note why those two need a default at all: neither has a home in a widget definition, so the picker never writes them and only the widgets the menu seeds carried them
 - offer year for songs and playcount for albums and songs, the sorts the recently released and most played widgets of those types are ordered by and could not otherwise have shown
 - offer top250 for movies under Kodi's own 13409, which is the label Kodi gives that sort method itself, so the Top 250 widget can say what it is ordered by
+- drop Art(clearlogo), Art(tvshow.clearlogo), FAKELANDSCAPE and FAKETVLANDSCAPE from artTypes: v2 offered them only when the preview held that art, and a v3 option condition cannot reach a Kodi info label
 
 template.xml:
 - remove the v2 widget templates, carried into templates.xml
@@ -745,6 +748,8 @@ templates.xml:
 - turn the two row focus zoom about the art's centre, as the art is neither the width of its slot nor centred in it
 - draw each widget's own name below it and the detail text of its focused item, dropping both the moment focus leaves so neither flashes the next widget's item on the way out
 - leave the weather widget on the single layout, marking it with a hidden label the two row tests read, as its hand placed internals cannot share a row
+- drop primaryArt and secondaryArt, now that every artwork type is an info label suffix one image include draws, and name widget-image at the sixteen call sites they stood in front of
+- reduce secondaryVisibility and fallbackVisibility to the emptiness test each type makes of itself
 
 widgets.xml:
 - add the widget list, giving every widget a unique name, as v3 looks a widget up by name to re-derive its path, type and target on every build
@@ -938,6 +943,7 @@ Includes_Widgets.xml:
 - send up and down at the shared widget of an odd numbered set to the paging buttons, defaulting the menu name so a fallback built before this never takes that branch
 - select the fading widget by page rather than by widget when two are on screen, keeping the effects and timings that move between single widgets
 - hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
+- remove widget-fakelandscape and widget-faketvlandscape, the two composition includes the dropped artwork types were the only callers of
 
 Includes_Windows_Dialogs.xml:
 - add the scroll reset include: two conditional actions that flip one property as a window loads, in place of twenty includes that set twenty five properties and cleared each one from an alarm clock a frame later
