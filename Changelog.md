@@ -866,6 +866,9 @@ Coordinates_*.xml:
 Custom_Debug_Grid.xml:
 - include the coordinates under the name they are defined with, restoring the offset the masked aspect ratios apply
 
+Defaults.xml:
+- give the scrollbar, the game controller list and the game window a WindowDepth, as every other default block has
+
 DialogMusicInfo.xml:
 - separate genres with commas
 
@@ -932,6 +935,7 @@ Includes_SubMenu.xml:
 - send back from the view picker to the sub menu it was opened from rather than out to the list, which closed both
 - drop the HasAddon conjunct that AddonIsEnabled already implies
 - add the provider window's sub menu, listing the other PVR sections as every PVR window does; nothing points into providers, which is reached from the TV and radio listings
+- let SubMenu_FavouritesBrowser use SubMenuFrameWithViews like its ten neighbours, gaining with it the defaultcontrol it was missing
 
 Includes_Time_NowPlaying.xml:
 - hide duration based information during live playback
