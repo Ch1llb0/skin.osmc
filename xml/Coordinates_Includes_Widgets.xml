@@ -428,10 +428,8 @@
 		<height>326</height>
 	</include>
 	
-	<!-- Two widgets on screen. Every layout lands its poster bottom twelve pixels above this, so
-	     one details top serves them all; how far row 1 sits below comes from the layout's own
-	     rowStride. These vertical numbers are shared by every aspect ratio; the other ratios
-	     need their own left and width and nothing else. -->
+	<!-- Two widgets on screen. Every layout lands its poster bottom twelve above this, so one
+	     details top serves them all. -->
 	<include name="widgetTwoRowDetails-row0">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetTwoRowDetails-row0_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetTwoRowDetails-row0_21:9</include>
@@ -475,9 +473,8 @@
 		<width>1212</width>
 		<height>360</height>
 	</include>
-	<!-- The other ratios are inert on this branch and are the sibling branches to set,
-	     but their boxes have to be a whole number of the one widget slot, now 256
-	     rather than 240 for tall and square-small, or a sliver of the next poster shows. -->
+	<!-- The sibling branches set the other ratios. A box must hold a whole number of widget slots,
+	     or a sliver of the next poster shows. -->
 	<include name="widgetLayout-tall-OSMC_21:9">
 		<left>520</left>
 		<top>340</top>

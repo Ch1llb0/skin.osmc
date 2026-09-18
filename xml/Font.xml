@@ -261,11 +261,8 @@
 			<style>italics</style>
 		</font>
 		
-		<!-- Wall view titles, one size per strip height the walls and the home widgets use.
-		     They carry the suffix because the smallest of them cannot go without it: font
-		     lookup ignores case, so a font called Font13 answers to font13, the name Kodi
-		     gives its own default font, and an eleven pixel font would be handed to
-		     everything that asks for the default one. -->
+		<!-- Wall view titles, one per strip height. The suffix is not optional: font lookup ignores
+		     case, and Font13 would answer to font13, Kodi's own default font. -->
 		<font>
 			<name>Font13-title</name>
 			<filename>SourceSansPro-Regular.ttf</filename>
@@ -637,11 +634,8 @@
 			<aspect>0.92</aspect>
 		</font>
 		
-		<!-- Wall view titles, one size per strip height the walls and the home widgets use.
-		     They carry the suffix because the smallest of them cannot go without it: font
-		     lookup ignores case, so a font called Font13 answers to font13, the name Kodi
-		     gives its own default font, and an eleven pixel font would be handed to
-		     everything that asks for the default one. -->
+		<!-- Wall view titles, one per strip height. The suffix is not optional: font lookup ignores
+		     case, and Font13 would answer to font13, Kodi's own default font. -->
 		<font>
 			<name>Font13-title</name>
 			<filename>Arial.ttf</filename>

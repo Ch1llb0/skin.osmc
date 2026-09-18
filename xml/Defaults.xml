@@ -248,10 +248,9 @@
 		<include>WindowDepth</include>
 	</default>
 	
-	<!-- Every scrollbar in the skin looks like this; only where it sits, which way it runs
-	     and whether the setting hides it belong to the control. -->
+	<!-- Every scrollbar looks like this; where it sits and whether the setting hides it belong to
+	     the control. -->
 	<default type="scrollbar">
-		<include>WindowDepth</include>
 		<showonepage>false</showonepage>
 		<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 		<textureslidernib></textureslidernib>
@@ -260,7 +259,6 @@
 	</default>
 
 	<default type="gamecontrollerlist">
-		<include>WindowDepth</include>
 		<texture>$INFO[ListItem.Icon]</texture>
 		<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
 		<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
@@ -268,10 +266,8 @@
 		<include>WindowDepth</include>
 	</default>
 
-	<!-- What the game window shows is the same wherever it is shown; its size is not, and
-	     stays with the control as every other size in the skin does. -->
+	<!-- What the game window shows is the same everywhere; its size stays with the control. -->
 	<default type="gamewindow">
-		<include>WindowDepth</include>
 		<pixels>$INFO[ListItem.FilenameAndPath]</pixels>
 		<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
 		<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>

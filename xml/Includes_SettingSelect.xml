@@ -1,80 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<!-- The setting select dialog, and what every setting that uses it hands over.
-
-	     Kodi can pop up a select list of its own, but Skin.SelectBool writes bools, takes a
-	     single answer and keeps no list of its own, so it can serve neither a setting held as
-	     a string nor a setting whose answer is any number of answers at once. This dialog
-	     serves both, and knows nothing about any setting: a caller writes what it wants into
-	     window properties and opens it.
-
-	     SettingSelect.Mode says which of the three it is.
-
-	     one - a list of answers of which one is the setting's, the setting being a string.
-	     Clicking a row writes the setting and closes the dialog, so there is nothing to
-	     confirm and no OK button:
-
-	       SetProperty(SettingSelect.Mode,one,Home)
-	       SetProperty(SettingSelect.Heading,$LOCALIZE[31102],Home)
-	       SetProperty(SettingSelect.Setting,HideOSD,Home)
-	       SetProperty(SettingSelect.Current,$INFO[Skin.String(HideOSD)],Home)
-	       SetProperty(SettingSelect.Rows,2,Home)
-	       SetProperty(SettingSelect.1.Label,$LOCALIZE[13108],Home)
-	       SetProperty(SettingSelect.1.Value,Always,Home)
-	       ...
-	       ActivateWindow(1102)
-
-	     The row whose Value reads the same as Current is the one the setting is on. The two
-	     are compared against each other rather than against anything written here, which is
-	     what lets a caller name its answers and leave the dialog to find the current one.
-
-	     onebool - the same list, but the answer is which one of a set of switches is on
-	     rather than what a string says. A row's Value is the name of its switch, and a
-	     click turns every one of them off and that one on. This is what Skin.SelectBool
-	     does, and the only reason to prefer it is a setting already written as switches:
-
-	       SetProperty(SettingSelect.Mode,onebool,Home)
-	       SetProperty(SettingSelect.Heading,$LOCALIZE[31410],Home)
-	       SetProperty(SettingSelect.Rows,2,Home)
-	       ClearProperty(SettingSelect.Current,Home)
-	       SetProperty(SettingSelect.1.Label,$LOCALIZE[535],Home)
-	       SetProperty(SettingSelect.1.Value,DefaultVideosViewList,Home)
-	       SetProperty(SettingSelect.Current,DefaultVideosViewList,Home)  when that one is on
-	       ...
-	       ActivateWindow(1102)
-
-	     many - the same set of switches, but any number of them can be on. Clicking a row writes its
-	     State property and nothing else; OK writes every row and closes, Cancel and Back
-	     close and leave the settings as they were found:
-
-	       SetProperty(SettingSelect.Mode,many,Home)
-	       SetProperty(SettingSelect.Heading,$LOCALIZE[31449],Home)
-	       SetProperty(SettingSelect.Rows,8,Home)
-	       SetProperty(SettingSelect.1.Label,$LOCALIZE[342],Home)
-	       SetProperty(SettingSelect.1.Setting,ArtworkTitlesMovies,Home)
-	       SetProperty(SettingSelect.1.State,on,Home)   when the setting is on
-	       SetProperty(SettingSelect.1.State,off,Home)  when it is not
-	       ActivateWindow(1102)
-
-	     A row past the Rows count is not drawn and counts for nothing, which is what keeps
-	     one caller's rows out of the next one's. In many mode a row whose Requires property
-	     is set is greyed out until some row that requires nothing is on.
-
-	     A row is a label and a state and nothing else: there is no icon beside it and no
-	     artwork for a caller to hand over, so the text starts at the same left edge as the
-	     line that marks it. The dialog sits where the select dialog's own list sits and is
-	     lettered the same way, the row under the cursor written in bold over a line.
-
-	     A row that is on is written in the selected colour whether the cursor stands on it or
-	     not, since that colour is the only thing that says it is on. A row that is off takes
-	     the focus colour under the cursor and the plain one away from it.
-
-	     The dialog draws 30 rows. It cannot draw an unbounded number: a skin declares its
-	     controls once, when the skin is loaded, and has no way to grow a list at runtime. An
-	     unused row is invisible and takes part in neither layout nor navigation, so the count
-	     costs nothing but the markup below and can be raised by adding rows here and in
-	     Custom_Setting_Select.xml. -->
+	<!-- The setting select dialog. A caller writes its answers into SettingSelect.* window
+	     properties and opens it; the three modes and the properties each takes are in CLAUDE.md. -->
 
 
 	<include name="SettingSelectRow">
@@ -83,9 +11,8 @@
 				<include>Custom_Setting_Select_coords2</include>
 				<visible>Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),$PARAM[row])</visible>
 
-				<!-- What is clicked. A button carries one font and one colour for every state it
-				     can be in, and a row has five, so the button draws nothing at all: it keeps
-				     the clicking and the navigation, and the text is drawn over it. -->
+				<!-- What is clicked. A button carries one font and colour per state and a row has five, so
+				     the button draws nothing and the text is drawn over it. -->
 				<control type="button" id="$PARAM[id]">
 					<include>Custom_Setting_Select_coords2</include>
 					<label></label>
@@ -213,9 +140,8 @@
 			<onleft>9002</onleft>
 			<onright>9002</onright>
 			
-			<!-- OK. In many mode nothing has been written until this is clicked, so every row is
-			     written here, the ones that were never touched along with the ones that were. In
-			     one mode the click on the row has already written the setting and closed. -->
+			<!-- OK. In many mode nothing is written until this is clicked, so every row is written here.
+			     In one mode the row wrote the setting and closed. -->
 			<control type="button" id="10">
 				<width>auto</width>
 				<font>Font36</font>
@@ -351,10 +277,8 @@
 		<onclick>ActivateWindow(1102)</onclick>
 	</include>
 
-	<!-- Which kinds of video show their information when playback begins, and which show
-	     it before playback ends. Five switches and four, each of which was a row of its
-	     own under the setting it belongs to, so a settings page that is long already
-	     carried nine rows of the same question. -->
+	<!-- Which kinds of video show their information at the start of playback, and which before the
+	     end. Nine rows of the same question, in one dialog each. -->
 	<include name="OpenVideoInfoStart">
 		<onclick>SetProperty(SettingSelect.Mode,many,Home)</onclick>
 		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31123],Home)</onclick>
@@ -414,11 +338,8 @@
 		<onclick>ActivateWindow(1102)</onclick>
 	</include>
 
-	<!-- What each setting that takes one answer out of a list hands the dialog. Every one
-	     of them used to be a button that stepped to the next answer on every click, which
-	     says nothing about what the other answers are and takes eight clicks to get past a
-	     wrong one. The button still shows the answer the setting is on; clicking it now
-	     shows the list. -->
+	<!-- What each setting that takes one answer out of a list hands the dialog. The button still
+	     shows the answer it is on; clicking it now shows the list. -->
 
 	<include name="OpenWidgetOnClickAlbum">
 		<onclick>SetProperty(SettingSelect.Mode,one,Home)</onclick>
@@ -760,10 +681,7 @@
 		<onclick>ActivateWindow(1102)</onclick>
 	</include>
 
-	<!-- What each setting whose answer is one switch out of a set hands the dialog. These
-	     two were the skinning engine's own select list, which draws the answers but writes
-	     bools and knows nothing of the rest of the dialog; they read the same way as the
-	     settings above now. -->
+	<!-- What each setting whose answer is a set of switches hands the dialog. -->
 
 	<include name="OpenDefaultColorSet">
 		<onclick>SetProperty(SettingSelect.Mode,onebool,Home)</onclick>
@@ -845,12 +763,8 @@
 		<onclick>ActivateWindow(1102)</onclick>
 	</include>
 
-	<!-- Where the cursor starts. The select dialog puts it on the first answer that is
-	     on and on the first row when none of them is, and these run after the window has
-	     focused its default control, so they are what decides. They are written backwards
-	     so that the lowest row that is on runs last and has the final say; written the
-	     other way round each row would have to say that no row above it is on. A row the
-	     caller did not fill in, or one that is out of reach, is no place to start. -->
+	<!-- Where the cursor starts: the first answer that is on, else the first row. Written
+	     backwards so the lowest row that is on runs last and has the say. -->
 	<include name="SettingSelectFocus">
 		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.30.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.30.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.30.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9130)</onload>
 		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),29) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.29.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.29.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.29.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9129)</onload>

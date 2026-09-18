@@ -122,8 +122,8 @@
 	<include file="Includes_Time_NowPlaying.xml" />
 	<include file="Includes_Widgets.xml" />
 	<include file="Includes_Windows_Dialogs.xml" />
-	<!-- Skin Shortcuts generates the includes file; the static file is the default menu we ship for
-	     when it is absent. See "The no-addon fallback" in CLAUDE.md before regenerating the latter. -->
+	<!-- Skin Shortcuts generates the includes; the static file is the menu we ship for when it is
+	     absent. See CLAUDE.md before regenerating it. -->
 	<include condition="System.AddonIsEnabled(script.skinshortcuts)" file="script-skinshortcuts-includes.xml" />
 	<include condition="!System.AddonIsEnabled(script.skinshortcuts)" file="script-skinshortcuts-static.xml" />
 	<include file="Variables.xml" />

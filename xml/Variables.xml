@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<!-- The view a video add-on page is put into once the list has been answered. The sub
-	     menu runs this after the dialog closes rather than a row of conditional actions,
-	     because a control decides which of its actions to run before the first of them
-	     starts - and the first of them is the dialog. A variable is read when the action
-	     runs, by which time the answer is the new one. -->
+	<!-- The view a video add-on page is put into. A control decides which of its actions to run
+	     before the first one starts, and the first is the dialog, so the answer is read here
+	     instead. -->
 	<variable name="DefaultVideosViewMode">
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</value>
@@ -70,8 +68,8 @@
 		<value condition="Skin.HasSetting(TextHighlight)">00FFFFFF</value>
 	</variable>
 	
-	<!-- The line under a focused row is three pixels tall and is placed by the control,
-	     not by empty rows in the texture, so it stays sharp however the skin is scaled. -->
+	<!-- The line under a focused row is placed by the control, not by empty rows in its texture,
+	     so it stays sharp at any scale. -->
 	<variable name="ResetScroll">
 		<value condition="$EXP[ResetScrollOverlay]">$INFO[Window(Home).Property(ResetScroll)][B][/B]</value>
 		<value>$INFO[Window(Home).Property(ResetScroll)]</value>
@@ -120,9 +118,8 @@
 	</variable>
 	
 	<!-- Busy spinner -->
-	<!-- Two sizes of the same spinner: the dialog draws it at 200, everything else at 60 or
-	     below, and an unsized image control takes the texture's own size, so the small one has
-	     to be a texture of its own rather than the large one scaled down. -->
+	<!-- Two sizes of the same spinner: an unsized image control takes the texture's own size, so
+	     the small one is a texture of its own rather than the large one scaled down. -->
 	<variable name="BusySpinner">
 		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.gif</value>
 		<value>busy.gif</value>
@@ -568,11 +565,9 @@
 		<value condition="[Container.Content(files) | Container.Content(games) | Container.Content(images)] + !String.IsEmpty(ListItem.Date)">$INFO[ListItem.Date,$LOCALIZE[21820]: ,]</value>
 	</variable>
 	
-	<!-- Kodi builds an episode label of its own, 1x05. Title, through the %H mask, and the
-	     plain list view and the widgets show that label raw. This puts the skin's SxxExx in
-	     its place and hands every other kind of item back unchanged, so the track number a
-	     song carries in its label survives. The test is on the item, not on the container,
-	     because widgets, smart playlists and library folders carry mixed or no content. -->
+	<!-- Kodi builds an episode label of its own through the %H mask. This puts the skin's
+	     numbering in its place and hands every other item back unchanged, so a song keeps its
+	     track number. -->
 	<variable name="ListLabel">
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.Title)">$VAR[SElist,, &#8226; ]$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
@@ -692,10 +687,8 @@
 	</variable>
 	
 	<!-- Audio stream label -->
-	<!-- The stream selection dialogs write a track as language, then a dash and the track
-	     name where it has one, and fall back to Unknown for a language they cannot expand.
-	     AudioLanguageEx and SubtitleLanguageEx do that expansion and that fallback already,
-	     so reading them keeps the player reading the same way the dialog does. -->
+	<!-- The stream selection dialogs write a track as language, a dash and the name;
+	     AudioLanguageEx and SubtitleLanguageEx already expand and fall back the same way. -->
 	<variable name="VideoPlayerAudioLanguage">
 		<value condition="!String.IsEmpty(VideoPlayer.AudioLanguageEx) + !String.IsEmpty(VideoPlayer.AudioName)">$INFO[VideoPlayer.AudioLanguageEx, (,]$INFO[VideoPlayer.AudioName, - ,)]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.AudioName)">$INFO[VideoPlayer.AudioName, (,)]</value>
@@ -764,10 +757,8 @@
 		<value condition="String.IsEqual(VideoPlayer.Season,0)">$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
-	<!-- One definition of the skin's episode numbering, so every view writes it the
-	     same way. The season and the episode are padded on their own, because a skin
-	     format string cannot pad a number. Season zero is the specials folder and
-	     carries no season at all. -->
+	<!-- One definition of the skin's episode numbering. Season and episode are padded on their
+	     own, as a format string cannot pad a number. Season zero is the specials folder. -->
 	<variable name="SEnumber">
 		<value condition="Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0,]</value>
 		<value condition="Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E,]</value>
@@ -776,8 +767,8 @@
 		<value condition="String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 
-	<!-- The big list view has the room to spell the season and the episode out, and does so
-	     deliberately. Everywhere else the skin writes SxxExx from SEnumber. -->
+	<!-- The big list view spells the season and the episode out; everywhere else the skin writes
+	     SxxExx. -->
 	<variable name="SEListView">
 		<value condition="!String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Season,$LOCALIZE[20373] , &#8226; ]$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
 		<value condition="String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>

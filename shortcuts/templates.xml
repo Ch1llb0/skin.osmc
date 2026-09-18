@@ -10,21 +10,9 @@
 			<values layoutWidth="240" layoutHeight="360" imageWidthNoFocus="216" imageHeightNoFocus="324" imageWidthFocus="240" imageHeightFocus="360" overlayHeight="24" overlayFont="Font23-title" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
 		</preset>
 
-		<!-- The two row poster and the gap beside it are the same on every aspect ratio; only the
-		     box width, and so the number of icons, changes. A box has to leave the slot past its
-		     last poster outside itself: Kodi's scroll window is the whole slots the box holds, so
-		     a poster drawn beyond that would scroll the row a column early. rowHeight is the
-		     row's own box, which the focus zoom fills exactly; rowOffsetY is set from it, landing
-		     every layout's poster bottom on 445, and rowStride is the whole block below one
-		     poster, so row 1's art always starts twenty pixels under row 0's details. Each
-		     layout's art is the same fraction of its one widget art, so the four keep the sizes
-		     they have always had relative to one another; the 173 slot layouts set that fraction,
-		     since the 4:3 box holds their art below the nine tenths of a slot the skin fills
-		     elsewhere. rowImageLeft sits the art in its slot: centred, unless the box's leftover
-		     past its last whole slot is wider than that, in which case the art moves right by
-		     just enough that the slot after the last one starts its art outside the box. Kodi
-		     draws one item past the ones it pages, clipped, so anything nearer than that shows
-		     as a sliver of the next poster at the row's end. -->
+		<!-- Widget geometry. A box holds whole slots only: a poster past the last one scrolls the row
+		     a column early. rowHeight is the row's box, rowOffsetY lands every poster bottom on 445,
+		     rowStride is the block below one poster. -->
 		<preset name="widgetLayoutTwoRow">
 			<values condition="layout=wide" rowOffsetY="-163" rowStride="289" rowWidth="213" rowHeight="148" rowImageWidthNoFocus="177" rowImageHeightNoFocus="133" rowImageWidthFocus="196" rowImageHeightFocus="148" rowImageLeft="18" rowOverlayHeight="20" rowoverlayFont="Font20-title" rowoverlayScrollSpeed="32" rowoverlayPad="7" rowoverlayTitleRight="47" rowoverlayBadgeShift="61.5" rowOverlaySlide="10" />
 			<values condition="layout=square" rowOffsetY="-131" rowStride="333" rowWidth="213" rowHeight="196" rowImageWidthNoFocus="177" rowImageHeightNoFocus="177" rowImageWidthFocus="196" rowImageHeightFocus="196" rowImageLeft="18" rowOverlayHeight="20" rowoverlayFont="Font20-title" rowoverlayScrollSpeed="32" rowoverlayPad="7" rowoverlayTitleRight="47" rowoverlayBadgeShift="61.5" rowOverlaySlide="10" />
@@ -84,11 +72,10 @@
 			<!-- TV Shows: the season, watched and episode phrases are fragments below -->
 			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,tvshow) + $PROPERTY[widgetFocus] + Integer.IsEqual($PROPERTY[widgetItem].Property(TotalSeasons),0)">$INFO[$PROPERTY[widgetItem].TVShowTitle][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Year,, &#8226; ]$INFO[$PROPERTY[widgetItem].Property(TotalSeasons),, $LOCALIZE[36905]][/LIGHT]</value>
 			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,tvshow) + $PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].TVShowTitle][CR][LIGHT]$INFO[$PROPERTY[widgetItem].Year,, &#8226; ]$VAR[widgetTVSeasons]$VAR[widgetTVWatched]$VAR[widgetTVEpisodes][/LIGHT]</value>
-			<!-- Episodes Widget: the SxxExx code and the date line are fragments below. The row only
-			     applies when one of the two dates is set, as the enumerated rows did. -->
+			<!-- Episodes. The SxxExx code and the date line are fragments below. -->
 			<value condition="String.IsEqual($PROPERTY[widgetItem].DBTYPE,episode) + $PROPERTY[widgetFocus] + [!String.IsEmpty($PROPERTY[widgetItem].Premiered) | !String.IsEmpty($PROPERTY[widgetItem].Date)]">$VAR[widgetSeasonEpisode] &#8226; $INFO[$PROPERTY[widgetItem].Title][CR][LIGHT]$INFO[$PROPERTY[widgetItem].TVShowTitle]$VAR[widgetEpisodeDate][/LIGHT]</value>
-			<!-- PVR Channels. The now and next line is a fragment, so the row does not need a
-			     second copy of itself for channels that have no programme information. -->
+			<!-- PVR channels. Now and next is a fragment, so a channel without programme information
+			     needs no row of its own. -->
 			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].ChannelName) + !String.StartsWith($PROPERTY[widgetItem].Path,pvr://recordings/tv/) + [String.StartsWith($PROPERTY[widgetItem].Path,pvr://channels/) | String.StartsWith($PROPERTY[widgetItem].Path,pvr://timers/)]">$INFO[$PROPERTY[widgetItem].ChannelName]$INFO[$PROPERTY[widgetItem].ChannelNumberLabel, (,)]$VAR[widgetPVRNowNext]</value>
 			<!-- PVR Recordings -->
 			<value condition="$PROPERTY[widgetFocus] + !String.IsEmpty($PROPERTY[widgetItem].StartTime) + String.StartsWith($PROPERTY[widgetItem].Path,pvr://recordings/tv/)">$INFO[$PROPERTY[widgetItem].Label][CR][LIGHT]$INFO[$PROPERTY[widgetItem].StartDate]$INFO[$PROPERTY[widgetItem].StartTime, - ,][/LIGHT]</value>
@@ -99,14 +86,13 @@
 			<!-- Others -->
 			<value condition="$PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].Label]</value>
 		</variable>
-		<!-- The three phrases the TV show row is built from. Each is empty unless its own
-		     count is set, so the row needs no cross product of season, episode and watched. -->
+		<!-- The three phrases the TV show row is built from; each is empty unless its own count is
+		     set. -->
 		<variable name="widgetTVSeasons">
 			<value condition="$PROPERTY[widgetFocus] + Integer.IsEqual($PROPERTY[widgetItem].Property(TotalSeasons),1)">$INFO[$PROPERTY[widgetItem].Property(TotalSeasons),, $LOCALIZE[36904] &#8226; ]</value>
 			<value condition="$PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].Property(TotalSeasons),, $LOCALIZE[36905] &#8226; ]</value>
 		</variable>
-		<!-- Guarded on the episode count too: a show with no episodes shows no watched tally,
-		     which the enumerated rows achieved by simply not having a watched variant. -->
+		<!-- Guarded on the episode count too: a show with no episodes shows no watched tally. -->
 		<variable name="widgetTVWatched">
 			<value condition="$PROPERTY[widgetFocus] + Integer.IsGreater($PROPERTY[widgetItem].Property(WatchedEpisodes),0) + Integer.IsGreater($PROPERTY[widgetItem].Property(TotalEpisodes),0)">$INFO[$PROPERTY[widgetItem].Property(WatchedEpisodes),$LOCALIZE[16102]: , $LOCALIZE[1443] ]</value>
 		</variable>
@@ -114,8 +100,7 @@
 			<value condition="$PROPERTY[widgetFocus] + Integer.IsEqual($PROPERTY[widgetItem].Property(TotalEpisodes),1)">$INFO[$PROPERTY[widgetItem].Property(TotalEpisodes),, $LOCALIZE[36906]]</value>
 			<value condition="$PROPERTY[widgetFocus]">$INFO[$PROPERTY[widgetItem].Property(TotalEpisodes),, $LOCALIZE[36907]]</value>
 		</variable>
-		<!-- SxxExx, zero padded below ten. Specials carry no season, so they show the episode
-		     name instead; that row must come first because the padding rows assume a season. -->
+		<!-- SxxExx, zero padded below ten. Specials carry no season, so their row comes first. -->
 		<variable name="widgetSeasonEpisode">
 			<value condition="$PROPERTY[widgetFocus] + String.IsEqual($PROPERTY[widgetItem].Season,0)">$INFO[$PROPERTY[widgetItem].Episode,[UPPERCASE],[/UPPERCASE]]</value>
 			<value condition="$PROPERTY[widgetFocus] + !Integer.IsGreater($PROPERTY[widgetItem].Season,9) + !Integer.IsGreater($PROPERTY[widgetItem].Episode,9)">S0$INFO[$PROPERTY[widgetItem].Season]E0$INFO[$PROPERTY[widgetItem].Episode]</value>
@@ -215,10 +200,9 @@
 				<onfocus>Control.Move(1000$PROPERTY[index],1)</onfocus>
 			</control>
 
-			<!-- The second widget of an odd list is drawn on two pages, so up and down there turn
-			     the page and leave the selection where it is. Kodi reads a control's onup and
-			     ondown before it acts, so the branch is taken there rather than inside a button,
-			     where the first action would change what the rest of them test. -->
+			<!-- The second widget of an odd list is drawn on two pages, so up and down there turn the
+			     page. Kodi reads onup and ondown before it acts, so the branch belongs here rather than
+			     in a button. -->
 			<control type="button" id="9008">
 				<description>Show the shared widget on its earlier page</description>
 				<left>1100</left>
@@ -253,14 +237,9 @@
 
 	<template items="controlItems" source="widgets">
 		<controls>
-			<!-- The row a widget is chosen by, and what the heading and the spinner above it
-			     are counted from: no row, no widget, and nothing is drawn for it. A widget
-			     holds one while it has items or is fetching them. The weather widget is a
-			     list of skin items reading the properties the weather add-on writes, and
-			     Kodi clears those properties before every fetch, so during an update it has
-			     neither items nor an outlook, and it never reports itself as updating. It
-			     holds its row while Kodi is fetching a forecast, or while it has yet to
-			     return one, and the spinner has something to sit beside. -->
+			<!-- The row a widget is chosen by: no row, no widget, and nothing is drawn. The weather
+			     widget has no items of its own while the add-on fetches, so it holds its row on the
+			     fetch instead. -->
 			<item id="$PROPERTY[index]">
 				<label>$PROPERTY[widgetLabel]</label>
 				<visible>[Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0) | Container(10$PARENT[index]0$PROPERTY[index]).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook)) + !String.IsEqual(Container(10$PARENT[index]0$PROPERTY[index]).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
@@ -301,8 +280,8 @@
 
 	<template items="weatherWidget" source="widgets" filter="widgetPath~weather-widget">
 		<controls>
-			<!-- Says this menu entry holds a weather widget, which no other control can work out:
-			     a list reports how many widgets there are, not what any of them is. -->
+			<!-- Says this entry holds the weather widget; a list reports how many widgets there are, not
+			     what they are. -->
 			<control type="label" id="109$PARENT[index]">
 				<skinshortcuts>visibility</skinshortcuts>
 				<left>-10000</left>
@@ -315,8 +294,8 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<!-- Nothing to look at and nothing to choose until it has loaded, so nothing to
-				     focus either: the heading names it and the spinner says it is coming. -->
+				<!-- Nothing to focus until it has loaded: the heading names it, the spinner says it is
+				     coming. -->
 				<enable>Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)</enable>
 
 				<!-- Widget layout -->
@@ -538,8 +517,8 @@
 				<orientation>horizontal</orientation>
 				<defaultcontrol always="true">0</defaultcontrol>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<!-- Nothing to look at and nothing to choose until it has loaded, so nothing to
-				     focus either: the heading names it and the spinner says it is coming. -->
+				<!-- Nothing to focus until it has loaded: the heading names it, the spinner says it is
+				     coming. -->
 				<enable>Integer.IsGreater(Container(10$PARENT[index]0$PROPERTY[index]).NumItems,0)</enable>
 
 				<!-- Widget layout -->
@@ -974,18 +953,14 @@
 
 				<content limit="$PROPERTY[widgetLimit]" sortby="$PROPERTY[widgetSortBy]" sortorder="$PROPERTY[widgetSortOrder]" target="$PROPERTY[widgetTarget]" browse="never">$PROPERTY[widgetPath]</content>
 			</control>
-			<!-- More widgets above or below, shown with the same arrows the home menu uses for
-			     more menu items and placed exactly as its own are. It belongs to the widget holding
-			     focus, so it fades away with the menu entry list or a submenu in focus, where up and
-			     down no longer move between widgets. One widget holds focus at a time, so only one
-			     of these is ever drawn. -->
+			<!-- More widgets above or below, drawn with the home menu's arrows. It belongs to the
+			     focused widget, so only one is ever on screen. -->
 			<control type="group">
 				<visible>Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index]) + [Integer.IsGreater(Container(1000$PARENT[index]).NumItems,2) | [![$EXP[TwoRowWidgets]] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1)]]</visible>
 				<include content="widgetIndicators" />
 			</control>
-			<!-- Two row details: the widget's own name, then the same detail text the one widget
-			     view shows, which the focused widget alone carries. Row 1 slides by the same offset
-			     as its posters, and swaps with row 0 on the final page of an odd list. -->
+			<!-- Two row details: the widget's name, then the detail text the focused widget carries. Row
+			     1 slides with its posters, and swaps with row 0 on the last page of an odd list. -->
 			<control type="group">
 				<include>widgetTwoRowDetails-row0</include>
 				<visible>Control.IsVisible(1000$PARENT[index]) + $EXP[TwoRowWidgets] + Integer.IsGreater(Container(1000$PARENT[index]).NumItems,1) + !Control.IsVisible(109$PARENT[index]) + [[[![Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] | [[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]]] + [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(pageID),$PARENT[index]-$MATH[($PROPERTY[index] - 1) // 2])]] | [[Integer.IsOdd(Container(1000$PARENT[index]).NumItems)] + ![[String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-1)] | [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(widgetID),$PARENT[index]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-1000$PARENT[index]),True)]]] + [String.IsEqual(Container(1000$PARENT[index]).ListItem.Property(pageIDOdd),$PARENT[index]-$MATH[$PROPERTY[index] // 2])]]]</visible>
@@ -1035,9 +1010,8 @@
 
 	<!-- Carries no controls; it exists to build the shared widget variables -->
 	<template items="widgetVariables" source="widgets">
-		<!-- The focused widget's list item and the test that selects it. $PARENT and $PROPERTY
-		     both resolve here because this is an items template; the same trick inside a
-		     propertyGroup would leave $PARENT[index] in the emitted XML. -->
+		<!-- $PARENT and $PROPERTY resolve here because this is an items template; inside a
+		     propertyGroup they would reach the emitted XML unresolved. -->
 		<property name="widgetItem" value="Container(10$PARENT[index]0$PROPERTY[index]).ListItem" />
 		<property name="widgetFocus" value="Control.IsVisible(1000$PARENT[index]) + Control.HasFocus(10$PARENT[index]0$PROPERTY[index])" />
 		<propertyGroup content="widgetWeather" />
@@ -1052,13 +1026,9 @@
 		</controls>
 	</template>
 
-	<!-- A widget says it is loading while its container is being filled. The weather widget
-	     has no container to fill - it is a list of skin items reading the properties the
-	     weather add-on writes - so it says so while Kodi is fetching a forecast, or while it
-	     has yet to return one. Both are needed: Weather.IsUpdating is the loader's busy flag,
-	     and the loader is only ever set busy by something reading a weather info label, so a
-	     forecast that has never arrived leaves it false from first boot to the first request.
-	     Weather.IsFetched is such a read, and it starts the loader as it answers. -->
+	<!-- A widget is loading while its container fills; the weather widget has none, so it says so
+	     while Kodi fetches. Weather.IsUpdating is raised only by a read of a weather label, and
+	     Weather.IsFetched is such a read. -->
 	<template items="reloadingWidget" source="widgets">
 		<propertyGroup content="widgetWeather" />
 		<controls>

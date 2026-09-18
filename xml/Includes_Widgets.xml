@@ -246,11 +246,8 @@
 		</definition>
 	</include>
 
-	<!-- The status bar along the bottom edge of a widget poster: the bar itself, the three
-	     PVR state icons, and the watched overlay. Recording, timer and reminder are mutually
-	     exclusive, so each slides aside by the same amount when a watched overlay shares the
-	     bar. Called four times per widget - item layout, and the three focused variants -
-	     which differ only in whether the poster is dimmed, hence the colordiffuse default. -->
+	<!-- The status bar along a widget poster: the bar, the three PVR state icons and the watched
+	     overlay. Called four times per widget, differing only in whether the poster is dimmed. -->
 	<include name="widgetOverlayBar">
 		<param name="colordiffuse">FFFFFFFF</param>
 		<param name="textcolor">$VAR[TextColorFO]</param>
@@ -334,10 +331,8 @@
 		</definition>
 	</include>
 
-	<!-- The up and down column beside the widgets: the same arrows the home menu uses for more
-	     menu items, at the same top and bottom and the same 120 in from the screen edge, this
-	     time the right one. Both are always drawn - the caller shows the column only when there
-	     is more than one screenful, and which end you are at is not what it reports. -->
+	<!-- The up and down column beside the widgets. Both arrows are always drawn: the caller shows
+	     the column only when there is more than one screenful. -->
 	<include name="widgetIndicators">
 		<definition>
 			<control type="group">
@@ -399,10 +394,8 @@
 	</include>
 	
 	<include name="widgetOnControl-OSMC">
-		<!-- The second widget of an odd list sits on two pages, so up and down there turn the
-		     page rather than move: 9008 back to the page it shares with the first widget, 9009
-		     on to the page it shares with the third. menu defaults to a name no menu has, so a
-		     fallback built before two row support, which passes none, never takes that branch. -->
+		<!-- The second widget of an odd list sits on two pages, so up and down there turn the page
+		     rather than move. -->
 		<param name="menu">none</param>
 		<definition>
 			<onleft>9000</onleft>
@@ -511,13 +504,9 @@
 		</definition>
 	</include>
 
-	<!-- The heading names the item the widget has focus on, and numbers an episode the way
-	     every other list in the skin does. It reads a container the include carries as a
-	     parameter, so the numbering cannot come out of a variable - a variable takes no
-	     parameter, and a menu has as many widget containers as it has entries. One label
-	     per form instead, chosen by visibility, which is read per control and takes the
-	     parameter with it. The wide form fills the row and scrolls; the inline one sits
-	     in the grouplist beside the indicators and is as wide as its text. -->
+	<!-- The heading names the focused item and numbers an episode as the rest of the skin does. It
+	     reads a container passed as a parameter, which a variable cannot take, so there is one
+	     label per form, chosen by visibility. -->
 	<include name="widgetHeadingTitleWide">
 		<include>widgetdetails_coords</include>
 		<scroll>True</scroll>
@@ -637,10 +626,8 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 			
-				<!-- Widget heading. The group is here to put one condition on all six labels,
-				     and carries the row's height because a grouplist reads the height of the
-				     control it is given: a group has none of its own, and the details below
-				     would be laid out on top of the heading. -->
+				<!-- Widget heading. The group carries the row's height because a grouplist reads the height
+				     of what it is given, and a group has none of its own. -->
 				<control type="group">
 					<height>46</height>
 					<visible>Integer.IsEqual(Container($PARAM[container]).NumItems,1)</visible>
@@ -668,9 +655,8 @@
 				<!-- Widget details -->
 				<control type="textbox">
 					<include>widgetdetails_coords</include>
-					<!-- Three rows of 39.75 for Font33, the most the text runs to: a PVR channel's
-					     name over its now and next line. One widget on screen has the room for all
-					     three, so nothing has to scroll here; two rows share the two they can fit. -->
+					<!-- Three rows of 39.75 for Font33, the most the text runs to. Two widgets share the two
+					     rows they can fit. -->
 					<height>120</height>
 					<autoscroll time="3000" delay="4000" repeat="4000" />
 					<font>Font33</font>
@@ -681,10 +667,8 @@
 					<visible>!String.IsEmpty(Control.GetLabel(9988))</visible>
 					<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-					<!-- The weather widget has nothing to say until it has an outlook, and this
-					     row goes with it rather than standing empty. It is the row that waits,
-					     not the heading above: the heading names the widget, which is known
-					     before any forecast is, and it arrives with every other widget's. -->
+					<!-- The weather widget waits for its outlook; the heading above does not, as it names the
+					     widget rather than the forecast. -->
 					<animation type="Conditional" condition="!String.IsEmpty(Container($PARAM[container2]).ListItem.Property(outlook)) + !String.IsEqual(Container($PARAM[container2]).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)">
 						<effect type="fade" start="0" end="100" time="400" delay="400" />
 					</animation>
@@ -698,9 +682,8 @@
 					<label>$VAR[widgetDetails]</label>
 				</control>
 
-				<!-- Carries the focused weather widget's fanart so widgetBackground can test it
-				     for emptiness; Kodi cannot do that on a $VAR directly. Empty, and absent
-				     altogether outside Home, in every other case. -->
+				<!-- Carries the focused weather widget's fanart, so widgetBackground can test it for
+				     emptiness; Kodi cannot test a $VAR. -->
 				<control type="label" id="9987">
 					<font></font>
 					<label>$VAR[widgetWeatherBackground]</label>

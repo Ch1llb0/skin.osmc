@@ -10,16 +10,11 @@
 
 	<controls>
 	
-		<!-- The two move buttons are the arrows drawn at the right of the row the list is on,
-		     and each goes when there is nowhere to move: no up on the first entry, no down on
-		     the last. Disabled, they are stepped over, so right from the list lands on
-		     whichever of them is left. -->
-		<!-- Control ids come from three places, and only the first is fixed:
-		     211, 301-305, 307, 311, 313, 401, 405   Skin Shortcuts built-ins, the add-on decides these
-		     309, 310, 502-504, 601-603              bound in shortcuts/properties.xml <buttons>
-		     406                                     subdialog trigger, bound in shortcuts/menus.xml
-		     1, 60, 80, 210, 314, 9000, 9001         this skin's own
-		     Renumbering anything in the middle two groups means editing shortcuts/ as well. -->
+		<!-- The two move buttons: no up on the first entry, no down on the last. Disabled, they are
+		     stepped over. -->
+		<!-- Control ids come from three places: Skin Shortcuts built-ins, ids bound in
+		     shortcuts/properties.xml and shortcuts/menus.xml, and this skin's own. Renumbering the
+		     middle group means editing shortcuts/ too. -->
 	
 		<!-- Black background image -->
 		<control type="image">
@@ -140,15 +135,9 @@
 				<param name="heading">$VAR[skinshortcuts-window]</param>
 			</include>
 
-			<!-- The two move buttons are the arrows drawn at the right of the row the list is
-			     on, and each one is only there while it has somewhere to move to: no up on
-			     the first row, no down on the last. Neither is ever disabled. A control that
-			     turns itself off is no good as a target, because a skin condition is read
-			     once a frame and focus is set inside the same frame as the move that would
-			     free it, so the focus would be refused and land nowhere. Instead the two
-			     step over each other, and every move that spends the button under the cursor
-			     hands it to the other: a click that lands its own row at an end, and a step
-			     that arrives at one - including the step that wraps the list right round. -->
+			<!-- Each move button is there only while it has somewhere to move to. Neither is ever
+			     disabled: a skin condition is read once a frame, so focus set in the same frame as the
+			     move would be refused. -->
 			<!-- Move down -->
 			<control type="button" id="304">
 				<left>-1000</left>

@@ -39,10 +39,9 @@
 						<ondown>10</ondown>
 						<onleft>10</onleft>
 						<onright>10</onright>
-						<!-- The grid answers all four directions itself, so back is the only key left to
-						     reach anything with: the scrollbar while there is one, the sub menu when there
-						     is not. What closes the window is a second press of it, from whichever of the
-						     two it landed on. -->
+						<!-- The grid answers all four directions itself, so back is the only key left: the
+						     scrollbar while there is one, the sub menu when there is not. A second press closes
+						     the window. -->
 						<onback condition="Control.IsVisible(60)">60</onback>
 						<onback condition="!Control.IsVisible(60)">3001</onback>
 						<rulerunit>12</rulerunit>
