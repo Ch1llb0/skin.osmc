@@ -908,6 +908,10 @@ Includes.xml:
 - point at the regeneration notes for the fallback in the repository documentation
 - pull in Coordinates_MyPVRProviders.xml
 - stop loading Coordinates_DialogSeekBar.xml, which is removed
+- stop loading Includes_Buttons.xml
+
+Includes_Buttons.xml:
+- remove the file, its one role now held beside the other shapes every window shares
 
 Includes_DialogSettings.xml:
 - draw the controller being configured beside the settings, which the peripheral settings dialog fills through control 100
@@ -954,6 +958,7 @@ Includes_Windows_Dialogs.xml:
 - draw the window and dialog fanart layers only when there is fanart to draw, and drop the transparent fallback that kept them covering the screen the rest of the time
 - read the home background from backgroundPath, which is where v3 stores the path
 - read the watched state from the named expressions rather than spelling it out
+- take DialogRowButton in, under a Buttons heading
 
 LoginScreen.xml:
 - point the scrollbar at LoginScreen_coords6
