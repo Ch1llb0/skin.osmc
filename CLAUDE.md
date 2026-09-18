@@ -23,9 +23,8 @@ commands in this repo.
   `media/Textures.xbt`, the TexturePacker bundle of that same folder. `addon.xml` declares the bundle as
   `defaultthemename`, and Kodi checks bundles *before* the filesystem, so the loose files are shadowed at
   runtime: editing a PNG and reloading shows no change until the bundle is rebuilt, while *adding* one works.
-- `icons/` — the vector originals for the icons the skin draws itself, plus a README. Kodi never reads
-  them; they exist so an icon can be redrawn when a control's size changes, which a PNG cannot be.
-  `.github/scripts/render-icons.py` renders one to the PNG in `media/` at a given size.
+The icons the skin draws itself are rendered from vector originals, which are kept outside the
+repository. Redraw from the vector when a control's size changes; a PNG cannot be enlarged.
 - `fonts/` — TTF files declared in `xml/Font.xml`.
 - `shortcuts/` — config for the `script.skinshortcuts` addon: `menus.xml` (menu and submenu structure),
   `widgets.xml`, `backgrounds.xml`, `properties.xml` (widget property pickers) and `templates.xml`.

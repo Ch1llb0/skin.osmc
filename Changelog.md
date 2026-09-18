@@ -1067,6 +1067,9 @@ VideoOSD.xml:
 Windows that fill the screen:
 - set a black background colour on all twenty-seven, so Kodi clears the screen rather than leaving each frame to draw over the one before
 
+icons/:
+- remove the vector originals, their README and the render script; Kodi never reads them and no build step touches them, so they live where they are worked on
+
 media/:
 - add focusline.png and focuslinec.png, the three pixel focus line and its centred variant
 - remove the eleven focus textures the layouts no longer name, six of which nothing had referenced for some time
@@ -1075,6 +1078,7 @@ media/:
 - remove the drop shadows from the home menu icons and the PVR timer icon
 - flatten the focus textures to white, which the 27c, 52c and 66c variants already were
 - repack Textures.xbt with the Kodi v22 texture packer, which writes XBT 3 and picks a channel count per texture; 231 frames are now single channel and 194 dual, leaving 82 in full colour
+
 
 addon.xml:
 - require xbmc.gui 5.18.0
