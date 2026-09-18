@@ -750,6 +750,7 @@ templates.xml:
 - leave the weather widget on the single layout, marking it with a hidden label the two row tests read, as its hand placed internals cannot share a row
 - drop primaryArt and secondaryArt, now that every artwork type is an info label suffix one image include draws, and name widget-image at the sixteen call sites they stood in front of
 - reduce secondaryVisibility and fallbackVisibility to the emptiness test each type makes of itself
+- ask for Font23-title, Font20-title and Font16-title in the widgetLayout preset, the three sizes that gained a suffix and which the templates were still naming without it
 
 widgets.xml:
 - add the widget list, giving every widget a unique name, as v3 looks a widget up by name to re-derive its path, type and target on every build
