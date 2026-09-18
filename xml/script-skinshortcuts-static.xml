@@ -889,7 +889,6 @@
 		</item>
 	</include>
 	<variable name="widgetDetails">
-		<value condition="Control.IsVisible(10001) + Control.HasFocus(10101) + Integer.IsEqual(Container(10101).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10001) + Control.HasFocus(10101) + False">$INFO[Container(10101).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10101).ListItem.DBTYPE,movie) + Control.IsVisible(10001) + Control.HasFocus(10101) + !String.IsEmpty(Container(10101).ListItem.Year)">$INFO[Container(10101).ListItem.Title][CR][LIGHT]$INFO[Container(10101).ListItem.Year]$INFO[Container(10101).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10101).ListItem.DBTYPE,movie) + Control.IsVisible(10001) + Control.HasFocus(10101) + String.IsEmpty(Container(10101).ListItem.Year)">$INFO[Container(10101).ListItem.Title][CR][LIGHT]$INFO[Container(10101).ListItem.Genre(comma)][/LIGHT]</value>
@@ -902,7 +901,6 @@
 		<value condition="[String.IsEqual(Container(10101).ListItem.DBTYPE,song) | String.IsEqual(Container(10101).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10001) + Control.HasFocus(10101) + !String.IsEmpty(Container(10101).ListItem.Artist) + !String.IsEmpty(Container(10101).ListItem.Album)">$INFO[Container(10101).ListItem.TrackNumber,,. ]$INFO[Container(10101).ListItem.Title][CR][LIGHT]$INFO[Container(10101).ListItem.Artist]$INFO[Container(10101).ListItem.Album, • ,]$INFO[Container(10101).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10101).ListItem.DBTYPE,album) + Control.IsVisible(10001) + Control.HasFocus(10101) + !String.IsEmpty(Container(10101).ListItem.Artist) + !String.IsEmpty(Container(10101).ListItem.Album)">$INFO[Container(10101).ListItem.Album][CR][LIGHT]$INFO[Container(10101).ListItem.Artist]$INFO[Container(10101).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10001) + Control.HasFocus(10101)">$INFO[Container(10101).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10001) + Control.HasFocus(10102) + Integer.IsEqual(Container(10102).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10001) + Control.HasFocus(10102) + False">$INFO[Container(10102).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10102).ListItem.DBTYPE,movie) + Control.IsVisible(10001) + Control.HasFocus(10102) + !String.IsEmpty(Container(10102).ListItem.Year)">$INFO[Container(10102).ListItem.Title][CR][LIGHT]$INFO[Container(10102).ListItem.Year]$INFO[Container(10102).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10102).ListItem.DBTYPE,movie) + Control.IsVisible(10001) + Control.HasFocus(10102) + String.IsEmpty(Container(10102).ListItem.Year)">$INFO[Container(10102).ListItem.Title][CR][LIGHT]$INFO[Container(10102).ListItem.Genre(comma)][/LIGHT]</value>
@@ -915,7 +913,6 @@
 		<value condition="[String.IsEqual(Container(10102).ListItem.DBTYPE,song) | String.IsEqual(Container(10102).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10001) + Control.HasFocus(10102) + !String.IsEmpty(Container(10102).ListItem.Artist) + !String.IsEmpty(Container(10102).ListItem.Album)">$INFO[Container(10102).ListItem.TrackNumber,,. ]$INFO[Container(10102).ListItem.Title][CR][LIGHT]$INFO[Container(10102).ListItem.Artist]$INFO[Container(10102).ListItem.Album, • ,]$INFO[Container(10102).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10102).ListItem.DBTYPE,album) + Control.IsVisible(10001) + Control.HasFocus(10102) + !String.IsEmpty(Container(10102).ListItem.Artist) + !String.IsEmpty(Container(10102).ListItem.Album)">$INFO[Container(10102).ListItem.Album][CR][LIGHT]$INFO[Container(10102).ListItem.Artist]$INFO[Container(10102).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10001) + Control.HasFocus(10102)">$INFO[Container(10102).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10002) + Control.HasFocus(10201) + Integer.IsEqual(Container(10201).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10002) + Control.HasFocus(10201) + False">$INFO[Container(10201).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10201).ListItem.DBTYPE,movie) + Control.IsVisible(10002) + Control.HasFocus(10201) + !String.IsEmpty(Container(10201).ListItem.Year)">$INFO[Container(10201).ListItem.Title][CR][LIGHT]$INFO[Container(10201).ListItem.Year]$INFO[Container(10201).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10201).ListItem.DBTYPE,movie) + Control.IsVisible(10002) + Control.HasFocus(10201) + String.IsEmpty(Container(10201).ListItem.Year)">$INFO[Container(10201).ListItem.Title][CR][LIGHT]$INFO[Container(10201).ListItem.Genre(comma)][/LIGHT]</value>
@@ -928,7 +925,6 @@
 		<value condition="[String.IsEqual(Container(10201).ListItem.DBTYPE,song) | String.IsEqual(Container(10201).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10002) + Control.HasFocus(10201) + !String.IsEmpty(Container(10201).ListItem.Artist) + !String.IsEmpty(Container(10201).ListItem.Album)">$INFO[Container(10201).ListItem.TrackNumber,,. ]$INFO[Container(10201).ListItem.Title][CR][LIGHT]$INFO[Container(10201).ListItem.Artist]$INFO[Container(10201).ListItem.Album, • ,]$INFO[Container(10201).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10201).ListItem.DBTYPE,album) + Control.IsVisible(10002) + Control.HasFocus(10201) + !String.IsEmpty(Container(10201).ListItem.Artist) + !String.IsEmpty(Container(10201).ListItem.Album)">$INFO[Container(10201).ListItem.Album][CR][LIGHT]$INFO[Container(10201).ListItem.Artist]$INFO[Container(10201).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10002) + Control.HasFocus(10201)">$INFO[Container(10201).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10002) + Control.HasFocus(10202) + Integer.IsEqual(Container(10202).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10002) + Control.HasFocus(10202) + False">$INFO[Container(10202).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10202).ListItem.DBTYPE,movie) + Control.IsVisible(10002) + Control.HasFocus(10202) + !String.IsEmpty(Container(10202).ListItem.Year)">$INFO[Container(10202).ListItem.Title][CR][LIGHT]$INFO[Container(10202).ListItem.Year]$INFO[Container(10202).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10202).ListItem.DBTYPE,movie) + Control.IsVisible(10002) + Control.HasFocus(10202) + String.IsEmpty(Container(10202).ListItem.Year)">$INFO[Container(10202).ListItem.Title][CR][LIGHT]$INFO[Container(10202).ListItem.Genre(comma)][/LIGHT]</value>
@@ -941,7 +937,6 @@
 		<value condition="[String.IsEqual(Container(10202).ListItem.DBTYPE,song) | String.IsEqual(Container(10202).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10002) + Control.HasFocus(10202) + !String.IsEmpty(Container(10202).ListItem.Artist) + !String.IsEmpty(Container(10202).ListItem.Album)">$INFO[Container(10202).ListItem.TrackNumber,,. ]$INFO[Container(10202).ListItem.Title][CR][LIGHT]$INFO[Container(10202).ListItem.Artist]$INFO[Container(10202).ListItem.Album, • ,]$INFO[Container(10202).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10202).ListItem.DBTYPE,album) + Control.IsVisible(10002) + Control.HasFocus(10202) + !String.IsEmpty(Container(10202).ListItem.Artist) + !String.IsEmpty(Container(10202).ListItem.Album)">$INFO[Container(10202).ListItem.Album][CR][LIGHT]$INFO[Container(10202).ListItem.Artist]$INFO[Container(10202).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10002) + Control.HasFocus(10202)">$INFO[Container(10202).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10004) + Control.HasFocus(10401) + Integer.IsEqual(Container(10401).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10004) + Control.HasFocus(10401) + False">$INFO[Container(10401).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10401).ListItem.DBTYPE,movie) + Control.IsVisible(10004) + Control.HasFocus(10401) + !String.IsEmpty(Container(10401).ListItem.Year)">$INFO[Container(10401).ListItem.Title][CR][LIGHT]$INFO[Container(10401).ListItem.Year]$INFO[Container(10401).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10401).ListItem.DBTYPE,movie) + Control.IsVisible(10004) + Control.HasFocus(10401) + String.IsEmpty(Container(10401).ListItem.Year)">$INFO[Container(10401).ListItem.Title][CR][LIGHT]$INFO[Container(10401).ListItem.Genre(comma)][/LIGHT]</value>
@@ -954,7 +949,6 @@
 		<value condition="[String.IsEqual(Container(10401).ListItem.DBTYPE,song) | String.IsEqual(Container(10401).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10004) + Control.HasFocus(10401) + !String.IsEmpty(Container(10401).ListItem.Artist) + !String.IsEmpty(Container(10401).ListItem.Album)">$INFO[Container(10401).ListItem.TrackNumber,,. ]$INFO[Container(10401).ListItem.Title][CR][LIGHT]$INFO[Container(10401).ListItem.Artist]$INFO[Container(10401).ListItem.Album, • ,]$INFO[Container(10401).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10401).ListItem.DBTYPE,album) + Control.IsVisible(10004) + Control.HasFocus(10401) + !String.IsEmpty(Container(10401).ListItem.Artist) + !String.IsEmpty(Container(10401).ListItem.Album)">$INFO[Container(10401).ListItem.Album][CR][LIGHT]$INFO[Container(10401).ListItem.Artist]$INFO[Container(10401).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10004) + Control.HasFocus(10401)">$INFO[Container(10401).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10004) + Control.HasFocus(10402) + Integer.IsEqual(Container(10402).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10004) + Control.HasFocus(10402) + False">$INFO[Container(10402).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10402).ListItem.DBTYPE,movie) + Control.IsVisible(10004) + Control.HasFocus(10402) + !String.IsEmpty(Container(10402).ListItem.Year)">$INFO[Container(10402).ListItem.Title][CR][LIGHT]$INFO[Container(10402).ListItem.Year]$INFO[Container(10402).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10402).ListItem.DBTYPE,movie) + Control.IsVisible(10004) + Control.HasFocus(10402) + String.IsEmpty(Container(10402).ListItem.Year)">$INFO[Container(10402).ListItem.Title][CR][LIGHT]$INFO[Container(10402).ListItem.Genre(comma)][/LIGHT]</value>
@@ -967,7 +961,6 @@
 		<value condition="[String.IsEqual(Container(10402).ListItem.DBTYPE,song) | String.IsEqual(Container(10402).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10004) + Control.HasFocus(10402) + !String.IsEmpty(Container(10402).ListItem.Artist) + !String.IsEmpty(Container(10402).ListItem.Album)">$INFO[Container(10402).ListItem.TrackNumber,,. ]$INFO[Container(10402).ListItem.Title][CR][LIGHT]$INFO[Container(10402).ListItem.Artist]$INFO[Container(10402).ListItem.Album, • ,]$INFO[Container(10402).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10402).ListItem.DBTYPE,album) + Control.IsVisible(10004) + Control.HasFocus(10402) + !String.IsEmpty(Container(10402).ListItem.Artist) + !String.IsEmpty(Container(10402).ListItem.Album)">$INFO[Container(10402).ListItem.Album][CR][LIGHT]$INFO[Container(10402).ListItem.Artist]$INFO[Container(10402).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10004) + Control.HasFocus(10402)">$INFO[Container(10402).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10006) + Control.HasFocus(10601) + Integer.IsEqual(Container(10601).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10006) + Control.HasFocus(10601) + False">$INFO[Container(10601).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10601).ListItem.DBTYPE,movie) + Control.IsVisible(10006) + Control.HasFocus(10601) + !String.IsEmpty(Container(10601).ListItem.Year)">$INFO[Container(10601).ListItem.Title][CR][LIGHT]$INFO[Container(10601).ListItem.Year]$INFO[Container(10601).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10601).ListItem.DBTYPE,movie) + Control.IsVisible(10006) + Control.HasFocus(10601) + String.IsEmpty(Container(10601).ListItem.Year)">$INFO[Container(10601).ListItem.Title][CR][LIGHT]$INFO[Container(10601).ListItem.Genre(comma)][/LIGHT]</value>
@@ -980,7 +973,6 @@
 		<value condition="[String.IsEqual(Container(10601).ListItem.DBTYPE,song) | String.IsEqual(Container(10601).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10006) + Control.HasFocus(10601) + !String.IsEmpty(Container(10601).ListItem.Artist) + !String.IsEmpty(Container(10601).ListItem.Album)">$INFO[Container(10601).ListItem.TrackNumber,,. ]$INFO[Container(10601).ListItem.Title][CR][LIGHT]$INFO[Container(10601).ListItem.Artist]$INFO[Container(10601).ListItem.Album, • ,]$INFO[Container(10601).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10601).ListItem.DBTYPE,album) + Control.IsVisible(10006) + Control.HasFocus(10601) + !String.IsEmpty(Container(10601).ListItem.Artist) + !String.IsEmpty(Container(10601).ListItem.Album)">$INFO[Container(10601).ListItem.Album][CR][LIGHT]$INFO[Container(10601).ListItem.Artist]$INFO[Container(10601).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10006) + Control.HasFocus(10601)">$INFO[Container(10601).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10008) + Control.HasFocus(10801) + Integer.IsEqual(Container(10801).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10008) + Control.HasFocus(10801) + False">$INFO[Container(10801).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10801).ListItem.DBTYPE,movie) + Control.IsVisible(10008) + Control.HasFocus(10801) + !String.IsEmpty(Container(10801).ListItem.Year)">$INFO[Container(10801).ListItem.Title][CR][LIGHT]$INFO[Container(10801).ListItem.Year]$INFO[Container(10801).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10801).ListItem.DBTYPE,movie) + Control.IsVisible(10008) + Control.HasFocus(10801) + String.IsEmpty(Container(10801).ListItem.Year)">$INFO[Container(10801).ListItem.Title][CR][LIGHT]$INFO[Container(10801).ListItem.Genre(comma)][/LIGHT]</value>
@@ -993,7 +985,6 @@
 		<value condition="[String.IsEqual(Container(10801).ListItem.DBTYPE,song) | String.IsEqual(Container(10801).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10008) + Control.HasFocus(10801) + !String.IsEmpty(Container(10801).ListItem.Artist) + !String.IsEmpty(Container(10801).ListItem.Album)">$INFO[Container(10801).ListItem.TrackNumber,,. ]$INFO[Container(10801).ListItem.Title][CR][LIGHT]$INFO[Container(10801).ListItem.Artist]$INFO[Container(10801).ListItem.Album, • ,]$INFO[Container(10801).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10801).ListItem.DBTYPE,album) + Control.IsVisible(10008) + Control.HasFocus(10801) + !String.IsEmpty(Container(10801).ListItem.Artist) + !String.IsEmpty(Container(10801).ListItem.Album)">$INFO[Container(10801).ListItem.Album][CR][LIGHT]$INFO[Container(10801).ListItem.Artist]$INFO[Container(10801).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10008) + Control.HasFocus(10801)">$INFO[Container(10801).ListItem.Label]</value>
-		<value condition="Control.IsVisible(10009) + Control.HasFocus(10901) + Integer.IsEqual(Container(10901).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(10009) + Control.HasFocus(10901) + True">$INFO[Container(10901).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10901).ListItem.DBTYPE,movie) + Control.IsVisible(10009) + Control.HasFocus(10901) + !String.IsEmpty(Container(10901).ListItem.Year)">$INFO[Container(10901).ListItem.Title][CR][LIGHT]$INFO[Container(10901).ListItem.Year]$INFO[Container(10901).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10901).ListItem.DBTYPE,movie) + Control.IsVisible(10009) + Control.HasFocus(10901) + String.IsEmpty(Container(10901).ListItem.Year)">$INFO[Container(10901).ListItem.Title][CR][LIGHT]$INFO[Container(10901).ListItem.Genre(comma)][/LIGHT]</value>
@@ -1006,7 +997,6 @@
 		<value condition="[String.IsEqual(Container(10901).ListItem.DBTYPE,song) | String.IsEqual(Container(10901).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(10009) + Control.HasFocus(10901) + !String.IsEmpty(Container(10901).ListItem.Artist) + !String.IsEmpty(Container(10901).ListItem.Album)">$INFO[Container(10901).ListItem.TrackNumber,,. ]$INFO[Container(10901).ListItem.Title][CR][LIGHT]$INFO[Container(10901).ListItem.Artist]$INFO[Container(10901).ListItem.Album, • ,]$INFO[Container(10901).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(10901).ListItem.DBTYPE,album) + Control.IsVisible(10009) + Control.HasFocus(10901) + !String.IsEmpty(Container(10901).ListItem.Artist) + !String.IsEmpty(Container(10901).ListItem.Album)">$INFO[Container(10901).ListItem.Album][CR][LIGHT]$INFO[Container(10901).ListItem.Artist]$INFO[Container(10901).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(10009) + Control.HasFocus(10901)">$INFO[Container(10901).ListItem.Label]</value>
-		<value condition="Control.IsVisible(100010) + Control.HasFocus(101001) + Integer.IsEqual(Container(101001).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(100010) + Control.HasFocus(101001) + False">$INFO[Container(101001).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(101001).ListItem.DBTYPE,movie) + Control.IsVisible(100010) + Control.HasFocus(101001) + !String.IsEmpty(Container(101001).ListItem.Year)">$INFO[Container(101001).ListItem.Title][CR][LIGHT]$INFO[Container(101001).ListItem.Year]$INFO[Container(101001).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(101001).ListItem.DBTYPE,movie) + Control.IsVisible(100010) + Control.HasFocus(101001) + String.IsEmpty(Container(101001).ListItem.Year)">$INFO[Container(101001).ListItem.Title][CR][LIGHT]$INFO[Container(101001).ListItem.Genre(comma)][/LIGHT]</value>
@@ -1019,7 +1009,6 @@
 		<value condition="[String.IsEqual(Container(101001).ListItem.DBTYPE,song) | String.IsEqual(Container(101001).ListItem.DBTYPE,musicvideo)] + Control.IsVisible(100010) + Control.HasFocus(101001) + !String.IsEmpty(Container(101001).ListItem.Artist) + !String.IsEmpty(Container(101001).ListItem.Album)">$INFO[Container(101001).ListItem.TrackNumber,,. ]$INFO[Container(101001).ListItem.Title][CR][LIGHT]$INFO[Container(101001).ListItem.Artist]$INFO[Container(101001).ListItem.Album, • ,]$INFO[Container(101001).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(101001).ListItem.DBTYPE,album) + Control.IsVisible(100010) + Control.HasFocus(101001) + !String.IsEmpty(Container(101001).ListItem.Artist) + !String.IsEmpty(Container(101001).ListItem.Album)">$INFO[Container(101001).ListItem.Album][CR][LIGHT]$INFO[Container(101001).ListItem.Artist]$INFO[Container(101001).ListItem.Year, • ,][/LIGHT]</value>
 		<value condition="Control.IsVisible(100010) + Control.HasFocus(101001)">$INFO[Container(101001).ListItem.Label]</value>
-		<value condition="Control.IsVisible(100011) + Control.HasFocus(101101) + Integer.IsEqual(Container(101101).NumItems,0)">$LOCALIZE[20186]...</value>
 		<value condition="Control.IsVisible(100011) + Control.HasFocus(101101) + False">$INFO[Container(101101).ListItem.Property(outlook)][CR][LIGHT]$INFO[Window(Weather).Property(Location)][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(101101).ListItem.DBTYPE,movie) + Control.IsVisible(100011) + Control.HasFocus(101101) + !String.IsEmpty(Container(101101).ListItem.Year)">$INFO[Container(101101).ListItem.Title][CR][LIGHT]$INFO[Container(101101).ListItem.Year]$INFO[Container(101101).ListItem.Genre(comma), • ,][/LIGHT]</value>
 		<value condition="String.IsEqual(Container(101101).ListItem.DBTYPE,movie) + Control.IsVisible(100011) + Control.HasFocus(101101) + String.IsEmpty(Container(101101).ListItem.Year)">$INFO[Container(101101).ListItem.Title][CR][LIGHT]$INFO[Container(101101).ListItem.Genre(comma)][/LIGHT]</value>
@@ -1228,7 +1217,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[31054]</label>
-					<visible>[Integer.IsGreater(Container(10101).NumItems,0) | Container(10101).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10101).ListItem.Property(outlook)) + !String.IsEqual(Container(10101).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10101).NumItems,0) | Container(10101).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10101).ListItem.Property(outlook)) + !String.IsEqual(Container(10101).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">1-1</property>
 					<property name="pageID">1-0</property>
 					<property name="pageIDOdd">1-0</property>
@@ -1236,7 +1225,7 @@
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[31179]</label>
-					<visible>[Integer.IsGreater(Container(10102).NumItems,0) | Container(10102).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10102).ListItem.Property(outlook)) + !String.IsEqual(Container(10102).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10102).NumItems,0) | Container(10102).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10102).ListItem.Property(outlook)) + !String.IsEqual(Container(10102).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">1-2</property>
 					<property name="pageID">1-0</property>
 					<property name="pageIDOdd">1-1</property>
@@ -1332,7 +1321,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[31118]</label>
-					<visible>[Integer.IsGreater(Container(10201).NumItems,0) | Container(10201).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10201).ListItem.Property(outlook)) + !String.IsEqual(Container(10201).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10201).NumItems,0) | Container(10201).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10201).ListItem.Property(outlook)) + !String.IsEqual(Container(10201).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">2-1</property>
 					<property name="pageID">2-0</property>
 					<property name="pageIDOdd">2-0</property>
@@ -1340,7 +1329,7 @@
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[31193]</label>
-					<visible>[Integer.IsGreater(Container(10202).NumItems,0) | Container(10202).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10202).ListItem.Property(outlook)) + !String.IsEqual(Container(10202).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10202).NumItems,0) | Container(10202).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10202).ListItem.Property(outlook)) + !String.IsEqual(Container(10202).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">2-2</property>
 					<property name="pageID">2-0</property>
 					<property name="pageIDOdd">2-1</property>
@@ -1436,7 +1425,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[31056]</label>
-					<visible>[Integer.IsGreater(Container(10401).NumItems,0) | Container(10401).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10401).ListItem.Property(outlook)) + !String.IsEqual(Container(10401).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10401).NumItems,0) | Container(10401).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10401).ListItem.Property(outlook)) + !String.IsEqual(Container(10401).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">4-1</property>
 					<property name="pageID">4-0</property>
 					<property name="pageIDOdd">4-0</property>
@@ -1444,7 +1433,7 @@
 				</item>
 				<item id="2">
 					<label>$LOCALIZE[31207]</label>
-					<visible>[Integer.IsGreater(Container(10402).NumItems,0) | Container(10402).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10402).ListItem.Property(outlook)) + !String.IsEqual(Container(10402).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10402).NumItems,0) | Container(10402).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10402).ListItem.Property(outlook)) + !String.IsEqual(Container(10402).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">4-2</property>
 					<property name="pageID">4-0</property>
 					<property name="pageIDOdd">4-1</property>
@@ -1540,7 +1529,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[35049]</label>
-					<visible>[Integer.IsGreater(Container(10601).NumItems,0) | Container(10601).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10601).ListItem.Property(outlook)) + !String.IsEqual(Container(10601).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10601).NumItems,0) | Container(10601).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10601).ListItem.Property(outlook)) + !String.IsEqual(Container(10601).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">6-1</property>
 					<property name="pageID">6-0</property>
 					<property name="pageIDOdd">6-0</property>
@@ -1633,7 +1622,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[1043]</label>
-					<visible>[Integer.IsGreater(Container(10801).NumItems,0) | Container(10801).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10801).ListItem.Property(outlook)) + !String.IsEqual(Container(10801).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10801).NumItems,0) | Container(10801).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10801).ListItem.Property(outlook)) + !String.IsEqual(Container(10801).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">8-1</property>
 					<property name="pageID">8-0</property>
 					<property name="pageIDOdd">8-0</property>
@@ -1726,7 +1715,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[10508]</label>
-					<visible>[Integer.IsGreater(Container(10901).NumItems,0) | Container(10901).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(10901).ListItem.Property(outlook)) + !String.IsEqual(Container(10901).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(10901).NumItems,0) | Container(10901).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(10901).ListItem.Property(outlook)) + !String.IsEqual(Container(10901).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">9-1</property>
 					<property name="pageID">9-0</property>
 					<property name="pageIDOdd">9-0</property>
@@ -1819,7 +1808,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[19217]</label>
-					<visible>[Integer.IsGreater(Container(101001).NumItems,0) | Container(101001).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(101001).ListItem.Property(outlook)) + !String.IsEqual(Container(101001).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(101001).NumItems,0) | Container(101001).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(101001).ListItem.Property(outlook)) + !String.IsEqual(Container(101001).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">10-1</property>
 					<property name="pageID">10-0</property>
 					<property name="pageIDOdd">10-0</property>
@@ -1912,7 +1901,7 @@
 			<content>
 				<item id="1">
 					<label>$LOCALIZE[19216]</label>
-					<visible>[Integer.IsGreater(Container(101101).NumItems,0) | Container(101101).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | !String.IsEmpty(Container(101101).ListItem.Property(outlook)) + !String.IsEqual(Container(101101).ListItem.Property(outlook),$LOCALIZE[10006]) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+					<visible>[Integer.IsGreater(Container(101101).NumItems,0) | Container(101101).IsUpdating] + !String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather) | [!String.IsEmpty(Container(101101).ListItem.Property(outlook)) + !String.IsEqual(Container(101101).ListItem.Property(outlook),$LOCALIZE[10006]) | Weather.IsUpdating | !Weather.IsFetched] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
 					<property name="widgetID">11-1</property>
 					<property name="pageID">11-0</property>
 					<property name="pageIDOdd">11-0</property>
@@ -1986,6 +1975,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10101).NumItems,0)</enable>
 			<include>widgetLayout-tall</include>
 			<animation effect="slide" start="0,0" end="0,-117" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091) + [![Integer.IsOdd(Container(10001).NumItems)] | [[String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1)] | [String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10001),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,239" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091) + [[Integer.IsOdd(Container(10001).NumItems)] + ![[String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1)] | [String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10001),True)]]]]">conditional</animation>
@@ -2444,6 +2434,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10102).NumItems,0)</enable>
 			<include>widgetLayout-tall</include>
 			<animation effect="slide" start="0,0" end="0,239" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091) + [![Integer.IsOdd(Container(10001).NumItems)] | [[String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1)] | [String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10001),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-117" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10001).NumItems,1) + !Control.IsVisible(1091) + [[Integer.IsOdd(Container(10001).NumItems)] + ![[String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1)] | [String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10001),True)]]]]">conditional</animation>
@@ -2902,6 +2893,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10201).NumItems,0)</enable>
 			<include>widgetLayout-tall</include>
 			<animation effect="slide" start="0,0" end="0,-117" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092) + [![Integer.IsOdd(Container(10002).NumItems)] | [[String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1)] | [String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10002),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,239" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092) + [[Integer.IsOdd(Container(10002).NumItems)] + ![[String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1)] | [String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10002),True)]]]]">conditional</animation>
@@ -3360,6 +3352,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10202).NumItems,0)</enable>
 			<include>widgetLayout-tall</include>
 			<animation effect="slide" start="0,0" end="0,239" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092) + [![Integer.IsOdd(Container(10002).NumItems)] | [[String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1)] | [String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10002),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-117" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10002).NumItems,1) + !Control.IsVisible(1092) + [[Integer.IsOdd(Container(10002).NumItems)] + ![[String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1)] | [String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10002),True)]]]]">conditional</animation>
@@ -3818,6 +3811,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10401).NumItems,0)</enable>
 			<include>widgetLayout-square-small</include>
 			<animation effect="slide" start="0,0" end="0,-163" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094) + [![Integer.IsOdd(Container(10004).NumItems)] | [[String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1)] | [String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10004),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,126" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094) + [[Integer.IsOdd(Container(10004).NumItems)] + ![[String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1)] | [String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10004),True)]]]]">conditional</animation>
@@ -4276,6 +4270,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10402).NumItems,0)</enable>
 			<include>widgetLayout-square-small</include>
 			<animation effect="slide" start="0,0" end="0,126" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094) + [![Integer.IsOdd(Container(10004).NumItems)] | [[String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1)] | [String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10004),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-163" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10004).NumItems,1) + !Control.IsVisible(1094) + [[Integer.IsOdd(Container(10004).NumItems)] + ![[String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1)] | [String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10004),True)]]]]">conditional</animation>
@@ -4734,6 +4729,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10601).NumItems,0)</enable>
 			<include>widgetLayout-square-small</include>
 			<animation effect="slide" start="0,0" end="0,-163" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10006).NumItems,1) + !Control.IsVisible(1096) + [![Integer.IsOdd(Container(10006).NumItems)] | [[String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1)] | [String.IsEqual(Container(10006).ListItem.Property(widgetID),6-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10006),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,126" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10006).NumItems,1) + !Control.IsVisible(1096) + [[Integer.IsOdd(Container(10006).NumItems)] + ![[String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1)] | [String.IsEqual(Container(10006).ListItem.Property(widgetID),6-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10006),True)]]]]">conditional</animation>
@@ -5192,6 +5188,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10801).NumItems,0)</enable>
 			<include>widgetLayout-square-small</include>
 			<animation effect="slide" start="0,0" end="0,-163" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10008).NumItems,1) + !Control.IsVisible(1098) + [![Integer.IsOdd(Container(10008).NumItems)] | [[String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1)] | [String.IsEqual(Container(10008).ListItem.Property(widgetID),8-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10008),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,126" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(10008).NumItems,1) + !Control.IsVisible(1098) + [[Integer.IsOdd(Container(10008).NumItems)] + ![[String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1)] | [String.IsEqual(Container(10008).ListItem.Property(widgetID),8-2) + ![String.IsEqual(Window(Home).Property(widgetUp-10008),True)]]]]">conditional</animation>
@@ -5656,6 +5653,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(10901).NumItems,0)</enable>
 			<include>widgetLayout-weather</include>
 			<include content="widgetOnControl">
 				<param name="container">10009</param>
@@ -5859,6 +5857,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(101001).NumItems,0)</enable>
 			<include>widgetLayout-square</include>
 			<animation effect="slide" start="0,0" end="0,-131" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100010).NumItems,1) + !Control.IsVisible(10910) + [![Integer.IsOdd(Container(100010).NumItems)] | [[String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1)] | [String.IsEqual(Container(100010).ListItem.Property(widgetID),10-2) + ![String.IsEqual(Window(Home).Property(widgetUp-100010),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,202" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100010).NumItems,1) + !Control.IsVisible(10910) + [[Integer.IsOdd(Container(100010).NumItems)] + ![[String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1)] | [String.IsEqual(Container(100010).ListItem.Property(widgetID),10-2) + ![String.IsEqual(Window(Home).Property(widgetUp-100010),True)]]]]">conditional</animation>
@@ -6317,6 +6316,7 @@
 			<orientation>horizontal</orientation>
 			<defaultcontrol always="true">0</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
+			<enable>Integer.IsGreater(Container(101101).NumItems,0)</enable>
 			<include>widgetLayout-square</include>
 			<animation effect="slide" start="0,0" end="0,-131" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100011).NumItems,1) + !Control.IsVisible(10911) + [![Integer.IsOdd(Container(100011).NumItems)] | [[String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1)] | [String.IsEqual(Container(100011).ListItem.Property(widgetID),11-2) + ![String.IsEqual(Window(Home).Property(widgetUp-100011),True)]]]]">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,202" time="0" reversible="false" condition="$EXP[TwoRowWidgets] + Integer.IsGreater(Container(100011).NumItems,1) + !Control.IsVisible(10911) + [[Integer.IsOdd(Container(100011).NumItems)] + ![[String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1)] | [String.IsEqual(Container(100011).ListItem.Property(widgetID),11-2) + ![String.IsEqual(Window(Home).Property(widgetUp-100011),True)]]]]">conditional</animation>
@@ -6773,136 +6773,136 @@
 	</include>
 	<include name="skinshortcuts-template-reloading">
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1) + [Container(10101).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1) + [Container(10101).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1) + [Container(10101).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1) + [Container(10101).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),movies) + String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1) + [Container(10101).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),movies) + String.IsEqual(Container(10001).ListItem.Property(widgetID),1-1) + [Container(10101).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + [Container(10102).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + [Container(10102).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + [Container(10102).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + [Container(10102).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),movies) + String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + [Container(10102).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),movies) + String.IsEqual(Container(10001).ListItem.Property(widgetID),1-2) + [Container(10102).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1) + [Container(10201).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1) + [Container(10201).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1) + [Container(10201).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1) + [Container(10201).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),tvshows) + String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1) + [Container(10201).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),tvshows) + String.IsEqual(Container(10002).ListItem.Property(widgetID),2-1) + [Container(10201).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + [Container(10202).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + [Container(10202).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + [Container(10202).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + [Container(10202).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),tvshows) + String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + [Container(10202).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),tvshows) + String.IsEqual(Container(10002).ListItem.Property(widgetID),2-2) + [Container(10202).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1) + [Container(10401).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1) + [Container(10401).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1) + [Container(10401).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1) + [Container(10401).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),music) + String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1) + [Container(10401).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),music) + String.IsEqual(Container(10004).ListItem.Property(widgetID),4-1) + [Container(10401).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + [Container(10402).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + [Container(10402).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + [Container(10402).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + [Container(10402).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),music) + String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + [Container(10402).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),music) + String.IsEqual(Container(10004).ListItem.Property(widgetID),4-2) + [Container(10402).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1) + [Container(10601).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1) + [Container(10601).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1) + [Container(10601).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1) + [Container(10601).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),games) + String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1) + [Container(10601).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),games) + String.IsEqual(Container(10006).ListItem.Property(widgetID),6-1) + [Container(10601).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1) + [Container(10801).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1) + [Container(10801).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1) + [Container(10801).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1) + [Container(10801).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),programs) + String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1) + [Container(10801).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),programs) + String.IsEqual(Container(10008).ListItem.Property(widgetID),8-1) + [Container(10801).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(10009).ListItem.Property(widgetID),9-1) + [Container(10901).IsUpdating | True + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(10009).ListItem.Property(widgetID),9-1) + [Container(10901).IsUpdating | True + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(10009).ListItem.Property(widgetID),9-1) + [Container(10901).IsUpdating | True + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(10009).ListItem.Property(widgetID),9-1) + [Container(10901).IsUpdating | True + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),weather) + String.IsEqual(Container(10009).ListItem.Property(widgetID),9-1) + [Container(10901).IsUpdating | True + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),weather) + String.IsEqual(Container(10009).ListItem.Property(widgetID),9-1) + [Container(10901).IsUpdating | True + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1) + [Container(101001).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1) + [Container(101001).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1) + [Container(101001).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1) + [Container(101001).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),tv) + String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1) + [Container(101001).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),tv) + String.IsEqual(Container(100010).ListItem.Property(widgetID),10-1) + [Container(101001).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 		<control type="image">
-			<animation type="Conditional" condition="String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1) + [Container(101101).IsUpdating | False + Weather.IsUpdating]">
+			<animation type="Conditional" condition="String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1) + [Container(101101).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
-			<animation type="Conditional" condition="![String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1) + [Container(101101).IsUpdating | False + Weather.IsUpdating]]">
+			<animation type="Conditional" condition="![String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1) + [Container(101101).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]]">
 				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
 			<width>36</width>
 			<height>36</height>
-			<texture>$VAR[BusySpinner]</texture>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(name),radio) + String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1) + [Container(101101).IsUpdating | False + Weather.IsUpdating]</visible>
+			<texture>$VAR[BusySpinnerSmall]</texture>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),radio) + String.IsEqual(Container(100011).ListItem.Property(widgetID),11-1) + [Container(101101).IsUpdating | False + [Weather.IsUpdating | !Weather.IsFetched]]</visible>
 		</control>
 	</include>
 </includes>
