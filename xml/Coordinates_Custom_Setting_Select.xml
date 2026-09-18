@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<!-- The select dialog's own list, to the pixel: the same left edge, the same twelve
-	     rows of fifty eight, and the same bar to its left for when a caller brings more
-	     options than that. A caller that brings fewer leaves the rest of the height empty,
-	     which is what the select dialog does too. -->
+	<!-- The select dialog's own list, to the pixel: twelve rows of fifty eight, and the bar to its
+	     left for a caller that brings more. -->
 	<include name="Custom_Setting_Select_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords_21:9</include>

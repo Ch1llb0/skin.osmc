@@ -23,8 +23,6 @@ commands in this repo.
   `media/Textures.xbt`, the TexturePacker bundle of that same folder. `addon.xml` declares the bundle as
   `defaultthemename`, and Kodi checks bundles *before* the filesystem, so the loose files are shadowed at
   runtime: editing a PNG and reloading shows no change until the bundle is rebuilt, while *adding* one works.
-The icons the skin draws itself are rendered from vector originals, which are kept outside the
-repository. Redraw from the vector when a control's size changes; a PNG cannot be enlarged.
 - `fonts/` — TTF files declared in `xml/Font.xml`.
 - `shortcuts/` — config for the `script.skinshortcuts` addon: `menus.xml` (menu and submenu structure),
   `widgets.xml`, `backgrounds.xml`, `properties.xml` (widget property pickers) and `templates.xml`.
@@ -132,12 +130,31 @@ icon, because it comes from the coordinate includes:
 - `$VAR[mediaImages]` puts `DefaultFolderBack.png` and `DefaultTVShows.png` into every art slot the
   skin has, the largest of which is 405 × 600.
 
+The icons the skin draws itself are rendered from vector originals, which are kept outside the
+repository. Redraw from the vector when a control's size changes; a PNG cannot be enlarged.
+
 A texture drawn at a fraction of its own size is resampled every frame and looks soft even though it
 is not being enlarged: a 52 px file in a 50 px box is a rescale, not a 1:1 draw. Match the two.
 
 Textures are white with the shape in the alpha channel, and the skin tints them through
 `colordiffuse`. Do not bake a state's fade into a texture as well — a half-transparent "NF" copy
 diffused with `$VAR[OverlayColorNF]` renders at a ninth of full strength, not a third.
+
+## The setting select dialog (`xml/Includes_SettingSelect.xml`)
+
+A skin setting whose answer is a string, or several switches at once, cannot use `Skin.SelectBool`.
+Such a setting writes its answers into window properties on Home and opens `Custom_Setting_Select.xml`
+instead. The dialog knows nothing about any setting; it reads the properties it is given.
+
+- `SettingSelect.Mode` — `one` (a list of answers; the click writes the setting and closes), `many`
+  (switches, all written on OK) or `onebool` (a switch per row, each its own setting).
+- `SettingSelect.Rows` — how many rows the caller filled in. Anything past it is not a row.
+- `SettingSelect.N.Label` / `.State` / `.Value` / `.Setting` / `.Requires` — each row's text, whether
+  it is on, what it writes, where it writes it, and the condition it waits on.
+- `SettingSelect.Heading`, `.Setting`, `.Current` — the heading, the setting `one` mode writes, and
+  the answer it is on.
+
+The cursor starts on the first row that is on, else the first row.
 
 ## Colors
 

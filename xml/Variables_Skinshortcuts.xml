@@ -56,10 +56,9 @@
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetQueue)">QueueMedia(videodb://movies/sets/$INFO[ListItem.DBID]/)</value>
 	</variable>
 
-	<!-- The window background. Only the first row is Skin Shortcuts' business: it hands over to the
-	     generated widgetWeatherBackground while a weather widget holds focus on Home, read back
-	     through label 9987 because Kodi cannot test a $VAR for emptiness. The other two rows are the
-	     skin's own fallbacks and belong here rather than inside per-widget generated output. -->
+	<!-- The window background. Only the first row is Skin Shortcuts' business, read back through
+	     label 9987 because Kodi cannot test a $VAR for emptiness; the other two are the skin's own
+	     fallbacks. -->
 	<variable name="widgetBackground">
 		<value condition="!String.IsEmpty(Control.GetLabel(9987))">$INFO[Control.GetLabel(9987)]</value>
 		<value condition="Window.Is(visualisation)">$INFO[Player.Art(fanart)]</value>

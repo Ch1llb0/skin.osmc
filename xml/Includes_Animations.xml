@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<!-- Every animation the skin shares between more than one place. An animation used in a
-	     single file stays where it is used: a name in here would be one more thing to look up
-	     rather than one less. -->
+	<!-- Every animation the skin shares. One used in a single file stays where it is used. -->
 
-	<!-- The lift a control gives when it takes focus. Every list and wall view in the skin
-	     uses this one; a view that wants a different centre or scale writes its own. -->
+	<!-- The lift a control gives when it takes focus. A view that wants another centre or scale
+	     writes its own. -->
 	<include name="FocusZoomAnimation">
 		<animation effect="zoom" start="90" end="100" center="auto" time="300" tween="back" easing="out" reversible="false">Focus</animation>
 	</include>
@@ -18,18 +16,14 @@
 		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 	</include>
 
-	<!-- The panels that live against the left edge - the sub menu, the settings categories,
-	     the profile and system information lists - come in from off that edge. -->
+	<!-- The panels against the left edge come in from off that edge. -->
 	<include name="SidePanelSlideAnimation">
 		<animation effect="slide" time="200" start="-200,0" end="0,0">WindowOpen</animation>
 		<animation effect="slide" time="200" start="0,0" end="-200,0">WindowClose</animation>
 	</include>
 
-	<!-- The small windows in the bottom corner. They slide in from the right, and they are a
-	     stack: the volume bar lowest, then a notification, then the extended progress dialog,
-	     then Up Next. Each lifts itself clear of every one below it that happens to be on
-	     screen, so each lift below carries the one before it and adds its own step. The slide
-	     belongs to the window, the lift to the group inside it. -->
+	<!-- The small windows in the bottom corner, as a stack: volume bar, notification, progress
+	     dialog, Up Next. Each lift carries the one before it and adds its own step. -->
 	<include name="CornerWindowAnimation">
 		<animation effect="slide" start="550,0" time="200">WindowOpen</animation>
 		<animation effect="slide" end="550,0" time="200">WindowClose</animation>

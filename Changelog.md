@@ -6,98 +6,104 @@
 
 _New_
 - add support for Kodi v22 (Piers)
-- add support for Skin Shortcuts v3
-- add Dolby Vision profile to the HDR media flag
+- add the Dolby Vision profile to the HDR media flag
 - add extra title info, parental rating and backend name to PVR items
-- add live bitrates, queue levels and subtitle decoder to the player process info dialog
-- add spinner to the weather widget while it updates
-- add last update time to the weather window
-- add an option to show two widgets on screen at once
+- add live bitrates, queue levels and the subtitle decoder to the process info dialog
 - add the ungroup button to the video versions manager
 - add the controller image to the peripheral settings dialog
-- add the PVR providers window, which lists the broadcasters behind the channels and recordings
-- add an option to show titles on the artwork, in the wall views and on the home widgets, from the skin settings or from a media view's sub menu while a wall view is on screen
+- add support for Skin Shortcuts v3
+- add a list dialog for the skin settings whose answer is not a switch
+- add an option to show titles on the artwork, in the wall views and on the widgets
+- add an option to show two widgets on screen at once
+- add the PVR providers window, which lists the broadcasters behind the channels
+- give the audio and the subtitle stream a row each in the fullscreen info
+- add a spinner to the weather widget while it updates
+- add the last update time to the weather window
 
 _Improved_
-- allow stepping through subtitles in both directions in the video OSD
+- step through subtitles in both directions in the video OSD
 - open the subtitle settings from the subtitle name in the video OSD
-- name audio and subtitle streams by their stream name in the video OSD and fullscreen info
+- name audio and subtitle streams by their stream name
 - detect Dolby Atmos and DTS:X from the stream instead of the file name
 - separate genres, directors and writers with commas
 - hide duration based information during live playback
-- consolidate codec and audio channel labels into shared lookup maps
+- read codec and channel labels from shared lookup maps
+- size the process info dialog to the rows it has to show
+- pre-configure the layout, artwork and sort of every widget the skin offers
 - allow any item limit to be set for main menu widgets
-- localise the artwork type names in the main menu widget artwork pickers
+- localise the artwork type names in the widget artwork pickers
 - stop the widget artwork picker hiding the types the preview items lack
 - remove the clear logo and fake landscape widget artwork types
-- remove the always show settings link setting, as the settings item can no longer be taken off the main menu
 - offer date sorting on live TV and radio widgets
-- disable the delete and hide buttons on menu items that cannot be removed, and the restore button while nothing has been deleted
+- carry the sort of every pre-configured widget into the management dialog
+- remove the always show settings link setting, as that item is now fixed
+- sort the unwatched music videos widget by title rather than at random
+- drop the fifty item cap on the most played album and song playlists
+- disable the delete and hide buttons on menu items that cannot be removed
+- disable the restore button while nothing has been deleted
 - give every group in the shortcut and widget pickers its own icon
-- name the reset button in the skin settings for everything it clears, which is every menu and every view selection
-- reduce the skin's textures to the channels they actually use, cutting the texture memory the skin holds on the graphics card by roughly two thirds
-- carry the sort of every pre-configured widget into the widget management dialog, so it shows what the widget already does and a change starts from the truth
-- sort the unwatched music videos widget by title, as the other unwatched widgets are, rather than at random
-- drop the fifty item cap on the most played album and song playlists, leaving the item limit the widget's own to set
-- place the line under a focused row with the control rather than with empty rows in its texture, so it stays sharp however the screen is scaled
-- stop windows and dialogs drawing a full screen fanart layer while there is no fanart to draw
-- clear the screen on the windows that fill it, rather than drawing each frame over the one before
-- scroll every label at a speed set by its own font size rather than the single speed Kodi applies to all of them, so small text no longer races past and large text no longer crawls
-- return to the sub menu when the view picker is left with back, rather than closing both at once
-- offer the artwork titles setting, and the watched and listened to indicator settings, from a media view's own sub menu as well as from the skin settings, so a view can be adjusted without leaving it
-- put a scrolled text box back to the start when a dialog, the sub menu, the view picker or the context menu closes over it, not only when a window is opened
-- drive every scroll reset from one token instead of twenty five window properties and the alarm clocks that cleared them, which fired twenty six times on each window change
+- name the reset button in the skin settings for everything it clears
+- offer the artwork titles and watched indicator settings from a view's sub menu
+- return to the sub menu when the view picker is left with back
+- stop windows and dialogs drawing a full screen fanart layer with no fanart
+- clear the screen on the windows that fill it
+- place the line under a focused row with the control rather than in its texture
+- reduce the textures to the channels they use, cutting texture memory by three fifths
+- put a scrolled text box back to the start when a dialog or menu closes over it
+- drive every scroll reset from one token instead of twenty six properties
+- scroll every label at a speed set by its own font size
 
 _Fixed_
-- fix audio channel labels claiming layouts a channel count cannot identify
+- fix audio channel labels naming layouts a channel count cannot identify
+- fix the Dolby Vision profile 7 flag reading as one word
+- fix the audio flag describing more than one track at a time
+- fix the twelfth line of system information not being shown
+- fix the last row of the game controller lists being cut through
 - fix the recently added artists widget pointing at a playlist that does not exist
 - fix the music add-on widget resolving to nothing
-- fix the widget property pickers showing a crossed circle beside every option
-- fix the live TV and radio widgets opening the videos window rather than their own
-- fix the video watched status setting leaving movie sets untouched
-- fix the rip disc row and the artist widgets pointing at artwork the skin does not ship
+- fix the live TV and radio widgets opening the videos window
+- fix the rip disc row and the artist widgets pointing at missing artwork
 - fix video widgets falling back to music artwork
-- fix the movie sets, music nodes and custom widgets carrying a type that does not describe their content
-- fix the weather widget being recognised by a property Skin Shortcuts v3 never sets
-- fix the seeded live TV and radio widgets differing from the ones the picker writes
+- fix the movie sets, music nodes and custom widgets carrying the wrong type
+- fix the weather widget being recognised by a property v3 never sets
+- fix the seeded live TV and radio widgets differing from the picker's
 - fix the three widget artwork slots drawing over one another
+- fix widgets picked from the picker drawing icons whatever their content
+- fix the games widget not offering the sort orders it lists add-ons for
+- fix the random movie, TV show and album widgets being named two things
+- fix the management dialog offering no sort for the pre-configured widgets
+- fix the random movie and music video widgets sorting the wrong way round
+- fix the widget property pickers showing a crossed circle beside every option
 - fix the Skin Shortcuts entry points showing while the add-on is disabled
 - fix the login screen scrollbar covering the profile list
 - fix the profile settings scrollbar rendering without a track or a bar
-- fix the watched status bar and its overlay swapping size in the video wall with small info
 - fix the debug grid ignoring its offset on the masked aspect ratios
-- fix widgets picked from the picker drawing icons on the poster layout whatever their content
-- fix the games widget not offering the sort orders it lists add-ons for
-- fix the random movie, TV show and album widgets being named one thing in the picker and another on the menu
-- fix the widget management dialog offering no sort order for the pre-configured widgets, which were sorted all along
-- fix the random movie and music video widgets sorting the opposite way round to every other random widget
-- fix rows in the video and music OSD moving nowhere when the button they pointed at was not on screen
-- fix left and right leaving the subtitle stream row in the video OSD instead of moving between its buttons
-- fix the channel label in the fullscreen OSD and the channel guide dialog being blank
-- fix the twelfth line of system information not being shown
-- fix the last row of the game controller lists being cut through
-- fix drop shadows on the home menu icons and the PVR timer icon, which the icon set does not use elsewhere
-- fix the PVR providers list leaving the focused row unmarked, which every other list in the skin underlines
-- fix the focused status badge in the music wall low view being mis-sized and mis-placed at 16:9, where a width was written as a left offset
-- fix the music window fading twice on open, as it ran the shared window fade as well as the conditional pair that was meant to replace it
-- fix the movie artwork placeholder never being drawn, the file sitting in the home folder while a hundred and twelve references ask for it beside the other placeholders
-- fix the subtitle position marker in the video calibration screen being stretched half as tall again as the image it draws, which both blurred the line and set it below the position it marks
-- fix the watched status flag in the PVR recordings list being drawn from the small icon at half again its size, where every other list in the skin draws it at its own
-- redraw the padlock that stands in for an encrypted channel's logo at the size the largest slot draws it, rather than at a fifth of it
-- draw every icon the skin owns from a vector original, and render each to the size the largest control on screen actually draws it at, so none of them is enlarged any more
-- fix the OSMC logo on the home and login screens being a 52 pixel image in a 50 pixel box, which resampled it every frame
-- fix the sub menu arrows being a 32 pixel image in a 30 pixel box, for the same reason
-- fix the arrows that move a menu entry in the shortcut management dialog rendering at a ninth of full strength, the unfocused copy carrying a fade of its own as well as the one the skin applies
-- render the video, duration, timer and reminder flags at the size they are drawn rather than a fraction above it
-- redraw the busy spinner with antialiased edges, in place of the two tone shape whose diagonals stepped
-- add a spinner sized for the places that draw one small - the widget reloading indicator, the progress dialog and the now playing heading - rather than scaling the large one down
-- fix the busy spinner sitting twenty five pixels below and right of the middle of the screen, its box declaring a size the image never took
-- make the error icon monochrome, the one icon in the set that carried a colour of its own
-- fix there being no way out of the TV guide when the scrollbar is hidden, back having run between the grid and the sub menu with nothing to close the window
+- fix the channel label in the fullscreen OSD and the guide dialog being blank
+- fix the watched status bar and its overlay swapping size in the video wall
+- fix the focused status badge in the music wall low view being mis-sized at 16:9
+- fix the music window fading twice on open
+- fix episodes losing the skin's numbering in the list view and on the widgets
 - fix the channel lists showing the programme thumbnail where the channel logo belongs
+- fix rows in the video and music OSD moving nowhere when their button is hidden
+- fix left and right leaving the subtitle stream row in the video OSD
+- fix there being no way out of the TV guide when the scrollbar is hidden
+- draw every icon at the size the largest control on screen draws it
+- fix the movie artwork placeholder never being drawn, the file sitting apart
+- fix the OSMC logo on the home and login screens being resampled every frame
+- fix the sub menu arrows being a 32 pixel image in a 30 pixel box
+- fix the shortcut management dialog arrows rendering at a ninth of full strength
+- render the video, duration, timer and reminder flags at the size they are drawn
+- redraw the padlock an encrypted channel falls back to at the size it is drawn
+- fix the watched flag in the PVR recordings list being drawn half again its size
+- fix the subtitle position marker in the calibration screen being stretched
+- redraw the busy spinner with antialiased edges
+- add a spinner sized for the places that draw one small
+- fix the busy spinner sitting below and right of the middle of the screen
+- make the error icon monochrome, the one icon carrying a colour of its own
+- fix drop shadows on the home menu icons and the PVR timer icon
+- fix the video watched status setting leaving movie sets untouched
 
 ---
-
 
 **_v21.2.2 - March 2026_**
 
@@ -1070,6 +1076,9 @@ Windows that fill the screen:
 icons/:
 - remove the vector originals, their README and the render script; Kodi never reads them and no build step touches them, so they live where they are worked on
 
+The comments, across twenty one files:
+- cut the reasoning down to the part that is not visible in the code below it, keeping the numbers and the Kodi behaviour that explain a choice
+
 media/:
 - add focusline.png and focuslinec.png, the three pixel focus line and its centred variant
 - remove the eleven focus textures the layouts no longer name, six of which nothing had referenced for some time
@@ -1085,10 +1094,12 @@ addon.xml:
 - require script.skinshortcuts 3.0.3, as the property overrides the configuration uses did not exist before 3.0.2
 - bump version to 22.0.0
 - update changelog
+- shorten the news entries to one line each
 
 Changelog.md:
 - update changelog
 - remove the duplicate v16.9.3 heading
+- shorten the entries to one line each and say what changed rather than how it was arrived at
 
 sync-translations.yml:
 - fire on the development branch as well, as the trigger named only omega and translations therefore stopped propagating when work moved

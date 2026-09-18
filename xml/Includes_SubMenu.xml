@@ -58,9 +58,8 @@
 	</include>
 	
 	<!-- Addon browser sub menu -->
-	<!-- The rows a sub menu is built from. A row that appears in more than three sub menus is
-	     written here once and called by name; a row that belongs to one window is written out
-	     where it is used, because a name for it would only be one more thing to look up. -->
+	<!-- The rows a sub menu is built from. A row used in four sub menus or more is named here; one
+	     that belongs to a single window is written where it is used. -->
 
 	<!-- View -->
 	<include name="SubMenuRowView">
@@ -199,9 +198,8 @@
 		</control>
 	</include>
 
-	<!-- The gap between groups of rows. Two of them exist because they are two controls, 80
-	     above the sorting rows and 81 below them, and a row can be told to appear only when
-	     the view picker has something to pick from. -->
+	<!-- The gap between groups of rows. Two controls, 80 above the sorting rows and 81 below, so
+	     one can wait on the view picker having something to pick. -->
 	<include name="SubMenuSeparator">
 		<param name="id">81</param>
 		<definition>
@@ -220,9 +218,8 @@
 		</control>
 	</include>
 
-	<!-- What every sub menu is: a column against the left edge that hands every direction
-	     back to the list it belongs to. The windows that offer more than one view make room
-	     for the view picker above it. -->
+	<!-- What every sub menu is: a column against the left edge handing every direction back to its
+	     list. Windows offering more than one view make room for the view picker. -->
 	<include name="SubMenuFrame">
 		<param name="nav">50</param>
 		<param name="default">3</param>
@@ -642,14 +639,9 @@
 			<include>SubMenu_coords4</include>
 			<onleft>10</onleft>
 			<onright>10</onright>
-			<!-- Back returns to the grid while the scrollbar is there to be the outermost step,
-			     and leaves the window when it is not - otherwise back runs between the grid and
-			     this menu for ever and the guide cannot be left on a remote at all. Left and
-			     right still return to the grid either way.
-
-			     previousmenu rather than back: a focused control is offered ACTION_NAV_BACK and
-			     would hand it straight back to this list, while ACTION_PREVIOUS_MENU is not
-			     offered to controls at all and is answered by the window itself. -->
+			<!-- Back returns to the grid while the scrollbar is there to be the outermost step, and
+			     leaves the window when it is not. previousmenu rather than back: a focused control is
+			     offered ACTION_NAV_BACK and would hand it straight back here. -->
 			<onback condition="Control.IsVisible(60)">10</onback>
 			<onback condition="!Control.IsVisible(60)">Action(previousmenu)</onback>
 			<scrolltime>200</scrolltime>

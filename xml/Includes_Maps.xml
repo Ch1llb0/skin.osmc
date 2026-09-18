@@ -62,13 +62,9 @@
 		<entry key="wmav2">WMA</entry>
 	</map>
 
-	<!-- Audio channel-count labels (shared by ListItem, MusicPlayer, VideoPlayer and the
-	     per-stream AudioChannels.N properties). Two dimensional layouts only: the stored
-	     count is the bed a file decodes to, and an object based track keeps its height
-	     objects out of that count, so a count can never evidence a 5.1.2 or a 7.1.4. Where
-	     a count fits more than one plain layout it carries both. Above eight there is no
-	     standard two dimensional layout left to name, so the callers fall back to the raw
-	     count and the word channels. -->
+	<!-- Audio channel counts. Two dimensional layouts only: an object based track keeps its height
+	     objects out of the count, so a count can never evidence 5.1.2 or 7.1.4. A count that fits
+	     two layouts carries both. -->
 	<map name="AudioChannelsMap">
 		<entry key="1">1.0</entry>
 		<entry key="2">2.0</entry>
@@ -124,10 +120,8 @@
 		<entry key="xvid">XviD</entry>
 	</map>
 
-	<!-- Dolby Vision profile labels. Kodi hands the profile over as a bare number, with the
-	     base layer compatibility appended for profile 8 and the enhancement layer type for
-	     profile 7, so only the profile 7 pair needs the space that makes it read as two
-	     things. Every other profile passes through on the miss. -->
+	<!-- Dolby Vision profiles. Kodi appends the base layer compatibility to profile 8 and the
+	     enhancement layer type to profile 7, so only profile 7 needs the space. -->
 	<map name="DolbyVisionProfileMap">
 		<entry key="7FEL">7 FEL</entry>
 		<entry key="7MEL">7 MEL</entry>

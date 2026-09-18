@@ -258,9 +258,8 @@
 		<value condition="String.IsEqual(Skin.String(mediaflags),None)">$LOCALIZE[13113]</value>
 	</variable>
 	
-	<!-- The answer the video add-on view setting is on. Not having a fixed view is one of
-	     the answers now, and it comes first because the skin keeps a view seeded underneath
-	     it for when one is wanted again. -->
+	<!-- The answer the video add-on view setting is on. Not having a fixed view is one of the
+	     answers, and comes first because a view stays seeded underneath it. -->
 	<variable name="DefaultVideosView">
 		<value condition="Skin.HasSetting(NoFixedVideosView)">$LOCALIZE[13113]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">$LOCALIZE[535]</value>
@@ -337,14 +336,8 @@
 		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
 	</variable>
 
-	<!-- What the titles on artwork setting shows beside its button: the kinds of media
-	     chosen, in the order the dialog lists them. A variable answers with one thing or
-	     another and cannot join a list together, so there is one per kind that answers
-	     with its own name or with nothing, and the label sets them end to end. Each one
-	     writes the comma in front of itself, which it can only do by knowing whether any
-	     kind above it was chosen. Widgets has nothing but that test: a widget follows the
-	     kinds chosen above it and shows no title while none of them is chosen, so on its
-	     own it is not a choice and the label says so by naming nothing. -->
+	<!-- The kinds of media chosen, in the order the dialog lists them. A variable cannot join a
+	     list, so there is one per kind and each writes the comma in front of itself. -->
 	<variable name="ArtworkTitlesMoviesLabel">
 		<value condition="Skin.HasSetting(ArtworkTitlesMovies)">$LOCALIZE[342]</value>
 	</variable>
