@@ -103,7 +103,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
@@ -115,7 +115,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(RadioGuide)</visible>
 			</control>
@@ -153,7 +153,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
@@ -165,7 +165,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(RadioGuide)</visible>
 			</control>
@@ -203,7 +203,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
@@ -215,7 +215,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(RadioGuide)</visible>
 			</control>
@@ -253,7 +253,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
@@ -265,7 +265,7 @@
 				<width>67</width>
 				<height>67</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelLogo]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(RadioGuide)</visible>
 			</control>

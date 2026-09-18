@@ -37,7 +37,7 @@
 						<control type="image">
 							<include>MyPVRChannels_coords1</include>
 							<fadetime>200</fadetime>
-							<texture fallback="DefaultLiveTV.png" background="true">$VAR[PVRChannelIcon]</texture>
+							<texture fallback="DefaultLiveTV.png" background="true">$VAR[PVRChannelLogo]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>Window.IsVisible(TVChannels)</visible>
 							<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>
@@ -46,7 +46,7 @@
 						<control type="image">
 							<include>MyPVRChannels_coords1</include>
 							<fadetime>200</fadetime>
-							<texture fallback="DefaultRadio.png" background="true">$VAR[PVRChannelIcon]</texture>
+							<texture fallback="DefaultRadio.png" background="true">$VAR[PVRChannelLogo]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>Window.IsVisible(RadioChannels)</visible>
 							<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>

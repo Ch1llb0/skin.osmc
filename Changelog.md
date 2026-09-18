@@ -93,8 +93,10 @@ _Fixed_
 - fix the busy spinner sitting twenty five pixels below and right of the middle of the screen, its box declaring a size the image never took
 - make the error icon monochrome, the one icon in the set that carried a colour of its own
 - fix there being no way out of the TV guide when the scrollbar is hidden, back having run between the grid and the sub menu with nothing to close the window
+- fix the channel lists showing the programme thumbnail where the channel logo belongs
 
 ---
+
 
 **_v21.2.2 - March 2026_**
 
@@ -826,6 +828,9 @@ Coordinates_Includes_Widgets.xml:
 Coordinates_LoginScreen.xml:
 - give the scrollbar its own LoginScreen_coords6 family, as its geometry was declared under the name the profile list already used and Kodi keeps only the first definition
 
+Coordinates_MyPVRGuide.xml:
+- read the channel logo in the eight channel column layouts, leaving the programme panel reading the programme
+
 Coordinates_MyPVRProviders.xml:
 - add the provider list, its layouts and its scrollbar, taking the geometry of the timers list so the PVR windows stay of a piece
 - underline the focused row, as the timers list the layout was taken from does
@@ -860,6 +865,9 @@ DialogMusicInfo.xml:
 
 DialogPVRChannelGuide.xml:
 - read the channel from the guide container, which is where the dialog's other labels read theirs, filling the heading on radio channels as well
+
+DialogPVRChannelsOSD.xml:
+- read the channel logo beside the channel name in the channels OSD
 
 DialogPVRInfo.xml:
 - add extra title info above the plot
@@ -955,6 +963,9 @@ MusicVisualisation.xml:
 MyMusicNav.xml:
 - drop the shared window fade, which ran alongside the conditional pair that suppresses the fade to and from the playlist editor, so the fade played twice and the condition counted for nothing
 
+MyPVRChannels.xml:
+- read the channel logo in the TV and radio channel lists, where the programme thumbnail had been standing in for it
+
 MyPVRGuide.xml:
 - add extra title info to the episode name fadelabel
 - separate genres with commas
@@ -1007,6 +1018,7 @@ Variables.xml:
 - name the two widgets on screen setting as the TwoRowWidgets expression, which is what every two row test and layout condition reads
 - add the channel label variables the fullscreen OSD and the guide dialog have called since 2023 without them existing, split per site as the dialog reads its channel from the guide container
 - name the provider window's heading, breadcrumb and secondary column
+- add PVRChannelLogo and PVRChannelLogoDialogOSD, the channel's own logo with the padlock an encrypted channel falls back to, leaving PVRChannelIcon to the programme rows that should keep showing what is on
 
 Variables_Settings.xml:
 - follow the renamed window property and the moved control ids in the dialog help texts

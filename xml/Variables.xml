@@ -397,6 +397,18 @@
 		<value>$INFO[Container(11).ListItem.Icon]</value>
 	</variable>
 
+	<!-- Beside a channel's name, the channel's own logo. v22 resolves ChannelLogo through
+	     the channel's group member, so it answers for a programme row too. -->
+	<variable name="PVRChannelLogo">
+		<value condition="Skin.HasSetting(PVRShowLock) + ListItem.IsEncrypted">pvr/encrypted.png</value>
+		<value>$INFO[ListItem.ChannelLogo]</value>
+	</variable>
+
+	<variable name="PVRChannelLogoDialogOSD">
+		<value condition="Skin.HasSetting(PVRShowLock) + Container(11).ListItem.IsEncrypted">pvr/encrypted.png</value>
+		<value>$INFO[Container(11).ListItem.ChannelLogo]</value>
+	</variable>
+
 	<variable name="VideoPlayerPlot">
 		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(12005).Property(shownext))">$INFO[VideoPlayer.NextPlot]</value>
 		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.ParentalRatingCode)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.ParentalRatingCode,[LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
