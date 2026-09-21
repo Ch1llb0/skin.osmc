@@ -403,7 +403,7 @@
 				<control type="image">
 					<left>80</left>
 					<top>58</top>
-					<width>500</width>
+					<width>480</width>
 					<height>3</height>
 					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>

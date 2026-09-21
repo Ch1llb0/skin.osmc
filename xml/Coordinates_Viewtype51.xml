@@ -112,7 +112,7 @@
 			<control type="label">
 				<left>32</left>
 				<top>0</top>
-				<width>1018</width>
+				<width>538</width>
 				<height>72</height>
 				<font>Font36-light</font>
 				<label>$VAR[Label1]</label>

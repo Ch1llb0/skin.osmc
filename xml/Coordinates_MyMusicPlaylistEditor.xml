@@ -991,7 +991,7 @@
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
-						<width>960</width>
+						<width>400</width>
 						<height>85</height>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
@@ -1000,7 +1000,7 @@
 					</control>
 					<control type="image">
 						<top>64</top>
-						<width>960</width>
+						<width>400</width>
 						<height>3</height>
 						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					</control>
@@ -1008,7 +1008,7 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
-						<width>960</width>
+						<width>400</width>
 						<height>58</height>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
@@ -1017,13 +1017,13 @@
 					</control>
 					<control type="image">
 						<top>50</top>
-						<width>960</width>
+						<width>400</width>
 						<height>3</height>
 						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					</control>
 					<control type="label">
 						<top>58</top>
-						<width>960</width>
+						<width>400</width>
 						<height>27</height>
 						<font>Font27-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>

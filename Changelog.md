@@ -81,6 +81,7 @@ _Fixed_
 - fix the blank channel label in the fullscreen OSD and guide dialog
 - fix the watched status bar and its overlay swapping size in the video wall
 - fix the focused status badge in the music wall low view at 16:9
+- fix three layouts at 4:3 sizing their contents for a wider screen
 - fix the music window fading twice on open
 - fix the missing widget heading on menu entries with several widgets
 - fix episodes losing the skin's numbering in list view and on widgets
@@ -821,6 +822,9 @@ Coordinates_DialogGameControllers.xml:
 Coordinates_DialogPlayerProcessInfo.xml:
 - grow the info panel by two rows and move the debug overlay shortcut down accordingly
 
+Coordinates_DialogPVRChannelManager.xml:
+- hold the focused channel logo to the row at 4:3, where it ran twenty pixels past the end of it
+
 Coordinates_DialogSeekBar.xml:
 - remove the file, as every family in it was an unreferenced 0x0 stub and DialogSeekBar.xml holds no coordinates include at all
 
@@ -842,6 +846,9 @@ Coordinates_Includes_Widgets.xml:
 Coordinates_LoginScreen.xml:
 - give the scrollbar its own LoginScreen_coords6 family, as its geometry was declared under the name the profile list already used and Kodi keeps only the first definition
 
+Coordinates_MyMusicPlaylistEditor.xml:
+- hold the focused row to the row at 4:3, where its five controls carried the 21:9 width
+
 Coordinates_MyPVRGuide.xml:
 - read the channel logo in the eight channel column layouts, leaving the programme panel reading the programme
 
@@ -855,6 +862,9 @@ Coordinates_MyPVRRecordings.xml:
 
 Coordinates_VideoOSD.xml:
 - widen the subtitle name to fill the reworked subtitle stream row
+
+Coordinates_Viewtype51.xml:
+- hold the list label to the row at 4:3, where it carried the 16:9 width
 
 Coordinates_Viewtype538.xml:
 - pass the watched status bar and its overlay in the order MediaViewImageNF reads them, matching Viewtype536
