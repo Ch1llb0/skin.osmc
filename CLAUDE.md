@@ -136,6 +136,38 @@ position it occupies, and the controls after it move down by one — including t
 entries in `Variables_Settings.xml` and any `Control.SetFocus` that names them. Never give a new setting
 the next free number at the end of the range and drop it into the middle.
 
+## When a control draws nothing
+
+A control that draws nothing is the usual shape of a bug here, and none of it reaches a log. Nothing in
+this repository catches it: the XML parses, every name resolves, and the window loads.
+
+**Suspect structure that outlived its reason first.** The widget heading sat in a horizontal grouplist
+because it shared that row with two arrow buttons. The two row work moved the arrows elsewhere and left
+the row, so a grouplist whose only child was the title drew no title at all, on exactly the menu entries
+that had more than one widget. The heading that is a plain label in a group, one menu entry over, was
+fine throughout. When a wrapper's contents move out, the wrapper goes with them.
+
+**Diff the two controls, do not reason about them.** Where one control draws and its near twin does not,
+expand the includes for both and take the difference out, rather than working forward from what each
+ought to do. Reading `GUIControlGroupList.cpp` line by line did not find this; noticing that the two
+headings differed only in a wrapper did.
+
+Three pieces of engine behaviour are worth knowing before reading any of it, each of which cost a wrong
+fix here:
+
+- **An `<include condition="...">` is evaluated once, as the skin loads, and a false condition drops the
+  include** rather than hiding what it holds. Whatever it carried — a position, a width, a font — is then
+  absent, and the control draws with what is left. Conditions are for what is settled when the skin
+  loads, the aspect ratio above all; anything that changes while the skin runs belongs in `<visible>`.
+- **A condition cannot read a `$PARAM`.** `String.IsEqual` resolves its first argument as an info label,
+  so `String.IsEqual($PARAM[fit],inline)` asks for the label *named* `inline`, gets nothing, and is never
+  true. Branch on a parameter by putting it in the include's name instead, as
+  `widgetLayoutSlide-$PROPERTY[layout]` does.
+- **`<width>auto</width>` is a range, not a measurement.** Kodi reads it from the `min` and `max`
+  attributes, and a label with no `max` falls back to the width of its parent. A deliberate auto width
+  needs a `max`, and a `max` is a screen-shape number, so it belongs in a `_coords` family with all four
+  leaves.
+
 ## Icon sizes
 
 An icon is authored at the size the **largest** control that draws it uses, and no larger. Work that
