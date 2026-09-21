@@ -48,6 +48,25 @@ So a coordinate change is made **once**, on the development branch, including al
 not hand-edit `xml/` on a sibling, as it is propagated wholesale and an edit there is overwritten. The four
 genuinely per-branch files are `addon.xml`, `README.md`, `CLAUDE.md` and `.github/`.
 
+### The four must stay congruent, logically and visually
+
+Because one `xml/` tree serves all four, every change has to hold at 16:9, 21:9, 21:9 masked and 4:3 — not
+only parse there, but *look right* there. Two rules follow, and breaking either is invisible on the branch
+you are working on:
+
+- **A number that depends on the screen shape belongs in `Coordinates_*.xml`, in all four leaves.** Never
+  write one into `xml/Includes*.xml`, `xml/Variables*.xml` or `shortcuts/templates.xml`, even as an
+  attribute and even when it looks incidental. `<width max="1280">auto</width>` in an include is a 16:9
+  number that silently truncates 21:9 and overflows 4:3; the same value as a `_coords` family with
+  `1280 / 1920 / 1920 / 800` is correct everywhere. If an existing include already carries the value you
+  need, mirror its family rather than inventing a constant.
+- **Adding a leaf to one variant means adding it to all four.** A `_coords` family with a missing leaf
+  resolves to nothing on that aspect ratio, and a control with no geometry draws nothing at all rather
+  than drawing wrongly, so it will not show up in any check that only parses the tree.
+
+When a change is aspect-dependent, say so in the commit message and give the four values, so the next
+reader can check them without deriving them again.
+
 `.github/sync.yml` + `.github/workflows/sync-translations.yml` sync the `language/` folder out to the
 siblings, so translation changes only need to be made once.
 
