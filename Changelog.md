@@ -82,6 +82,7 @@ _Fixed_
 - fix the watched status bar and its overlay swapping size in the video wall
 - fix the focused status badge in the music wall low view at 16:9
 - fix the music window fading twice on open
+- fix the missing widget heading on menu entries with several widgets
 - fix episodes losing the skin's numbering in list view and on widgets
 - fix the channel lists showing the programme thumbnail, not the logo
 - fix navigation in the video and music OSD stopping at hidden buttons
@@ -960,6 +961,7 @@ Includes_Widgets.xml:
 - select the fading widget by page rather than by widget when two are on screen, keeping the effects and timings that move between single widgets
 - hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
 - remove widget-fakelandscape and widget-faketvlandscape, the two composition includes the dropped artwork types were the only callers of
+- give the widget heading one form again, the row it shared with the widget arrows having gone with them; a horizontal grouplist holding nothing but the title drew no title at all
 
 Includes_Windows_Dialogs.xml:
 - add the scroll reset include: two conditional actions that flip one property as a window loads, in place of twenty includes that set twenty five properties and cleared each one from an alarm clock a frame later

@@ -506,22 +506,17 @@
 
 	<!-- The heading names the focused item and numbers an episode as the rest of the skin does. It
 	     reads a container passed as a parameter, which a variable cannot take, so there is one
-	     label per form, chosen by visibility. -->
-	<include name="widgetHeadingTitleWide">
+	     label per numbering, chosen by visibility. -->
+	<include name="widgetHeadingTitleRow">
 		<include>widgetdetails_coords</include>
 		<scroll>True</scroll>
 		<scrollspeed>55</scrollspeed>
 	</include>
 	
-	<include name="widgetHeadingTitleInline">
-		<width>auto</width>
-	</include>
-	
 	<include name="widgetHeadingTitle">
 		<definition>
 			<control type="label">
-				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
-				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<include>widgetHeadingTitleRow</include>
 				<height>46</height>
 				<font>Font33</font>
 				<align>right</align>
@@ -532,8 +527,7 @@
 			</control>
 			
 			<control type="label">
-				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
-				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<include>widgetHeadingTitleRow</include>
 				<height>46</height>
 				<font>Font33</font>
 				<align>right</align>
@@ -544,8 +538,7 @@
 			</control>
 			
 			<control type="label">
-				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
-				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<include>widgetHeadingTitleRow</include>
 				<height>46</height>
 				<font>Font33</font>
 				<align>right</align>
@@ -556,8 +549,7 @@
 			</control>
 			
 			<control type="label">
-				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
-				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<include>widgetHeadingTitleRow</include>
 				<height>46</height>
 				<font>Font33</font>
 				<align>right</align>
@@ -568,8 +560,7 @@
 			</control>
 			
 			<control type="label">
-				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
-				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<include>widgetHeadingTitleRow</include>
 				<height>46</height>
 				<font>Font33</font>
 				<align>right</align>
@@ -580,8 +571,7 @@
 			</control>
 			
 			<control type="label">
-				<include condition="String.IsEqual($PARAM[fit],wide)">widgetHeadingTitleWide</include>
-				<include condition="String.IsEqual($PARAM[fit],inline)">widgetHeadingTitleInline</include>
+				<include>widgetHeadingTitleRow</include>
 				<height>46</height>
 				<font>Font33</font>
 				<align>right</align>
@@ -630,25 +620,8 @@
 				     of what it is given, and a group has none of its own. -->
 				<control type="group">
 					<height>46</height>
-					<visible>Integer.IsEqual(Container($PARAM[container]).NumItems,1)</visible>
 					<include content="widgetHeadingTitle">
 						<param name="container">$PARAM[container]</param>
-						<param name="fit">wide</param>
-					</include>
-				</control>
-			
-				<!-- Indicators + Widget heading -->
-				<control type="grouplist">
-					<height>46</height>
-					<include>widgetdetails_coords</include>
-					<itemgap>10</itemgap>
-					<align>right</align>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<visible>Integer.IsGreater(Container($PARAM[container]).NumItems,1)</visible>
-					<include content="widgetHeadingTitle">
-						<param name="container">$PARAM[container]</param>
-						<param name="fit">inline</param>
 					</include>
 				</control>
 
