@@ -278,7 +278,6 @@
 					<top>0</top>
 					<width>30</width>
 					<height>16</height>
-					<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 					<texture colordiffuse="$VAR[OverlayColorNF]">up.png</texture>
 
 					<visible>Container($PARAM[container]).HasPrevious</visible>

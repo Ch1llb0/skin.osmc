@@ -94,6 +94,7 @@ _Fixed_
 - fix the OSMC logo on the home and login screens being resampled
 - fix the sub menu arrows being 32 pixels in a 30 pixel box
 - fix the shortcut management arrows rendering at a ninth of full strength
+- fix the list indicator's up arrow rendering at half the strength of its down arrow
 - render the video, duration, timer and reminder flags at their drawn size
 - redraw the encrypted channel padlock at the size it is drawn
 - fix the watched flag in the PVR recordings list being oversized
@@ -930,6 +931,7 @@ Includes.xml:
 - pull in Coordinates_MyPVRProviders.xml
 - stop loading Coordinates_DialogSeekBar.xml, which is removed
 - stop loading Includes_Buttons.xml
+- tint the list indicator's up arrow once: it carried TextColorNF on the control as well as OverlayColorNF on the texture, and the two multiplied to half the alpha its down arrow is drawn at
 
 Includes_Buttons.xml:
 - remove the file, its one role now held beside the other shapes every window shares
