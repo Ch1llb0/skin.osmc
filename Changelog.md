@@ -1086,6 +1086,10 @@ VideoOSD.xml:
 Windows that fill the screen:
 - set a black background colour on all twenty-seven, so Kodi clears the screen rather than leaving each frame to draw over the one before
 
+colors/defaults.xml:
+- declare all twelve colours at the values the scheme the skin ships with resolves them to, which is OSMC Lightblue, the set Includes.xml turns on when none is chosen: DarkenColor 60000000 in place of 66000000, SelectedColor FF00D7C7, DisabledColor E65D5D5D, and the background and menu OSD colours opaque at FF009CC7 in place of the 90% E6 that had panels declared see-through
+- nothing renders differently: the skin asks for the variables everywhere and for these names nowhere, which is how the file came to declare one thing while the skin drew another
+
 icons/:
 - remove the vector originals, their README and the render script; Kodi never reads them and no build step touches them, so they live where they are worked on
 

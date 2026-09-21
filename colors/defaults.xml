@@ -4,15 +4,15 @@
 	<!-- Default colors -->
 	<color name="TextColorFO">FFFFFFFF</color>
 	<color name="TextColorNF">80FFFFFF</color>
-	<color name="DarkenColor">66000000</color>
+	<color name="DarkenColor">60000000</color>
 	<color name="OverlayColorFO">FFFFFFFF</color>
 	<color name="OverlayColorNF">55F1F1F1</color>
-	<color name="SelectedColor">FF00C8FF</color>
-	<color name="DisabledColor">88555555</color>
+	<color name="SelectedColor">FF00D7C7</color>
+	<color name="DisabledColor">E65D5D5D</color>
 	<color name="InvalidColor">60000000</color>
 	<color name="OSDCacheColor">33FFFFFF</color>
 	<color name="MaskingColor">FF000000</color>
-	<color name="BackgroundColor">E6009CC7</color>
-	<color name="MenuOSDColor">E6009CC7</color>
+	<color name="BackgroundColor">FF009CC7</color>
+	<color name="MenuOSDColor">FF009CC7</color>
 
 </colors>
