@@ -131,28 +131,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords6_4:3</include>
 	</include>
 	<include name="MediaFlags_coords6_16:9">
-		<top>2</top>
+		<top>6</top>
 		<left>-2</left>
-		<width>32</width>
-		<height>34</height>
+		<width>30</width>
+		<height>26</height>
 	</include>
 	<include name="MediaFlags_coords6_21:9">
-		<top>2</top>
+		<top>6</top>
 		<left>-2</left>
-		<width>32</width>
-		<height>34</height>
+		<width>30</width>
+		<height>26</height>
 	</include>
 	<include name="MediaFlags_coords6_21:9_masked">
-		<top>2</top>
+		<top>6</top>
 		<left>-2</left>
-		<width>32</width>
-		<height>34</height>
+		<width>30</width>
+		<height>26</height>
 	</include>
 	<include name="MediaFlags_coords6_4:3">
-		<top>2</top>
+		<top>6</top>
 		<left>-2</left>
-		<width>32</width>
-		<height>34</height>
+		<width>30</width>
+		<height>26</height>
 	</include>
 	
 	<include name="MediaFlags_coords7">

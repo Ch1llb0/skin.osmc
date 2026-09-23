@@ -727,7 +727,7 @@
 				</control>
 				<control type="image">
 					<include>$PARAM[coords3]</include>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<texture background="true">$VAR[StatusOverlay]</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
@@ -766,7 +766,7 @@
 				</control>
 				<control type="image">
 					<include>$PARAM[coords3]</include>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<texture background="true">$VAR[StatusOverlay]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -782,7 +782,7 @@
 				</control>
 				<control type="image">
 					<include>$PARAM[coords3]</include>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<texture background="true">$VAR[StatusOverlay]</texture>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
@@ -829,7 +829,7 @@
 					<top>$PARAM[badgetop]</top>
 					<width>$PARAM[badge]</width>
 					<height>$PARAM[badge]</height>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<texture background="true">$VAR[StatusOverlay]</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
@@ -878,7 +878,7 @@
 					<top>$PARAM[badgetop]</top>
 					<width>$PARAM[badge]</width>
 					<height>$PARAM[badge]</height>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<texture background="true">$VAR[StatusOverlay]</texture>
 				</control>
 			</control>
 
@@ -919,7 +919,7 @@
 					<top>$PARAM[badgetop]</top>
 					<width>$PARAM[badge]</width>
 					<height>$PARAM[badge]</height>
-					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<texture background="true">$VAR[StatusOverlay]</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>

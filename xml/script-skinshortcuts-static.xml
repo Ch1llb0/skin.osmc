@@ -382,7 +382,7 @@
 		</item>
 		<item id="17">
 			<label>$LOCALIZE[19163]</label>
-			<icon>home/recordings.png</icon>
+			<icon>DefaultPVRRecordings.png</icon>
 			<onclick>ActivateWindow(TVRecordings)</onclick>
 			<property name="id">17</property>
 			<property name="name">recordings</property>
@@ -395,7 +395,7 @@
 		</item>
 		<item id="18">
 			<label>$LOCALIZE[19040]</label>
-			<icon>home/timers.png</icon>
+			<icon>DefaultPVRTimers.png</icon>
 			<onclick>ActivateWindow(TVTimers)</onclick>
 			<property name="id">18</property>
 			<property name="name">timers</property>
@@ -408,7 +408,7 @@
 		</item>
 		<item id="19">
 			<label>$LOCALIZE[137]</label>
-			<icon>home/search-tv.png</icon>
+			<icon>DefaultPVRSearch.png</icon>
 			<onclick>ActivateWindow(TVSearch)</onclick>
 			<property name="id">19</property>
 			<property name="name">search</property>
@@ -434,7 +434,7 @@
 		</item>
 		<item id="21">
 			<label>$LOCALIZE[19163]</label>
-			<icon>home/recordings.png</icon>
+			<icon>DefaultPVRRecordings.png</icon>
 			<onclick>ActivateWindow(RadioRecordings)</onclick>
 			<property name="id">21</property>
 			<property name="name">recordings</property>
@@ -447,7 +447,7 @@
 		</item>
 		<item id="22">
 			<label>$LOCALIZE[19040]</label>
-			<icon>home/timers.png</icon>
+			<icon>DefaultPVRTimers.png</icon>
 			<onclick>ActivateWindow(RadioTimers)</onclick>
 			<property name="id">22</property>
 			<property name="name">timers</property>
@@ -460,7 +460,7 @@
 		</item>
 		<item id="23">
 			<label>$LOCALIZE[137]</label>
-			<icon>home/search-tv.png</icon>
+			<icon>DefaultPVRSearch.png</icon>
 			<onclick>ActivateWindow(RadioSearch)</onclick>
 			<property name="id">23</property>
 			<property name="name">search</property>
@@ -739,7 +739,7 @@
 		</item>
 		<item id="2">
 			<label>$LOCALIZE[19163]</label>
-			<icon>home/recordings.png</icon>
+			<icon>DefaultPVRRecordings.png</icon>
 			<onclick>ActivateWindow(TVRecordings)</onclick>
 			<property name="id">2</property>
 			<property name="name">recordings</property>
@@ -750,7 +750,7 @@
 		</item>
 		<item id="3">
 			<label>$LOCALIZE[19040]</label>
-			<icon>home/timers.png</icon>
+			<icon>DefaultPVRTimers.png</icon>
 			<onclick>ActivateWindow(TVTimers)</onclick>
 			<property name="id">3</property>
 			<property name="name">timers</property>
@@ -761,7 +761,7 @@
 		</item>
 		<item id="4">
 			<label>$LOCALIZE[137]</label>
-			<icon>home/search-tv.png</icon>
+			<icon>DefaultPVRSearch.png</icon>
 			<onclick>ActivateWindow(TVSearch)</onclick>
 			<property name="id">4</property>
 			<property name="name">search</property>
@@ -785,7 +785,7 @@
 		</item>
 		<item id="2">
 			<label>$LOCALIZE[19163]</label>
-			<icon>home/recordings.png</icon>
+			<icon>DefaultPVRRecordings.png</icon>
 			<onclick>ActivateWindow(RadioRecordings)</onclick>
 			<property name="id">2</property>
 			<property name="name">recordings</property>
@@ -796,7 +796,7 @@
 		</item>
 		<item id="3">
 			<label>$LOCALIZE[19040]</label>
-			<icon>home/timers.png</icon>
+			<icon>DefaultPVRTimers.png</icon>
 			<onclick>ActivateWindow(RadioTimers)</onclick>
 			<property name="id">3</property>
 			<property name="name">timers</property>
@@ -807,7 +807,7 @@
 		</item>
 		<item id="4">
 			<label>$LOCALIZE[137]</label>
-			<icon>home/search-tv.png</icon>
+			<icon>DefaultPVRSearch.png</icon>
 			<onclick>ActivateWindow(RadioSearch)</onclick>
 			<property name="id">4</property>
 			<property name="name">search</property>

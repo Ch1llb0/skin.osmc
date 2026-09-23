@@ -49,6 +49,11 @@ _Improved_
 - clear the screen on the windows that fill it
 - draw the focus line with the control instead of in its texture
 - cut texture memory by three fifths
+- redraw every icon from a traced outline at the size it is drawn
+- hold every icon to one stroke weight
+- build the folder icons from one folder weight and one inner glyph weight
+- draw the nine icons Kodi falls back to that the set did not have
+- keep one set of watched status overlays rather than two
 - reset scrolled text boxes when a dialog or menu closes over them
 - drive every scroll reset from one token instead of twenty six properties
 - scroll every label at a speed set by its own font size
@@ -90,6 +95,7 @@ _Fixed_
 - fix left and right leaving the subtitle row in the video OSD
 - fix being unable to leave the TV guide with the scrollbar hidden
 - render every icon at the largest size it is drawn at
+- fix fifteen icons being enlarged in the select dialog preview
 - fix the movie artwork placeholder never being drawn
 - fix the OSMC logo on the home and login screens being resampled
 - fix the sub menu arrows being 32 pixels in a 30 pixel box
@@ -97,11 +103,24 @@ _Fixed_
 - fix the list indicator's up arrow rendering at half the strength of its down arrow
 - render the video, duration, timer and reminder flags at their drawn size
 - redraw the encrypted channel padlock at the size it is drawn
+- fix the encrypted channel padlock drawing seams where its shapes overlap, and dimming itself twice
+- fix the list indicator arrows running into the edge of their texture
+- draw the four media flags as one family, at one size and one stroke weight
+- redraw the icons that carried their weight in their artwork rather than in their stroke
+- draw one letter, one music note, one magnifier and one bust wherever each of them appears
+- render every icon with its antialiasing intact, rather than cutting each edge to whole pixels
+- fix the two PVR provider icons keeping the hard edges the rest of the set lost
+- fix the record on the artist icons and the wheel on the timer rules icon drawing a seam against what they sit on
+- hold every folder icon's inner glyph to one edge softness
+- take the stepping off the shallow curves in the microphone, camera, sun, note and mast icons
+- redraw the three music card icons, whose sheets, note and lettering had all been cut to hard pixels
 - fix the watched flag in the PVR recordings list being oversized
 - fix the subtitle position marker in the calibration screen being stretched
 - redraw the busy spinner with antialiased edges
 - add a small busy spinner for the places that need one
 - fix the busy spinner sitting below and right of centre
+- set the warning icon's exclamation mark in the skin's own bold
+- let the background through the OSMC logo in the pixel ratio calibration icon, rather than painting it black
 - make the error icon monochrome like the rest of the set
 - fix drop shadows on the home menu and PVR timer icons
 - fix the video watched status setting leaving movie sets untouched
@@ -702,6 +721,7 @@ menus.xml:
 - give every group in the shortcut picker its own icon, as an unset group falls back to a plain folder
 - drop the layout and artwork the seeded widgets spelled out, which the type keyed defaults now resolve to the same values, so the seeds no longer freeze a default that has moved on
 - seed the sort of the five widgets whose definitions declare one and whose rows did not, as the add-on re-derives a widget's path, type and target on every build but never its sort
+- name the recordings, search and timers icons from the default set, as the other forty eight entries do
 
 overrides.xml:
 - remove the v2 groupings, widgets, backgrounds and property options, carried into menus.xml, widgets.xml, backgrounds.xml and properties.xml
@@ -798,6 +818,7 @@ script-skinshortcuts-static.xml:
 - rebuild it again for the two row view, so it reaches the users the file exists for
 - rebuild it once more for the seeded sorts, which reach the generated content elements of the five widgets that gained one
 - rebuild it against Skin Shortcuts 3.0.3 from a clean profile, picking up everything the configuration gained on this branch
+- follow the menu icons to the default set
 
 script-skinshortcuts.xml:
 - draw the fanart layer only when the item has fanart, and drop the transparent fallback behind it
@@ -838,6 +859,9 @@ Coordinates_DialogSettings.xml:
 Coordinates_DialogVideoManager.xml:
 - hide the item sublabel under the generic select dialog, which stacks over the manager in Kodi v22
 
+Coordinates_Includes_MediaFlags.xml:
+- give the audio and subtitle flags the box the other two flags use, 30 by 26 at a top of 6, on all four aspect ratios
+
 Coordinates_Includes_Widgets.xml:
 - add the two row details top, one number for all four layouts, as each lands its poster bottom twelve pixels above it and the lower row is the same block slid down
 - add the widget arrow coordinates, at the home menu list's own height against the opposite margin
@@ -860,6 +884,7 @@ Coordinates_MyPVRProviders.xml:
 
 Coordinates_MyPVRRecordings.xml:
 - read the watched state from the named expression rather than repeating it at twenty-four sites
+- read the watched status overlay from the one variable
 
 Coordinates_VideoOSD.xml:
 - widen the subtitle name to fill the reworked subtitle stream row
@@ -948,6 +973,9 @@ Includes_Maps.xml:
 - add the immersive and profile codec values Kodi v22 reports e.g. Dolby Atmos and DTS:X
 - label ambiguous channel counts with every layout they may represent, as a channel count cannot identify one
 
+Includes_MediaFlags.xml:
+- draw the audio and subtitle flags from their own textures rather than the OSD buttons
+
 Includes_SubMenu.xml:
 - drop the eighteen sub menu scroll resets, as the token now reads the sub menu and view picker focus itself
 - offer the artwork titles setting in the seven sub menus that carry a view button, shown while a wall view is on screen
@@ -974,6 +1002,7 @@ Includes_Widgets.xml:
 - hold the one widget details text to the three whole rows of its font the longest of it runs to, rather than letting the box grow to whatever it needs
 - remove widget-fakelandscape and widget-faketvlandscape, the two composition includes the dropped artwork types were the only callers of
 - give the widget heading one form again, the row it shared with the widget arrows having gone with them; a horizontal grouplist holding nothing but the title drew no title at all
+- read the watched status overlay from the one variable
 
 Includes_Windows_Dialogs.xml:
 - add the scroll reset include: two conditional actions that flip one property as a window loads, in place of twenty includes that set twenty five properties and cleared each one from an alarm clock a frame later
@@ -984,6 +1013,7 @@ Includes_Windows_Dialogs.xml:
 - read the home background from backgroundPath, which is where v3 stores the path
 - read the watched state from the named expressions rather than spelling it out
 - take DialogRowButton in, under a Buttons heading
+- read the watched status overlay from the one variable
 
 LoginScreen.xml:
 - point the scrollbar at LoginScreen_coords6
@@ -1056,6 +1086,7 @@ Variables.xml:
 - add the channel label variables the fullscreen OSD and the guide dialog have called since 2023 without them existing, split per site as the dialog reads its channel from the guide container
 - name the provider window's heading, breadcrumb and secondary column
 - add PVRChannelLogo and PVRChannelLogoDialogOSD, the channel's own logo with the padlock an encrypted channel falls back to, leaving PVRChannelIcon to the programme rows that should keep showing what is on
+- hold the watched status overlays in one variable rather than two, now that one set of artwork serves both
 
 Variables_Settings.xml:
 - follow the renamed window property and the moved control ids in the dialog help texts
@@ -1092,6 +1123,9 @@ colors/defaults.xml:
 - declare all twelve colours at the values the scheme the skin ships with resolves them to, which is OSMC Lightblue, the set Includes.xml turns on when none is chosen: DarkenColor 60000000 in place of 66000000, SelectedColor FF00D7C7, DisabledColor E65D5D5D, and the background and menu OSD colours opaque at FF009CC7 in place of the 90% E6 that had panels declared see-through
 - nothing renders differently: the skin asks for the variables everywhere and for these names nowhere, which is how the file came to declare one thing while the skin drew another
 
+SettingsScreenCalibration.xml:
+- draw the calibration markers from the NF textures, which are white, and leave the focus to the colordiffuse that was already carrying it
+
 icons/:
 - remove the vector originals, their README and the render script; Kodi never reads them and no build step touches them, so they live where they are worked on
 
@@ -1106,6 +1140,20 @@ media/:
 - remove the drop shadows from the home menu icons and the PVR timer icon
 - flatten the focus textures to white, which the 27c, 52c and 66c variants already were
 - repack Textures.xbt with the Kodi v22 texture packer, which writes XBT 3 and picks a channel count per texture; 231 frames are now single channel and 194 dual, leaving 82 in full colour
+- re-render at 405 the fifteen icons the skin owns a vector for that were drawn smaller: nine at 400, two at 288 and four at 256. The select dialog draws a list icon in a 405 box, which is the largest any icon is drawn at, and the first pass had sized these for the largest list control instead
+- repack Textures.xbt again for those fifteen, 366 frames either way and 295 bytes larger
+- redraw all 196 icons the skin draws from a traced outline, each rendered at the size the largest control gives it: the 105 list icons at 405, where the select dialog draws them, and the nine watched status overlays down from 44 to the 30 they are drawn at
+- give every icon its full opacity: the encrypted padlock had 75% baked in and the eighteen OSD buttons between 95% and 98%, all of them drawn through a colordiffuse that already carries the colour, so the dimming was applied twice
+- inset the list indicator arrows by a pixel, as their ink ran the full width of a 30 pixel canvas and met whatever framed it
+- move AudioTrack.png to unused/, superseded by the audio flag drawn from it
+- draw the four media flags as one family: a 20 pixel glyph on a 26 pixel canvas with a 3 pixel stroke, which only the duration flag had. The video flag is redrawn from the skin's own camera, where it carried a 1 pixel stroke. The audio and subtitle flags were the 60 pixel OSD buttons, inset in their canvas the way a button needs, so they drew a 19 pixel glyph against the others' 24; they become flags of their own, the speaker from the outline one the skin already shipped and never drew, the subtitle bubble from the OSD glyph with its outer outline alone thickened so the caption bars keep their weight and stay apart
+- retire the nine narrow watched status overlays; the wide artwork takes their names
+- retire the five focused calibration markers; the skin drew them in both states and tinted them, so the NF name is the one texture and it is white
+- move the twenty textures nothing draws to unused/ beside media/, where the packer does not reach them
+- move a further twenty three textures to unused/, none of them named by the skin or asked for by Kodi:
+  the ten OSD buttons this skin's OSD does not carry, the two old mouse pointers, the four superseded
+  library icons, the three artwork placeholders, the two PVR fallbacks, the DSP add-on icon and the large logo
+- repack Textures.xbt: 366 frames to 332, 881 to 1054 kB, the list icons at 405 costing more than the removals save
 
 
 addon.xml:

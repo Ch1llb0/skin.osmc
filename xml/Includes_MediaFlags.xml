@@ -76,7 +76,7 @@
 					<control type="image">
 						<include>MediaFlags_coords6</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
-						<texture>osd/OSDAudioNF.png</texture>
+						<texture>Audio.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					</control>
 					<control type="fadelabel" id="9992">
@@ -95,7 +95,7 @@
 					<control type="image">
 						<include>MediaFlags_coords6</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
-						<texture>osd/OSDAudioNF.png</texture>
+						<texture>Audio.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					</control>
 					<control type="fadelabel" id="9994">
@@ -154,7 +154,7 @@
 					<control type="image">
 						<include>MediaFlags_coords6</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
-						<texture>osd/OSDAudioNF.png</texture>
+						<texture>Audio.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					</control>
 					<control type="fadelabel" id="9996">
@@ -173,7 +173,7 @@
 					<control type="image">
 						<include>MediaFlags_coords6</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
-						<texture>osd/OSDSubtitlesNF.png</texture>
+						<texture>Subtitles.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					</control>
 					<control type="fadelabel" id="9998">
