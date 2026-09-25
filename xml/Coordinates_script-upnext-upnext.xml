@@ -45,13 +45,13 @@
 		<height>107</height>
 	</include>
 	<include name="script-upnext-upnext_coords2_21:9">
-		<top>270</top>
+		<top>90</top>
 		<right>0</right>
 		<width>550</width>
 		<height>107</height>
 	</include>
 	<include name="script-upnext-upnext_coords2_21:9_masked">
-		<top>90</top>
+		<top>270</top>
 		<right>0</right>
 		<width>550</width>
 		<height>107</height>

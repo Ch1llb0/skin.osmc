@@ -166,7 +166,7 @@
 	<include name="MyPVRRecordings_coords7_4:3">
 		<left>750</left>
 		<centertop>50%</centertop>
-		<width>1050</width>
+		<width>570</width>
 		<height>720</height>
 	</include>
 	

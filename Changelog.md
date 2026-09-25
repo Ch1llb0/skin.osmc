@@ -93,6 +93,14 @@ _Fixed_
 - fix the channel lists showing the programme thumbnail, not the logo
 - fix navigation in the video and music OSD stopping at hidden buttons
 - fix left and right leaving the subtitle row in the video OSD
+- fix the video OSD's seek strip sitting eight pixels above its progress bar at 16:9
+- fix the weather window's condition and outlook rows running off the right of the screen
+- line the weather window's two detail columns up with the rest of the window
+- fix the first fullscreen label row and the recordings list sizing themselves for a wider screen at 4:3
+- fix the Up Next panel's 21:9 and masked positions being swapped
+- fix the fullscreen info hit area being a different shape on every aspect ratio
+- give the fullscreen stream details one column width and one gap on every aspect ratio
+- fix the profile settings scrollbar sitting a pixel below its list when masked
 - fix being unable to leave the TV guide with the scrollbar hidden
 - render every icon at the largest size it is drawn at
 - fix fifteen icons being enlarged in the select dialog preview

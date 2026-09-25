@@ -15,21 +15,21 @@
 	</include>
 	<include name="DialogFullScreenInfo_coords_21:9">
 		<left>0</left>
-		<top>472</top>
-		<width>1620</width>
+		<top>292</top>
+		<width>2260</width>
 		<height>40</height>
 	</include>
 	<include name="DialogFullScreenInfo_coords_21:9_masked">
 		<left>0</left>
-		<top>292</top>
-		<width>1620</width>
+		<top>472</top>
+		<width>2260</width>
 		<height>40</height>
 	</include>
 	<include name="DialogFullScreenInfo_coords_4:3">
-		<left>150</left>
-		<top>225</top>
-		<width>405</width>
-		<height>600</height>
+		<left>0</left>
+		<top>292</top>
+		<width>1140</width>
+		<height>40</height>
 	</include>
 
 </includes>
