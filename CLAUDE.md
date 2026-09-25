@@ -7,8 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is **skin.osmc**, the default Kodi skin shipped with OSMC (Open Source Media Center). It is not a
 traditional software project — there is no build step, package manager, or test suite. The repo is a Kodi
 skin addon: XML layout files, XML "coordinate" files, translation files, and media assets that Kodi's skin
-engine parses directly at runtime. Changes are validated by loading the skin in Kodi/OSMC, not by running
-commands in this repo.
+engine parses directly at runtime. Changes are validated by loading the skin in Kodi/OSMC, after the
+structural checks in `.github/scripts/validate_skin.py` (see Verifying changes).
 
 ## Repository layout
 
@@ -110,7 +110,7 @@ Kodi skin XML separates *layout logic* from *positioning*, and this skin leans o
   `script.skinshortcuts` and `script.upnext` addons.
 
 When adding a new positioned element: add the control to the relevant window/include file referencing a new
-`_coords` include name, then define that include (with aspect-ratio/masking branches as needed) in the
+`_coords` include name, then define that include (with all four aspect-ratio leaves) in the
 matching `Coordinates_*.xml` file, then ensure that file is pulled in via `xml/Includes.xml` if it isn't
 already.
 
@@ -141,19 +141,15 @@ the next free number at the end of the range and drop it into the middle.
 A control that draws nothing is the usual shape of a bug here, and none of it reaches a log. Nothing in
 this repository catches it: the XML parses, every name resolves, and the window loads.
 
-**Suspect structure that outlived its reason first.** The widget heading sat in a horizontal grouplist
-because it shared that row with two arrow buttons. The two row work moved the arrows elsewhere and left
-the row, so a grouplist whose only child was the title drew no title at all, on exactly the menu entries
-that had more than one widget. The heading that is a plain label in a group, one menu entry over, was
-fine throughout. When a wrapper's contents move out, the wrapper goes with them.
+**Suspect structure that outlived its reason first.** A wrapper built for contents that have since moved
+out can stop its remaining child from drawing — a horizontal grouplist left holding only a label is the
+case seen here. When a wrapper's contents move out, the wrapper goes with them.
 
 **Diff the two controls, do not reason about them.** Where one control draws and its near twin does not,
 expand the includes for both and take the difference out, rather than working forward from what each
-ought to do. Reading `GUIControlGroupList.cpp` line by line did not find this; noticing that the two
-headings differed only in a wrapper did.
+ought to do.
 
-Three pieces of engine behaviour are worth knowing before reading any of it, each of which cost a wrong
-fix here:
+Three pieces of engine behaviour are worth knowing before reading any of it:
 
 - **An `<include condition="...">` is evaluated once, as the skin loads, and a false condition drops the
   include** rather than hiding what it holds. Whatever it carried — a position, a width, a font — is then
@@ -242,7 +238,7 @@ commit that hand-edits a `msgstr` is overwritten on the next sync. The split to 
 - **Translations** of those strings come back through Weblate. Do not PR them.
 
 Changing an existing `msgid` invalidates every translation of it, so avoid cosmetic rewording — a hyphen
-costs 26 retranslations.
+costs a retranslation in every locale.
 
 ## Verifying changes
 
@@ -304,8 +300,8 @@ customised, or that customisation becomes everyone's default.
 
 The bar is that the fallback stays a *valid* default menu, not that it matches the current templates. So:
 
-- **Must rebuild** — the change alters one of the 16 names the file defines (below), or removes/renames one
-  of the 14 includes it calls into. Otherwise the no-addon path breaks or double-defines.
+- **Must rebuild** — the change alters a name the file defines, or removes/renames an include it calls into
+  (both listed below). Otherwise the no-addon path breaks or double-defines.
 - **Should rebuild** — the change fixes a seeded *menu item* (an icon, a widget seed). Nothing breaks, but
   the fix never reaches the users this file exists for.
 - **No rebuild** — everything else. Template refactors that keep the emitted names, changes to
@@ -317,17 +313,20 @@ The bar is that the fallback stays a *valid* default menu, not that it matches t
 It **defines**, for the skin to consume: includes `skinshortcuts-mainmenu`, `-mainmenu-submenu`,
 `-template-vertical`, `-template-reloading`, `-template-widgetControl`, and one per menu (`-movies`,
 `-tvshows`, `-music`, `-videos`, `-pictures`, `-tv`, `-radio`, `-disc`, `-settings`); plus the variables
-`widgetDetails` and `widgetWeatherBackground`. It does **not** define `widgetBackground` — that name is
-the skin's own, in `Variables_Skinshortcuts.xml`.
+`widgetDetails`, `widgetEpisodeDate`, `widgetPVRNowNext`, `widgetSeasonEpisode`, `widgetTVEpisodes`,
+`widgetTVSeasons`, `widgetTVWatched` and `widgetWeatherBackground`. It does **not** define
+`widgetBackground` — that name is the skin's own, in `Variables_Skinshortcuts.xml`.
 
 It **calls into**, and these must exist in `xml/Includes_Widgets.xml`: `weather-widget`, `widget-image`,
-`widgetAnimation`, `widgetHeading`, `widgetOnControl`, `widgetOverlayBar`, the four `widgetLayout-*`
+`widgetAnimation`, `widgetHeading`, `widgetIndicators`, `widgetOnControl`, `widgetOverlayBar`, the four `widgetLayout-*`
 (`-tall`, `-square`, `-square-small`, `-weather`) and the four `widgetLayoutSlide-*` (same four suffixes).
 
-To re-derive both lists from a build rather than trusting this one:
+These lists go stale whenever the file is rebuilt, so re-derive them from the build rather than trusting
+them — defined includes, defined variables, then the includes it calls:
 
 ```sh
 grep -o '<include name="[^"]*"' xml/script-skinshortcuts-static.xml | cut -d'"' -f2 | sort -u
+grep -o '<variable name="[^"]*"' xml/script-skinshortcuts-static.xml | cut -d'"' -f2 | sort -u
 { grep -o '<include content="[^"$]*"' xml/script-skinshortcuts-static.xml | cut -d'"' -f2
   grep -o '<include>[a-zA-Z-]*</include>' xml/script-skinshortcuts-static.xml | sed 's/<[^>]*>//g'
 } | sort -u
