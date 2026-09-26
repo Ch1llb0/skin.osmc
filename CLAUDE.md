@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Before any visual change, read `DESIGN.md`.** It holds the design rules (colour, type, grid, focus,
+controls, views, icons, dialogs, motion) and a checklist every visual change must pass. Structural rules
+(coordinate families, numbering, aspect variants, translations workflow) stay in this file.
+
 ## What this repository is
 
 This is **skin.osmc**, the default Kodi skin shipped with OSMC (Open Source Media Center). It is not a
