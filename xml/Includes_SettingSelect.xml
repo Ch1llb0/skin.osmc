@@ -144,7 +144,6 @@
 			     In one mode the row wrote the setting and closed. -->
 			<control type="button" id="10">
 				<width>auto</width>
-				<font>Font36</font>
 				<align>center</align>
 				<label>$LOCALIZE[186]</label>
 				<visible>String.IsEqual(Window(Home).Property(SettingSelect.Mode),many)</visible>
@@ -214,7 +213,6 @@
 			<!-- Cancel -->
 			<control type="button" id="11">
 				<width>auto</width>
-				<font>Font36</font>
 				<align>center</align>
 				<label>$LOCALIZE[222]</label>
 				<onclick>Dialog.Close(1102)</onclick>

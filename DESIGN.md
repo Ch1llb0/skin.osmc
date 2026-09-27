@@ -348,8 +348,9 @@ label, scrollbars, two widget rows, date above clock, masking ratio, kiosk mode.
 ## 12a. Dialogs
 
 - **Full-screen** (yes/no, progress, select, keyboard, info, welcome): `DialogBackgroundImage`, heading in the
-  window-title slot with the clock at right, `DialogButtons` centred at y 914 — 66 tall, Font36, auto width,
-  30 px gap, `focus.png`. Opens with `DialogZoomAnimation`.
+  window-title slot with the clock at right, `DialogButtons` centred at y 914 — 66 tall, Font33, auto width,
+  30 px gap, `focus.png`. Font33 is the button default, so a row button sets no `<font>` of its own.
+  Opens with `DialogZoomAnimation`.
 - **Panel and corner** (context menu, extended progress, notification): the window stays visible. Context menu
   is a 550 px `MenuOSDColor` panel sliding in 460 px from the left, rows 410 × 52; `SubMenuAnimation`
   shifts the list 26 px per row short of 20 so it stays centred. Corner dialogs stack via `CornerWindowLift*`.

@@ -64,21 +64,18 @@
 				<!-- No Button -->
 				<control type="button" id="10">
 					<width>auto</width>
-					<font>Font36</font>
 					<align>center</align>
 				</control>
 				
 				<!-- Yes Button -->
 				<control type="button" id="11">
 					<width>auto</width>
-					<font>Font36</font>
 					<align>center</align>
 				</control>
 				
 				<!-- Button for future use -->
 				<control type="button" id="12">
 					<width>auto</width>
-					<font>Font36</font>
 					<align>center</align>
 				</control>
 				

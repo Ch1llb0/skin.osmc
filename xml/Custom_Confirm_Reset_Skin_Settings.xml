@@ -55,7 +55,6 @@
 				<!-- Close -->
 				<control type="button" id="10">
 					<width>auto</width>
-					<font>Font36</font>
 					<align>center</align>
 					<onclick>Dialog.Close(1107)</onclick>
 					<label>$LOCALIZE[106]</label>
@@ -64,7 +63,6 @@
 				<!-- OK -->
 				<control type="button" id="11">
 					<width>auto</width>
-					<font>Font36</font>
 					<align>center</align>
 					<onclick>Skin.ResetSettings</onclick>
 					<onclick>ReloadSkin()</onclick>
