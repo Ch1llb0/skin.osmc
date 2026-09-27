@@ -15,7 +15,8 @@ Structural rules (coordinate families, numbering, the four aspect variants, tran
    white, with a fading underline. Unfocused is the same white at 50%. The accent colour appears only on
    selection markers and progress.
 2. **Artwork leads, text gives way.** Narrower screens lose text width, never image size.
-3. **One safe area, every ratio.** 120 px left and right, 100 px bottom, on all four canvases.
+3. **One safe area, every ratio.** 120 px left and right, 100 px bottom, on all four canvases. Scrollbars
+   are the one thing that may sit in the side gutter (§4).
 4. **Hint the non-obvious, nothing else.** Anything reachable but not visible gets a quiet arrow;
    anything visible gets none.
 5. **One file, many states.** Textures are white shapes in alpha; colour, focus and dimming come from
@@ -150,6 +151,9 @@ Scroll speed = `round(1.765 × size)`, so text moves at the same pace relative t
   to the chosen ratio (2.40:1 default; 187 px on the canvas). Masking is gated off in `Expressions.xml`
   until its branch lands.
 - **Exception:** the OSD bar is inset 150 px, not 120, so it floats over video.
+- **Exception:** a scrollbar may sit in the left gutter, beside the content it scrolls rather than
+  inside it: x 100 in the text viewer, x 90 in the file manager and the PVR guide, providers, search and
+  timers windows. It is 20 px wide and carries no text, so nothing readable leaves the safe area.
 - Every 16:9 widget box ends at x = 1800 (the safe edge).
 
 ---
@@ -187,6 +191,7 @@ The two 50% fades stack to 25% on purpose. Unfocused text is therefore never the
 | togglebutton | 400 × 66 | Font33 | Plus alt textures |
 | radiobutton | 400 × 66 | Font33 | textwidth 362, radio 16 × 16 |
 | spincontrolex | 400 × 66 | Font33 | textwidth 335, spin 43 × 60 |
+| spincontrol | 66 × 66 | Font33 | spin 43 × 60 |
 | sliderex | 400 × 66 | Font33 | textwidth 120, slider 230 × 20 |
 | slider | 360 × 20 | — | OSDSliderBack + nib, border 10,0,10,0 |
 | colorbutton | 183 × 66 | Font33 | swatch 43 × 43 |
@@ -197,8 +202,8 @@ The two 50% fades stack to 25% on purpose. Unfocused text is therefore never the
 | progress | w × 44 | — | Stock textures cleared |
 | fixedlist | — | — | preloaditems 2, scrolltime 240 sine-out |
 
-- **66 is the row height.** Buttons, radios, spins, sliders, edits, colour buttons and settings dividers
-  share it, so mixed columns align.
+- **66 is the row height.** Buttons, radios, spins (the square spincontrol too), sliders, edits, colour
+  buttons and settings dividers share it, so mixed columns align.
 - Every default ends with `<include>WindowDepth</include>`; a new default without it sits at the wrong
   depth in 3D.
 
@@ -359,7 +364,7 @@ label, scrollbars, two widget rows, date above clock, masking ratio, kiosk mode.
 
 ## 12b. Other windows and list states
 
-- Reuse the library frame (title/folder top left, clock top right, count bottom right, art at 120, list at 782).
+- Reuse the library frame (title/folder top left, clock top right, count bottom right, art at 120, list at 750).
   Own layouts only where needed: TV guide (grid 120, 174, 1680 × 606; channel column 450; rows 69; ruler 54;
   54 five-minute blocks), weather (six 280 px day columns), file manager (two 800 px panes).
 - `Startup.xml` only forwards; the screensaver is an add-on (the skin supplies `Font120` for Digital Clock).
@@ -414,7 +419,16 @@ Contrast over pure white fanart through the 146-grey overlay (worst case):
 | NonFocusWindowFadeAnimation | 200 | cubic / out | fade 100 → 50 |
 | fixedlist scrolltime | 240 | sine / out | list scrolling |
 
-Reuse these includes. Nothing moves faster than 200 ms or slower than 300 ms outside list scrolling.
+Reuse these includes. Movement (zoom, slide, scroll) runs 200–300 ms; fades have three set exceptions:
+
+- **Widgets fade over 400 ms**, and fade in only after a 400 ms delay (`widgetIndicators`,
+  `widgetHeading-content`, the widget group and its selected/deselected state, the weather outlook).
+- **The full-screen dialog overlay fades in 100 ms**, and out in 100 ms after a 200 ms delay
+  (`DialogBackgroundImage`, and the same group in `script-skinshortcuts.xml`), inside the 300 ms zoom
+  it opens and closes with.
+- **`OptionsAnimation` fades in 150 ms after 150 ms**, inside its 300 ms zoom.
+
+A new fade outside 200–300 ms joins this list or does not ship.
 
 ---
 
