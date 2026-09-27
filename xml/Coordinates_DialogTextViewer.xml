@@ -11,25 +11,25 @@
 		<left>150</left>
 		<top>235</top>
 		<width>1620</width>
-		<height>700</height>
+		<height>558</height>
 	</include>
 	<include name="DialogTextViewer_coords1_21:9">
 		<left>150</left>
 		<top>235</top>
 		<width>2260</width>
-		<height>700</height>
+		<height>558</height>
 	</include>
 	<include name="DialogTextViewer_coords1_21:9_masked">
 		<left>150</left>
 		<top>415</top>
 		<width>2260</width>
-		<height>700</height>
+		<height>558</height>
 	</include>
 	<include name="DialogTextViewer_coords1_4:3">
 		<left>150</left>
 		<top>235</top>
 		<width>1140</width>
-		<height>700</height>
+		<height>558</height>
 	</include>
 	
 	<include name="DialogTextViewer_coords2">
@@ -42,25 +42,25 @@
 		<left>100</left>
 		<top>255</top>
 		<width>20</width>
-		<height>660</height>
+		<height>518</height>
 	</include>
 	<include name="DialogTextViewer_coords2_21:9">
 		<left>100</left>
 		<top>255</top>
 		<width>20</width>
-		<height>660</height>
+		<height>518</height>
 	</include>
 	<include name="DialogTextViewer_coords2_21:9_masked">
 		<left>100</left>
 		<top>435</top>
 		<width>20</width>
-		<height>660</height>
+		<height>518</height>
 	</include>
 	<include name="DialogTextViewer_coords2_4:3">
 		<left>100</left>
 		<top>255</top>
 		<width>20</width>
-		<height>660</height>
+		<height>518</height>
 	</include>
 
 </includes>

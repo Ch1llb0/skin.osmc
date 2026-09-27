@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- textviewer -->
-	<defaultcontrol always="true">61</defaultcontrol>
+	<defaultcontrol always="true">9001</defaultcontrol>
 	
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
@@ -28,12 +28,39 @@
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="61">
 				<include>DialogTextViewer_coords2</include>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
 				<orientation>vertical</orientation>
 				<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
+
+			<!-- Buttons -->
+			<control type="grouplist" id="9000">
+				<include>DialogButtons</include>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>30</itemgap>
+				<onup>61</onup>
+				<onleft>61</onleft>
+				<onright>61</onright>
+				<defaultcontrol always="true">9001</defaultcontrol>
+
+				<!-- Close button -->
+				<control type="button" id="9001">
+					<width>auto</width>
+					<onclick>Close</onclick>
+					<label>15067</label>
+				</control>
+
+			</control>
+
+			<!-- Button indicator -->
+			<include content="dialogButtonIndicator">
+				<param name="visibility">!ControlGroup(9000).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+			</include>
 
 		</control>
 
