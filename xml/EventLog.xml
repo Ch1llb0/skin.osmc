@@ -3,27 +3,26 @@
 	<!-- eventlog -->
 	<defaultcontrol always="true">570</defaultcontrol>
 	<views>570</views>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<!-- Sub menu menucontrol -->
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>
-	
+
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
-			
+
 			<!-- Background -->
 			<include>WindowBackgroundImageVertical</include>
-			
+
 			<!-- Time -->
 			<include>Time</include>
-			
+
 			<!-- Main group -->
 			<control type="group">
 				<include>WindowFadeAnimation</include>
@@ -31,7 +30,7 @@
 				<!-- Image -->
 				<control type="image">
 					<include>EventLog_coords1</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[ListItem.Icon]</texture>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
@@ -51,7 +50,6 @@
 					<include>EventLog_coords3</include>
 
 					<include>EventLog_coords4</include>
-
 				</control>
 
 				<!-- Scrollbar -->
@@ -64,19 +62,15 @@
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
-			
+
 				<!-- Submenu indicator -->
 				<include>SubMenuIndicator</include>
-				
+
 				<!-- Sub menu -->
 				<include>SubMenu</include>
-				
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

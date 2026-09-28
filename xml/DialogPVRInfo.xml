@@ -6,12 +6,11 @@
 	<onload condition="Window.IsVisible(10601) + !String.IsEmpty(Window(10601).Property(description))">ClearProperty(description,10601)</onload>
 	<onunload condition="Window.IsVisible(10600)">ClearProperty(description,10600)</onunload>
 	<onunload condition="Window.IsVisible(10601)">ClearProperty(description,10601)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -19,20 +18,20 @@
 			<include content="DialogFrame">
 				<param name="heading">$INFO[ListItem.Title]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT]]</param>
 			</include>
-			
+
 			<!-- TV image -->
 			<control type="image">
 				<include>DialogPVRInfo_coords1</include>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>!Window.Property(IsRadio)</visible>
 			</control>
-			
+
 			<!-- Radio image -->
 			<control type="image">
 				<include>DialogPVRInfo_coords1</include>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>Window.Property(IsRadio)</visible>
@@ -50,7 +49,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>[Window.IsVisible(10600) + [String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) | String.IsEmpty(Window(10600).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) + String.IsEmpty(ListItem.Plot)]] | [Window.IsVisible(10601) + [String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) | String.IsEmpty(Window(10601).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) + String.IsEmpty(ListItem.Plot)]]</visible>
 					<include>VisibleFadeAnimation</include>
-					
+
 					<!-- Channel Name -->
 					<control type="group">
 						<include>DialogPVRInfo_coords5</include>
@@ -106,7 +105,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- First aired -->
 					<control type="group">
 						<include>DialogPVRInfo_coords5</include>
@@ -125,7 +124,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Comment -->
 					<control type="group">
 						<include>DialogPVRInfo_coords5</include>
@@ -163,11 +162,9 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
-				
 			</control>
-			
+
 			<!-- Plot -->
 			<control type="textbox" id="400">
 				<include>DialogPVRInfo_coords8</include>
@@ -241,13 +238,9 @@
 					<label>826</label>
 					<visible>Window.IsActive(PVRGuideInfo)</visible>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

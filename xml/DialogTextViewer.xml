@@ -2,12 +2,11 @@
 <window>
 	<!-- textviewer -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -54,18 +53,14 @@
 					<onclick>Close</onclick>
 					<label>15067</label>
 				</control>
-
 			</control>
 
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9000).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

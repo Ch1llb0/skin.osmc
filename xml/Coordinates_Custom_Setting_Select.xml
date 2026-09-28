@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- The select dialog's own list, to the pixel: twelve rows of fifty eight, and the bar to its
 	     left for a caller that brings more. -->
 	<include name="Custom_Setting_Select_coords">
@@ -33,7 +32,7 @@
 		<width>540</width>
 		<height>696</height>
 	</include>
-	
+
 	<!-- One row -->
 	<include name="Custom_Setting_Select_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords2_16:9</include>
@@ -57,7 +56,7 @@
 		<width>540</width>
 		<height>58</height>
 	</include>
-	
+
 	<!-- The line under the row the list is on -->
 	<include name="Custom_Setting_Select_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords3_16:9</include>
@@ -85,7 +84,7 @@
 		<width>540</width>
 		<height>3</height>
 	</include>
-	
+
 	<!-- The scroll bar, left of the list as it is in the select dialog -->
 	<include name="Custom_Setting_Select_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords4_16:9</include>
@@ -117,5 +116,4 @@
 		<width>20</width>
 		<height>652</height>
 	</include>
-
 </includes>

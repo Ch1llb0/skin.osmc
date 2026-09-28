@@ -3,10 +3,10 @@
 	<!-- playlist -->
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
@@ -14,20 +14,19 @@
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
 			<!-- Background -->
 			<include>WindowBackgroundImageVertical</include>
-			
+
 			<!-- Time -->
 			<include>Time</include>
 
 			<!-- Main group -->
 			<control type="group">
 				<include>WindowFadeAnimation</include>
-				
+
 				<include>Viewtype50</include>
 
 				<!-- Scrollbar (list) -->
@@ -40,25 +39,21 @@
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(50)</visible>
 				</control>
-				
+
 				<!-- Media flags -->
 				<include>MediaFlags</include>
 
 				<!-- Item count -->
 				<include>ItemCount</include>
-				
+
 				<!-- Sub menu indicator -->
 				<include>SubMenuIndicator</include>
-				
+
 				<!-- Sub menu -->
 				<include>SubMenu</include>
-
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

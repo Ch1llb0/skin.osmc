@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="script-RSS_Editor_coords1">
+		<include condition="$EXP[NonMaskedCoordinates]">script-RSS_Editor_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-RSS_Editor_coords1_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">script-RSS_Editor_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-RSS_Editor_coords1_4:3</include>
+	</include>
+	<include name="script-RSS_Editor_coords1_16:9">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+	<include name="script-RSS_Editor_coords1_21:9">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+	<include name="script-RSS_Editor_coords1_21:9_masked">
+		<left>150</left>
+		<top>405</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+	<include name="script-RSS_Editor_coords1_4:3">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+
+	<include name="script-RSS_Editor_coords2">
+		<include condition="$EXP[NonMaskedCoordinates]">script-RSS_Editor_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-RSS_Editor_coords2_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">script-RSS_Editor_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-RSS_Editor_coords2_4:3</include>
+	</include>
+	<include name="script-RSS_Editor_coords2_16:9">
+		<left>150</left>
+		<bottom>180</bottom>
+		<width>1620</width>
+		<height>36</height>
+	</include>
+	<include name="script-RSS_Editor_coords2_21:9">
+		<left>150</left>
+		<bottom>180</bottom>
+		<width>2260</width>
+		<height>36</height>
+	</include>
+	<include name="script-RSS_Editor_coords2_21:9_masked">
+		<left>150</left>
+		<bottom>360</bottom>
+		<width>2260</width>
+		<height>36</height>
+	</include>
+	<include name="script-RSS_Editor_coords2_4:3">
+		<left>150</left>
+		<bottom>180</bottom>
+		<width>1140</width>
+		<height>36</height>
+	</include>
+
+	<include name="script-RSS_Editor_coords3">
+		<include condition="$EXP[NonMaskedCoordinates]">script-RSS_Editor_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-RSS_Editor_coords3_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">script-RSS_Editor_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-RSS_Editor_coords3_4:3</include>
+	</include>
+	<include name="script-RSS_Editor_coords3_16:9">
+		<left>750</left>
+		<top>192</top>
+		<width>1020</width>
+		<height>638</height>
+	</include>
+	<include name="script-RSS_Editor_coords3_21:9">
+		<left>750</left>
+		<top>192</top>
+		<width>1660</width>
+		<height>638</height>
+	</include>
+	<include name="script-RSS_Editor_coords3_21:9_masked">
+		<left>750</left>
+		<top>372</top>
+		<width>1660</width>
+		<height>638</height>
+	</include>
+	<include name="script-RSS_Editor_coords3_4:3">
+		<left>750</left>
+		<top>192</top>
+		<width>540</width>
+		<height>638</height>
+	</include>
+
+	<include name="script-RSS_Editor_coords4">
+		<include condition="$EXP[NonMaskedCoordinates]">script-RSS_Editor_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-RSS_Editor_coords4_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">script-RSS_Editor_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-RSS_Editor_coords4_4:3</include>
+	</include>
+	<include name="script-RSS_Editor_coords4_16:9">
+		<itemlayout width="1020" height="58">
+			<control type="label">
+				<width>1020</width>
+				<height>58</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="script-RSS_Editor_coords4_21:9">
+		<itemlayout width="1660" height="58">
+			<control type="label">
+				<width>1660</width>
+				<height>58</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="script-RSS_Editor_coords4_21:9_masked">
+		<itemlayout width="1660" height="58">
+			<control type="label">
+				<width>1660</width>
+				<height>58</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="script-RSS_Editor_coords4_4:3">
+		<itemlayout width="540" height="58">
+			<control type="label">
+				<width>540</width>
+				<height>58</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</itemlayout>
+	</include>
+
+	<include name="script-RSS_Editor_coords5">
+		<include condition="$EXP[NonMaskedCoordinates]">script-RSS_Editor_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-RSS_Editor_coords5_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">script-RSS_Editor_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-RSS_Editor_coords5_4:3</include>
+	</include>
+	<include name="script-RSS_Editor_coords5_16:9">
+		<focusedlayout width="1020" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">10</param>
+				</include>
+				<control type="label">
+					<width>1020</width>
+					<height>58</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="image">
+					<top>50</top>
+					<width>1020</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="script-RSS_Editor_coords5_21:9">
+		<focusedlayout width="1660" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">10</param>
+				</include>
+				<control type="label">
+					<width>1660</width>
+					<height>58</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="image">
+					<top>50</top>
+					<width>1660</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="script-RSS_Editor_coords5_21:9_masked">
+		<focusedlayout width="1660" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">10</param>
+				</include>
+				<control type="label">
+					<width>1660</width>
+					<height>58</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="image">
+					<top>50</top>
+					<width>1660</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="script-RSS_Editor_coords5_4:3">
+		<focusedlayout width="540" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">10</param>
+				</include>
+				<control type="label">
+					<width>540</width>
+					<height>58</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="image">
+					<top>50</top>
+					<width>540</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="script-RSS_Editor_coords6">
+		<include condition="$EXP[NonMaskedCoordinates]">script-RSS_Editor_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-RSS_Editor_coords6_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">script-RSS_Editor_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-RSS_Editor_coords6_4:3</include>
+	</include>
+	<include name="script-RSS_Editor_coords6_16:9">
+		<left>690</left>
+		<top>214</top>
+		<width>20</width>
+		<height>594</height>
+	</include>
+	<include name="script-RSS_Editor_coords6_21:9">
+		<left>690</left>
+		<top>214</top>
+		<width>20</width>
+		<height>594</height>
+	</include>
+	<include name="script-RSS_Editor_coords6_21:9_masked">
+		<left>690</left>
+		<top>394</top>
+		<width>20</width>
+		<height>594</height>
+	</include>
+	<include name="script-RSS_Editor_coords6_4:3">
+		<left>690</left>
+		<top>214</top>
+		<width>20</width>
+		<height>594</height>
+	</include>
+</includes>

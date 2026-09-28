@@ -2,10 +2,10 @@
 <window>
 	<!-- weather -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
@@ -13,7 +13,6 @@
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
@@ -24,7 +23,7 @@
 
 			<!-- Background -->
 			<include>WindowBackgroundImageHorizontalWeather</include>
-			
+
 			<!-- Time -->
 			<include>Time</include>
 
@@ -52,7 +51,7 @@
 					<include>MyWeather_coords2</include>
 
 					<include>MyWeather_coords3</include>
-					
+
 					<content>
 						<item>
 							<label>$LOCALIZE[33006]</label>
@@ -97,7 +96,6 @@
 							<visible>!String.IsEmpty(Window(Weather).Property(Daily.6.LongDay))</visible>
 						</item>
 					</content>
-
 				</control>
 
 				<!-- Current icon -->
@@ -156,7 +154,7 @@
 						<autoscroll>false</autoscroll>
 					</control>
 				</control>
-				
+
 				<!-- No information available -->
 				<control type="group">
 					<include>MyWeather_coords5</include>
@@ -180,22 +178,21 @@
 					<textcolor>$VAR[TextColorNF]</textcolor>
 					<visible>!String.IsEmpty(Window(Weather).Property(WeatherProvider)) | !String.IsEmpty(Weather.LastUpdated)</visible>
 				</control>
-				
+
 				<!-- Sub menu indicator -->
 				<include>SubMenuIndicator</include>
-				
+
 				<!-- Sub menu -->
 				<include>SubMenu</include>
-
 			</control>
-			
+
 			<include>MaskingBars</include>
-			
+
 			<!-- Busy -->
 			<control type="group">
 				<include>BusyDepth</include>
 				<visible>String.IsEqual(Weather.Location,$LOCALIZE[503])</visible>
-				
+
 				<!-- Background -->
 				<include>DialogFadeBackgroundImage</include>
 
@@ -208,12 +205,8 @@
 					<control type="image">
 						<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinner]</texture>
 					</control>
-
 				</control>
 			</control>
-			
 		</control>
-
 	</controls>
-
 </window>

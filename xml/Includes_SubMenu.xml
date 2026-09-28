@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- Sub menu -->
 	<include name="SubMenu">
 		<control type="group" id="9002">
 			<include>NotificationDepth</include>
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			
+
 			<!-- Window dim overlay -->
 			<control type="image">
 				<include>BackgroundDepth</include>
@@ -15,11 +14,11 @@
 				<visible>ControlGroup(9002).HasFocus</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
-			
+
 			<control type="group">
 				<include>SubMenu_coords1</include>
 				<animation effect="slide" start="0,0" end="460,0" time="200" condition="ControlGroup(9002).HasFocus">Conditional</animation>
-				
+
 				<!-- Hidden button for mouse control -->
 				<control type="button">
 					<include>SubMenu_coords2</include>
@@ -29,9 +28,9 @@
 				<!-- Background -->
 				<control type="image">
 					<include>SubMenu_coords2</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
-				
+
 				<include condition="Window.IsVisible(AddonBrowser.xml)">SubMenu_AddonBrowser</include>
 				<include condition="Window.IsVisible(MyFavourites.xml)">SubMenu_FavouritesBrowser</include>
 				<include condition="Window.IsVisible(EventLog.xml)">SubMenu_EventLog</include>
@@ -49,15 +48,12 @@
 				<include condition="Window.IsVisible(MyVideoNav.xml)">SubMenu_MyVideoNav</include>
 				<include condition="Window.IsVisible(MyWeather.xml)">SubMenu_MyWeather</include>
 				<include condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml)">SubMenu_Settings</include>
-				
 			</control>
 		</control>
-		
+
 		<include>ViewMenu</include>
-		
 	</include>
-	
-	<!-- Addon browser sub menu -->
+
 	<!-- The rows a sub menu is built from. A row used in four sub menus or more is named here; one
 	     that belongs to a single window is written where it is used. -->
 
@@ -234,6 +230,7 @@
 			<defaultcontrol always="true">$PARAM[default]</defaultcontrol>
 			<include content="SubMenuAnimation">
 				<param name="containerID">3001</param>
+				<param name="time">200</param>
 			</include>
 		</definition>
 	</include>
@@ -253,6 +250,7 @@
 			<defaultcontrol always="true">$PARAM[default]</defaultcontrol>
 			<include content="SubMenuAnimation">
 				<param name="containerID">3001</param>
+				<param name="time">200</param>
 			</include>
 		</definition>
 	</include>
@@ -260,9 +258,9 @@
 	<include name="SubMenu_AddonBrowser">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrameWithViews</include>
-			
+
 			<include>SubMenuRowView</include>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
 
 			<include>SubMenuSeparatorWithViews</include>
@@ -300,19 +298,18 @@
 				<label>25001</label>
 				<visible>Control.IsEnabled(7)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- Favourites browser sub menu -->
 	<include name="SubMenu_FavouritesBrowser">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrameWithViews</include>
-			
+
 			<include>SubMenuRowView</include>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
 
 			<include>SubMenuSeparatorWithViews</include>
@@ -329,12 +326,11 @@
 				<selected>Container.Filtered</selected>
 				<visible>Container.CanFilterAdvanced</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- Event log sub menu -->
 	<include name="SubMenu_EventLog">
 		<control type="grouplist" id="3001">
@@ -342,7 +338,7 @@
 				<param name="nav">60</param>
 				<param name="default">4</param>
 			</include>
-			
+
 			<include>SubMenuRowSortDirection</include>
 			<!-- Level -->
 			<control type="button" id="21">
@@ -357,21 +353,20 @@
 				<include>SubMenu_coords5</include>
 				<label>192</label>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My games sub menu -->
 	<include name="SubMenu_MyGames">
 		<control type="grouplist" id="3001">
 			<include content="SubMenuFrame">
 				<param name="default">99</param>
 			</include>
-			
+
 			<include>SubMenuRowView</include>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
 
 			<include>SubMenuSeparatorWithViews</include>
@@ -391,21 +386,20 @@
 				<onclick>ActivateWindow(addonbrowser,addons://more/game/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My music nav sub menu -->
 	<include name="SubMenu_MyMusicNav">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrameWithViews</include>
-			
+
 			<include>SubMenuRowView</include>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
-			
+
 			<!-- Disable music listened to status in library -->
 			<control type="radiobutton" id="73">
 				<include>SubMenu_coords5</include>
@@ -422,7 +416,7 @@
 			<include>SubMenuRowFilterAdvanced</include>
 
 			<include>SubMenuSeparator</include>
-			
+
 			<!-- Open playlist -->
 			<control type="button" id="91">
 				<include>SubMenu_coords5</include>
@@ -466,19 +460,18 @@
 				<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My pics nav sub menu -->
 	<include name="SubMenu_MyPics">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrameWithViews</include>
-			
+
 			<include>SubMenuRowView</include>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
 
 			<include>SubMenuSeparatorWithViews</include>
@@ -489,7 +482,7 @@
 			<include>SubMenuRowFilterAdvanced</include>
 
 			<include>SubMenuSeparator</include>
-			
+
 			<!-- Slideshow -->
 			<control type="button" id="6">
 				<include>SubMenu_coords5</include>
@@ -516,12 +509,11 @@
 				<onclick>ActivateWindow(addonbrowser,addons://more/image/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My playlist sub menu -->
 	<include name="SubMenu_MyPlaylist">
 		<control type="grouplist" id="3001">
@@ -535,7 +527,7 @@
 			<include>SubMenuRowFilterAdvanced</include>
 
 			<include>SubMenuSeparator</include>
-			
+
 			<!-- Shuffle -->
 			<control type="radiobutton" id="20">
 				<include>SubMenu_coords6</include>
@@ -561,30 +553,29 @@
 				<onclick>ReplaceWindow(10502)</onclick>
 				<visible>Control.IsEnabled(22)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My programs sub menu -->
 	<include name="SubMenu_MyPrograms">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrameWithViews</include>
 
 			<include>SubMenuRowView</include>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
 
 			<include>SubMenuSeparatorWithViews</include>
-			
+
 			<include>SubMenuRowSortBy</include>
 			<include>SubMenuRowSortDirection</include>
 			<include>SubMenuRowFilter</include>
 			<include>SubMenuRowFilterAdvanced</include>
 
 			<include>SubMenuSeparator</include>
-			
+
 			<include>SubMenuRowAddonSettings</include>
 			<!-- Get more -->
 			<control type="button" id="621">
@@ -593,17 +584,16 @@
 				<onclick>ActivateWindow(addonbrowser,addons://more/executable/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My PVR channels sub menu -->
 	<include name="SubMenu_MyPVRChannels">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrame</include>
-			
+
 			<include>SubMenuRowSortBy</include>
 			<include>SubMenuRowSortDirection</include>
 			<include>SubMenuRowChannelGroups</include>
@@ -622,17 +612,16 @@
 			<include content="SubMenuSeparator">
 				<param name="id">80</param>
 			</include>
-			
+
 			<include>SubMenuRowGuide</include>
 			<include>SubMenuRowRecordings</include>
 			<include>SubMenuRowTimers</include>
 			<include>SubMenuRowSearch</include>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My PVR guide sub menu -->
 	<include name="SubMenu_MyPVRGuide">
 		<control type="grouplist" id="3001">
@@ -651,8 +640,9 @@
 
 			<include content="SubMenuAnimation">
 				<param name="containerID">3001</param>
+				<param name="time">200</param>
 			</include>
-			
+
 			<include>SubMenuRowSortBy</include>
 			<include>SubMenuRowSortDirection</include>
 			<include>SubMenuRowChannelGroups</include>
@@ -666,17 +656,16 @@
 			<include content="SubMenuSeparator">
 				<param name="id">80</param>
 			</include>
-			
+
 			<include>SubMenuRowChannels</include>
 			<include>SubMenuRowRecordings</include>
 			<include>SubMenuRowTimers</include>
 			<include>SubMenuRowSearch</include>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My PVR recordings sub menu -->
 	<include name="SubMenu_MyPVRProviders">
 		<control type="grouplist" id="3001">
@@ -698,14 +687,13 @@
 			<include>SubMenuRowSearch</include>
 
 			<include>SubMenuControls</include>
-
 		</control>
 	</include>
 
 	<include name="SubMenu_MyPVRRecordings">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrame</include>
-			
+
 			<include>SubMenuRowSortBy</include>
 			<include>SubMenuRowSortDirection</include>
 			<!-- Watched toggle -->
@@ -730,22 +718,21 @@
 			<include content="SubMenuSeparator">
 				<param name="id">80</param>
 			</include>
-			
+
 			<include>SubMenuRowChannels</include>
 			<include>SubMenuRowGuide</include>
 			<include>SubMenuRowTimers</include>
 			<include>SubMenuRowSearch</include>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My PVR search sub menu -->
 	<include name="SubMenu_MyPVRSearch">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrame</include>
-			
+
 			<include>SubMenuRowSortBy</include>
 			<include>SubMenuRowSortDirection</include>
 			<include>SubMenuRowChannelGroups</include>
@@ -754,22 +741,21 @@
 			<include content="SubMenuSeparator">
 				<param name="id">80</param>
 			</include>
-			
+
 			<include>SubMenuRowChannels</include>
 			<include>SubMenuRowGuide</include>
 			<include>SubMenuRowRecordings</include>
 			<include>SubMenuRowTimers</include>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My PVR timers sub menu -->
 	<include name="SubMenu_MyPVRTimers">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrame</include>
-			
+
 			<include>SubMenuRowSortBy</include>
 			<include>SubMenuRowSortDirection</include>
 			<include>SubMenuRowChannelGroups</include>
@@ -778,24 +764,23 @@
 			<include content="SubMenuSeparator">
 				<param name="id">80</param>
 			</include>
-			
+
 			<include>SubMenuRowChannels</include>
 			<include>SubMenuRowGuide</include>
 			<include>SubMenuRowRecordings</include>
 			<include>SubMenuRowSearch</include>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My video nav sub menu -->
 	<include name="SubMenu_MyVideoNav">
 		<control type="grouplist" id="3001">
 			<include>SubMenuFrameWithViews</include>
-			
+
 			<include>SubMenuRowView</include>
-			
+
 			<!-- Set default view for video add-ons -->
 			<control type="button" id="98">
 				<include>SubMenu_coords5</include>
@@ -804,9 +789,9 @@
 				<onclick>$VAR[DefaultVideosViewMode]</onclick>
 				<visible>Integer.IsGreater(Container.ViewCount,1) + String.StartsWith(Container.FolderPath,plugin://plugin.video)</visible>
 			</control>
-			
+
 			<include>SubMenuRowArtworkTitles</include>
-			
+
 			<!-- Disable video watched status in library -->
 			<control type="radiobutton" id="72">
 				<include>SubMenu_coords5</include>
@@ -829,7 +814,7 @@
 			<include>SubMenuRowFilterAdvanced</include>
 
 			<include>SubMenuSeparator</include>
-			
+
 			<!-- Open playlist -->
 			<control type="button" id="91">
 				<include>SubMenu_coords5</include>
@@ -881,12 +866,11 @@
 				<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- My weather sub menu -->
 	<include name="SubMenu_MyWeather">
 		<control type="grouplist" id="3001">
@@ -897,7 +881,6 @@
 			<!-- Location control -->
 			<control type="spincontrolex" id="3">
 				<include>SubMenu_coords5</include>
-				<width>410</width>
 				<label>$LOCALIZE[31069]:</label>
 				<visible>!String.IsEmpty(Window(Weather).Property(Current.Condition)) + !String.IsEmpty(Window(Weather).Property(Daily.1.LongDay))</visible>
 			</control>
@@ -906,12 +889,11 @@
 				<include>SubMenu_coords5</include>
 				<label>103</label>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
-	
+
 	<!-- Settings sub menu -->
 	<include name="SubMenu_Settings">
 		<control type="grouplist" id="3001">
@@ -925,7 +907,7 @@
 				<label>14206</label>
 				<height>52</height>
 				<onclick>ReplaceWindow(InterfaceSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(InterfaceSettings)</visible>
 			</control>
 			<!-- Player -->
@@ -933,7 +915,7 @@
 				<include>SubMenu_coords5</include>
 				<label>14200</label>
 				<onclick>ReplaceWindow(PlayerSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(PlayerSettings)</visible>
 			</control>
 			<!-- Media -->
@@ -941,7 +923,7 @@
 				<include>SubMenu_coords5</include>
 				<label>14211</label>
 				<onclick>ReplaceWindow(MediaSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(MediaSettings)</visible>
 			</control>
 			<!-- TV & Radio -->
@@ -949,7 +931,7 @@
 				<include>SubMenu_coords5</include>
 				<label>$LOCALIZE[19020] &#38; $LOCALIZE[19021]</label>
 				<onclick>ReplaceWindow(PVRSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(PVRSettings)</visible>
 			</control>
 			<!-- Game -->
@@ -957,7 +939,7 @@
 				<include>SubMenu_coords5</include>
 				<label>15016</label>
 				<onclick>ReplaceWindow(GameSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(GameSettings)</visible>
 			</control>
 			<!-- Profiles -->
@@ -965,7 +947,7 @@
 				<include>SubMenu_coords5</include>
 				<label>13200</label>
 				<onclick>ReplaceWindow(Profiles)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(Profiles)</visible>
 			</control>
 			<!-- Service -->
@@ -973,7 +955,7 @@
 				<include>SubMenu_coords5</include>
 				<label>14036</label>
 				<onclick>ReplaceWindow(ServiceSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(ServiceSettings)</visible>
 			</control>
 			<!-- System -->
@@ -981,7 +963,7 @@
 				<include>SubMenu_coords5</include>
 				<label>13000</label>
 				<onclick>ReplaceWindow(SystemSettings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(SystemSettings)</visible>
 			</control>
 			<!-- My OSMC -->
@@ -990,7 +972,7 @@
 				<label>31091</label>
 				<onclick>ReplaceWindow(Settings)</onclick>
 				<onclick>RunScript(service.osmc.settings)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>System.HasAddon(service.osmc.settings)</visible>
 			</control>
 			<!-- System info -->
@@ -998,7 +980,7 @@
 				<include>SubMenu_coords5</include>
 				<label>130</label>
 				<onclick>ReplaceWindow(SystemInfo)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(SystemInfo)</visible>
 			</control>
 			<!-- Addon browser -->
@@ -1006,18 +988,17 @@
 				<include>SubMenu_coords5</include>
 				<label>10040</label>
 				<onclick>ReplaceWindow(addonbrowser)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 			</control>
 			<!-- File manager -->
 			<control type="button" id="101">
 				<include>SubMenu_coords5</include>
 				<label>7</label>
 				<onclick>ReplaceWindow(filemanager)</onclick>
-				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 			</control>
-			
+
 			<include>SubMenuControls</include>
-		
 		</control>
 	</include>
 
@@ -1026,7 +1007,7 @@
 		<control type="group" id="9003">
 			<include>NotificationDepth</include>
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			
+
 			<!-- Window dim overlay -->
 			<control type="image">
 				<include>BackgroundDepth</include>
@@ -1035,11 +1016,11 @@
 				<visible>ControlGroup(9003).HasFocus</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
-			
+
 			<control type="group">
 				<include>SubMenu_coords1</include>
 				<animation effect="slide" start="0,0" end="460,0" time="200" condition="ControlGroup(9003).HasFocus">Conditional</animation>
-				
+
 				<!-- Hidden togglebutton for mouse control -->
 				<control type="togglebutton">
 					<include>SubMenu_coords2</include>
@@ -1049,9 +1030,9 @@
 				<!-- Background -->
 				<control type="image">
 					<include>SubMenu_coords2</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
-				
+
 				<control type="grouplist" id="3002">
 					<include>SubMenu_coords4</include>
 					<onleft>50</onleft>
@@ -1063,8 +1044,9 @@
 
 					<include content="SubMenuAnimation">
 						<param name="containerID">3002</param>
+						<param name="time">200</param>
 					</include>
-				
+
 					<!-- List 50 -->
 					<control type="togglebutton" id="180">
 						<include>SubMenu_coords5</include>
@@ -1074,7 +1056,7 @@
 						<onclick>Container.SetViewMode(50)</onclick>
 						<visible>Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | ![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | Container.Content(addons) | Container.Content(albums) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images) | Container.Content(games)]</visible>
 					</control>
-					
+
 					<!-- List 51 -->
 					<control type="togglebutton" id="181">
 						<include>SubMenu_coords5</include>
@@ -1086,7 +1068,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewList)">Skin.SetBool(DefaultVideosViewList)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(albums) | Container.Content(episodes) | Container.Content(videos) | Container.Content(addons) | Container.Content(images) | Container.Content(games)</visible>
 					</control>
-					
+
 					<!-- List info 511 -->
 					<control type="togglebutton" id="182">
 						<include>SubMenu_coords5</include>
@@ -1098,7 +1080,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewListinfo)">Skin.SetBool(DefaultVideosViewListinfo)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
-					
+
 					<!-- Wide 52 -->
 					<control type="togglebutton" id="183">
 						<include>SubMenu_coords5</include>
@@ -1108,7 +1090,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-					
+
 					<!-- Wide low 521 -->
 					<control type="togglebutton" id="184">
 						<include>SubMenu_coords5</include>
@@ -1118,7 +1100,7 @@
 						<onclick>Container.SetViewMode(521)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-					
+
 					<!-- Wide low info 522 -->
 					<control type="togglebutton" id="185">
 						<include>SubMenu_coords5</include>
@@ -1128,7 +1110,7 @@
 						<onclick>Container.SetViewMode(522)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
-					
+
 					<!-- Wide 523 -->
 					<control type="togglebutton" id="186">
 						<include>SubMenu_coords5</include>
@@ -1140,7 +1122,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWide)">Skin.SetBool(DefaultVideosViewWide)</onclick>
 						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
-					
+
 					<!-- Wide low (videos) 524 -->
 					<control type="togglebutton" id="187">
 						<include>SubMenu_coords5</include>
@@ -1152,7 +1134,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWidelow)">Skin.SetBool(DefaultVideosViewWidelow)</onclick>
 						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
-					
+
 					<!-- Wide low info (videos) 525 -->
 					<control type="togglebutton" id="188">
 						<include>SubMenu_coords5</include>
@@ -1164,7 +1146,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWidelowinfo)">Skin.SetBool(DefaultVideosViewWidelowinfo)</onclick>
 						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
-					
+
 					<!-- Wall 53 -->
 					<control type="togglebutton" id="189">
 						<include>SubMenu_coords5</include>
@@ -1174,7 +1156,7 @@
 						<onclick>Container.SetViewMode(53)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-					
+
 					<!-- Wall info 531 -->
 					<control type="togglebutton" id="190">
 						<include>SubMenu_coords5</include>
@@ -1184,7 +1166,7 @@
 						<onclick>Container.SetViewMode(531)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
-					
+
 					<!-- Wall small 532 -->
 					<control type="togglebutton" id="191">
 						<include>SubMenu_coords5</include>
@@ -1194,7 +1176,7 @@
 						<onclick>Container.SetViewMode(532)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-					
+
 					<!-- Wall small info 533 -->
 					<control type="togglebutton" id="192">
 						<include>SubMenu_coords5</include>
@@ -1204,7 +1186,7 @@
 						<onclick>Container.SetViewMode(533)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
-					
+
 					<!-- Wall low 534 -->
 					<control type="togglebutton" id="193">
 						<include>SubMenu_coords5</include>
@@ -1214,7 +1196,7 @@
 						<onclick>Container.SetViewMode(534)</onclick>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
-					
+
 					<!-- Wall 535 -->
 					<control type="togglebutton" id="194">
 						<include>SubMenu_coords5</include>
@@ -1226,7 +1208,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWall)">Skin.SetBool(DefaultVideosViewWall)</onclick>
 						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
-					
+
 					<!-- Wall info (videos) 536 -->
 					<control type="togglebutton" id="195">
 						<include>SubMenu_coords5</include>
@@ -1238,7 +1220,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWallinfo)">Skin.SetBool(DefaultVideosViewWallinfo)</onclick>
 						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
-					
+
 					<!-- Wall small 537 -->
 					<control type="togglebutton" id="196">
 						<include>SubMenu_coords5</include>
@@ -1250,7 +1232,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWallsmall)">Skin.SetBool(DefaultVideosViewWallsmall)</onclick>
 						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
-					
+
 					<!-- Wall small info (videos) 538 -->
 					<control type="togglebutton" id="197">
 						<include>SubMenu_coords5</include>
@@ -1262,7 +1244,7 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.SetBool(DefaultVideosViewWallsmallinfo)</onclick>
 						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
-					
+
 					<!-- Wall low (videos) 539 -->
 					<control type="togglebutton" id="198">
 						<include>SubMenu_coords5</include>
@@ -1274,148 +1256,146 @@
 						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWalllow)">Skin.SetBool(DefaultVideosViewWalllow)</onclick>
 						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
-					
 				</control>
-				
 			</control>
 		</control>
-		
 	</include>
-	
+
 	<!-- Sub menu animation -->
 	<include name="SubMenuAnimation">
+		<param name="time">0</param>
 		<definition>
 			<include condition="$EXP[NonMaskedCoordinates]" content="SubMenuAnimation_16:9">
 				<param name="containerID">$PARAM[containerID]</param>
+				<param name="time">$PARAM[time]</param>
 			</include>
 			<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="SubMenuAnimation_21:9">
 				<param name="containerID">$PARAM[containerID]</param>
+				<param name="time">$PARAM[time]</param>
 			</include>
 			<include condition="$EXP[MaskedCoordinates]" content="SubMenuAnimation_21:9_masked">
 				<param name="containerID">$PARAM[containerID]</param>
+				<param name="time">$PARAM[time]</param>
 			</include>
 			<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="SubMenuAnimation_4:3">
 				<param name="containerID">$PARAM[containerID]</param>
+				<param name="time">$PARAM[time]</param>
 			</include>
 		</definition>
 	</include>
 	<include name="SubMenuAnimation_16:9">
-		<animation effect="slide" end="0,26" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
-		<animation effect="slide" end="0,52" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
-		<animation effect="slide" end="0,78" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
-		<animation effect="slide" end="0,104" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
-		<animation effect="slide" end="0,130" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
-		<animation effect="slide" end="0,156" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
-		<animation effect="slide" end="0,182" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
-		<animation effect="slide" end="0,208" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
-		<animation effect="slide" end="0,234" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
-		<animation effect="slide" end="0,260" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
-		<animation effect="slide" end="0,286" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
-		<animation effect="slide" end="0,312" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
-		<animation effect="slide" end="0,338" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
-		<animation effect="slide" end="0,364" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
-		<animation effect="slide" end="0,390" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
-		<animation effect="slide" end="0,416" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
-		<animation effect="slide" end="0,442" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
-		<animation effect="slide" end="0,468" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
-		<animation effect="slide" end="0,494" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
+		<animation effect="slide" end="0,26" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
+		<animation effect="slide" end="0,52" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
+		<animation effect="slide" end="0,78" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
+		<animation effect="slide" end="0,104" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
+		<animation effect="slide" end="0,130" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
+		<animation effect="slide" end="0,156" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
+		<animation effect="slide" end="0,182" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
+		<animation effect="slide" end="0,208" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
+		<animation effect="slide" end="0,234" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
+		<animation effect="slide" end="0,260" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
+		<animation effect="slide" end="0,286" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
+		<animation effect="slide" end="0,312" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
+		<animation effect="slide" end="0,338" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
+		<animation effect="slide" end="0,364" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
+		<animation effect="slide" end="0,390" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
+		<animation effect="slide" end="0,416" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
+		<animation effect="slide" end="0,442" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
+		<animation effect="slide" end="0,468" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
 	</include>
 	<include name="SubMenuAnimation_21:9">
-		<animation effect="slide" end="0,26" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
-		<animation effect="slide" end="0,52" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
-		<animation effect="slide" end="0,78" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
-		<animation effect="slide" end="0,104" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
-		<animation effect="slide" end="0,130" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
-		<animation effect="slide" end="0,156" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
-		<animation effect="slide" end="0,182" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
-		<animation effect="slide" end="0,208" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
-		<animation effect="slide" end="0,234" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
-		<animation effect="slide" end="0,260" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
-		<animation effect="slide" end="0,286" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
-		<animation effect="slide" end="0,312" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
-		<animation effect="slide" end="0,338" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
-		<animation effect="slide" end="0,364" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
-		<animation effect="slide" end="0,390" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
-		<animation effect="slide" end="0,416" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
-		<animation effect="slide" end="0,442" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
-		<animation effect="slide" end="0,468" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
-		<animation effect="slide" end="0,494" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
+		<animation effect="slide" end="0,26" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
+		<animation effect="slide" end="0,52" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
+		<animation effect="slide" end="0,78" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
+		<animation effect="slide" end="0,104" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
+		<animation effect="slide" end="0,130" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
+		<animation effect="slide" end="0,156" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
+		<animation effect="slide" end="0,182" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
+		<animation effect="slide" end="0,208" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
+		<animation effect="slide" end="0,234" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
+		<animation effect="slide" end="0,260" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
+		<animation effect="slide" end="0,286" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
+		<animation effect="slide" end="0,312" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
+		<animation effect="slide" end="0,338" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
+		<animation effect="slide" end="0,364" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
+		<animation effect="slide" end="0,390" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
+		<animation effect="slide" end="0,416" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
+		<animation effect="slide" end="0,442" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
+		<animation effect="slide" end="0,468" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
 	</include>
 	<include name="SubMenuAnimation_21:9_masked">
-		<animation effect="slide" end="0,26" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
-		<animation effect="slide" end="0,52" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
-		<animation effect="slide" end="0,78" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
-		<animation effect="slide" end="0,104" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
-		<animation effect="slide" end="0,130" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
-		<animation effect="slide" end="0,156" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
-		<animation effect="slide" end="0,182" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
-		<animation effect="slide" end="0,208" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
-		<animation effect="slide" end="0,234" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
-		<animation effect="slide" end="0,260" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
-		<animation effect="slide" end="0,286" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
-		<animation effect="slide" end="0,312" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
-		<animation effect="slide" end="0,338" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
-		<animation effect="slide" end="0,364" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
-		<animation effect="slide" end="0,390" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
-		<animation effect="slide" end="0,416" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
-		<animation effect="slide" end="0,442" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
-		<animation effect="slide" end="0,468" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
-		<animation effect="slide" end="0,494" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
+		<animation effect="slide" end="0,26" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
+		<animation effect="slide" end="0,52" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
+		<animation effect="slide" end="0,78" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
+		<animation effect="slide" end="0,104" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
+		<animation effect="slide" end="0,130" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
+		<animation effect="slide" end="0,156" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
+		<animation effect="slide" end="0,182" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
+		<animation effect="slide" end="0,208" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
+		<animation effect="slide" end="0,234" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
+		<animation effect="slide" end="0,260" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
+		<animation effect="slide" end="0,286" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
+		<animation effect="slide" end="0,312" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
+		<animation effect="slide" end="0,338" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
+		<animation effect="slide" end="0,364" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
+		<animation effect="slide" end="0,390" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
+		<animation effect="slide" end="0,416" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
+		<animation effect="slide" end="0,442" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
+		<animation effect="slide" end="0,468" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
 	</include>
 	<include name="SubMenuAnimation_4:3">
-		<animation effect="slide" end="0,26" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
-		<animation effect="slide" end="0,52" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
-		<animation effect="slide" end="0,78" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
-		<animation effect="slide" end="0,104" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
-		<animation effect="slide" end="0,130" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
-		<animation effect="slide" end="0,156" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
-		<animation effect="slide" end="0,182" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
-		<animation effect="slide" end="0,208" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
-		<animation effect="slide" end="0,234" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
-		<animation effect="slide" end="0,260" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
-		<animation effect="slide" end="0,286" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
-		<animation effect="slide" end="0,312" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
-		<animation effect="slide" end="0,338" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
-		<animation effect="slide" end="0,364" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
-		<animation effect="slide" end="0,390" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
-		<animation effect="slide" end="0,416" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
-		<animation effect="slide" end="0,442" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
-		<animation effect="slide" end="0,468" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
-		<animation effect="slide" end="0,494" time="0" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
+		<animation effect="slide" end="0,0" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,19)">Conditional</animation>
+		<animation effect="slide" end="0,26" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,18)">Conditional</animation>
+		<animation effect="slide" end="0,52" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,17)">Conditional</animation>
+		<animation effect="slide" end="0,78" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,16)">Conditional</animation>
+		<animation effect="slide" end="0,104" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,15)">Conditional</animation>
+		<animation effect="slide" end="0,130" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,14)">Conditional</animation>
+		<animation effect="slide" end="0,156" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,13)">Conditional</animation>
+		<animation effect="slide" end="0,182" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,12)">Conditional</animation>
+		<animation effect="slide" end="0,208" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,11)">Conditional</animation>
+		<animation effect="slide" end="0,234" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,10)">Conditional</animation>
+		<animation effect="slide" end="0,260" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,9)">Conditional</animation>
+		<animation effect="slide" end="0,286" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,8)">Conditional</animation>
+		<animation effect="slide" end="0,312" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,7)">Conditional</animation>
+		<animation effect="slide" end="0,338" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,6)">Conditional</animation>
+		<animation effect="slide" end="0,364" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,5)">Conditional</animation>
+		<animation effect="slide" end="0,390" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,4)">Conditional</animation>
+		<animation effect="slide" end="0,416" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,3)">Conditional</animation>
+		<animation effect="slide" end="0,442" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,2)">Conditional</animation>
+		<animation effect="slide" end="0,468" time="$PARAM[time]" condition="String.IsEqual(Container($PARAM[containerID]).NumItems,1)">Conditional</animation>
 	</include>
 
 	<!-- Sub menu controls -->
 	<include name="SubMenuControls">
-	
 		<!-- Spacer -->
 		<control type="image" id="80001">
 			<include>SubMenu_coords12</include>
 			<texture>transparent.png</texture>
 			<visible>Player.HasMedia + !Skin.HasSetting(SubMenuControls)</visible>
-			<animation effect="slide" start="-450,0" end="0,0" time="200">VisibleChange</animation>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 		</control>
-		
+
 		<!-- Player controls -->
 		<control type="grouplist" id="90000">
 			<include>SubMenu_coords8</include>
-			<itemgap>0</itemgap>
+			<itemgap>20</itemgap>
+			<usecontrolcoords>true</usecontrolcoords>
 			<orientation>horizontal</orientation>
 			<align>center</align>
 			<visible>Player.HasMedia + !Skin.HasSetting(SubMenuControls)</visible>
-			<animation effect="slide" start="-450,0" end="0,0" time="200">VisibleChange</animation>
-			
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+
 			<!-- Fullscreen toggle -->
 			<control type="button" id="90001">
 				<include>SubMenu_coords9</include>
-				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDFullscreenNF.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDFullscreenNF.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDFullscreen.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDFullscreen.png</texturenofocus>
 				<onclick>Fullscreen</onclick>
-			</control>
-
-			<!-- Spacer -->
-			<control type="image" id="80023">
-				<include>SubMenu_coords10</include>
-				<texture>transparent.png</texture>
 			</control>
 
 			<!-- Skip Back -->
@@ -1428,7 +1408,7 @@
 			</control>
 			<!-- Rewind -->
 			<control type="togglebutton" id="90003">
-				<include>SubMenu_coords12</include>
+				<include>SubMenu_coords15</include>
 				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickBackward.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDTrickBackward.png</texturenofocus>
 				<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickBackward.png</alttexturefocus>
@@ -1439,49 +1419,35 @@
 			</control>
 			<!-- Tempo Down -->
 			<control type="togglebutton" id="90004">
-				<include>SubMenu_coords12</include>
+				<include>SubMenu_coords15</include>
 				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickBackward.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDTrickBackward.png</texturenofocus>
 				<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickBackward.png</alttexturefocus>
 				<alttexturenofocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickBackward.png</alttexturenofocus>
 				<usealttexture>Control.HasFocus(90002) | Control.HasFocus(90003)</usealttexture>
 				<onclick>PlayerControl(TempoDown)</onclick>
-				<visible>Player.SeekEnabled</visible>
 				<enable>Player.TempoEnabled</enable>
+				<visible>Player.SeekEnabled</visible>
 			</control>
 
-			<!-- Spacer -->
-			<control type="image" id="80024">
-				<include>SubMenu_coords10</include>
-				<texture>transparent.png</texture>
-				<visible>Player.SeekEnabled</visible>
-			</control>
-			
 			<!-- Play/Pause -->
 			<control type="togglebutton" id="90005">
-				<include>SubMenu_coords9</include>
-				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPauseNF.png</texturenofocus>
+				<include>SubMenu_coords10</include>
+				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPause.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo</usealttexture>
-				<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</alttexturefocus>
-				<alttexturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPlayNF.png</alttexturenofocus>
+				<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPlay.png</alttexturenofocus>
 				<onclick>PlayerControl(Play)</onclick>
 				<visible>Player.PauseEnabled</visible>
 			</control>
-			
+
 			<!-- Stop -->
 			<control type="button" id="90006">
-				<include>SubMenu_coords9</include>
-				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStopNF.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStopNF.png</texturenofocus>
-				<onclick>PlayerControl(Stop)</onclick>
-			</control>
-
-			<!-- Spacer -->
-			<control type="image" id="80025">
 				<include>SubMenu_coords10</include>
-				<texture>transparent.png</texture>
-				<visible>Player.SeekEnabled</visible>
+				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStop.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStop.png</texturenofocus>
+				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 
 			<!-- Tempo Up -->
@@ -1493,12 +1459,12 @@
 				<alttexturenofocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickForward.png</alttexturenofocus>
 				<usealttexture>Control.HasFocus(90008) | Control.HasFocus(90009)</usealttexture>
 				<onclick>PlayerControl(TempoUp)</onclick>
-				<visible>Player.SeekEnabled</visible>
 				<enable>Player.TempoEnabled</enable>
+				<visible>Player.SeekEnabled</visible>
 			</control>
 			<!-- Fast Forward -->
 			<control type="togglebutton" id="90008">
-				<include>SubMenu_coords12</include>
+				<include>SubMenu_coords15</include>
 				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickForward.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDTrickForward.png</texturenofocus>
 				<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickForward.png</alttexturefocus>
@@ -1509,25 +1475,23 @@
 			</control>
 			<!-- Next -->
 			<control type="button" id="90009">
-				<include>SubMenu_coords11</include>
+				<include>SubMenu_coords16</include>
 				<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDTrickForwardEnd.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDTrickForwardEnd.png</texturenofocus>
 				<onclick>PlayerControl(Next)</onclick>
 				<visible>Player.SeekEnabled</visible>
 			</control>
-			
 		</control>
 	</include>
-	
+
 	<!-- Sidemenu menucontrol -->
 	<include name="SubMenuMenucontrol">
 		<menucontrol>3001</menucontrol>
 	</include>
-	
+
 	<!-- Sub menu indicator -->
 	<include name="SubMenuIndicator">
 		<definition>
-			
 			<control type="group">
 				<visible>!Skin.HasSetting(KioskMode)</visible>
 				<visible>!ControlGroup(9002).HasFocus + !ControlGroup(9003).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(511) | Control.IsVisible(53) | Control.IsVisible(531) | Control.IsVisible(532) | Control.IsVisible(533) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(536) | Control.IsVisible(537) | Control.IsVisible(538) | Control.IsVisible(539) | Window.IsVisible(addonbrowser) | Window.IsVisible(eventlog) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyWeather.xml)]</visible>
@@ -1538,7 +1502,7 @@
 					<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<visible>!Skin.HasSetting(KioskMode)</visible>
 				<visible>!ControlGroup(9002).HasFocus + !ControlGroup(9003).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(523) | Control.IsVisible(524) | Control.IsVisible(525)]</visible>
@@ -1554,8 +1518,6 @@
 					<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-down.png</texture>
 				</control>
 			</control>
-			
 		</definition>
 	</include>
-
 </includes>

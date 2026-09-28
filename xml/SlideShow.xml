@@ -2,8 +2,7 @@
 <window>
 	<!-- slideshow -->
 	<defaultcontrol always="true">2</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
 </window>

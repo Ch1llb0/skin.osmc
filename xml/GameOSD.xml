@@ -2,12 +2,11 @@
 <window>
 	<!-- GameOSD -->
 	<defaultcontrol always="true">5</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Player status -->
 		<control type="group">
 			<include>DialogDepth</include>
@@ -20,18 +19,17 @@
 			<!-- Background -->
 			<control type="image" id="1">
 				<include>GameOSD_coords2</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Pause -->
 			<control type="image" id="1">
 			<include>GameOSD_coords3</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texture>
 				<visible>player.paused</visible>
 			</control>
-
 		</control>
-	
+
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>GameOSD_coords4</include>
@@ -39,13 +37,12 @@
 			<include>OSDVisibleHiddenAnimation</include>
 			<include>OSDOpenCloseAnimation</include>
 			<control type="group">
-			
 				<!-- Window Background -->
 				<control type="image">
 					<include>GameOSD_coords5</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
-				
+
 				<!-- Heading -->
 				<control type="label" id="2">
 					<include>GameOSD_coords6</include>
@@ -61,7 +58,7 @@
 					<itemgap>0</itemgap>
 					<orientation>vertical</orientation>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
-					
+
 					<!-- Pause/Resume button -->
 					<control type="button" id="1001">
 						<include>GameOSD_coords8</include>
@@ -71,7 +68,7 @@
 						<label2>Select + X</label2>
 						<onclick>Play</onclick>
 					</control>
-					
+
 					<!-- Save and load button -->
 					<control type="button" id="1002">
 						<include>GameOSD_coords8</include>
@@ -80,7 +77,7 @@
 						<label>$LOCALIZE[35249]</label>
 						<onclick>ActivateWindow(InGameSaves)</onclick>
 					</control>
-					
+
 					<!-- Reset button -->
 					<control type="button" id="1003">
 						<include>GameOSD_coords8</include>
@@ -90,7 +87,7 @@
 						<label2>Select + B</label2>
 						<onclick>PlayerControl(Reset)</onclick>
 					</control>
-					
+
 					<!-- Stop button -->
 					<control type="button" id="1004">
 						<include>GameOSD_coords8</include>
@@ -100,13 +97,13 @@
 						<label2>Select + Start</label2>
 						<onclick>Stop</onclick>
 					</control>
-					
+
 					<!-- Spacer -->
 					<control type="image" id="1005"> 
 						<include>GameOSD_coords9</include>
 						<texture>transparent.png</texture> 
 					</control>
-					
+
 					<!-- Game video filter button -->
 					<control type="button" id="1006">
 						<include>GameOSD_coords8</include>
@@ -115,7 +112,7 @@
 						<label>$LOCALIZE[35225]</label>
 						<onclick>ActivateWindow(GameVideoFilter)</onclick>
 					</control>
-					
+
 					<!-- Game stretch mode button -->
 					<control type="button" id="1007">
 						<include>GameOSD_coords8</include>
@@ -124,7 +121,7 @@
 						<label>$LOCALIZE[35233]</label>
 						<onclick>ActivateWindow(GameStretchMode)</onclick>
 					</control>
-					
+
 					<!-- View mode button -->
 					<control type="button" id="1008">
 						<include>GameOSD_coords8</include>
@@ -133,7 +130,7 @@
 						<label>$LOCALIZE[35227]</label>
 						<onclick>ActivateWindow(GameVideoRotation)</onclick>
 					</control>
-					
+
 					<!-- Game volume button -->
 					<control type="button" id="1009">
 						<include>GameOSD_coords8</include>
@@ -142,13 +139,13 @@
 						<label>$LOCALIZE[13376]</label>
 						<onclick>ActivateWindow(GameVolume)</onclick>
 					</control>
-					
+
 					<!-- Spacer -->
 					<control type="image" id="1010"> 
 						<include>GameOSD_coords9</include>
 						<texture>transparent.png</texture> 
 					</control>
-					
+
 					<!-- Controls button -->
 					<control type="button" id="1011">
 						<include>GameOSD_coords8</include>
@@ -157,7 +154,7 @@
 						<label>$LOCALIZE[35234]</label>
 						<onclick>ActivateWindow(GameAgents)</onclick>
 					</control>
-					
+
 					<!-- Game advanced settings button -->
 					<control type="button" id="1012">
 						<include>GameOSD_coords8</include>
@@ -166,12 +163,8 @@
 						<label>$LOCALIZE[35226]</label>
 						<onclick>ActivateWindow(GameAdvancedSettings)</onclick>
 					</control>
-					
 				</control>
 			</control>
-
 		</control>
-
 	</controls>
-
 </window>

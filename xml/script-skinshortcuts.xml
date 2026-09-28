@@ -4,25 +4,30 @@
 	<defaultcontrol always="true">304</defaultcontrol>
 	<onload>SetProperty(scriptdialog,script-skinshortcuts.xml,10000)</onload>
 	<onunload>ClearProperty(scriptdialog,10000)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
-		<!-- The two move buttons: no up on the first entry, no down on the last. Disabled, they are
-		     stepped over. -->
 		<!-- Control ids come from three places: Skin Shortcuts built-ins, ids bound in
 		     shortcuts/properties.xml and shortcuts/menus.xml, and this skin's own. Renumbering the
 		     middle group means editing shortcuts/ too. -->
-	
+
 		<!-- Black background image -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">common/white.png</texture>
 			<colordiffuse>FF000000</colordiffuse>
 			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		<!-- Black background image, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true" border="8">common/PanelSolid.png</texture>
+			<colordiffuse>FF000000</colordiffuse>
+			<include>DialogZoomAnimationRounded</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
 		<!-- Color -->
@@ -32,17 +37,37 @@
 			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
 			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) | String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
 			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Color, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true" border="8">common/PanelSolid.png</texture>
+			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
+			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) | String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Single background image -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$VAR[OSMCBackgroundImage]</texture>
 			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(211).ListItem.Property(backgroundPath))</visible>
 			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		<!-- Single background image, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageTexture">
+				<param name="texture">$VAR[OSMCBackgroundImage]</param>
+			</include>
+			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(211).ListItem.Property(backgroundPath))</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<include>DialogZoomAnimationRounded</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
 		<!-- Multiple background images -->
@@ -55,10 +80,25 @@
 			<fadetime>2000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Multiple background images, rounded copy while opening and closing -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageImagePath">
+				<param name="texture">$VAR[OSMCBackgroundImage]</param>
+			</include>
+			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(211).ListItem.Property(backgroundPath))</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<include>CustomBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Single individual background image -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -66,7 +106,19 @@
 			<visible>String.IsEqual(Container(211).ListItem.Property(backgroundType),browse)</visible>
 			<aspectratio>scale</aspectratio>
 			<include>VisibleHiddenFadeAnimation</include>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		<!-- Single individual background image, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageTexture">
+				<param name="texture">$INFO[Container(211).ListItem.Property(backgroundPath)]</param>
+			</include>
+			<visible>String.IsEqual(Container(211).ListItem.Property(backgroundType),browse)</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<include>VisibleHiddenFadeAnimation</include>
+			<include>DialogZoomAnimationRounded</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
 		<!-- Multiple individual background images -->
@@ -80,10 +132,26 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<include>VisibleHiddenFadeAnimation</include>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Multiple individual background images, rounded copy while opening and closing -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageImagePath">
+				<param name="texture">$INFO[Container(211).ListItem.Property(backgroundPath)]</param>
+			</include>
+			<visible>String.IsEqual(Container(211).ListItem.Property(backgroundType),multi)</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<include>IndividualBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>VisibleHiddenFadeAnimation</include>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Fanart -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -93,42 +161,9 @@
 			<visible>!Skin.HasSetting(HideFanart) + !String.IsEmpty(ListItem.Art(fanart))</visible>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+
 		<!-- Overlay -->
-		<control type="group">
-			<include>FullscreenDimensions</include>
-			<animation type="WindowOpen">
-				<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
-				<effect type="fade" start="0" end="100" time="100" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="zoom" start="100" end="70" center="auto" time="300" />
-				<effect type="fade" start="100" end="0" time="100" delay="200" />
-			</animation>
-			<control type="image">
-				<include>BackgroundOverlayDialog1</include>
-				<texture background="true">$VAR[Background1]</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-			</control>
-			<control type="image">
-				<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog2</include>
-				<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog3</include>
-				<texture background="true">$VAR[BackgroundOverlayStyle]</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-			</control>
-			<control type="image">
-				<include>BackgroundOverlayDialog4</include>
-				<texture background="true">$VAR[Background2]</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-				<visible>Skin.HasSetting(BackgroundOverlayStyle)</visible>
-			</control>
-		</control>
+		<include>DialogBackgroundOverlay</include>
 
 		<control type="group">
 			<include content="DialogFrame">
@@ -153,7 +188,7 @@
 				<ondown>Control.Move(211,1)</ondown>
 				<ondown condition="String.IsEmpty(Container(211).ListItemNoWrap(2).Label) + !Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">Control.SetFocus(303)</ondown>
 			</control>
-			
+
 			<!-- Move up -->
 			<control type="button" id="303">
 				<left>-1000</left>
@@ -169,7 +204,7 @@
 				<ondown>Control.Move(211,1)</ondown>
 				<ondown condition="Integer.IsEqual(Container(211).CurrentItem,Container(211).NumItems)">Control.SetFocus(304)</ondown>
 			</control>
-			
+
 			<!-- Left list -->
 			<control type="list" id="211">
 				<include>script-skinshortcuts_coords1</include>
@@ -184,9 +219,8 @@
 				<include>script-skinshortcuts_coords2</include>
 
 				<include>script-skinshortcuts_coords3</include>
-
 			</control>
-			
+
 			<!-- Scrollbar (Left list) -->
 			<control type="scrollbar" id="60">
 				<include>script-skinshortcuts_coords4</include>
@@ -222,7 +256,7 @@
 					<scrollspeed>55</scrollspeed>
 					<textcolor>$VAR[TextColorNF]</textcolor>
 				</control>
-				
+
 				<!-- Change shortcut -->
 				<control type="button" id="401">
 					<include>script-skinshortcuts_coords6</include>
@@ -235,14 +269,13 @@
 					<label>$ADDON[script.skinshortcuts 32044]</label>
 					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
-				
-				
+
 				<!-- Change label -->
 				<control type="button" id="305">
 					<include>script-skinshortcuts_coords6</include>
 					<label>  -  $LOCALIZE[528]</label>
 				</control>
-				
+
 				<!-- Change action -->
 				<control type="button" id="307">
 					<include>script-skinshortcuts_coords6</include>
@@ -250,7 +283,7 @@
 					<label2>$INFO[Container(211).ListItem.Property(action)]</label2>
 					<visible>!$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
-				
+
 				<!-- Edit background -->
 				<control type="button" id="310">
 					<include>script-skinshortcuts_coords6</include>
@@ -259,7 +292,7 @@
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					<visible>$EXP[SkinShortcutsMainMenu]</visible>
 				</control>
-				
+
 				<!-- Edit background duration -->
 				<control type="button" id="210">
 					<include>script-skinshortcuts_coords6</include>
@@ -303,7 +336,7 @@
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
-				
+
 				<!-- Fallback artwork -->
 				<control type="button" id="603">
 					<include>script-skinshortcuts_coords6</include>
@@ -323,7 +356,7 @@
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
-				
+
 				<!-- Widget sort direction -->
 				<control type="button" id="503">
 					<include>script-skinshortcuts_coords6</include>
@@ -333,7 +366,7 @@
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					<visible>$EXP[SkinShortcutsWidgetMenu]</visible>
 				</control>
-				
+
 				<!-- Widget limit items -->
 				<control type="button" id="504">
 					<include>script-skinshortcuts_coords6</include>
@@ -360,9 +393,8 @@
 					<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-isRequired),True)</enable>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 				</control>
-				
 			</control>
-			
+
 			<!-- Scrollbar (Right grouplist) -->
 			<control type="scrollbar" id="80">
 				<include>script-skinshortcuts_coords8</include>
@@ -395,7 +427,6 @@
 				<visible>!Window.IsVisible(1106)</visible>
 				<include>VisibleFadeAnimation</include>
 
-
 				<!-- Add item -->
 				<control type="button" id="301">
 					<width>auto</width>
@@ -419,19 +450,15 @@
 					<onclick condition="$EXP[SkinShortcutsMainMenu]">SetProperty(Window,Mainmenu,1106)</onclick>
 					<onclick>ActivateWindow(1106)</onclick>
 				</control>
-			
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<!-- Hidden controls -->
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

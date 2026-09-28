@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype53">
-
 		<!-- Wall -->
 		<control type="group">
 			<visible>Control.IsVisible(53)</visible>
@@ -22,7 +20,6 @@
 				<include>Viewtype53_coords2</include>
 
 				<include>Viewtype53_coords3</include>
-				
 			</control>
 
 			<control type="group">
@@ -48,11 +45,8 @@
 					<label>$VAR[Label2]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-
 			</control>
-
 		</control>
-
 	</include>
 
 	<include name="image-53">
@@ -69,7 +63,7 @@
 			</control>
 		</definition>
 	</include>
-	
+
 	<include name="image-53-focused">
 		<param name="fallback">DefaultVideo.png</param>
 		<param name="visible">False</param>
@@ -91,5 +85,4 @@
 			</control>
 		</definition>
 	</include>
-
 </includes>

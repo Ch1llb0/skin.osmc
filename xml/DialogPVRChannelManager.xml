@@ -2,12 +2,11 @@
 <window>
 	<!-- pvrchannelmanager -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -29,9 +28,8 @@
 				<include>DialogPVRChannelManager_coords2</include>
 
 				<include>DialogPVRChannelManager_coords3</include>
-
 			</control>
-			
+
 			<!-- Scrollbar (left list) -->
 			<control type="scrollbar" id="70">
 				<include>DialogPVRChannelManager_coords4</include>
@@ -84,7 +82,7 @@
 				<!-- Current channel logo -->
 				<control type="image" id="10">
 					<include>DialogPVRChannelManager_coords9</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 
@@ -105,7 +103,6 @@
 					<include>DialogPVRChannelManager_coords7</include>
 					<label>19267</label>
 				</control>
-
 			</control>
 
 			<!-- Buttons -->
@@ -148,18 +145,14 @@
 					<width>auto</width>
 					<label>19205</label>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

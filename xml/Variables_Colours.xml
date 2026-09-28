@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- Default colors -->
-	
+
 	<!-- Text color (focus) -->
 	<variable name="TextColorFO">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.textfo),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">FFFFFFFF</value>
@@ -17,16 +16,16 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.textfo),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">FFFFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.textfo),Default)">$INFO[Skin.String(color.textfo)]</value>
 	</variable>
-	
+
 	<variable name="TextColorFO-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.textfo)) + !String.IsEqual(Skin.String(color.textfo),Default)">$INFO[Skin.String(color.textfo),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.textfo),Default)">$VAR[TextColorFO,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<variable name="TextColor1">
 		<value>$VAR[TextColorFO]</value>
 	</variable>
-	
+
 	<!-- Text color (no focus) -->
 	<variable name="TextColorNF">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.textnf),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">80FFFFFF</value>
@@ -41,16 +40,16 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.textnf),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">80FFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.textnf),Default)">$INFO[Skin.String(color.textnf)]</value>
 	</variable>
-	
+
 	<variable name="TextColorNF-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.textnf)) + !String.IsEqual(Skin.String(color.textnf),Default)">$INFO[Skin.String(color.textnf),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.textnf),Default)">$VAR[TextColorNF,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<variable name="TextColor2">
 		<value>$VAR[TextColorNF]</value>
 	</variable>
-	
+
 	<!-- Darken color -->
 	<variable name="DarkenColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.darken),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">60000000</value>
@@ -65,12 +64,12 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.darken),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">60000000</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.darken),Default)">$INFO[Skin.String(color.darken)]</value>
 	</variable>
-	
+
 	<variable name="DarkenColor-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.darken)) + !String.IsEqual(Skin.String(color.darken),Default)">$INFO[Skin.String(color.darken),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.darken),Default)">$VAR[DarkenColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Overlay color (focus) -->
 	<variable name="OverlayColorFO">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.overlayfo),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">FFFFFFFF</value>
@@ -85,12 +84,12 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.overlayfo),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">FFFFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.overlayfo),Default)">$INFO[Skin.String(color.overlayfo)]</value>
 	</variable>
-	
+
 	<variable name="OverlayColorFO-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.overlayfo)) + !String.IsEqual(Skin.String(color.overlayfo),Default)">$INFO[Skin.String(color.overlayfo),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.overlayfo),Default)">$VAR[OverlayColorFO,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Overlay color (no focus) -->
 	<variable name="OverlayColorNF">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.overlaynf),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">55F1F1F1</value>
@@ -110,7 +109,7 @@
 		<value condition="!String.IsEmpty(Skin.String(color.overlaynf)) + !String.IsEqual(Skin.String(color.overlaynf),Default)">$INFO[Skin.String(color.overlaynf),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.overlaynf),Default)">$VAR[OverlayColorNF,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Selected color -->
 	<variable name="SelectedColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.selected),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">FF29B6EB</value>
@@ -130,7 +129,7 @@
 		<value condition="!String.IsEmpty(Skin.String(color.selected)) + !String.IsEqual(Skin.String(color.selected),Default)">$INFO[Skin.String(color.selected),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.selected),Default)">$VAR[SelectedColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Disabled color -->
 	<variable name="DisabledColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.disabled),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">808C8C8C</value>
@@ -145,12 +144,12 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.disabled),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">808C8C8C</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.disabled),Default)">$INFO[Skin.String(color.disabled)]</value>
 	</variable>
-	
+
 	<variable name="DisabledColor-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.disabled)) + !String.IsEqual(Skin.String(color.disabled),Default)">$INFO[Skin.String(color.disabled),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.disabled),Default)">$VAR[DisabledColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Invalid color -->
 	<variable name="InvalidColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.invalid),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">60000000</value>
@@ -165,12 +164,12 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.invalid),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">60000000</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.invalid),Default)">$INFO[Skin.String(color.invalid)]</value>
 	</variable>
-	
+
 	<variable name="InvalidColor-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.invalid)) + !String.IsEqual(Skin.String(color.invalid),Default)">$INFO[Skin.String(color.invalid),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.invalid),Default)">$VAR[InvalidColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- OSD Cache color -->
 	<variable name="OSDCacheColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.osdcache),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">33FFFFFF</value>
@@ -185,12 +184,12 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.osdcache),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">33FFFFFF</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.osdcache),Default)">$INFO[Skin.String(color.osdcache)]</value>
 	</variable>
-	
+
 	<variable name="OSDCacheColor-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.osdcache)) + !String.IsEqual(Skin.String(color.osdcache),Default)">$INFO[Skin.String(color.osdcache),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.osdcache),Default)">$VAR[OSDCacheColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Masking color -->
 	<variable name="MaskingColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.masking),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">FF000000</value>
@@ -205,12 +204,12 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.masking),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">FF000000</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.masking),Default)">$INFO[Skin.String(color.masking)]</value>
 	</variable>
-	
+
 	<variable name="MaskingColor-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.masking)) + !String.IsEqual(Skin.String(color.masking),Default)">$INFO[Skin.String(color.masking),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.masking),Default)">$VAR[MaskingColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Background color -->
 	<variable name="BackgroundColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.background),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">FF293FEB</value>
@@ -230,7 +229,7 @@
 		<value condition="!String.IsEmpty(Skin.String(color.background)) + !String.IsEqual(Skin.String(color.background),Default)">$INFO[Skin.String(color.background),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.background),Default)">$VAR[BackgroundColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<!-- Menu/OSD -->
 	<variable name="MenuOSDColor">
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.menuosd),Default)]] + Skin.HasSetting(DefaultColorSetOSMCBlue)">FF293FEB</value>
@@ -245,17 +244,17 @@
 		<value condition="[String.IsEqual(Skin.String(DefaultColors),yes) | [String.IsEqual(Skin.String(DefaultColors),no) + String.IsEqual(Skin.String(color.menuosd),Default)]] + Skin.HasSetting(DefaultColorSetDarkBlue)">FF15455C</value>
 		<value condition="String.IsEqual(Skin.String(DefaultColors),no) + !String.IsEqual(Skin.String(color.menuosd),Default)">$INFO[Skin.String(color.menuosd)]</value>
 	</variable>
-	
+
 	<variable name="MenuOSDColor-Name">
 		<value condition="!String.IsEmpty(Skin.String(color.menuosd)) + !String.IsEqual(Skin.String(color.menuosd),Default)">$INFO[Skin.String(color.menuosd),$LOCALIZE[636] (#[UPPERCASE],[/UPPERCASE])]</value>
 		<value condition="String.IsEqual(Skin.String(color.menuosd),Default)">$VAR[MenuOSDColor,$LOCALIZE[13278] (#,)]</value>
 	</variable>
-	
+
 	<variable name="SolidBackgroundColor">
 		<value condition="!String.IsEmpty(Skin.String(color.backgroundsolid)) + !String.IsEqual(Skin.String(color.backgroundsolid),Default)">$INFO[Skin.String(color.backgroundsolid)]</value>
 		<value>FF000000</value>
 	</variable>
-	
+
 	<variable name="ColorPicker_PercentToHEX_Alpha">
 		<value condition="String.IsEqual(Control.GetLabel(8001),100%)">FF</value>
 		<value condition="String.IsEqual(Control.GetLabel(8001),99%)">FC</value>
@@ -675,5 +674,4 @@
 	<variable name="ColorPicker_PercentToHEX_Color">
 		<value>$VAR[ColorPicker_PercentToHEX_Alpha]$VAR[ColorPicker_PercentToHEX_Red]$VAR[ColorPicker_PercentToHEX_Green]$VAR[ColorPicker_PercentToHEX_Blue]</value>
 	</variable>
-	
 </includes>

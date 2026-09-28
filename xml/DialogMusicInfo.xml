@@ -4,12 +4,11 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(10135).Property(description))">ClearProperty(description,10135)</onload>
 	<onunload>ClearProperty(description,10135)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -22,32 +21,32 @@
 			<control type="image">
 				<include>DialogMusicInfo_coords1</include>
 				<fadetime>100</fadetime>
-				<texture background="true" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBTYPE,song)</visible>
 			</control>
-			
+
 			<!-- Album image -->
 			<control type="image">
 				<include>DialogMusicInfo_coords1</include>
 				<fadetime background="true" fallback="DefaultAlbumCover.png">100</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x405.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBTYPE,album)</visible>
 			</control>
-			
+
 			<!-- Artist image -->
 			<control type="image">
 				<include>DialogMusicInfo_coords1</include>
 				<fadetime>100</fadetime>
-				<texture background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBTYPE,artist)</visible>
 			</control>
-			
+
 			<!-- Filename and path -->
 			<control type="fadelabel">
 				<include>DialogVideoInfo_coords2</include>
@@ -124,7 +123,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Disc Number -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -143,7 +142,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Composer -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -181,7 +180,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Release Date -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -200,7 +199,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Original Date -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -257,7 +256,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- BPM -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -276,7 +275,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Comment -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -295,7 +294,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Duration -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -314,7 +313,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Rating -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -370,7 +369,6 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
 
 				<!-- Details (album) -->
@@ -383,7 +381,7 @@
 					<visible>String.IsEqual(ListItem.DBTYPE,album)</visible>
 					<visible>String.IsEmpty(Window(10135).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(10135).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) | String.IsEmpty(Window(10135).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) + String.IsEmpty(ListItem.Property(Album_Description))</visible>
 					<include>VisibleFadeAnimation</include>
-					
+
 					<!-- Album artist -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -402,7 +400,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Composer -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -440,7 +438,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Release Date -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -459,7 +457,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Original Date -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -478,7 +476,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Release status -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -516,7 +514,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Duration -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -535,7 +533,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Type -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -648,9 +646,8 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
-				
+
 				<!-- Details (artist) -->
 				<control type="grouplist" id="101">
 					<include>DialogMusicInfo_coords4</include>
@@ -680,7 +677,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Died -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -699,7 +696,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Formed -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -718,7 +715,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Disbanded -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
@@ -870,11 +867,9 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
-
 			</control>
-			
+
 			<!-- Description -->
 			<control type="textbox">
 				<include>DialogMusicInfo_coords8</include>
@@ -894,7 +889,7 @@
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<include>MusicInfoDialogButtonFocus</include>
-				
+
 				<!-- Extended info Button -->
 				<control type="togglebutton" id="14">
 					<width>Auto</width>
@@ -940,13 +935,9 @@
 					<label>$LOCALIZE[15067]</label>
 					<visible>Skin.HasSetting(KioskMode) + !Control.IsVisible(7) + !Control.IsVisible(14) + !Control.IsVisible(12)</visible>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

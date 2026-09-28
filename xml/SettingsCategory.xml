@@ -2,33 +2,32 @@
 <window>
 	<!-- category -->
 	<defaultcontrol always="true">3</defaultcontrol>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<!-- Sidemenu menucontrol -->
 	<menucontrol>3001</menucontrol>
-	
+
 	<!-- Welcome screen -->
 	<onload condition="String.IsEmpty(Skin.String(WelcomeDialogShown)) + !System.HasAddon(service.osmc.settings)">ActivateWindow(1101)</onload>
-	
+
 	<!-- Skin Shortcuts -->
 	<onunload condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
-	
+
 	<!-- Skin settings, background + colors -->
 	<include>Onloads</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
 			<!-- Background -->
 			<include>WindowBackgroundImageVerticalHome</include>
-			
+
 			<!-- Time -->
 			<include content="Time">
 				<param name="narrow">True</param>
@@ -68,7 +67,7 @@
 					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,S)</visible>
 				</control>
-				
+
 				<control type="textbox" id="6">
 					<include>SettingsCategory_coords4</include>
 					<font>Font30</font>
@@ -76,7 +75,7 @@
 					<autoscroll delay="5000" time="1300" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,M)</visible>
 				</control>
-				
+
 				<control type="textbox" id="6">
 					<include>SettingsCategory_coords5</include>
 					<font>Font33</font>
@@ -84,7 +83,7 @@
 					<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
 					<visible>Skin.String(PlotFont,L)</visible>
 				</control>
-				
+
 				<control type="textbox" id="6">
 					<include>SettingsCategory_coords6</include>
 					<font>Font36</font>
@@ -97,7 +96,7 @@
 				<control type="group">
 					<include>SettingsCategory_coords7</include>
 				</control>
-				
+
 				<!-- Settings Level -->
 				<control type="label">
 					<include>SettingsCategory_coords8</include>
@@ -182,7 +181,7 @@
 					<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 				</control>
-				
+
 				<!-- Default color button -->
 				<control type="colorbutton" id="15">
 					<include>SettingsCategory_coords10</include>
@@ -202,13 +201,9 @@
 				<control type="edit" id="12">
 					<include>SettingsCategory_coords10</include>
 				</control>
-				
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

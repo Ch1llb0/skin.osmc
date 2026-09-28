@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="HomeLogo_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">HomeLogo_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeLogo_coords_21:9</include>
@@ -39,24 +38,51 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeRSS_coords_4:3</include>
 	</include>
 	<include name="HomeRSS_coords_16:9">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>1920</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>1880</width>
 	</include>
 	<include name="HomeRSS_coords_21:9">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>2560</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>2520</width>
 	</include>
 	<include name="HomeRSS_coords_21:9_masked">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>2560</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>2520</width>
 	</include>
 	<include name="HomeRSS_coords_4:3">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>1440</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>1400</width>
+	</include>
+
+	<include name="HomeRSS_coords2">
+		<include condition="$EXP[NonMaskedCoordinates]">HomeRSS_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeRSS_coords2_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">HomeRSS_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeRSS_coords2_4:3</include>
+	</include>
+	<include name="HomeRSS_coords2_16:9">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>1832</width>
+	</include>
+	<include name="HomeRSS_coords2_21:9">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>2472</width>
+	</include>
+	<include name="HomeRSS_coords2_21:9_masked">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>2472</width>
+	</include>
+	<include name="HomeRSS_coords2_4:3">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>1352</width>
 	</include>
 
 	<include name="Home_coords1">
@@ -89,7 +115,7 @@
 		<width>300</width>
 		<height>679</height>
 	</include>
-	
+
 	<include name="Home_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">Home_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords2_21:9</include>
@@ -148,7 +174,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="Home_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">Home_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords3_21:9</include>
@@ -177,7 +203,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -204,7 +230,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -231,7 +257,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -258,12 +284,12 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="Home_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">Home_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords4_21:9</include>
@@ -302,7 +328,7 @@
 			<param name="container">9000</param>
 		</include>
 	</include>
-	
+
 	<include name="HomeSubMenu_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">HomeSubMenu_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeSubMenu_coords1_21:9</include>
@@ -310,10 +336,10 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeSubMenu_coords1_4:3</include>
 	</include>
 	<include name="HomeSubMenu_coords1_16:9">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -322,10 +348,10 @@
 		</itemlayout>
 	</include>
 	<include name="HomeSubMenu_coords1_21:9">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -334,10 +360,10 @@
 		</itemlayout>
 	</include>
 	<include name="HomeSubMenu_coords1_21:9_masked">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -346,10 +372,10 @@
 		</itemlayout>
 	</include>
 	<include name="HomeSubMenu_coords1_4:3">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -357,7 +383,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="HomeSubMenu_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">HomeSubMenu_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeSubMenu_coords2_21:9</include>
@@ -365,10 +391,10 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeSubMenu_coords2_4:3</include>
 	</include>
 	<include name="HomeSubMenu_coords2_16:9">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -377,14 +403,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -394,10 +420,10 @@
 		</focusedlayout>
 	</include>
 	<include name="HomeSubMenu_coords2_21:9">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -406,14 +432,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -423,10 +449,10 @@
 		</focusedlayout>
 	</include>
 	<include name="HomeSubMenu_coords2_21:9_masked">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -435,14 +461,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -452,10 +478,10 @@
 		</focusedlayout>
 	</include>
 	<include name="HomeSubMenu_coords2_4:3">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -464,14 +490,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -480,5 +506,4 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 </includes>

@@ -2,12 +2,11 @@
 <window>
 	<!-- addonsettings -->
 	<defaultcontrol always="true">3</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -15,7 +14,7 @@
 			<include content="DialogFrame">
 				<param name="heading">$INFO[Control.GetLabel(2)]</param>
 			</include>
-			
+
 			<control type="label" id="2">
 				<font></font>
 				<label></label>
@@ -33,7 +32,7 @@
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<pagecontrol>70</pagecontrol>
 			</control>
-			
+
 			<!-- Default group button -->
 			<control type="button" id="10">
 				<include>DialogAddonSettings_coords2</include>
@@ -42,7 +41,7 @@
 				<invalidcolor>$VAR[InvalidColor]</invalidcolor>
 				<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 			</control>
-			
+
 			<!-- Scrollbar (Left grouplist) -->
 			<control type="scrollbar" id="70">
 				<include>DialogAddonSettings_coords3</include>
@@ -54,7 +53,7 @@
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
-			
+
 			<!-- Settings Level -->
 			<control type="label">
 				<include>DialogAddonSettings_coords4</include>
@@ -83,7 +82,7 @@
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<pagecontrol>80</pagecontrol>
 			</control>
-			
+
 			<!-- Scrollbar (Right grouplist) -->
 			<control type="scrollbar" id="80">
 				<include>DialogAddonSettings_coords7</include>
@@ -95,7 +94,7 @@
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
-			
+
 			<!-- Default label -->
 			<control type="label" id="14">
 				<include>DialogAddonSettings_coords8</include>
@@ -137,7 +136,7 @@
 				<include>DialogAddonSettings_coords11</include>
 				<texture border="2" colordiffuse="$VAR[OverlayColorNF]">common/Divider.png</texture>
 			</control>
-			
+
 			<!-- Default edit -->
 			<control type="label" id="12">
 				<include>DialogAddonSettings_coords8</include>
@@ -151,7 +150,7 @@
 				<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 				<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 			</control>
-				
+
 			<!-- Default color button -->
 			<control type="colorbutton" id="15">
 				<include>DialogAddonSettings_coords8</include>
@@ -160,7 +159,7 @@
 				<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 				<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 			</control>
-			
+
 			<!-- Settings description -->
 			<control type="fadelabel" id="6">
 				<include>DialogAddonSettings_coords13</include>
@@ -194,18 +193,14 @@
 					<width>auto</width>
 					<label>409</label>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9001).HasFocus + !Control.HasFocus(20) + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

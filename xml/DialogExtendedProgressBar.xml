@@ -3,23 +3,22 @@
 	<!-- extendedprogressdialog -->
 	<include>CornerWindowAnimation</include>
 	<zorder>100</zorder>
-	
+
 	<controls>
-	
 		<control type="group">
 			<include>NotificationDepth</include>
 			<include>CornerWindowLiftAboveNotification</include>
-			
+
 			<!-- Background -->
 			<control type="image">
 				<include>DialogExtendedProgressBar_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
-			
+
 			<!-- Busy spinner -->
 			<control type="image">
 				<include>DialogExtendedProgressBar_coords2</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerSmall]</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerMedium]</texture>
 			</control>
 
 			<!-- Heading -->
@@ -43,10 +42,9 @@
 			<!-- Progress -->
 			<control type="progress" id="32">
 				<include>DialogExtendedProgressBar_coords5</include>
-				<midtexture colordiffuse="$VAR[OverlayColorFO]">common/white.png</midtexture>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
 			</control>
 		</control>
-
 	</controls>
-
 </window>

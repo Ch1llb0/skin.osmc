@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogSettings_Default">
-	
 		<controls>
-
 			<!-- Dialog fanart -->
 			<include>DialogBackgroundImage</include>
 
@@ -93,9 +90,8 @@
 					<control type="button" id="30">
 						<width>Auto</width>
 					</control>
-
 				</control>
-				
+
 				<!-- Button indicator -->
 				<include content="dialogButtonIndicator">
 					<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
@@ -114,19 +110,16 @@
 			</control>
 
 			<include>MaskingBars</include>
-
 		</controls>
 	</include>
 
 	<include name="DialogSettings_OSD">
-		
 		<controls>
-
 			<control type="group">
 				<include>DialogDepth</include>
 				<include>DialogSettings_coords9</include>
 				<visible>!Window.IsVisible(10153) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(SliderDialog) + !Window.IsVisible(FileBrowser) + !Window.IsVisible(shutdownmenu) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
-				
+
 				<!-- Animation -->
 				<include>OSDVisibleHiddenAnimation</include>
 				<include>OSDOpenCloseAnimation</include>
@@ -134,7 +127,7 @@
 				<!-- Window Background -->
 				<control type="image">
 					<include>DialogSettings_coords10</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<!-- Heading -->
@@ -223,12 +216,8 @@
 					<control type="button" id="30">
 						<width>Auto</width>
 					</control>
-
 				</control>
-
 			</control>
-
 		</controls>
 	</include>
-
 </includes>

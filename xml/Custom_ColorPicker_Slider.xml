@@ -2,20 +2,18 @@
 <window type="dialog" id="1108">
 	<!-- Color slider picker dialog -->
 	<defaultcontrol always="true">10</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
-		
-		<control type="group">
 
+		<control type="group">
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
-			
+
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">31188</param>
@@ -31,7 +29,7 @@
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<onup>noop</onup>
 				<ondown>9000</ondown>
-				
+
 				<!-- Alpha -->
 				<control type="slider" id="8001"/>
 				<control type="label" id="8101">
@@ -59,18 +57,17 @@
 					<include>Custom_ColorPicker_Slider_coords2</include>
 					<label>$LOCALIZE[762]: $INFO[Control.GetLabel(8004)] (HEX: $VAR[ColorPicker_PercentToHEX_Blue])</label>
 				</control>
-			
 			</control>
-			
+
 			<!-- Live Preview -->
 			<control type="image">
 				<include>Custom_ColorPicker_Slider_coords3</include>
-				<texture colordiffuse="$VAR[ColorPicker_PercentToHEX_Color]">common/white.png</texture>
+				<texture border="8" colordiffuse="$VAR[ColorPicker_PercentToHEX_Color]">common/PanelSolid.png</texture>
 				<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 				<aspectratio>keep</aspectratio>
 				<visible>!String.IsEqual(Control.GetLabel(1000),#00000000)</visible>
 			</control>
-			
+
 			<!-- Color name -->
 			<control type="fadelabel" id="1000">
 				<include>Custom_ColorPicker_Slider_coords4</include>
@@ -88,7 +85,7 @@
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<onup>8001</onup>
-				
+
 				<!-- Apply -->
 				<control type="button" id="10">
 					<width>auto</width>
@@ -103,13 +100,9 @@
 					<label>222</label>
 					<onclick>Dialog.Close(1108)</onclick>
 				</control>
-				
 			</control>
-		
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

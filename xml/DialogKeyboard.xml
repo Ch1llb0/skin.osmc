@@ -2,12 +2,11 @@
 <window>
 	<!-- virtualkeyboard -->
 	<defaultcontrol always="true">312</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -75,7 +74,7 @@
 					<font>Font48</font>
 					<label>1006</label>
 				</control>
-				
+
 				<!-- Show/Hide password -->
 				<control type="button" id="310">
 					<include>DialogKeyboard_coords2</include>
@@ -84,7 +83,6 @@
 					<font>Font48</font>
 					<label>12308</label>
 				</control>
-
 			</control>
 
 			<!-- Keys -->
@@ -173,7 +171,6 @@
 						<ondown>131</ondown>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Second row -->
@@ -268,7 +265,6 @@
 						<ondown>151</ondown>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Third row -->
@@ -363,7 +359,6 @@
 						<ondown>171</ondown>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Forth row -->
@@ -458,7 +453,6 @@
 						<ondown>306</ondown>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Fifth row -->
@@ -498,7 +492,6 @@
 						<label>&gt;</label>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Edit -->
@@ -513,7 +506,6 @@
 					<texturefocus colordiffuse="$VAR[TextColorFO]" border="2">common/Border.png</texturefocus>
 					<texturenofocus colordiffuse="$VAR[TextColorNF]" border="2">common/Border.png</texturenofocus>
 				</control>
-
 			</control>
 
 			<!-- Autocompletion -->
@@ -530,13 +522,12 @@
 					<effect type="slide" end="0,200" time="200" />
 					<effect type="fade" start="100" end="0" time="200" />
 				</animation>
-				
+
 				<include>DialogKeyboard_coords15</include>
-				
+
 				<include>DialogKeyboard_coords16</include>
-				
+
 				<content>$VAR[keyboard-autocompletion]</content>
-				
 			</control>
 
 			<!-- Buttons -->
@@ -560,13 +551,9 @@
 					<width>auto</width>
 					<label>222</label>
 				</control>
-
 			</control>
-
 		</control>
-		
-		<include>MaskingBars</include>
-		
-	</controls>
 
+		<include>MaskingBars</include>
+	</controls>
 </window>

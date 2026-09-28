@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- Value-to-label lookup maps ($MAP[MapName,Infolabel], Kodi v22+).
 	     On a lookup miss $MAP returns the raw infolabel value unchanged. -->
 
@@ -126,5 +125,4 @@
 		<entry key="7FEL">7 FEL</entry>
 		<entry key="7MEL">7 MEL</entry>
 	</map>
-
 </includes>

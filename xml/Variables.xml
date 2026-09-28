@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- The view a video add-on page is put into. A control decides which of its actions to run
 	     before the first one starts, and the first is the dialog, so the answer is read here
 	     instead. -->
@@ -17,32 +16,115 @@
 		<value condition="Skin.HasSetting(DefaultVideosViewWalllow)">Container.SetViewMode(539)</value>
 		<value>noop</value>
 	</variable>
-	
+
 	<!-- Background overlay -->
 	<variable name="BackgroundOverlayStyle">
 		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2]</value>
 		<value condition="Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background1]</value>
 	</variable>
-	
+
 	<variable name="Background1">
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background1High.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background1Medium.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background1Low.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background1Highest.png</value>
 	</variable>
-	
+
 	<variable name="Background2">
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background2High.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background2Medium.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background2Low.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background2Highest.png</value>
 	</variable>
-	
+
+	<!-- The overlay fills again with 8 px corners on one edge, for the inset dialog panel: the part above the
+	     button band rounds its top corners, the band its bottom ones. Drawn with border="8". -->
+	<variable name="Background1Top">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background1HighTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background1MediumTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background1LowTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background1HighestTop.png</value>
+	</variable>
+
+	<variable name="Background1Bottom">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background1HighBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background1MediumBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background1LowBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background1HighestBottom.png</value>
+	</variable>
+
+	<!-- The bright shade rounded where it meets the dark one: at its two right corners for a split
+	     with the bright part on the left, at its top corners for a band along the bottom, at all four for
+	     a band between two dark parts. Drawn with border 8 on the rounded sides. -->
+	<variable name="Background2Right">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background2HighRight.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background2MediumRight.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background2LowRight.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background2HighestRight.png</value>
+	</variable>
+
+	<variable name="Background2Top">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background2HighTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background2MediumTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background2LowTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background2HighestTop.png</value>
+	</variable>
+
+	<variable name="Background2Round">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background2HighRound.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background2MediumRound.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background2LowRound.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background2HighestRound.png</value>
+	</variable>
+
+	<!-- The dark shade in the corner the rounding cuts from the bright one, so nothing shows through.
+	     Shaped for the bright part's top-right corner; flipx and flipy turn it for the others. -->
+	<variable name="Background1Fill">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background1HighFill.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background1MediumFill.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background1LowFill.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background1HighestFill.png</value>
+	</variable>
+
+	<variable name="BackgroundOverlayStyleBottom">
+		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2Round]</value>
+		<value condition="Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background1Bottom]</value>
+	</variable>
+
+	<!-- The bright part of a split, rounded at the split; plain in one-shade mode, which has no split -->
+	<variable name="BackgroundOverlayStyleRight">
+		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2Right]</value>
+		<value condition="Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background1]</value>
+	</variable>
+
+	<variable name="BackgroundOverlayStyleTop">
+		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2Top]</value>
+		<value condition="Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background1]</value>
+	</variable>
+
 	<variable name="MenuOSDBackground">
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),High)">common/Background2High.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Medium)">common/Background2Medium.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Low)">common/Background2Low.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Highest)">common/Background2Highest.png</value>
+	</variable>
+
+	<!-- The same panel with 8 px corners, for panels that float clear of the screen edges. Drawn with
+	     border="8" so the corners keep their radius at any size. -->
+	<variable name="MenuOSDPanel">
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),High)">common/PanelHigh.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Medium)">common/PanelMedium.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Low)">common/PanelLow.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Highest)">common/PanelHighest.png</value>
+	</variable>
+
+	<!-- The letter in the scrolling index. The parent folder item's sort letter is not empty but the
+	     "." of its "..", which at this size reads as an empty box, so it is tested first; it and any
+	     item without a letter show an ellipsis, so the panel never stands empty while it is on screen. -->
+	<variable name="ScrollingLetter">
+		<value condition="ListItem.IsParentFolder">...</value>
+		<value condition="!String.IsEmpty(ListItem.SortLetter)">$INFO[ListItem.SortLetter]</value>
+		<value>...</value>
 	</variable>
 
 	<!-- Background images/overlay -->
@@ -52,7 +134,7 @@
 		<value condition="!String.IsEmpty(Skin.String(BackgroundImage))">$INFO[Skin.String(BackgroundImage),special://skin/extras/backgrounds/,.jpg]</value>
 		<value>special://skin/extras/backgrounds/1.jpg</value>
 	</variable>
-	
+
 	<!-- Opacity Dim Factor -->
 	<variable name="DiffusePosterNF">
 		<value condition="String.IsEqual(Skin.String(NFDimOpac),133)">FF333333</value>
@@ -67,42 +149,42 @@
 		<value condition="!Skin.HasSetting(TextHighlight)">$VAR[TextColorFO]</value>
 		<value condition="Skin.HasSetting(TextHighlight)">00FFFFFF</value>
 	</variable>
-	
+
 	<!-- The line under a focused row is placed by the control, not by empty rows in its texture,
 	     so it stays sharp at any scale. -->
 	<variable name="ResetScroll">
 		<value condition="$EXP[ResetScrollOverlay]">$INFO[Window(Home).Property(ResetScroll)][B][/B]</value>
 		<value>$INFO[Window(Home).Property(ResetScroll)]</value>
 	</variable>
-	
+
 	<variable name="focusline">
 		<value condition="!Skin.HasSetting(TextHighlight)">common/focusline.png</value>
 	</variable>
-	
+
 	<variable name="focuslinecenter">
 		<value condition="!Skin.HasSetting(TextHighlight)">common/focuslinec.png</value>
 	</variable>
-	
+
 	<variable name="settingsbuttonunfocusdim">
 		<value condition="ControlGroup(5).HasFocus | ControlGroup(9002).HasFocus | Control.HasFocus(20)">$VAR[TextColorNF]</value>
 		<value>$VAR[TextColorFO]</value>
 	</variable>
-	
+
 	<variable name="addonsettingsbuttonunfocusdim">
 		<value condition="ControlGroup(5).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(70) | Control.HasFocus(80) | Control.HasFocus(20)">$VAR[TextColorNF]</value>
 		<value>$VAR[TextColorFO]</value>
 	</variable>
-	
+
 	<variable name="gamecontrollersbuttonunfocusdim">
 		<value condition="ControlGroup(5).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(70) | Control.HasFocus(80)">$VAR[TextColorNF]</value>
 		<value>$VAR[TextColorFO]</value>
 	</variable>
-	
+
 	<variable name="epggridunfocusdim">
 		<value condition="Control.HasFocus(10)">$VAR[OverlayColorFO]</value>
 		<value>$VAR[OverlayColorNF]</value>
 	</variable>
-	
+
 	<!-- Default forced views settings -->
 	<variable name="DefaultViewSettings">
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">Skin.Reset(DefaultVideosViewList)</value>
@@ -116,20 +198,27 @@
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.Reset(DefaultVideosViewWallsmallinfo)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.Reset(DefaultVideosViewWallsmallinfo)</value>
 	</variable>
-	
+
 	<!-- Busy spinner -->
-	<!-- Two sizes of the same spinner: an unsized image control takes the texture's own size, so
-	     the small one is a texture of its own rather than the large one scaled down. -->
+	<!-- Three sizes of the same spinner, one texture per size so none is drawn scaled: 200 px for
+	     the busy dialog, 60 px for the corner and heading slots, 36 px for a reloading widget. An
+	     unsized image control takes the texture's own size. APNG, not GIF, for a full alpha edge;
+	     the slow set is 30 fps rather than 60 for boxes with less than 512 MB. -->
 	<variable name="BusySpinner">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.gif</value>
-		<value>busy.gif</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.apng</value>
+		<value>busy.apng</value>
+	</variable>
+
+	<variable name="BusySpinnerMedium">
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-medium.apng</value>
+		<value>busy-medium.apng</value>
 	</variable>
 
 	<variable name="BusySpinnerSmall">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-small.gif</value>
-		<value>busy-small.gif</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-small.apng</value>
+		<value>busy-small.apng</value>
 	</variable>
-	
+
 	<!-- Media images -->
 	<variable name="mediaImages">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
@@ -141,13 +230,13 @@
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	
+
 	<!-- Video Versions images -->
 	<variable name="VideoManagerImages">
 		<value condition="!String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
 		<value condition="String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(thumb)]</value>
 	</variable>
-	
+
 	<!-- Heading labels -->
 	<variable name="HeadingLabelPrimary">
 		<value condition="Window.IsVisible(busydialog)">$LOCALIZE[20186]...</value>
@@ -195,7 +284,7 @@
 		<value condition="Window.IsVisible(favouritesbrowser)">$LOCALIZE[1036]</value>
 		<value>$INFO[Container.FolderName]</value>
 	</variable>
-	
+
 	<variable name="HeadingLabelSecondary">
 		<value condition="Window.IsVisible(busydialog)"></value>
 		<value condition="[String.StartsWith(Container.FolderPath,library://video/movies) + String.EndsWith(Container.FolderPath,library://video/movies/)] | [String.StartsWith(Container.FolderPath,videodb://movies/titles/) + String.EndsWith(Container.FolderPath,videodb://movies/titles/)]"></value>
@@ -243,13 +332,13 @@
 		<value condition="Window.IsVisible(eventlog)">$INFO[Container.FolderName]</value>
 		<value condition="Window.IsVisible(games)">$INFO[Container.FolderName]</value>
 	</variable>
-	
+
 	<variable name="CustomMenuHeading">
 		<value condition="ControlGroup(4000).HasFocus()">$LOCALIZE[31004]</value>
 		<value condition="ControlGroup(5000).HasFocus()">$LOCALIZE[22082]</value>
 		<value>$LOCALIZE[31003]</value>
 	</variable>
-	
+
 	<!-- Content type label -->
 	<variable name="ContentType">
 		<value condition="Container.Content(movies) + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/) + Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[20338]</value>
@@ -305,17 +394,17 @@
 		<value condition="Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31000]</value>
 		<value condition="!Integer.IsEqual(Container.NumItems,1)">$LOCALIZE[31001]</value>
 	</variable>
-	
+
 	<variable name="ContentTypeFileManager20">
 		<value condition="Integer.IsEqual(Container(20).NumItems,1)">$LOCALIZE[31000]</value>
 		<value condition="!Integer.IsEqual(Container(20).NumItems,1)">$LOCALIZE[31001]</value>
 	</variable>
-	
+
 	<variable name="ContentTypeFileManager21">
 		<value condition="Integer.IsEqual(Container(21).NumItems,1)">$LOCALIZE[31000]</value>
 		<value condition="!Integer.IsEqual(Container(21).NumItems,1)">$LOCALIZE[31001]</value>
 	</variable>
-	
+
 	<!-- Video and music player -->
 	<variable name="VideoPlayerTitle">
 		<value condition="VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg + String.IsEmpty(Window(12005).Property(shownext))">$LOCALIZE[19030]: [B]$INFO[Player.Title][/B] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</value>
@@ -330,7 +419,7 @@
 		<value condition="VideoPlayer.HasVideoVersions">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.VideoVersionName, (,)]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 		<value>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 	</variable>
-	
+
 	<variable name="UpNextTitle">
 		<value condition="Integer.IsLessOrEqual(Window.Property(season),9) + Integer.IsLessOrEqual(Window.Property(episode),9) + !String.Contains(Window.Property(episode),s)">$INFO[Window.Property(tvshowtitle),, &#8226; ]$INFO[Window.Property(season),S0,]$INFO[Window.Property(episode),E0, &#8226; ]$INFO[Window.Property(title)]</value>
 		<value condition="Integer.IsLessOrEqual(Window.Property(season),9) + Integer.IsGreaterOrEqual(Window.Property(episode),10) + !String.Contains(Window.Property(episode),s)">$INFO[Window.Property(tvshowtitle),, &#8226; ]$INFO[Window.Property(season),S0,]$INFO[Window.Property(episode),E, &#8226; ]$INFO[Window.Property(title)]</value>
@@ -353,7 +442,7 @@
 		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(12005).Property(shownext))">$LOCALIZE[19030]: $INFO[VideoPlayer.Title] ($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])</value>
 		<value condition="VideoPlayer.Content(LiveTV) + String.IsEmpty(Window(12005).Property(shownext))">$LOCALIZE[19031]: $INFO[VideoPlayer.NextTitle] ($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])</value>
 	</variable>
-	
+
 	<variable name="PVRClientName">
 		<value condition="Integer.IsGreater(PVR.ClientCount,1)">$INFO[ListItem.PVRClientName]$INFO[ListItem.PVRInstanceName, (,)]</value>
 	</variable>
@@ -361,7 +450,7 @@
 	<variable name="PVRDescription">
 		<value>$INFO[ListItem.Title,[B],[/B][CR][CR]]$INFO[ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Genre(comma),[LIGHT],[/LIGHT][CR][CR]]$VAR[PVRClientName,[LIGHT],[/LIGHT][CR][CR]]$INFO[ListItem.Plot]$INFO[ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
 	</variable>
-	
+
 	<variable name="PVRDescriptionDialogGuide">
 		<value>$INFO[Container(11).ListItem.Title,[B],[/B][CR][CR]]$INFO[Container(11).ListItem.EpisodeName,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.TitleExtraInfo,[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Genre(comma),[LIGHT],[/LIGHT][CR][CR]]$INFO[Container(11).ListItem.Plot]$INFO[Container(11).ListItem.ParentalRatingCode,[CR][CR][LIGHT]$LOCALIZE[31446]: ,[/LIGHT]]</value>
 	</variable>
@@ -413,23 +502,23 @@
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.Date)">$INFO[VideoPlayer.Plot,,[CR]]$INFO[VideoPlayer.Date,[LIGHT]$LOCALIZE[570]: ,[/LIGHT]]</value>
 		<value>$INFO[VideoPlayer.Plot]</value>
 	</variable>
-	
+
 	<variable name="StatusOverlay">
 		<value condition="ListItem.IsParentFolder">noop</value>
 		<value condition="[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + Skin.HasSetting(MusicListenedToStatus)">noop</value>
 		<value condition="[String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + Skin.HasSetting(VideoWatchedStatus)">noop</value>
-		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">views/OverlayProgressWatched.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,76) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),76)">views/OverlayProgress7.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,63) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),63)">views/OverlayProgress6.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,51) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),51)">views/OverlayProgress5.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,38) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),38)">views/OverlayProgress4.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,26) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),26)">views/OverlayProgress3.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,13) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),13)">views/OverlayProgress2.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,0) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),0)">views/OverlayProgress1.png</value>
-		<value condition="ListItem.IsResumable">views/OverlayResumable.png</value>
-		<value condition="!String.IsEmpty(ListItem.PlayCount)">views/OverlayProgressWatched.png</value>
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">OverlayProgressWatched.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,76) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),76)">OverlayProgress7.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,63) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),63)">OverlayProgress6.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,51) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),51)">OverlayProgress5.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,38) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),38)">OverlayProgress4.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,26) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),26)">OverlayProgress3.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,13) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),13)">OverlayProgress2.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,0) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),0)">OverlayProgress1.png</value>
+		<value condition="ListItem.IsResumable">OverlayResumable.png</value>
+		<value condition="!String.IsEmpty(ListItem.PlayCount)">OverlayProgressWatched.png</value>
 	</variable>
-	
+
 	<variable name="PlayerStatus">
 		<value condition="Player.IsTempo">x$INFO[Player.PlaySpeed]</value>
 		<value condition="Player.Forwarding2x">x2</value>
@@ -449,7 +538,7 @@
 		<value condition="Player.Process(videohwdecoder)">HW</value>
 		<value>SW</value>
 	</variable>
-	
+
 	<!-- Dialog labels -->
 	<variable name="VideoInfoLabel">
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle,, &#8226; ]$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
@@ -469,13 +558,13 @@
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	
+
 	<variable name="SelectImage">
 		<value condition="!String.IsEmpty(Container(6).ListItem.Art(poster))">$INFO[Container(6).ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(6).ListItem.Art(thumb))">$INFO[Container(6).ListItem.Art(thumb)]</value>
 		<value>$INFO[Container(6).ListItem.Icon]</value>
 	</variable>
-	
+
 	<variable name="VideoManagerImage">
 		<value condition="!String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(50).ListItem.Art(thumb))">$INFO[Container(50).ListItem.Art(thumb)]</value>
@@ -503,7 +592,7 @@
 		<value condition="!String.IsEmpty(ListItem.AddonNews)">$INFO[ListItem.AddonNews]$INFO[ListItem.AddonDescription,[CR][CR],]</value>
 		<value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
 	</variable>
-	
+
 	<!-- List labels -->
 	<variable name="Label1">
 		<value condition="!String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.Title) + !ListItem.HasVideoVersions + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[ListItem.Title]</value>
@@ -548,7 +637,7 @@
 		<value condition="Container.Content(images) + !String.IsEmpty(ListItem.PictureDatetime)">$INFO[ListItem.PictureDatetime,$LOCALIZE[21820]: ,]</value>
 		<value condition="[Container.Content(files) | Container.Content(games) | Container.Content(images)] + !String.IsEmpty(ListItem.Date)">$INFO[ListItem.Date,$LOCALIZE[21820]: ,]</value>
 	</variable>
-	
+
 	<!-- Kodi builds an episode label of its own through the %H mask. This puts the skin's
 	     numbering in its place and hands every other item back unchanged, so a song keeps its
 	     track number. -->
@@ -562,7 +651,6 @@
 		<value condition="!Skin.HasSetting(UserRating)"></value>
 	</variable>
 
-	
 	<!-- Audio labels -->
 	<variable name="Audio">
 		<value condition="$EXP[DTSXFileName] + String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS:X &#8226; $VAR[AudioCodec,, ]$VAR[AudioChannels]</value>
@@ -620,7 +708,7 @@
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,2)">Stereo</value>
 		<value condition="Integer.IsGreater(ListItem.AudioChannels,2)">Surround</value>
 	</variable>
-	
+
 	<variable name="MusicChannels">
 		<value condition="Integer.IsGreater(ListItem.MusicChannels,8)">($INFO[ListItem.MusicChannels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.MusicChannels,0)">$MAP[AudioChannelsMap,ListItem.MusicChannels]</value>
@@ -630,27 +718,27 @@
 		<value condition="Integer.IsGreater(MusicPlayer.Channels,8)">($INFO[MusicPlayer.Channels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(MusicPlayer.Channels,0)">$MAP[AudioChannelsMap,MusicPlayer.Channels]</value>
 	</variable>
-	
+
 	<variable name="VideoPlayerAudioChannels">
 		<value condition="Integer.IsGreater(VideoPlayer.AudioChannels,8)">($INFO[VideoPlayer.AudioChannels] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(VideoPlayer.AudioChannels,0)">$MAP[AudioChannelsMap,VideoPlayer.AudioChannels]</value>
 	</variable>
-	
+
 	<variable name="AudioChannels.1">
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.1),8)">($INFO[ListItem.Property(AudioChannels.1)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.1),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.1)]</value>
 	</variable>
-	
+
 	<variable name="AudioChannels.2">
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.2),8)">($INFO[ListItem.Property(AudioChannels.2)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.2),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.2)]</value>
 	</variable>
-	
+
 	<variable name="AudioChannels.3">
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.3),8)">($INFO[ListItem.Property(AudioChannels.3)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.3),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.3)]</value>
 	</variable>
-	
+
 	<variable name="AudioChannels.4">
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.4),8)">($INFO[ListItem.Property(AudioChannels.4)] $LOCALIZE[31444])</value>
 		<value condition="Integer.IsGreater(ListItem.Property(AudioChannels.4),0)">$MAP[AudioChannelsMap,ListItem.Property(AudioChannels.4)]</value>
@@ -662,14 +750,14 @@
 		<value condition="!Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyPlaylist.xml) + !Integer.IsGreater(Container.NumItems,1)">$VAR[Duration]</value>
 		<value condition="Window.IsVisible(MyPlaylist.xml) + Integer.IsGreater(Container.NumItems,1)">$INFO[ListItem.Duration]$INFO[Container.Totaltime, / ,]</value>
 	</variable>
-	
+
 	<variable name="Duration">
 		<value condition="Container.Content(albums) | Container.Content(songs) | Container.Content(files) | Container.Content(musicvideos)">$INFO[ListItem.Duration]</value>
 		<value condition="String.IsEqual(Skin.String(videodurationformat),Hours and minutes) + !Integer.IsEqual(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),,hr ]$INFO[ListItem.Duration(m),,min]</value>
 		<value condition="String.IsEqual(Skin.String(videodurationformat),Minutes) + !Integer.IsEqual(ListItem.Duration(h),0) | [[String.IsEqual(Skin.String(videodurationformat),Minutes) | String.IsEqual(Skin.String(videodurationformat),Hours and minutes)] + Integer.IsEqual(ListItem.Duration(h),0) + Integer.IsGreaterOrEqual(ListItem.Duration(m),1)]">$INFO[ListItem.Duration(mins),, min]</value>
 		<value condition="Integer.IsEqual(ListItem.Duration(h),0) + Integer.IsLess(ListItem.Duration(m),1)">$INFO[ListItem.Duration(secs),, sec]</value>
 	</variable>
-	
+
 	<!-- Audio stream label -->
 	<!-- The stream selection dialogs write a track as language, a dash and the name;
 	     AudioLanguageEx and SubtitleLanguageEx already expand and fall back the same way. -->
@@ -694,12 +782,12 @@
 		<value condition="String.IsEmpty(VideoPlayer.SubtitlesLanguage)">Unk</value>
 		<value>$INFO[VideoPlayer.SubtitlesLanguage,[CAPITALIZE],[/CAPITALIZE]]</value>
 	</variable>
-	
+
 	<variable name="SubtitleSimple">
 		<value condition="String.IsEmpty(ListItem.Property(SubtitleLanguage.5))">$INFO[ListItem.Property(SubtitleLanguage.1),[CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.2),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.3),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.4),$COMMA [CAPITALIZE],[/CAPITALIZE]]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))">$INFO[ListItem.Property(SubtitleLanguage.1),[CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.2),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.3),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.4),$COMMA [CAPITALIZE],[/CAPITALIZE] ...]</value>
 	</variable>
-	
+
 	<!-- Video info label -->
 	<variable name="Video">
 		<value condition="![String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)]">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode,, &#8226; ]$INFO[ListItem.VideoWidth]$INFO[ListItem.VideoHeight,x,]$INFO[ListItem.VideoAspect, &#8226; ,:1]</value>
@@ -711,12 +799,12 @@
 		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEmpty(ListItem.VideoResolution) + !String.IsEmpty(ListItem.HdrType)">$VAR[VideoCodec,, &#8226; ]$VAR[HDRType,, &#8226; ]$VAR[3DMode]</value>
 		<value condition="[String.IsEmpty(ListItem.VideoWidth) | String.IsEmpty(ListItem.VideoHeight)] + String.IsEmpty(ListItem.VideoResolution) + String.IsEmpty(ListItem.HdrType) + !String.IsEmpty(ListItem.VideoCodec)">$VAR[VideoCodec]$VAR[3DMode, &#8226; ,]</value>
 	</variable>
-	
+
 	<!-- Video Codec labels -->
 	<variable name="VideoCodec">
 		<value>$MAP[VideoCodecMap,ListItem.VideoCodec]</value>
 	</variable>
-	
+
 	<!-- HDR type labels -->
 	<variable name="HDRType">
 		<value condition="String.IsEqual(ListItem.HdrType,dolbyvision)">DV$MAP[DolbyVisionProfileMap,ListItem.HdrDetail, (P,)]</value>
@@ -731,7 +819,7 @@
 		<value condition="String.Contains(ListItem.FileName,_sbs-) | String.Contains(ListItem.FileName,_sbs.) | String.Contains(ListItem.FileName,_sbs_) | String.Contains(ListItem.FileName,-sbs-) | String.Contains(ListItem.FileName,-sbs.) | String.Contains(ListItem.FileName,-sbs_) | String.Contains(ListItem.FileName,.sbs-) | String.Contains(ListItem.FileName,.sbs.) | String.Contains(ListItem.FileName,.sbs_)">3D (SBS)</value>
 		<value condition="ListItem.IsStereoscopic | String.Contains(ListItem.FileName,.3d-) | String.Contains(ListItem.FileName,.3d.) | String.Contains(ListItem.FileName,.3d_) | String.Contains(ListItem.FileName,-3d-) | String.Contains(ListItem.FileName,-3d.) | String.Contains(ListItem.FileName,-3d_) | String.Contains(ListItem.FileName,_3d-) | String.Contains(ListItem.FileName,_3d.) | String.Contains(ListItem.FileName,_3d_)">3D</value>
 	</variable>
-	
+
 	<!-- Season/Episode label -->
 	<variable name="SEplaying">
 		<value condition="Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.IsEqual(VideoPlayer.Season,0)">$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E0,]</value>
@@ -740,7 +828,7 @@
 		<value condition="Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.IsEqual(VideoPlayer.Season,0)">$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]</value>
 		<value condition="String.IsEqual(VideoPlayer.Season,0)">$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
-	
+
 	<!-- One definition of the skin's episode numbering. Season and episode are padded on their
 	     own, as a format string cannot pad a number. Season zero is the specials folder. -->
 	<variable name="SEnumber">
@@ -757,13 +845,13 @@
 		<value condition="!String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Season,$LOCALIZE[20373] , &#8226; ]$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
 		<value condition="String.IsEqual(ListItem.Season,0)">$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
-	
+
 	<!-- Recently added spans every show, so there the number needs the show in front. -->
 	<variable name="SElist">
 		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/)">$INFO[ListItem.TVShowTitle] &#8226; $VAR[SEnumber]</value>
 		<value>$VAR[SEnumber]</value>
 	</variable>
-	
+
 	<!-- Subtitle download label -->
 	<variable name="SubtitleDownload">
 		<value condition="ListItem.Property(hearingimp) + ListItem.Property(sync)">[CC] (SYNC) $INFO[ListItem.Label2]</value>
@@ -788,5 +876,4 @@
 		<value condition="!System.HasAddon(plugin.program.autocompletion) | System.HasHiddenInput"></value>
 		<value>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=12</value>
 	</variable>
-
 </includes>

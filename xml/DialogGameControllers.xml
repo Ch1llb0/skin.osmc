@@ -2,12 +2,11 @@
 <window>
 	<!-- gamecontrollersettings -->
 	<defaultcontrol always="true">3</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<include condition="Window.IsDialogTopMost(gamecontrollers)">DialogGameControllers_Default</include>
 	<include condition="Window.IsDialogTopMost(gameports)">DialogGameControllers_Ports</include>
 	<include condition="Window.IsDialogTopMost(gameagents)">DialogGameControllers_Agents</include>
-
 </window>

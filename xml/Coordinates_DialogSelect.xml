@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogSelect_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>405</width>
 		<height>600</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords2_21:9</include>
@@ -62,7 +61,7 @@
 		<width>540</width>
 		<height>696</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords3_21:9</include>
@@ -113,7 +112,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogSelect_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords4_21:9</include>
@@ -138,7 +137,7 @@
 					<top>50</top>
 					<width>1020</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -162,7 +161,7 @@
 					<top>50</top>
 					<width>1660</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -186,7 +185,7 @@
 					<top>50</top>
 					<width>1660</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -210,13 +209,13 @@
 					<top>50</top>
 					<width>540</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogSelect_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords5_21:9</include>
@@ -247,7 +246,7 @@
 		<width>540</width>
 		<height>672</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords6_21:9</include>
@@ -261,7 +260,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$VAR[SelectImage]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -303,7 +302,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$VAR[SelectImage]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -345,7 +344,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$VAR[SelectImage]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -387,7 +386,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$VAR[SelectImage]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -422,7 +421,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogSelect_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords7_21:9</include>
@@ -440,7 +439,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[SelectImage]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -458,7 +457,7 @@
 						<left>140</left>
 						<width>880</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -479,7 +478,7 @@
 						<top>48</top>
 						<width>880</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -508,7 +507,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[SelectImage]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -526,7 +525,7 @@
 						<left>140</left>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -547,7 +546,7 @@
 						<top>48</top>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -576,7 +575,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[SelectImage]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -594,7 +593,7 @@
 						<left>140</left>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -615,7 +614,7 @@
 						<top>48</top>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -644,7 +643,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[SelectImage]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$VAR[SelectImage]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -662,7 +661,7 @@
 						<left>140</left>
 						<width>400</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -683,7 +682,7 @@
 						<top>48</top>
 						<width>400</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -701,7 +700,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogSelect_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords8_21:9</include>
@@ -732,7 +731,7 @@
 		<width>20</width>
 		<height>652</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords9_21:9</include>
@@ -740,30 +739,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords9_4:3</include>
 	</include>
 	<include name="DialogSelect_coords9_16:9">
-		<left>-100</left>
-		<top>680</top>
-		<width>2120</width>
-		<height>500</height>
+		<left>20</left>
+		<top>660</top>
+		<width>1880</width>
+		<height>400</height>
 	</include>
 	<include name="DialogSelect_coords9_21:9">
-		<left>-100</left>
-		<top>680</top>
-		<width>2760</width>
-		<height>500</height>
+		<left>20</left>
+		<top>660</top>
+		<width>2520</width>
+		<height>400</height>
 	</include>
 	<include name="DialogSelect_coords9_21:9_masked">
-		<left>-100</left>
-		<top>860</top>
-		<width>2760</width>
-		<height>680</height>
+		<left>20</left>
+		<top>840</top>
+		<width>2520</width>
+		<height>400</height>
 	</include>
 	<include name="DialogSelect_coords9_4:3">
-		<left>-100</left>
-		<top>680</top>
-		<width>1640</width>
-		<height>500</height>
+		<left>20</left>
+		<top>660</top>
+		<width>1400</width>
+		<height>400</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords10_21:9</include>
@@ -772,29 +771,29 @@
 	</include>
 	<include name="DialogSelect_coords10_16:9">
 		<left>0</left>
-		<top>710</top>
+		<top>690</top>
 		<width>1920</width>
 		<height>33</height>
 	</include>
 	<include name="DialogSelect_coords10_21:9">
 		<left>0</left>
-		<top>710</top>
+		<top>690</top>
 		<width>2560</width>
 		<height>33</height>
 	</include>
 	<include name="DialogSelect_coords10_21:9_masked">
 		<left>0</left>
-		<top>890</top>
+		<top>870</top>
 		<width>2560</width>
 		<height>33</height>
 	</include>
 	<include name="DialogSelect_coords10_4:3">
 		<left>0</left>
-		<top>710</top>
+		<top>690</top>
 		<width>1440</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords11_21:9</include>
@@ -802,30 +801,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords11_4:3</include>
 	</include>
 	<include name="DialogSelect_coords11_16:9">
-		<left>60</left>
-		<top>770</top>
+		<left>80</left>
+		<top>750</top>
 		<width>1800</width>
 		<height>250</height>
 	</include>
 	<include name="DialogSelect_coords11_21:9">
-		<left>60</left>
-		<top>770</top>
+		<left>80</left>
+		<top>750</top>
 		<width>2440</width>
 		<height>250</height>
 	</include>
 	<include name="DialogSelect_coords11_21:9_masked">
-		<left>60</left>
-		<top>950</top>
+		<left>80</left>
+		<top>930</top>
 		<width>2440</width>
 		<height>250</height>
 	</include>
 	<include name="DialogSelect_coords11_4:3">
-		<left>60</left>
-		<top>770</top>
+		<left>80</left>
+		<top>750</top>
 		<width>1320</width>
 		<height>250</height>
 	</include>
-	
+
 	<include name="DialogSelect_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords12_21:9</include>
@@ -908,7 +907,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogSelect_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords13_21:9</include>
@@ -1051,7 +1050,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogSelect_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords14_21:9</include>
@@ -1059,28 +1058,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords14_4:3</include>
 	</include>
 	<include name="DialogSelect_coords14_16:9">
-		<top>1020</top>
-		<left>60</left>
-		<right>60</right>
+		<top>1000</top>
+		<left>80</left>
+		<right>80</right>
 		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords14_21:9">
-		<top>1200</top>
-		<left>60</left>
-		<right>60</right>
+		<top>1000</top>
+		<left>80</left>
+		<right>80</right>
 		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords14_21:9_masked">
-		<top>1200</top>
-		<left>60</left>
-		<right>60</right>
+		<top>1180</top>
+		<left>80</left>
+		<right>80</right>
 		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords14_4:3">
-		<top>1020</top>
-		<left>60</left>
-		<right>60</right>
+		<top>1000</top>
+		<left>80</left>
+		<right>80</right>
 		<height>60</height>
 	</include>
-
 </includes>

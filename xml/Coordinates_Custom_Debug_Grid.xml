@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<include name="Custom_Overlay_DebugGrid_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">Custom_Overlay_Debug_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Overlay_Debug_coords_21:9</include>
@@ -50,5 +49,4 @@
 	<include name="Custom_Overlay_Debug_Grid_4:3">
 		<texture>special://skin/extras/debug/debuggrid1440.png</texture>
 	</include>
-
 </includes>

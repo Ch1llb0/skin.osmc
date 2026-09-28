@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogButtons">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogButtons_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogButtons_21:9</include>
@@ -54,7 +53,7 @@
 		<width>70</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="OSDButtons_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">OSDButtons_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">OSDButtons_coords_21:9</include>
@@ -62,22 +61,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">OSDButtons_coords_4:3</include>
 	</include>
 	<include name="OSDButtons_coords_16:9">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="OSDButtons_coords_21:9">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="OSDButtons_coords_21:9_masked">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="OSDButtons_coords_4:3">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="MaskingBars_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">MaskingBars_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MaskingBars_coords1_21:9</include>
@@ -108,7 +107,7 @@
 		<width>0</width>
 		<height>0</height>
 	</include>
-	
+
 	<include name="MaskingBars_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">MaskingBars_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MaskingBars_coords2_21:9</include>
@@ -139,5 +138,4 @@
 		<width>0</width>
 		<height>0</height>
 	</include>
-	
 </includes>

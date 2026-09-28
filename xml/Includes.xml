@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- Includes/variables files -->
 	<include file="Coordinates_AddonBrowser.xml" />
 	<include file="Coordinates_Custom_Cache_Progress.xml" />
@@ -74,6 +73,7 @@
 	<include file="Coordinates_MyVideoNav.xml" />
 	<include file="Coordinates_MyWeather.xml" />
 	<include file="Coordinates_PlayerControls.xml" />
+	<include file="Coordinates_script-RSS_Editor.xml" />
 	<include file="Coordinates_script-skinshortcuts.xml" />
 	<include file="Coordinates_script-upnext-stillwatching.xml" />
 	<include file="Coordinates_script-upnext-stillwatching-simple.xml" />
@@ -205,7 +205,7 @@
 		<onload condition="String.IsEmpty(Skin.String(WidgetOnClickTVShow))">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetBrowse)</onload>
 		<onload condition="String.IsEmpty(Skin.String(WidgetOnClickMovieSet))">Skin.SetString(WidgetOnClickMovieSet,MovieSetWidgetBrowse)</onload>
 	</include>
-	
+
 	<!-- Default forced views -->
 	<include name="DefaultView">
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</onfocus>
@@ -234,19 +234,19 @@
 	<include name="OSDPlayStopButtons">
 		<control type="togglebutton" id="5">
 			<include>OSDButtons_coords</include>
-			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPauseNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPause.png</texturenofocus>
 			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPlayNF.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPlay.png</alttexturenofocus>
 			<onclick>PlayerControl(Play)</onclick>
 			<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 			<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
 		</control>
 		<control type="button" id="6">
 			<include>OSDButtons_coords</include>
-			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStopNF.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStopNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStop.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStop.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 			<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
@@ -257,14 +257,14 @@
 	<include name="OSDStopButton">
 		<control type="button" id="5">
 			<include>OSDButtons_coords</include>
-			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStopNF.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStopNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStop.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStop.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 			<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
 		</control>
 	</include>
-	
+
 	<!-- List indicators -->
 	<include name="Indicators">
 		<definition>
@@ -277,7 +277,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>30</width>
-					<height>16</height>
+					<height>20</height>
 					<texture colordiffuse="$VAR[OverlayColorNF]">up.png</texture>
 
 					<visible>Container($PARAM[container]).HasPrevious</visible>
@@ -290,13 +290,12 @@
 						<effect type="Fade" start="100" end="0" time="200"/>
 						<effect type="slide" start="0,0" end="0,-10" time="200"/>
 					</animation>
-
 				</control>
 				<control type="image">
 					<left>0</left>
 					<bottom>0</bottom>
 					<width>30</width>
-					<height>16</height>
+					<height>20</height>
 					<texture colordiffuse="$VAR[OverlayColorNF]">down.png</texture>
 
 					<visible>Container($PARAM[container]).HasNext</visible>
@@ -343,5 +342,4 @@
 			</control>
 		</definition>
 	</include>
-
 </includes>

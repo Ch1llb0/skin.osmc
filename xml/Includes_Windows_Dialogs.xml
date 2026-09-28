@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
-	<!-- Animations -->
-	
-	
-
-	
-
-	
-	
-	
-	
-	
 	<!-- The cover the process info dialog shows, held twenty inside its panel so it grows with it.
 	     Three, because a live channel falls back to different artwork than a file. -->
 	<include name="PlayerProcessInfoIcon">
@@ -19,7 +7,7 @@
 			<include>DialogPlayerProcessInfo_coords3</include>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<fadetime>200</fadetime>
-			<texture background="true">$VAR[PlayerIcon]</texture>
+			<texture diffuse="common/masks/art-234x234.png" background="true">$VAR[PlayerIcon]</texture>
 			<visible>!VideoPlayer.Content(LiveTV) + !MusicPlayer.Content(LiveTV)</visible>
 		</control>
 
@@ -27,7 +15,7 @@
 			<include>DialogPlayerProcessInfo_coords3</include>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<fadetime>200</fadetime>
-			<texture background="true" fallback="DefaultLiveTV.png">$VAR[PlayerIcon]</texture>
+			<texture diffuse="common/masks/art-234x234.png" background="true" fallback="DefaultLiveTV.png">$VAR[PlayerIcon]</texture>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
 		</control>
 
@@ -35,7 +23,7 @@
 			<include>DialogPlayerProcessInfo_coords3</include>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<fadetime>200</fadetime>
-			<texture background="true" fallback="DefaultRadio.png">$VAR[PlayerIcon]</texture>
+			<texture diffuse="common/masks/art-234x234.png" background="true" fallback="DefaultRadio.png">$VAR[PlayerIcon]</texture>
 			<visible>MusicPlayer.Content(LiveTV)</visible>
 		</control>
 	</include>
@@ -46,203 +34,251 @@
 		<onload condition="String.IsEmpty(Window(Home).Property(ResetScroll))">SetProperty(ResetScroll," ",Home)</onload>
 		<onload condition="!String.IsEmpty(Window(Home).Property(ResetScroll))">ClearProperty(ResetScroll,Home)</onload>
 	</include>
-	
+
 	<!-- Backgrounds -->
 
 	<!-- Window background image -->
 	<include name="WindowBackgroundImageMultiView">
-	
 		<!-- List/list info/wall info -->
 		<control type="group">
 			<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(511) | Control.IsVisible(531) | Control.IsVisible(533) | Control.IsVisible(536) | Control.IsVisible(538)</visible>
 			<include>WindowBackgroundImageVertical</include>
 		</control>
-		
+
 		<!-- Wide/wide info -->
 		<control type="group">
 			<visible>Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(523) | Control.IsVisible(524)</visible>
 			<include>WindowBackgroundImageHorizontal</include>
 		</control>
-		
+
 		<!-- Wall/wall low -->
 		<control type="group">
 			<visible>Control.IsVisible(53) | Control.IsVisible(532) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(537) | Control.IsVisible(539)</visible>
 			<include>WindowBackgroundImageHorizontalWall</include>
 		</control>
-		
+
 		<!-- Wide low -->
 		<control type="group">
 			<visible>Control.IsVisible(522) | Control.IsVisible(525)</visible>
 			<include>WindowBackgroundImageHorizontalLow1</include>
 		</control>
-		
+
 		<!-- Transition fallback -->
 		<control type="group">
 			<visible>!Control.IsVisible(50) + !Control.IsVisible(501) + !Control.IsVisible(51) + !Control.IsVisible(511) + !Control.IsVisible(531) + !Control.IsVisible(533) + !Control.IsVisible(536) + !Control.IsVisible(538) + !Control.IsVisible(52) + !Control.IsVisible(521) + !Control.IsVisible(523) + !Control.IsVisible(524) + !Control.IsVisible(53) + !Control.IsVisible(532) + !Control.IsVisible(534) + !Control.IsVisible(535) + !Control.IsVisible(537) + !Control.IsVisible(539) + !Control.IsVisible(522) + !Control.IsVisible(525)</visible>
 			<include>WindowBackgroundImageVerticalHome</include>
 		</control>
-		
 	</include>
-	
+
+	<!-- Fills and bands draw only where a leaf asks for them, never on an empty size: Kodi may take a
+	     missing size as the parent's and stretch them over the whole screen. -->
 	<include name="WindowBackgroundImage">
-	
-		<!-- Background video -->
-		<control type="videowindow">
-			<include>FullscreenDimensions</include>
-			<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo)</visible>
-			<include>BackgroundDepth</include>
-		</control>
+		<param name="fills">False</param>
+		<param name="bands">False</param>
+		<definition>
+			<!-- Background video -->
+			<control type="videowindow">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo)</visible>
+				<include>BackgroundDepth</include>
+			</control>
 
-		<!-- Color -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture background="true">common/white.png</texture>
-			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
-			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
-			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
-			<aspectratio>scale</aspectratio>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Single background image -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture background="true">$VAR[OSMCBackgroundImage]</texture>
-			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
-			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
-			<aspectratio>scale</aspectratio>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Multiple background images -->
-		<control type="multiimage">
-			<include>FullscreenDimensions</include>
-			<imagepath background="true">$VAR[OSMCBackgroundImage]</imagepath>
-			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
-			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
-			<aspectratio>scale</aspectratio>
-			<include>CustomBackgroundFolderDuration</include>
-			<fadetime>2000</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Single individual background image -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture background="true">$INFO[Container(9000).ListItem.Property(backgroundPath)]</texture>
-			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
-			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),browse) + Window.IsVisible(Home)</visible>
-			<aspectratio>scale</aspectratio>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Multiple individual background images -->
-		<control type="multiimage">
-			<include>FullscreenDimensions</include>
-			<imagepath background="true">$INFO[Container(9000).ListItem.Property(backgroundPath)]</imagepath>
-			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
-			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),multi) + Window.IsVisible(Home)</visible>
-			<aspectratio>scale</aspectratio>
-			<include>IndividualBackgroundFolderDuration</include>
-			<fadetime>2000</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Artists Slideshow -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
-			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
-			<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		<control type="multiimage">
-			<include>FullscreenDimensions</include>
-			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-			<aspectratio>scale</aspectratio>
-			<timeperimage>10000</timeperimage>
-			<fadetime>400</fadetime>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Fanart -->
-		<control type="image" id="11000">
-			<include>FullscreenDimensions</include>
-			<texture background="true">$VAR[widgetBackground]</texture>
-			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
-			<visible>!Skin.HasSetting(HideFanart)</visible>
-			<visible>!String.IsEmpty(Control.GetLabel(9987)) | [Window.Is(visualisation) + !String.IsEmpty(Player.Art(fanart))] | [!Window.Is(visualisation) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
-			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
-			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
+			<!-- Color -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">common/white.png</texture>
+				<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
+				<aspectratio>scale</aspectratio>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
 
-		<!-- Visualisation -->
-		<control type="visualisation">
-			<include>FullscreenDimensions</include>
-			<visible>Player.HasAudio + [Skin.HasSetting(BackgroundVisualisation) | Window.IsVisible(visualisation)]</visible>
-			<include>VisibleHiddenFadeAnimation</include>
-			<include>WindowFadeAnimation</include>
-			<include>BackgroundDepth</include>
-		</control>
-		
-		<!-- Overlay -->
-		<control type="image">
-			<left>$PARAM[left1]</left>
-			<top>$PARAM[top1]</top>
-			<width>$PARAM[width1]</width>
-			<height>$PARAM[height1]</height>
-			<texture background="true">$PARAM[texture1]</texture>
-			<aspectratio>scale</aspectratio>
-			<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-			<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
-			<include>WindowDepth</include>
-		</control>
-		<control type="image">
-			<left>$PARAM[left2]</left>
-			<top>$PARAM[top2]</top>
-			<width>$PARAM[width2]</width>
-			<height>$PARAM[height2]</height>
-			<texture background="true">$PARAM[texture2]</texture>
-			<aspectratio>scale</aspectratio>
-			<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-			<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
-			<include>WindowDepth</include>
-		</control>
-		
+			<!-- Single background image -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">$VAR[OSMCBackgroundImage]</texture>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+				<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
+				<aspectratio>scale</aspectratio>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Multiple background images -->
+			<control type="multiimage">
+				<include>FullscreenDimensions</include>
+				<imagepath background="true">$VAR[OSMCBackgroundImage]</imagepath>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+				<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
+				<aspectratio>scale</aspectratio>
+				<include>CustomBackgroundFolderDuration</include>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Single individual background image -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">$INFO[Container(9000).ListItem.Property(backgroundPath)]</texture>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),browse) + Window.IsVisible(Home)</visible>
+				<aspectratio>scale</aspectratio>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Multiple individual background images -->
+			<control type="multiimage">
+				<include>FullscreenDimensions</include>
+				<imagepath background="true">$INFO[Container(9000).ListItem.Property(backgroundPath)]</imagepath>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(backgroundType),multi) + Window.IsVisible(Home)</visible>
+				<aspectratio>scale</aspectratio>
+				<include>IndividualBackgroundFolderDuration</include>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Artists Slideshow -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+				<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+				<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+			<control type="multiimage">
+				<include>FullscreenDimensions</include>
+				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+				<aspectratio>scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>400</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Fanart -->
+			<control type="image" id="11000">
+				<include>FullscreenDimensions</include>
+				<texture background="true">$VAR[widgetBackground]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+				<visible>!Skin.HasSetting(HideFanart)</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(9987)) | [Window.Is(visualisation) + !String.IsEmpty(Player.Art(fanart))] | [!Window.Is(visualisation) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+				<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Visualisation -->
+			<control type="visualisation">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasAudio + [Skin.HasSetting(BackgroundVisualisation) | Window.IsVisible(visualisation)]</visible>
+				<include>VisibleHiddenFadeAnimation</include>
+				<include>WindowFadeAnimation</include>
+				<include>BackgroundDepth</include>
+			</control>
+
+			<!-- Overlay: the two shades, the bright one rounded where it meets the dark one. The fills put the
+			     dark shade in the two corners the rounding cuts away; the bands, used by the masked leaves,
+			     carry the dark shade above and below the masked frame the split is rounded on. -->
+			<control type="image">
+				<left>$PARAM[fill1left]</left>
+				<top>$PARAM[fill1top]</top>
+				<width>$PARAM[fillsize]</width>
+				<height>$PARAM[fillsize]</height>
+				<texture background="true" flipx="$PARAM[fill1flipx]" flipy="$PARAM[fill1flipy]">$VAR[Background1Fill]</texture>
+				<visible>$PARAM[fills]</visible>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<visible>!Skin.HasSetting(BackgroundOverlayStyle)</visible>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+				<include>WindowDepth</include>
+			</control>
+			<control type="image">
+				<left>$PARAM[fill2left]</left>
+				<top>$PARAM[fill2top]</top>
+				<width>$PARAM[fillsize]</width>
+				<height>$PARAM[fillsize]</height>
+				<texture background="true" flipx="$PARAM[fill2flipx]" flipy="$PARAM[fill2flipy]">$VAR[Background1Fill]</texture>
+				<visible>$PARAM[fills]</visible>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<visible>!Skin.HasSetting(BackgroundOverlayStyle)</visible>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+				<include>WindowDepth</include>
+			</control>
+			<control type="image">
+				<left>$PARAM[left1]</left>
+				<top>$PARAM[top1]</top>
+				<width>$PARAM[width1]</width>
+				<height>$PARAM[height1]</height>
+				<texture background="true" border="$PARAM[border1]">$PARAM[texture1]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+				<include>WindowDepth</include>
+			</control>
+			<control type="image">
+				<left>$PARAM[left2]</left>
+				<top>$PARAM[top2]</top>
+				<width>$PARAM[width2]</width>
+				<height>$PARAM[height2]</height>
+				<texture background="true" border="$PARAM[border2]">$PARAM[texture2]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+				<include>WindowDepth</include>
+			</control>
+			<control type="image">
+				<left>$PARAM[band1left]</left>
+				<top>$PARAM[band1top]</top>
+				<width>$PARAM[band1width]</width>
+				<height>$PARAM[band1height]</height>
+				<visible>$PARAM[bands]</visible>
+				<texture background="true">$VAR[Background1]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+				<include>WindowDepth</include>
+			</control>
+			<control type="image">
+				<left>$PARAM[band2left]</left>
+				<top>$PARAM[band2top]</top>
+				<width>$PARAM[band2width]</width>
+				<height>$PARAM[band2height]</height>
+				<visible>$PARAM[bands]</visible>
+				<texture background="true">$VAR[Background1]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+				<include>WindowDepth</include>
+			</control>
+		</definition>
 	</include>
-	
+
 	<!-- Dialog fanart -->
+	<!-- Full screen once open, rounded while opening and closing: see DialogZoomAnimationSquare -->
 	<include name="DialogBackgroundImage">
-		
 		<!-- Color -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -250,20 +286,40 @@
 			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
 			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) | String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
 			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Color, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true" border="8">common/PanelSolid.png</texture>
+			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
+			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) | String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Single background image -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$VAR[OSMCBackgroundImage]</texture>
 			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
 			<aspectratio>scale</aspectratio>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Single background image, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageTexture">
+				<param name="texture">$VAR[OSMCBackgroundImage]</param>
+			</include>
+			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Multiple background images -->
 		<control type="multiimage">
 			<include>FullscreenDimensions</include>
@@ -274,10 +330,25 @@
 			<fadetime>2000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Multiple background images, rounded copy while opening and closing -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageImagePath">
+				<param name="texture">$VAR[OSMCBackgroundImage]</param>
+			</include>
+			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(9000).ListItem.Property(backgroundPath))</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<include>CustomBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Fanart -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -285,11 +356,29 @@
 			<visible>!Skin.HasSetting(HideFanart) + !String.IsEmpty(ListItem.Art(fanart))</visible>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
-			<include>DialogZoomAnimation</include>
+			<include>DialogZoomAnimationSquare</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+		<!-- Fanart, rounded copy while opening and closing -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include content="DialogBackgroundImageTexture">
+				<param name="texture">$INFO[ListItem.Art(fanart)]</param>
+			</include>
+			<visible>!Skin.HasSetting(HideFanart) + !String.IsEmpty(ListItem.Art(fanart))</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<fadetime>400</fadetime>
+			<include>DialogZoomAnimationRounded</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<!-- Overlay -->
+		<include>DialogBackgroundOverlay</include>
+	</include>
+
+	<!-- The dialogs' two shades: dark above, bright band below, rounded where they meet. Its own include so
+	     every full-screen dialog that draws it, the Skin Shortcuts management dialog included, shares it. -->
+	<include name="DialogBackgroundOverlay">
 		<control type="group">
 			<include>FullscreenDimensions</include>
 			<animation type="WindowOpen">
@@ -306,25 +395,70 @@
 				<aspectratio>scale</aspectratio>
 				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
 				<include>DialogBackgroundDepth</include>
+				<include>DialogCornerFadeSquare</include>
+			</control>
+			<!-- rounded copy while opening and closing -->
+			<control type="image">
+				<include>BackgroundOverlayDialog1</include>
+				<texture background="true" border="8">$VAR[Background1Top]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+				<include>DialogCornerFadeRounded</include>
+			</control>
+			<!-- the dark shade in the corners the bright band's rounding cuts away, drawn under it so the two
+			     add up to the shades' own values: its top corners, and in one-shade mode, where the bright
+			     band sits between two dark ones, its bottom corners too -->
+			<control type="image">
+				<include>BackgroundOverlayDialog2</include>
+				<texture background="true" flipx="true" flipy="false">$VAR[Background1Fill]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
 			</control>
 			<control type="image">
-				<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog2</include>
-				<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog3</include>
-				<texture background="true">$VAR[BackgroundOverlayStyle]</texture>
-				<aspectratio>scale</aspectratio>
+				<include>BackgroundOverlayDialog3</include>
+				<texture background="true" flipx="false" flipy="false">$VAR[Background1Fill]</texture>
 				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
 				<include>DialogBackgroundDepth</include>
 			</control>
 			<control type="image">
 				<include>BackgroundOverlayDialog4</include>
-				<texture background="true">$VAR[Background2]</texture>
-				<aspectratio>scale</aspectratio>
+				<texture background="true" flipx="true" flipy="true">$VAR[Background1Fill]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+				<visible>Skin.HasSetting(BackgroundOverlayStyle)</visible>
+			</control>
+			<control type="image">
+				<include>BackgroundOverlayDialog5</include>
+				<texture background="true" flipx="false" flipy="true">$VAR[Background1Fill]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+				<visible>Skin.HasSetting(BackgroundOverlayStyle)</visible>
+			</control>
+			<control type="image">
+				<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog6</include>
+				<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog7</include>
+				<texture background="true" border="8,8,8,0">$VAR[BackgroundOverlayStyleTop]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+				<include>DialogCornerFadeSquare</include>
+			</control>
+			<!-- rounded copy while opening and closing -->
+			<control type="image">
+				<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog6</include>
+				<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog7</include>
+				<texture background="true" border="8">$VAR[BackgroundOverlayStyleBottom]</texture>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+				<include>DialogCornerFadeRounded</include>
+			</control>
+			<control type="image">
+				<include>BackgroundOverlayDialog8</include>
+				<texture background="true" border="8">$VAR[Background2Round]</texture>
 				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
 				<include>DialogBackgroundDepth</include>
 				<visible>Skin.HasSetting(BackgroundOverlayStyle)</visible>
 			</control>
 		</control>
-		
 	</include>
 
 	<!-- Dialog fade background image -->
@@ -337,7 +471,7 @@
 			<include>BackgroundDepth</include>
 		</control>
 	</include>
-	
+
 	<!-- Multi image individual background duration -->
 	<include name="IndividualBackgroundFolderDuration">
 		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),5s)">IndividualBackgroundFolderDuration5</include>
@@ -349,7 +483,7 @@
 		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),30s)">IndividualBackgroundFolderDuration30</include>
 		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),1 min)">IndividualBackgroundFolderDuration60</include>
 	</include>
-	
+
 	<include name="IndividualBackgroundFolderDuration5">
 		<timeperimage>5000</timeperimage>
 	</include>
@@ -374,7 +508,7 @@
 	<include name="IndividualBackgroundFolderDuration60">
 		<timeperimage>60000</timeperimage>
 	</include>
-	
+
 	<!-- Multi image custom background duration -->
 	<include name="CustomBackgroundFolderDuration">
 		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),5s)">CustomBackgroundFolderDuration5</include>
@@ -386,7 +520,7 @@
 		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),30s)">CustomBackgroundFolderDuration30</include>
 		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),1 min)">CustomBackgroundFolderDuration60</include>
 	</include>
-	
+
 	<include name="CustomBackgroundFolderDuration5">
 		<timeperimage>5000</timeperimage>
 	</include>
@@ -411,25 +545,24 @@
 	<include name="CustomBackgroundFolderDuration60">
 		<timeperimage>60000</timeperimage>
 	</include>
-	
+
 	<!-- 3D depth -->
-	
+
 	<!-- Background depth -->
 	<include name="BackgroundDepth">
 		<depth>-0.25</depth>
 	</include>
-	
+
 	<!-- Window depth -->
 	<include name="WindowDepth">
 		<depth>0</depth>
 	</include>
-	
+
 	<!-- Dialog background -->
 	<include name="DialogBackgroundDepth">
 		<depth>0.1</depth>
 	</include>
-	
-	<!-- Dialog depth -->
+
 	<!-- What every dialog begins with: dialog depth, the shared zoom, and a heading. A dialog
 	     wanting a second line, a spinner or a changing heading writes the three out itself. -->
 	<include name="DialogFrame">
@@ -447,21 +580,21 @@
 	<include name="DialogDepth">
 		<depth>0.35</depth>
 	</include>
-	
+
 	<!-- Side/context menu and notification depth depth -->
 	<include name="NotificationDepth">
 		<depth>0.45</depth>
 	</include>
-	
+
 	<!-- Busy dialog depth depth -->
 	<include name="BusyDepth">
 		<depth>0.55</depth>
 	</include>
-	
+
 	<!-- Buttons -->
-	
+
 	<!-- What a button looks like is in Defaults.xml; what a button is for is here. -->
-	
+
 	<!-- A row in a dialog that offers a short list of choices. Centred, on the 52 high focus bar. -->
 	<include name="DialogRowButton">
 		<param name="visible">true</param>
@@ -476,7 +609,7 @@
 			</control>
 		</definition>
 	</include>
-	
+
 	<!-- Dialog button indicator -->
 	<include name="dialogButtonIndicator">
 		<definition>
@@ -493,7 +626,7 @@
 					<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<visible>$PARAM[visibility]</visible>
 				<include>VisibleFadeAnimation</include>
@@ -509,9 +642,9 @@
 			</control>
 		</definition>
 	</include>
-	
+
 	<!-- Info dialog button focus -->
-	
+
 	<!-- Addon info dialog button focus -->
 	<include name="AddonInfoDialogButtonFocus">
 		<include condition="Control.IsEnabled(12)">AddonInfoDialogButtonFocus12</include>
@@ -551,7 +684,7 @@
 	<include name="AddonInfoDialogButtonFocus13">
 		<defaultcontrol always="true">13</defaultcontrol>
 	</include>
-	
+
 	<!-- Music info dialog button focus -->
 	<include name="MusicInfoDialogButtonFocus">
 		<include condition="Control.IsEnabled(14)">MusicInfoDialogButtonFocus14</include>
@@ -579,7 +712,7 @@
 	<include name="MusicInfoDialogButtonFocus13">
 		<defaultcontrol always="true">13</defaultcontrol>
 	</include>
-	
+
 	<!-- PVR info dialog button focus -->
 	<include name="PVRInfoDialogButtonFocus">
 		<include condition="Control.IsEnabled(5)">PVRInfoDialogButtonFocus5</include>
@@ -615,7 +748,7 @@
 	<include name="PVRInfoDialogButtonFocus11">
 		<defaultcontrol always="true">11</defaultcontrol>
 	</include>
-	
+
 	<!-- Video info dialog button focus -->
 	<include name="VideoInfoDialogButtonFocus">
 		<include condition="Control.IsEnabled(8)">VideoInfoDialogButtonFocus8</include>
@@ -675,7 +808,7 @@
 	<include name="VideoInfoDialogButtonFocus22">
 		<defaultcontrol always="true">22</defaultcontrol>
 	</include>
-	
+
 	<!-- Scrollbars depending on background overlay design -->
 	<include name="BackgroundOverlayStyleScrollbarVertical">
 		<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarVerticalNew</include>
@@ -688,7 +821,7 @@
 		<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
 		<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
 	</include>
-	
+
 	<include name="BackgroundOverlayStyleScrollbarHorizontal">
 		<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarHorizontalNew</include>
 		<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarHorizontalOld</include>
@@ -700,17 +833,19 @@
 		<texturesliderbackground border="5,0,5,0">common/ScrollBackgroundHorizontal.png</texturesliderbackground>
 		<texturesliderbar border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripHorizontalNF.png</texturesliderbar>
 	</include>
-	
+
 	<!-- Wall and wide view images -->
 	<include name="MediaViewImageNF">
 		<param name="fallback">DefaultVideo.png</param>
 		<param name="visible">False</param>
+		<param name="mask"></param>
+		<param name="overlayset">24</param>
 		<definition>
 			<control type="image">
 				<include>$PARAM[coords]</include>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="$PARAM[fallback]" background="true" diffuse="$PARAM[mask]">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<visible>$PARAM[visible]</visible>
 				<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>
 			</control>
@@ -720,36 +855,38 @@
 				<visible>!$EXP[WallTitlesVisible]</visible>
 				<fadetime>200</fadetime>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 					<visible>$EXP[IsWatchedResumedOrPartial]</visible>
 					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
 				</control>
 				<control type="image">
 					<include>$PARAM[coords3]</include>
-					<texture background="true">$VAR[StatusOverlay]</texture>
+					<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
 		</definition>
 	</include>
-	
+
 	<include name="MediaViewImageFO">
 		<param name="fallback">DefaultVideo.png</param>
 		<param name="visible">False</param>
+		<param name="mask"></param>
+		<param name="overlayset">24</param>
 		<definition>
 			<control type="image">
 				<include>$PARAM[coords]</include>
-				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="$PARAM[fallback]" background="true" diffuse="$PARAM[mask]">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<visible>$PARAM[visible]</visible>
 				<visible>[!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]] + !System.HasActiveModalDialog + Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="image">
 				<include>$PARAM[coords]</include>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
-				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="$PARAM[fallback]" background="true" diffuse="$PARAM[mask]">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<visible>$PARAM[visible]</visible>
 				<visible>[!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]] + [System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])]</visible>
 			</control>
@@ -760,13 +897,13 @@
 				<include>$PARAM[coords2]</include>
 				<fadetime>200</fadetime>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 					<visible>$EXP[IsWatchedResumedOrPartial]</visible>
 					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
 				</control>
 				<control type="image">
 					<include>$PARAM[coords3]</include>
-					<texture background="true">$VAR[StatusOverlay]</texture>
+					<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -775,14 +912,14 @@
 				<include>$PARAM[coords2]</include>
 				<fadetime>200</fadetime>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 					<visible>$EXP[IsWatchedResumedOrPartial]</visible>
 					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
 				</control>
 				<control type="image">
 					<include>$PARAM[coords3]</include>
-					<texture background="true">$VAR[StatusOverlay]</texture>
+					<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
@@ -792,13 +929,14 @@
 	<!-- Wall view title strip. Takes the place of the status strip and keeps its size, and gives
 	     way to the badge on items that carry one. -->
 	<include name="MediaViewTitleStripNF">
+		<param name="overlayset">24</param>
 		<definition>
 			<control type="group">
 				<include>$PARAM[coords]</include>
 				<visible>$EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
 				<fadetime>200</fadetime>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 
@@ -829,14 +967,15 @@
 					<top>$PARAM[badgetop]</top>
 					<width>$PARAM[badge]</width>
 					<height>$PARAM[badge]</height>
-					<texture background="true">$VAR[StatusOverlay]</texture>
+					<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
 		</definition>
 	</include>
-	
+
 	<include name="MediaViewTitleStripFO">
+		<param name="overlayset">24</param>
 		<definition>
 			<control type="group">
 				<include>$PARAM[coords]</include>
@@ -844,7 +983,7 @@
 				<visible>!System.HasActiveModalDialog + Control.HasFocus($PARAM[id])</visible>
 				<fadetime>200</fadetime>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 				</control>
 
 				<control type="label">
@@ -878,7 +1017,7 @@
 					<top>$PARAM[badgetop]</top>
 					<width>$PARAM[badge]</width>
 					<height>$PARAM[badge]</height>
-					<texture background="true">$VAR[StatusOverlay]</texture>
+					<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 				</control>
 			</control>
 
@@ -888,7 +1027,7 @@
 				<visible>System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])</visible>
 				<fadetime>200</fadetime>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 
@@ -919,11 +1058,10 @@
 					<top>$PARAM[badgetop]</top>
 					<width>$PARAM[badge]</width>
 					<height>$PARAM[badge]</height>
-					<texture background="true">$VAR[StatusOverlay]</texture>
+					<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				</control>
 			</control>
 		</definition>
 	</include>
-
 </includes>

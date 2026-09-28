@@ -4,21 +4,21 @@
 	<defaultcontrol always="true">3012</defaultcontrol>
 	<include>CornerWindowAnimation</include>
 	<zorder>100</zorder>
-	
+
 	<controls>
 		<control type="group">
 			<include>NotificationDepth</include>
 			<include>CornerWindowLiftAboveProgress</include>
-		
+
 			<!-- Background -->
 			<control type="image">
 				<include>script-upnext-stillwatching-simple_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
-			
+
 			<control type="group">
 				<include>script-upnext-stillwatching-simple_coords2</include>
-			
+
 				<!-- Heading -->
 				<control type="label">
 					<include>script-upnext-stillwatching-simple_coords3</include>
@@ -26,7 +26,7 @@
 					<font>Font27</font>
 					<label>$ADDON[service.upnext 30024]</label>
 				</control>
-				
+
 				<!-- Continue watching -->
 				<control type="button" id="3012">
 					<include>script-upnext-stillwatching-simple_coords4</include>
@@ -38,7 +38,7 @@
 					<onright>3013</onright>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus27c.png</texturefocus>
 				</control>
-				
+
 				<!-- Close/Stop -->
 				<control type="button" id="3013">
 					<include>script-upnext-stillwatching-simple_coords5</include>
@@ -49,17 +49,14 @@
 					<onright>3012</onright>
 					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus27c.png</texturefocus>
 				</control>
-				
+
 				<!-- Progress -->
 				<control type="progress" id="3014">
 					<include>script-upnext-stillwatching-simple_coords6</include>
-					<midtexture colordiffuse="$VAR[OverlayColorFO]">common/white.png</midtexture>
+					<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
 				</control>
-
 			</control>
-			
 		</control>
-		
 	</controls>
-
 </window>

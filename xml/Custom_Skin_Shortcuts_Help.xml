@@ -4,15 +4,14 @@
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<onload>SetProperty(HelpPage,first,1106)</onload>
 	<onunload>SetProperty(HelpPage,first,1106)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFadeAnimation</include>
-		
+
 			<control type="group">
 				<visible>!String.IsEmpty(Window(1106).Property(HelpPage))</visible>
 				<control type="image">
@@ -36,7 +35,7 @@
 					<include>VisibleFadeAnimation</include>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<visible>String.IsEmpty(Window(1106).Property(HelpPage))</visible>
 				<control type="image">
@@ -60,7 +59,7 @@
 					<include>VisibleFadeAnimation</include>
 				</control>
 			</control>
-			
+
 			<!-- Explanation text -->
 			<control type="fadelabel">
 				<include>Custom_Skin_Shortcuts_Help_coords9</include>
@@ -76,7 +75,7 @@
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<defaultcontrol always="true">1</defaultcontrol>
-				
+
 				<!-- Next help page -->
 				<control type="button" id="1">
 					<label>209</label>
@@ -84,7 +83,7 @@
 					<onclick>ClearProperty(HelpPage)</onclick>
 					<enable>!String.IsEmpty(Window(1106).Property(HelpPage))</enable>
 				</control>
-				
+
 				<!-- Previos help page -->
 				<control type="button" id="2">
 					<label>210</label>
@@ -92,18 +91,14 @@
 					<onclick>SetProperty(HelpPage,first,1106)</onclick>
 					<enable>String.IsEmpty(Window(1106).Property(HelpPage))</enable>
 				</control>
-				
+
 				<!-- Close -->
 				<control type="button" id="3">
 					<label>15067</label>
 					<width>auto</width>
 					<onclick>Dialog.Close(1106)</onclick>
 				</control>
-
 			</control>
-			
 		</control>
-
 	</controls>
-
 </window>

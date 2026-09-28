@@ -3,20 +3,19 @@
 	<!-- volumebar -->
 	<include>CornerWindowAnimation</include>
 	<zorder>100</zorder>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<controls>
-	
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>CornerWindowLift</include>
-			
+
 			<!-- Background -->
 			<control type="image">
 				<include>DialogVolumeBar_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading -->
@@ -46,9 +45,6 @@
 				<visible>false</visible>
 				<info>player.volume</info>
 			</control>
-
 		</control>
-
 	</controls>
-
 </window>

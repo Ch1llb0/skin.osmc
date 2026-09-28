@@ -2,21 +2,20 @@
 <window>
 	<!-- systeminfo -->
 	<defaultcontrol always="true">95</defaultcontrol>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
 			<!-- Background -->
 			<include>WindowBackgroundImageVerticalHome</include>
-			
+
 			<!-- Time -->
 			<include content="Time">
 				<param name="narrow">True</param>
@@ -92,7 +91,6 @@
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					</control>
-
 				</control>
 
 				<!-- Privacy policy -->
@@ -194,7 +192,6 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<aligny>top</aligny>
 					</control>
-
 				</control>
 
 				<!-- Kodi info -->
@@ -205,7 +202,7 @@
 					<align>right</align>
 					<aligny>bottom</aligny>
 				</control>
-				
+
 				<!-- Sub menu indicator -->
 				<control type="group">
 					<visible>!ControlGroup(9002).HasFocus + !Window.IsVisible(shutdownmenu)</visible>
@@ -216,10 +213,9 @@
 						<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
 					</control>
 				</control>
-				
+
 				<!-- Sub menu -->
 				<include>SubMenu</include>
-				
 			</control>
 
 			<!-- Hidden Kodi build label -->
@@ -228,9 +224,6 @@
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

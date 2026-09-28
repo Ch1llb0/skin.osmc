@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogConfirm_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogConfirm_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogConfirm_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>1140</width>
 		<height>559</height>
 	</include>
-	
+
 	<include name="DialogConfirm_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogConfirm_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogConfirm_coords2_21:9</include>
@@ -62,5 +61,4 @@
 		<width>760</width>
 		<height>20</height>
 	</include>
-
 </includes>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menus>
-
 	<!-- Main menu -->
 	<menu name="mainmenu" container="9000">
 		<allow widgets="true" backgrounds="true" submenus="true" />
@@ -527,5 +526,4 @@
 
 	<!-- Disable the built-in context menu -->
 	<contextmenu>false</contextmenu>
-
 </menus>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-
 	<!-- Default colors -->
 	<color name="TextColorFO">FFFFFFFF</color>
 	<color name="TextColorNF">80FFFFFF</color>
@@ -14,5 +13,4 @@
 	<color name="MaskingColor">FF000000</color>
 	<color name="BackgroundColor">FF009CC7</color>
 	<color name="MenuOSDColor">FF009CC7</color>
-
 </colors>

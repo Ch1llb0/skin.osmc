@@ -2,5 +2,4 @@
 <window>
 	<!-- startup -->
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	
 </window>

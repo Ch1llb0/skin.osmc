@@ -2,12 +2,11 @@
 <window>
 	<!-- mediasource -->
 	<defaultcontrol always="true">10</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -44,7 +43,6 @@
 					<include>DialogMediaSource_coords2</include>
 					<label>1210</label>
 				</control>
-
 			</control>
 
 			<!-- Right grouplist -->
@@ -59,7 +57,6 @@
 				<include>DialogMediaSource_coords4</include>
 
 				<include>DialogMediaSource_coords5</include>
-
 			</control>
 
 			<!-- Name -->
@@ -108,13 +105,9 @@
 					<width>auto</width>
 					<label>222</label>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

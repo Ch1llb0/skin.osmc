@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype50">
-
 		<!-- List (songs & files) -->
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
@@ -89,12 +87,12 @@
 				<param name="fallback">DefaultFavourites.png</param>
 				<param name="visible">Container.Content(favourites)</param>
 			</include>
-			
+
 			<!-- Song Info -->
 			<control type="group">
 				<include>Viewtype50_coords1</include>
 				<visible>Container.Content(songs)</visible>
-				
+
 				<!-- Album & Artist Info -->
 				<control type="fadelabel">
 					<include>Viewtype50_coords2</include>
@@ -118,7 +116,6 @@
 					<label>$INFO[ListItem.UserRating,$LOCALIZE[38018]: ,]</label>
 					<visible>Skin.HasSetting(UserRating)</visible>
 				</control>
-				
 			</control>
 
 			<!-- List -->
@@ -132,15 +129,12 @@
 				<orientation>vertical</orientation>
 				<viewtype label="$LOCALIZE[535]">list</viewtype>
 				<visible>Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | ![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Container.Content(files) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(playlists) | Container.Content(plugins) | Container.Content(studios) | Container.Content(directors) | Container.Content(tags) | Container.Content(countries) | Container.Content(roles) | Container.Content(favourites) | Container.Content(addons) | Container.Content(albums) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images)]</visible>
-				
+
 				<include>Viewtype50_coords6</include>
 
 				<include>Viewtype50_coords7</include>
-
 			</control>
-
 		</control>
-
 	</include>
 
 	<include name="image-50">
@@ -149,7 +143,7 @@
 		<definition>
 			<control type="image">
 				<include>Viewtype50_coords8</include>
-				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
+				<texture diffuse="common/masks/art-405x600.png" fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<fadetime>200</fadetime>
 				<visible>$PARAM[visible]</visible>
@@ -157,5 +151,4 @@
 			</control>
 		</definition>
 	</include>
-
 </includes>

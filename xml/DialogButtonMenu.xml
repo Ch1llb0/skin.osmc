@@ -3,12 +3,11 @@
 	<!-- shutdownmenu -->
 	<defaultcontrol always="true">7000</defaultcontrol>
 	<onload>Dialog.Close(1110)</onload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>NotificationDepth</include>
 
@@ -20,7 +19,7 @@
 
 				<control type="image">
 					<include>DialogButtonMenu_coords1</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="grouplist" id="7000">
@@ -41,7 +40,7 @@
 						<param name="onclick">Quit</param>
 						<param name="visible">System.ShowExitButton</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">601</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -49,7 +48,7 @@
 						<param name="onclick">Powerdown</param>
 						<param name="visible">System.CanPowerDown</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">602</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -57,7 +56,7 @@
 						<param name="onclick">Suspend</param>
 						<param name="visible">System.CanSuspend</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">603</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -65,7 +64,7 @@
 						<param name="onclick">Hibernate</param>
 						<param name="visible">System.CanHibernate</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">604</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -73,7 +72,7 @@
 						<param name="onclick">Reset</param>
 						<param name="visible">System.CanReboot</param>
 					</include>
-					
+
 					<control type="button" id="605">
 						<include>DialogButtonMenu_coords3</include>
 						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
@@ -84,7 +83,7 @@
 						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 						<visible>System.Loggedon</visible>
 					</control>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">606</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -92,7 +91,7 @@
 						<param name="onclick">Mastermode</param>
 						<param name="visible">System.HasLocks + System.IsMaster</param>
 					</include>
-					
+
 					<control type="button" id="607">
 						<include>DialogButtonMenu_coords3</include>
 						<altlabel>20045</altlabel>
@@ -101,7 +100,7 @@
 						<align>center</align>
 						<visible>System.HasLocks + !System.IsMaster</visible>
 					</control>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">608</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -109,7 +108,7 @@
 						<param name="onclick">InhibitIdleShutdown(true)</param>
 						<param name="visible">System.HasShutdown +!System.IsInhibit</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">609</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -117,7 +116,7 @@
 						<param name="onclick">InhibitIdleShutdown(false)</param>
 						<param name="visible">System.HasShutdown + System.IsInhibit</param>
 					</include>
-					
+
 					<control type="button" id="610">
 						<include>DialogButtonMenu_coords3</include>
 						<label>20150</label>
@@ -127,7 +126,7 @@
 						<visible>!System.HasAlarm(shutdowntimer)</visible>
 						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					</control>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">611</param>
 						<param name="coords">DialogButtonMenu_coords3</param>
@@ -135,7 +134,7 @@
 						<param name="onclick">CancelAlarm(shutdowntimer)</param>
 						<param name="visible">System.HasAlarm(shutdowntimer)</param>
 					</include>
-					
+
 					<control type="button" id="612">
 						<include>DialogButtonMenu_coords3</include>
 						<label>5</label>
@@ -144,13 +143,10 @@
 						<align>center</align>
 						<onclick>ActivateWindow(Settings)</onclick>
 					</control>
-					
 				</control>
 			</control>
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

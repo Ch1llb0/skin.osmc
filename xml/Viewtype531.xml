@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype531">
-
 		<!-- Wall info -->
 		<control type="group">
 			<visible>Control.IsVisible(531)</visible>
@@ -11,7 +9,7 @@
 			<control type="group">
 				<include>Viewtype531_coords1</include>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
-				
+
 				<!-- Title -->
 				<control type="fadelabel">
 					<include>Viewtype531_coords2</include>
@@ -22,7 +20,7 @@
 					<label>$VAR[Label1]</label>
 					<visible>!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)</visible>
 				</control>
-				
+
 				<!-- Details -->
 				<control type="fadelabel">
 					<include>Viewtype531_coords3</include>
@@ -34,7 +32,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)</visible>
 				</control>
-				
+
 				<!-- User Rating -->
 				<control type="fadelabel">
 					<include>Viewtype531_coords4</include>
@@ -46,7 +44,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<visible>[!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)] + Skin.HasSetting(UserRating) + !String.IsEmpty(ListItem.UserRating) + ![Container.Content(sets) | ListItem.IsCollection]</visible>
 				</control>
-				
+
 				<!-- Title -->
 				<control type="fadelabel">
 					<include>Viewtype531_coords5</include>
@@ -57,7 +55,7 @@
 					<label>$VAR[Label1]</label>
 					<visible>String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.PlotOutline)</visible>
 				</control>
-				
+
 				<!-- Plot -->
 				<control type="group">
 					<include>Viewtype531_coords6</include>
@@ -99,7 +97,7 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-				
+
 				<!-- Plot -->
 				<control type="group">
 					<include>Viewtype531_coords11</include>
@@ -141,9 +139,8 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-
 			</control>
-			
+
 			<!-- Thumbs -->
 			<control type="panel" id="531">
 				<include>Viewtype531_coords16</include>
@@ -159,11 +156,7 @@
 				<include>Viewtype531_coords17</include>
 
 				<include>Viewtype531_coords18</include>
-				
 			</control>
-
 		</control>
-
 	</include>
-
 </includes>

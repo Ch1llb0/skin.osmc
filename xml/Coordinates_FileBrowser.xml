@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="FileBrowser_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>405</width>
 		<height>600</height>
 	</include>
-	
+
 	<include name="FileBrowser_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords2_21:9</include>
@@ -62,7 +61,7 @@
 		<width>20</width>
 		<height>632</height>
 	</include>
-	
+
 	<include name="FileBrowser_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords3_21:9</include>
@@ -93,7 +92,7 @@
 		<width>570</width>
 		<height>672</height>
 	</include>
-	
+
 	<include name="FileBrowser_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords4_21:9</include>
@@ -107,7 +106,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -116,7 +115,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -137,7 +136,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -146,7 +145,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -167,7 +166,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -176,7 +175,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -197,7 +196,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -206,7 +205,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>String.Contains(ListItem.Icon,Default)</visible>
 			</control>
@@ -220,7 +219,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="FileBrowser_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords5_21:9</include>
@@ -238,7 +237,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
@@ -247,7 +246,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
@@ -264,7 +263,7 @@
 					<left>140</left>
 					<width>910</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -281,7 +280,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
@@ -290,7 +289,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
@@ -307,7 +306,7 @@
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -324,7 +323,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
@@ -333,7 +332,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
@@ -350,7 +349,7 @@
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -367,7 +366,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="image">
@@ -376,7 +375,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<control type="label">
@@ -393,13 +392,13 @@
 					<left>140</left>
 					<width>430</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="FileBrowser_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords6_21:9</include>
@@ -430,7 +429,7 @@
 		<width>570</width>
 		<height>672</height>
 	</include>
-	
+
 	<include name="FileBrowser_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords7_21:9</include>
@@ -444,7 +443,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -464,7 +463,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -484,7 +483,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -504,7 +503,7 @@
 				<height>96</height>
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<control type="label">
@@ -517,7 +516,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="FileBrowser_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">FileBrowser_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FileBrowser_coords8_21:9</include>
@@ -535,7 +534,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -551,7 +550,7 @@
 					<left>140</left>
 					<width>910</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -568,7 +567,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -584,7 +583,7 @@
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -601,7 +600,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -617,7 +616,7 @@
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
@@ -634,7 +633,7 @@
 					<height>96</height>
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left>140</left>
@@ -650,11 +649,10 @@
 					<left>140</left>
 					<width>430</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-
 </includes>

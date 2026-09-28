@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Home">
 		<!-- Widget control -->
 		<include>skinshortcuts-template-widgetControl</include>
@@ -24,7 +23,6 @@
 			<content>
 				<include>skinshortcuts-mainmenu</include>
 			</content>
-
 		</control>
 
 		<!-- Indicators -->
@@ -34,7 +32,7 @@
 		<control type="group" id="9002">
 			<include>skinshortcuts-template-vertical</include>
 		</control>
-		
+
 		<!-- Sub menu indicator -->
 		<control type="group">
 			<include>WindowDepth</include>
@@ -52,7 +50,7 @@
 		<!-- Sub menu -->
 		<control type="group" id="9010">
 			<include>NotificationDepth</include>
-			
+
 			<!-- Window dim overlay -->
 			<control type="image">
 				<include>BackgroundDepth</include>
@@ -61,21 +59,21 @@
 				<visible>ControlGroup(9010).HasFocus</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
-			
+
 			<control type="group">
 				<include>SubMenu_coords1</include>
 				<animation effect="slide" start="0,0" end="460,0" time="200" condition="ControlGroup(9010).HasFocus">Conditional</animation>
-				
+
 				<!-- Hidden button for mouse control -->
 				<control type="button">
 					<include>SubMenu_coords2</include>
 					<texturefocus>noop</texturefocus>
 				</control>
-				
+
 				<!-- Background -->
 				<control type="image">
 					<include>SubMenu_coords2</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="list" id="9001">
@@ -86,7 +84,6 @@
 					<orientation>vertical</orientation>
 					<defaultcontrol always="true">1</defaultcontrol>
 
-					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,20)">Conditional</animation>
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,19)">Conditional</animation>
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,18)">Conditional</animation>
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,17)">Conditional</animation>
@@ -107,16 +104,14 @@
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,2)">Conditional</animation>
 
 					<include>HomeSubMenu_coords1</include>
-					
+
 					<include>HomeSubMenu_coords2</include>
 
 					<content>
 						<include>skinshortcuts-mainmenu-submenu</include>
 					</content>
-
 				</control>
 			</control>
 		</control>
-
 	</include>
 </includes>

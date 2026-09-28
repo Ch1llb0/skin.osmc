@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <backgrounds>
-
 	<!-- The type below reaches the skin as the backgroundType property, which is what
 	     decides the renderer: browse draws a single image, multi a slideshow. -->
 	<background name="custom-image" label="$LOCALIZE[1030]" type="browse">
@@ -10,5 +9,4 @@
 	<background name="custom-folder" label="$LOCALIZE[1031]" type="multi">
 		<icon>DefaultFolder.png</icon>
 	</background>
-
 </backgrounds>

@@ -6,38 +6,36 @@
 	<onload condition="!String.IsEmpty(Window(10035).Property(colorpickercolor))">ClearProperty(colorpickercolor,10035)</onload>
 	<onunload>ClearProperty(colorpicker,10035)</onunload>
 	<onunload>ClearProperty(colorpickercolor,10035)</onunload>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<!-- Skin Shortcuts -->
 	<onunload condition="System.AddonIsEnabled(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml)</onunload>
-	
+
 	<!-- Skin settings, background + colors -->
 	<include>Onloads</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
-		
+
 			<!-- Background -->
 			<include>WindowBackgroundImageVerticalHome</include>
-			
+
 			<!-- Time -->
 			<include content="Time">
 				<param name="narrow">True</param>
 				<param name="wide">False</param>
 			</include>
-			
+
 			<!-- Main group -->
 			<control type="group">
 				<include>WindowFadeAnimation</include>
 
-			
 				<!-- Main group -->
 				<control type="group">
 					<include>SkinSettings_coords1</include>
@@ -50,11 +48,11 @@
 						<ondown>9000</ondown>
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
-						
+
 						<include>SkinSettings_coords3</include>
-						
+
 						<include>SkinSettings_coords4</include>
-						
+
 						<content>
 							<!-- General items -->
 							<item id="1">
@@ -99,7 +97,7 @@
 						</content>
 					</control>
 				</control>
-				
+
 				<!-- Indicators -->
 				<control type="group">
 					<include>SkinSettings_coords5</include>
@@ -137,7 +135,7 @@
 					<include>SkinSettings_coords13</include>
 					<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(10000).HasFocus">Conditional</animation>
 				</control>
-				
+
 				<!-- General items -->
 				<control type="group" id="10000">
 					<include>SkinSettings_coords14</include>
@@ -355,7 +353,7 @@
 						</control>
 						<control type="image" id="213">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[SolidBackgroundColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[SolidBackgroundColor]">common/SwatchRounded.png</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
 						</control>
@@ -392,7 +390,7 @@
 							<selected>Skin.HasSetting(EnableArtistFanart)</selected>
 						</control>
 					</control>
-					
+
 					<!-- Colors -->
 					<control type="grouplist" id="300">
 						<include>SkinSettings_coords15</include>
@@ -462,7 +460,7 @@
 						</control>
 						<control type="image" id="307">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[BackgroundColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[BackgroundColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -481,7 +479,7 @@
 						</control>
 						<control type="image" id="309">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[MenuOSDColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[MenuOSDColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -500,7 +498,7 @@
 						</control>
 						<control type="image" id="311">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[TextColorFO]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[TextColorFO]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -519,7 +517,7 @@
 						</control>
 						<control type="image" id="313">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[TextColorNF]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[TextColorNF]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -538,7 +536,7 @@
 						</control>
 						<control type="image" id="315">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[SelectedColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[SelectedColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -557,7 +555,7 @@
 						</control>
 						<control type="image" id="317">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[DisabledColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[DisabledColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -576,7 +574,7 @@
 						</control>
 						<control type="image" id="319">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[OverlayColorFO]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[OverlayColorFO]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -595,7 +593,7 @@
 						</control>
 						<control type="image" id="321">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[OverlayColorNF]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[OverlayColorNF]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -653,7 +651,7 @@
 							<selected>Skin.HasSetting(EPGColours)</selected>
 						</control>
 					</control>
-					
+
 					<!-- OSD -->
 					<control type="grouplist" id="400">
 						<include>SkinSettings_coords15</include>
@@ -1196,7 +1194,7 @@
 					<font>Font27</font>
 					<visible>Skin.String(PlotFont,S)</visible>
 				</control>
-				
+
 				<control type="textbox">
 					<include>SkinSettings_coords21</include>
 					<label>$VAR[SkinSettingsExplanation]</label>
@@ -1204,7 +1202,7 @@
 					<font>Font30</font>
 					<visible>Skin.String(PlotFont,M)</visible>
 				</control>
-				
+
 				<control type="textbox">
 					<include>SkinSettings_coords22</include>
 					<label>$VAR[SkinSettingsExplanation]</label>
@@ -1212,7 +1210,7 @@
 					<font>Font33</font>
 					<visible>Skin.String(PlotFont,L)</visible>
 				</control>
-				
+
 				<control type="textbox">
 					<include>SkinSettings_coords23</include>
 					<label>$VAR[SkinSettingsExplanation]</label>
@@ -1220,13 +1218,9 @@
 					<font>Font36</font>
 					<visible>Skin.String(PlotFont,XL)</visible>
 				</control>
-				
 			</control>
-			
-			<include>MaskingBars</include>
-			
-		</control>
-		
-	</controls>
 
+			<include>MaskingBars</include>
+		</control>
+	</controls>
 </window>

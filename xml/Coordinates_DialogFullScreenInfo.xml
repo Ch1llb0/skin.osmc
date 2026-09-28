@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogFullScreenInfo_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogFullScreenInfo_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogFullScreenInfo_coords_21:9</include>
@@ -31,5 +30,4 @@
 		<width>1140</width>
 		<height>40</height>
 	</include>
-
 </includes>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="SubMenu_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords1_21:9</include>
@@ -31,30 +30,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords2_4:3</include>
 	</include>
 	<include name="SubMenu_coords2_16:9">
-		<left>-100</left>
-		<top>0</top>
-		<width>550</width>
-		<height>1080</height>
+		<left>20</left>
+		<top>20</top>
+		<width>430</width>
+		<height>1040</height>
 	</include>
 	<include name="SubMenu_coords2_21:9">
-		<left>-100</left>
-		<top>0</top>
-		<width>550</width>
-		<height>1080</height>
+		<left>20</left>
+		<top>20</top>
+		<width>430</width>
+		<height>1040</height>
 	</include>
 	<include name="SubMenu_coords2_21:9_masked">
-		<left>-100</left>
-		<top>0</top>
-		<width>550</width>
-		<height>1440</height>
+		<left>20</left>
+		<top>200</top>
+		<width>430</width>
+		<height>1040</height>
 	</include>
 	<include name="SubMenu_coords2_4:3">
-		<left>-100</left>
-		<top>0</top>
-		<width>550</width>
-		<height>1080</height>
+		<left>20</left>
+		<top>20</top>
+		<width>430</width>
+		<height>1040</height>
 	</include>
-	
+
 	<include name="SubMenu_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords3_21:9</include>
@@ -62,30 +61,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords3_4:3</include>
 	</include>
 	<include name="SubMenu_coords3_16:9">
-		<left>20</left>
-		<top>10</top> <!-- -10 because there are two spacers -->
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>36</top> <!-- -10 because there are two spacers -->
+		<width>390</width>
+		<height>988</height>
 	</include>
 	<include name="SubMenu_coords3_21:9">
-		<left>20</left>
-		<top>10</top> <!-- -10 because there are two spacers -->
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>36</top> <!-- -10 because there are two spacers -->
+		<width>390</width>
+		<height>988</height>
 	</include>
 	<include name="SubMenu_coords3_21:9_masked">
-		<left>20</left>
-		<top>190</top> <!-- -10 because there are two spacers -->
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>216</top> <!-- -10 because there are two spacers -->
+		<width>390</width>
+		<height>988</height>
 	</include>
 	<include name="SubMenu_coords3_4:3">
-		<left>20</left>
-		<top>10</top> <!-- -10 because there are two spacers -->
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>36</top> <!-- -10 because there are two spacers -->
+		<width>390</width>
+		<height>988</height>
 	</include>
-	
+
 	<include name="SubMenu_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords4_21:9</include>
@@ -93,30 +92,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords4_4:3</include>
 	</include>
 	<include name="SubMenu_coords4_16:9">
-		<left>20</left>
-		<top>20</top>
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>46</top>
+		<width>390</width>
+		<height>988</height>
 	</include>
 	<include name="SubMenu_coords4_21:9">
-		<left>20</left>
-		<top>20</top>
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>46</top>
+		<width>390</width>
+		<height>988</height>
 	</include>
 	<include name="SubMenu_coords4_21:9_masked">
-		<left>20</left>
-		<top>200</top>
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>226</top>
+		<width>390</width>
+		<height>988</height>
 	</include>
 	<include name="SubMenu_coords4_4:3">
-		<left>20</left>
-		<top>20</top>
-		<width>410</width>
-		<height>1040</height>
+		<left>40</left>
+		<top>46</top>
+		<width>390</width>
+		<height>988</height>
 	</include>
-	
+
 	<include name="SubMenu_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords5_21:9</include>
@@ -124,18 +123,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords5_4:3</include>
 	</include>
 	<include name="SubMenu_coords5_16:9">
+		<width>390</width>
 		<height>52</height>
 	</include>
 	<include name="SubMenu_coords5_21:9">
+		<width>390</width>
 		<height>52</height>
 	</include>
 	<include name="SubMenu_coords5_21:9_masked">
+		<width>390</width>
 		<height>52</height>
 	</include>
 	<include name="SubMenu_coords5_4:3">
+		<width>390</width>
 		<height>52</height>
 	</include>
-	
+
 	<include name="SubMenu_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords6_21:9</include>
@@ -143,22 +146,26 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords6_4:3</include>
 	</include>
 	<include name="SubMenu_coords6_16:9">
+		<width>390</width>
 		<height>52</height>
-		<textwidth>372</textwidth>
+		<textwidth>362</textwidth>
 	</include>
 	<include name="SubMenu_coords6_21:9">
+		<width>390</width>
 		<height>52</height>
-		<textwidth>372</textwidth>
+		<textwidth>362</textwidth>
 	</include>
 	<include name="SubMenu_coords6_21:9_masked">
+		<width>390</width>
 		<height>52</height>
-		<textwidth>372</textwidth>
+		<textwidth>362</textwidth>
 	</include>
 	<include name="SubMenu_coords6_4:3">
+		<width>390</width>
 		<height>52</height>
-		<textwidth>372</textwidth>
+		<textwidth>362</textwidth>
 	</include>
-	
+
 	<include name="SubMenu_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords7_21:9</include>
@@ -166,22 +173,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords7_4:3</include>
 	</include>
 	<include name="SubMenu_coords7_16:9">
-		<width>410</width>
+		<width>390</width>
 		<height>10</height>
 	</include>
 	<include name="SubMenu_coords7_21:9">
-		<width>410</width>
+		<width>390</width>
 		<height>10</height>
 	</include>
 	<include name="SubMenu_coords7_21:9_masked">
-		<width>410</width>
+		<width>390</width>
 		<height>10</height>
 	</include>
 	<include name="SubMenu_coords7_4:3">
-		<width>410</width>
+		<width>390</width>
 		<height>10</height>
 	</include>
-	
+
 	<include name="SubMenu_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords8_21:9</include>
@@ -190,25 +197,25 @@
 	</include>
 	<include name="SubMenu_coords8_16:9">
 		<top>10</top>
-		<width>410</width>
+		<width>390</width>
 		<height>100</height>
 	</include>
 	<include name="SubMenu_coords8_21:9">
 		<top>10</top>
-		<width>410</width>
+		<width>390</width>
 		<height>100</height>
 	</include>
 	<include name="SubMenu_coords8_21:9_masked">
 		<top>10</top>
-		<width>410</width>
+		<width>390</width>
 		<height>100</height>
 	</include>
 	<include name="SubMenu_coords8_4:3">
 		<top>10</top>
-		<width>410</width>
+		<width>390</width>
 		<height>100</height>
 	</include>
-	
+
 	<include name="SubMenu_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords9_21:9</include>
@@ -230,7 +237,7 @@
 		<width>60</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="SubMenu_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords10_21:9</include>
@@ -238,22 +245,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords10_4:3</include>
 	</include>
 	<include name="SubMenu_coords10_16:9">
-		<width>7</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="SubMenu_coords10_21:9">
-		<width>7</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="SubMenu_coords10_21:9_masked">
-		<width>7</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="SubMenu_coords10_4:3">
-		<width>7</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="SubMenu_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords11_21:9</include>
@@ -261,22 +268,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords11_4:3</include>
 	</include>
 	<include name="SubMenu_coords11_16:9">
-		<width>9</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="SubMenu_coords11_21:9">
-		<width>9</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="SubMenu_coords11_21:9_masked">
-		<width>9</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="SubMenu_coords11_4:3">
-		<width>9</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="SubMenu_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords12_21:9</include>
@@ -299,7 +306,7 @@
 		<width>18</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="SubMenu_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords13_21:9</include>
@@ -330,7 +337,7 @@
 		<width>30</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="SubMenu_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords14_21:9</include>
@@ -362,4 +369,57 @@
 		<height>30</height>
 	</include>
 
+	<include name="SubMenu_coords15">
+		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords15_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords15_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">SubMenu_coords15_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords15_4:3</include>
+	</include>
+	<include name="SubMenu_coords15_16:9">
+		<left>-20</left>
+		<width>18</width>
+		<height>60</height>
+	</include>
+	<include name="SubMenu_coords15_21:9">
+		<left>-20</left>
+		<width>18</width>
+		<height>60</height>
+	</include>
+	<include name="SubMenu_coords15_21:9_masked">
+		<left>-20</left>
+		<width>18</width>
+		<height>60</height>
+	</include>
+	<include name="SubMenu_coords15_4:3">
+		<left>-20</left>
+		<width>18</width>
+		<height>60</height>
+	</include>
+
+	<include name="SubMenu_coords16">
+		<include condition="$EXP[NonMaskedCoordinates]">SubMenu_coords16_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SubMenu_coords16_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">SubMenu_coords16_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SubMenu_coords16_4:3</include>
+	</include>
+	<include name="SubMenu_coords16_16:9">
+		<left>-20</left>
+		<width>5</width>
+		<height>60</height>
+	</include>
+	<include name="SubMenu_coords16_21:9">
+		<left>-20</left>
+		<width>5</width>
+		<height>60</height>
+	</include>
+	<include name="SubMenu_coords16_21:9_masked">
+		<left>-20</left>
+		<width>5</width>
+		<height>60</height>
+	</include>
+	<include name="SubMenu_coords16_4:3">
+		<left>-20</left>
+		<width>5</width>
+		<height>60</height>
+	</include>
 </includes>

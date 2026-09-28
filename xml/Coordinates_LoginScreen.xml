@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="LoginScreen_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>50</width>
 		<height>50</height>
 	</include>
-	
+
 	<include name="LoginScreen_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords2_21:9</include>
@@ -62,7 +61,7 @@
 		<width>405</width>
 		<height>666</height>
 	</include>
-	
+
 	<include name="LoginScreen_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords3_21:9</include>
@@ -93,7 +92,7 @@
 		<width>570</width>
 		<height>720</height>
 	</include>
-	
+
 	<include name="LoginScreen_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords4_21:9</include>
@@ -144,7 +143,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="LoginScreen_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords5_21:9</include>
@@ -171,7 +170,7 @@
 					<top>75</top>
 					<width>1050</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<top>82</top>
@@ -206,7 +205,7 @@
 					<top>75</top>
 					<width>1690</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<top>82</top>
@@ -241,7 +240,7 @@
 					<top>75</top>
 					<width>1690</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<top>82</top>
@@ -276,7 +275,7 @@
 					<top>75</top>
 					<width>570</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<top>82</top>
@@ -291,7 +290,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="LoginScreen_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords6_21:9</include>
@@ -299,28 +298,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords6_4:3</include>
 	</include>
 	<include name="LoginScreen_coords6_16:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="LoginScreen_coords6_21:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="LoginScreen_coords6_21:9_masked">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="LoginScreen_coords6_4:3">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-
 </includes>

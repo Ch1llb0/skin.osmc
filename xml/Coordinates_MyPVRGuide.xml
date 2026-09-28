@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="MyPVRGuide_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>1200</width>
 		<height>606</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords2_21:9</include>
@@ -40,53 +39,45 @@
 	</include>
 	<include name="MyPVRGuide_coords2_16:9">
 		<rulerlayout width="100" height="54">
-
 			<control type="label" id="2">
 				<width>100</width>
 				<height>33</height>
 				<font>Font33-light</font>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
-
 		</rulerlayout>
 	</include>
 	<include name="MyPVRGuide_coords2_21:9">
 		<rulerlayout width="100" height="54">
-
 			<control type="label" id="2">
 				<width>100</width>
 				<height>33</height>
 				<font>Font33-light</font>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
-
 		</rulerlayout>
 	</include>
 	<include name="MyPVRGuide_coords2_21:9_masked">
 		<rulerlayout width="100" height="54">
-
 			<control type="label" id="2">
 				<width>100</width>
 				<height>33</height>
 				<font>Font33-light</font>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
-
 		</rulerlayout>
 	</include>
 	<include name="MyPVRGuide_coords2_4:3">
 		<rulerlayout width="100" height="54">
-
 			<control type="label" id="2">
 				<width>100</width>
 				<height>33</height>
 				<font>Font33-light</font>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
-
 		</rulerlayout>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords3_21:9</include>
@@ -95,7 +86,6 @@
 	</include>
 	<include name="MyPVRGuide_coords3_16:9">
 		<channellayout width="450" height="69">
-
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -107,7 +97,7 @@
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
-			
+
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -140,12 +130,10 @@
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
-
 		</channellayout>
 	</include>
 	<include name="MyPVRGuide_coords3_21:9">
 		<channellayout width="450" height="69">
-
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -157,7 +145,7 @@
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
-			
+
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -190,12 +178,10 @@
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
-
 		</channellayout>
 	</include>
 	<include name="MyPVRGuide_coords3_21:9_masked">
 		<channellayout width="450" height="69">
-
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -207,7 +193,7 @@
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
-			
+
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -240,12 +226,10 @@
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
-
 		</channellayout>
 	</include>
 	<include name="MyPVRGuide_coords3_4:3">
 		<channellayout width="450" height="69">
-
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -257,7 +241,7 @@
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>Window.IsVisible(TVGuide)</visible>
 			</control>
-			
+
 			<!-- Channel image -->
 			<control type="image">
 				<left>1</left>
@@ -290,10 +274,9 @@
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
-
 		</channellayout>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords4_21:9</include>
@@ -314,10 +297,10 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(TVGuide)</visible>
 				</control>
-				
+
 				<!-- Channel image -->
 				<control type="image">
 					<left>1</left>
@@ -325,7 +308,7 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(RadioGuide)</visible>
 				</control>
 
@@ -349,16 +332,15 @@
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-				
+
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
 					<top>55</top>
 					<width>363</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
-			
 			</control>
 		</focusedchannellayout>
 	</include>
@@ -376,10 +358,10 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(TVGuide)</visible>
 				</control>
-				
+
 				<!-- Channel image -->
 				<control type="image">
 					<left>1</left>
@@ -387,7 +369,7 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(RadioGuide)</visible>
 				</control>
 
@@ -411,16 +393,15 @@
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-				
+
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
 					<top>55</top>
 					<width>363</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
-				
 			</control>
 		</focusedchannellayout>
 	</include>
@@ -438,10 +419,10 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(TVGuide)</visible>
 				</control>
-				
+
 				<!-- Channel image -->
 				<control type="image">
 					<left>1</left>
@@ -449,7 +430,7 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(RadioGuide)</visible>
 				</control>
 
@@ -473,16 +454,15 @@
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-				
+
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
 					<top>55</top>
 					<width>363</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
-			
 			</control>
 		</focusedchannellayout>
 	</include>
@@ -500,10 +480,10 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(TVGuide)</visible>
 				</control>
-				
+
 				<!-- Channel image -->
 				<control type="image">
 					<left>1</left>
@@ -511,7 +491,7 @@
 					<width>67</width>
 					<height>67</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+					<texture diffuse="common/masks/art-67x67.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 					<visible>Window.IsVisible(RadioGuide)</visible>
 				</control>
 
@@ -535,20 +515,19 @@
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-				
+
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
 					<top>55</top>
 					<width>363</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
-			
 			</control>
 		</focusedchannellayout>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords5_21:9</include>
@@ -557,7 +536,6 @@
 	</include>
 	<include name="MyPVRGuide_coords5_16:9">
 		<itemlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -568,7 +546,7 @@
 				<texture border="2" fallback="pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),pvr/epg-genres/,.png]</texture>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -593,42 +571,40 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
-
 		</itemlayout>
 	</include>
 	<include name="MyPVRGuide_coords5_21:9">
 		<itemlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -639,7 +615,7 @@
 				<texture border="2" fallback="pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),pvr/epg-genres/,.png]</texture>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -664,42 +640,40 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
-
 		</itemlayout>
 	</include>
 	<include name="MyPVRGuide_coords5_21:9_masked">
 		<itemlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -710,7 +684,7 @@
 				<texture border="2" fallback="pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),pvr/epg-genres/,.png]</texture>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -735,42 +709,40 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
-
 		</itemlayout>
 	</include>
 	<include name="MyPVRGuide_coords5_4:3">
 		<itemlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -781,7 +753,7 @@
 				<texture border="2" fallback="pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),pvr/epg-genres/,.png]</texture>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -806,40 +778,39 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
-
 		</itemlayout>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords6_21:9</include>
@@ -848,7 +819,6 @@
 	</include>
 	<include name="MyPVRGuide_coords6_16:9">
 		<focusedlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -861,7 +831,7 @@
 				</include>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -892,11 +862,11 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
@@ -905,37 +875,35 @@
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-
 		</focusedlayout>
 	</include>
 	<include name="MyPVRGuide_coords6_21:9">
 		<focusedlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -948,7 +916,7 @@
 				</include>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -979,11 +947,11 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
@@ -992,37 +960,35 @@
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-
 		</focusedlayout>
 	</include>
 	<include name="MyPVRGuide_coords6_21:9_masked">
 		<focusedlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -1035,7 +1001,7 @@
 				</include>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -1066,11 +1032,11 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
@@ -1079,37 +1045,35 @@
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-
 		</focusedlayout>
 	</include>
 	<include name="MyPVRGuide_coords6_4:3">
 		<focusedlayout width="100" height="69">
-
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -1122,7 +1086,7 @@
 				</include>
 				<visible>!Skin.HasSetting(EPGColours)</visible>
 			</control>
-			
+
 			<!-- Background -->
 			<control type="image" id="14">
 				<left>1</left>
@@ -1153,11 +1117,11 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Recording.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
@@ -1166,35 +1130,34 @@
 
 			<!-- Timer image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Timer.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-			
+
 			<!-- Reminder image -->
 			<control type="image">
-				<left>3</left>
-				<top>3</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>4</left>
+				<top>4</top>
+				<width>16</width>
+				<height>16</height>
+				<texture>pvr/16/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusWindowFadeAnimation">
 					<param name="id">10</param>
 				</include>
 			</control>
-
 		</focusedlayout>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords7_21:9</include>
@@ -1225,7 +1188,7 @@
 		<width>20</width>
 		<height>512</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords8_21:9</include>
@@ -1248,7 +1211,7 @@
 		<left>120</left>
 		<top>810</top>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords9_21:9</include>
@@ -1271,7 +1234,7 @@
 		<width>150</width>
 		<height>150</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords10_21:9</include>
@@ -1298,7 +1261,7 @@
 		<width>570</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords11_21:9</include>
@@ -1329,7 +1292,7 @@
 		<width>570</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords12_21:9</include>
@@ -1360,7 +1323,7 @@
 		<width>570</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords13_21:9</include>
@@ -1391,7 +1354,7 @@
 		<width>570</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords14_21:9</include>
@@ -1418,7 +1381,7 @@
 		<width>420</width>
 		<height>112</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords15">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords15_21:9</include>
@@ -1437,7 +1400,7 @@
 	<include name="MyPVRGuide_coords15_4:3">
 		<height>94</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords16">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords16_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords16_21:9</include>
@@ -1456,7 +1419,7 @@
 	<include name="MyPVRGuide_coords16_4:3">
 		<height>105</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords17">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords17_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords17_21:9</include>
@@ -1475,7 +1438,7 @@
 	<include name="MyPVRGuide_coords17_4:3">
 		<height>80</height>
 	</include>
-	
+
 	<include name="MyPVRGuide_coords18">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords18_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords18_21:9</include>
@@ -1494,5 +1457,4 @@
 	<include name="MyPVRGuide_coords18_4:3">
 		<height>86</height>
 	</include>
-
 </includes>
