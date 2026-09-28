@@ -62,23 +62,23 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">GameOSD_coords3_4:3</include>
 	</include>
 	<include name="GameOSD_coords3_16:9">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="GameOSD_coords3_21:9">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="GameOSD_coords3_21:9_masked">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="GameOSD_coords3_4:3">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	

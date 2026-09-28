@@ -93,19 +93,23 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords4_4:3</include>
 	</include>
 	<include name="VideoOSD_coords4_16:9">
-		<width>418</width>
+		<left>20</left>
+		<width>382</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords4_21:9">
-		<width>418</width>
+		<left>20</left>
+		<width>382</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords4_21:9_masked">
-		<width>418</width>
+		<left>20</left>
+		<width>382</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords4_4:3">
-		<width>418</width>
+		<left>20</left>
+		<width>382</width>
 		<height>60</height>
 	</include>
 	
@@ -116,27 +120,19 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords5_4:3</include>
 	</include>
 	<include name="VideoOSD_coords5_16:9">
-		<left>0</left>
-		<top>0</top>
-		<width>7</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords5_21:9">
-		<left>0</left>
-		<top>0</top>
-		<width>7</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords5_21:9_masked">
-		<left>0</left>
-		<top>0</top>
-		<width>7</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords5_4:3">
-		<left>0</left>
-		<top>0</top>
-		<width>7</width>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	
@@ -147,19 +143,23 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords6_4:3</include>
 	</include>
 	<include name="VideoOSD_coords6_16:9">
-		<width>9</width>
+		<left>-20</left>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords6_21:9">
-		<width>9</width>
+		<left>-20</left>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords6_21:9_masked">
-		<width>9</width>
+		<left>-20</left>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords6_4:3">
-		<width>9</width>
+		<left>-20</left>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	
@@ -170,19 +170,19 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords7_4:3</include>
 	</include>
 	<include name="VideoOSD_coords7_16:9">
-		<width>18</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords7_21:9">
-		<width>18</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords7_21:9_masked">
-		<width>18</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords7_4:3">
-		<width>18</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	
@@ -193,19 +193,19 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords8_4:3</include>
 	</include>
 	<include name="VideoOSD_coords8_16:9">
-		<width>60</width>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords8_21:9">
-		<width>60</width>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords8_21:9_masked">
-		<width>60</width>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords8_4:3">
-		<width>60</width>
+		<width>18</width>
 		<height>60</height>
 	</include>
 	
@@ -216,23 +216,23 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords9_4:3</include>
 	</include>
 	<include name="VideoOSD_coords9_16:9">
-		<right>0</right>
-		<width>720</width>
+		<left>-20</left>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords9_21:9">
-		<right>0</right>
-		<width>720</width>
+		<left>-20</left>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords9_21:9_masked">
-		<right>0</right>
-		<width>720</width>
+		<left>-20</left>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords9_4:3">
-		<right>0</right>
-		<width>720</width>
+		<left>-20</left>
+		<width>5</width>
 		<height>60</height>
 	</include>
 	
@@ -243,23 +243,23 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords10_4:3</include>
 	</include>
 	<include name="VideoOSD_coords10_16:9">
-		<right>660</right>
-		<width>60</width>
+		<right>8</right>
+		<width>720</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords10_21:9">
-		<right>660</right>
-		<width>60</width>
+		<right>8</right>
+		<width>720</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords10_21:9_masked">
-		<right>660</right>
-		<width>60</width>
+		<right>8</right>
+		<width>720</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords10_4:3">
-		<right>660</right>
-		<width>60</width>
+		<right>8</right>
+		<width>720</width>
 		<height>60</height>
 	</include>
 	
@@ -270,22 +270,18 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords11_4:3</include>
 	</include>
 	<include name="VideoOSD_coords11_16:9">
-		<right>0</right>
 		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords11_21:9">
-		<right>0</right>
 		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords11_21:9_masked">
-		<right>0</right>
 		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords11_4:3">
-		<right>0</right>
 		<width>60</width>
 		<height>60</height>
 	</include>
@@ -297,18 +293,72 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords12_4:3</include>
 	</include>
 	<include name="VideoOSD_coords12_16:9">
-		<width>600</width>
+		<right>660</right>
+		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords12_21:9">
-		<width>600</width>
+		<right>660</right>
+		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords12_21:9_masked">
-		<width>600</width>
+		<right>660</right>
+		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSD_coords12_4:3">
+		<right>660</right>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	
+	<include name="VideoOSD_coords13">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoOSD_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSD_coords13_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoOSD_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords13_4:3</include>
+	</include>
+	<include name="VideoOSD_coords13_16:9">
+		<right>0</right>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="VideoOSD_coords13_21:9">
+		<right>0</right>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="VideoOSD_coords13_21:9_masked">
+		<right>0</right>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="VideoOSD_coords13_4:3">
+		<right>0</right>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	
+	<include name="VideoOSD_coords14">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoOSD_coords14_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSD_coords14_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoOSD_coords14_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords14_4:3</include>
+	</include>
+	<include name="VideoOSD_coords14_16:9">
+		<width>600</width>
+		<height>60</height>
+	</include>
+	<include name="VideoOSD_coords14_21:9">
+		<width>600</width>
+		<height>60</height>
+	</include>
+	<include name="VideoOSD_coords14_21:9_masked">
+		<width>600</width>
+		<height>60</height>
+	</include>
+	<include name="VideoOSD_coords14_4:3">
 		<width>600</width>
 		<height>60</height>
 	</include>

@@ -74,6 +74,7 @@
 	<include file="Coordinates_MyVideoNav.xml" />
 	<include file="Coordinates_MyWeather.xml" />
 	<include file="Coordinates_PlayerControls.xml" />
+	<include file="Coordinates_script-RSS_Editor.xml" />
 	<include file="Coordinates_script-skinshortcuts.xml" />
 	<include file="Coordinates_script-upnext-stillwatching.xml" />
 	<include file="Coordinates_script-upnext-stillwatching-simple.xml" />
@@ -234,19 +235,19 @@
 	<include name="OSDPlayStopButtons">
 		<control type="togglebutton" id="5">
 			<include>OSDButtons_coords</include>
-			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPauseNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPause.png</texturenofocus>
 			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</alttexturefocus>
-			<alttexturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPlayNF.png</alttexturenofocus>
+			<alttexturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDPlay.png</alttexturenofocus>
 			<onclick>PlayerControl(Play)</onclick>
 			<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 			<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
 		</control>
 		<control type="button" id="6">
 			<include>OSDButtons_coords</include>
-			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStopNF.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStopNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStop.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStop.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 			<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
@@ -257,8 +258,8 @@
 	<include name="OSDStopButton">
 		<control type="button" id="5">
 			<include>OSDButtons_coords</include>
-			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStopNF.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStopNF.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDStop.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[OverlayColorNF]">osd/OSDStop.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 			<oninfo condition="!Window.IsVisible(fullscreeninfo)">ActivateWindow(fullscreeninfo)</oninfo>
 			<oninfo condition="Window.IsVisible(fullscreeninfo)">Dialog.Close(fullscreeninfo)</oninfo>
@@ -277,7 +278,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>30</width>
-					<height>16</height>
+					<height>20</height>
 					<texture colordiffuse="$VAR[OverlayColorNF]">up.png</texture>
 
 					<visible>Container($PARAM[container]).HasPrevious</visible>
@@ -296,7 +297,7 @@
 					<left>0</left>
 					<bottom>0</bottom>
 					<width>30</width>
-					<height>16</height>
+					<height>20</height>
 					<texture colordiffuse="$VAR[OverlayColorNF]">down.png</texture>
 
 					<visible>Container($PARAM[container]).HasNext</visible>

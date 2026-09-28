@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- script.rss.editor: one window for both of its pages, the feeds of a set and the list of
+	     sets. The add-on sets the labels of 2, 4 and 11 and fills list 10; the rest is ours. -->
+	<defaultcontrol always="true">10</defaultcontrol>
+
+	<!-- Scroll reset -->
+	<include>ResetScroll</include>
+
+	<controls>
+
+		<control type="group">
+
+			<!-- Dialog fanart -->
+			<include>DialogBackgroundImage</include>
+
+			<control type="group">
+				<include content="DialogFrame">
+					<param name="heading">$INFO[Control.GetLabel(2)]</param>
+				</include>
+
+				<!-- Heading and list caption, written by the add-on and shown through the frame
+				     and the caption line -->
+				<control type="label" id="2">
+					<font></font>
+				</control>
+				<control type="label" id="4">
+					<font></font>
+				</control>
+
+				<!-- Image -->
+				<control type="image">
+					<include>script-RSS_Editor_coords1</include>
+					<texture>DefaultNetwork.png</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+				</control>
+
+				<!-- List caption, on the line above the buttons where the other dialogs explain -->
+				<control type="fadelabel">
+					<include>script-RSS_Editor_coords2</include>
+					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
+					<align>center</align>
+					<label>$INFO[Control.GetLabel(4)]</label>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+				</control>
+
+				<!-- List -->
+				<control type="list" id="10">
+					<include>script-RSS_Editor_coords3</include>
+					<onup>10</onup>
+					<ondown>10</ondown>
+					<onleft>60</onleft>
+					<onright>9001</onright>
+					<orientation>vertical</orientation>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="sine" easing="out">240</scrolltime>
+
+					<include>script-RSS_Editor_coords4</include>
+
+					<include>script-RSS_Editor_coords5</include>
+
+				</control>
+
+				<!-- Scrollbar -->
+				<control type="scrollbar" id="60">
+					<include>script-RSS_Editor_coords6</include>
+					<onleft>18</onleft>
+					<onright>10</onright>
+					<orientation>vertical</orientation>
+					<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+					<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+					<visible>!Skin.HasSetting(Scrollbars)</visible>
+				</control>
+
+				<!-- Buttons -->
+				<control type="grouplist" id="9001">
+					<include>DialogButtons</include>
+					<itemgap>30</itemgap>
+					<onup>10</onup>
+					<orientation>horizontal</orientation>
+					<align>center</align>
+
+					<!-- Add -->
+					<control type="button" id="13">
+						<label>$LOCALIZE[15019]</label>
+						<width>Auto</width>
+					</control>
+
+					<!-- Remove -->
+					<control type="button" id="14">
+						<label>$LOCALIZE[15015]</label>
+						<width>Auto</width>
+					</control>
+
+					<!-- Change set / modify set, labelled by the add-on -->
+					<control type="button" id="11">
+						<width>Auto</width>
+					</control>
+
+					<!-- OK -->
+					<control type="button" id="18">
+						<label>$LOCALIZE[186]</label>
+						<width>Auto</width>
+					</control>
+
+					<!-- Cancel -->
+					<control type="button" id="19">
+						<label>$LOCALIZE[222]</label>
+						<width>Auto</width>
+					</control>
+
+				</control>
+
+				<!-- Button indicator -->
+				<include content="dialogButtonIndicator">
+					<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+				</include>
+
+			</control>
+
+			<include>MaskingBars</include>
+
+		</control>
+
+	</controls>
+</window>

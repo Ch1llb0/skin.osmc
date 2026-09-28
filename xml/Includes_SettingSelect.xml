@@ -82,7 +82,7 @@
 
 					<control type="image">
 						<include>Custom_Setting_Select_coords3</include>
-						<texture colordiffuse="$VAR[SelectedColor]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[SelectedColor]">$VAR[focusline]</texture>
 						<visible>Control.HasFocus($PARAM[id])</visible>
 					</control>
 
@@ -111,7 +111,7 @@
 
 					<control type="image">
 						<include>Custom_Setting_Select_coords3</include>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>Control.HasFocus($PARAM[id])</visible>
 					</control>
 

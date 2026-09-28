@@ -62,19 +62,19 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">OSDButtons_coords_4:3</include>
 	</include>
 	<include name="OSDButtons_coords_16:9">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="OSDButtons_coords_21:9">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="OSDButtons_coords_21:9_masked">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="OSDButtons_coords_4:3">
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	

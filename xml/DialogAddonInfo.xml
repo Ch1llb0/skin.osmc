@@ -22,7 +22,7 @@
 			<control type="group">
 				<control type="image">
 					<include>DialogAddonInfo_coords1</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x405.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 				</control>
 			</control>

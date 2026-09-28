@@ -28,7 +28,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -43,7 +43,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -58,7 +58,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -73,7 +73,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -88,7 +88,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -223,7 +223,7 @@
 				
 				<!-- Background -->
 				<control type="image">
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="label">

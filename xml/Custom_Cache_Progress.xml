@@ -16,13 +16,13 @@
 		<control type="group">
 			<include>NotificationDepth</include>
 			<visible>Player.Caching + String.IsEqual(Window(10000).Property(isCaching),True)</visible>
-			<animation effect="slide" start="550,0" time="200">Visible</animation>
+			<animation effect="slide" start="570,0" time="200">Visible</animation>
 			<animation effect="slide" end="0,0" time="200">Hidden</animation>
 
 			<!-- Background -->
 			<control type="image">
 				<include>Custom_Cache_Progress_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading -->
@@ -39,11 +39,12 @@
 			<control type="progress">
 				<include>Custom_Cache_Progress_coords3</include>
 				<info>Player.Progress</info>
-				<midtexture colordiffuse="$VAR[OverlayColorFO]">common/white.png</midtexture>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
 			</control>
 			<control type="progress">
 				<include>Custom_Cache_Progress_coords3</include>
-				<midtexture colordiffuse="$VAR[OSDCacheColor]">common/white.png</midtexture>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OSDCacheColor]">common/PanelProgressBar.png</midtexture>
 				<info>Player.ProgressCache</info>
 			</control>
 			

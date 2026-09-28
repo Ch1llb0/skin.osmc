@@ -22,7 +22,7 @@
 			<control type="image">
 				<include>DialogMusicInfo_coords1</include>
 				<fadetime>100</fadetime>
-				<texture background="true" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultMusicSongs.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBTYPE,song)</visible>
@@ -32,7 +32,7 @@
 			<control type="image">
 				<include>DialogMusicInfo_coords1</include>
 				<fadetime background="true" fallback="DefaultAlbumCover.png">100</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x405.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBTYPE,album)</visible>
@@ -42,7 +42,7 @@
 			<control type="image">
 				<include>DialogMusicInfo_coords1</include>
 				<fadetime>100</fadetime>
-				<texture background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>String.IsEqual(ListItem.DBTYPE,artist)</visible>

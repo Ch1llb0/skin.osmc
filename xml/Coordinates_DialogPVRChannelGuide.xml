@@ -310,32 +310,32 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
 			
 			<!-- Reminder image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
@@ -368,32 +368,32 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
 			
 			<!-- Reminder image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
@@ -426,32 +426,32 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
 			
 			<!-- Reminder image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
@@ -484,32 +484,32 @@
 
 			<!-- Recording image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 			</control>
 
 			<!-- Timer image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 			</control>
 			
 			<!-- Reminder image -->
 			<control type="image">
-				<right>0</right>
-				<top>14</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<right>3</right>
+				<top>17</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 			</control>
@@ -560,37 +560,37 @@
 					<top>49</top>
 					<width>692</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 
 				<!-- Timer image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 			
 				<!-- Reminder image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
@@ -635,37 +635,37 @@
 					<top>49</top>
 					<width>692</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 
 				<!-- Timer image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 			
 				<!-- Reminder image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
@@ -710,37 +710,37 @@
 					<top>49</top>
 					<width>692</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 
 				<!-- Timer image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 			
 				<!-- Reminder image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
@@ -785,37 +785,37 @@
 					<top>49</top>
 					<width>452</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				
 				<!-- Recording image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 
 				<!-- Timer image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 			
 				<!-- Reminder image -->
 				<control type="image">
-					<right>0</right>
-					<top>14</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<right>3</right>
+					<top>17</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>

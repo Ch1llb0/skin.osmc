@@ -19,7 +19,7 @@
 			<!-- Image -->
 			<control type="image">
 				<include>DialogVideoManager_coords1</include>
-				<texture>$VAR[VideoManagerImages]</texture>
+				<texture diffuse="common/masks/art-405x600.png">$VAR[VideoManagerImages]</texture>
 				<aspectratio aligny="center">keep</aspectratio>
 			</control>
 			

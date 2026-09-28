@@ -29,7 +29,7 @@
 				<!-- Image -->
 				<control type="image">
 					<include>DialogSelect_coords1</include>
-					<texture>$VAR[SelectImage]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$VAR[SelectImage]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 					<visible>Control.IsVisible(6)</visible>
 				</control>
@@ -37,7 +37,7 @@
 				<!-- Image -->
 				<control type="image">
 					<include>DialogSelect_coords1</include>
-					<texture>$INFO[Container(3).ListItem.Art(screenshot)]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[Container(3).ListItem.Art(screenshot)]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 					<visible>Window.IsActive(gamesaves)</visible>
 				</control>
@@ -172,7 +172,7 @@
 			<!-- Window Background -->
 			<control type="image">
 				<include>DialogSelect_coords9</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 			
 			<!-- Heading -->

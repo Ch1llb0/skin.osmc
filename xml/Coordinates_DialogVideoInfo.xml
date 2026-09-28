@@ -358,7 +358,7 @@
 				<top>50</top>
 				<width>1170</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -381,7 +381,7 @@
 				<top>50</top>
 				<width>1170</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>
@@ -408,7 +408,7 @@
 				<top>50</top>
 				<width>1780</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -431,7 +431,7 @@
 				<top>50</top>
 				<width>1780</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>
@@ -458,7 +458,7 @@
 				<top>50</top>
 				<width>1780</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -481,7 +481,7 @@
 				<top>50</top>
 				<width>1780</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>
@@ -510,7 +510,7 @@
 				<top>50</top>
 				<width>660</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
@@ -535,7 +535,7 @@
 				<top>50</top>
 				<width>660</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
 				<visible>!Control.HasFocus(50)</visible>
 			</control>
 		</focusedlayout>

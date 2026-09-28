@@ -37,12 +37,58 @@
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background2Low.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background2Highest.png</value>
 	</variable>
+
+	<!-- The overlay fills again with 8 px corners on one edge, for the inset dialog panel: the part above the
+	     button band rounds its top corners, the band its bottom ones. Drawn with border="8". -->
+	<variable name="Background1Top">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background1HighTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background1MediumTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background1LowTop.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background1HighestTop.png</value>
+	</variable>
+	
+	<variable name="Background1Bottom">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background1HighBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background1MediumBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background1LowBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background1HighestBottom.png</value>
+	</variable>
+	
+	<variable name="Background2Bottom">
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">common/Background2HighBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">common/Background2MediumBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">common/Background2LowBottom.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">common/Background2HighestBottom.png</value>
+	</variable>
+	
+	<variable name="BackgroundOverlayStyleBottom">
+		<value condition="!Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background2Bottom]</value>
+		<value condition="Skin.HasSetting(BackgroundOverlayStyle)">$VAR[Background1Bottom]</value>
+	</variable>
 	
 	<variable name="MenuOSDBackground">
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),High)">common/Background2High.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Medium)">common/Background2Medium.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Low)">common/Background2Low.png</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Highest)">common/Background2Highest.png</value>
+	</variable>
+
+	<!-- The same panel with 8 px corners, for panels that float clear of the screen edges. Drawn with
+	     border="8" so the corners keep their radius at any size. -->
+	<variable name="MenuOSDPanel">
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),High)">common/PanelHigh.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Medium)">common/PanelMedium.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Low)">common/PanelLow.png</value>
+		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Highest)">common/PanelHighest.png</value>
+	</variable>
+
+	<!-- The letter in the scrolling index. The parent folder item's sort letter is not empty but the
+	     "." of its "..", which at this size reads as an empty box, so it is tested first; it and any
+	     item without a letter show an ellipsis, so the panel never stands empty while it is on screen. -->
+	<variable name="ScrollingLetter">
+		<value condition="ListItem.IsParentFolder">...</value>
+		<value condition="!String.IsEmpty(ListItem.SortLetter)">$INFO[ListItem.SortLetter]</value>
+		<value>...</value>
 	</variable>
 
 	<!-- Background images/overlay -->
@@ -118,16 +164,23 @@
 	</variable>
 	
 	<!-- Busy spinner -->
-	<!-- Two sizes of the same spinner: an unsized image control takes the texture's own size, so
-	     the small one is a texture of its own rather than the large one scaled down. -->
+	<!-- Three sizes of the same spinner, one texture per size so none is drawn scaled: 200 px for
+	     the busy dialog, 60 px for the corner and heading slots, 36 px for a reloading widget. An
+	     unsized image control takes the texture's own size. APNG, not GIF, for a full alpha edge;
+	     the slow set is 30 fps rather than 60 for boxes with less than 512 MB. -->
 	<variable name="BusySpinner">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.gif</value>
-		<value>busy.gif</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.apng</value>
+		<value>busy.apng</value>
+	</variable>
+
+	<variable name="BusySpinnerMedium">
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-medium.apng</value>
+		<value>busy-medium.apng</value>
 	</variable>
 
 	<variable name="BusySpinnerSmall">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-small.gif</value>
-		<value>busy-small.gif</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-small.apng</value>
+		<value>busy-small.apng</value>
 	</variable>
 	
 	<!-- Media images -->
@@ -418,16 +471,16 @@
 		<value condition="ListItem.IsParentFolder">noop</value>
 		<value condition="[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + Skin.HasSetting(MusicListenedToStatus)">noop</value>
 		<value condition="[String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + Skin.HasSetting(VideoWatchedStatus)">noop</value>
-		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">views/OverlayProgressWatched.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,76) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),76)">views/OverlayProgress7.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,63) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),63)">views/OverlayProgress6.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,51) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),51)">views/OverlayProgress5.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,38) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),38)">views/OverlayProgress4.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,26) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),26)">views/OverlayProgress3.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,13) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),13)">views/OverlayProgress2.png</value>
-		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,0) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),0)">views/OverlayProgress1.png</value>
-		<value condition="ListItem.IsResumable">views/OverlayResumable.png</value>
-		<value condition="!String.IsEmpty(ListItem.PlayCount)">views/OverlayProgressWatched.png</value>
+		<value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">OverlayProgressWatched.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,76) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),76)">OverlayProgress7.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,63) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),63)">OverlayProgress6.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,51) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),51)">OverlayProgress5.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,38) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),38)">OverlayProgress4.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,26) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),26)">OverlayProgress3.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,13) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),13)">OverlayProgress2.png</value>
+		<value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,0) | [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + Integer.IsGreater(ListItem.Property(WatchedEpisodePercent),0)">OverlayProgress1.png</value>
+		<value condition="ListItem.IsResumable">OverlayResumable.png</value>
+		<value condition="!String.IsEmpty(ListItem.PlayCount)">OverlayProgressWatched.png</value>
 	</variable>
 	
 	<variable name="PlayerStatus">

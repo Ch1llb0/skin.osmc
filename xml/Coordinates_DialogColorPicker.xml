@@ -45,7 +45,7 @@
 				<left>14</left>
 				<width>70%</width>
 				<height>70%</height>
-				<texture>common/white.png</texture>
+				<texture border="4">common/SwatchRounded.png</texture>
 				<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 			</control>
 		</itemlayout>
@@ -57,7 +57,7 @@
 				<left>14</left>
 				<width>70%</width>
 				<height>70%</height>
-				<texture>common/white.png</texture>
+				<texture border="4">common/SwatchRounded.png</texture>
 				<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 			</control>
 		</itemlayout>
@@ -69,7 +69,7 @@
 				<left>14</left>
 				<width>70%</width>
 				<height>70%</height>
-				<texture>common/white.png</texture>
+				<texture border="4">common/SwatchRounded.png</texture>
 				<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 			</control>
 		</itemlayout>
@@ -81,7 +81,7 @@
 				<left>12</left>
 				<width>70%</width>
 				<height>70%</height>
-				<texture>common/white.png</texture>
+				<texture border="4">common/SwatchRounded.png</texture>
 				<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 			</control>
 		</itemlayout>
@@ -100,7 +100,7 @@
 				<control type="image">
 					<width>100%</width>
 					<height>100%</height>
-					<texture>common/white.png</texture>
+					<texture border="4">common/SwatchRounded.png</texture>
 					<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 				</control>
 			</control>
@@ -113,7 +113,7 @@
 				<control type="image">
 					<width>100%</width>
 					<height>100%</height>
-					<texture>common/white.png</texture>
+					<texture border="4">common/SwatchRounded.png</texture>
 					<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 				</control>
 			</control>
@@ -126,7 +126,7 @@
 				<control type="image">
 					<width>100%</width>
 					<height>100%</height>
-					<texture>common/white.png</texture>
+					<texture border="4">common/SwatchRounded.png</texture>
 					<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 				</control>
 			</control>
@@ -139,7 +139,7 @@
 				<control type="image">
 					<width>100%</width>
 					<height>100%</height>
-					<texture>common/white.png</texture>
+					<texture border="4">common/SwatchRounded.png</texture>
 					<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
 				</control>
 			</control>

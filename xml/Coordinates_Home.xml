@@ -39,24 +39,51 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeRSS_coords_4:3</include>
 	</include>
 	<include name="HomeRSS_coords_16:9">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>1920</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>1880</width>
 	</include>
 	<include name="HomeRSS_coords_21:9">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>2560</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>2520</width>
 	</include>
 	<include name="HomeRSS_coords_21:9_masked">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>2560</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>2520</width>
 	</include>
 	<include name="HomeRSS_coords_4:3">
-		<right>0</right>
-		<bottom>0</bottom>
-		<width>1440</width>
+		<right>20</right>
+		<bottom>20</bottom>
+		<width>1400</width>
+	</include>
+
+	<include name="HomeRSS_coords2">
+		<include condition="$EXP[NonMaskedCoordinates]">HomeRSS_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeRSS_coords2_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">HomeRSS_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeRSS_coords2_4:3</include>
+	</include>
+	<include name="HomeRSS_coords2_16:9">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>1832</width>
+	</include>
+	<include name="HomeRSS_coords2_21:9">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>2472</width>
+	</include>
+	<include name="HomeRSS_coords2_21:9_masked">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>2472</width>
+	</include>
+	<include name="HomeRSS_coords2_4:3">
+		<right>44</right>
+		<bottom>26</bottom>
+		<width>1352</width>
 	</include>
 
 	<include name="Home_coords1">
@@ -177,7 +204,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -204,7 +231,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -231,7 +258,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -258,7 +285,7 @@
 					<top>89</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -310,10 +337,10 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeSubMenu_coords1_4:3</include>
 	</include>
 	<include name="HomeSubMenu_coords1_16:9">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -322,10 +349,10 @@
 		</itemlayout>
 	</include>
 	<include name="HomeSubMenu_coords1_21:9">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -334,10 +361,10 @@
 		</itemlayout>
 	</include>
 	<include name="HomeSubMenu_coords1_21:9_masked">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -346,10 +373,10 @@
 		</itemlayout>
 	</include>
 	<include name="HomeSubMenu_coords1_4:3">
-		<itemlayout width="410" height="52">
+		<itemlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -365,10 +392,10 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeSubMenu_coords2_4:3</include>
 	</include>
 	<include name="HomeSubMenu_coords2_16:9">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -377,14 +404,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -394,10 +421,10 @@
 		</focusedlayout>
 	</include>
 	<include name="HomeSubMenu_coords2_21:9">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -406,14 +433,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -423,10 +450,10 @@
 		</focusedlayout>
 	</include>
 	<include name="HomeSubMenu_coords2_21:9_masked">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -435,14 +462,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -452,10 +479,10 @@
 		</focusedlayout>
 	</include>
 	<include name="HomeSubMenu_coords2_4:3">
-		<focusedlayout width="410" height="52">
+		<focusedlayout width="390" height="52">
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
@@ -464,14 +491,14 @@
 			</control>
 			<control type="image">
 				<top>44</top>
-				<width>410</width>
+				<width>390</width>
 				<height>3</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
 				<top>0</top>
-				<width>410</width>
+				<width>390</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>

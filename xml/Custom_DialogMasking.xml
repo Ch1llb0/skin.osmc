@@ -18,7 +18,7 @@
 				<!-- Window Background -->
 				<control type="image">
 					<include>Custom_DialogMasking_coords2</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<!-- Heading -->

@@ -23,7 +23,7 @@
 			<!-- TV image -->
 			<control type="image">
 				<include>DialogPVRInfo_coords1</include>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>!Window.Property(IsRadio)</visible>
@@ -32,7 +32,7 @@
 			<!-- Radio image -->
 			<control type="image">
 				<include>DialogPVRInfo_coords1</include>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+				<texture diffuse="common/masks/art-405x405.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>Window.Property(IsRadio)</visible>

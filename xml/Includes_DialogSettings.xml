@@ -134,7 +134,7 @@
 				<!-- Window Background -->
 				<control type="image">
 					<include>DialogSettings_coords10</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<!-- Heading -->

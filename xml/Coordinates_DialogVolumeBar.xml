@@ -8,27 +8,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogVolumeBar_coords1_4:3</include>
 	</include>
 	<include name="DialogVolumeBar_coords1_16:9">
-		<right>-100</right>
+		<right>20</right>
 		<top>110</top>
-		<width>650</width>
+		<width>550</width>
 		<height>40</height>
 	</include>
 	<include name="DialogVolumeBar_coords1_21:9">
-		<right>-100</right>
+		<right>20</right>
 		<top>110</top>
-		<width>650</width>
+		<width>550</width>
 		<height>40</height>
 	</include>
 	<include name="DialogVolumeBar_coords1_21:9_masked">
-		<right>-100</right>
+		<right>20</right>
 		<top>290</top>
-		<width>650</width>
+		<width>550</width>
 		<height>40</height>
 	</include>
 	<include name="DialogVolumeBar_coords1_4:3">
-		<right>-100</right>
+		<right>20</right>
 		<top>110</top>
-		<width>650</width>
+		<width>550</width>
 		<height>40</height>
 	</include>
 	
@@ -39,25 +39,25 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogVolumeBar_coords2_4:3</include>
 	</include>
 	<include name="DialogVolumeBar_coords2_16:9">
-		<right>10</right>
+		<right>30</right>
 		<top>120</top>
 		<width>530</width>
 		<height>20</height>
 	</include>
 	<include name="DialogVolumeBar_coords2_21:9">
-		<right>10</right>
+		<right>30</right>
 		<top>120</top>
 		<width>530</width>
 		<height>20</height>
 	</include>
 	<include name="DialogVolumeBar_coords2_21:9_masked">
-		<right>10</right>
+		<right>30</right>
 		<top>300</top>
 		<width>530</width>
 		<height>20</height>
 	</include>
 	<include name="DialogVolumeBar_coords2_4:3">
-		<right>10</right>
+		<right>30</right>
 		<top>120</top>
 		<width>530</width>
 		<height>20</height>

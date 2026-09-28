@@ -46,7 +46,7 @@
 					<!-- Background -->
 					<control type="image">
 						<include>MusicVisualisation_coords3</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<!-- Status -->
@@ -63,7 +63,7 @@
 					<!-- Pause -->
 					<control type="image">
 						<include>MusicVisualisation_coords4</include>
-						<texture>osd/OSDPauseNF.png</texture>
+						<texture>osd/OSDPause.png</texture>
 						<visible>Player.Paused</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -71,7 +71,7 @@
 					<!-- Play after seek -->
 					<control type="image">
 						<include>MusicVisualisation_coords4</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</texture>
 						<visible>Player.HasPerformedSeek(3) + ![Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -88,7 +88,7 @@
 					<!-- Background -->
 					<control type="image">
 						<include>MusicVisualisation_coords3</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<!-- Status -->
@@ -135,19 +135,19 @@
 					<!-- Background -->
 					<control type="image">
 						<include>MusicVisualisation_coords7</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>MusicVisualisation_coords8</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>MusicVisualisation_coords9</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -185,9 +185,9 @@
 					<control type="progress">
 						<include>MusicVisualisation_coords12</include>
 						<info>Player.Progress</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
@@ -198,9 +198,9 @@
 					<control type="progress">
 						<include>MusicVisualisation_coords12</include>
 						<info>PVR.EpgEventProgress</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
@@ -211,9 +211,9 @@
 					<control type="progress">
 						<include>MusicVisualisation_coords12</include>
 						<info>Player.ProgressCache</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
@@ -224,7 +224,7 @@
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>Player.Seekbar</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>Player.Seeking + !Pvr.IsPlayingTv</visible>
@@ -233,7 +233,7 @@
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>PVR.TimeShiftSeekbar</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>Player.Seeking + Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
@@ -243,7 +243,7 @@
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>Player.Progress</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>!String.IsEmpty(Window(12006).Property(MusicOSDSlider)) + Player.SeekEnabled + !Player.Seeking + !Pvr.IsPlayingRadio</visible>
@@ -252,7 +252,7 @@
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>PVR.TimeshiftProgressPlayPos</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>!String.IsEmpty(Window(12006).Property(MusicOSDSlider)) + Player.SeekEnabled + !Player.Seeking + Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
@@ -308,7 +308,7 @@
 				<control type="image">
 					<include>MusicVisualisation_coords17</include>
 					<fadetime>200</fadetime>
-					<texture background="true">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="common/masks/art-470x516.png" background="true">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
 

@@ -239,8 +239,8 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
-				<texture background="true" fallback="$PARAM[fallback]">$PARAM[art]</texture>
-				<aspectratio align="center" aligny="center">$PARAM[aspectratio]</aspectratio>
+				<texture background="true" fallback="$PARAM[fallback]" diffuse="common/masks/art-$PARAM[width]x$PARAM[height].png">$PARAM[art]</texture>
+				<aspectratio align="center" aligny="bottom">$PARAM[aspectratio]</aspectratio>
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
@@ -252,6 +252,10 @@
 		<param name="colordiffuse">FFFFFFFF</param>
 		<param name="textcolor">$VAR[TextColorFO]</param>
 		<param name="scroll">False</param>
+		<param name="overlayset">24</param>
+		<param name="overlaytop">0</param>
+		<param name="pvrset">24</param>
+		<param name="pvrtop">0</param>
 		<definition>
 			<control type="group">
 				<left>$PARAM[left]</left>
@@ -259,7 +263,7 @@
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<control type="image">
-					<texture background="true">views/OverlayBottomBar.png</texture>
+					<texture background="true" border="8,0,8,8">views/OverlayBottomBar.png</texture>
 					<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
 					<visible>$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording | Skin.HasSetting(ArtworkTitlesWidgets) + $EXP[WallTitlesVisible] + !ListItem.IsParentFolder</visible>
 				</control>
@@ -293,36 +297,44 @@
 				<control type="group">
 					<animation effect="slide" end="$PARAM[badgeshift],0" time="0" reversible="false" condition="Skin.HasSetting(ArtworkTitlesWidgets) + $EXP[WallTitlesVisible]">Conditional</animation>
 					<control type="image">
-						<width>$PARAM[height]</width>
+						<top>$PARAM[pvrtop]</top>
+						<width>$PARAM[pvrset]</width>
+						<height>$PARAM[pvrset]</height>
 						<centerleft>$PARAM[centerleft]</centerleft>
-						<texture background="true">pvr/Recording.png</texture>
+						<texture background="true">pvr/$PARAM[pvrset]/Recording.png</texture>
 						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
 						<visible>ListItem.IsRecording</visible>
 						<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
 					</control>
 
 					<control type="image">
-						<width>$PARAM[height]</width>
+						<top>$PARAM[pvrtop]</top>
+						<width>$PARAM[pvrset]</width>
+						<height>$PARAM[pvrset]</height>
 						<centerleft>$PARAM[centerleft]</centerleft>
-						<texture background="true">pvr/Timer.png</texture>
+						<texture background="true">pvr/$PARAM[pvrset]/Timer.png</texture>
 						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
 						<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 						<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
 					</control>
 
 					<control type="image">
-						<width>$PARAM[height]</width>
+						<top>$PARAM[pvrtop]</top>
+						<width>$PARAM[pvrset]</width>
+						<height>$PARAM[pvrset]</height>
 						<centerleft>$PARAM[centerleft]</centerleft>
-						<texture background="true">pvr/Reminder.png</texture>
+						<texture background="true">pvr/$PARAM[pvrset]/Reminder.png</texture>
 						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
 						<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 						<animation effect="slide" end="-$PARAM[slide],0" time="0" reversible="false" condition="$EXP[IsWatchedOrResumed] + $EXP[WatchedStatusVisible]">Conditional</animation>
 					</control>
 
 					<control type="image">
-						<width>$PARAM[height]</width>
+						<top>$PARAM[overlaytop]</top>
+						<width>$PARAM[overlayset]</width>
+						<height>$PARAM[overlayset]</height>
 						<centerleft>$PARAM[centerleft]</centerleft>
-						<texture background="true">$VAR[StatusOverlay]</texture>
+						<texture background="true">views/$PARAM[overlayset]/$VAR[StatusOverlay]</texture>
 						<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
 						<animation effect="slide" end="$PARAM[slide],0" time="0" reversible="false" condition="ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule | [ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording">Conditional</animation>
 					</control>
@@ -347,14 +359,14 @@
 					<left>0</left>
 					<top>0</top>
 					<width>30</width>
-					<height>16</height>
+					<height>20</height>
 					<texture colordiffuse="$VAR[OverlayColorNF]">up.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<bottom>0</bottom>
 					<width>30</width>
-					<height>16</height>
+					<height>20</height>
 					<texture colordiffuse="$VAR[OverlayColorNF]">down.png</texture>
 				</control>
 			</control>

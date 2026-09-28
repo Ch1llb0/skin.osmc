@@ -40,7 +40,7 @@
 				<!-- Image -->
 				<control type="image">
 					<include>LoginScreen_coords2</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x666.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 					<visible>!String.Contains(ListItem.Icon,unknown-user)</visible>
 				</control>

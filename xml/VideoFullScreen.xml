@@ -87,7 +87,7 @@
 					<!-- Background -->
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords7</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<!-- Status -->
@@ -104,7 +104,7 @@
 					<!-- Pause -->
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords9</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texture>
 						<visible>Player.Paused</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -112,7 +112,7 @@
 					<!-- Play after seek -->
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords9</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</texture>
 						<visible>Player.HasPerformedSeek(3) + ![Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -130,7 +130,7 @@
 					<!-- Background -->
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords7</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<!-- Status -->
@@ -179,7 +179,7 @@
 					
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords11</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 					
 					<control type="group" id="1">
@@ -208,19 +208,19 @@
 					<!-- Background -->
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords15</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>Pvr.IsPlayingTv + VideoPlayer.HasEpg | !Pvr.IsPlayingTv + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords16</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>!Pvr.IsPlayingTv + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords17</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>!Pvr.IsPlayingTv + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingTv</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -258,9 +258,9 @@
 					<control type="progress" id="1">
 						<include>VideoFullScreen_coords20</include>
 						<info>Player.Progress</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>!Pvr.IsPlayingTv + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
@@ -271,9 +271,9 @@
 					<control type="progress" id="1">
 						<include>VideoFullScreen_coords20</include>
 						<info>PVR.EpgEventProgress</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
@@ -284,9 +284,9 @@
 					<control type="progress" id="1">
 						<include>VideoFullScreen_coords20</include>
 						<info>Player.ProgressCache</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>!Pvr.IsTimeShift + Pvr.IsPlayingTv + VideoPlayer.HasEpg | Integer.IsGreater(Player.Duration,0) + !Player.IsLive + !Pvr.IsPlayingTv</visible>
@@ -315,7 +315,7 @@
 					<control type="slider" id="1">
 						<include>VideoFullScreen_coords23</include>
 						<info>Player.Seekbar</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>Player.Seeking + !Pvr.IsPlayingTv</visible>
@@ -324,7 +324,7 @@
 					<control type="slider" id="1">
 						<include>VideoFullScreen_coords23</include>
 						<info>PVR.TimeShiftSeekbar</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>Player.Seeking + Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
@@ -334,7 +334,7 @@
 					<control type="slider" id="1">
 						<include>VideoFullScreen_coords23</include>
 						<info>Player.Progress</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>!String.IsEmpty(Window(12005).Property(VideoOSDSlider)) + Player.SeekEnabled + !Player.Seeking + !Pvr.IsPlayingTv</visible>
@@ -343,7 +343,7 @@
 					<control type="slider" id="1">
 						<include>VideoFullScreen_coords23</include>
 						<info>PVR.TimeshiftProgressPlayPos</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>!String.IsEmpty(Window(12005).Property(VideoOSDSlider)) + Player.SeekEnabled + !Player.Seeking + Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
@@ -403,13 +403,13 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords27</include>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture background="true">$VAR[PlayerIcon]</texture>
+						<texture diffuse="common/masks/art-234x234.png" background="true">$VAR[PlayerIcon]</texture>
 						<include>VisibleFadeAnimation</include>
 					</control>
 				</control>
@@ -423,13 +423,13 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<control type="image" id="1">
 						<include>VideoFullScreen_coords27</include>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture background="true">$VAR[PlayerIcon]</texture>
+						<texture diffuse="common/masks/art-234x234.png" background="true">$VAR[PlayerIcon]</texture>
 						<include>VisibleFadeAnimation</include>
 					</control>
 				</control>
@@ -610,10 +610,13 @@
 				<visible>Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
 				<include>OSDVisibleHiddenAnimation</include>
 				<include>WindowFadeAnimation</include>
+				<!-- Keeps the strip 14 px under the panel: when the audio and subtitle rows show, the panel
+				     above takes the taller group (VideoFullScreen_coords28, one 30 px row more) and so does this -->
+				<animation effect="slide" end="0,30" time="0" condition="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]">Conditional</animation>
 				
 				<control type="image" id="1">
 					<include>VideoFullScreen_coords42</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="label" id="1">
@@ -640,7 +643,7 @@
 				
 				<control type="image" id="1">
 					<include>VideoFullScreen_coords44</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 				
 				<control type="label" id="1">

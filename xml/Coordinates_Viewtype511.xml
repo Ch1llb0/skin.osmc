@@ -443,11 +443,11 @@
 			</control>
 			<!-- Watched status -->
 			<control type="image">
-				<left>0</left>
-				<top>25</top>
-				<width>22</width>
-				<height>22</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<left>1</left>
+				<top>26</top>
+				<width>20</width>
+				<height>20</height>
+				<texture>views/20/$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 			</control>
@@ -466,11 +466,11 @@
 			</control>
 			<!-- Watched status -->
 			<control type="image">
-				<left>0</left>
-				<top>25</top>
-				<width>22</width>
-				<height>22</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<left>1</left>
+				<top>26</top>
+				<width>20</width>
+				<height>20</height>
+				<texture>views/20/$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 			</control>
@@ -489,11 +489,11 @@
 			</control>
 			<!-- Watched status -->
 			<control type="image">
-				<left>0</left>
-				<top>25</top>
-				<width>22</width>
-				<height>22</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<left>1</left>
+				<top>26</top>
+				<width>20</width>
+				<height>20</height>
+				<texture>views/20/$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 			</control>
@@ -512,11 +512,11 @@
 			</control>
 			<!-- Watched status -->
 			<control type="image">
-				<left>0</left>
-				<top>25</top>
-				<width>22</width>
-				<height>22</height>
-				<texture>$VAR[StatusOverlay]</texture>
+				<left>1</left>
+				<top>26</top>
+				<width>20</width>
+				<height>20</height>
+				<texture>views/20/$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 			</control>
@@ -553,7 +553,7 @@
 						<top>124</top>
 						<width>1018</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -575,7 +575,7 @@
 						<top>75</top>
 						<width>1018</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -592,11 +592,11 @@
 				</control>
 				<!-- Watched status -->
 				<control type="image">
-					<left>0</left>
-					<top>61</top>
-					<width>22</width>
-					<height>22</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<left>1</left>
+					<top>62</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>views/20/$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				</control>
@@ -627,7 +627,7 @@
 						<top>124</top>
 						<width>1658</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -649,7 +649,7 @@
 						<top>75</top>
 						<width>1658</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -666,11 +666,11 @@
 				</control>
 				<!-- Watched status -->
 				<control type="image">
-					<left>0</left>
-					<top>61</top>
-					<width>22</width>
-					<height>22</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<left>1</left>
+					<top>62</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>views/20/$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				</control>
@@ -701,7 +701,7 @@
 						<top>124</top>
 						<width>1658</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -723,7 +723,7 @@
 						<top>75</top>
 						<width>1658</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -740,11 +740,11 @@
 				</control>
 				<!-- Watched status -->
 				<control type="image">
-					<left>0</left>
-					<top>61</top>
-					<width>22</width>
-					<height>22</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<left>1</left>
+					<top>62</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>views/20/$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				</control>
@@ -775,7 +775,7 @@
 						<top>124</top>
 						<width>538</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -797,7 +797,7 @@
 						<top>75</top>
 						<width>538</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -814,11 +814,11 @@
 				</control>
 				<!-- Watched status -->
 				<control type="image">
-					<left>0</left>
-					<top>61</top>
-					<width>22</width>
-					<height>22</height>
-					<texture>$VAR[StatusOverlay]</texture>
+					<left>1</left>
+					<top>62</top>
+					<width>20</width>
+					<height>20</height>
+					<texture>views/20/$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 				</control>

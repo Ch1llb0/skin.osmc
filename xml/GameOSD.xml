@@ -20,13 +20,13 @@
 			<!-- Background -->
 			<control type="image" id="1">
 				<include>GameOSD_coords2</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Pause -->
 			<control type="image" id="1">
 			<include>GameOSD_coords3</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texture>
 				<visible>player.paused</visible>
 			</control>
 
@@ -43,7 +43,7 @@
 				<!-- Window Background -->
 				<control type="image">
 					<include>GameOSD_coords5</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 				
 				<!-- Heading -->

@@ -192,7 +192,7 @@
 					<!-- Image -->
 					<control type="image">
 						<include>DialogGameControllers_coords9</include>
-						<texture>$INFO[Container(3).ListItem.Icon]</texture>
+						<texture diffuse="common/masks/art-405x600.png">$INFO[Container(3).ListItem.Icon]</texture>
 						<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 						<aspectratio aligny="center">keep</aspectratio>
 						<visible>Control.IsVisible(3)</visible>

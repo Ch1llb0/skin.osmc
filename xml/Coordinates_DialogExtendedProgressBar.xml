@@ -8,28 +8,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogExtendedProgressBar_coords1_4:3</include>
 	</include>
 	<include name="DialogExtendedProgressBar_coords1_16:9">
-		<right>-100</right>
+		<right>20</right>
 		<top>90</top>
-		<width>650</width>
-		<height>75</height>
+		<width>550</width>
+		<height>94</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords1_21:9">
-		<right>-100</right>
+		<right>20</right>
 		<top>90</top>
-		<width>650</width>
-		<height>75</height>
+		<width>550</width>
+		<height>94</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords1_21:9_masked">
-		<right>-100</right>
+		<right>20</right>
 		<top>270</top>
-		<width>650</width>
-		<height>75</height>
+		<width>550</width>
+		<height>94</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords1_4:3">
-		<right>-100</right>
+		<right>20</right>
 		<top>90</top>
-		<width>650</width>
-		<height>75</height>
+		<width>550</width>
+		<height>94</height>
 	</include>
 	
 	<include name="DialogExtendedProgressBar_coords2">
@@ -39,25 +39,25 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogExtendedProgressBar_coords2_4:3</include>
 	</include>
 	<include name="DialogExtendedProgressBar_coords2_16:9">
-		<right>480</right>
+		<right>500</right>
 		<top>96</top>
 		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords2_21:9">
-		<right>480</right>
+		<right>500</right>
 		<top>96</top>
 		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords2_21:9_masked">
-		<right>480</right>
+		<right>500</right>
 		<top>276</top>
 		<width>60</width>
 		<height>60</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords2_4:3">
-		<right>480</right>
+		<right>500</right>
 		<top>96</top>
 		<width>60</width>
 		<height>60</height>
@@ -70,25 +70,25 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogExtendedProgressBar_coords3_4:3</include>
 	</include>
 	<include name="DialogExtendedProgressBar_coords3_16:9">
-		<right>10</right>
+		<right>30</right>
 		<top>100</top>
 		<width>460</width>
 		<height>20</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords3_21:9">
-		<right>10</right>
+		<right>30</right>
 		<top>100</top>
 		<width>460</width>
 		<height>20</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords3_21:9_masked">
-		<right>10</right>
+		<right>30</right>
 		<top>280</top>
 		<width>460</width>
 		<height>20</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords3_4:3">
-		<right>10</right>
+		<right>30</right>
 		<top>100</top>
 		<width>460</width>
 		<height>20</height>
@@ -101,25 +101,25 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogExtendedProgressBar_coords4_4:3</include>
 	</include>
 	<include name="DialogExtendedProgressBar_coords4_16:9">
-		<right>10</right>
+		<right>30</right>
 		<top>125</top>
 		<width>460</width>
 		<height>25</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords4_21:9">
-		<right>10</right>
+		<right>30</right>
 		<top>125</top>
 		<width>460</width>
 		<height>25</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords4_21:9_masked">
-		<right>10</right>
+		<right>30</right>
 		<top>305</top>
 		<width>460</width>
 		<height>25</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords4_4:3">
-		<right>10</right>
+		<right>30</right>
 		<top>125</top>
 		<width>460</width>
 		<height>25</height>
@@ -132,28 +132,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogExtendedProgressBar_coords5_4:3</include>
 	</include>
 	<include name="DialogExtendedProgressBar_coords5_16:9">
-		<right>0</right>
-		<top>163</top>
-		<width>550</width>
-		<height>2</height>
+		<right>32</right>
+		<top>160</top>
+		<width>526</width>
+		<height>12</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords5_21:9">
-		<right>0</right>
-		<top>163</top>
-		<width>550</width>
-		<height>2</height>
+		<right>32</right>
+		<top>160</top>
+		<width>526</width>
+		<height>12</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords5_21:9_masked">
-		<right>0</right>
-		<top>343</top>
-		<width>550</width>
-		<height>2</height>
+		<right>32</right>
+		<top>340</top>
+		<width>526</width>
+		<height>12</height>
 	</include>
 	<include name="DialogExtendedProgressBar_coords5_4:3">
-		<right>0</right>
-		<top>163</top>
-		<width>550</width>
-		<height>2</height>
+		<right>32</right>
+		<top>160</top>
+		<width>526</width>
+		<height>12</height>
 	</include>
 
 </includes>

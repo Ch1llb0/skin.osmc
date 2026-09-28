@@ -301,7 +301,7 @@
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>140</left>
@@ -343,7 +343,7 @@
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>140</left>
@@ -385,7 +385,7 @@
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>140</left>
@@ -427,7 +427,7 @@
 				<bordersize>6</bordersize>
 				<aspectratio>keep</aspectratio>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>140</left>
@@ -480,7 +480,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -498,7 +498,7 @@
 						<left>140</left>
 						<width>880</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -519,7 +519,7 @@
 						<top>48</top>
 						<width>880</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -550,7 +550,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -568,7 +568,7 @@
 						<left>140</left>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -589,7 +589,7 @@
 						<top>48</top>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -620,7 +620,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -638,7 +638,7 @@
 						<left>140</left>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -659,7 +659,7 @@
 						<top>48</top>
 						<width>1520</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -689,7 +689,7 @@
 					<bordersize>6</bordersize>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-96x96.png">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Label2)</visible>
@@ -707,7 +707,7 @@
 						<left>140</left>
 						<width>400</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -728,7 +728,7 @@
 						<top>48</top>
 						<width>400</width>
 						<height>3</height>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
@@ -974,7 +974,7 @@
 					<left>0</left>
 					<width>372</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
@@ -1019,7 +1019,7 @@
 					<left>0</left>
 					<width>412</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
@@ -1064,7 +1064,7 @@
 					<left>0</left>
 					<width>412</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">
@@ -1109,7 +1109,7 @@
 					<left>0</left>
 					<width>267</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="gamecontrollerlist">

@@ -150,7 +150,7 @@
 					<top>79</top>
 					<width>1018</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -177,7 +177,7 @@
 					<top>79</top>
 					<width>1658</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -204,7 +204,7 @@
 					<top>79</top>
 					<width>1658</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -231,7 +231,7 @@
 					<top>79</top>
 					<width>538</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -244,25 +244,25 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">EventLog_coords5_4:3</include>
 	</include>
 	<include name="EventLog_coords5_16:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="EventLog_coords5_21:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="EventLog_coords5_21:9_masked">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="EventLog_coords5_4:3">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>

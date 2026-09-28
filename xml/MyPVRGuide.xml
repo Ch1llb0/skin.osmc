@@ -48,7 +48,7 @@
 						<timeblocks>54</timeblocks>
 						<pagecontrol>60</pagecontrol>
 						<viewtype label="$LOCALIZE[19032]">list</viewtype>
-						<progresstexture border="4,61,4,4" colordiffuse="$VAR[epggridunfocusdim]">pvr/ProgressTimeline.png</progresstexture>
+						<progresstexture border="4,61,4,5" colordiffuse="$VAR[epggridunfocusdim]">pvr/ProgressTimeline.png</progresstexture>
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 
 						<include>MyPVRGuide_coords2</include>
@@ -83,7 +83,7 @@
 							<include>MyPVRGuide_coords9</include>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<fadetime>200</fadetime>
-							<texture background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
+							<texture diffuse="common/masks/art-150x150.png" background="true" fallback="DefaultLiveTV.png">$VAR[PVRChannelIcon]</texture>
 							<visible>Window.IsVisible(TVGuide)</visible>
 						</control>
 						
@@ -91,7 +91,7 @@
 							<include>MyPVRGuide_coords9</include>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<fadetime>200</fadetime>
-							<texture background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
+							<texture diffuse="common/masks/art-150x150.png" background="true" fallback="DefaultRadio.png">$VAR[PVRChannelIcon]</texture>
 							<visible>Window.IsVisible(RadioGuide)</visible>
 						</control>
 

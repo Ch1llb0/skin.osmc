@@ -36,7 +36,7 @@
 					<include>MediaFlags_coords2</include>
 					<visible>!String.IsEmpty(ListItem.Duration) + [Control.IsVisible(9989) | Control.IsVisible(9991) | Control.IsVisible(9993)]</visible>
 					<control type="image">
-						<include>MediaFlags_coords7</include>
+						<include>MediaFlags_coords3</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 						<texture>Duration.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
@@ -74,7 +74,7 @@
 					<include>MediaFlags_coords2</include>
 					<visible>!String.IsEmpty(Control.GetLabel(9992))</visible>
 					<control type="image">
-						<include>MediaFlags_coords6</include>
+						<include>MediaFlags_coords3</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 						<texture>Audio.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
@@ -93,7 +93,7 @@
 					<include>MediaFlags_coords2</include>
 					<visible>!String.IsEmpty(Control.GetLabel(9994))</visible>
 					<control type="image">
-						<include>MediaFlags_coords6</include>
+						<include>MediaFlags_coords3</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 						<texture>Audio.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
@@ -133,7 +133,7 @@
 					<include>MediaFlags_coords2</include>
 					<visible>!String.IsEmpty(ListItem.Duration) + [Control.IsVisible(9995) | Control.IsVisible(9997)]</visible>
 					<control type="image">
-						<include>MediaFlags_coords7</include>
+						<include>MediaFlags_coords3</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 						<texture>Duration.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
@@ -152,7 +152,7 @@
 					<include>MediaFlags_coords2</include>
 					<visible>!String.IsEmpty(Control.GetLabel(9996))</visible>
 					<control type="image">
-						<include>MediaFlags_coords6</include>
+						<include>MediaFlags_coords3</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 						<texture>Audio.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
@@ -171,7 +171,7 @@
 					<include>MediaFlags_coords2</include>
 					<visible>!String.IsEmpty(Control.GetLabel(9998))</visible>
 					<control type="image">
-						<include>MediaFlags_coords6</include>
+						<include>MediaFlags_coords3</include>
 						<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 						<texture>Subtitles.png</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
@@ -193,7 +193,7 @@
 				<visible>String.IsEqual(Skin.String(mediaflags),Duration only) | String.IsEqual(Skin.String(mediaflags),File only) + !Control.IsVisible(9989) + !Control.IsVisible(9991) + !Control.IsVisible(9993) | String.IsEqual(Skin.String(mediaflags),Language only) + !Control.IsVisible(9995) + !Control.IsVisible(9997) | [String.IsEqual(Skin.String(mediaflags),File first) | String.IsEqual(Skin.String(mediaflags),Language first)] + !Control.IsVisible(9989) + !Control.IsVisible(9991) + !Control.IsVisible(9993) + !Control.IsVisible(9995) + !Control.IsVisible(9997) | Window.IsVisible(MyPlaylist.xml)</visible>
 				<visible>!String.IsEmpty(ListItem.Duration)</visible>
 				<control type="image">
-					<include>MediaFlags_coords7</include>
+					<include>MediaFlags_coords3</include>
 					<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 					<texture>Duration.png</texture>
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>

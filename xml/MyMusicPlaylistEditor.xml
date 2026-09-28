@@ -124,8 +124,8 @@
 						<!-- Image -->
 						<control type="image">
 							<include>MyMusicPlaylistEditor_coords10</include>
-							<texture fallback="DefaultAddonMusic.png">$INFO[Container(50).ListItem.Icon]</texture>
-							<aspectratio aligny="top">scale</aspectratio>
+							<texture diffuse="common/masks/art-300x300.png" fallback="DefaultAddonMusic.png">$INFO[Container(50).ListItem.Icon]</texture>
+							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						</control>
 
 						<!-- Details -->
@@ -154,8 +154,8 @@
 						<!-- Image -->
 						<control type="image">
 							<include>MyMusicPlaylistEditor_coords10</include>
-							<texture fallback="DefaultAddonMusic.png">$INFO[Container(100).ListItem.Icon]</texture>
-							<aspectratio aligny="top">scale</aspectratio>
+							<texture diffuse="common/masks/art-300x300.png" fallback="DefaultAddonMusic.png">$INFO[Container(100).ListItem.Icon]</texture>
+							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						</control>
 
 						<!-- Details -->

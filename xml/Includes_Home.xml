@@ -75,7 +75,7 @@
 				<!-- Background -->
 				<control type="image">
 					<include>SubMenu_coords2</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="list" id="9001">
@@ -86,7 +86,6 @@
 					<orientation>vertical</orientation>
 					<defaultcontrol always="true">1</defaultcontrol>
 
-					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,20)">Conditional</animation>
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,19)">Conditional</animation>
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,18)">Conditional</animation>
 					<animation effect="slide" time="0" end="0,26" condition="Integer.IsLess(Container(9001).NumItems,17)">Conditional</animation>

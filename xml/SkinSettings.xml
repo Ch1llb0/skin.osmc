@@ -355,7 +355,7 @@
 						</control>
 						<control type="image" id="213">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[SolidBackgroundColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[SolidBackgroundColor]">common/SwatchRounded.png</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
 						</control>
@@ -462,7 +462,7 @@
 						</control>
 						<control type="image" id="307">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[BackgroundColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[BackgroundColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -481,7 +481,7 @@
 						</control>
 						<control type="image" id="309">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[MenuOSDColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[MenuOSDColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -500,7 +500,7 @@
 						</control>
 						<control type="image" id="311">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[TextColorFO]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[TextColorFO]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -519,7 +519,7 @@
 						</control>
 						<control type="image" id="313">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[TextColorNF]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[TextColorNF]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -538,7 +538,7 @@
 						</control>
 						<control type="image" id="315">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[SelectedColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[SelectedColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -557,7 +557,7 @@
 						</control>
 						<control type="image" id="317">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[DisabledColor]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[DisabledColor]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -576,7 +576,7 @@
 						</control>
 						<control type="image" id="319">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[OverlayColorFO]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[OverlayColorFO]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>
@@ -595,7 +595,7 @@
 						</control>
 						<control type="image" id="321">
 							<include>SkinSettings_coords19</include>
-							<texture colordiffuse="$VAR[OverlayColorNF]">common/white.png</texture>
+							<texture border="4" colordiffuse="$VAR[OverlayColorNF]">common/SwatchRounded.png</texture>
 							<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 							<aspectratio>keep</aspectratio>
 							<visible>String.IsEqual(Skin.String(DefaultColors),no)</visible>

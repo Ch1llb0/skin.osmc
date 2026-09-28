@@ -19,7 +19,7 @@
 
 				<control type="image">
 					<include>DialogPVRGuideControls_coords1</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="grouplist" id="7000">

@@ -27,11 +27,21 @@
 				<visible>!String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 				<visible>[!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set) | !String.IsEqual(ListItem.DBTYPE,set) + String.IsEmpty(Window(12003).Property(cast)) + [String.IsEmpty(Window(12003).Property(extended)) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]</visible>
 				<include>VisibleFadeAnimation</include>
+				<!-- A poster is 2:3 and everything else (episode thumbs, fanart, video thumbs) is 16:9, so each
+				     takes the mask for the shape it is drawn at and its corners stay round -->
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
 					<fadetime>100</fadetime>
-					<texture fallback="DefaultVideo.png" background="true">$VAR[VideoInfoImage]</texture>
+					<texture fallback="DefaultVideo.png" background="true" diffuse="common/masks/art-405x600.png">$VAR[VideoInfoImage]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				<control type="image">
+					<include>DialogVideoInfo_coords1</include>
+					<fadetime>100</fadetime>
+					<texture fallback="DefaultVideo.png" background="true" diffuse="common/masks/art-405x228.png">$VAR[VideoInfoImage]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>String.IsEqual(ListItem.DBTYPE,episode) | String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 			</control>
 
@@ -42,7 +52,7 @@
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
 					<fadetime>100</fadetime>
-					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[Container(50).ListItem.Icon]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
 			</control>
@@ -54,7 +64,7 @@
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
 					<fadetime>100</fadetime>
-					<texture>$INFO[Container(50).ListItem.Art(poster)]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[Container(50).ListItem.Art(poster)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
 			</control>
@@ -64,7 +74,7 @@
 				<visible>String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 				<include>DialogVideoInfo_coords1</include>
 				<fadetime>100</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x600.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 			</control>

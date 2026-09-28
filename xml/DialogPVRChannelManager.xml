@@ -84,7 +84,7 @@
 				<!-- Current channel logo -->
 				<control type="image" id="10">
 					<include>DialogPVRChannelManager_coords9</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 

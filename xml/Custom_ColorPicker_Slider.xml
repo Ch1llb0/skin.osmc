@@ -65,7 +65,7 @@
 			<!-- Live Preview -->
 			<control type="image">
 				<include>Custom_ColorPicker_Slider_coords3</include>
-				<texture colordiffuse="$VAR[ColorPicker_PercentToHEX_Color]">common/white.png</texture>
+				<texture border="8" colordiffuse="$VAR[ColorPicker_PercentToHEX_Color]">common/PanelSolid.png</texture>
 				<bordertexture colordiffuse="00FFFFFF">common/white.png</bordertexture>
 				<aspectratio>keep</aspectratio>
 				<visible>!String.IsEqual(Control.GetLabel(1000),#00000000)</visible>

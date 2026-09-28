@@ -407,8 +407,11 @@
 				<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Image - TV -->
 			<include content="MediaViewImageNF">
@@ -416,8 +419,11 @@
 				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Title strip -->
 			<include>Viewtype533_coords25</include>
@@ -431,8 +437,11 @@
 				<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Image - TV -->
 			<include content="MediaViewImageNF">
@@ -440,8 +449,11 @@
 				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Title strip -->
 			<include>Viewtype533_coords25</include>
@@ -455,8 +467,11 @@
 				<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Image - TV -->
 			<include content="MediaViewImageNF">
@@ -464,8 +479,11 @@
 				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Title strip -->
 			<include>Viewtype533_coords25</include>
@@ -479,8 +497,11 @@
 				<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Image - TV -->
 			<include content="MediaViewImageNF">
@@ -488,8 +509,11 @@
 				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">533</param>
 				<param name="coords">Viewtype533_coords19</param>
+
+				<param name="mask">common/masks/art-144x216.png</param>
 				<param name="coords2">Viewtype533_coords20</param>
 				<param name="coords3">Viewtype533_coords21</param>
+				<param name="overlayset">16</param>
 			</include>
 			<!-- Title strip -->
 			<include>Viewtype533_coords25</include>
@@ -512,8 +536,11 @@
 					<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Image - TV -->
 				<include content="MediaViewImageFO">
@@ -521,8 +548,11 @@
 					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Title strip -->
 				<include>Viewtype533_coords26</include>
@@ -539,8 +569,11 @@
 					<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Image - TV -->
 				<include content="MediaViewImageFO">
@@ -548,8 +581,11 @@
 					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Title strip -->
 				<include>Viewtype533_coords26</include>
@@ -566,8 +602,11 @@
 					<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Image - TV -->
 				<include content="MediaViewImageFO">
@@ -575,8 +614,11 @@
 					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Title strip -->
 				<include>Viewtype533_coords26</include>
@@ -593,8 +635,11 @@
 					<param name="visible">Container.Content(movies) | Container.Content(sets)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Image - TV -->
 				<include content="MediaViewImageFO">
@@ -602,8 +647,11 @@
 					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">533</param>
 					<param name="coords">Viewtype533_coords22</param>
+
+					<param name="mask">common/masks/art-160x240.png</param>
 					<param name="coords2">Viewtype533_coords23</param>
 					<param name="coords3">Viewtype533_coords24</param>
+					<param name="overlayset">16</param>
 				</include>
 				<!-- Title strip -->
 				<include>Viewtype533_coords26</include>
@@ -680,19 +728,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype533_coords21_4:3</include>
 	</include>
 	<include name="Viewtype533_coords21_16:9">
+		<top>0</top>
 		<width>16</width>
+		<height>16</height>
 		<centerleft>72</centerleft>
 	</include>
 	<include name="Viewtype533_coords21_21:9">
+		<top>0</top>
 		<width>16</width>
+		<height>16</height>
 		<centerleft>72</centerleft>
 	</include>
 	<include name="Viewtype533_coords21_21:9_masked">
+		<top>0</top>
 		<width>16</width>
+		<height>16</height>
 		<centerleft>72</centerleft>
 	</include>
 	<include name="Viewtype533_coords21_4:3">
+		<top>0</top>
 		<width>16</width>
+		<height>16</height>
 		<centerleft>72</centerleft>
 	</include>
 	
@@ -765,19 +821,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype533_coords24_4:3</include>
 	</include>
 	<include name="Viewtype533_coords24_16:9">
-		<width>18</width>
+		<top>1</top>
+		<width>16</width>
+		<height>16</height>
 		<centerleft>80</centerleft>
 	</include>
 	<include name="Viewtype533_coords24_21:9">
-		<width>18</width>
+		<top>1</top>
+		<width>16</width>
+		<height>16</height>
 		<centerleft>80</centerleft>
 	</include>
 	<include name="Viewtype533_coords24_21:9_masked">
-		<width>18</width>
+		<top>1</top>
+		<width>16</width>
+		<height>16</height>
 		<centerleft>80</centerleft>
 	</include>
 	<include name="Viewtype533_coords24_4:3">
-		<width>18</width>
+		<top>1</top>
+		<width>16</width>
+		<height>16</height>
 		<centerleft>80</centerleft>
 	</include>
 
@@ -786,12 +850,13 @@
 			<param name="coords">Viewtype533_coords20</param>
 			<param name="font">Font16-title</param>
 			<param name="height">16</param>
-			<param name="pad">5</param>
-			<param name="titlewide">134</param>
-			<param name="titlenarrow">113</param>
+			<param name="pad">8</param>
+			<param name="titlewide">128</param>
+			<param name="titlenarrow">107</param>
 			<param name="badge">16</param>
-			<param name="badgeleft">123</param>
+			<param name="badgeleft">120</param>
 			<param name="badgetop">0</param>
+			<param name="overlayset">16</param>
 		</include>
 	</include>
 	
@@ -802,12 +867,13 @@
 			<param name="font">Font18-title</param>
 			<param name="scrollspeed">28</param>
 			<param name="height">18</param>
-			<param name="pad">6</param>
-			<param name="titlewide">148</param>
-			<param name="titlenarrow">124</param>
-			<param name="badge">18</param>
-			<param name="badgeleft">136</param>
-			<param name="badgetop">0</param>
+			<param name="pad">8</param>
+			<param name="titlewide">144</param>
+			<param name="titlenarrow">120</param>
+			<param name="badge">16</param>
+			<param name="badgeleft">135</param>
+			<param name="badgetop">1</param>
+			<param name="overlayset">16</param>
 		</include>
 	</include>
 

@@ -31,7 +31,7 @@
 				<!-- Image -->
 				<control type="image">
 					<include>EventLog_coords1</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[ListItem.Icon]</texture>
 					<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>

@@ -13,7 +13,7 @@
 			<!-- Window heading -->
 			<control type="image">
 				<include>heading_coords1</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerSmall]</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerMedium]</texture>
 				<visible>$PARAM[busyspinner]</visible>
 				<animation effect="slide" time="0" end="0,17" condition="String.IsEmpty(Control.GetLabel(9999)) | ![$PARAM[secondary]]">Conditional</animation>
 			</control>
@@ -49,14 +49,14 @@
 				<visible>Control.IsEnabled(3) | Control.IsEnabled(4)</visible>
 				<visible>!Container.Content(seasons)</visible>
 				<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[563]) | String.IsEqual(Container.SortMethod,$LOCALIZE[566])</visible>
-				<animation effect="slide" start="-75,0" end="0,0" time="200">VisibleChange</animation>
+				<animation effect="slide" start="-95,0" end="0,0" time="200">VisibleChange</animation>
 				<control type="image">
 					<include>ScrollingLabel_coords1</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 				<control type="label">
 					<include>ScrollingLabel_coords2</include>
-					<label>$INFO[ListItem.SortLetter]</label>
+					<label>$VAR[ScrollingLetter]</label>
 					<font>Font72-bold</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -326,7 +326,7 @@
 						<include>nowplaying_coords7</include>
 						<aligny>top</aligny>
 						<align>right</align>
-						<texture fallback="DefaultFile.png" background="true">$VAR[PlayerIcon]</texture>
+						<texture diffuse="common/masks/art-60x60.png" fallback="DefaultFile.png" background="true">$VAR[PlayerIcon]</texture>
 						<aspectratio aligny="center">keep</aspectratio>
 						<visible>Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)</visible>
 						<include>VisibleFadeAnimation</include>
@@ -335,13 +335,13 @@
 					<!-- Play/Paused Image -->
 					<control type="image">
 						<include>nowplaying_coords8</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</texture>
 						<visible>!Player.Paused + [Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>nowplaying_coords8</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texture>
 						<visible>Player.Paused + [Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>

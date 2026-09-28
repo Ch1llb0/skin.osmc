@@ -703,4 +703,89 @@
 		<height>84</height>
 	</include>
 	
+	<!-- The mask that rounds a full-screen dialog's image layers while it opens and closes, one per canvas -->
+	<include name="DialogBackgroundImageTexture">
+		<param name="texture" />
+		<definition>
+			<include content="DialogBackgroundImageTexture_16:9" condition="$EXP[NonMaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageTexture_21:9" condition="String.IsEqual(Skin.AspectRatio,21:9)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageTexture_21:9_masked" condition="$EXP[MaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageTexture_4:3" condition="String.IsEqual(Skin.AspectRatio,4:3)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_16:9">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMask16x9.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_21:9">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMask21x9.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_21:9_masked">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMaskMasked.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_4:3">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMask4x3.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	
+	<include name="DialogBackgroundImageImagePath">
+		<param name="texture" />
+		<definition>
+			<include content="DialogBackgroundImageImagePath_16:9" condition="$EXP[NonMaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageImagePath_21:9" condition="String.IsEqual(Skin.AspectRatio,21:9)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageImagePath_21:9_masked" condition="$EXP[MaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageImagePath_4:3" condition="String.IsEqual(Skin.AspectRatio,4:3)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_16:9">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMask16x9.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_21:9">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMask21x9.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_21:9_masked">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMaskMasked.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_4:3">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMask4x3.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	
 </includes>

@@ -288,26 +288,26 @@
 	</include>
 	<include name="ScrollingLabel_coords1_16:9">
 		<top>90</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords1_21:9">
 		<top>90</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords1_21:9_masked">
 		<top>270</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords1_4:3">
 		<top>90</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	
@@ -319,25 +319,25 @@
 	</include>
 	<include name="ScrollingLabel_coords2_16:9">
 		<top>90</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords2_21:9">
 		<top>90</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords2_21:9_masked">
 		<top>270</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords2_4:3">
 		<top>90</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
@@ -595,27 +595,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">nowplaying_coords8_4:3</include>
 	</include>
 	<include name="nowplaying_coords8_16:9">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="nowplaying_coords8_21:9">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="nowplaying_coords8_21:9_masked">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="nowplaying_coords8_4:3">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	

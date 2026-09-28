@@ -11,25 +11,25 @@
 		<left>0</left>
 		<top>0</top>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords1_21:9">
 		<left>0</left>
 		<top>0</top>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords1_21:9_masked">
 		<left>0</left>
 		<top>0</top>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords1_4:3">
 		<left>0</left>
 		<top>0</top>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	
 	<include name="SettingsScreenCalibration_coords2">
@@ -42,25 +42,25 @@
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords2_21:9">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords2_21:9_masked">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords2_4:3">
 		<right>0</right>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	
 	<include name="SettingsScreenCalibration_coords3">
@@ -119,25 +119,25 @@
 		<left>0</left>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords5_21:9">
 		<left>0</left>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords5_21:9_masked">
 		<left>0</left>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	<include name="SettingsScreenCalibration_coords5_4:3">
 		<left>0</left>
 		<bottom>0</bottom>
 		<width>44</width>
-		<height>42</height>
+		<height>44</height>
 	</include>
 	
 	<include name="SettingsScreenCalibration_coords6">

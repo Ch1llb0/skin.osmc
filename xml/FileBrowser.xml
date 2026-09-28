@@ -23,13 +23,13 @@
 			<!-- Image -->
 			<control type="image">
 				<include>FileBrowser_coords1</include>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x600.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>!String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="image">
 				<include>FileBrowser_coords1</include>
-				<texture flipx="true">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x600.png" flipx="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>String.Contains(Control.GetLabel(416),*)</visible>
 			</control>

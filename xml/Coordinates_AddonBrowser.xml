@@ -8,25 +8,25 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">AddonBrowser_coords1_4:3</include>
 	</include>
 	<include name="AddonBrowser_coords1_16:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="AddonBrowser_coords1_21:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="AddonBrowser_coords1_21:9_masked">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="AddonBrowser_coords1_4:3">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>

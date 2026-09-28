@@ -48,8 +48,8 @@
 			<control type="progress" id="20">
 				<include>DialogConfirm_coords2</include>
 				<info>System.Progressbar</info>
-				<texturebg border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texturebg>
-				<midtexture colordiffuse="$VAR[OverlayColorFO]">common/white.png</midtexture>
+				<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+				<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 			</control>
 
 			<!-- Buttons -->

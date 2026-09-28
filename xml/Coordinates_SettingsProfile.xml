@@ -161,7 +161,7 @@
 				<width>72</width>
 				<height>72</height>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 			</control>
 		</itemlayout>
 	</include>
@@ -180,7 +180,7 @@
 				<width>72</width>
 				<height>72</height>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 			</control>
 		</itemlayout>
 	</include>
@@ -199,7 +199,7 @@
 				<width>72</width>
 				<height>72</height>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 			</control>
 		</itemlayout>
 	</include>
@@ -218,7 +218,7 @@
 				<width>72</width>
 				<height>72</height>
 				<include>NonFocusImageFadeAnimation</include>
-				<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 			</control>
 		</itemlayout>
 	</include>
@@ -246,14 +246,14 @@
 					<top>68</top>
 					<width>1170</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
 					<top>2</top>
 					<width>72</width>
 					<height>72</height>
-					<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -275,14 +275,14 @@
 					<top>68</top>
 					<width>1810</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
 					<top>2</top>
 					<width>72</width>
 					<height>72</height>
-					<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -304,14 +304,14 @@
 					<top>68</top>
 					<width>1810</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
 					<top>2</top>
 					<width>72</width>
 					<height>72</height>
-					<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -333,14 +333,14 @@
 					<top>68</top>
 					<width>690</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="image">
 					<right>0</right>
 					<top>2</top>
 					<width>72</width>
 					<height>72</height>
-					<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-72x72.png" fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>

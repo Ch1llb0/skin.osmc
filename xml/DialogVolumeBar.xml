@@ -16,7 +16,7 @@
 			<!-- Background -->
 			<control type="image">
 				<include>DialogVolumeBar_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading -->

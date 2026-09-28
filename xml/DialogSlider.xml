@@ -20,7 +20,7 @@
 			<!-- Background image -->
 			<control type="image">
 				<include>DialogSlider_coords2</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading -->

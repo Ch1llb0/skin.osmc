@@ -89,23 +89,23 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MusicVisualisation_coords4_4:3</include>
 	</include>
 	<include name="MusicVisualisation_coords4_16:9">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="MusicVisualisation_coords4_21:9">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="MusicVisualisation_coords4_21:9_masked">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="MusicVisualisation_coords4_4:3">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 

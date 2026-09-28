@@ -135,7 +135,7 @@
 					<top>50</top>
 					<width>513</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -159,7 +159,7 @@
 					<top>50</top>
 					<width>727</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -183,7 +183,7 @@
 					<top>50</top>
 					<width>727</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -207,7 +207,7 @@
 					<top>50</top>
 					<width>353</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -327,7 +327,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -347,7 +347,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -367,7 +367,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -387,7 +387,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -418,7 +418,7 @@
 					<top>50</top>
 					<width>420</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -427,7 +427,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -451,7 +451,7 @@
 					<top>50</top>
 					<width>640</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -460,7 +460,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -484,7 +484,7 @@
 					<top>50</top>
 					<width>640</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -493,7 +493,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -517,7 +517,7 @@
 					<top>50</top>
 					<width>266</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -526,7 +526,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -646,7 +646,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -666,7 +666,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -686,7 +686,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -706,7 +706,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -737,7 +737,7 @@
 					<top>50</top>
 					<width>421</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -746,7 +746,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -770,7 +770,7 @@
 					<top>50</top>
 					<width>639</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -779,7 +779,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -803,7 +803,7 @@
 					<top>50</top>
 					<width>639</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -812,7 +812,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -836,7 +836,7 @@
 					<top>50</top>
 					<width>267</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -845,7 +845,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>

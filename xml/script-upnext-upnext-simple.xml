@@ -13,7 +13,7 @@
 			<!-- Background -->
 			<control type="image">
 				<include>script-upnext-upnext-simple_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 			
 			<control type="group">
@@ -53,7 +53,8 @@
 				<!-- Progress -->
 				<control type="progress" id="3014">
 					<include>script-upnext-upnext-simple_coords6</include>
-					<midtexture colordiffuse="$VAR[OverlayColorFO]">common/white.png</midtexture>
+					<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
 				</control>
 
 			</control>

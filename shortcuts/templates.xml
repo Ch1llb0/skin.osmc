@@ -4,20 +4,20 @@
 	<!-- Widget dimensions, one row per layout -->
 	<presets>
 		<preset name="widgetLayout">
-			<values condition="layout=wide" layoutWidth="320" layoutHeight="240" imageWidthNoFocus="288" imageHeightNoFocus="216" imageWidthFocus="320" imageHeightFocus="240" overlayHeight="32" overlayFont="Font30" overlayScrollSpeed="49" overlayPad="11" overlayTitleRight="75" overlayBadgeShift="101" overlaySlide="16" />
-			<values condition="layout=square" layoutWidth="320" layoutHeight="320" imageWidthNoFocus="288" imageHeightNoFocus="288" imageWidthFocus="320" imageHeightFocus="320" overlayHeight="32" overlayFont="Font30" overlayScrollSpeed="49" overlayPad="11" overlayTitleRight="75" overlayBadgeShift="101" overlaySlide="16" />
-			<values condition="layout=square-small" layoutWidth="240" layoutHeight="240" imageWidthNoFocus="216" imageHeightNoFocus="216" imageWidthFocus="240" imageHeightFocus="240" overlayHeight="24" overlayFont="Font23-title" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
-			<values layoutWidth="240" layoutHeight="360" imageWidthNoFocus="216" imageHeightNoFocus="324" imageWidthFocus="240" imageHeightFocus="360" overlayHeight="24" overlayFont="Font23-title" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
+			<values condition="layout=wide" layoutWidth="320" layoutHeight="240" imageWidthNoFocus="288" imageHeightNoFocus="216" imageWidthFocus="320" imageHeightFocus="240" overlayHeight="32" overlaySet="32" overlayPvrSet="32" overlayFont="Font30" overlayScrollSpeed="49" overlayPad="11" overlayTitleRight="75" overlayBadgeShift="101" overlaySlide="16" />
+			<values condition="layout=square" layoutWidth="320" layoutHeight="320" imageWidthNoFocus="288" imageHeightNoFocus="288" imageWidthFocus="320" imageHeightFocus="320" overlayHeight="32" overlaySet="32" overlayPvrSet="32" overlayFont="Font30" overlayScrollSpeed="49" overlayPad="11" overlayTitleRight="75" overlayBadgeShift="101" overlaySlide="16" />
+			<values condition="layout=square-small" layoutWidth="240" layoutHeight="240" imageWidthNoFocus="216" imageHeightNoFocus="216" imageWidthFocus="240" imageHeightFocus="240" overlayHeight="24" overlaySet="24" overlayPvrSet="24" overlayFont="Font23-title" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
+			<values layoutWidth="240" layoutHeight="360" imageWidthNoFocus="216" imageHeightNoFocus="324" imageWidthFocus="240" imageHeightFocus="360" overlayHeight="24" overlaySet="24" overlayPvrSet="24" overlayFont="Font23-title" overlayScrollSpeed="37" overlayPad="8" overlayTitleRight="56" overlayBadgeShift="76" overlaySlide="12" />
 		</preset>
 
 		<!-- Widget geometry. A box holds whole slots only: a poster past the last one scrolls the row
 		     a column early. rowHeight is the row's box, rowOffsetY lands every poster bottom on 445,
 		     rowStride is the block below one poster. -->
 		<preset name="widgetLayoutTwoRow">
-			<values condition="layout=wide" rowOffsetY="-163" rowStride="289" rowWidth="213" rowHeight="148" rowImageWidthNoFocus="177" rowImageHeightNoFocus="133" rowImageWidthFocus="196" rowImageHeightFocus="148" rowImageLeft="18" rowOverlayHeight="20" rowoverlayFont="Font20-title" rowoverlayScrollSpeed="32" rowoverlayPad="7" rowoverlayTitleRight="47" rowoverlayBadgeShift="61.5" rowOverlaySlide="10" />
-			<values condition="layout=square" rowOffsetY="-131" rowStride="333" rowWidth="213" rowHeight="196" rowImageWidthNoFocus="177" rowImageHeightNoFocus="177" rowImageWidthFocus="196" rowImageHeightFocus="196" rowImageLeft="18" rowOverlayHeight="20" rowoverlayFont="Font20-title" rowoverlayScrollSpeed="32" rowoverlayPad="7" rowoverlayTitleRight="47" rowoverlayBadgeShift="61.5" rowOverlaySlide="10" />
-			<values condition="layout=square-small" rowOffsetY="-163" rowStride="289" rowWidth="173" rowHeight="148" rowImageWidthNoFocus="133" rowImageHeightNoFocus="133" rowImageWidthFocus="148" rowImageHeightFocus="148" rowImageLeft="29" rowOverlayHeight="16" rowoverlayFont="Font16-title" rowoverlayScrollSpeed="25" rowoverlayPad="5" rowoverlayTitleRight="37" rowoverlayBadgeShift="45.5" rowOverlaySlide="8" />
-			<values rowOffsetY="-117" rowStride="356" rowWidth="173" rowHeight="222" rowImageWidthNoFocus="133" rowImageHeightNoFocus="200" rowImageWidthFocus="148" rowImageHeightFocus="222" rowImageLeft="29" rowOverlayHeight="16" rowoverlayFont="Font16-title" rowoverlayScrollSpeed="25" rowoverlayPad="5" rowoverlayTitleRight="37" rowoverlayBadgeShift="45.5" rowOverlaySlide="8" />
+			<values condition="layout=wide" rowOffsetY="-163" rowStride="289" rowWidth="213" rowHeight="148" rowImageWidthNoFocus="177" rowImageHeightNoFocus="133" rowImageWidthFocus="196" rowImageHeightFocus="148" rowImageLeft="18" rowOverlayHeight="20" rowOverlaySet="20" rowOverlayPvrSet="16" rowOverlayPvrTop="2" rowoverlayFont="Font20-title" rowoverlayScrollSpeed="32" rowoverlayPad="8" rowoverlayTitleRight="47" rowoverlayBadgeShift="62" rowOverlaySlide="10" />
+			<values condition="layout=square" rowOffsetY="-131" rowStride="333" rowWidth="213" rowHeight="196" rowImageWidthNoFocus="177" rowImageHeightNoFocus="177" rowImageWidthFocus="196" rowImageHeightFocus="196" rowImageLeft="18" rowOverlayHeight="20" rowOverlaySet="20" rowOverlayPvrSet="16" rowOverlayPvrTop="2" rowoverlayFont="Font20-title" rowoverlayScrollSpeed="32" rowoverlayPad="8" rowoverlayTitleRight="47" rowoverlayBadgeShift="62" rowOverlaySlide="10" />
+			<values condition="layout=square-small" rowOffsetY="-163" rowStride="289" rowWidth="173" rowHeight="148" rowImageWidthNoFocus="133" rowImageHeightNoFocus="133" rowImageWidthFocus="148" rowImageHeightFocus="148" rowImageLeft="29" rowOverlayHeight="16" rowOverlaySet="16" rowOverlayPvrSet="16" rowOverlayPvrTop="0" rowoverlayFont="Font16-title" rowoverlayScrollSpeed="25" rowoverlayPad="8" rowoverlayTitleRight="37" rowoverlayBadgeShift="46" rowOverlaySlide="8" />
+			<values rowOffsetY="-117" rowStride="356" rowWidth="173" rowHeight="222" rowImageWidthNoFocus="133" rowImageHeightNoFocus="200" rowImageWidthFocus="148" rowImageHeightFocus="222" rowImageLeft="29" rowOverlayHeight="16" rowOverlaySet="16" rowOverlayPvrSet="16" rowOverlayPvrTop="0" rowoverlayFont="Font16-title" rowoverlayScrollSpeed="25" rowoverlayPad="8" rowoverlayTitleRight="37" rowoverlayBadgeShift="46" rowOverlaySlide="8" />
 		</preset>
 	</presets>
 
@@ -335,7 +335,7 @@
 							<top>60</top>
 							<width>162</width>
 							<height>197</height>
-							<texture background="true" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
+							<texture background="true" diffuse="common/masks/art-162x197.png" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center">keep</aspectratio>
 							<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 						</control>
@@ -374,7 +374,7 @@
 								<top>60</top>
 								<width>162</width>
 								<height>197</height>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<texture background="true" diffuse="common/masks/art-162x197.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center">keep</aspectratio>
 								<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 							</control>
@@ -396,7 +396,7 @@
 								<top>60</top>
 								<width>162</width>
 								<height>197</height>
-								<texture background="true" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
+								<texture background="true" diffuse="common/masks/art-162x197.png" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center">keep</aspectratio>
 								<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 							</control>
@@ -475,7 +475,7 @@
 							<top>60</top>
 							<width>162</width>
 							<height>197</height>
-							<texture background="true" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
+							<texture background="true" diffuse="common/masks/art-162x197.png" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center">keep</aspectratio>
 							<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 						</control>
@@ -593,6 +593,8 @@
 						<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 						<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 						<param name="height">$PROPERTY[overlayHeight]</param>
+						<param name="overlayset">$PROPERTY[overlaySet]</param>
+						<param name="pvrset">$PROPERTY[overlayPvrSet]</param>
 						<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 						<param name="slide">$PROPERTY[overlaySlide]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -644,6 +646,8 @@
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[overlayHeight]</param>
+								<param name="overlayset">$PROPERTY[overlaySet]</param>
+								<param name="pvrset">$PROPERTY[overlayPvrSet]</param>
 								<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 								<param name="slide">$PROPERTY[overlaySlide]</param>
 								<param name="font">$PROPERTY[overlayFont]</param>
@@ -691,6 +695,8 @@
 								<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 								<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[overlayHeight]</param>
+								<param name="overlayset">$PROPERTY[overlaySet]</param>
+								<param name="pvrset">$PROPERTY[overlayPvrSet]</param>
 								<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 								<param name="slide">$PROPERTY[overlaySlide]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -740,6 +746,8 @@
 							<param name="left">$MATH[(imageWidthFocus - imageWidthNoFocus) / 2]</param>
 							<param name="width">$PROPERTY[imageWidthNoFocus]</param>
 							<param name="height">$PROPERTY[overlayHeight]</param>
+							<param name="overlayset">$PROPERTY[overlaySet]</param>
+							<param name="pvrset">$PROPERTY[overlayPvrSet]</param>
 							<param name="centerleft">$MATH[imageWidthNoFocus / 2]</param>
 							<param name="slide">$PROPERTY[overlaySlide]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -790,7 +798,10 @@
 						<param name="left">$PROPERTY[rowImageLeft]</param>
 						<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
 						<param name="height">$PROPERTY[rowOverlayHeight]</param>
-						<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+						<param name="overlayset">$PROPERTY[rowOverlaySet]</param>
+						<param name="pvrset">$PROPERTY[rowOverlayPvrSet]</param>
+						<param name="pvrtop">$PROPERTY[rowOverlayPvrTop]</param>
+						<param name="centerleft">$MATH[(rowImageWidthNoFocus - 1) / 2]</param>
 						<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">$PROPERTY[rowoverlayFont]</param>
@@ -841,7 +852,10 @@
 								<param name="left">$PROPERTY[rowImageLeft]</param>
 								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[rowOverlayHeight]</param>
-								<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+								<param name="overlayset">$PROPERTY[rowOverlaySet]</param>
+								<param name="pvrset">$PROPERTY[rowOverlayPvrSet]</param>
+								<param name="pvrtop">$PROPERTY[rowOverlayPvrTop]</param>
+								<param name="centerleft">$MATH[(rowImageWidthNoFocus - 1) / 2]</param>
 								<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 								<param name="font">$PROPERTY[rowoverlayFont]</param>
 								<param name="scrollspeed">$PROPERTY[rowoverlayScrollSpeed]</param>
@@ -888,7 +902,10 @@
 								<param name="left">$PROPERTY[rowImageLeft]</param>
 								<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
 								<param name="height">$PROPERTY[rowOverlayHeight]</param>
-								<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+								<param name="overlayset">$PROPERTY[rowOverlaySet]</param>
+								<param name="pvrset">$PROPERTY[rowOverlayPvrSet]</param>
+								<param name="pvrtop">$PROPERTY[rowOverlayPvrTop]</param>
+								<param name="centerleft">$MATH[(rowImageWidthNoFocus - 1) / 2]</param>
 								<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 								<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 								<param name="font">$PROPERTY[rowoverlayFont]</param>
@@ -937,7 +954,10 @@
 							<param name="left">$PROPERTY[rowImageLeft]</param>
 							<param name="width">$PROPERTY[rowImageWidthNoFocus]</param>
 							<param name="height">$PROPERTY[rowOverlayHeight]</param>
-							<param name="centerleft">$MATH[rowImageWidthNoFocus / 2]</param>
+							<param name="overlayset">$PROPERTY[rowOverlaySet]</param>
+							<param name="pvrset">$PROPERTY[rowOverlayPvrSet]</param>
+							<param name="pvrtop">$PROPERTY[rowOverlayPvrTop]</param>
+							<param name="centerleft">$MATH[(rowImageWidthNoFocus - 1) / 2]</param>
 							<param name="slide">$PROPERTY[rowOverlaySlide]</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">$PROPERTY[rowoverlayFont]</param>
