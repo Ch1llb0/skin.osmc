@@ -8,7 +8,6 @@
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>DialogPVRChannelGuide_coords1</include>
@@ -19,7 +18,7 @@
 			<!-- Background -->
 			<control type="image">
 				<include>DialogPVRChannelGuide_coords2</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading label -->
@@ -43,14 +42,14 @@
 				<include>DialogPVRChannelGuide_coords5</include>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<fadetime>200</fadetime>
-				<texture background="true" fallback="DefaultLiveTV.png">$VAR[PlayerIcon]</texture>
+				<texture diffuse="common/masks/art-220x220.png" background="true" fallback="DefaultLiveTV.png">$VAR[PlayerIcon]</texture>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
 				<include>DialogPVRChannelGuide_coords5</include>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<fadetime>200</fadetime>
-				<texture background="true" fallback="DefaultRadio.png">$VAR[PlayerIcon]</texture>
+				<texture diffuse="common/masks/art-220x220.png" background="true" fallback="DefaultRadio.png">$VAR[PlayerIcon]</texture>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
 			</control>
 
@@ -108,7 +107,6 @@
 				<include>DialogPVRChannelGuide_coords12</include>
 
 				<include>DialogPVRChannelGuide_coords13</include>
-
 			</control>
 
 			<!-- Scrollbar -->
@@ -121,9 +119,6 @@
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
-
 		</control>
-
 	</controls>
-
 </window>

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype532">
-
 		<!-- Wall small -->
 		<control type="group">
 			<visible>Control.IsVisible(532)</visible>
@@ -22,7 +20,6 @@
 				<include>Viewtype532_coords2</include>
 
 				<include>Viewtype532_coords3</include>
-				
 			</control>
 
 			<control type="group">
@@ -48,11 +45,7 @@
 					<label>$VAR[Label2]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-
 			</control>
-
 		</control>
-
 	</include>
-
 </includes>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<!-- Heading/Time/Now playing -->
 	<include name="Time">
 		<param name="heading">$VAR[HeadingLabelPrimary]</param>
@@ -9,11 +8,10 @@
 		<param name="secondary">True</param>
 		<param name="busyspinner">False</param>
 		<definition>
-		
 			<!-- Window heading -->
 			<control type="image">
 				<include>heading_coords1</include>
-				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerSmall]</texture>
+				<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinnerMedium]</texture>
 				<visible>$PARAM[busyspinner]</visible>
 				<animation effect="slide" time="0" end="0,17" condition="String.IsEmpty(Control.GetLabel(9999)) | ![$PARAM[secondary]]">Conditional</animation>
 			</control>
@@ -41,7 +39,7 @@
 				<include>WindowFadeAnimation</include>
 				<visible>$PARAM[secondary]</visible>
 			</control>
-			
+
 			<!-- Scrolling label -->
 			<control type="group">
 				<visible>!Skin.HasSetting(ScrollingLabel)</visible>
@@ -49,14 +47,14 @@
 				<visible>Control.IsEnabled(3) | Control.IsEnabled(4)</visible>
 				<visible>!Container.Content(seasons)</visible>
 				<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[563]) | String.IsEqual(Container.SortMethod,$LOCALIZE[566])</visible>
-				<animation effect="slide" start="-75,0" end="0,0" time="200">VisibleChange</animation>
+				<animation effect="slide" start="-95,0" end="0,0" time="200">VisibleChange</animation>
 				<control type="image">
 					<include>ScrollingLabel_coords1</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 				<control type="label">
 					<include>ScrollingLabel_coords2</include>
-					<label>$INFO[ListItem.SortLetter]</label>
+					<label>$VAR[ScrollingLetter]</label>
 					<font>Font72-bold</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -105,13 +103,13 @@
 
 				<control type="group">
 					<visible>Player.HasMedia</visible>
-					
+
 					<control type="group">
 						<include condition="$PARAM[narrow]">nowplaying_coords1</include>
 						<include condition="$PARAM[wide]">nowplaying_coords2</include>
 						<visible>Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)</visible>
 						<include>VisibleFadeAnimation</include>
-						
+
 						<!-- Now Playing - Video -->
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
@@ -123,7 +121,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + !String.IsEmpty(VideoPlayer.EpisodeName) + !String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -133,7 +131,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + !String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -143,7 +141,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + String.IsEmpty(VideoPlayer.EpisodeName) + !String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -152,7 +150,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + !VideoPlayer.Content(musicvideos) + !Pvr.IsPlayingTv + String.IsEmpty(VideoPlayer.EpisodeName) + String.IsEmpty(VideoPlayer.TVShowTitle)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<!-- Now Playing - Live TV -->
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
@@ -163,7 +161,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -173,7 +171,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + Pvr.IsPlayingTv + !VideoPlayer.HasEpg + !String.IsEqual(VideoPlayer.ChannelName,VideoPlayer.Title)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -182,7 +180,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + Pvr.IsPlayingTv + !VideoPlayer.HasEpg + String.IsEqual(VideoPlayer.ChannelName,VideoPlayer.Title)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<!-- Now Playing - Musicvideo -->
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
@@ -193,7 +191,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + !String.IsEmpty(VideoPlayer.Artist) + !String.IsEmpty(VideoPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -203,7 +201,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + !String.IsEmpty(VideoPlayer.Artist) + String.IsEmpty(VideoPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -213,7 +211,7 @@
 							<visible>!Player.HasGame + Player.HasVideo + VideoPlayer.Content(musicvideos) + String.IsEmpty(VideoPlayer.Artist) + !String.IsEmpty(VideoPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -233,7 +231,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + !String.IsEmpty(MusicPlayer.Artist) + !String.IsEmpty(MusicPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -243,7 +241,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + !String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -253,7 +251,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + String.IsEmpty(MusicPlayer.Artist) + !String.IsEmpty(MusicPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -262,7 +260,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + !Pvr.IsPlayingRadio + String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<!-- Now Playing - Radio -->
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
@@ -273,7 +271,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -283,7 +281,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + Pvr.IsPlayingRadio + !VideoPlayer.HasEpg + !String.IsEqual(MusicPlayer.ChannelName,MusicPlayer.Title)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<control type="fadelabel">
 							<include>nowplaying_coords4</include>
 							<aligny>top</aligny>
@@ -292,7 +290,7 @@
 							<visible>!Player.HasGame + Player.HasAudio + Pvr.IsPlayingRadio + !VideoPlayer.HasEpg + String.IsEqual(MusicPlayer.ChannelName,MusicPlayer.Title)</visible>
 							<scrollspeed>55</scrollspeed>
 						</control>
-						
+
 						<!-- Now Playing - Progress -->
 						<control type="label">
 							<include>nowplaying_coords5</include>
@@ -301,7 +299,7 @@
 							<label>$INFO[Player.Time]$INFO[Player.Duration, / ,] ($INFO[System.Time,[LIGHT]$LOCALIZE[555]: ,[/LIGHT]]$INFO[Player.FinishTime,[LIGHT] / $LOCALIZE[19081]: [/LIGHT]])</label>
 							<visible>!Player.HasGame + [!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio | [Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + !VideoPlayer.HasEpg] + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						</control>
-						
+
 						<control type="label">
 							<include>nowplaying_coords5</include>
 							<aligny>top</aligny>
@@ -309,7 +307,7 @@
 							<label>$INFO[Player.Time] ($INFO[System.Time,[LIGHT]$LOCALIZE[555]: ,[/LIGHT]])</label>
 							<visible>!Player.HasGame + [!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio | [Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + !VideoPlayer.HasEpg] + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive]</visible>
 						</control>
-						
+
 						<!-- Now Playing - Progress PVR -->
 						<control type="label">
 							<include>nowplaying_coords5</include>
@@ -318,15 +316,14 @@
 							<label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ,] ($INFO[System.Time,[LIGHT]$LOCALIZE[555]: ,[/LIGHT]]$INFO[PVR.EpgEventFinishTime,[LIGHT] / $LOCALIZE[19081]: [/LIGHT]])</label>
 							<visible>[Pvr.IsPlayingTv | Pvr.IsPlayingRadio] + VideoPlayer.HasEpg</visible>
 						</control>
-					
 					</control>
-					
+
 					<!-- Player Icon -->
 					<control type="image">
 						<include>nowplaying_coords7</include>
 						<aligny>top</aligny>
 						<align>right</align>
-						<texture fallback="DefaultFile.png" background="true">$VAR[PlayerIcon]</texture>
+						<texture diffuse="common/masks/art-60x60.png" fallback="DefaultFile.png" background="true">$VAR[PlayerIcon]</texture>
 						<aspectratio aligny="center">keep</aspectratio>
 						<visible>Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)</visible>
 						<include>VisibleFadeAnimation</include>
@@ -335,20 +332,18 @@
 					<!-- Play/Paused Image -->
 					<control type="image">
 						<include>nowplaying_coords8</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</texture>
 						<visible>!Player.Paused + [Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>nowplaying_coords8</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPause.png</texture>
 						<visible>Player.Paused + [Pvr.IsPlayingTv + [Player.HasVideo | Player.HasAudio] | !Pvr.IsPlayingTv + !String.IsEmpty(Player.Duration)]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-
 				</control>
 			</control>
 		</definition>
 	</include>
-
 </includes>

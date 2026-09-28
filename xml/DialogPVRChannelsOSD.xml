@@ -3,25 +3,24 @@
 	<!-- pvrosdchannels -->
 	<defaultcontrol always="true">11</defaultcontrol>
 	<zorder>0</zorder>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>DialogPVRChannelsOSD_coords1</include>
-			
+
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
 
 			<!-- Background -->
 			<control type="image">
 				<include>DialogPVRChannelsOSD_coords2</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
-			
+
 			<!-- Icon -->
 			<control type="image">
 				<include>DialogPVRChannelsOSD_coords3</include>
@@ -70,7 +69,7 @@
 					<visible>Skin.String(PlotFont,XL)</visible>
 				</control>
 			</control>
-			
+
 			<!-- Channel group -->
 			<control type="fadelabel">
 				<include>DialogPVRChannelsOSD_coords9</include>
@@ -94,7 +93,6 @@
 				<include>DialogPVRChannelsOSD_coords11</include>
 
 				<include>DialogPVRChannelsOSD_coords12</include>
-
 			</control>
 
 			<!-- Scrollbar (list) -->
@@ -108,7 +106,7 @@
 				<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
-			
+
 			<!-- Channel group button indicator -->
 			<control type="image">
 				<include>DialogPVRChannelsOSD_coords14</include>
@@ -118,9 +116,6 @@
 				<include>DialogPVRChannelsOSD_coords15</include>
 				<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-right.png</texture>
 			</control>
-
 		</control>
-
 	</controls>
-
 </window>

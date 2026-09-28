@@ -7,23 +7,22 @@
 	<onload condition="!String.IsEqual(Window(12006).Property(extended),basic)">SetProperty(extended,basic,12006)</onload>
 	<onunload>ClearProperty(extended,12006)</onunload>
 	<onunload>ClearProperty(VideoOSDFresh,12006)</onunload>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Background -->
 		<include>WindowBackgroundImagePlain</include>
-		
+
 		<!-- Main group -->
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>MusicVisualisation_coords1</include>
-			
+
 			<!-- Playback progress information -->
 			<control type="group">
 				<include>MusicVisualisation_coords2</include>
@@ -46,7 +45,7 @@
 					<!-- Background -->
 					<control type="image">
 						<include>MusicVisualisation_coords3</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<!-- Status -->
@@ -63,19 +62,18 @@
 					<!-- Pause -->
 					<control type="image">
 						<include>MusicVisualisation_coords4</include>
-						<texture>osd/OSDPauseNF.png</texture>
+						<texture>osd/OSDPause.png</texture>
 						<visible>Player.Paused</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
 					<!-- Play after seek -->
 					<control type="image">
 						<include>MusicVisualisation_coords4</include>
-						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlayNF.png</texture>
+						<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPlay.png</texture>
 						<visible>Player.HasPerformedSeek(3) + ![Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-
 				</control>
 
 				<!-- Player skipping -->
@@ -88,7 +86,7 @@
 					<!-- Background -->
 					<control type="image">
 						<include>MusicVisualisation_coords3</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<!-- Status -->
@@ -101,7 +99,7 @@
 						<visible>!Window.IsVisible(visualisation) + String.IsEmpty(Player.SeekStepSize)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
 					<!-- Status -->
 					<control type="label">
 						<include>MusicVisualisation_coords3</include>
@@ -112,7 +110,7 @@
 						<visible>Window.IsVisible(visualisation) + String.IsEmpty(Player.SeekStepSize)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
 					<!-- Status -->
 					<control type="label">
 						<include>MusicVisualisation_coords3</include>
@@ -123,7 +121,6 @@
 						<visible>!String.IsEmpty(Player.SeekStepSize)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-
 				</control>
 
 				<!-- Progress -->
@@ -135,19 +132,19 @@
 					<!-- Background -->
 					<control type="image">
 						<include>MusicVisualisation_coords7</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>MusicVisualisation_coords8</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="image">
 						<include>MusicVisualisation_coords9</include>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -170,7 +167,7 @@
 						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
 					<!-- PVR current position/Time remaining -->
 					<control type="label">
 						<include>MusicVisualisation_coords10</include>
@@ -181,29 +178,12 @@
 						<include>VisibleFadeAnimation</include>
 					</control>
 
-					<!-- Progress bar -->
-					<control type="progress">
+					<!-- Track, drawn once under the cache and play fills: each bar drawing its own put the cache
+					     bar's track over the play fill -->
+					<control type="image">
 						<include>MusicVisualisation_coords12</include>
-						<info>Player.Progress</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
-						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
-						<righttexture></righttexture>
-						<overlaytexture></overlaytexture>
-						<visible>!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
-						<include>VisibleFadeAnimation</include>
-					</control>
-					
-					<!-- PVR progress bar -->
-					<control type="progress">
-						<include>MusicVisualisation_coords12</include>
-						<info>PVR.EpgEventProgress</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
-						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
-						<righttexture></righttexture>
-						<overlaytexture></overlaytexture>
-						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
+						<texture border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texture>
+						<visible>[!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)] | [Pvr.IsPlayingRadio + VideoPlayer.HasEpg]</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
 
@@ -211,20 +191,46 @@
 					<control type="progress">
 						<include>MusicVisualisation_coords12</include>
 						<info>Player.ProgressCache</info>
-						<texturebg colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+						<texturebg></texturebg>
 						<lefttexture></lefttexture>
-						<midtexture colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OSDCacheColor]">osd/OSDProgressBar.png</midtexture>
 						<righttexture></righttexture>
 						<overlaytexture></overlaytexture>
 						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg | !Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
+					<!-- Progress bar -->
+					<control type="progress">
+						<include>MusicVisualisation_coords12</include>
+						<info>Player.Progress</info>
+						<texturebg></texturebg>
+						<lefttexture></lefttexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
+						<righttexture></righttexture>
+						<overlaytexture></overlaytexture>
+						<visible>!Pvr.IsPlayingRadio + !Player.IsLive + Integer.IsGreater(Player.Duration,0)</visible>
+						<include>VisibleFadeAnimation</include>
+					</control>
+
+					<!-- PVR progress bar -->
+					<control type="progress">
+						<include>MusicVisualisation_coords12</include>
+						<info>PVR.EpgEventProgress</info>
+						<texturebg></texturebg>
+						<lefttexture></lefttexture>
+						<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
+						<righttexture></righttexture>
+						<overlaytexture></overlaytexture>
+						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
+						<include>VisibleFadeAnimation</include>
+					</control>
+
 					<!-- Seek slider -->
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>Player.Seekbar</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>Player.Seeking + !Pvr.IsPlayingTv</visible>
@@ -233,17 +239,17 @@
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>PVR.TimeShiftSeekbar</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>Player.Seeking + Pvr.IsPlayingTv + VideoPlayer.HasEpg</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>Player.Progress</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>!String.IsEmpty(Window(12006).Property(MusicOSDSlider)) + Player.SeekEnabled + !Player.Seeking + !Pvr.IsPlayingRadio</visible>
@@ -252,7 +258,7 @@
 					<control type="slider">
 						<include>MusicVisualisation_coords13</include>
 						<info>PVR.TimeshiftProgressPlayPos</info>
-						<texturesliderbar colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
+						<texturesliderbar border="10,0,10,0" colordiffuse="00FFFFFF">osd/OSDSliderBack.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernib>
 						<textureslidernibfocus colordiffuse="$VAR[OverlayColorFO]">osd/OSDSliderNibBig.png</textureslidernibfocus>
 						<visible>!String.IsEmpty(Window(12006).Property(MusicOSDSlider)) + Player.SeekEnabled + !Player.Seeking + Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
@@ -278,7 +284,7 @@
 						<visible>!Pvr.IsPlayingRadio + [!Integer.IsGreater(Player.Duration,0) | Player.IsLive] | !VideoPlayer.HasEpg + Pvr.IsPlayingRadio</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
+
 					<!-- PVR current Time/End Time -->
 					<control type="label">
 						<include>MusicVisualisation_coords14</include>
@@ -289,9 +295,7 @@
 						<visible>Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-
 				</control>
-
 			</control>
 
 			<!-- Now playing information -->
@@ -308,7 +312,7 @@
 				<control type="image">
 					<include>MusicVisualisation_coords17</include>
 					<fadetime>200</fadetime>
-					<texture background="true">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="common/masks/art-470x516.png" background="true">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
 
@@ -322,7 +326,7 @@
 					<visible>!Pvr.IsPlayingRadio</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords19</include>
@@ -330,7 +334,7 @@
 						<label>$LOCALIZE[19030]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Artist -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -348,7 +352,7 @@
 							<label>$INFO[MusicPlayer.Artist]</label>
 						</control>
 					</control>
-					
+
 					<!-- Album/Year -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -366,7 +370,7 @@
 							<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year,[LIGHT] (,)[/LIGHT]]</label>
 						</control>
 					</control>
-					
+
 					<!-- Track/Title -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -384,7 +388,7 @@
 							<label>$INFO[MusicPlayer.TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[Player.Title]</label>
 						</control>
 					</control>
-					
+
 					<!-- Composer -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -402,7 +406,7 @@
 							<label>$INFO[MusicPlayer.Property(Role.Composer)]</label>
 						</control>
 					</control>
-					
+
 					<!-- Genre -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -420,7 +424,7 @@
 							<label>$INFO[MusicPlayer.Genre(comma)]</label>
 						</control>
 					</control>
-					
+
 					<!-- Comment -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -438,7 +442,7 @@
 							<label>$INFO[MusicPlayer.Comment]</label>
 						</control>
 					</control>
-					
+
 					<!-- File information (non-DSD) -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -456,7 +460,7 @@
 							<label>$VAR[MusicPlayerCodec,[LIGHT],[/LIGHT]  ]$INFO[MusicPlayer.BitRate,[LIGHT](, kBit/s)[/LIGHT]  ]$VAR[MusicPlayerChannels,[LIGHT],[/LIGHT]  ]$INFO[MusicPlayer.SampleRate,[LIGHT], kHz[/LIGHT]]</label>
 						</control>
 					</control>
-					
+
 					<!-- File information (DSD) -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -474,9 +478,8 @@
 							<label>$VAR[MusicPlayerCodec,[LIGHT],[/LIGHT]  ]$VAR[MusicPlayerChannels,[LIGHT],[/LIGHT]  ]</label>
 						</control>
 					</control>
-
 				</control>
-				
+
 				<!-- Now playing (radio) -->
 				<control type="grouplist">
 					<include>MusicVisualisation_coords18</include>
@@ -487,7 +490,7 @@
 					<visible>Pvr.IsPlayingRadio</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords19</include>
@@ -495,7 +498,7 @@
 						<label>$LOCALIZE[19030]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Radio channel -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -512,7 +515,7 @@
 							<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, (,)]</label>
 						</control>
 					</control>
-					
+
 					<!-- Radio show title (EPG) -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -530,7 +533,7 @@
 							<label>$INFO[Player.Title] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</label>
 						</control>
 					</control>
-					
+
 					<!-- Radio show title (non-EPG) -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -548,7 +551,7 @@
 							<label>$INFO[Player.Title]</label>
 						</control>
 					</control>
-					
+
 					<!-- Radio show information -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -566,7 +569,7 @@
 							<label>$INFO[VideoPlayer.EpisodeName]</label>
 						</control>
 					</control>
-					
+
 					<!-- Radio genre -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -584,7 +587,7 @@
 							<label>$INFO[MusicPlayer.Genre(comma)]</label>
 						</control>
 					</control>
-					
+
 					<!-- File information (non-DSD) -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -602,7 +605,7 @@
 							<label>$VAR[MusicPlayerCodec,[LIGHT],[/LIGHT]  ]$INFO[MusicPlayer.BitRate,[LIGHT](, kBit/s)[/LIGHT]  ]$VAR[MusicPlayerChannels,[LIGHT],[/LIGHT]  ]$INFO[MusicPlayer.SampleRate,[LIGHT], kHz[/LIGHT]]</label>
 						</control>
 					</control>
-					
+
 					<!-- File information (DSD) -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -620,7 +623,6 @@
 							<label>$VAR[MusicPlayerCodec,[LIGHT],[/LIGHT]  ]$VAR[MusicPlayerChannels,[LIGHT],[/LIGHT]  ]</label>
 						</control>
 					</control>
-
 				</control>
 
 				<!-- Next playing -->
@@ -633,7 +635,7 @@
 					<visible>!Pvr.IsPlayingRadio + !String.IsEmpty(MusicPlayer.Offset(1).Title) | Pvr.IsPlayingRadio + VideoPlayer.HasEpg</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords19</include>
@@ -642,7 +644,7 @@
 						<label>$LOCALIZE[19031]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Artist -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -660,7 +662,7 @@
 							<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
 						</control>
 					</control>
-					
+
 					<!-- Album -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -678,7 +680,7 @@
 							<label>$INFO[MusicPlayer.Offset(1).Album]$INFO[MusicPlayer.Offset(1).Year,[LIGHT] (,)[/LIGHT]]</label>
 						</control>
 					</control>
-					
+
 					<!-- Track -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -696,7 +698,7 @@
 							<label>$INFO[MusicPlayer.Offset(1).TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[MusicPlayer.Offset(1).Title]</label>
 						</control>
 					</control>
-					
+
 					<!-- Radio programm -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -715,14 +717,14 @@
 						</control>
 					</control>
 				</control>
-				
+
 				<!-- Artist description -->
 				<control type="group">
 					<include>MusicVisualisation_coords23</include>
 					<visible>String.IsEqual(Window(12006).Property(extended),artist) + !String.IsEmpty(MusicPlayer.Property(Artist_Description))</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords20</include>
@@ -730,7 +732,7 @@
 						<label>$INFO[MusicPlayer.Artist]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Description -->
 					<control type="textbox">
 						<include>MusicVisualisation_coords24</include>
@@ -769,14 +771,14 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-				
+
 				<!-- Album description -->
 				<control type="group">
 					<include>MusicVisualisation_coords23</include>
 					<visible>String.IsEqual(Window(12006).Property(extended),album) + !String.IsEmpty(MusicPlayer.Property(Album_Description))</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords20</include>
@@ -784,7 +786,7 @@
 						<label>$INFO[MusicPlayer.Album]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Description -->
 					<control type="textbox">
 						<include>MusicVisualisation_coords24</include>
@@ -823,14 +825,14 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-				
+
 				<!-- Radio plot (now) -->
 				<control type="group">
 					<include>MusicVisualisation_coords23</include>
 					<visible>String.IsEqual(Window(12006).Property(extended),plotnow) + !String.IsEmpty(VideoPlayer.Plot)</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords20</include>
@@ -838,7 +840,7 @@
 						<label>$INFO[Player.Title] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Plot -->
 					<control type="textbox">
 						<include>MusicVisualisation_coords24</include>
@@ -877,14 +879,14 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-				
+
 				<!-- Radio plot (next) -->
 				<control type="group">
 					<include>MusicVisualisation_coords23</include>
 					<visible>String.IsEqual(Window(12006).Property(extended),plotnext) + !String.IsEmpty(VideoPlayer.NextPlot)</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords20</include>
@@ -892,7 +894,7 @@
 						<label>$INFO[VideoPlayer.NextTitle] [LIGHT]($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])[/LIGHT]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Plot -->
 					<control type="textbox">
 						<include>MusicVisualisation_coords24</include>
@@ -931,7 +933,7 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-				
+
 				<!-- Now playing (RDS) -->
 				<control type="grouplist">
 					<include>MusicVisualisation_coords23</include>
@@ -941,7 +943,7 @@
 					<visible>String.IsEqual(Window(12006).Property(extended),rds) + ![String.IsEmpty(RDS.Artist) + String.IsEmpty(RDS.Composer) + String.IsEmpty(RDS.Band) + String.IsEmpty(RDS.Conductor) + String.IsEmpty(RDS.Album) + String.IsEmpty(RDS.Title) + String.IsEmpty(RDS.ProgHost) + String.IsEmpty(RDS.ProgStyle) + String.IsEmpty(RDS.ChannelCountry) + String.IsEmpty(RDS.Comment)]</visible>
 					<include>VisibleFadeAnimation</include>
 					<include>WindowFadeAnimation</include>
-					
+
 					<!-- Title -->
 					<control type="fadelabel">
 						<include>MusicVisualisation_coords19</include>
@@ -949,7 +951,7 @@
 						<label>$LOCALIZE[29900]</label>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 					</control>
-					
+
 					<!-- Artist -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -967,7 +969,7 @@
 							<label>$INFO[RDS.Artist]</label>
 						</control>
 					</control>
-					
+
 					<!-- Composer -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -985,7 +987,7 @@
 							<label>$INFO[RDS.Composer]</label>
 						</control>
 					</control>
-					
+
 					<!-- Band -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1003,7 +1005,7 @@
 							<label>$INFO[RDS.Band]</label>
 						</control>
 					</control>
-					
+
 					<!-- Conductor -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1021,7 +1023,7 @@
 							<label>$INFO[RDS.Conductor]</label>
 						</control>
 					</control>
-					
+
 					<!-- Album -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1039,7 +1041,7 @@
 							<label>$INFO[RDS.Album]</label>
 						</control>
 					</control>
-					
+
 					<!-- Track/Title -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1057,7 +1059,7 @@
 							<label>$INFO[RDS.TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[RDS.Title]</label>
 						</control>
 					</control>
-					
+
 					<!-- Moderator -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1075,7 +1077,7 @@
 							<label>$INFO[RDS.ProgHost]</label>
 						</control>
 					</control>
-					
+
 					<!-- Style -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1093,7 +1095,7 @@
 							<label>$INFO[RDS.ProgStyle]</label>
 						</control>
 					</control>
-					
+
 					<!-- Country/Language -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1111,7 +1113,7 @@
 							<label>$INFO[RDS.ChannelCountry]$INFO[RDS.AudioLanguage,[LIGHT] (,)[/LIGHT]]</label>
 						</control>
 					</control>
-					
+
 					<!-- Comment -->
 					<control type="group">
 						<include>MusicVisualisation_coords20</include>
@@ -1129,15 +1131,10 @@
 							<label>$INFO[RDS.Comment]</label>
 						</control>
 					</control>
-
 				</control>
-				
 			</control>
-		
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

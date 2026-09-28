@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<include name="MyPlaylist_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">MyPlaylist_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPlaylist_coords_21:9</include>
@@ -8,28 +7,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPlaylist_coords_4:3</include>
 	</include>
 	<include name="MyPlaylist_coords_16:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="MyPlaylist_coords_21:9">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="MyPlaylist_coords_21:9_masked">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
 	<include name="MyPlaylist_coords_4:3">
-		<left>690</left>
+		<left>687</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>680</height>
 	</include>
-
 </includes>

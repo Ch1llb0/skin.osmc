@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogKeyboard_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>260</width>
 		<height>660</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords2_21:9</include>
@@ -54,7 +53,7 @@
 		<width>260</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords3_21:9</include>
@@ -81,7 +80,7 @@
 		<height>74</height>
 		<textwidth>222</textwidth>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords4_21:9</include>
@@ -104,7 +103,7 @@
 		<left>450</left>
 		<top>180</top>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords5_21:9</include>
@@ -127,7 +126,7 @@
 		<width>840</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords6_21:9</include>
@@ -146,7 +145,7 @@
 	<include name="DialogKeyboard_coords6_4:3">
 		<width>70</width>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords7_21:9</include>
@@ -173,7 +172,7 @@
 		<width>840</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords8_21:9</include>
@@ -200,7 +199,7 @@
 		<width>840</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords9_21:9</include>
@@ -227,7 +226,7 @@
 		<width>840</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords10_21:9</include>
@@ -254,7 +253,7 @@
 		<width>840</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords11_21:9</include>
@@ -273,7 +272,7 @@
 	<include name="DialogKeyboard_coords11_4:3">
 		<width>490</width>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords12_21:9</include>
@@ -292,7 +291,7 @@
 	<include name="DialogKeyboard_coords12_4:3">
 		<width>210</width>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords13_21:9</include>
@@ -319,7 +318,7 @@
 		<width>840</width>
 		<height>74</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords14_21:9</include>
@@ -350,7 +349,7 @@
 		<width>1140</width>
 		<height>160</height>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords15">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords15_21:9</include>
@@ -401,7 +400,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogKeyboard_coords16">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogKeyboard_coords16_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogKeyboard_coords16_21:9</include>
@@ -500,5 +499,4 @@
 			</control>
 		</focusedlayout>
 	</include>
-
 </includes>

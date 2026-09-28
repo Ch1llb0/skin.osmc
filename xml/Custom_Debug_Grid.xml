@@ -3,16 +3,13 @@
 	<!-- Debug grid -->
 	<zorder>100</zorder>
 	<visible>!Window.IsVisible(startup) + Skin.HasSetting(DebugGrid)</visible>
-	
-	<controls>
 
+	<controls>
 		<!-- Global debug grid -->
 		<control type="image">
 			<include>Custom_Overlay_DebugGrid_coords</include>
 			<include>Custom_Overlay_Debug_Grid</include>
 			<colordiffuse>88FFFFFF</colordiffuse>
 		</control>
-
 	</controls>
-
 </window>

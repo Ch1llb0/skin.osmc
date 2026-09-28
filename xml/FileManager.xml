@@ -2,15 +2,14 @@
 <window>
 	<!-- filemanager -->
 	<defaultcontrol always="true">20</defaultcontrol>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
@@ -21,7 +20,7 @@
 			<include content="Time">
 				<param name="heading">$LOCALIZE[7]</param>
 			</include>
-			
+
 			<!-- Main group -->
 			<control type="group">
 				<include>WindowFadeAnimation</include>
@@ -57,9 +56,8 @@
 						<include>FileManager_coords5</include>
 
 						<include>FileManager_coords6</include>
-
 					</control>
-					
+
 					<!-- Scrollbar (left list) -->
 					<control type="scrollbar" id="70">
 						<include>FileManager_coords7</include>
@@ -82,7 +80,6 @@
 						<visible>!String.IsEmpty(Container(20).NumItems)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-
 				</control>
 
 				<!-- Right group -->
@@ -115,9 +112,8 @@
 						<include>FileManager_coords13</include>
 
 						<include>FileManager_coords14</include>
-
 					</control>
-					
+
 					<!-- Scrollbar (right list) -->
 					<control type="scrollbar" id="80">
 						<include>FileManager_coords15</include>
@@ -129,7 +125,7 @@
 						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 						<visible>!Skin.HasSetting(Scrollbars)</visible>
 					</control>
-					
+
 					<!-- Item count -->
 					<control type="fadelabel">
 						<include>FileManager_coords16</include>
@@ -141,15 +137,10 @@
 						<visible>!String.IsEmpty(Container(21).NumItems)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
-					
 				</control>
-
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

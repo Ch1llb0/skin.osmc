@@ -3,19 +3,18 @@
 	<!-- infodialog -->
 	<include>CornerWindowAnimation</include>
 	<zorder>100</zorder>
-	
+
 	<controls>
-	
 		<control type="group">
 			<include>NotificationDepth</include>
 			<include>CornerWindowLiftAboveVolumeBar</include>
-		
+
 			<!-- Background -->
 			<control type="image">
 				<include>DialogNotification_coords1</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
-			
+
 			<!-- Default icon -->
 			<control type="image" id="400">
 				<include>DialogNotification_coords2</include>
@@ -38,9 +37,6 @@
 				<font>Font27-light</font>
 				<scrollspeed>44</scrollspeed>
 			</control>
-
 		</control>
-
 	</controls>
-
 </window>

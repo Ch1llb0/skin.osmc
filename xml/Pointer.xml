@@ -2,9 +2,8 @@
 <window>
 	<!-- pointer -->
 	<defaultcontrol></defaultcontrol>
-	
+
 	<controls>
-		
 		<!-- Pointer -->
 		<control type="image" id="1">
 			<width>32</width>
@@ -36,7 +35,5 @@
 			<texture>MouseClick.png</texture>
 			<include>BusyDepth</include>
 		</control>
-		
 	</controls>
-
 </window>

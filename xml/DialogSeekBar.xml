@@ -10,7 +10,6 @@
 	<onunload>ClearProperty(SeekBar,12005)</onunload>
 
 	<controls>
-		
 		<control type="slider" id="401">
 			<texturesliderbar />
 			<texturesliderbardisabled />
@@ -18,13 +17,11 @@
 			<textureslidernibfocus />
 			<textureslidernibdisabled />
 		</control>
-		
+
 		<control type="slider" id="402">
 			<texturesliderbar />
 			<textureslidernib />
 			<textureslidernibfocus />
 		</control>
-
 	</controls>
-
 </window>

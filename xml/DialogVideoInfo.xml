@@ -8,12 +8,11 @@
 	<onload condition="[String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)">SetFocus(50)</onload>
 	<onunload>ClearProperty(extended,12003)</onunload>
 	<onunload>ClearProperty(cast,12003)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -27,11 +26,21 @@
 				<visible>!String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 				<visible>[!String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set) | !String.IsEqual(ListItem.DBTYPE,set) + String.IsEmpty(Window(12003).Property(cast)) + [String.IsEmpty(Window(12003).Property(extended)) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEmpty(ListItem.RatingAndVotes(imdb)) + String.IsEmpty(ListItem.RatingAndVotes(metacritic)) + String.IsEmpty(ListItem.RatingAndVotes(tomatometerallcritics)) + String.IsEmpty(ListItem.RatingAndVotes(themoviedb)) + String.IsEmpty(ListItem.RatingAndVotes(trakt)) + String.IsEmpty(ListItem.Property(AudioCodec.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]</visible>
 				<include>VisibleFadeAnimation</include>
+				<!-- A poster is 2:3 and everything else (episode thumbs, fanart, video thumbs) is 16:9, so each
+				     takes the mask for the shape it is drawn at and its corners stay round -->
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
 					<fadetime>100</fadetime>
-					<texture fallback="DefaultVideo.png" background="true">$VAR[VideoInfoImage]</texture>
+					<texture fallback="DefaultVideo.png" background="true" diffuse="common/masks/art-405x600.png">$VAR[VideoInfoImage]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>!String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				<control type="image">
+					<include>DialogVideoInfo_coords1</include>
+					<fadetime>100</fadetime>
+					<texture fallback="DefaultVideo.png" background="true" diffuse="common/masks/art-405x228.png">$VAR[VideoInfoImage]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<visible>String.IsEqual(ListItem.DBTYPE,episode) | String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 			</control>
 
@@ -42,11 +51,11 @@
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
 					<fadetime>100</fadetime>
-					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[Container(50).ListItem.Icon]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
 			</control>
-			
+
 			<!-- Movie Set image -->
 			<control type="group">
 				<visible>[String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)</visible>
@@ -54,21 +63,21 @@
 				<control type="image">
 					<include>DialogVideoInfo_coords1</include>
 					<fadetime>100</fadetime>
-					<texture>$INFO[Container(50).ListItem.Art(poster)]</texture>
+					<texture diffuse="common/masks/art-405x600.png">$INFO[Container(50).ListItem.Art(poster)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
 			</control>
-			
+
 			<!-- Music video image -->
 			<control type="image">
 				<visible>String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 				<include>DialogVideoInfo_coords1</include>
 				<fadetime>100</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x600.png">$INFO[ListItem.Icon]</texture>
 				<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 			</control>
-			
+
 			<!-- Director -->
 			<control type="fadelabel">
 				<include>DialogVideoInfo_coords2</include>
@@ -254,7 +263,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Country -->
 					<control type="group">
 						<include>DialogVideoInfo_coords5</include>
@@ -301,7 +310,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Genre -->
 					<control type="group">
 						<include>DialogVideoInfo_coords5</include>
@@ -320,7 +329,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Set -->
 					<control type="group">
 						<include>DialogVideoInfo_coords5</include>
@@ -358,7 +367,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Rating -->
 					<control type="group">
 						<include>DialogVideoInfo_coords5</include>
@@ -415,11 +424,9 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
-
 			</control>
-			
+
 			<!-- Info -->
 			<control type="group">
 				<include>DialogVideoInfo_coords3</include>
@@ -526,7 +533,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Duration -->
 					<control type="group">
 						<include>DialogVideoInfo_coords5</include>
@@ -563,7 +570,7 @@
 							<texture>$INFO[ListItem.StarRating]</texture>
 						</control>
 					</control>
-					
+
 					<!-- Video -->
 					<control type="group">
 						<include>DialogVideoInfo_coords5</include>
@@ -582,11 +589,9 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
-				
 			</control>
-			
+
 			<!-- Plot -->
 			<control type="textbox" id="102">
 				<include>DialogVideoInfo_coords8</include>
@@ -622,9 +627,8 @@
 				<include>DialogVideoInfo_coords10</include>
 
 				<include>DialogVideoInfo_coords11</include>
-
 			</control>
-			
+
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="60">
 				<include>DialogVideoInfo_coords12</include>
@@ -641,7 +645,7 @@
 				<visible>!Skin.HasSetting(Scrollbars) + [!String.IsEmpty(Window(12003).Property(cast)) | [String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)]</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
-			
+
 			<!-- Extended info -->
 			<control type="group">
 				<include>DialogVideoInfo_coords13</include>
@@ -657,7 +661,7 @@
 					<orientation>vertical</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>Control.IsVisible(300)</visible>
-					
+
 					<!-- Title -->
 					<control type="fadelabel" id="300">
 						<include>DialogVideoInfo_coords15</include>
@@ -666,7 +670,7 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<visible>Control.IsVisible(301) | Control.IsVisible(302) | Control.IsVisible(303) | Control.IsVisible(304) | Control.IsVisible(305) | Control.IsVisible(306)</visible>
 					</control>
-					
+
 					<!-- Ratings -->
 					<control type="fadelabel" id="301">
 						<include>DialogVideoInfo_coords15</include>
@@ -710,9 +714,8 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<visible>!String.IsEmpty(ListItem.RatingAndVotes(trakt))</visible>
 					</control>
-					
 				</control>
-					
+
 				<!-- Audio/subtitles -->
 				<control type="grouplist" id="104">
 					<include>DialogVideoInfo_coords16</include>
@@ -721,7 +724,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>Control.IsVisible(308) | Control.IsVisible(314)</visible>
 					<animation effect="slide" end="0,-256" time="0" condition="!Control.IsVisible(300)">Conditional</animation>
-					
+
 					<!-- Title -->
 					<control type="fadelabel" id="307">
 						<include>DialogVideoInfo_coords15</include>
@@ -730,7 +733,7 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<visible>Control.IsVisible(308)</visible>
 					</control>
-					
+
 					<!-- Audio tracks -->
 					<control type="fadelabel" id="308">
 						<include>DialogVideoInfo_coords15</include>
@@ -769,7 +772,7 @@
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<visible>Control.IsVisible(313)</visible>
 					</control>
-					
+
 					<!-- Subtitles -->
 					<control type="fadelabel" id="313">
 						<include>DialogVideoInfo_coords15</include>
@@ -778,9 +781,7 @@
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 					</control>
-
 				</control>
-
 			</control>
 
 			<!-- Buttons -->
@@ -930,18 +931,14 @@
 					<visible>System.HasAddon(script.artwork.downloader) + [String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,movie)]</visible>
 					<visible>!Skin.HasSetting(KioskMode)</visible>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9000).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

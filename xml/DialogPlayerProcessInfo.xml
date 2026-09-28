@@ -2,15 +2,14 @@
 <window>
 	<!-- fullscreeninfo -->
 	<defaultcontrol always="true">100</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<control type="group">
 			<include>DialogDepth</include>
-			
+
 			<!-- Info -->
 			<control type="group">
 				<include>DialogPlayerProcessInfo_coords1</include>
@@ -28,7 +27,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -43,7 +42,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -58,7 +57,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -73,7 +72,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -88,7 +87,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 					</control>
 
 					<include>PlayerProcessInfoIcon</include>
@@ -209,9 +208,8 @@
 						<font>Font25</font>
 					</control>
 				</control>
-				
 			</control>
-			
+
 			<!-- Player debug overlay shortcut -->
 			<control type="group">
 				<include>DialogPlayerProcessInfo_coords10</include>
@@ -220,10 +218,10 @@
 				<animation effect="slide" start="0,0" end="0,-35" time="0" reversible="false" condition="String.IsEmpty(Player.Process(subtitledecoder))">Conditional</animation>
 				<include>OSDVisibleHiddenAnimation</include>
 				<include>OSDOpenCloseAnimation</include>
-				
+
 				<!-- Background -->
 				<control type="image">
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="label">
@@ -231,7 +229,6 @@
 					<label>$LOCALIZE[31156]</label>
 					<font>Font25-light</font>
 				</control>
-				
 			</control>
 
 			<control type="button" id="100">
@@ -243,9 +240,6 @@
 				<onclick>PlayerDebug</onclick>
 				<oninfo>noop</oninfo>
 			</control>
-
 		</control>
-
 	</controls>
-
 </window>

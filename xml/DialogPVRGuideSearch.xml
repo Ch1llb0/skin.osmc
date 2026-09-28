@@ -2,12 +2,11 @@
 <window>
 	<!-- pvrguidesearch -->
 	<defaultcontrol always="true">9</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -170,7 +169,6 @@
 					<onleft>24</onleft>
 					<label>19125</label>
 				</control>
-
 			</control>
 
 			<!-- Buttons -->
@@ -199,13 +197,9 @@
 					<width>auto</width>
 					<label>13007</label>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

@@ -2,12 +2,11 @@
 <window>
 	<!-- pvrgroupmanager -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Hidden labels -->
 		<control type="label" id="21">
 			<font></font>
@@ -46,9 +45,8 @@
 				<include>DialogPVRGroupManager_coords3</include>
 
 				<include>DialogPVRGroupManager_coords4</include>
-
 			</control>
-			
+
 			<!-- Scrollbar (Groups list) -->
 			<control type="scrollbar" id="70">
 				<include>DialogPVRGroupManager_coords5</include>
@@ -83,9 +81,8 @@
 				<include>DialogPVRGroupManager_coords8</include>
 
 				<include>DialogPVRGroupManager_coords9</include>
-
 			</control>
-			
+
 			<!-- Scrollbar (Channels list) -->
 			<control type="scrollbar" id="80">
 				<include>DialogPVRGroupManager_coords10</include>
@@ -106,7 +103,7 @@
 				<label>$INFO[Control.GetLabel(21)]</label>
 				<align>center</align>
 			</control>
-	
+
 			<!-- Grouped Channels list -->	
 			<control type="list" id="11">
 				<include>DialogPVRGroupManager_coords12</include>
@@ -120,9 +117,8 @@
 				<include>DialogPVRGroupManager_coords13</include>
 
 				<include>DialogPVRGroupManager_coords14</include>
-
 			</control>
-			
+
 			<!-- Scrollbar (Grouped Channels list) -->
 			<control type="scrollbar" id="90">
 				<include>DialogPVRGroupManager_coords15</include>
@@ -174,18 +170,14 @@
 					<width>auto</width>
 					<label>$LOCALIZE[15019] $LOCALIZE[19141]</label>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

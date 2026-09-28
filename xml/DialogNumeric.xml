@@ -2,18 +2,17 @@
 <window>
 	<!-- numericinput -->
 	<defaultcontrol always="true">10</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
 		<control type="group">
 			<include>DialogFrame</include>
-			
+
 			<control type="label" id="1">
 				<font></font>
 			</control>
@@ -50,7 +49,6 @@
 						<label>12313</label>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Second row -->
@@ -83,7 +81,6 @@
 						<label>12316</label>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Third row -->
@@ -116,7 +113,6 @@
 						<label>12319</label>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Forth row -->
@@ -147,7 +143,6 @@
 						<label>&gt;</label>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Fifth row -->
@@ -166,7 +161,6 @@
 						<label>20181</label>
 						<include>KeyboardButtons</include>
 					</control>
-
 				</control>
 
 				<!-- Edit Text -->
@@ -178,7 +172,6 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<align>center</align>
 				</control>
-
 			</control>
 
 			<!-- Buttons -->
@@ -202,13 +195,9 @@
 					<label>222</label>
 					<onclick>Close</onclick>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

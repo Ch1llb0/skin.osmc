@@ -2,25 +2,24 @@
 <window>
 	<!-- sliderdialog -->
 	<defaultcontrol always="true">11</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>DialogSlider_coords1</include>
-			
+
 			<!-- Animation -->
 			<visible>!Window.IsVisible(shutdownmenu)</visible>
 			<include>OSDVisibleHiddenAnimation</include>
 			<include>OSDOpenCloseAnimation</include>
-			
+
 			<!-- Background image -->
 			<control type="image">
 				<include>DialogSlider_coords2</include>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading -->
@@ -46,9 +45,6 @@
 			<control type="slider" id="11">
 				<include>DialogSlider_coords5</include>
 			</control>
-			
 		</control>
-
 	</controls>
-
 </window>

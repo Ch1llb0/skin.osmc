@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="FullscreenDimensions">
 		<include condition="$EXP[NonMaskedCoordinates]">FullscreenDimensions_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FullscreenDimensions_21:9</include>
@@ -31,7 +30,7 @@
 		<width>1440</width>
 		<height>1080</height>
 	</include>
-	
+
 	<include name="WindowBackgroundImageVertical">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageVertical_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageVertical_21:9</include>
@@ -44,12 +43,24 @@
 			<param name="top1">0</param>
 			<param name="width1">698</param>
 			<param name="height1">1080</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">698</param>
 			<param name="top2">0</param>
 			<param name="width2">1222</param>
 			<param name="height2">1080</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">690</param>
+			<param name="fill1top">0</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">690</param>
+			<param name="fill2top">1072</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageVertical_21:9">
@@ -58,26 +69,59 @@
 			<param name="top1">0</param>
 			<param name="width1">698</param>
 			<param name="height1">1080</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">698</param>
 			<param name="top2">0</param>
 			<param name="width2">1862</param>
 			<param name="height2">1080</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">690</param>
+			<param name="fill1top">0</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">690</param>
+			<param name="fill2top">1072</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageVertical_21:9_masked">
 		<include content="WindowBackgroundImage">
 			<param name="left1">0</param>
-			<param name="top1">0</param>
+			<param name="top1">180</param>
 			<param name="width1">698</param>
-			<param name="height1">1440</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="height1">1080</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">698</param>
 			<param name="top2">0</param>
 			<param name="width2">1862</param>
 			<param name="height2">1440</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">690</param>
+			<param name="fill1top">180</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">690</param>
+			<param name="fill2top">1252</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
+			<param name="bands">True</param>
+			<param name="band1left">0</param>
+			<param name="band1top">0</param>
+			<param name="band1width">698</param>
+			<param name="band1height">180</param>
+			<param name="band2left">0</param>
+			<param name="band2top">1260</param>
+			<param name="band2width">698</param>
+			<param name="band2height">180</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageVertical_4:3">
@@ -86,15 +130,27 @@
 			<param name="top1">0</param>
 			<param name="width1">698</param>
 			<param name="height1">1080</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">698</param>
 			<param name="top2">0</param>
 			<param name="width2">742</param>
 			<param name="height2">1080</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">690</param>
+			<param name="fill1top">0</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">690</param>
+			<param name="fill2top">1072</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageVerticalHome">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageVerticalHome_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageVerticalHome_21:9</include>
@@ -107,12 +163,24 @@
 			<param name="top1">0</param>
 			<param name="width1">470</param>
 			<param name="height1">1080</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">470</param>
 			<param name="top2">0</param>
 			<param name="width2">1450</param>
 			<param name="height2">1080</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">462</param>
+			<param name="fill1top">0</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">462</param>
+			<param name="fill2top">1072</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageVerticalHome_21:9">
@@ -121,26 +189,59 @@
 			<param name="top1">0</param>
 			<param name="width1">470</param>
 			<param name="height1">1080</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">470</param>
 			<param name="top2">0</param>
 			<param name="width2">2090</param>
 			<param name="height2">1080</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">462</param>
+			<param name="fill1top">0</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">462</param>
+			<param name="fill2top">1072</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageVerticalHome_21:9_masked">
 		<include content="WindowBackgroundImage">
 			<param name="left1">0</param>
-			<param name="top1">0</param>
+			<param name="top1">180</param>
 			<param name="width1">470</param>
-			<param name="height1">1440</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="height1">1080</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">470</param>
 			<param name="top2">0</param>
 			<param name="width2">2090</param>
 			<param name="height2">1440</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">462</param>
+			<param name="fill1top">180</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">462</param>
+			<param name="fill2top">1252</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
+			<param name="bands">True</param>
+			<param name="band1left">0</param>
+			<param name="band1top">0</param>
+			<param name="band1width">470</param>
+			<param name="band1height">180</param>
+			<param name="band2left">0</param>
+			<param name="band2top">1260</param>
+			<param name="band2width">470</param>
+			<param name="band2height">180</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageVerticalHome_4:3">
@@ -149,15 +250,27 @@
 			<param name="top1">0</param>
 			<param name="width1">470</param>
 			<param name="height1">1080</param>
-			<param name="texture1">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture1">$VAR[BackgroundOverlayStyleRight]</param>
+			<param name="border1">0,8,8,8</param>
 			<param name="left2">470</param>
 			<param name="top2">0</param>
 			<param name="width2">970</param>
 			<param name="height2">1080</param>
 			<param name="texture2">$VAR[Background1]</param>
+			<param name="border2">0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">462</param>
+			<param name="fill1top">0</param>
+			<param name="fill1flipx">false</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">462</param>
+			<param name="fill2top">1072</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">true</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageHorizontal">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageHorizontal_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageHorizontal_21:9</include>
@@ -171,11 +284,23 @@
 			<param name="width1">1920</param>
 			<param name="height1">824</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">824</param>
 			<param name="width2">1920</param>
 			<param name="height2">256</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">824</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1912</param>
+			<param name="fill2top">824</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontal_21:9">
@@ -185,11 +310,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">824</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">824</param>
 			<param name="width2">2560</param>
 			<param name="height2">256</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">824</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">824</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontal_21:9_masked">
@@ -199,11 +336,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">1004</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">1004</param>
 			<param name="width2">2560</param>
 			<param name="height2">436</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">1004</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">1004</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontal_4:3">
@@ -213,14 +362,26 @@
 			<param name="width1">1440</param>
 			<param name="height1">824</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">824</param>
 			<param name="width2">1440</param>
 			<param name="height2">256</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">824</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1432</param>
+			<param name="fill2top">824</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageHorizontalWall">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageHorizontalWall_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageHorizontalWall_21:9</include>
@@ -234,11 +395,23 @@
 			<param name="width1">1920</param>
 			<param name="height1">857</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">857</param>
 			<param name="width2">1920</param>
 			<param name="height2">223</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">857</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1912</param>
+			<param name="fill2top">857</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalWall_21:9">
@@ -248,11 +421,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">857</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">857</param>
 			<param name="width2">2560</param>
 			<param name="height2">223</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">857</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">857</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalWall_21:9_masked">
@@ -262,11 +447,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">1037</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">1037</param>
 			<param name="width2">2560</param>
 			<param name="height2">403</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">1037</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">1037</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalWall_4:3">
@@ -276,14 +473,26 @@
 			<param name="width1">1440</param>
 			<param name="height1">857</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">857</param>
 			<param name="width2">1440</param>
 			<param name="height2">223</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">857</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1432</param>
+			<param name="fill2top">857</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageHorizontalLow1">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageHorizontalLow1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageHorizontalLow1_21:9</include>
@@ -297,11 +506,23 @@
 			<param name="width1">1920</param>
 			<param name="height1">912</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">912</param>
 			<param name="width2">1920</param>
 			<param name="height2">168</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">912</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1912</param>
+			<param name="fill2top">912</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalLow1_21:9">
@@ -311,11 +532,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">912</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">912</param>
 			<param name="width2">2560</param>
 			<param name="height2">168</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">912</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">912</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalLow1_21:9_masked">
@@ -325,11 +558,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">1092</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">1092</param>
 			<param name="width2">2560</param>
 			<param name="height2">348</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">1092</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">1092</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalLow1_4:3">
@@ -339,14 +584,26 @@
 			<param name="width1">1440</param>
 			<param name="height1">912</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">912</param>
 			<param name="width2">1440</param>
 			<param name="height2">168</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">912</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1432</param>
+			<param name="fill2top">912</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageHorizontalLow2">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageHorizontalLow2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageHorizontalLow2_21:9</include>
@@ -360,11 +617,23 @@
 			<param name="width1">1920</param>
 			<param name="height1">917</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">917</param>
 			<param name="width2">1920</param>
 			<param name="height2">163</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">917</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1912</param>
+			<param name="fill2top">917</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalLow2_21:9">
@@ -374,11 +643,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">917</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">917</param>
 			<param name="width2">2560</param>
 			<param name="height2">163</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">917</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">917</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalLow2_21:9_masked">
@@ -388,11 +669,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">1097</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">1097</param>
 			<param name="width2">2560</param>
 			<param name="height2">343</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">1097</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">1097</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalLow2_4:3">
@@ -402,14 +695,26 @@
 			<param name="width1">1440</param>
 			<param name="height1">917</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">917</param>
 			<param name="width2">1440</param>
 			<param name="height2">163</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">917</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1432</param>
+			<param name="fill2top">917</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageHorizontalEPG">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageHorizontalEPG_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageHorizontalEPG_21:9</include>
@@ -423,11 +728,23 @@
 			<param name="width1">1920</param>
 			<param name="height1">795</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">795</param>
 			<param name="width2">1920</param>
 			<param name="height2">285</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">795</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1912</param>
+			<param name="fill2top">795</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalEPG_21:9">
@@ -437,11 +754,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">795</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">795</param>
 			<param name="width2">2560</param>
 			<param name="height2">285</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">795</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">795</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalEPG_21:9_masked">
@@ -451,11 +780,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">975</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">975</param>
 			<param name="width2">2560</param>
 			<param name="height2">465</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">975</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">975</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalEPG_4:3">
@@ -465,14 +806,26 @@
 			<param name="width1">1440</param>
 			<param name="height1">795</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">795</param>
 			<param name="width2">1440</param>
 			<param name="height2">285</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">795</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1432</param>
+			<param name="fill2top">795</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImageHorizontalWeather">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImageHorizontalWeather_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImageHorizontalWeather_21:9</include>
@@ -486,11 +839,23 @@
 			<param name="width1">1920</param>
 			<param name="height1">714</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">714</param>
 			<param name="width2">1920</param>
 			<param name="height2">366</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">714</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1912</param>
+			<param name="fill2top">714</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalWeather_21:9">
@@ -500,11 +865,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">714</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">714</param>
 			<param name="width2">2560</param>
 			<param name="height2">366</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">714</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">714</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalWeather_21:9_masked">
@@ -514,11 +891,23 @@
 			<param name="width1">2560</param>
 			<param name="height1">894</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">894</param>
 			<param name="width2">2560</param>
 			<param name="height2">546</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">894</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">2552</param>
+			<param name="fill2top">894</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
 	<include name="WindowBackgroundImageHorizontalWeather_4:3">
@@ -528,14 +917,26 @@
 			<param name="width1">1440</param>
 			<param name="height1">714</param>
 			<param name="texture1">$VAR[Background1]</param>
+			<param name="border1">0</param>
 			<param name="left2">0</param>
 			<param name="top2">714</param>
 			<param name="width2">1440</param>
 			<param name="height2">366</param>
-			<param name="texture2">$VAR[BackgroundOverlayStyle]</param>
+			<param name="texture2">$VAR[BackgroundOverlayStyleTop]</param>
+			<param name="border2">8,8,8,0</param>
+			<param name="fills">True</param>
+			<param name="fillsize">8</param>
+			<param name="fill1left">0</param>
+			<param name="fill1top">714</param>
+			<param name="fill1flipx">true</param>
+			<param name="fill1flipy">false</param>
+			<param name="fill2left">1432</param>
+			<param name="fill2top">714</param>
+			<param name="fill2flipx">false</param>
+			<param name="fill2flipy">false</param>
 		</include>
 	</include>
-	
+
 	<include name="WindowBackgroundImagePlain">
 		<include condition="$EXP[NonMaskedCoordinates]">WindowBackgroundImagePlain_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">WindowBackgroundImagePlain_21:9</include>
@@ -598,7 +999,7 @@
 			<param name="texture2"></param>
 		</include>
 	</include>
-	
+
 	<include name="BackgroundOverlayDialog1">
 		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog1_21:9</include>
@@ -621,7 +1022,7 @@
 		<width>1440</width>
 		<height>905</height>
 	</include>
-	
+
 	<include name="BackgroundOverlayDialog2">
 		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog2_21:9</include>
@@ -629,26 +1030,29 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog2_4:3</include>
 	</include>
 	<include name="BackgroundOverlayDialog2_16:9">
+		<left>0</left>
 		<top>905</top>
-		<width>1920</width>
-		<height>175</height>
+		<width>8</width>
+		<height>8</height>
 	</include>
 	<include name="BackgroundOverlayDialog2_21:9">
+		<left>0</left>
 		<top>905</top>
-		<width>2560</width>
-		<height>175</height>
+		<width>8</width>
+		<height>8</height>
 	</include>
 	<include name="BackgroundOverlayDialog2_21:9_masked">
+		<left>0</left>
 		<top>1085</top>
-		<width>2560</width>
-		<height>355</height>
+		<width>8</width>
+		<height>8</height>
 	</include>
 	<include name="BackgroundOverlayDialog2_4:3">
+		<left>0</left>
 		<top>905</top>
-		<width>1440</width>
-		<height>175</height>
+		<width>8</width>
+		<height>8</height>
 	</include>
-	
 	<include name="BackgroundOverlayDialog3">
 		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog3_21:9</include>
@@ -656,26 +1060,29 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog3_4:3</include>
 	</include>
 	<include name="BackgroundOverlayDialog3_16:9">
-		<top>989</top>
-		<width>1920</width>
-		<height>91</height>
+		<left>1912</left>
+		<top>905</top>
+		<width>8</width>
+		<height>8</height>
 	</include>
 	<include name="BackgroundOverlayDialog3_21:9">
-		<top>989</top>
-		<width>2560</width>
-		<height>91</height>
+		<left>2552</left>
+		<top>905</top>
+		<width>8</width>
+		<height>8</height>
 	</include>
 	<include name="BackgroundOverlayDialog3_21:9_masked">
-		<top>1169</top>
-		<width>2560</width>
-		<height>271</height>
+		<left>2552</left>
+		<top>1085</top>
+		<width>8</width>
+		<height>8</height>
 	</include>
 	<include name="BackgroundOverlayDialog3_4:3">
-		<top>989</top>
-		<width>1440</width>
-		<height>91</height>
+		<left>1432</left>
+		<top>905</top>
+		<width>8</width>
+		<height>8</height>
 	</include>
-	
 	<include name="BackgroundOverlayDialog4">
 		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog4_21:9</include>
@@ -683,24 +1090,222 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog4_4:3</include>
 	</include>
 	<include name="BackgroundOverlayDialog4_16:9">
+		<left>0</left>
+		<top>981</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog4_21:9">
+		<left>0</left>
+		<top>981</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog4_21:9_masked">
+		<left>0</left>
+		<top>1161</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog4_4:3">
+		<left>0</left>
+		<top>981</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog5">
+		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog5_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">BackgroundOverlayDialog5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog5_4:3</include>
+	</include>
+	<include name="BackgroundOverlayDialog5_16:9">
+		<left>1912</left>
+		<top>981</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog5_21:9">
+		<left>2552</left>
+		<top>981</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog5_21:9_masked">
+		<left>2552</left>
+		<top>1161</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+	<include name="BackgroundOverlayDialog5_4:3">
+		<left>1432</left>
+		<top>981</top>
+		<width>8</width>
+		<height>8</height>
+	</include>
+
+	<!-- The mask that rounds a full-screen dialog's image layers while it opens and closes, one per canvas -->
+	<include name="BackgroundOverlayDialog6">
+		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog6_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">BackgroundOverlayDialog6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog6_4:3</include>
+	</include>
+	<include name="BackgroundOverlayDialog6_16:9">
+		<top>905</top>
+		<width>1920</width>
+		<height>175</height>
+	</include>
+	<include name="BackgroundOverlayDialog6_21:9">
+		<top>905</top>
+		<width>2560</width>
+		<height>175</height>
+	</include>
+	<include name="BackgroundOverlayDialog6_21:9_masked">
+		<top>1085</top>
+		<width>2560</width>
+		<height>355</height>
+	</include>
+	<include name="BackgroundOverlayDialog6_4:3">
+		<top>905</top>
+		<width>1440</width>
+		<height>175</height>
+	</include>
+
+	<include name="BackgroundOverlayDialog7">
+		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog7_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">BackgroundOverlayDialog7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog7_4:3</include>
+	</include>
+	<include name="BackgroundOverlayDialog7_16:9">
+		<top>989</top>
+		<width>1920</width>
+		<height>91</height>
+	</include>
+	<include name="BackgroundOverlayDialog7_21:9">
+		<top>989</top>
+		<width>2560</width>
+		<height>91</height>
+	</include>
+	<include name="BackgroundOverlayDialog7_21:9_masked">
+		<top>1169</top>
+		<width>2560</width>
+		<height>271</height>
+	</include>
+	<include name="BackgroundOverlayDialog7_4:3">
+		<top>989</top>
+		<width>1440</width>
+		<height>91</height>
+	</include>
+
+	<include name="BackgroundOverlayDialog8">
+		<include condition="$EXP[NonMaskedCoordinates]">BackgroundOverlayDialog8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">BackgroundOverlayDialog8_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">BackgroundOverlayDialog8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BackgroundOverlayDialog8_4:3</include>
+	</include>
+	<include name="BackgroundOverlayDialog8_16:9">
 		<top>905</top>
 		<width>1920</width>
 		<height>84</height>
 	</include>
-	<include name="BackgroundOverlayDialog4_21:9">
+	<include name="BackgroundOverlayDialog8_21:9">
 		<top>905</top>
 		<width>2560</width>
 		<height>84</height>
 	</include>
-	<include name="BackgroundOverlayDialog4_21:9_masked">
+	<include name="BackgroundOverlayDialog8_21:9_masked">
 		<top>1085</top>
 		<width>2560</width>
 		<height>84</height>
 	</include>
-	<include name="BackgroundOverlayDialog4_4:3">
+	<include name="BackgroundOverlayDialog8_4:3">
 		<top>905</top>
 		<width>1440</width>
 		<height>84</height>
 	</include>
-	
+	<include name="DialogBackgroundImageTexture">
+		<param name="texture" />
+		<definition>
+			<include content="DialogBackgroundImageTexture_16:9" condition="$EXP[NonMaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageTexture_21:9" condition="String.IsEqual(Skin.AspectRatio,21:9)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageTexture_21:9_masked" condition="$EXP[MaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageTexture_4:3" condition="String.IsEqual(Skin.AspectRatio,4:3)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_16:9">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMask16x9.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_21:9">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMask21x9.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_21:9_masked">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMaskMasked.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageTexture_4:3">
+		<param name="texture" />
+		<definition>
+			<texture background="true" diffuse="common/DialogMask4x3.png">$PARAM[texture]</texture>
+		</definition>
+	</include>
+
+	<include name="DialogBackgroundImageImagePath">
+		<param name="texture" />
+		<definition>
+			<include content="DialogBackgroundImageImagePath_16:9" condition="$EXP[NonMaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageImagePath_21:9" condition="String.IsEqual(Skin.AspectRatio,21:9)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageImagePath_21:9_masked" condition="$EXP[MaskedCoordinates]">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+			<include content="DialogBackgroundImageImagePath_4:3" condition="String.IsEqual(Skin.AspectRatio,4:3)">
+				<param name="texture">$PARAM[texture]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_16:9">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMask16x9.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_21:9">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMask21x9.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_21:9_masked">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMaskMasked.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
+	<include name="DialogBackgroundImageImagePath_4:3">
+		<param name="texture" />
+		<definition>
+			<imagepath background="true" diffuse="common/DialogMask4x3.png">$PARAM[texture]</imagepath>
+		</definition>
+	</include>
 </includes>

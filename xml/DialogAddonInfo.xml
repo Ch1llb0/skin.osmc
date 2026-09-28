@@ -4,12 +4,11 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(10146).Property(description))">ClearProperty(description,10146)</onload>
 	<onunload>ClearProperty(description,10146)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -22,7 +21,7 @@
 			<control type="group">
 				<control type="image">
 					<include>DialogAddonInfo_coords1</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x405.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 				</control>
 			</control>
@@ -128,7 +127,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Addon origin -->
 					<control type="group">
 						<include>DialogAddonInfo_coords5</include>
@@ -147,7 +146,7 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-					
+
 					<!-- Install date -->
 					<control type="group">
 						<include>DialogAddonInfo_coords5</include>
@@ -187,11 +186,9 @@
 							<textcolor>$VAR[TextColorFO]</textcolor>
 						</control>
 					</control>
-
 				</control>
-
 			</control>
-			
+
 			<!-- Description -->
 			<control type="textbox" id="100">
 				<include>DialogAddonInfo_coords10</include>
@@ -272,13 +269,9 @@
 					<label>24048</label>
 					<visible>Control.IsEnabled(13)</visible>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

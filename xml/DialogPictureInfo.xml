@@ -2,12 +2,11 @@
 <window>
 	<!-- pictureinfo -->
 	<defaultcontrol always="true">5</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -15,7 +14,7 @@
 			<include content="DialogFrame">
 				<param name="heading">$LOCALIZE[13406]</param>
 			</include>
-			
+
 			<!-- Image -->
 			<control type="image">
 				<include>DialogPictureInfo_coords1</include>
@@ -24,7 +23,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>!Window.IsActive(Slideshow)</visible>
 			</control>
-			
+
 			<control type="image">
 				<include>DialogPictureInfo_coords1</include>
 				<fadetime>100</fadetime>
@@ -48,9 +47,8 @@
 				<include>DialogPictureInfo_coords3</include>
 
 				<include>DialogPictureInfo_coords4</include>
-
 			</control>
-			
+
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="60">
 				<include>DialogPictureInfo_coords5</include>
@@ -79,18 +77,14 @@
 					<onclick>Close</onclick>
 					<label>15067</label>
 				</control>
-				
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9000).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

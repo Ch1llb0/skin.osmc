@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogGameControllers_Default">
-	
 		<controls>
-
 			<!-- Game controllers dialog -->
 			<control type="group">
 				<include>DialogDepth</include>
-				
+
 				<!-- Dialog fanart -->
 				<include>DialogBackgroundImage</include>
-				
+
 				<control type="group">
 					<include content="DialogFrame">
 						<param name="heading">$INFO[Control.GetLabel(2)]</param>
 					</include>
-					
+
 					<control type="label" id="2">
 						<font></font>
 						<label>35050</label>
@@ -39,7 +36,7 @@
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<pagecontrol>70</pagecontrol>
 					</control>
-					
+
 					<!-- Default button -->
 					<control type="button" id="10">
 						<include>DialogGameControllers_coords6</include>
@@ -48,7 +45,7 @@
 						<invalidcolor>$VAR[InvalidColor]</invalidcolor>
 						<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 					</control>
-					
+
 					<!-- Scrollbar (Controllers Grouplist) -->
 					<control type="scrollbar" id="70">
 						<include>DialogGameControllers_coords3</include>
@@ -73,7 +70,7 @@
 						<scrolltime tween="sine" easing="out">240</scrolltime>
 						<pagecontrol>80</pagecontrol>
 					</control>
-					
+
 					<!-- Scrollbar (Controller Buttons Grouplist) -->
 					<control type="scrollbar" id="80">
 						<include>DialogGameControllers_coords5</include>
@@ -151,27 +148,21 @@
 							<width>Auto</width>
 							<label>$LOCALIZE[10043]</label>
 						</control>
-
 					</control>
-					
+
 					<!-- Button indicator -->
 					<include content="dialogButtonIndicator">
 						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 					</include>
-
 				</control>
-			
 			</control>
-			
-			<include>MaskingBars</include>
 
+			<include>MaskingBars</include>
 		</controls>
 	</include>
 
 	<include name="DialogGameControllers_Ports">
-		
 		<controls>
-
 			<!-- Game controller ports dialog -->
 			<control type="group">
 				<include>DialogDepth</include>
@@ -179,7 +170,7 @@
 
 				<!-- Dialog fanart -->
 				<include>DialogBackgroundImage</include>
-				
+
 				<control type="group">
 					<include content="DialogFrame">
 						<param name="heading">$INFO[Control.GetLabel(2)]</param>
@@ -192,7 +183,7 @@
 					<!-- Image -->
 					<control type="image">
 						<include>DialogGameControllers_coords9</include>
-						<texture>$INFO[Container(3).ListItem.Icon]</texture>
+						<texture diffuse="common/masks/art-405x600.png">$INFO[Container(3).ListItem.Icon]</texture>
 						<colordiffuse>$VAR[OverlayColorFO]</colordiffuse>
 						<aspectratio aligny="center">keep</aspectratio>
 						<visible>Control.IsVisible(3)</visible>
@@ -213,9 +204,8 @@
 						<include>DialogGameControllers_coords11</include>
 
 						<include>DialogGameControllers_coords12</include>
-
 					</control>
-					
+
 					<!-- Scrollbar -->
 					<control type="scrollbar" id="60">
 						<include>DialogGameControllers_coords13</include>
@@ -248,27 +238,21 @@
 							<width>Auto</width>
 							<label>13007</label>
 						</control>
-
 					</control>
-					
+
 					<!-- Button indicator -->
 					<include content="dialogButtonIndicator">
 						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 					</include>
-					
 				</control>
-				
 			</control>
-			
-			<include>MaskingBars</include>
 
+			<include>MaskingBars</include>
 		</controls>
 	</include>
-	
-	<include name="DialogGameControllers_Agents">
-		
-		<controls>
 
+	<include name="DialogGameControllers_Agents">
+		<controls>
 			<!-- Game agents dialog -->
 			<control type="group">
 				<include>DialogDepth</include>
@@ -276,7 +260,7 @@
 
 				<!-- Dialog fanart -->
 				<include>DialogBackgroundImage</include>
-				
+
 				<control type="group">
 					<include content="DialogFrame">
 						<param name="heading">$LOCALIZE[35234]</param>
@@ -297,9 +281,8 @@
 						<include>DialogGameControllers_coords15</include>
 
 						<include>DialogGameControllers_coords16</include>
-
 					</control>
-					
+
 					<!-- Scrollbar -->
 					<control type="scrollbar" id="60">
 						<include>DialogGameControllers_coords13</include>
@@ -326,35 +309,30 @@
 							<width>Auto</width>
 							<label>186</label>
 						</control>
-						
+
 						<!-- Ports Button -->
 						<control type="button" id="3">
 							<width>Auto</width>
 							<label>35110</label>
 							<onclick>ActivateWindow(GamePorts)</onclick>
 						</control>
-						
+
 						<!-- Controller configuration Button -->
 						<control type="button" id="4">
 							<width>Auto</width>
 							<label>10820</label>
 							<onclick>ActivateWindow(gamecontrollers)</onclick>
 						</control>
-
 					</control>
-					
+
 					<!-- Button indicator -->
 					<include content="dialogButtonIndicator">
 						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 					</include>
-					
 				</control>
-				
 			</control>
-			
-			<include>MaskingBars</include>
 
+			<include>MaskingBars</include>
 		</controls>
 	</include>
-
 </includes>

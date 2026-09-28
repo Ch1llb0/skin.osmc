@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
-
 	<!-- widgetSortDirection was this skin's own name for what v3 calls widgetSortOrder.
 	     Moves the key on menus users already saved; harmless once everyone has rebuilt. -->
 	<overrides>
@@ -124,5 +123,4 @@
 			<default>Icon</default>
 		</fallback>
 	</fallbacks>
-
 </properties>

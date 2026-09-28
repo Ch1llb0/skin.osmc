@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- The setting select dialog. A caller writes its answers into SettingSelect.* window
 	     properties and opens it; the three modes and the properties each takes are in CLAUDE.md. -->
-
 
 	<include name="SettingSelectRow">
 		<definition>
@@ -82,10 +80,9 @@
 
 					<control type="image">
 						<include>Custom_Setting_Select_coords3</include>
-						<texture colordiffuse="$VAR[SelectedColor]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[SelectedColor]">$VAR[focusline]</texture>
 						<visible>Control.HasFocus($PARAM[id])</visible>
 					</control>
-
 				</control>
 
 				<!-- Neither of those -->
@@ -111,10 +108,9 @@
 
 					<control type="image">
 						<include>Custom_Setting_Select_coords3</include>
-						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>Control.HasFocus($PARAM[id])</visible>
 					</control>
-
 				</control>
 
 				<!-- Out of reach until some row that requires nothing is on -->
@@ -125,7 +121,6 @@
 					<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
 					<visible>String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + !String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) + !$EXP[SettingSelectAnyOn]</visible>
 				</control>
-
 			</control>
 		</definition>
 	</include>
@@ -139,7 +134,7 @@
 			<onup>9002</onup>
 			<onleft>9002</onleft>
 			<onright>9002</onright>
-			
+
 			<!-- OK. In many mode nothing is written until this is clicked, so every row is written here.
 			     In one mode the row wrote the setting and closed. -->
 			<control type="button" id="10">
@@ -209,7 +204,7 @@
 				<onclick condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),30) + !String.IsEqual(Window(Home).Property(SettingSelect.30.State),on)">Skin.Reset($INFO[Window(Home).Property(SettingSelect.30.Setting)])</onclick>
 				<onclick>Dialog.Close(1102)</onclick>
 			</control>
-			
+
 			<!-- Cancel -->
 			<control type="button" id="11">
 				<width>auto</width>
@@ -217,7 +212,6 @@
 				<label>$LOCALIZE[222]</label>
 				<onclick>Dialog.Close(1102)</onclick>
 			</control>
-			
 		</control>
 
 		<!-- The arrows that say the buttons are a step sideways -->
@@ -795,5 +789,4 @@
 		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),2) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.2.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.2.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.2.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9102)</onload>
 		<onload condition="Integer.IsGreaterOrEqual(Window(Home).Property(SettingSelect.Rows),1) + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.1.Requires)) | $EXP[SettingSelectAnyOn]] + [[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.1.State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.1.Value),Window(Home).Property(SettingSelect.Current))]]">Control.SetFocus(9101)</onload>
 	</include>
-
 </includes>

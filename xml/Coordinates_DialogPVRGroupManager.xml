@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogPVRGroupManager_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>353</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords2_21:9</include>
@@ -62,7 +61,7 @@
 		<width>353</width>
 		<height>594</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords3_21:9</include>
@@ -109,7 +108,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords4_21:9</include>
@@ -135,7 +134,7 @@
 					<top>50</top>
 					<width>513</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -159,7 +158,7 @@
 					<top>50</top>
 					<width>727</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -183,7 +182,7 @@
 					<top>50</top>
 					<width>727</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -207,12 +206,12 @@
 					<top>50</top>
 					<width>353</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords5_21:9</include>
@@ -243,7 +242,7 @@
 		<width>20</width>
 		<height>554</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords6_21:9</include>
@@ -274,7 +273,7 @@
 		<width>353</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords7_21:9</include>
@@ -305,7 +304,7 @@
 		<width>353</width>
 		<height>594</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords8_21:9</include>
@@ -327,7 +326,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -347,7 +346,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -367,7 +366,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -387,12 +386,12 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords9_21:9</include>
@@ -418,7 +417,7 @@
 					<top>50</top>
 					<width>420</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -427,7 +426,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -451,7 +450,7 @@
 					<top>50</top>
 					<width>640</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -460,7 +459,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -484,7 +483,7 @@
 					<top>50</top>
 					<width>640</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -493,7 +492,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -517,7 +516,7 @@
 					<top>50</top>
 					<width>266</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -526,12 +525,12 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords10_21:9</include>
@@ -562,7 +561,7 @@
 		<width>20</width>
 		<height>554</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords11_21:9</include>
@@ -593,7 +592,7 @@
 		<width>354</width>
 		<height>36</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords12_21:9</include>
@@ -624,7 +623,7 @@
 		<width>354</width>
 		<height>594</height>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords13_21:9</include>
@@ -646,7 +645,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -666,7 +665,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -686,7 +685,7 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
@@ -706,12 +705,12 @@
 				<width>60</width>
 				<height>60</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords14_21:9</include>
@@ -737,7 +736,7 @@
 					<top>50</top>
 					<width>421</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -746,7 +745,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -770,7 +769,7 @@
 					<top>50</top>
 					<width>639</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -779,7 +778,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -803,7 +802,7 @@
 					<top>50</top>
 					<width>639</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -812,7 +811,7 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -836,7 +835,7 @@
 					<top>50</top>
 					<width>267</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<!-- Icon -->
 				<control type="image">
@@ -845,12 +844,12 @@
 					<width>60</width>
 					<height>60</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-60x60.png">$INFO[ListItem.Icon]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogPVRGroupManager_coords15">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords15_21:9</include>
@@ -881,5 +880,4 @@
 		<width>20</width>
 		<height>554</height>
 	</include>
-
 </includes>

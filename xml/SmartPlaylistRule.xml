@@ -2,12 +2,11 @@
 <window>
 	<!-- smartplaylistrule -->
 	<defaultcontrol always="true">15</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -99,7 +98,6 @@
 					<onleft>noop</onleft>
 					<onright>noop</onright>
 				</control>
-
 			</control>
 
 			<!-- Buttons -->
@@ -121,13 +119,9 @@
 					<width>auto</width>
 					<label>222</label>
 				</control>
-
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

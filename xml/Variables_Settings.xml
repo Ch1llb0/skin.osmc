@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<!-- Settings categories description -->
 	<variable name="SettingsExplanation">
 		<value condition="String.IsEqual(Container(9000).CurrentItem,1)">$LOCALIZE[166] &#8226; $LOCALIZE[14222] &#8226; $LOCALIZE[360] &#8226; $LOCALIZE[12360] &#8226; $LOCALIZE[14224]</value>
@@ -115,7 +114,7 @@
 		<value condition="Control.HasFocus(805)">$LOCALIZE[31351]</value>
 		<value condition="Control.HasFocus(806)">$LOCALIZE[31352]</value>
 	</variable>
-	
+
 	<!-- Skin Shortcuts explanation -->
 	<variable name="SkinShortcutsExplanation1">
 		<value condition="[Control.HasFocus(304) | Control.HasFocus(303)] + ![ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus]">$LOCALIZE[31353]</value>
@@ -150,7 +149,7 @@
 		<value condition="$EXP[SkinShortcutsWidgetMenu] + Control.HasFocus(301)">$LOCALIZE[31380]</value>
 		<value condition="$EXP[SkinShortcutsWidgetMenu] + Control.HasFocus(311)">$LOCALIZE[31383]</value>
 	</variable>
-	
+
 	<variable name="SkinShortcutsExplanation2">
 		<value condition="String.IsEqual(Window(1106).Property(Window),Mainmenu) + !String.IsEmpty(Window(1106).Property(HelpPage))">$LOCALIZE[31384]</value>
 		<value condition="String.IsEqual(Window(1106).Property(Window),Mainmenu) + String.IsEmpty(Window(1106).Property(HelpPage))">$LOCALIZE[31385]</value>
@@ -159,7 +158,7 @@
 		<value condition="String.IsEqual(Window(1106).Property(Window),Widgetmenu) + !String.IsEmpty(Window(1106).Property(HelpPage))">$LOCALIZE[31388]</value>
 		<value condition="String.IsEqual(Window(1106).Property(Window),Widgetmenu) + String.IsEmpty(Window(1106).Property(HelpPage))">$LOCALIZE[31389]</value>
 	</variable>
-	
+
 	<!-- Skin Settings label2 -->
 	<variable name="WidgetOnClickAlbumLabel">
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetBrowse)">$LOCALIZE[37015]</value>
@@ -167,7 +166,7 @@
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetPlayNext)">$LOCALIZE[10008]</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickAlbum),AlbumWidgetQueue)">$LOCALIZE[13347]</value>
 	</variable>
-	
+
 	<variable name="WidgetOnClickTVShowLabel">
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetBrowse)">$LOCALIZE[37015]</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetContinueWatching)">$LOCALIZE[13362]</value>
@@ -175,7 +174,7 @@
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetPlayNext)">$LOCALIZE[10008]</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickTVShow),TVShowWidgetQueue)">$LOCALIZE[13347]</value>
 	</variable>
-	
+
 	<variable name="WidgetOnClickMovieSetLabel">
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetBrowse)">$LOCALIZE[37015]</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetContinueWatching)">$LOCALIZE[13362]</value>
@@ -183,7 +182,7 @@
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetPlayNext)">$LOCALIZE[10008]</value>
 		<value condition="String.IsEqual(Skin.String(WidgetOnClickMovieSet),MovieSetWidgetQueue)">$LOCALIZE[13347]</value>
 	</variable>
-	
+
 	<variable name="MaskingBars">
 		<value condition="String.IsEqual(Skin.String(MaskingBars),2.40:1)">$LOCALIZE[31428]</value>
 		<value condition="String.IsEqual(Skin.String(MaskingBars),2.35:1)">$LOCALIZE[31429]</value>
@@ -191,7 +190,7 @@
 		<value condition="String.IsEqual(Skin.String(MaskingBars),2.00:1)">$LOCALIZE[31431]</value>
 		<value condition="String.IsEqual(Skin.String(MaskingBars),1.78:1)">$LOCALIZE[31432]</value>
 	</variable>
-	
+
 	<variable name="DefaultColorSet">
 		<value condition="Skin.HasSetting(DefaultColorSetOSMCBlue)">$LOCALIZE[31061]</value>
 		<value condition="Skin.HasSetting(DefaultColorSetOSMCLightblue)">$LOCALIZE[31070]</value>
@@ -204,21 +203,21 @@
 		<value condition="Skin.HasSetting(DefaultColorSetRed)">$LOCALIZE[31413]</value>
 		<value condition="Skin.HasSetting(DefaultColorSetPurple)">$LOCALIZE[31414]</value>
 	</variable>
-	
+
 	<variable name="DefaultBackgroundOpacity">
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Highest)">$LOCALIZE[31415]</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),High)">$LOCALIZE[31416]</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Medium)">$LOCALIZE[31417]</value>
 		<value condition="String.IsEqual(Skin.String(DefaultBackgroundOpacity),Low)">$LOCALIZE[31418]</value>
 	</variable>
-	
+
 	<variable name="DefaultMenuOSDOpacity">
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Highest)">$LOCALIZE[31415]</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),High)">$LOCALIZE[31416]</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Medium)">$LOCALIZE[31417]</value>
 		<value condition="String.IsEqual(Skin.String(DefaultMenuOSDOpacity),Low)">$LOCALIZE[31418]</value>
 	</variable>
-	
+
 	<variable name="HideOSD">
 		<value condition="String.IsEqual(Skin.String(HideOSD),Always)">$LOCALIZE[13108]</value>
 		<value condition="String.IsEqual(Skin.String(HideOSD),5s)">5s</value>
@@ -231,24 +230,24 @@
 		<value condition="String.IsEqual(Skin.String(HideOSD),5 min)">5 min</value>
 		<value condition="String.IsEqual(Skin.String(HideOSD),Disabled)">$LOCALIZE[13113]</value>
 	</variable>
-	
+
 	<variable name="PlotFont">
 		<value condition="String.IsEqual(Skin.String(PlotFont),S)">$LOCALIZE[289] S</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),M)">$LOCALIZE[289] M</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),L)">$LOCALIZE[289] L</value>
 		<value condition="String.IsEqual(Skin.String(PlotFont),XL)">$LOCALIZE[289] XL</value>
 	</variable>
-	
+
 	<variable name="infodialogfirstpage">
 		<value condition="String.IsEqual(Skin.String(infodialogfirstpage),Details)">$LOCALIZE[31419]</value>
 		<value condition="String.IsEqual(Skin.String(infodialogfirstpage),Description)">$LOCALIZE[31420]</value>
 	</variable>
-	
+
 	<variable name="videodurationformat">
 		<value condition="String.IsEqual(Skin.String(videodurationformat),Minutes)">$LOCALIZE[31421]</value>
 		<value condition="String.IsEqual(Skin.String(videodurationformat),Hours and minutes)">$LOCALIZE[31422]</value>
 	</variable>
-	
+
 	<variable name="mediaflags">
 		<value condition="String.IsEqual(Skin.String(mediaflags),File first)">$LOCALIZE[31423]</value>
 		<value condition="String.IsEqual(Skin.String(mediaflags),File only)">$LOCALIZE[31424]</value>
@@ -257,7 +256,7 @@
 		<value condition="String.IsEqual(Skin.String(mediaflags),Duration only)">$LOCALIZE[31427]</value>
 		<value condition="String.IsEqual(Skin.String(mediaflags),None)">$LOCALIZE[13113]</value>
 	</variable>
-	
+
 	<!-- The answer the video add-on view setting is on. Not having a fixed view is one of the
 	     answers, and comes first because a view stays seeded underneath it. -->
 	<variable name="DefaultVideosView">
@@ -273,7 +272,7 @@
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">$LOCALIZE[31116]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWalllow)">$LOCALIZE[31113]</value>
 	</variable>
-	
+
 	<!-- Skin Settings - Weather Art -->
 	<variable name="weather-icons">
 		<value condition="!String.IsEmpty(Skin.String(weatherIcons.name))">$INFO[Skin.String(weatherIcons.name)]</value>

@@ -2,12 +2,11 @@
 <window>
 	<!-- subtitlesearch -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<controls>
-		
 		<!-- Black background image -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -17,7 +16,7 @@
 			<include>DialogZoomAnimation</include>
 			<include>DialogBackgroundDepth</include>
 		</control>
-		
+
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -25,7 +24,7 @@
 			<include content="DialogFrame">
 				<param name="heading">$LOCALIZE[24134]</param>
 			</include>
-			
+
 			<control type="label" id="100">
 				<font></font>
 			</control>
@@ -57,9 +56,8 @@
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 
 				<include>DialogSubtitles_coords4</include>
-				
-				<include>DialogSubtitles_coords5</include>
 
+				<include>DialogSubtitles_coords5</include>
 			</control>
 
 			<!-- Scrollbar (Left list) -->
@@ -111,9 +109,8 @@
 				<include>DialogSubtitles_coords11</include>
 
 				<include>DialogSubtitles_coords12</include>
-
 			</control>
-			
+
 			<!-- Scrollbar (Right list) -->
 			<control type="scrollbar" id="70">
 				<include>DialogSubtitles_coords13</include>
@@ -139,18 +136,14 @@
 					<width>Auto</width>
 					<label>24120</label>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!Control.HasFocus(9001) + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

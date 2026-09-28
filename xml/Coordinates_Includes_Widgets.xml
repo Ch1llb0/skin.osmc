@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<include name="widgetLayoutSlide-weather-OSMC">
 		<definition>
 			<include condition="$EXP[NonMaskedCoordinates]" content="widgetLayoutSlide-weather-OSMC_16:9">
@@ -52,7 +51,7 @@
 		<animation effect="slide" start="0,0" end="203,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
 	</include>	
-	
+
 	<include name="widgetLayoutSlide-tall-OSMC">
 		<param name="tworow">False</param>
 		<definition>
@@ -144,7 +143,7 @@
 		<animation effect="slide" start="0,0" end="201,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
 	</include>
-	
+
 	<include name="widgetLayoutSlide-wide-OSMC">
 		<param name="tworow">False</param>
 		<definition>
@@ -224,7 +223,7 @@
 		<animation effect="slide" start="0,0" end="214,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
 	</include>
-	
+
 	<include name="widgetLayoutSlide-square-OSMC">
 		<param name="tworow">False</param>
 		<definition>
@@ -304,7 +303,7 @@
 		<animation effect="slide" start="0,0" end="214,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
 	</include>
-	
+
 	<include name="widgetLayoutSlide-square-small-OSMC">
 		<param name="tworow">False</param>
 		<definition>
@@ -396,7 +395,7 @@
 		<animation effect="slide" start="0,0" end="201,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
 	</include>
-	
+
 	<include name="widgetLayout-weather-OSMC">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetLayout-weather-OSMC_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-weather-OSMC_21:9</include>
@@ -427,7 +426,7 @@
 		<width>609</width>
 		<height>326</height>
 	</include>
-	
+
 	<!-- Two widgets on screen. Every layout lands its poster bottom twelve above this, so one
 	     details top serves them all. -->
 	<include name="widgetTwoRowDetails-row0">
@@ -493,7 +492,7 @@
 		<width>720</width>
 		<height>360</height>
 	</include>
-	
+
 	<include name="widgetLayout-wide-OSMC">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetLayout-wide-OSMC_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-wide-OSMC_21:9</include>
@@ -524,7 +523,7 @@
 		<width>640</width>
 		<height>240</height>
 	</include>
-	
+
 	<include name="widgetLayout-square-OSMC">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetLayout-square-OSMC_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-square-OSMC_21:9</include>
@@ -555,7 +554,7 @@
 		<width>640</width>
 		<height>320</height>
 	</include>
-	
+
 	<include name="widgetLayout-square-small-OSMC">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetLayout-square-small-OSMC_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-square-small-OSMC_21:9</include>
@@ -586,7 +585,7 @@
 		<width>720</width>
 		<height>240</height>
 	</include>
-	
+
 	<include name="widgetHeading-OSMC_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetHeading-OSMC_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetHeading-OSMC_coords_21:9</include>
@@ -617,7 +616,7 @@
 		<width>800</width>
 		<height>326</height>
 	</include>
-	
+
 	<include name="widgetindicators_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetindicators_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetindicators_coords_21:9</include>
@@ -648,7 +647,7 @@
 		<width>30</width>
 		<height>759</height>
 	</include>
-	
+
 	<include name="widgetdetails_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetdetails_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetdetails_coords_21:9</include>
@@ -667,7 +666,7 @@
 	<include name="widgetdetails_coords_4:3">
 		<width>800</width>
 	</include>
-	
+
 	<include name="widgetreloadingindicator_coords">
 		<include condition="$EXP[NonMaskedCoordinates]">widgetreloadingindicator_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetreloadingindicator_coords_21:9</include>
@@ -690,5 +689,4 @@
 		<left>810</left>
 		<top>3</top>
 	</include>
-	
 </includes>

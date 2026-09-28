@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="DialogPVRChannelsOSD_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>1240</width>
 		<height>738</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords2_21:9</include>
@@ -54,7 +53,7 @@
 		<width>1240</width>
 		<height>738</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords3_21:9</include>
@@ -85,7 +84,7 @@
 		<width>220</width>
 		<height>220</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords4_21:9</include>
@@ -116,7 +115,7 @@
 		<width>510</width>
 		<height>436</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords5_21:9</include>
@@ -135,7 +134,7 @@
 	<include name="DialogPVRChannelsOSD_coords5_4:3">
 		<height>408</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords6_21:9</include>
@@ -154,7 +153,7 @@
 	<include name="DialogPVRChannelsOSD_coords6_4:3">
 		<height>420</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords7_21:9</include>
@@ -173,7 +172,7 @@
 	<include name="DialogPVRChannelsOSD_coords7_4:3">
 		<height>398</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords8_21:9</include>
@@ -192,7 +191,7 @@
 	<include name="DialogPVRChannelsOSD_coords8_4:3">
 		<height>430</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords9_21:9</include>
@@ -223,7 +222,7 @@
 		<width>510</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords10_21:9</include>
@@ -254,7 +253,7 @@
 		<width>510</width>
 		<height>630</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords11_21:9</include>
@@ -293,32 +292,32 @@
 			</control>
 			<!-- Recording image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
@@ -357,32 +356,32 @@
 			</control>
 			<!-- Recording image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
@@ -421,32 +420,32 @@
 			</control>
 			<!-- Recording image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
@@ -485,39 +484,39 @@
 			</control>
 			<!-- Recording image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Recording.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Recording.png</texture>
 				<visible>ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Timer image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Timer.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Timer.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 			<!-- Reminder image -->
 			<control type="image">
-				<left>0</left>
-				<top>30</top>
-				<width>30</width>
-				<height>30</height>
-				<texture>pvr/Reminder.png</texture>
+				<left>3</left>
+				<top>33</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>pvr/24/Reminder.png</texture>
 				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
 				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords12_21:9</include>
@@ -568,7 +567,7 @@
 					<top>93</top>
 					<width>718</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -583,30 +582,30 @@
 				</control>
 				<!-- Recording image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
@@ -657,7 +656,7 @@
 					<top>93</top>
 					<width>718</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -672,30 +671,30 @@
 				</control>
 				<!-- Recording image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
@@ -746,7 +745,7 @@
 					<top>93</top>
 					<width>718</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -761,30 +760,30 @@
 				</control>
 				<!-- Recording image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
@@ -835,7 +834,7 @@
 					<top>93</top>
 					<width>478</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -850,37 +849,37 @@
 				</control>
 				<!-- Recording image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Recording.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Recording.png</texture>
 					<visible>ListItem.IsRecording</visible>
 				</control>
 				<!-- Timer image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Timer.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Timer.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
 				</control>
 				<!-- Reminder image -->
 				<control type="image">
-					<left>0</left>
-					<top>75</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>pvr/Reminder.png</texture>
+					<left>3</left>
+					<top>78</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>pvr/24/Reminder.png</texture>
 					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
 					<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords13_21:9</include>
@@ -911,7 +910,7 @@
 		<width>20</width>
 		<height>590</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords14_21:9</include>
@@ -942,7 +941,7 @@
 		<width>30</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="DialogPVRChannelsOSD_coords15">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords15_21:9</include>
@@ -973,5 +972,4 @@
 		<width>30</width>
 		<height>30</height>
 	</include>
-
 </includes>

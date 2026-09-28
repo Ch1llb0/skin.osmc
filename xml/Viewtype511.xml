@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype511">
-
 		<!-- List info -->
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>
 
 			<!-- Media images -->
-			
+
 			<!-- Movies -->
 			<include content="image-511">
 				<param name="fallback">DefaultMovies.png</param>
@@ -29,7 +27,7 @@
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
 			</include>
-			
+
 			<!-- Plot -->
 			<control type="group">
 				<include>Viewtype511_coords3</include>
@@ -71,7 +69,7 @@
 					<visible>Skin.String(PlotFont,XL)</visible>
 				</control>
 			</control>
-			
+
 			<!-- Episode Info -->
 			<control type="group">
 				<include>Viewtype511_coords8</include>
@@ -99,7 +97,7 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$VAR[SEListView]</label>
 				</control>
-				
+
 				<!-- Episode Plot -->
 				<control type="group">
 					<include>Viewtype511_coords12</include>
@@ -140,7 +138,6 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-
 			</control>
 
 			<!-- List -->
@@ -159,17 +156,14 @@
 				<include>Viewtype511_coords18</include>
 
 				<include>Viewtype511_coords19</include>
-
 			</control>
-			
+
 			<!-- Hidden label -->
 			<control type="label" id="5110">
 				<font></font>
 				<label>$VAR[Label2]</label>
 			</control>
-
 		</control>
-
 	</include>
 
 	<include name="image-511">
@@ -179,22 +173,7 @@
 			<control type="image">
 				<include>Viewtype511_coords20</include>
 				<fadetime>200</fadetime>
-				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<visible>$PARAM[visible]</visible>
-				<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>
-			</control>
-		</definition>
-	</include>
-	
-	<include name="image-511-episodes">
-		<param name="fallback">DefaultVideo.png</param>
-		<param name="visible">False</param>
-		<definition>
-			<control type="image">
-				<include>Viewtype511_coords21</include>
-				<fadetime>200</fadetime>
-				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
+				<texture diffuse="common/masks/art-394x394.png" fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>$PARAM[visible]</visible>
 				<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>
@@ -202,4 +181,18 @@
 		</definition>
 	</include>
 
+	<include name="image-511-episodes">
+		<param name="fallback">DefaultVideo.png</param>
+		<param name="visible">False</param>
+		<definition>
+			<control type="image">
+				<include>Viewtype511_coords21</include>
+				<fadetime>200</fadetime>
+				<texture diffuse="common/masks/art-452x286.png" fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>$PARAM[visible]</visible>
+				<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>
+			</control>
+		</definition>
+	</include>
 </includes>

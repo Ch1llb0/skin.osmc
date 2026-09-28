@@ -4,18 +4,17 @@
 	<defaultcontrol always="true">6</defaultcontrol>
 	<onunload>ClearProperty(colorpicker,10035)</onunload>
 	<onunload>ClearProperty(colorpickercolor,10035)</onunload>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
 		<control type="group">
 			<include>DialogFrame</include>
-			
+
 			<control type="label" id="1">
 				<font></font>
 			</control>
@@ -31,13 +30,12 @@
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>4</preloaditems>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				
+
 				<include>DialogColorPicker_coords2</include>
-				
+
 				<include>DialogColorPicker_coords3</include>
-				
 			</control>
-			
+
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="60">
 				<include>DialogColorPicker_coords4</include>
@@ -50,7 +48,7 @@
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
-			
+
 			<!-- Color name -->
 			<control type="fadelabel">
 				<include>DialogColorPicker_coords5</include>
@@ -70,7 +68,7 @@
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<onup>6</onup>
-				
+
 				<!-- Manual input -->
 				<control type="button" id="5">
 					<width>auto</width>
@@ -78,7 +76,7 @@
 					<onclick>Skin.SetString($INFO[Window(10035).Property(colorpickercolor)])</onclick>
 					<visible>!String.IsEmpty(Window(10035).Property(colorpicker))</visible>
 				</control>
-				
+
 				<!-- Slider input -->
 				<control type="button" id="8">
 					<width>auto</width>
@@ -86,7 +84,7 @@
 					<onclick>ActivateWindow(1108)</onclick>
 					<visible>!String.IsEmpty(Window(10035).Property(colorpicker))</visible>
 				</control>
-				
+
 				<!-- Reset -->
 				<control type="button" id="9">
 					<width>auto</width>
@@ -100,17 +98,14 @@
 					<width>auto</width>
 					<label>222</label>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9000).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
 </window>

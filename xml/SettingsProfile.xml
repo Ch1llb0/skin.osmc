@@ -2,21 +2,20 @@
 <window>
 	<!-- profiles -->
 	<defaultcontrol always="true">4</defaultcontrol>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
 			<!-- Background -->
 			<include>WindowBackgroundImageVerticalHome</include>
-			
+
 			<!-- Time -->
 			<include content="Time">
 				<param name="narrow">True</param>
@@ -65,7 +64,6 @@
 						<include>SettingsProfile_coords4</include>
 						<texture border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 					</control>
-
 				</control>
 
 				<!-- Profile list -->
@@ -81,9 +79,8 @@
 					<include>SettingsProfile_coords6</include>
 
 					<include>SettingsProfile_coords7</include>
-
 				</control>
-				
+
 				<!-- Scrollbar (list) -->
 				<control type="scrollbar" id="60">
 					<include>SettingsProfile_coords8</include>
@@ -94,7 +91,7 @@
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
-				
+
 				<!-- Sub menu indicator -->
 				<control type="group">
 					<visible>!ControlGroup(9002).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu)</visible>
@@ -108,13 +105,9 @@
 
 				<!-- Sub menu -->
 				<include>SubMenu</include>
-				
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="VideoFullScreen_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>1140</width>
 		<height>274</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords2_21:9</include>
@@ -62,7 +61,7 @@
 		<width>1100</width>
 		<height>50</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords3_21:9</include>
@@ -93,7 +92,7 @@
 		<width>1100</width>
 		<height>50</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords4_21:9</include>
@@ -124,7 +123,7 @@
 		<width>1100</width>
 		<height>50</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords5_21:9</include>
@@ -155,7 +154,7 @@
 		<width>1140</width>
 		<height>930</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords6_21:9</include>
@@ -182,7 +181,7 @@
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords7_21:9</include>
@@ -205,7 +204,7 @@
 		<width>140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords8_21:9</include>
@@ -232,7 +231,7 @@
 		<width>120</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords9_21:9</include>
@@ -240,26 +239,26 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords9_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords9_16:9">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords9_21:9">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords9_21:9_masked">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords9_4:3">
-		<left>40</left>
-		<width>60</width>
+		<left>52</left>
+		<width>36</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords10_21:9</include>
@@ -286,7 +285,7 @@
 		<width>140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords11_21:9</include>
@@ -309,7 +308,7 @@
 		<width>380</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords12_21:9</include>
@@ -336,7 +335,7 @@
 		<width>60</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords13">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords13_21:9</include>
@@ -363,7 +362,7 @@
 		<width>280</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords14">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords14_21:9</include>
@@ -390,7 +389,7 @@
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords15">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords15_21:9</include>
@@ -413,7 +412,7 @@
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords16">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords16_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords16_21:9</include>
@@ -436,7 +435,7 @@
 		<width>180</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords17">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords17_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords17_21:9</include>
@@ -463,7 +462,7 @@
 		<width>340</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords18">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords18_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords18_21:9</include>
@@ -490,7 +489,7 @@
 		<width>240</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords19">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords19_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords19_21:9</include>
@@ -517,7 +516,7 @@
 		<width>140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords20">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords20_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords20_21:9</include>
@@ -548,7 +547,7 @@
 		<width>440</width>
 		<height>20</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords21">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords21_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords21_21:9</include>
@@ -579,7 +578,7 @@
 		<width>440</width>
 		<height>8</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords22">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords22_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords22_21:9</include>
@@ -610,7 +609,7 @@
 		<width>440</width>
 		<height>8</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords23">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords23_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords23_21:9</include>
@@ -641,7 +640,7 @@
 		<width>440</width>
 		<height>20</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords24">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords24_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords24_21:9</include>
@@ -668,7 +667,7 @@
 		<width>530</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords25">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords25_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords25_21:9</include>
@@ -695,7 +694,7 @@
 		<width>300</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords26">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords26_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords26_21:9</include>
@@ -718,7 +717,7 @@
 		<width>1140</width>
 		<height>278</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords27">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords27_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords27_21:9</include>
@@ -749,7 +748,7 @@
 		<bottom>20</bottom>
 		<width>234</width>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords28">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords28_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords28_21:9</include>
@@ -772,7 +771,7 @@
 		<width>1140</width>
 		<height>308</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords29">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords29_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords29_21:9</include>
@@ -803,7 +802,7 @@
 		<width>820</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords30">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords30_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords30_21:9</include>
@@ -834,7 +833,7 @@
 		<width>540</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords31">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords31_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords31_21:9</include>
@@ -865,7 +864,7 @@
 		<width>280</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords32">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords32_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords32_21:9</include>
@@ -896,7 +895,7 @@
 		<width>800</width>
 		<height>163</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords33">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords33_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords33_21:9</include>
@@ -915,7 +914,7 @@
 	<include name="VideoFullScreen_coords33_4:3">
 		<height>157</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords34">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords34_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords34_21:9</include>
@@ -934,7 +933,7 @@
 	<include name="VideoFullScreen_coords34_4:3">
 		<height>140</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords35">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords35_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords35_21:9</include>
@@ -953,7 +952,7 @@
 	<include name="VideoFullScreen_coords35_4:3">
 		<height>159</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords36">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords36_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords36_21:9</include>
@@ -972,7 +971,7 @@
 	<include name="VideoFullScreen_coords36_4:3">
 		<height>129</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords37">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords37_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords37_21:9</include>
@@ -1003,7 +1002,7 @@
 		<width>800</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords38">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords38_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords38_21:9</include>
@@ -1030,7 +1029,7 @@
 		<width>140</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords39">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords39_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords39_21:9</include>
@@ -1057,7 +1056,7 @@
 		<width>640</width>
 		<height>30</height>
 	</include>
-	
+
 	<!-- A row each for the audio and the subtitle stream: a heading of its own width, the stream
 	     beside it, so a long name scrolls alone. -->
 	<include name="VideoFullScreen_coords40">
@@ -1090,7 +1089,7 @@
 		<width>800</width>
 		<height>30</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords41">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords41_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords41_21:9</include>
@@ -1117,7 +1116,7 @@
 		<width>1140</width>
 		<height>40</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords42">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords42_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords42_21:9</include>
@@ -1140,7 +1139,7 @@
 		<width>1140</width>
 		<height>40</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords43">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords43_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords43_21:9</include>
@@ -1167,7 +1166,7 @@
 		<height>40</height>
 		<left>20</left>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords44">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords44_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords44_21:9</include>
@@ -1194,7 +1193,7 @@
 		<height>40</height>
 		<left>20</left>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords45">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords45_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords45_21:9</include>
@@ -1225,7 +1224,7 @@
 		<width>1440</width>
 		<height>1080</height>
 	</include>
-	
+
 	<include name="VideoFullScreen_coords46">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords46_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords46_21:9</include>
@@ -1256,5 +1255,4 @@
 		<width>140</width>
 		<height>140</height>
 	</include>
-
 </includes>

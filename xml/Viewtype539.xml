@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype539">
-		
 		<!-- Wall low (videos) -->
 		<control type="group">
 			<visible>Control.IsVisible(539)</visible>
@@ -23,7 +21,6 @@
 				<include>Viewtype539_coords2</include>
 
 				<include>Viewtype539_coords3</include>
-				
 			</control>
 
 			<control type="group">
@@ -49,11 +46,7 @@
 					<label>$VAR[Label2]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-
 			</control>
-
 		</control>
-
 	</include>
-
 </includes>

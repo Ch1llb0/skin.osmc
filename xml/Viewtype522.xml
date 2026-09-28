@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Viewtype522">
-		
 		<!-- Wide low info -->
 		<control type="group">
 			<visible>Control.IsVisible(522)</visible>
@@ -24,14 +22,13 @@
 				<include>Viewtype522_coords2</include>
 
 				<include>Viewtype522_coords3</include>
-
 			</control>
-			
+
 			<!-- Movie/TV show info -->
 			<control type="group">
 				<include>Viewtype522_coords4</include>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
-				
+
 				<!-- Title -->
 				<control type="fadelabel">
 					<include>Viewtype522_coords5</include>
@@ -41,7 +38,7 @@
 					<label>$VAR[Label1]</label>
 					<scrollspeed>120</scrollspeed>
 				</control>
-				
+
 				<!-- Details -->
 				<control type="fadelabel">
 					<include>Viewtype522_coords6</include>
@@ -52,7 +49,7 @@
 					<label>$VAR[Label2]</label>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
-				
+
 				<!-- Plot -->
 				<control type="group">
 					<include>Viewtype522_coords7</include>
@@ -94,11 +91,7 @@
 						<visible>Skin.String(PlotFont,XL)</visible>
 					</control>
 				</control>
-			
 			</control>
-
 		</control>
-
 	</include>
-
 </includes>

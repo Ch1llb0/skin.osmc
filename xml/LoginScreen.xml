@@ -2,13 +2,13 @@
 <window>
 	<!-- loginscreen -->
 	<defaultcontrol always="true">52</defaultcontrol>
-	
+
 	<!-- Screen clear -->
 	<backgroundcolor>FF000000</backgroundcolor>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<!--Welcome screen -->
 	<onload condition="String.IsEmpty(Skin.String(WelcomeDialogShown)) + !System.HasAddon(service.osmc.settings)">ActivateWindow(1101)</onload>
 
@@ -16,7 +16,6 @@
 	<include>Onloads</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
 
@@ -40,7 +39,7 @@
 				<!-- Image -->
 				<control type="image">
 					<include>LoginScreen_coords2</include>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="common/masks/art-405x666.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 					<visible>!String.Contains(ListItem.Icon,unknown-user)</visible>
 				</control>
@@ -67,9 +66,8 @@
 					<include>LoginScreen_coords4</include>
 
 					<include>LoginScreen_coords5</include>
-
 				</control>
-				
+
 				<!-- Scrollbar (list) -->
 				<control type="scrollbar" id="60">
 					<include>LoginScreen_coords6</include>
@@ -80,7 +78,7 @@
 					<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
 				</control>
-				
+
 				<control type="group">
 					<visible>Control.HasFocus(52) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu)</visible>
 					<include>VisibleFadeAnimation</include>
@@ -93,13 +91,9 @@
 						<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
 					</control>
 				</control>
-
 			</control>
 
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>

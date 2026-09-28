@@ -2,20 +2,18 @@
 <window type="dialog" id="1107">
 	<!-- Confirm skin settings reset -->
 	<defaultcontrol always="true">10</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
-		
-		<control type="group">
 
+		<control type="group">
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
-			
+
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$LOCALIZE[31058]</param>
@@ -51,7 +49,7 @@
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>30</itemgap>
-				
+
 				<!-- Close -->
 				<control type="button" id="10">
 					<width>auto</width>
@@ -59,7 +57,7 @@
 					<onclick>Dialog.Close(1107)</onclick>
 					<label>$LOCALIZE[106]</label>
 				</control>
-				
+
 				<!-- OK -->
 				<control type="button" id="11">
 					<width>auto</width>
@@ -72,13 +70,9 @@
 					<onclick>Skin.SetString(WelcomeDialogShown,true)</onclick>
 					<label>$LOCALIZE[107]</label>
 				</control>
-				
 			</control>
-		
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="Settings_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords1_21:9</include>
@@ -31,7 +30,7 @@
 		<width>300</width>
 		<height>720</height>
 	</include>
-	
+
 	<include name="Settings_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords2_21:9</include>
@@ -90,7 +89,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
+
 	<include name="Settings_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords3_21:9</include>
@@ -119,7 +118,7 @@
 					<top>53</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -146,7 +145,7 @@
 					<top>53</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -173,7 +172,7 @@
 					<top>53</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -200,12 +199,12 @@
 					<top>53</top>
 					<width>300</width>
 					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="Settings_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords4_21:9</include>
@@ -236,7 +235,7 @@
 		<width>770</width>
 		<height>94</height>
 	</include>
-	
+
 	<include name="Settings_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords5_21:9</include>
@@ -267,7 +266,7 @@
 		<width>770</width>
 		<height>70</height>
 	</include>
-	
+
 	<include name="Settings_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords6_21:9</include>
@@ -298,7 +297,7 @@
 		<width>770</width>
 		<height>80</height>
 	</include>
-	
+
 	<include name="Settings_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords7_21:9</include>
@@ -329,5 +328,4 @@
 		<width>770</width>
 		<height>86</height>
 	</include>
-
 </includes>

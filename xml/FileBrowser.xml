@@ -2,12 +2,11 @@
 <window>
 	<!-- filebrowser -->
 	<defaultcontrol always="true">450</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -23,13 +22,13 @@
 			<!-- Image -->
 			<control type="image">
 				<include>FileBrowser_coords1</include>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x600.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>!String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
 			<control type="image">
 				<include>FileBrowser_coords1</include>
-				<texture flipx="true">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-405x600.png" flipx="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="center">keep</aspectratio>
 				<visible>String.Contains(Control.GetLabel(416),*)</visible>
 			</control>
@@ -69,7 +68,6 @@
 				<include>FileBrowser_coords4</include>
 
 				<include>FileBrowser_coords5</include>
-
 			</control>
 
 			<!-- List -->
@@ -86,7 +84,6 @@
 				<include>FileBrowser_coords7</include>
 
 				<include>FileBrowser_coords8</include>
-
 			</control>
 
 			<!-- Buttons -->
@@ -123,18 +120,14 @@
 					<label>749</label>
 					<visible>Control.IsEnabled(416)</visible>
 				</control>
-
 			</control>
-			
+
 			<!-- Button indicator -->
 			<include content="dialogButtonIndicator">
 				<param name="visibility">!ControlGroup(9000).HasFocus + !Window.IsVisible(shutdownmenu)</param>
 			</include>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

@@ -2,12 +2,11 @@
 <window>
 	<!-- smartplaylisteditor -->
 	<defaultcontrol always="true">22</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -15,7 +14,7 @@
 			<include content="DialogFrame">
 				<param name="heading">$INFO[Control.GetLabel(2)]</param>
 			</include>
-			
+
 			<control type="label" id="2">
 				<font></font>
 				<label></label>
@@ -51,7 +50,6 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<scrollspeed>55</scrollspeed>
 				</control>
-
 			</control>
 
 			<!-- Right group -->
@@ -88,7 +86,6 @@
 					<include>SmartPlaylistEditor_coords9</include>
 
 					<include>SmartPlaylistEditor_coords10</include>
-
 				</control>
 
 				<control type="grouplist" id="9000">
@@ -105,7 +102,7 @@
 						<include>SmartPlaylistEditor_coords12</include>
 						<align>right</align>
 						<label>15019</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
+						<texturefocus border="0,0,2,0" colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
 					</control>
 
 					<!-- Remove Rule Button -->
@@ -113,7 +110,7 @@
 						<include>SmartPlaylistEditor_coords12</include>
 						<align>right</align>
 						<label>1210</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
+						<texturefocus border="0,0,2,0" colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
 					</control>
 
 					<!-- Edit Rule Button -->
@@ -121,9 +118,8 @@
 						<include>SmartPlaylistEditor_coords12</include>
 						<align>right</align>
 						<label>21435</label>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
+						<texturefocus border="0,0,2,0" colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
 					</control>
-
 				</control>
 
 				<!-- Default spin control -->
@@ -164,7 +160,7 @@
 					<onleft>18</onleft>
 					<onup>17</onup>
 					<ondown>23</ondown>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
+					<texturefocus border="0,0,2,0" colordiffuse="$VAR[buttonfocus]">common/focusright.png</texturefocus>
 				</control>
 
 				<!-- Default spin control -->
@@ -187,9 +183,8 @@
 					<onup>18</onup>
 					<ondown>9001</ondown>
 				</control>
-
 			</control>
-			
+
 			<!-- Buttons -->
 			<control type="grouplist" id="9001">
 				<include>DialogButtons</include>
@@ -209,13 +204,9 @@
 					<width>auto</width>
 					<label>222</label>
 				</control>
-				
 			</control>
-
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

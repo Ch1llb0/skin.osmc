@@ -2,20 +2,18 @@
 <window type="dialog" id="1101">
 	<!-- Welcome -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
-		
-		<control type="group">
 
+		<control type="group">
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
-		
+
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$LOCALIZE[31169]</param>
@@ -49,7 +47,7 @@
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>30</itemgap>
-				
+
 				<!-- Close help -->
 				<control type="button">
 					<width>auto</width>
@@ -58,13 +56,9 @@
 					<onclick>Skin.SetString(WelcomeDialogShown,true)</onclick>
 					<label>$LOCALIZE[31151]</label>
 				</control>
-				
 			</control>
-			
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

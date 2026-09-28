@@ -2,21 +2,20 @@
 <window>
 	<!-- yesnodialog -->
 	<defaultcontrol always="true">9001</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
-		
+
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
-			
+
 			<!-- Heading -->
 			<include content="Time" condition="String.IsEmpty(System.Progressbar)">
 				<param name="heading">$INFO[Control.GetLabel(1)]</param>
@@ -48,8 +47,8 @@
 			<control type="progress" id="20">
 				<include>DialogConfirm_coords2</include>
 				<info>System.Progressbar</info>
-				<texturebg border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texturebg>
-				<midtexture colordiffuse="$VAR[OverlayColorFO]">common/white.png</midtexture>
+				<texturebg border="10,0,10,0" colordiffuse="$VAR[OverlayColorNF]">osd/OSDProgressBack.png</texturebg>
+				<midtexture border="10,0,0,0" colordiffuse="$VAR[OverlayColorFO]">osd/OSDProgressBar.png</midtexture>
 			</control>
 
 			<!-- Buttons -->
@@ -60,31 +59,27 @@
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<defaultcontrol always="true">0</defaultcontrol>
-				
+
 				<!-- No Button -->
 				<control type="button" id="10">
 					<width>auto</width>
 					<align>center</align>
 				</control>
-				
+
 				<!-- Yes Button -->
 				<control type="button" id="11">
 					<width>auto</width>
 					<align>center</align>
 				</control>
-				
+
 				<!-- Button for future use -->
 				<control type="button" id="12">
 					<width>auto</width>
 					<align>center</align>
 				</control>
-				
 			</control>
-			
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

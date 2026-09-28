@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1102">
-
 	<!-- Setting select -->
 	<defaultcontrol always="true">9002</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
-	
+
 	<!-- Where the cursor starts -->
 	<include>SettingSelectFocus</include>
-	
-	<controls>
 
+	<controls>
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
-		
-		<control type="group">
 
+		<control type="group">
 			<include content="DialogFrame">
 				<param name="heading">$INFO[Window(Home).Property(SettingSelect.Heading)]</param>
 			</include>
@@ -238,7 +235,6 @@
 					<param name="up">9129</param>
 					<param name="down">9101</param>
 				</include>
-
 			</control>
 
 			<!-- Scrollbar -->
@@ -255,11 +251,8 @@
 
 			<!-- Buttons -->
 			<include>SettingSelectFrame</include>
-			
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

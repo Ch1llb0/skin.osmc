@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widgets>
-
 	<!-- Video -->
 	<group name="videos" label="$LOCALIZE[3]" icon="DefaultVideo.png">
 		<group name="video-preconfigured" label="$LOCALIZE[31178]" icon="DefaultVideo.png" source="library" visible="Library.HasContent(movies) | Library.HasContent(tvshows)">
@@ -374,5 +373,4 @@
 			<path>$INCLUDE[osmc-widget]</path>
 		</widget>
 	</group>
-
 </widgets>

@@ -2,12 +2,11 @@
 <window>
 	<!-- PVRGuideControls -->
 	<defaultcontrol always="true">7000</defaultcontrol>
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>NotificationDepth</include>
 
@@ -19,7 +18,7 @@
 
 				<control type="image">
 					<include>DialogPVRGuideControls_coords1</include>
-					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<control type="grouplist" id="7000">
@@ -32,56 +31,56 @@
 					<include content="SubMenuAnimation">
 						<param name="containerID">7000</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">600</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19063</param>
 						<param name="onclick">PVR.EpgGridControl(FirstProgramme)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">601</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19317</param>
 						<param name="onclick">PVR.EpgGridControl(-12)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">602</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19070</param>
 						<param name="onclick">PVR.EpgGridControl(CurrentProgramme)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">603</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19318</param>
 						<param name="onclick">PVR.EpgGridControl(+12)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">604</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19064</param>
 						<param name="onclick">PVR.EpgGridControl(LastProgramme)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">605</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19288</param>
 						<param name="onclick">PVR.EpgGridControl(SelectDate)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">606</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19322</param>
 						<param name="onclick">PVR.EpgGridControl(FirstChannel)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">607</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
@@ -89,41 +88,38 @@
 						<param name="onclick">PVR.EpgGridControl(PlayingChannel)</param>
 						<param name="visible">PVR.IsPlayingTV | PVR.IsPlayingRadio | PVR.IsPlayingEpgTag</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">608</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19324</param>
 						<param name="onclick">PVR.EpgGridControl(LastChannel)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">609</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19319</param>
 						<param name="onclick">PVR.EpgGridControl(PreviousGroup)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">610</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19320</param>
 						<param name="onclick">PVR.EpgGridControl(NextGroup)</param>
 					</include>
-					
+
 					<include content="DialogRowButton">
 						<param name="id">611</param>
 						<param name="coords">DialogPVRGuideControls_coords3</param>
 						<param name="label">19321</param>
 						<param name="onclick">PVR.EpgGridControl(SelectGroup)</param>
 					</include>
-
 				</control>
 			</control>
 		</control>
 
 		<include>MaskingBars</include>
-
 	</controls>
-
 </window>

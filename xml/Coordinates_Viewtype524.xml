@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<include name="Viewtype524_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords1_21:9</include>
@@ -39,7 +38,7 @@
 		<preloaditems>4</preloaditems>
 		<focusposition>3</focusposition>
 	</include>
-	
+
 	<include name="Viewtype524_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords2_21:9</include>
@@ -54,8 +53,11 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -63,8 +65,11 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -72,8 +77,11 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -85,8 +93,11 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -94,8 +105,11 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -103,8 +117,11 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -116,8 +133,11 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -125,8 +145,11 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -134,8 +157,11 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 		</itemlayout>
 	</include>
@@ -147,8 +173,11 @@
 				<param name="visible">Container.Content(videos)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Episodes -->
 			<include content="MediaViewImageNF">
@@ -156,8 +185,11 @@
 				<param name="visible">Container.Content(episodes)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 			<!-- Image - Movies -->
 			<include content="MediaViewImageNF">
@@ -165,12 +197,15 @@
 				<param name="visible">Container.Content(movies)</param>
 				<param name="id">524</param>
 				<param name="coords">Viewtype524_coords7</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
 				<param name="coords2">Viewtype524_coords8</param>
 				<param name="coords3">Viewtype524_coords9</param>
+				<param name="overlayset">20</param>
 			</include>
 		</itemlayout>
 	</include>
-	
+
 	<include name="Viewtype524_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords3_21:9</include>
@@ -180,15 +215,18 @@
 	<include name="Viewtype524_coords3_16:9">
 		<focusedlayout width="248" height="244">
 			<control type="group">
-				<animation effect="zoom" start="76" end="100" center="124,152" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+				<animation effect="zoom" start="76" end="100" center="124,244" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
 				<!-- Image - Videos -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Episodes -->
 				<include content="MediaViewImageFO">
@@ -196,8 +234,11 @@
 					<param name="visible">Container.Content(episodes)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
@@ -205,8 +246,11 @@
 					<param name="visible">Container.Content(movies)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -214,15 +258,18 @@
 	<include name="Viewtype524_coords3_21:9">
 		<focusedlayout width="244" height="244">
 			<control type="group">
-				<animation effect="zoom" start="76" end="100" center="124,152" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+				<animation effect="zoom" start="76" end="100" center="124,244" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
 				<!-- Image - Videos -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Episodes -->
 				<include content="MediaViewImageFO">
@@ -230,8 +277,11 @@
 					<param name="visible">Container.Content(episodes)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
@@ -239,8 +289,11 @@
 					<param name="visible">Container.Content(movies)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -248,15 +301,18 @@
 	<include name="Viewtype524_coords3_21:9_masked">
 		<focusedlayout width="244" height="244">
 			<control type="group">
-				<animation effect="zoom" start="76" end="100" center="124,152" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+				<animation effect="zoom" start="76" end="100" center="124,244" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
 				<!-- Image - Videos -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Episodes -->
 				<include content="MediaViewImageFO">
@@ -264,8 +320,11 @@
 					<param name="visible">Container.Content(episodes)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
@@ -273,8 +332,11 @@
 					<param name="visible">Container.Content(movies)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 			</control>
 		</focusedlayout>
@@ -282,15 +344,18 @@
 	<include name="Viewtype524_coords3_4:3">
 		<focusedlayout width="246" height="244">
 			<control type="group">
-				<animation effect="zoom" start="76" end="100" center="124,152" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
+				<animation effect="zoom" start="76" end="100" center="124,244" time="300" tween="back" easing="out" reversible="false" condition="Container(524).OnNext | Container(524).OnPrevious">Focus</animation>
 				<!-- Image - Videos -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultVideo.png</param>
 					<param name="visible">Container.Content(videos)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Episodes -->
 				<include content="MediaViewImageFO">
@@ -298,8 +363,11 @@
 					<param name="visible">Container.Content(episodes)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 				<!-- Image - Movies -->
 				<include content="MediaViewImageFO">
@@ -307,13 +375,16 @@
 					<param name="visible">Container.Content(movies)</param>
 					<param name="id">524</param>
 					<param name="coords">Viewtype524_coords10</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
 					<param name="coords2">Viewtype524_coords11</param>
 					<param name="coords3">Viewtype524_coords12</param>
+					<param name="overlayset">24</param>
 				</include>
 			</control>
 		</focusedlayout>
 	</include>
-	
+
 	<include name="Viewtype524_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords4_21:9</include>
@@ -344,7 +415,7 @@
 		<width>1200</width>
 		<height>142</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords5_21:9</include>
@@ -375,7 +446,7 @@
 		<width>1200</width>
 		<height>72</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords6_21:9</include>
@@ -406,7 +477,7 @@
 		<width>320</width>
 		<height>54</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords7_21:9</include>
@@ -437,7 +508,7 @@
 		<width>185</width>
 		<height>185</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords8_21:9</include>
@@ -468,7 +539,7 @@
 		<width>189</width>
 		<height>21</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords9_21:9</include>
@@ -476,22 +547,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype524_coords9_4:3</include>
 	</include>
 	<include name="Viewtype524_coords9_16:9">
-		<width>21</width>
+		<top>0</top>
+		<width>20</width>
+		<height>20</height>
 		<centerleft>95</centerleft>
 	</include>
 	<include name="Viewtype524_coords9_21:9">
-		<width>21</width>
+		<top>0</top>
+		<width>20</width>
+		<height>20</height>
 		<centerleft>95</centerleft>
 	</include>
 	<include name="Viewtype524_coords9_21:9_masked">
-		<width>21</width>
+		<top>0</top>
+		<width>20</width>
+		<height>20</height>
 		<centerleft>95</centerleft>
 	</include>
 	<include name="Viewtype524_coords9_4:3">
-		<width>21</width>
+		<top>0</top>
+		<width>20</width>
+		<height>20</height>
 		<centerleft>95</centerleft>
 	</include>
-	
+
 	<include name="Viewtype524_coords10">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords10_21:9</include>
@@ -522,7 +601,7 @@
 		<width>244</width>
 		<height>244</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords11">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords11_21:9</include>
@@ -553,7 +632,7 @@
 		<width>244</width>
 		<height>27</height>
 	</include>
-	
+
 	<include name="Viewtype524_coords12">
 		<include condition="$EXP[NonMaskedCoordinates]">Viewtype524_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype524_coords12_21:9</include>
@@ -561,20 +640,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype524_coords12_4:3</include>
 	</include>
 	<include name="Viewtype524_coords12_16:9">
-		<width>27</width>
+		<top>1</top>
+		<width>24</width>
+		<height>24</height>
 		<centerleft>122</centerleft>
 	</include>
 	<include name="Viewtype524_coords12_21:9">
-		<width>27</width>
+		<top>1</top>
+		<width>24</width>
+		<height>24</height>
 		<centerleft>122</centerleft>
 	</include>
 	<include name="Viewtype524_coords12_21:9_masked">
-		<width>27</width>
+		<top>1</top>
+		<width>24</width>
+		<height>24</height>
 		<centerleft>122</centerleft>
 	</include>
 	<include name="Viewtype524_coords12_4:3">
-		<width>27</width>
+		<top>1</top>
+		<width>24</width>
+		<height>24</height>
 		<centerleft>122</centerleft>
 	</include>
-
 </includes>

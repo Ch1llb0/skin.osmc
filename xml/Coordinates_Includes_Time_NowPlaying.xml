@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<include name="heading_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords1_21:9</include>
@@ -62,7 +61,7 @@
 		<width>300</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords3">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords3_21:9</include>
@@ -93,7 +92,7 @@
 		<width>528</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords4_21:9</include>
@@ -124,7 +123,7 @@
 		<width>230</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords5_21:9</include>
@@ -155,7 +154,7 @@
 		<width>458</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords6_21:9</include>
@@ -186,7 +185,7 @@
 		<width>300</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords7_21:9</include>
@@ -217,7 +216,7 @@
 		<width>528</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords8_21:9</include>
@@ -248,7 +247,7 @@
 		<width>230</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="heading_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">heading_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords9_21:9</include>
@@ -279,7 +278,7 @@
 		<width>458</width>
 		<height>33</height>
 	</include>
-	
+
 	<include name="ScrollingLabel_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">ScrollingLabel_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">ScrollingLabel_coords1_21:9</include>
@@ -288,29 +287,29 @@
 	</include>
 	<include name="ScrollingLabel_coords1_16:9">
 		<top>90</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords1_21:9">
 		<top>90</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords1_21:9_masked">
 		<top>270</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords1_4:3">
 		<top>90</top>
-		<left>-100</left>
-		<width>175</width>
+		<left>20</left>
+		<width>75</width>
 		<height>75</height>
 	</include>
-	
+
 	<include name="ScrollingLabel_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">ScrollingLabel_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">ScrollingLabel_coords2_21:9</include>
@@ -319,29 +318,29 @@
 	</include>
 	<include name="ScrollingLabel_coords2_16:9">
 		<top>90</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords2_21:9">
 		<top>90</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords2_21:9_masked">
 		<top>270</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
 	<include name="ScrollingLabel_coords2_4:3">
 		<top>90</top>
-		<left>0</left>
+		<left>20</left>
 		<width>75</width>
 		<height>75</height>
 	</include>
-	
+
 	<include name="timenowplaying_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">timenowplaying_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">timenowplaying_coords1_21:9</include>
@@ -368,7 +367,7 @@
 		<top>94</top>
 		<width>800</width>
 	</include>
-	
+
 	<include name="timenowplaying_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">timenowplaying_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">timenowplaying_coords2_21:9</include>
@@ -395,7 +394,7 @@
 		<top>94</top>
 		<width>572</width>
 	</include>
-	
+
 	<include name="time_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">time_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">time_coords1_21:9</include>
@@ -414,7 +413,7 @@
 	<include name="time_coords1_4:3">
 		<height>33</height>
 	</include>
-	
+
 	<include name="time_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">time_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">time_coords2_21:9</include>
@@ -437,7 +436,7 @@
 		<top>33</top>
 		<height>33</height>
 	</include>
-	
+
 	<include name="nowplaying_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords1_21:9</include>
@@ -464,7 +463,7 @@
 		<width>680</width>
 		<height>66</height>
 	</include>
-	
+
 	<include name="nowplaying_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords2_21:9</include>
@@ -491,7 +490,7 @@
 		<width>452</width>
 		<height>66</height>
 	</include>
-	
+
 	<include name="nowplaying_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords4_21:9</include>
@@ -510,7 +509,7 @@
 	<include name="nowplaying_coords4_4:3">
 		<height>33</height>
 	</include>
-	
+
 	<include name="nowplaying_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords5_21:9</include>
@@ -533,7 +532,7 @@
 		<top>33</top>
 		<height>33</height>
 	</include>
-	
+
 	<include name="nowplaying_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords6_21:9</include>
@@ -556,7 +555,7 @@
 		<right>-70</right>
 		<height>66</height>
 	</include>
-	
+
 	<include name="nowplaying_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords7_21:9</include>
@@ -587,7 +586,7 @@
 		<width>60</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="nowplaying_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">nowplaying_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords8_21:9</include>
@@ -595,28 +594,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">nowplaying_coords8_4:3</include>
 	</include>
 	<include name="nowplaying_coords8_16:9">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="nowplaying_coords8_21:9">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="nowplaying_coords8_21:9_masked">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
 	<include name="nowplaying_coords8_4:3">
-		<right>-10</right>
+		<right>2</right>
 		<top>6</top>
-		<width>60</width>
+		<width>36</width>
 		<height>60</height>
 	</include>
-	
 </includes>

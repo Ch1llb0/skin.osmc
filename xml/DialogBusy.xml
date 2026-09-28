@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- busydialog -->
-	
+
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
-	
 		<control type="group">
 			<include>BusyDepth</include>
 
@@ -22,11 +21,7 @@
 				<control type="image">
 					<texture colordiffuse="$VAR[OverlayColorFO]">$VAR[BusySpinner]</texture>
 				</control>
-
 			</control>
-			
 		</control>
-
 	</controls>
-
 </window>

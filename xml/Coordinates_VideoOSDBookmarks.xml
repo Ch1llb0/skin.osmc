@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="VideoOSDBookmarks_coords1">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords1_21:9</include>
@@ -12,26 +11,158 @@
 		<top>610</top>
 		<width>1620</width>
 		<height>290</height>
+		<control type="image">
+			<width>324</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>648</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>972</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>1296</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>1620</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(11).NumItems,5)</visible>
+		</control>
 	</include>
 	<include name="VideoOSDBookmarks_coords1_21:9">
 		<left>150</left>
 		<top>610</top>
 		<width>2260</width>
 		<height>290</height>
+		<control type="image">
+			<width>323</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>646</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>969</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>1292</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>1615</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,5)</visible>
+		</control>
+		<control type="image">
+			<width>1938</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,6)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(11).NumItems,7)</visible>
+		</control>
 	</include>
 	<include name="VideoOSDBookmarks_coords1_21:9_masked">
 		<left>150</left>
 		<top>790</top>
 		<width>2260</width>
 		<height>290</height>
+		<control type="image">
+			<width>323</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>646</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>969</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>1292</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>1615</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,5)</visible>
+		</control>
+		<control type="image">
+			<width>1938</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,6)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(11).NumItems,7)</visible>
+		</control>
 	</include>
 	<include name="VideoOSDBookmarks_coords1_4:3">
 		<left>150</left>
 		<top>610</top>
 		<width>1140</width>
 		<height>290</height>
+		<control type="image">
+			<width>380</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>760</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(11).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>1140</width>
+			<height>242</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(11).NumItems,3)</visible>
+		</control>
 	</include>
-	
+
 	<include name="VideoOSDBookmarks_coords2">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords2_21:9</include>
@@ -39,19 +170,45 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords2_4:3</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords2_16:9">
+		<left>150</left>
+		<top>610</top>
+		<width>1620</width>
+		<height>290</height>
+	</include>
+	<include name="VideoOSDBookmarks_coords2_21:9">
+		<left>150</left>
+		<top>610</top>
+		<width>2260</width>
+		<height>290</height>
+	</include>
+	<include name="VideoOSDBookmarks_coords2_21:9_masked">
+		<left>150</left>
+		<top>790</top>
+		<width>2260</width>
+		<height>290</height>
+	</include>
+	<include name="VideoOSDBookmarks_coords2_4:3">
+		<left>150</left>
+		<top>610</top>
+		<width>1140</width>
+		<height>290</height>
+	</include>
+
+	<include name="VideoOSDBookmarks_coords3">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords3_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoOSDBookmarks_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords3_4:3</include>
+	</include>
+	<include name="VideoOSDBookmarks_coords3_16:9">
 		<itemlayout height="290" width="324">
-			<control type="image">
-				<width>324</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
 			<control type="image">
 				<left>6</left>
 				<top>6</top>
 				<width>312</width>
 				<height>176</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>10</left>
@@ -64,20 +221,15 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="VideoOSDBookmarks_coords2_21:9">
+	<include name="VideoOSDBookmarks_coords3_21:9">
 		<itemlayout height="290" width="323">
-			<control type="image">
-				<width>323</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
 			<control type="image">
 				<left>5</left>
 				<top>6</top>
 				<width>312</width>
 				<height>176</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>9</left>
@@ -90,20 +242,15 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="VideoOSDBookmarks_coords2_21:9_masked">
+	<include name="VideoOSDBookmarks_coords3_21:9_masked">
 		<itemlayout height="290" width="323">
-			<control type="image">
-				<width>323</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
 			<control type="image">
 				<left>5</left>
 				<top>6</top>
 				<width>312</width>
 				<height>176</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>9</left>
@@ -116,20 +263,15 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="VideoOSDBookmarks_coords2_4:3">
+	<include name="VideoOSDBookmarks_coords3_4:3">
 		<itemlayout height="290" width="380">
-			<control type="image">
-				<width>380</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
 			<control type="image">
 				<left>34</left>
 				<top>6</top>
 				<width>312</width>
 				<height>176</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
 				<left>38</left>
@@ -142,174 +284,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	
-	<include name="VideoOSDBookmarks_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords3_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">VideoOSDBookmarks_coords3_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords3_4:3</include>
-	</include>
-	<include name="VideoOSDBookmarks_coords3_16:9">
-		<focusedlayout height="290" width="324">
-			<control type="image">
-				<width>324</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
-			<control type="image">
-				<left>6</left>
-				<top>6</top>
-				<width>312</width>
-				<height>176</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="group">
-				<include content="NonFocusDialogFadeAnimation">
-					<param name="id">11</param>
-				</include>
-				<control type="label">
-					<left>10</left>
-					<top>190</top>
-					<width>304</width>
-					<height>44</height>
-					<scroll>True</scroll>
-					<scrollspeed>55</scrollspeed>
-					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
-					<font>Font33</font>
-				</control>
-				<control type="image">
-					<left>10</left>
-					<top>232</top>
-					<width>304</width>
-					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
-				</control>
-			</control>
-		</focusedlayout>
-	</include>
-	<include name="VideoOSDBookmarks_coords3_21:9">
-		<focusedlayout height="290" width="323">
-			<control type="image">
-				<width>323</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
-			<control type="image">
-				<left>5</left>
-				<top>6</top>
-				<width>312</width>
-				<height>176</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="group">
-				<include content="NonFocusDialogFadeAnimation">
-					<param name="id">11</param>
-				</include>
-				<control type="label">
-					<left>9</left>
-					<top>190</top>
-					<width>304</width>
-					<height>44</height>
-					<scroll>True</scroll>
-					<scrollspeed>55</scrollspeed>
-					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
-					<font>Font33</font>
-				</control>
-				<control type="image">
-					<left>9</left>
-					<top>232</top>
-					<width>304</width>
-					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
-				</control>
-			</control>
-		</focusedlayout>
-	</include>
-	<include name="VideoOSDBookmarks_coords3_21:9_masked">
-		<focusedlayout height="290" width="323">
-			<control type="image">
-				<width>323</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
-			<control type="image">
-				<left>5</left>
-				<top>6</top>
-				<width>312</width>
-				<height>176</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="group">
-				<include content="NonFocusDialogFadeAnimation">
-					<param name="id">11</param>
-				</include>
-				<control type="label">
-					<left>9</left>
-					<top>190</top>
-					<width>304</width>
-					<height>44</height>
-					<scroll>True</scroll>
-					<scrollspeed>55</scrollspeed>
-					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
-					<font>Font33</font>
-				</control>
-				<control type="image">
-					<left>9</left>
-					<top>232</top>
-					<width>304</width>
-					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
-				</control>
-			</control>
-		</focusedlayout>
-	</include>
-	<include name="VideoOSDBookmarks_coords3_4:3">
-		<focusedlayout height="290" width="380">
-			<control type="image">
-				<width>380</width>
-				<height>242</height>
-				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
-			</control>
-			<control type="image">
-				<left>34</left>
-				<top>6</top>
-				<width>312</width>
-				<height>176</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="group">
-				<include content="NonFocusDialogFadeAnimation">
-					<param name="id">11</param>
-				</include>
-				<control type="label">
-					<left>38</left>
-					<top>190</top>
-					<width>304</width>
-					<height>44</height>
-					<scroll>True</scroll>
-					<scrollspeed>55</scrollspeed>
-					<textcolor>$VAR[TextColorFO]</textcolor>
-					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
-					<font>Font33</font>
-				</control>
-				<control type="image">
-					<left>38</left>
-					<top>232</top>
-					<width>304</width>
-					<height>3</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
-				</control>
-			</control>
-		</focusedlayout>
-	</include>
-	
+
 	<include name="VideoOSDBookmarks_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords4_21:9</include>
@@ -317,30 +292,146 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords4_4:3</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords4_16:9">
-		<left>150</left>
-		<top>945</top>
-		<width>1620</width>
-		<height>60</height>
+		<focusedlayout height="290" width="324">
+			<control type="image">
+				<left>6</left>
+				<top>6</top>
+				<width>312</width>
+				<height>176</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">11</param>
+				</include>
+				<control type="label">
+					<left>10</left>
+					<top>190</top>
+					<width>304</width>
+					<height>44</height>
+					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
+					<font>Font33</font>
+				</control>
+				<control type="image">
+					<left>10</left>
+					<top>232</top>
+					<width>304</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
 	</include>
 	<include name="VideoOSDBookmarks_coords4_21:9">
-		<left>150</left>
-		<top>945</top>
-		<width>2260</width>
-		<height>60</height>
+		<focusedlayout height="290" width="323">
+			<control type="image">
+				<left>5</left>
+				<top>6</top>
+				<width>312</width>
+				<height>176</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">11</param>
+				</include>
+				<control type="label">
+					<left>9</left>
+					<top>190</top>
+					<width>304</width>
+					<height>44</height>
+					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
+					<font>Font33</font>
+				</control>
+				<control type="image">
+					<left>9</left>
+					<top>232</top>
+					<width>304</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
 	</include>
 	<include name="VideoOSDBookmarks_coords4_21:9_masked">
-		<left>150</left>
-		<top>1125</top>
-		<width>2260</width>
-		<height>60</height>
+		<focusedlayout height="290" width="323">
+			<control type="image">
+				<left>5</left>
+				<top>6</top>
+				<width>312</width>
+				<height>176</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">11</param>
+				</include>
+				<control type="label">
+					<left>9</left>
+					<top>190</top>
+					<width>304</width>
+					<height>44</height>
+					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
+					<font>Font33</font>
+				</control>
+				<control type="image">
+					<left>9</left>
+					<top>232</top>
+					<width>304</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
 	</include>
 	<include name="VideoOSDBookmarks_coords4_4:3">
-		<left>150</left>
-		<top>945</top>
-		<width>1140</width>
-		<height>60</height>
+		<focusedlayout height="290" width="380">
+			<control type="image">
+				<left>34</left>
+				<top>6</top>
+				<width>312</width>
+				<height>176</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture diffuse="common/masks/art-312x176.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">11</param>
+				</include>
+				<control type="label">
+					<left>38</left>
+					<top>190</top>
+					<width>304</width>
+					<height>44</height>
+					<scroll>True</scroll>
+					<scrollspeed>55</scrollspeed>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>($INFO[ListItem.Label2]) - $INFO[ListItem.Label]</label>
+					<font>Font33</font>
+				</control>
+				<control type="image">
+					<left>38</left>
+					<top>232</top>
+					<width>304</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
 	</include>
-	
+
 	<include name="VideoOSDBookmarks_coords5">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords5_21:9</include>
@@ -348,22 +439,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords5_4:3</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords5_16:9">
+		<left>150</left>
+		<top>945</top>
 		<width>1620</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords5_21:9">
+		<left>150</left>
+		<top>945</top>
 		<width>2260</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords5_21:9_masked">
+		<left>150</left>
+		<top>1125</top>
 		<width>2260</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords5_4:3">
+		<left>150</left>
+		<top>945</top>
 		<width>1140</width>
 		<height>60</height>
 	</include>
-	
+
 	<include name="VideoOSDBookmarks_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords6_21:9</include>
@@ -371,29 +470,22 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords6_4:3</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords6_16:9">
-		<left>20</left>
-		<top>-6</top>
-		<width>1600</width>
+		<width>1620</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords6_21:9">
-		<left>20</left>
-		<top>-6</top>
-		<width>2240</width>
+		<width>2260</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords6_21:9_masked">
-		<left>20</left>
-		<top>-6</top>
-		<width>2240</width>
+		<width>2260</width>
 		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords6_4:3">
-		<left>20</left>
-		<top>-6</top>
-		<width>1120</width>
-		<height>60</height>	</include>
-	
+		<width>1140</width>
+		<height>60</height>
+	</include>
+
 	<include name="VideoOSDBookmarks_coords7">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords7_21:9</include>
@@ -401,16 +493,45 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords7_4:3</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_16:9">
-		<width>385</width>
+		<left>20</left>
+		<top>-6</top>
+		<width>1600</width>
+		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_21:9">
-		<width>545</width>
+		<left>20</left>
+		<top>-6</top>
+		<width>2240</width>
+		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_21:9_masked">
-		<width>545</width>
+		<left>20</left>
+		<top>-6</top>
+		<width>2240</width>
+		<height>60</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_4:3">
+		<left>20</left>
+		<top>-6</top>
+		<width>1120</width>
+		<height>60</height>	</include>
+
+	<include name="VideoOSDBookmarks_coords8">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSDBookmarks_coords8_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoOSDBookmarks_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSDBookmarks_coords8_4:3</include>
+	</include>
+	<include name="VideoOSDBookmarks_coords8_16:9">
+		<width>385</width>
+	</include>
+	<include name="VideoOSDBookmarks_coords8_21:9">
+		<width>545</width>
+	</include>
+	<include name="VideoOSDBookmarks_coords8_21:9_masked">
+		<width>545</width>
+	</include>
+	<include name="VideoOSDBookmarks_coords8_4:3">
 		<width>265</width>
 	</include>
-
 </includes>
