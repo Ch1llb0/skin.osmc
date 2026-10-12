@@ -406,16 +406,15 @@
 
 	<include name="widgetOnControl-OSMC">
 		<!-- The second widget of an odd list sits on two pages, so up and down there turn the page
-		     rather than move. -->
+		     rather than move. Left and right have no action on purpose: with none, Kodi wraps round
+		     from either end, so only back returns to the main menu. -->
 		<param name="menu">none</param>
 		<definition>
-			<onleft>9000</onleft>
 			<onback>9000</onback>
 			<onup condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + ![$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]">9005</onup>
 			<onup condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + [$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]">9008</onup>
 			<ondown condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + ![$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]]">9007</ondown>
 			<ondown condition="Integer.IsGreater(Container($PARAM[container]).NumItems,1) + [$EXP[TwoRowWidgets] + Integer.IsOdd(Container($PARAM[container]).NumItems) + String.IsEqual(Container($PARAM[container]).ListItem.Property(widgetID),$PARAM[menu]-2) + ![String.IsEqual(Window(Home).Property(widgetUp-$PARAM[container]),True)]]">9009</ondown>
-			<onright>noop</onright>
 		</definition>
 	</include>
 
