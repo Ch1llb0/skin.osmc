@@ -252,7 +252,7 @@ Kodi's "install from zip file". Remember that `media/Textures.xbt` shadows the l
 existing PNG needs the bundle rebuilt before it is visible.
 
 What *is* automated is `.github/workflows/validate.yml`, which runs `.github/scripts/validate_skin.py` on
-every pull request. It catches four things that fail silently:
+every pull request. It catches five things that fail silently:
 
 - an `<include>` or `$VAR[]` name that is referenced but never defined — Kodi logs a warning at most for the
   first and nothing at all for the second
@@ -260,6 +260,8 @@ every pull request. It catches four things that fail silently:
 - a file that does not parse — malformed XML silently fails to load the affected window
 - a widget whose declared sort disagrees with its source — the widget still fills, so nothing looks wrong,
   but the row sorts one way while the management dialog says another
+- an include file that `xml/Includes.xml` never names — Kodi reads only the files listed there, so the
+  file's names exist for the other checks but not in Kodi, and its controls draw with no geometry
 
 It also reports each locale's `msgid` against `en_gb` and the Kodi markup tokens (`[B]`, `[CR]`, `[COLOR]`)
 between `msgid` and `msgstr`, but never fails on those, since they are Weblate's to fix.

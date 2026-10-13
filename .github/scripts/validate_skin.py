@@ -14,12 +14,16 @@ land while one is outstanding:
   2. names defined more than once in the same file
   3. every .xml/.xsp parses
   4. a widget's declared sort matching what its source actually sorts by
+  5. every include file under xml/ loaded by an <include file="..."> in Includes.xml,
+     and every file named there present (bar the generated one): Kodi reads only
+     the files Includes.xml names, so an unlisted file's names are defined here but
+     not in Kodi, and its controls draw with no geometry at all
 
 Advisory checks — real findings, but the fix belongs in Weblate rather than in a
 commit, so they are reported and never fail the build:
 
-  5. .po: locale msgid differing from en_gb, and ids missing from a locale
-  6. .po: Kodi markup tokens ([B], [CR], [COLOR]...) unbalanced between msgid/msgstr
+  6. .po: locale msgid differing from en_gb, and ids missing from a locale
+  7. .po: Kodi markup tokens ([B], [CR], [COLOR]...) unbalanced between msgid/msgstr
 
 Translations arrive from translate.osmc.tv and a commit that edits them by hand
 is overwritten on the next sync, so failing a build on them would only train
@@ -78,7 +82,7 @@ def xml_files(root):
 
 
 def check_parse(root):
-    """5. Every XML file is well-formed."""
+    """3. Every XML file is well-formed."""
     problems = []
     for path in xml_files(root):
         try:
@@ -135,6 +139,33 @@ def check_references(root):
         for rel, name, first, second in duplicates
     ]
     return dangling, dupes
+
+
+INCLUDE_FILE_RE = re.compile(r"<include\b[^>]*\bfile=\"([^\"]+)\"")
+
+
+def check_loaded(root):
+    """5. Every include file is one Kodi actually loads, and every file it loads exists."""
+    xml_dir = os.path.join(root, "xml")
+    with open(os.path.join(xml_dir, "Includes.xml"), encoding="utf-8") as handle:
+        loaded = set(INCLUDE_FILE_RE.findall(handle.read()))
+
+    problems = []
+    for name in sorted(os.listdir(xml_dir)):
+        if not name.endswith(".xml") or name == "Includes.xml" or name in loaded:
+            continue
+        try:
+            tag = ET.parse(os.path.join(xml_dir, name)).getroot().tag
+        except ET.ParseError:
+            continue  # reported by check_parse
+        if tag == "includes":
+            problems.append("xml/%s: never loaded -- add <include file=\"%s\" /> to Includes.xml"
+                            % (name, name))
+    for name in sorted(loaded):
+        rel = os.path.join("xml", name)
+        if rel not in SKIP_FILES and not os.path.exists(os.path.join(root, rel)):
+            problems.append("xml/Includes.xml: loads %s, which does not exist" % name)
+    return problems
 
 
 def playlist_order(root, path):
@@ -302,6 +333,7 @@ def main(argv):
         ("References to names that are never defined", dangling),
         ("Names defined twice in one file", dupes),
         ("Widget sorts that disagree with their source", check_widget_sorts(root)),
+        ("Include files Kodi never loads", check_loaded(root)),
     ]
 
     stale, markup = check_translations(root)
