@@ -8,6 +8,10 @@
 	<onload condition="[String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)">SetFocus(50)</onload>
 	<onunload>ClearProperty(extended,12003)</onunload>
 	<onunload>ClearProperty(cast,12003)</onunload>
+	<onload condition="!String.IsEmpty(Window(12003).Property(InfoDialogOpen))">SetProperty(InfoDialogReopen,True,10000)</onload>
+	<onload condition="!String.IsEmpty(Window(12003).Property(InfoDialogOpen))">AlarmClock(InfoDialogReopen,ClearProperty(InfoDialogReopen,10000),00:01,silent)</onload>
+	<onload>SetProperty(InfoDialogOpen,True,12003)</onload>
+	<onunload>ClearProperty(InfoDialogOpen,12003)</onunload>
 
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
@@ -784,14 +788,14 @@
 				</control>
 			</control>
 
-			<!-- Buttons -->
+			<!-- Buttons: open on the first button shown, not on the button last used. -->
 			<control type="grouplist" id="9000">
 				<include>DialogButtons</include>
+				<defaultcontrol always="true">0</defaultcontrol>
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<onup condition="!String.IsEmpty(Window(12003).Property(cast)) | [String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | !String.IsEmpty(Window(12003).Property(extended)) + String.IsEqual(Skin.String(infodialogfirstpage),Description)] + String.IsEqual(ListItem.DBTYPE,set)">50</onup>
-				<include>VideoInfoDialogButtonFocus</include>
 
 				<!-- Play/Browse Button -->
 				<control type="togglebutton" id="8">

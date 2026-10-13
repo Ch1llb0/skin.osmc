@@ -21,6 +21,15 @@
 	<expression name="StatusOverlayVisible">$EXP[IsWatchedResumedOrPartial] + $EXP[WatchedStatusVisible]</expression>
 	<expression name="WidgetBadgeVisible">$EXP[StatusOverlayVisible] | ListItem.IsRecording | [ListItem.HasTimer | ListItem.HasTimerSchedule | ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</expression>
 
+	<!-- The music info dialog opening in place of another (album to artist and back): Kodi force-closes
+	     the old one, with no close animation, and opens the next without a frame between them. The
+	     forced close runs the old dialog's onunload, which sets InfoDialogClosed and clears it with a 0 s
+	     AlarmClock, whose command waits in the message queue until Kodi has opened the next dialog. A
+	     dialog opened that way carries InfoDialogSwapped on itself until it unloads; a control reads
+	     Window.Property from its own window, so only that dialog's controls see it. -->
+	<expression name="InfoDialogSwap">!String.IsEmpty(Window(Home).Property(InfoDialogClosed)) + Window.IsDialogTopmost(DialogMusicInfo.xml)</expression>
+	<expression name="InfoDialogSwapped">!String.IsEmpty(Window.Property(InfoDialogSwapped))</expression>
+
 	<!-- Scroll reset. Any change to a control's raw text puts its scroll back to the start. The
 	     token flips as a window loads, and gains an empty bold tag while a dialog covers it. -->
 	<expression name="ResetScrollOverlay">System.HasActiveModalDialog | ControlGroup(9002).HasFocus | ControlGroup(9003).HasFocus | ControlGroup(9010).HasFocus</expression>

@@ -596,6 +596,14 @@ label, scrollbars, two widget rows, date above clock, masking ratio, kiosk mode.
   Cancel are the add-on's: the skin adds no actions to them, as closing from the skin would skip its save.
 - **The window below a full-screen dialog fades out** 300 ms after it opens (`WindowFullscreenDialogFadeAnimation`,
   on the 26 windows that carry it), so it isn't drawn while hidden.
+- **A music info dialog swapped in for another opens at rest.** Kodi force-closes the music info dialog to
+  show the next (album to artist and back), with no close animation and no frame before the next opens, so
+  the new one skips its opening too (`!$EXP[InfoDialogSwap]` on each WindowOpen). Its rounded background
+  copies stay hidden and its square copies close on their own (`$EXP[InfoDialogSwapped]`). Video and add-on
+  info move on with Close() then Open(), which Kodi turns into opening the still active dialog again: that
+  opening plays, and the dialog sets `InfoDialogReopen` for 1 s so the window below is drawn under it rather
+  than black. Each control keeps a single WindowOpen animation: Kodi resets the first one when the control
+  closes.
 - **Panel and corner** (context menu, extended progress, notification): the window stays visible. Context menu
   is a 430 px `MenuOSDColor` panel at 20, 20 sliding in 460 px from the left, rows 390 × 52 at 40;
   `SubMenuAnimation` keeps the list centred on the panel: instantly in the dialogs, over 200 ms in

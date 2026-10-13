@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- addoninformation -->
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">9100</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(10146).Property(description))">ClearProperty(description,10146)</onload>
 	<onunload>ClearProperty(description,10146)</onunload>
+	<onload condition="!String.IsEmpty(Window(10146).Property(InfoDialogOpen))">SetProperty(InfoDialogReopen,True,10000)</onload>
+	<onload condition="!String.IsEmpty(Window(10146).Property(InfoDialogOpen))">AlarmClock(InfoDialogReopen,ClearProperty(InfoDialogReopen,10000),00:01,silent)</onload>
+	<onload>SetProperty(InfoDialogOpen,True,10146)</onload>
+	<onunload>ClearProperty(InfoDialogOpen,10146)</onunload>
 
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
 	<controls>
+		<!-- Focus helpers. Kodi enables this dialog's buttons only after the window has placed focus,
+		     and may move focus itself while it does, to a button that still reads as hidden; a
+		     button's visible condition is read again only when the window is next processed. The
+		     window focuses 9100, whose focus action is queued at once, so nothing Kodi does next can
+		     cancel it. It passes focus to 9101, whose focus action waits for its focus animation,
+		     which plays while the window is processed, so 9101 hands focus to the row on the next
+		     frame, when every button's visibility is current and the row finds its first one shown. -->
+		<control type="button" id="9100">
+			<width>1</width>
+			<height>1</height>
+			<texturefocus></texturefocus>
+			<onfocus>SetFocus(9101)</onfocus>
+		</control>
+		<control type="button" id="9101">
+			<width>1</width>
+			<height>1</height>
+			<texturefocus></texturefocus>
+			<animation effect="fade" start="100" end="100" time="1">Focus</animation>
+			<onfocus>SetFocus(9000)</onfocus>
+		</control>
+
 		<!-- Dialog fanart -->
 		<include>DialogBackgroundImage</include>
 
@@ -201,14 +226,14 @@
 				<include>VisibleFadeAnimation</include>
 			</control>
 
-			<!-- Buttons -->
+			<!-- Buttons: open on the first button shown, not on the button last used. -->
 			<control type="grouplist" id="9000">
 				<include>DialogButtons</include>
+				<defaultcontrol always="true">0</defaultcontrol>
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>30</itemgap>
 				<onup>50</onup>
-				<include>AddonInfoDialogButtonFocus</include>
 
 				<!-- Launch Addon Button -->
 				<control type="button" id="12">
@@ -227,19 +252,19 @@
 					<visible>!String.IsEmpty(ListItem.AddonDescription) + !String.IsEmpty(ListItem.AddonNews)</visible>
 				</control>
 				<!-- Configure Addon Button -->
-					<control type="button" id="9">
+				<control type="button" id="9">
 					<width>Auto</width>
 					<label>24020</label>
 					<visible>Control.IsEnabled(9)</visible>
 				</control>
 				<!-- Update Addon Button -->
-					<control type="button" id="8">
+				<control type="button" id="8">
 					<width>Auto</width>
 					<label>24138</label>
 					<visible>Control.IsEnabled(8)</visible>
 				</control>
 				<!-- Versions Button -->
-					<control type="button" id="14">
+				<control type="button" id="14">
 					<width>Auto</width>
 					<label>24069</label>
 					<visible>Control.IsEnabled(14)</visible>
@@ -257,7 +282,7 @@
 					<visible>Control.IsEnabled(7)</visible>
 				</control>
 				<!-- Addon Dependencies Button -->
-					<control type="button" id="10">
+				<control type="button" id="10">
 					<width>Auto</width>
 					<label>39024</label>
 					<visible>Control.IsEnabled(10)</visible>

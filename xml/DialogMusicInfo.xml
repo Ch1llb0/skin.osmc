@@ -4,6 +4,14 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(10135).Property(description))">ClearProperty(description,10135)</onload>
 	<onunload>ClearProperty(description,10135)</onunload>
+	<onload condition="$EXP[InfoDialogSwap] + Window.IsVisible(10135)">SetProperty(InfoDialogSwapped,True,10135)</onload>
+	<onload condition="$EXP[InfoDialogSwap] + Window.IsVisible(12001)">SetProperty(InfoDialogSwapped,True,12001)</onload>
+	<onload condition="!$EXP[InfoDialogSwap]">ClearProperty(InfoDialogSwapped,10135)</onload>
+	<onload condition="!$EXP[InfoDialogSwap]">ClearProperty(InfoDialogSwapped,12001)</onload>
+	<onunload>ClearProperty(InfoDialogSwapped,10135)</onunload>
+	<onunload>ClearProperty(InfoDialogSwapped,12001)</onunload>
+	<onunload>SetProperty(InfoDialogClosed,True,10000)</onunload>
+	<onunload>AlarmClock(InfoDialogClosed,ClearProperty(InfoDialogClosed,10000),00:00,silent)</onunload>
 
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
@@ -882,14 +890,23 @@
 				<include>VisibleFadeAnimation</include>
 			</control>
 
-			<!-- Buttons -->
+			<!-- Buttons: open on the first button shown, not on the button last used. -->
 			<control type="grouplist" id="9000">
 				<include>DialogButtons</include>
+				<defaultcontrol always="true">0</defaultcontrol>
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>30</itemgap>
-				<include>MusicInfoDialogButtonFocus</include>
 
+				<!-- Play Button: albums only. The skin's own, not Kodi's control 8: Kodi hides 8 for an
+				     artist and never shows it again while the dialog stays in memory. -->
+				<control type="button" id="20">
+					<width>Auto</width>
+					<label>208</label>
+					<onclick>PlayMedia(musicdb://albums/$INFO[ListItem.DBID]/)</onclick>
+					<onclick>Dialog.Close(10135)</onclick>
+					<visible>String.IsEqual(ListItem.DBTYPE,album)</visible>
+				</control>
 				<!-- Extended info Button -->
 				<control type="togglebutton" id="14">
 					<width>Auto</width>
@@ -933,7 +950,7 @@
 					<onclick condition="Window.IsVisible(10135)">Dialog.Close(10135)</onclick>
 					<onclick condition="Window.IsVisible(12001)">Dialog.Close(12001)</onclick>
 					<label>$LOCALIZE[15067]</label>
-					<visible>Skin.HasSetting(KioskMode) + !Control.IsVisible(7) + !Control.IsVisible(14) + !Control.IsVisible(12)</visible>
+					<visible>Skin.HasSetting(KioskMode) + !Control.IsVisible(20) + !Control.IsVisible(7) + !Control.IsVisible(14) + !Control.IsVisible(12)</visible>
 				</control>
 			</control>
 		</control>

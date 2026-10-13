@@ -6,6 +6,12 @@
 	<onload condition="Window.IsVisible(10601) + !String.IsEmpty(Window(10601).Property(description))">ClearProperty(description,10601)</onload>
 	<onunload condition="Window.IsVisible(10600)">ClearProperty(description,10600)</onunload>
 	<onunload condition="Window.IsVisible(10601)">ClearProperty(description,10601)</onunload>
+	<onload condition="!String.IsEmpty(Window(10600).Property(InfoDialogOpen)) | !String.IsEmpty(Window(10601).Property(InfoDialogOpen))">SetProperty(InfoDialogReopen,True,10000)</onload>
+	<onload condition="!String.IsEmpty(Window(10600).Property(InfoDialogOpen)) | !String.IsEmpty(Window(10601).Property(InfoDialogOpen))">AlarmClock(InfoDialogReopen,ClearProperty(InfoDialogReopen,10000),00:01,silent)</onload>
+	<onload condition="Window.IsVisible(10600)">SetProperty(InfoDialogOpen,True,10600)</onload>
+	<onload condition="Window.IsVisible(10601)">SetProperty(InfoDialogOpen,True,10601)</onload>
+	<onunload>ClearProperty(InfoDialogOpen,10600)</onunload>
+	<onunload>ClearProperty(InfoDialogOpen,10601)</onunload>
 
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
@@ -177,14 +183,20 @@
 				<include>VisibleFadeAnimation</include>
 			</control>
 
-			<!-- Buttons -->
+			<!-- Buttons: open on the first button shown, not on the button last used. -->
 			<control type="grouplist" id="9000">
 				<include>DialogButtons</include>
+				<defaultcontrol always="true">0</defaultcontrol>
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>30</itemgap>
-				<include>PVRInfoDialogButtonFocus</include>
 
+				<!-- Play Recording Button -->
+				<control type="button" id="8">
+					<width>auto</width>
+					<label>19687</label>
+					<visible>Window.IsActive(PVRRecordingInfo)</visible>
+				</control>
 				<!-- Switch to Channel -->
 				<control type="button" id="5">
 					<width>auto</width>
@@ -219,12 +231,6 @@
 					<width>auto</width>
 					<label></label>
 					<visible>Window.IsActive(PVRGuideInfo)</visible>
-				</control>
-				<!-- Play Recording Button -->
-				<control type="button" id="8">
-					<width>auto</width>
-					<label>19687</label>
-					<visible>Window.IsActive(PVRRecordingInfo)</visible>
 				</control>
 				<!-- Add Timer -->
 				<control type="button" id="9">

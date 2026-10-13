@@ -55,13 +55,16 @@
 
 	<!-- Window animation -->
 	<include name="WindowFadeAnimation">
-		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="200" condition="!$EXP[InfoDialogSwap]">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	</include>
 
-	<!-- Window fulscreen dialog overlay animation -->
+	<!-- Window below a full-screen dialog: hidden 300 ms after the dialog opens. Video, add-on and PVR info
+	     move to the next item with Close() then Open(), which Kodi turns into opening the still active
+	     dialog again; the dialog then sets InfoDialogReopen for 1 s, and the window is drawn under the
+	     new opening instead of black. -->
 	<include name="WindowFullscreenDialogFadeAnimation">
-		<animation effect="fade" start="100" end="0" time="1" delay="300" reversible="false" condition="Window.IsActive(Custom_Confirm_Reset_Skin_Settings.xml) | Window.IsActive(Custom_Welcome.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(DialogGameControllers.xml) | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(script-skin_helper_service-ColorPicker.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(SmartPlaylistRule.xml)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="1" delay="300" reversible="false" condition="[Window.IsActive(Custom_Confirm_Reset_Skin_Settings.xml) | Window.IsActive(Custom_Welcome.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(DialogGameControllers.xml) | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(script-skin_helper_service-ColorPicker.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(SmartPlaylistRule.xml)] + String.IsEmpty(Window(Home).Property(InfoDialogReopen))">Conditional</animation>
 	</include>
 
 	<include name="NonFocusDialogFadeAnimation">
@@ -100,9 +103,14 @@
 		</animation>
 	</include>
 
+	<!-- A music info dialog swapped in for another ($EXP[InfoDialogSwap]) skips its opening and shows at rest,
+	     as the dialog it replaces got no close animation either. Kodi resets a control's first WindowOpen
+	     animation when it closes, so each keeps a single one, with the condition on it. At rest the
+	     rounded copies below would show, so while such a dialog is open ($EXP[InfoDialogSwapped]) a
+	     Conditional fade keeps them hidden, and the square copies close on their own. -->
 	<!-- Dialog animation -->
 	<include name="DialogZoomAnimation">
-		<animation type="WindowOpen">
+		<animation type="WindowOpen" condition="!$EXP[InfoDialogSwap]">
 			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
 			<effect type="fade" start="0" end="100" time="300" />
 		</animation>
@@ -119,7 +127,11 @@
 	     animation of a type, so each of these carries the whole zoom; a control at alpha 0 is culled, so the
 	     rounded copy costs nothing once open. -->
 	<include name="DialogZoomAnimationSquare">
-		<animation type="WindowOpen">
+		<animation type="WindowClose" condition="$EXP[InfoDialogSwapped]">
+			<effect type="zoom" start="100" end="70" center="auto" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+		</animation>
+		<animation type="WindowOpen" condition="!$EXP[InfoDialogSwap]">
 			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
 			<effect type="fade" start="0" end="100" time="300" />
 			<effect type="fade" start="0" end="100" time="1" delay="240" />
@@ -131,7 +143,7 @@
 		</animation>
 	</include>
 	<include name="DialogZoomAnimationRounded">
-		<animation type="WindowOpen">
+		<animation type="WindowOpen" condition="!$EXP[InfoDialogSwap]">
 			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
 			<effect type="fade" start="0" end="100" time="300" />
 			<effect type="fade" start="100" end="0" time="1" delay="240" />
@@ -141,12 +153,16 @@
 			<effect type="fade" start="100" end="0" time="300" />
 			<effect type="fade" start="0" end="100" time="1" />
 		</animation>
+		<animation effect="fade" start="100" end="0" time="0" condition="$EXP[InfoDialogSwapped]">Conditional</animation>
 	</include>
 	<!-- The same swap for layers inside a group that already zooms. The steady fade is there so the animation
 	     starts at 0 ms: Kodi hides a control for as long as its WindowOpen animation's earliest effect is
 	     delayed, which would take the layer off screen until the swap. -->
 	<include name="DialogCornerFadeSquare">
-		<animation type="WindowOpen">
+		<animation type="WindowClose" condition="$EXP[InfoDialogSwapped]">
+			<effect type="fade" start="100" end="100" time="300" />
+		</animation>
+		<animation type="WindowOpen" condition="!$EXP[InfoDialogSwap]">
 			<effect type="fade" start="100" end="100" time="240" />
 			<effect type="fade" start="0" end="100" time="1" delay="240" />
 		</animation>
@@ -155,13 +171,14 @@
 		</animation>
 	</include>
 	<include name="DialogCornerFadeRounded">
-		<animation type="WindowOpen">
+		<animation type="WindowOpen" condition="!$EXP[InfoDialogSwap]">
 			<effect type="fade" start="100" end="100" time="240" />
 			<effect type="fade" start="100" end="0" time="1" delay="240" />
 		</animation>
 		<animation type="WindowClose">
 			<effect type="fade" start="0" end="100" time="1" />
 		</animation>
+		<animation effect="fade" start="100" end="0" time="0" condition="$EXP[InfoDialogSwapped]">Conditional</animation>
 	</include>
 
 	<!-- Options animation -->
