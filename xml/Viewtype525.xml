@@ -12,8 +12,6 @@
 				<onleft>525</onleft>
 				<onright>525</onright>
 				<pagecontrol>62</pagecontrol>
-				<preloaditems>6</preloaditems>
-				<focusposition>5</focusposition>
 				<orientation>horizontal</orientation>
 				<viewtype label="$LOCALIZE[31392]">biginfo</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
