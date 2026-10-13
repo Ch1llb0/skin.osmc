@@ -264,8 +264,9 @@
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">$LOCALIZE[535]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">$LOCALIZE[31117]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWide)">$LOCALIZE[31241]</value>
-		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">$LOCALIZE[31112]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">$LOCALIZE[31392]</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">$LOCALIZE[31112]</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewInfowidelow)">$LOCALIZE[31457]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWall)">$LOCALIZE[31078]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallinfo)">$LOCALIZE[31133]</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmall)">$LOCALIZE[31114]</value>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype522">
-		<!-- Wide low info -->
+		<!-- Wide info -->
 		<control type="group">
 			<visible>Control.IsVisible(522)</visible>
 

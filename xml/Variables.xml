@@ -2,13 +2,15 @@
 <includes>
 	<!-- The view a video add-on page is put into. A control decides which of its actions to run
 	     before the first one starts, and the first is the dialog, so the answer is read here
-	     instead. -->
+	     instead. The setting ids are older than the view names: DefaultVideosViewWidelowinfo is
+	     Wide info (525) and DefaultVideosViewInfowidelow is Wide low info (527). -->
 	<variable name="DefaultVideosViewMode">
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWide)">Container.SetViewMode(523)</value>
-		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">Container.SetViewMode(525)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewInfowidelow)">Container.SetViewMode(527)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWall)">Container.SetViewMode(535)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallinfo)">Container.SetViewMode(536)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmall)">Container.SetViewMode(537)</value>
@@ -190,13 +192,14 @@
 		<value condition="Skin.HasSetting(DefaultVideosViewList)">Skin.Reset(DefaultVideosViewList)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewListinfo)">Skin.Reset(DefaultVideosViewListinfo)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWide)">Skin.Reset(DefaultVideosViewWide)</value>
-		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">Skin.Reset(DefaultVideosViewWidelow)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">Skin.Reset(DefaultVideosViewWidelowinfo)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWidelow)">Skin.Reset(DefaultVideosViewWidelow)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewInfowidelow)">Skin.Reset(DefaultVideosViewInfowidelow)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWall)">Skin.Reset(DefaultVideosViewWall)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallinfo)">Skin.Reset(DefaultVideosViewWallinfo)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmall)">Skin.Reset(DefaultVideosViewWallsmall)</value>
 		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.Reset(DefaultVideosViewWallsmallinfo)</value>
-		<value condition="Skin.HasSetting(DefaultVideosViewWallsmallinfo)">Skin.Reset(DefaultVideosViewWallsmallinfo)</value>
+		<value condition="Skin.HasSetting(DefaultVideosViewWalllow)">Skin.Reset(DefaultVideosViewWalllow)</value>
 	</variable>
 
 	<!-- Busy spinner -->

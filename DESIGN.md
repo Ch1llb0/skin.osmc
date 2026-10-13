@@ -229,19 +229,24 @@ The two 50% fades stack to 25% on purpose. Unfocused text is therefore never the
 
 ## 7. Views
 
-Nineteen views; the id encodes the family.
+Twenty-one views; the id encodes the family.
 
 | Family | Ids | Control |
 | --- | --- | --- |
 | List | 50, 51 (default), 511 (+ info) | fixedlist |
-| Wide | 52, 521, 522, 523, 524 (low), 525 (low + info) | fixedlist |
+| Wide | 52, 522 (info), 521 (low), 526 (low + info); 523, 525 (info), 524 (low), 527 (low + info) for videos and add-ons | fixedlist |
 | Wall | 53, 531–535, 536 (+ info), 537 (small), 538 (small + info), 539 (low) | panel |
 
 Each view is a pair: `ViewtypeNN.xml` (controls) and `Coordinates_ViewtypeNN.xml` (four geometries).
-Ten are offered as add-on defaults through `DefaultVideosView*`.
+Eleven are offered as add-on defaults through `DefaultVideosView*`.
 
 View 51 at 16:9: art at 120, 225, 405 × 600; list at 750, 1050 × 720. At 4:3 the list drops to 570 wide
 and the art is unchanged.
+
+Wide info (522, 525) puts the title and the plot in the upper half over the wide low row. Wide low info
+(526, 527) is Wide low (521, 524) unchanged plus the plot at the top left: x 120, top 240 (420 masked), up
+to 60 px short of the focused item (16:9 / 21:9 / 4:3: 690 / 1010 / 452 wide in 526, 656 / 978 / 417 in
+527), and in whole lines down to at least 55 px above the unfocused items, one height per plot size.
 
 Every view carries: window title and folder (top left), clock (top right), media flags (bottom left),
 item count (bottom right), list indicators and scrollbar, and year · genre beside the title where there

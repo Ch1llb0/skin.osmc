@@ -1091,18 +1091,8 @@
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
 
-					<!-- Wide low 521 -->
+					<!-- Wide info 522 -->
 					<control type="togglebutton" id="184">
-						<include>SubMenu_coords5</include>
-						<label>$LOCALIZE[31112]</label>
-						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
-						<usealttexture>Control.IsVisible(521)</usealttexture>
-						<onclick>Container.SetViewMode(521)</onclick>
-						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-					</control>
-
-					<!-- Wide low info 522 -->
-					<control type="togglebutton" id="185">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31392]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
@@ -1111,8 +1101,28 @@
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
 
-					<!-- Wide 523 -->
+					<!-- Wide low 521 -->
+					<control type="togglebutton" id="185">
+						<include>SubMenu_coords5</include>
+						<label>$LOCALIZE[31112]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
+						<usealttexture>Control.IsVisible(521)</usealttexture>
+						<onclick>Container.SetViewMode(521)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+
+					<!-- Wide low info 526 -->
 					<control type="togglebutton" id="186">
+						<include>SubMenu_coords5</include>
+						<label>$LOCALIZE[31457]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31457]</altlabel>
+						<usealttexture>Control.IsVisible(526)</usealttexture>
+						<onclick>Container.SetViewMode(526)</onclick>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+					</control>
+
+					<!-- Wide 523 -->
+					<control type="togglebutton" id="187">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31241]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
@@ -1123,19 +1133,7 @@
 						<visible>Container.Content(albums) | Container.Content(addons) | Container.Content(artists) | Container.Content(images) | Container.Content(games) | Container.Content(episodes) | Container.Content(videos) | Container.Content(favourites)</visible>
 					</control>
 
-					<!-- Wide low (videos) 524 -->
-					<control type="togglebutton" id="187">
-						<include>SubMenu_coords5</include>
-						<label>$LOCALIZE[31112]</label>
-						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
-						<usealttexture>Control.IsVisible(524)</usealttexture>
-						<onclick>Container.SetViewMode(524)</onclick>
-						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView]">$VAR[DefaultViewSettings]</onclick>
-						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWidelow)">Skin.SetBool(DefaultVideosViewWidelow)</onclick>
-						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
-					</control>
-
-					<!-- Wide low info (videos) 525 -->
+					<!-- Wide info (videos) 525 -->
 					<control type="togglebutton" id="188">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31392]</label>
@@ -1147,8 +1145,32 @@
 						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 					</control>
 
-					<!-- Wall 53 -->
+					<!-- Wide low (videos) 524 -->
 					<control type="togglebutton" id="189">
+						<include>SubMenu_coords5</include>
+						<label>$LOCALIZE[31112]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
+						<usealttexture>Control.IsVisible(524)</usealttexture>
+						<onclick>Container.SetViewMode(524)</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView]">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewWidelow)">Skin.SetBool(DefaultVideosViewWidelow)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
+					</control>
+
+					<!-- Wide low info (videos) 527 -->
+					<control type="togglebutton" id="190">
+						<include>SubMenu_coords5</include>
+						<label>$LOCALIZE[31457]</label>
+						<altlabel>$LOCALIZE[143] $LOCALIZE[31457]</altlabel>
+						<usealttexture>Control.IsVisible(527)</usealttexture>
+						<onclick>Container.SetViewMode(527)</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView]">$VAR[DefaultViewSettings]</onclick>
+						<onclick condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + !Skin.HasSetting(DefaultVideosViewInfowidelow)">Skin.SetBool(DefaultVideosViewInfowidelow)</onclick>
+						<visible>Container.Content(episodes) | Container.Content(videos)</visible>
+					</control>
+
+					<!-- Wall 53 -->
+					<control type="togglebutton" id="191">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31078]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
@@ -1158,7 +1180,7 @@
 					</control>
 
 					<!-- Wall info 531 -->
-					<control type="togglebutton" id="190">
+					<control type="togglebutton" id="192">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31133]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
@@ -1168,7 +1190,7 @@
 					</control>
 
 					<!-- Wall small 532 -->
-					<control type="togglebutton" id="191">
+					<control type="togglebutton" id="193">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31114]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
@@ -1178,7 +1200,7 @@
 					</control>
 
 					<!-- Wall small info 533 -->
-					<control type="togglebutton" id="192">
+					<control type="togglebutton" id="194">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31116]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
@@ -1188,7 +1210,7 @@
 					</control>
 
 					<!-- Wall low 534 -->
-					<control type="togglebutton" id="193">
+					<control type="togglebutton" id="195">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31113]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
@@ -1198,7 +1220,7 @@
 					</control>
 
 					<!-- Wall 535 -->
-					<control type="togglebutton" id="194">
+					<control type="togglebutton" id="196">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31078]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
@@ -1210,7 +1232,7 @@
 					</control>
 
 					<!-- Wall info (videos) 536 -->
-					<control type="togglebutton" id="195">
+					<control type="togglebutton" id="197">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31133]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
@@ -1222,7 +1244,7 @@
 					</control>
 
 					<!-- Wall small 537 -->
-					<control type="togglebutton" id="196">
+					<control type="togglebutton" id="198">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31114]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
@@ -1234,7 +1256,7 @@
 					</control>
 
 					<!-- Wall small info (videos) 538 -->
-					<control type="togglebutton" id="197">
+					<control type="togglebutton" id="199">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31116]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
@@ -1246,7 +1268,7 @@
 					</control>
 
 					<!-- Wall low (videos) 539 -->
-					<control type="togglebutton" id="198">
+					<control type="togglebutton" id="200">
 						<include>SubMenu_coords5</include>
 						<label>$LOCALIZE[31113]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
@@ -1505,7 +1527,7 @@
 
 			<control type="group">
 				<visible>!Skin.HasSetting(KioskMode)</visible>
-				<visible>!ControlGroup(9002).HasFocus + !ControlGroup(9003).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(523) | Control.IsVisible(524) | Control.IsVisible(525)]</visible>
+				<visible>!ControlGroup(9002).HasFocus + !ControlGroup(9003).HasFocus + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(contextmenu) + [Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522) | Control.IsVisible(523) | Control.IsVisible(524) | Control.IsVisible(525) | Control.IsVisible(526) | Control.IsVisible(527)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<animation effect="slide" time="200" start="0,200" end="0,0">WindowOpen</animation>
 				<animation effect="slide" time="200" start="0,0" end="0,200">WindowClose</animation>

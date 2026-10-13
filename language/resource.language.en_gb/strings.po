@@ -1916,7 +1916,7 @@ msgstr ""
 
 #: /Viewtype522.xml
 msgctxt "#31392"
-msgid "Wide low info"
+msgid "Wide info"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -2016,7 +2016,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31412"
-msgid "Set the view used for all video add-on pages (default: List)[CR]Options available: List, List info, Wide, Wide low, Wide low info, Wall, Wall info, Wall small, Wall small info, Wall low"
+msgid "The view used for all video add-on pages (default: List)[CR]Options available: List, List info, Wide, Wide info, Wide low, Wide low info, Wall, Wall info, Wall small, Wall small info, Wall low"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -2235,4 +2235,9 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31456"
 msgid "Information is shown before playback ends only for the kinds of video selected here."
+msgstr ""
+
+#: /Viewtype526.xml
+msgctxt "#31457"
+msgid "Wide low info"
 msgstr ""

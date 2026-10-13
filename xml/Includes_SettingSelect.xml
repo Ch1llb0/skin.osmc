@@ -716,7 +716,7 @@
 	<include name="OpenDefaultVideosView">
 		<onclick>SetProperty(SettingSelect.Mode,onebool,Home)</onclick>
 		<onclick>SetProperty(SettingSelect.Heading,$LOCALIZE[31409],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.Rows,11,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.Rows,12,Home)</onclick>
 		<onclick>ClearProperty(SettingSelect.Current,Home)</onclick>
 		<onclick>SetProperty(SettingSelect.1.Label,$LOCALIZE[13113],Home)</onclick>
 		<onclick>SetProperty(SettingSelect.1.Value,NoFixedVideosView,Home)</onclick>
@@ -726,25 +726,28 @@
 		<onclick>SetProperty(SettingSelect.3.Value,DefaultVideosViewListinfo,Home)</onclick>
 		<onclick>SetProperty(SettingSelect.4.Label,$LOCALIZE[31241],Home)</onclick>
 		<onclick>SetProperty(SettingSelect.4.Value,DefaultVideosViewWide,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31112],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.5.Value,DefaultVideosViewWidelow,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.6.Label,$LOCALIZE[31392],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.6.Value,DefaultVideosViewWidelowinfo,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.7.Label,$LOCALIZE[31078],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.7.Value,DefaultVideosViewWall,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.8.Label,$LOCALIZE[31133],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.8.Value,DefaultVideosViewWallinfo,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.9.Label,$LOCALIZE[31114],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.9.Value,DefaultVideosViewWallsmall,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.10.Label,$LOCALIZE[31116],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.10.Value,DefaultVideosViewWallsmallinfo,Home)</onclick>
-		<onclick>SetProperty(SettingSelect.11.Label,$LOCALIZE[31113],Home)</onclick>
-		<onclick>SetProperty(SettingSelect.11.Value,DefaultVideosViewWalllow,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Label,$LOCALIZE[31392],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.5.Value,DefaultVideosViewWidelowinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Label,$LOCALIZE[31112],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.6.Value,DefaultVideosViewWidelow,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Label,$LOCALIZE[31457],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.7.Value,DefaultVideosViewInfowidelow,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Label,$LOCALIZE[31078],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.8.Value,DefaultVideosViewWall,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Label,$LOCALIZE[31133],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.9.Value,DefaultVideosViewWallinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Label,$LOCALIZE[31114],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.10.Value,DefaultVideosViewWallsmall,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.11.Label,$LOCALIZE[31116],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.11.Value,DefaultVideosViewWallsmallinfo,Home)</onclick>
+		<onclick>SetProperty(SettingSelect.12.Label,$LOCALIZE[31113],Home)</onclick>
+		<onclick>SetProperty(SettingSelect.12.Value,DefaultVideosViewWalllow,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewList)">SetProperty(SettingSelect.Current,DefaultVideosViewList,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewListinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewListinfo,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewWide)">SetProperty(SettingSelect.Current,DefaultVideosViewWide,Home)</onclick>
-		<onclick condition="Skin.HasSetting(DefaultVideosViewWidelow)">SetProperty(SettingSelect.Current,DefaultVideosViewWidelow,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewWidelowinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewWidelowinfo,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewWidelow)">SetProperty(SettingSelect.Current,DefaultVideosViewWidelow,Home)</onclick>
+		<onclick condition="Skin.HasSetting(DefaultVideosViewInfowidelow)">SetProperty(SettingSelect.Current,DefaultVideosViewInfowidelow,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewWall)">SetProperty(SettingSelect.Current,DefaultVideosViewWall,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewWallinfo)">SetProperty(SettingSelect.Current,DefaultVideosViewWallinfo,Home)</onclick>
 		<onclick condition="Skin.HasSetting(DefaultVideosViewWallsmall)">SetProperty(SettingSelect.Current,DefaultVideosViewWallsmall,Home)</onclick>

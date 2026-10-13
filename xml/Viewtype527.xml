@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Viewtype527">
+		<!-- Wide low info (videos) -->
+		<control type="group">
+			<visible>Control.IsVisible(527)</visible>
+
+			<!-- List -->
+			<control type="fixedlist" id="527">
+				<include>Viewtype527_coords1</include>
+				<ondown>61</ondown>
+				<onleft>527</onleft>
+				<onright>527</onright>
+				<pagecontrol>61</pagecontrol>
+				<orientation>horizontal</orientation>
+				<viewtype label="$LOCALIZE[31457]">wide</viewtype>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
+				<include>DefaultView</include>
+
+				<include>Viewtype527_coords2</include>
+
+				<include>Viewtype527_coords3</include>
+			</control>
+
+			<control type="group">
+				<include>Viewtype527_coords4</include>
+
+				<!-- Title -->
+				<control type="fadelabel">
+					<include>Viewtype527_coords5</include>
+					<font>Font72</font>
+					<align>center</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[Label1]</label>
+					<scrollspeed>120</scrollspeed>
+				</control>
+
+				<!-- Details -->
+				<control type="fadelabel">
+					<include>Viewtype527_coords6</include>
+					<font>Font27</font>
+					<scrollspeed>44</scrollspeed>
+					<align>center</align>
+					<aligny>top</aligny>
+					<label>$VAR[Label2]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+				</control>
+			</control>
+
+			<!-- Plot -->
+			<control type="group">
+				<include>Viewtype527_coords7</include>
+				<visible>[Container.Content(episodes) | Container.Content(movies)] + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
+				<visible>!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)</visible>
+				<control type="textbox">
+					<include>Viewtype527_coords8</include>
+					<align>left</align>
+					<font>Font27</font>
+					<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
+					<visible>Skin.String(PlotFont,S)</visible>
+				</control>
+				<control type="textbox">
+					<include>Viewtype527_coords9</include>
+					<align>left</align>
+					<font>Font30</font>
+					<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<autoscroll delay="5000" time="1300" repeat="10000">true</autoscroll>
+					<visible>Skin.String(PlotFont,M)</visible>
+				</control>
+				<control type="textbox">
+					<include>Viewtype527_coords10</include>
+					<align>left</align>
+					<font>Font33</font>
+					<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
+					<visible>Skin.String(PlotFont,L)</visible>
+				</control>
+				<control type="textbox">
+					<include>Viewtype527_coords11</include>
+					<align>left</align>
+					<font>Font36</font>
+					<label>$INFO[ListItem.Plot]$VAR[ResetScroll]</label>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<autoscroll delay="5000" time="1100" repeat="10000">true</autoscroll>
+					<visible>Skin.String(PlotFont,XL)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

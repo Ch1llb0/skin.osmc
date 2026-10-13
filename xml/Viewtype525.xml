@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype525">
-		<!-- Wide low info (videos) -->
+		<!-- Wide info (videos) -->
 		<control type="group">
 			<visible>Control.IsVisible(525)</visible>
 

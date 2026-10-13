@@ -96,6 +96,8 @@
 	<include file="Coordinates_Viewtype523.xml" />
 	<include file="Coordinates_Viewtype524.xml" />
 	<include file="Coordinates_Viewtype525.xml" />
+	<include file="Coordinates_Viewtype526.xml" />
+	<include file="Coordinates_Viewtype527.xml" />
 	<include file="Coordinates_Viewtype53.xml" />
 	<include file="Coordinates_Viewtype531.xml" />
 	<include file="Coordinates_Viewtype532.xml" />
@@ -139,6 +141,8 @@
 	<include file="Viewtype523.xml" />
 	<include file="Viewtype524.xml" />
 	<include file="Viewtype525.xml" />
+	<include file="Viewtype526.xml" />
+	<include file="Viewtype527.xml" />
 	<include file="Viewtype53.xml" />
 	<include file="Viewtype531.xml" />
 	<include file="Viewtype532.xml" />
@@ -199,7 +203,7 @@
 		<onload condition="String.IsEqual(Skin.String(mediaflags),File)">Skin.SetString(mediaflags,File first)</onload>
 		<onload condition="String.IsEqual(Skin.String(mediaflags),Language)">Skin.SetString(mediaflags,Language first)</onload>
 		<onload condition="String.IsEmpty(Skin.String(MaskingBars))">Skin.SetString(MaskingBars,2.40:1)</onload>
-		<onload condition="![Skin.HasSetting(DefaultVideosViewList) | Skin.HasSetting(DefaultVideosViewListinfo) | Skin.HasSetting(DefaultVideosViewWide) | Skin.HasSetting(DefaultVideosViewWidelow) | Skin.HasSetting(DefaultVideosViewWidelowinfo) | Skin.HasSetting(DefaultVideosViewWall) | Skin.HasSetting(DefaultVideosViewWallinfo) | Skin.HasSetting(DefaultVideosViewWallsmall) | Skin.HasSetting(DefaultVideosViewWallsmallinfo) | Skin.HasSetting(DefaultVideosViewWalllow)]">Skin.SetBool(DefaultVideosViewList)</onload>
+		<onload condition="![Skin.HasSetting(DefaultVideosViewList) | Skin.HasSetting(DefaultVideosViewListinfo) | Skin.HasSetting(DefaultVideosViewWide) | Skin.HasSetting(DefaultVideosViewWidelowinfo) | Skin.HasSetting(DefaultVideosViewWidelow) | Skin.HasSetting(DefaultVideosViewInfowidelow) | Skin.HasSetting(DefaultVideosViewWall) | Skin.HasSetting(DefaultVideosViewWallinfo) | Skin.HasSetting(DefaultVideosViewWallsmall) | Skin.HasSetting(DefaultVideosViewWallsmallinfo) | Skin.HasSetting(DefaultVideosViewWalllow)]">Skin.SetBool(DefaultVideosViewList)</onload>
 		<onload condition="!Skin.HasSetting(FixedVideosView) + !Skin.HasSetting(NoFixedVideosView)">Skin.SetBool(NoFixedVideosView)</onload>
 		<onload condition="String.IsEmpty(Skin.String(WidgetOnClickAlbum))">Skin.SetString(WidgetOnClickAlbum,AlbumWidgetBrowse)</onload>
 		<onload condition="String.IsEmpty(Skin.String(WidgetOnClickTVShow))">Skin.SetString(WidgetOnClickTVShow,TVShowWidgetBrowse)</onload>
@@ -211,8 +215,9 @@
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewList)">Container.SetViewMode(51)</onfocus>
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewListinfo)">Container.SetViewMode(511)</onfocus>
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWide)">Container.SetViewMode(523)</onfocus>
-		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</onfocus>
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWidelowinfo)">Container.SetViewMode(525)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWidelow)">Container.SetViewMode(524)</onfocus>
+		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewInfowidelow)">Container.SetViewMode(527)</onfocus>
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWall)">Container.SetViewMode(535)</onfocus>
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWallinfo)">Container.SetViewMode(536)</onfocus>
 		<onfocus condition="String.StartsWith(Container.FolderPath,plugin://plugin.video) + $EXP[FixedVideosView] + Skin.HasSetting(DefaultVideosViewWallsmall)">Container.SetViewMode(537)</onfocus>
