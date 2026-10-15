@@ -343,6 +343,13 @@ stands in for a channel's icon up to the PVR info dialog's 405 × 600. Their str
 tier's weight at that size (3 px at 60, 15 px at 400). `DefaultVideoExtras` (405) is the Extras entry Kodi adds
 beside Versions when a movie's assets are listed: the Versions screen with a "more" badge.
 
+A language flag is the flag of a country the language is spoken in. A language spoken in two countries is split
+on the diagonal, the first country upper left and the second lower right; each half keeps its own stripes and
+carries its emblem as large as fits inside its triangle, 1.5 px clear of the diagonal and the edges: `sh`
+(Serbia, Croatia) and `ch` (Guam, Northern Mariana Islands). A language with a flag of its own uses that flag
+(`eo` Esperanto, `ku` Kurdistan). Languages with neither get the neutral globe: `ae`, `cu`, `ia`, `ie`, `io`,
+`ji`, `pi`, `vo`, `yi`.
+
 Keylines on the 405 grid: circle 300, square 266, portrait 234 × 300, landscape 300 × 234.
 
 OSD option glyphs are 3 px outlines in the 36 px live area of a 60 px button (x 12–48). Transport glyphs are
