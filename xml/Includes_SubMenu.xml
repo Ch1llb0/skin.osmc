@@ -54,6 +54,16 @@
 		<include>ViewMenu</include>
 	</include>
 
+	<!-- A text row, 52 px: the underline sits at its foot (common/focus52.png, line 49 to 51) and the text
+	     in the top 46 px, clear of descenders. Each control takes the parts its type reads. -->
+	<include name="SubMenuRowText">
+		<aligny>top</aligny>
+		<textoffsety>4</textoffsety>
+		<radioposy>16</radioposy>
+		<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
+		<alttexturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</alttexturefocus>
+	</include>
+
 	<!-- The rows a sub menu is built from. A row used in four sub menus or more is named here; one
 	     that belongs to a single window is written where it is used. -->
 
@@ -61,6 +71,7 @@
 	<include name="SubMenuRowView">
 		<control type="button" id="99">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 			<onclick>Control.SetFocus(3002)</onclick>
 			<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
@@ -71,6 +82,7 @@
 	<include name="SubMenuRowArtworkTitles">
 		<control type="button" id="97">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>$LOCALIZE[31449]</label>
 			<include>OpenArtworkTitles</include>
 			<visible>$EXP[WallViewActive]</visible>
@@ -81,6 +93,7 @@
 	<include name="SubMenuRowSortBy">
 		<control type="button" id="3">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>103</label>
 			<visible>Control.IsEnabled(3)</visible>
 		</control>
@@ -90,6 +103,7 @@
 	<include name="SubMenuRowSortDirection">
 		<control type="togglebutton" id="4">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
 			<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
 			<usealttexture>Container.SortDirection(Descending)</usealttexture>
@@ -101,6 +115,7 @@
 	<include name="SubMenuRowFilter">
 		<control type="edit" id="19">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>587</label>
 			<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 		</control>
@@ -110,6 +125,7 @@
 	<include name="SubMenuRowFilterAdvanced">
 		<control type="radiobutton" id="93">
 			<include>SubMenu_coords6</include>
+			<include>SubMenuRowText</include>
 			<label>587</label>
 			<onclick>Right</onclick>
 			<onclick>Right</onclick>
@@ -123,6 +139,7 @@
 	<include name="SubMenuRowChannelGroups">
 		<control type="button" id="28">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label></label>
 			<visible>Control.IsEnabled(28)</visible>
 		</control>
@@ -132,6 +149,7 @@
 	<include name="SubMenuRowChannels">
 		<control type="button" id="100">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
 			<onclick>SetFocus(10)</onclick>
@@ -143,6 +161,7 @@
 	<include name="SubMenuRowGuide">
 		<control type="button" id="102">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>22020</label>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
@@ -154,6 +173,7 @@
 	<include name="SubMenuRowRecordings">
 		<control type="button" id="103">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
 			<onclick>SetFocus(10)</onclick>
@@ -165,6 +185,7 @@
 	<include name="SubMenuRowTimers">
 		<control type="button" id="35">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
 			<onclick>SetFocus(50)</onclick>
@@ -176,6 +197,7 @@
 	<include name="SubMenuRowSearch">
 		<control type="button" id="37">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 			<onclick>SetFocus(50)</onclick>
@@ -187,6 +209,7 @@
 	<include name="SubMenuRowAddonSettings">
 		<control type="button" id="624">
 			<include>SubMenu_coords5</include>
+			<include>SubMenuRowText</include>
 			<label>$LOCALIZE[10140]</label>
 			<visible>Control.IsEnabled(624)</visible>
 			<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
@@ -271,6 +294,7 @@
 			<!-- Filter -->
 			<control type="radiobutton" id="93">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>587</label>
 				<onclick>right</onclick>
 				<onclick>Filter</onclick>
@@ -283,18 +307,21 @@
 			<!-- Check for updates -->
 			<control type="button" id="9">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>24034</label>
 				<visible>Control.IsEnabled(9)</visible>
 			</control>
 			<!-- Settings -->
 			<control type="button" id="5">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>10004</label>
 				<visible>Control.IsEnabled(5)</visible>
 			</control>
 			<!-- Language -->
 			<control type="radiobutton" id="7">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>25001</label>
 				<visible>Control.IsEnabled(7)</visible>
 			</control>
@@ -320,6 +347,7 @@
 			<!-- Filter -->
 			<control type="radiobutton" id="93">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>587</label>
 				<onclick>right</onclick>
 				<onclick>Filter</onclick>
@@ -343,14 +371,17 @@
 			<!-- Level -->
 			<control type="button" id="21">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 			</control>
 			<!-- Only current level -->
 			<control type="radiobutton" id="22">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 			</control>
 			<!-- Clear -->
 			<control type="button" id="20">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>192</label>
 			</control>
 
@@ -382,6 +413,7 @@
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[21452]</label>
 				<onclick>ActivateWindow(addonbrowser,addons://more/game/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
@@ -403,6 +435,7 @@
 			<!-- Disable music listened to status in library -->
 			<control type="radiobutton" id="73">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[31149]</label>
 				<onclick>Skin.ToggleSetting(MusicListenedToStatus)</onclick>
 				<selected>Skin.HasSetting(MusicListenedToStatus)</selected>
@@ -420,6 +453,7 @@
 			<!-- Open playlist -->
 			<control type="button" id="91">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>13350</label>
 				<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
 				<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
@@ -427,6 +461,7 @@
 			<!-- Update library -->
 			<control type="togglebutton" id="20">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>653</label>
 				<altlabel>13353</altlabel>
 				<usealttexture>Library.IsScanningMusic</usealttexture>
@@ -435,17 +470,20 @@
 			<!-- Search -->
 			<control type="button" id="8">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>137</label>
 				<visible>Control.IsEnabled(8)</visible>
 			</control>
 			<!-- PartyMode -->
 			<control type="radiobutton" id="16">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>589</label>
 			</control>
 			<!-- Library Node Editor -->
 			<control type="button" id="95">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>31400</label>
 				<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
 				<onclick condition="System.HasAddon(plugin.library.node.editor) + !System.AddonIsEnabled(plugin.library.node.editor)">EnableAddon(plugin.library.node.editor)</onclick>
@@ -456,6 +494,7 @@
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[21452]</label>
 				<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
@@ -486,18 +525,21 @@
 			<!-- Slideshow -->
 			<control type="button" id="6">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>108</label>
 				<visible>!ListItem.IsFolder + Control.IsEnabled(6)</visible>
 			</control>
 			<!-- Slideshow -->
 			<control type="button" id="7">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>108</label>
 				<visible>ListItem.IsFolder + Control.IsEnabled(7)</visible>
 			</control>
 			<!-- Randomize -->
 			<control type="radiobutton" id="9">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>13319</label>
 				<visible>Control.IsEnabled(9)</visible>
 			</control>
@@ -505,6 +547,7 @@
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[21452]</label>
 				<onclick>ActivateWindow(addonbrowser,addons://more/image/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
@@ -531,24 +574,28 @@
 			<!-- Shuffle -->
 			<control type="radiobutton" id="20">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>191</label>
 				<visible>Control.IsEnabled(20)</visible>
 			</control>
 			<!-- Repeat -->
 			<control type="button" id="26">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label></label>
 				<visible>Control.IsEnabled(26)</visible>
 			</control>
 			<!-- Save -->
 			<control type="button" id="21">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>190</label>
 				<visible>Control.IsEnabled(21)</visible>
 			</control>
 			<!-- Clear -->
 			<control type="button" id="22">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>192</label>
 				<onclick>ReplaceWindow(10502)</onclick>
 				<visible>Control.IsEnabled(22)</visible>
@@ -580,6 +627,7 @@
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[21452]</label>
 				<onclick>ActivateWindow(addonbrowser,addons://more/executable/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
@@ -600,11 +648,13 @@
 			<!-- Show hidden channels -->
 			<control type="radiobutton" id="6">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>19051</label>
 			</control>
 			<!-- Filter -->
 			<control type="radiobutton" id="31">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>587</label>
 			</control>
 
@@ -649,6 +699,7 @@
 			<!-- Filter -->
 			<control type="radiobutton" id="31">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>587</label>
 			</control>
 
@@ -679,6 +730,7 @@
 			<!-- Timers -->
 			<control type="button" id="104">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
 				<onclick>SetFocus(10)</onclick>
@@ -699,6 +751,7 @@
 			<!-- Watched toggle -->
 			<control type="button" id="10">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>20367</label>
 				<visible>Control.IsEnabled(10)</visible>
 			</control>
@@ -706,11 +759,13 @@
 			<!-- Group recording items by folder structure -->
 			<control type="radiobutton" id="5">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>19270</label>
 			</control>
 			<!-- Show deleted recordings -->
 			<control type="radiobutton" id="7">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>19184</label>
 			</control>
 
@@ -784,6 +839,7 @@
 			<!-- Set default view for video add-ons -->
 			<control type="button" id="98">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[31409]</label>
 				<include>OpenDefaultVideosView</include>
 				<onclick>$VAR[DefaultVideosViewMode]</onclick>
@@ -795,6 +851,7 @@
 			<!-- Disable video watched status in library -->
 			<control type="radiobutton" id="72">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[31148]</label>
 				<onclick>Skin.ToggleSetting(VideoWatchedStatus)</onclick>
 				<selected>Skin.HasSetting(VideoWatchedStatus)</selected>
@@ -807,6 +864,7 @@
 			<!-- Watched toggle -->
 			<control type="radiobutton" id="14">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>20367</label>
 				<visible>Control.IsEnabled(14)</visible>
 			</control>
@@ -818,6 +876,7 @@
 			<!-- Open playlist -->
 			<control type="button" id="91">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>13350</label>
 				<onclick condition="!String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
 				<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
@@ -825,6 +884,7 @@
 			<!-- Update library -->
 			<control type="togglebutton" id="20">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>653</label>
 				<altlabel>13353</altlabel>
 				<usealttexture>Library.IsScanningVideo</usealttexture>
@@ -833,17 +893,20 @@
 			<!-- Search -->
 			<control type="button" id="8">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>137</label>
 				<visible>Control.IsEnabled(8)</visible>
 			</control>
 			<!-- PartyMode -->
 			<control type="radiobutton" id="16">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>589</label>
 			</control>
 			<!-- Unlock Shares -->
 			<control type="radiobutton" id="11">
 				<include>SubMenu_coords6</include>
+				<include>SubMenuRowText</include>
 				<label>20336</label>
 				<onclick>Mastermode</onclick>
 				<selected>System.IsMaster</selected>
@@ -852,6 +915,7 @@
 			<!-- Library Node Editor -->
 			<control type="button" id="95">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>31400</label>
 				<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
 				<onclick condition="System.HasAddon(plugin.library.node.editor) + !System.AddonIsEnabled(plugin.library.node.editor)">EnableAddon(plugin.library.node.editor)</onclick>
@@ -862,6 +926,7 @@
 			<!-- Get more -->
 			<control type="button" id="621">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[21452]</label>
 				<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
 				<visible>Container.Content(addons)</visible>
@@ -881,12 +946,14 @@
 			<!-- Location control -->
 			<control type="spincontrolex" id="3">
 				<include>SubMenu_coords5</include>
+				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<label>$LOCALIZE[31069]:</label>
 				<visible>!String.IsEmpty(Window(Weather).Property(Current.Condition)) + !String.IsEmpty(Window(Weather).Property(Daily.1.LongDay))</visible>
 			</control>
 			<!-- Refresh -->
 			<control type="button" id="2">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>103</label>
 			</control>
 
@@ -904,98 +971,98 @@
 			<!-- Interface -->
 			<control type="button" id="90">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>14206</label>
 				<height>52</height>
 				<onclick>ReplaceWindow(InterfaceSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(InterfaceSettings)</visible>
 			</control>
 			<!-- Player -->
 			<control type="button" id="91">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>14200</label>
 				<onclick>ReplaceWindow(PlayerSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(PlayerSettings)</visible>
 			</control>
 			<!-- Media -->
 			<control type="button" id="92">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>14211</label>
 				<onclick>ReplaceWindow(MediaSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(MediaSettings)</visible>
 			</control>
 			<!-- TV & Radio -->
 			<control type="button" id="93">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>$LOCALIZE[19020] &#38; $LOCALIZE[19021]</label>
 				<onclick>ReplaceWindow(PVRSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(PVRSettings)</visible>
 			</control>
 			<!-- Game -->
 			<control type="button" id="94">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>15016</label>
 				<onclick>ReplaceWindow(GameSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(GameSettings)</visible>
 			</control>
 			<!-- Profiles -->
 			<control type="button" id="95">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>13200</label>
 				<onclick>ReplaceWindow(Profiles)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(Profiles)</visible>
 			</control>
 			<!-- Service -->
 			<control type="button" id="96">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>14036</label>
 				<onclick>ReplaceWindow(ServiceSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(ServiceSettings)</visible>
 			</control>
 			<!-- System -->
 			<control type="button" id="97">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>13000</label>
 				<onclick>ReplaceWindow(SystemSettings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(SystemSettings)</visible>
 			</control>
 			<!-- My OSMC -->
 			<control type="button" id="98">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>31091</label>
 				<onclick>ReplaceWindow(Settings)</onclick>
 				<onclick>RunScript(service.osmc.settings)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>System.HasAddon(service.osmc.settings)</visible>
 			</control>
 			<!-- System info -->
 			<control type="button" id="99">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>130</label>
 				<onclick>ReplaceWindow(SystemInfo)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 				<visible>!Window.IsVisible(SystemInfo)</visible>
 			</control>
 			<!-- Addon browser -->
 			<control type="button" id="100">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>10040</label>
 				<onclick>ReplaceWindow(addonbrowser)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 			</control>
 			<!-- File manager -->
 			<control type="button" id="101">
 				<include>SubMenu_coords5</include>
+				<include>SubMenuRowText</include>
 				<label>7</label>
 				<onclick>ReplaceWindow(filemanager)</onclick>
-				<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 			</control>
 
 			<include>SubMenuControls</include>
@@ -1050,6 +1117,7 @@
 					<!-- List 50 -->
 					<control type="togglebutton" id="180">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[535]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
 						<usealttexture>Control.IsVisible(50)</usealttexture>
@@ -1060,6 +1128,7 @@
 					<!-- List 51 -->
 					<control type="togglebutton" id="181">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[535]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[535]</altlabel>
 						<usealttexture>Control.IsVisible(51)</usealttexture>
@@ -1072,6 +1141,7 @@
 					<!-- List info 511 -->
 					<control type="togglebutton" id="182">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31117]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31117]</altlabel>
 						<usealttexture>Control.IsVisible(511)</usealttexture>
@@ -1084,6 +1154,7 @@
 					<!-- Wide 52 -->
 					<control type="togglebutton" id="183">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31241]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
 						<usealttexture>Control.IsVisible(52)</usealttexture>
@@ -1094,6 +1165,7 @@
 					<!-- Wide info 522 -->
 					<control type="togglebutton" id="184">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31392]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
 						<usealttexture>Control.IsVisible(522)</usealttexture>
@@ -1104,6 +1176,7 @@
 					<!-- Wide low 521 -->
 					<control type="togglebutton" id="185">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31112]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
 						<usealttexture>Control.IsVisible(521)</usealttexture>
@@ -1114,6 +1187,7 @@
 					<!-- Wide low info 526 -->
 					<control type="togglebutton" id="186">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31457]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31457]</altlabel>
 						<usealttexture>Control.IsVisible(526)</usealttexture>
@@ -1124,6 +1198,7 @@
 					<!-- Wide 523 -->
 					<control type="togglebutton" id="187">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31241]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31241]</altlabel>
 						<usealttexture>Control.IsVisible(523)</usealttexture>
@@ -1136,6 +1211,7 @@
 					<!-- Wide info (videos) 525 -->
 					<control type="togglebutton" id="188">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31392]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31392]</altlabel>
 						<usealttexture>Control.IsVisible(525)</usealttexture>
@@ -1148,6 +1224,7 @@
 					<!-- Wide low (videos) 524 -->
 					<control type="togglebutton" id="189">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31112]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31112]</altlabel>
 						<usealttexture>Control.IsVisible(524)</usealttexture>
@@ -1160,6 +1237,7 @@
 					<!-- Wide low info (videos) 527 -->
 					<control type="togglebutton" id="190">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31457]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31457]</altlabel>
 						<usealttexture>Control.IsVisible(527)</usealttexture>
@@ -1172,6 +1250,7 @@
 					<!-- Wall 53 -->
 					<control type="togglebutton" id="191">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31078]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
 						<usealttexture>Control.IsVisible(53)</usealttexture>
@@ -1182,6 +1261,7 @@
 					<!-- Wall info 531 -->
 					<control type="togglebutton" id="192">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31133]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
 						<usealttexture>Control.IsVisible(531)</usealttexture>
@@ -1192,6 +1272,7 @@
 					<!-- Wall small 532 -->
 					<control type="togglebutton" id="193">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31114]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
 						<usealttexture>Control.IsVisible(532)</usealttexture>
@@ -1202,6 +1283,7 @@
 					<!-- Wall small info 533 -->
 					<control type="togglebutton" id="194">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31116]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
 						<usealttexture>Control.IsVisible(533)</usealttexture>
@@ -1212,6 +1294,7 @@
 					<!-- Wall low 534 -->
 					<control type="togglebutton" id="195">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31113]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
 						<usealttexture>Control.IsVisible(534)</usealttexture>
@@ -1222,6 +1305,7 @@
 					<!-- Wall 535 -->
 					<control type="togglebutton" id="196">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31078]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31078]</altlabel>
 						<usealttexture>Control.IsVisible(535)</usealttexture>
@@ -1234,6 +1318,7 @@
 					<!-- Wall info (videos) 536 -->
 					<control type="togglebutton" id="197">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31133]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31133]</altlabel>
 						<usealttexture>Control.IsVisible(536)</usealttexture>
@@ -1246,6 +1331,7 @@
 					<!-- Wall small 537 -->
 					<control type="togglebutton" id="198">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31114]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31114]</altlabel>
 						<usealttexture>Control.IsVisible(537)</usealttexture>
@@ -1258,6 +1344,7 @@
 					<!-- Wall small info (videos) 538 -->
 					<control type="togglebutton" id="199">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31116]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31116]</altlabel>
 						<usealttexture>Control.IsVisible(538)</usealttexture>
@@ -1270,6 +1357,7 @@
 					<!-- Wall low (videos) 539 -->
 					<control type="togglebutton" id="200">
 						<include>SubMenu_coords5</include>
+						<include>SubMenuRowText</include>
 						<label>$LOCALIZE[31113]</label>
 						<altlabel>$LOCALIZE[143] $LOCALIZE[31113]</altlabel>
 						<usealttexture>Control.IsVisible(539)</usealttexture>

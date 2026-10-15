@@ -336,7 +336,7 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
-					<top>55</top>
+					<top>60</top>
 					<width>363</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -397,7 +397,7 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
-					<top>55</top>
+					<top>60</top>
 					<width>363</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -458,7 +458,7 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
-					<top>55</top>
+					<top>60</top>
 					<width>363</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -519,7 +519,7 @@
 				<!-- Highlighting -->
 				<control type="image">
 					<left>75</left>
-					<top>55</top>
+					<top>60</top>
 					<width>363</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>

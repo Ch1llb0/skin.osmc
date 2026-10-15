@@ -259,7 +259,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>910</width>
 					<height>3</height>
@@ -302,7 +302,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
@@ -345,7 +345,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
@@ -388,7 +388,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>430</width>
 					<height>3</height>
@@ -546,7 +546,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>910</width>
 					<height>3</height>
@@ -579,7 +579,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
@@ -612,7 +612,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>1550</width>
 					<height>3</height>
@@ -645,7 +645,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>140</left>
 					<width>430</width>
 					<height>3</height>

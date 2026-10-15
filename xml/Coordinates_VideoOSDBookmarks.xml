@@ -318,7 +318,7 @@
 				</control>
 				<control type="image">
 					<left>10</left>
-					<top>232</top>
+					<top>237</top>
 					<width>304</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -353,7 +353,7 @@
 				</control>
 				<control type="image">
 					<left>9</left>
-					<top>232</top>
+					<top>237</top>
 					<width>304</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -388,7 +388,7 @@
 				</control>
 				<control type="image">
 					<left>9</left>
-					<top>232</top>
+					<top>237</top>
 					<width>304</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -423,7 +423,7 @@
 				</control>
 				<control type="image">
 					<left>38</left>
-					<top>232</top>
+					<top>237</top>
 					<width>304</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -496,25 +496,25 @@
 		<left>20</left>
 		<top>-6</top>
 		<width>1600</width>
-		<height>60</height>
+		<height>66</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_21:9">
 		<left>20</left>
 		<top>-6</top>
 		<width>2240</width>
-		<height>60</height>
+		<height>66</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_21:9_masked">
 		<left>20</left>
 		<top>-6</top>
 		<width>2240</width>
-		<height>60</height>
+		<height>66</height>
 	</include>
 	<include name="VideoOSDBookmarks_coords7_4:3">
 		<left>20</left>
 		<top>-6</top>
 		<width>1120</width>
-		<height>60</height>	</include>
+		<height>66</height>	</include>
 
 	<include name="VideoOSDBookmarks_coords8">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoOSDBookmarks_coords8_16:9</include>

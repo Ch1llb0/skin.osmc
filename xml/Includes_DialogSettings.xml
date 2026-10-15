@@ -31,29 +31,43 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 
+				<!-- The rows are 50 px, as in the OSD settings dialogs, and take the same underline and text
+				     placement: the line at their foot, buttons, radios and edits with their text in the top 44 px. -->
 				<!-- Default button -->
 				<control type="button" id="7">
 					<include>DialogSettings_coords3</include>
+					<aligny>top</aligny>
+					<textoffsety>2</textoffsety>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default radiobutton -->
 				<control type="radiobutton" id="8">
 					<include>DialogSettings_coords4</include>
+					<aligny>top</aligny>
+					<textoffsety>2</textoffsety>
+					<radioposy>14</radioposy>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default spincontrolex -->
 				<control type="spincontrolex" id="9">
 					<include>DialogSettings_coords5</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default edit -->
 				<control type="edit" id="12">
 					<include>DialogSettings_coords3</include>
+					<aligny>top</aligny>
+					<textoffsety>2</textoffsety>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default slider -->
 				<control type="sliderex" id="13"> 
 					<include>DialogSettings_coords6</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default image -->
@@ -159,29 +173,44 @@
 					<textcolor>$VAR[TextColorFO]</textcolor>
 				</control>
 
+				<!-- The rows are 50 px, not 66: the underline sits at their foot (common/focus50.png, line 47 to
+				     49) and buttons, radios and edits put their text in the top 44 px, clear of descenders.
+				     Spinners and sliders keep theirs centred, as Kodi centres their arrows and bars. -->
 				<!-- Default button -->
 				<control type="button" id="7">
 					<include>DialogSettings_coords14</include>
+					<aligny>top</aligny>
+					<textoffsety>2</textoffsety>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default radiobutton -->
 				<control type="radiobutton" id="8">
 					<include>DialogSettings_coords15</include>
+					<aligny>top</aligny>
+					<textoffsety>2</textoffsety>
+					<radioposy>14</radioposy>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default spincontrolex -->
 				<control type="spincontrolex" id="9">
 					<include>DialogSettings_coords16</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default edit -->
 				<control type="edit" id="12">
 					<include>DialogSettings_coords14</include>
+					<aligny>top</aligny>
+					<textoffsety>2</textoffsety>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default slider -->
 				<control type="sliderex" id="13"> 
 					<include>DialogSettings_coords17</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 				</control>
 
 				<!-- Default image -->

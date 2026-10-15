@@ -324,7 +324,7 @@
 				</control>
 				<control type="label">
 					<left>140</left>
-					<top>54</top>
+					<top>61</top>
 					<width>880</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -366,7 +366,7 @@
 				</control>
 				<control type="label">
 					<left>140</left>
-					<top>54</top>
+					<top>61</top>
 					<width>1520</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -408,7 +408,7 @@
 				</control>
 				<control type="label">
 					<left>140</left>
-					<top>54</top>
+					<top>61</top>
 					<width>1520</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -450,7 +450,7 @@
 				</control>
 				<control type="label">
 					<left>140</left>
-					<top>54</top>
+					<top>61</top>
 					<width>400</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -493,7 +493,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>69</top>
+						<top>75</top>
 						<left>140</left>
 						<width>880</width>
 						<height>3</height>
@@ -515,7 +515,7 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>48</top>
+						<top>55</top>
 						<width>880</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -523,7 +523,7 @@
 					</control>
 					<control type="label">
 						<left>140</left>
-						<top>54</top>
+						<top>61</top>
 						<width>880</width>
 						<height>27</height>
 						<font>Font27-bold</font>
@@ -563,7 +563,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>69</top>
+						<top>75</top>
 						<left>140</left>
 						<width>1520</width>
 						<height>3</height>
@@ -585,7 +585,7 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>48</top>
+						<top>55</top>
 						<width>1520</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -593,7 +593,7 @@
 					</control>
 					<control type="label">
 						<left>140</left>
-						<top>54</top>
+						<top>61</top>
 						<width>1520</width>
 						<height>27</height>
 						<font>Font27-bold</font>
@@ -633,7 +633,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>69</top>
+						<top>75</top>
 						<left>140</left>
 						<width>1520</width>
 						<height>3</height>
@@ -655,7 +655,7 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>48</top>
+						<top>55</top>
 						<width>1520</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -663,7 +663,7 @@
 					</control>
 					<control type="label">
 						<left>140</left>
-						<top>54</top>
+						<top>61</top>
 						<width>1520</width>
 						<height>27</height>
 						<font>Font27-bold</font>
@@ -702,7 +702,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>69</top>
+						<top>75</top>
 						<left>140</left>
 						<width>400</width>
 						<height>3</height>
@@ -724,7 +724,7 @@
 					</control>
 					<control type="image">
 						<left>140</left>
-						<top>48</top>
+						<top>55</top>
 						<width>400</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -732,7 +732,7 @@
 					</control>
 					<control type="label">
 						<left>140</left>
-						<top>54</top>
+						<top>61</top>
 						<width>400</width>
 						<height>27</height>
 						<font>Font27-bold</font>
@@ -969,7 +969,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>0</left>
 					<width>372</width>
 					<height>3</height>
@@ -1014,7 +1014,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>0</left>
 					<width>412</width>
 					<height>3</height>
@@ -1059,7 +1059,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>0</left>
 					<width>412</width>
 					<height>3</height>
@@ -1104,7 +1104,7 @@
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>69</top>
+					<top>75</top>
 					<left>0</left>
 					<width>267</width>
 					<height>3</height>

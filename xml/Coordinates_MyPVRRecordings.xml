@@ -425,7 +425,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>93</top>
+					<top>101</top>
 					<width>1018</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -433,7 +433,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>100</top>
+					<top>108</top>
 					<width>1018</width>
 					<height>27</height>
 					<font>Font27</font>
@@ -444,7 +444,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>127</top>
+					<top>135</top>
 					<width>1018</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -517,7 +517,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>93</top>
+					<top>101</top>
 					<width>1658</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -525,7 +525,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>100</top>
+					<top>108</top>
 					<width>1658</width>
 					<height>27</height>
 					<font>Font27</font>
@@ -536,7 +536,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>127</top>
+					<top>135</top>
 					<width>1658</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -609,7 +609,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>93</top>
+					<top>101</top>
 					<width>1658</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -617,7 +617,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>100</top>
+					<top>108</top>
 					<width>1658</width>
 					<height>27</height>
 					<font>Font27</font>
@@ -628,7 +628,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>127</top>
+					<top>135</top>
 					<width>1658</width>
 					<height>27</height>
 					<font>Font27-light</font>
@@ -701,7 +701,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>93</top>
+					<top>101</top>
 					<width>538</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -709,7 +709,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>100</top>
+					<top>108</top>
 					<width>538</width>
 					<height>27</height>
 					<font>Font27</font>
@@ -720,7 +720,7 @@
 				</control>
 				<control type="label">
 					<left>32</left>
-					<top>127</top>
+					<top>135</top>
 					<width>538</width>
 					<height>27</height>
 					<font>Font27-light</font>

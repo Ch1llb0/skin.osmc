@@ -227,7 +227,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>640</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -236,15 +236,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>640</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>640</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -280,7 +282,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -289,15 +291,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>960</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -333,7 +337,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -342,15 +346,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>960</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -386,7 +392,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>400</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -395,15 +401,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>400</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>400</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -839,7 +847,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>640</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -848,15 +856,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>640</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>640</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -892,7 +902,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -901,15 +911,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>960</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -945,7 +957,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -954,15 +966,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>960</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>960</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -998,7 +1012,7 @@
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>64</top>
+						<top>70</top>
 						<width>400</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -1007,15 +1021,17 @@
 				<control type="group">
 					<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					<control type="label">
+						<top>7</top>
 						<width>400</width>
 						<height>58</height>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>True</scroll>
 					</control>
 					<control type="image">
-						<top>50</top>
+						<top>55</top>
 						<width>400</width>
 						<height>3</height>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>

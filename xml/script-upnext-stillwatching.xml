@@ -48,7 +48,8 @@
 					<oninfo>noop</oninfo>
 					<onleft>3013</onleft>
 					<onright>3013</onright>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus27c.png</texturefocus>
+					<aligny>top</aligny>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus41c.png</texturefocus>
 				</control>
 
 				<!-- Close/Stop -->
@@ -59,7 +60,8 @@
 					<oninfo>noop</oninfo>
 					<onleft>3012</onleft>
 					<onright>3012</onright>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus27c.png</texturefocus>
+					<aligny>top</aligny>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus41c.png</texturefocus>
 				</control>
 
 				<!-- Progress -->

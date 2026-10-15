@@ -10,25 +10,25 @@
 		<top>90</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 	<include name="script-upnext-upnext_coords1_21:9">
 		<top>90</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 	<include name="script-upnext-upnext_coords1_21:9_masked">
 		<top>270</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 	<include name="script-upnext-upnext_coords1_4:3">
 		<top>90</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 
 	<include name="script-upnext-upnext_coords2">
@@ -41,25 +41,25 @@
 		<top>90</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 	<include name="script-upnext-upnext_coords2_21:9">
 		<top>90</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 	<include name="script-upnext-upnext_coords2_21:9_masked">
 		<top>270</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 	<include name="script-upnext-upnext_coords2_4:3">
 		<top>90</top>
 		<right>20</right>
 		<width>550</width>
-		<height>131</height>
+		<height>145</height>
 	</include>
 
 	<include name="script-upnext-upnext_coords3">
@@ -133,25 +133,25 @@
 	<include name="script-upnext-upnext_coords5_16:9">
 		<left>12</left>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 	<include name="script-upnext-upnext_coords5_21:9">
 		<left>12</left>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 	<include name="script-upnext-upnext_coords5_21:9_masked">
 		<left>12</left>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 	<include name="script-upnext-upnext_coords5_4:3">
 		<left>12</left>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 
@@ -164,25 +164,25 @@
 	<include name="script-upnext-upnext_coords6_16:9">
 		<right>12</right>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 	<include name="script-upnext-upnext_coords6_21:9">
 		<right>12</right>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 	<include name="script-upnext-upnext_coords6_21:9_masked">
 		<right>12</right>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 	<include name="script-upnext-upnext_coords6_4:3">
 		<right>12</right>
 		<top>70</top>
-		<height>27</height>
+		<height>41</height>
 		<width>258</width>
 	</include>
 
@@ -194,25 +194,25 @@
 	</include>
 	<include name="script-upnext-upnext_coords7_16:9">
 		<right>12</right>
-		<top>107</top>
+		<top>121</top>
 		<width>526</width>
 		<height>12</height>
 	</include>
 	<include name="script-upnext-upnext_coords7_21:9">
 		<right>12</right>
-		<top>107</top>
+		<top>121</top>
 		<width>526</width>
 		<height>12</height>
 	</include>
 	<include name="script-upnext-upnext_coords7_21:9_masked">
 		<right>12</right>
-		<top>107</top>
+		<top>121</top>
 		<width>526</width>
 		<height>12</height>
 	</include>
 	<include name="script-upnext-upnext_coords7_4:3">
 		<right>12</right>
-		<top>107</top>
+		<top>121</top>
 		<width>526</width>
 		<height>12</height>
 	</include>

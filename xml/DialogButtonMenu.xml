@@ -76,6 +76,8 @@
 					<control type="button" id="605">
 						<include>DialogButtonMenu_coords3</include>
 						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 						<onclick>dialog.close(all,true)</onclick>
 						<onclick>System.LogOff</onclick>
@@ -95,6 +97,8 @@
 					<control type="button" id="607">
 						<include>DialogButtonMenu_coords3</include>
 						<altlabel>20045</altlabel>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 						<onclick>Mastermode</onclick>
 						<align>center</align>
@@ -120,6 +124,8 @@
 					<control type="button" id="610">
 						<include>DialogButtonMenu_coords3</include>
 						<label>20150</label>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 						<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>
 						<align>center</align>
@@ -138,6 +144,8 @@
 					<control type="button" id="612">
 						<include>DialogButtonMenu_coords3</include>
 						<label>5</label>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 						<onclick>Close</onclick>
 						<align>center</align>

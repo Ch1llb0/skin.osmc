@@ -65,27 +65,27 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords3_4:3</include>
 	</include>
 	<include name="Custom_Setting_Select_coords3_16:9">
-		<top>50</top>
+		<top>7</top>
 		<width>1020</width>
-		<height>3</height>
+		<height>58</height>
 	</include>
 	<include name="Custom_Setting_Select_coords3_21:9">
-		<top>50</top>
+		<top>7</top>
 		<width>1660</width>
-		<height>3</height>
+		<height>58</height>
 	</include>
 	<include name="Custom_Setting_Select_coords3_21:9_masked">
-		<top>50</top>
+		<top>7</top>
 		<width>1660</width>
-		<height>3</height>
+		<height>58</height>
 	</include>
 	<include name="Custom_Setting_Select_coords3_4:3">
-		<top>50</top>
+		<top>7</top>
 		<width>540</width>
-		<height>3</height>
+		<height>58</height>
 	</include>
 
-	<!-- The scroll bar, left of the list as it is in the select dialog -->
+	<!-- The line under the row the list is on -->
 	<include name="Custom_Setting_Select_coords4">
 		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords4_21:9</include>
@@ -93,24 +93,52 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords4_4:3</include>
 	</include>
 	<include name="Custom_Setting_Select_coords4_16:9">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>652</height>
+		<top>55</top>
+		<width>1020</width>
+		<height>3</height>
 	</include>
 	<include name="Custom_Setting_Select_coords4_21:9">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>652</height>
+		<top>55</top>
+		<width>1660</width>
+		<height>3</height>
 	</include>
 	<include name="Custom_Setting_Select_coords4_21:9_masked">
+		<top>55</top>
+		<width>1660</width>
+		<height>3</height>
+	</include>
+	<include name="Custom_Setting_Select_coords4_4:3">
+		<top>55</top>
+		<width>540</width>
+		<height>3</height>
+	</include>
+
+	<!-- The scroll bar, left of the list as it is in the select dialog -->
+	<include name="Custom_Setting_Select_coords5">
+		<include condition="$EXP[NonMaskedCoordinates]">Custom_Setting_Select_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Custom_Setting_Select_coords5_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">Custom_Setting_Select_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Custom_Setting_Select_coords5_4:3</include>
+	</include>
+	<include name="Custom_Setting_Select_coords5_16:9">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>
 		<height>652</height>
 	</include>
-	<include name="Custom_Setting_Select_coords4_4:3">
+	<include name="Custom_Setting_Select_coords5_21:9">
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
+	</include>
+	<include name="Custom_Setting_Select_coords5_21:9_masked">
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
+	</include>
+	<include name="Custom_Setting_Select_coords5_4:3">
 		<left>690</left>
 		<centertop>50%</centertop>
 		<width>20</width>

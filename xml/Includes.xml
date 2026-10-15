@@ -233,7 +233,7 @@
 		<align>center</align>
 		<textoffsetx>10</textoffsetx>
 		<fadetime>200</fadetime>
-		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus74c.png</texturefocus>
 	</include>
 
 	<!-- OSD Play buttons -->

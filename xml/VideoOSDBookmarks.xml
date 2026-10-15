@@ -102,7 +102,7 @@
 				<control type="button" id="1">
 					<include>VideoOSDBookmarks_coords8</include>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 					<label>15067</label>
 					<onclick>Dialog.Close(videobookmarks)</onclick>
 					<oninfo>noop</oninfo>
@@ -112,7 +112,7 @@
 				<control type="button" id="2">
 					<include>VideoOSDBookmarks_coords8</include>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 					<label>294</label>
 					<oninfo>noop</oninfo>
 				</control>
@@ -121,7 +121,7 @@
 				<control type="button" id="3">
 					<include>VideoOSDBookmarks_coords8</include>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 					<label>296</label>
 					<oninfo>noop</oninfo>
 				</control>
@@ -130,7 +130,7 @@
 				<control type="button" id="4">
 					<include>VideoOSDBookmarks_coords8</include>
 					<align>center</align>
-					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 					<label>20406</label>
 					<oninfo>noop</oninfo>
 				</control>

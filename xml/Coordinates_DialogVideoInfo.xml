@@ -251,16 +251,20 @@
 	<include name="DialogVideoInfo_coords10_16:9">
 		<itemlayout width="1170" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>1170</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1170</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -271,16 +275,20 @@
 	<include name="DialogVideoInfo_coords10_21:9">
 		<itemlayout width="1780" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -291,16 +299,20 @@
 	<include name="DialogVideoInfo_coords10_21:9_masked">
 		<itemlayout width="1780" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -311,16 +323,20 @@
 	<include name="DialogVideoInfo_coords10_4:3">
 		<itemlayout width="660" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>660</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>660</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -338,46 +354,54 @@
 	<include name="DialogVideoInfo_coords11_16:9">
 		<focusedlayout width="1170" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>1170</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>Control.HasFocus(50) + !String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1170</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>1170</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1170</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!Control.HasFocus(50) + !String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1170</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>!Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>1170</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
@@ -388,46 +412,54 @@
 	<include name="DialogVideoInfo_coords11_21:9">
 		<focusedlayout width="1780" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>Control.HasFocus(50) + !String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>1780</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!Control.HasFocus(50) + !String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>!Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>1780</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
@@ -438,46 +470,54 @@
 	<include name="DialogVideoInfo_coords11_21:9_masked">
 		<focusedlayout width="1780" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>Control.HasFocus(50) + !String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>1780</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
 				<visible>!Control.HasFocus(50) + !String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>1780</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>!Control.HasFocus(50) + String.IsEmpty(Window(12003).Property(cast))</visible>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>1780</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>
@@ -488,8 +528,10 @@
 	<include name="DialogVideoInfo_coords11_4:3">
 		<focusedlayout width="660" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>660</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
@@ -497,8 +539,10 @@
 				<scroll>True</scroll>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>660</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -506,15 +550,17 @@
 				<scroll>True</scroll>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>660</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(50)</visible>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>660</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B] - $INFO[ListItem.Label2]</label>
@@ -522,8 +568,10 @@
 				<scroll>True</scroll>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<width>660</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -531,7 +579,7 @@
 				<scroll>True</scroll>
 			</control>
 			<control type="image">
-				<top>50</top>
+				<top>55</top>
 				<width>660</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorNF]">$VAR[focusline]</texture>

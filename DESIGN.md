@@ -182,17 +182,42 @@ The two 50% fades stack to 25% on purpose. Unfocused text is therefore never the
 
 ### The underline
 
-- A **3 px image control**, top 8 px above the row's bottom (main menu: top 89 in 97; sub menu: 44 in 52).
-  Never a row-tall texture with the line painted at its foot.
+- A **3 px image control** in lists, a button focus texture on buttons. Never a row-tall texture with the
+  line painted at its foot drawn at a height it was not made for.
+- **7 px clear of descenders.** The line's top sits 7 px below the lowest point of the text it underlines
+  (Source Sans Pro's g and y reach 0.23 of the font's pixel size below the baseline; centred text in a row
+  of height H ends 0.58 × size below H / 2). A 66 px row with Font33 gets it with its line 8 px up (58);
+  the main menu has more (89 in 97). A row that has room moves only its line; one that has not puts the
+  line at its foot and its text at the top. Control sizes change for it only where no placement
+  would do (the Up Next buttons).
 - `focusline.png` (40 × 3) for left-aligned text: round, opaque left end, fades right; drawn with
   `border="2,0,0,0"` so the cap never stretches. `focuslinec.png` (`$VAR[focuslinecenter]`) for centred
   text: peaks centre and fades both ways to nothing, drawn with **no border**, so the whole fade stretches.
   A `2,0,2,0` border would freeze the two outer texels and stretch the 12.5 % one next to them across the
   last tenth of the line, which then stops short instead of fading out. Centred uses give an explicit `top`.
-- **Button focus** textures (`common/focus`, `focus52`, `focusright`, `focus27c`, `focus52c`, `focus66c`) draw
-  the same 3 px line at the foot of the button: 40 px wide, the same fades; `border="2,0,0,0"` (left) or
-  `0,0,2,0` (right) so the round cap never stretches, and no border on the centred ones (`*c`), which
-  have no cap to keep.
+- **Button focus** textures (`common/focus`, `focus50`, `focus52`, `focus74`, `focusright`, `focus41c`,
+  `focus52c`, `focus66c`, `focus74c`; the number is the button height, plain is 66) draw the same 3 px line:
+  40 px wide, the same fades; `border="2,0,0,0"` (left) or `0,0,2,0` (right) so the round cap never
+  stretches, and no border on the centred ones (`*c`), which have no cap to keep. A texture is drawn at the
+  row height it was made for: stretched to another, its line moves and resamples soft.
+
+| Rows | Line | Text |
+| --- | --- | --- |
+| 50 px: OSD and add-on settings dialogs, masking, game OSD, stream lists, keyboard autocompletion | 47, `focus50` | top-aligned at 2, radio at `radioposy` 14 |
+| 52 px: side panel, context and button menus, Home sub menu | 49, `focus52` / `focus52c` | top-aligned at 4, radio at 16 |
+| 60 px settings categories, Font42 | 57 | top-aligned at 1 |
+| 74 px keyboard keys, Font48 | 71, `focus74` / `focus74c` | centred |
+| 66 px bookmark and stream buttons, in a grouplist as tall as they are (a grouplist clips its children) | 58, `focus66c` | centred |
+| 58 px select-type lists, Font36 | 55, the row's foot | top-aligned at 7 |
+| 85 / 96 px lists, Font36 | 70 / 75; with a second line 55, that line at 61 | centred |
+| Large library and PVR rows, Font48 | 83 / 87 / 101, the line below it 8 lower | as before |
+| Smaller lists (file manager, bookmarks, PVR guide channels, game window) | 43 / 237 / 60 / 247 (text at 202) | centred, or top-aligned as given |
+
+- **Spinners and sliders** keep their text centred, as Kodi centres their arrows and bars: 4 px in a 50 px
+  row, 5 px in a 52 px one.
+- **Up Next buttons** are 41 px for it (Font27, text top-aligned, `focus41c` with its line at 38); **the PVR
+  channel guide** keeps its 51 px rows and focuses to Font36 rather than Font42, top-aligned at 0 with the
+  start time on the same baseline (6), the unfocused row on it too (3 and 9) so nothing moves on focus.
 - Tinted `TextColorFO`, stretched to the label width. The fade lives in the alpha.
 - With *Disable underline text highlight* on, both variables resolve empty and `buttonfocus` becomes
   `00FFFFFF`; focus is then text alone.
@@ -438,7 +463,7 @@ Status overlays come in six tiers, each drawn at its own size (see Watched-statu
   clear of the panel's left and right edges and its bottom, so 526 wide in the 550 px panel.
   Track `common/PanelProgressBack` (30 %, round at both ends, `border="6,0,6,0"`), fill
   `common/PanelProgressBar` (round left end, square right end, `border="6,0,0,0"`), so the fill's moving end
-  is a straight cut. The panels grow to hold it (extended progress 94, cache 64, Up Next 131, simple 101), and
+  is a straight cut. The panels grow to hold it (extended progress 94, cache 64, Up Next 145, simple 115), and
   `CornerWindowLift*` steps by a panel's height plus the 10 px gap (cache 74, progress 104). The progress
   dialog keeps its 760 × 20 bar at y 867, inside the safe area.
 - **Settings separators** (`common/Divider.png`): the 3 px line at 50 % with round ends inside the 2 px

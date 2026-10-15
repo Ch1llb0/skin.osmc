@@ -45,6 +45,8 @@
 					<control type="button" id="1000">
 						<include>DialogContextMenu_coords4</include>
 						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 					</control>
 				</control>

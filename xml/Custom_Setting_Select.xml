@@ -239,7 +239,7 @@
 
 			<!-- Scrollbar -->
 			<control type="scrollbar" id="60">
-				<include>Custom_Setting_Select_coords4</include>
+				<include>Custom_Setting_Select_coords5</include>
 				<onleft>9001</onleft>
 				<onright>9002</onright>
 				<orientation>vertical</orientation>

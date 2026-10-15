@@ -45,6 +45,9 @@
 					<!-- Toggle masking -->
 					<control type="button" id="10">
 						<include>Custom_DialogMasking_coords5</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<label>$LOCALIZE[31065]</label>
 						<label2>$INFO[Skin.String(MaskingBars)]</label2>
 						<include>OpenMaskingBars</include>
@@ -55,6 +58,10 @@
 					<!-- Automatic masking -->
 					<control type="radiobutton" id="11">
 						<include>Custom_DialogMasking_coords6</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<radioposy>14</radioposy>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<font>Font33</font>
 						<label>31401</label>
 						<onclick>Skin.ToggleSetting(AutomaticMasking)</onclick>

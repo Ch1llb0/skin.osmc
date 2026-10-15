@@ -33,6 +33,7 @@
 				<!-- Layout -->
 				<control type="button" id="309">
 					<include>DialogKeyboard_coords2</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus74.png</texturefocus>
 					<onleft>noop</onleft>
 					<onright>100</onright>
 					<font>Font48</font>
@@ -42,6 +43,7 @@
 				<!-- Shift -->
 				<control type="radiobutton" id="302">
 					<include>DialogKeyboard_coords3</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus74.png</texturefocus>
 					<onleft>noop</onleft>
 					<onright>120</onright>
 					<font>Font48</font>
@@ -51,6 +53,7 @@
 				<!-- Caps lock -->
 				<control type="radiobutton" id="303">
 					<include>DialogKeyboard_coords3</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus74.png</texturefocus>
 					<onleft>noop</onleft>
 					<onright>140</onright>
 					<font>Font48</font>
@@ -60,6 +63,7 @@
 				<!-- Symbols -->
 				<control type="radiobutton" id="304">
 					<include>DialogKeyboard_coords3</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus74.png</texturefocus>
 					<onleft>noop</onleft>
 					<onright>160</onright>
 					<font>Font48</font>
@@ -69,6 +73,7 @@
 				<!-- IP address -->
 				<control type="button" id="307">
 					<include>DialogKeyboard_coords2</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus74.png</texturefocus>
 					<onleft>noop</onleft>
 					<onright>32</onright>
 					<font>Font48</font>
@@ -78,6 +83,7 @@
 				<!-- Show/Hide password -->
 				<control type="button" id="310">
 					<include>DialogKeyboard_coords2</include>
+					<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus74.png</texturefocus>
 					<onleft>noop</onleft>
 					<onright>312</onright>
 					<font>Font48</font>

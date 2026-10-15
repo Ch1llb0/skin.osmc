@@ -622,6 +622,8 @@
 				<include>$PARAM[coords]</include>
 				<align>center</align>
 				<label>$PARAM[label]</label>
+				<aligny>top</aligny>
+				<textoffsety>4</textoffsety>
 				<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
 				<onclick>$PARAM[onclick]</onclick>
 				<visible>$PARAM[visible]</visible>

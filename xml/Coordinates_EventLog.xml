@@ -146,7 +146,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>79</top>
+					<top>87</top>
 					<width>1018</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -173,7 +173,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>79</top>
+					<top>87</top>
 					<width>1658</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -200,7 +200,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>79</top>
+					<top>87</top>
 					<width>1658</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -227,7 +227,7 @@
 				</control>
 				<control type="image">
 					<left>32</left>
-					<top>79</top>
+					<top>87</top>
 					<width>538</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>

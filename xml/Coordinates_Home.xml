@@ -338,9 +338,10 @@
 	<include name="HomeSubMenu_coords1_16:9">
 		<itemlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -350,9 +351,10 @@
 	<include name="HomeSubMenu_coords1_21:9">
 		<itemlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -362,9 +364,10 @@
 	<include name="HomeSubMenu_coords1_21:9_masked">
 		<itemlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -374,9 +377,10 @@
 	<include name="HomeSubMenu_coords1_4:3">
 		<itemlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -393,25 +397,27 @@
 	<include name="HomeSubMenu_coords2_16:9">
 		<focusedlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="image">
-				<top>44</top>
+				<top>49</top>
 				<width>390</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -422,25 +428,27 @@
 	<include name="HomeSubMenu_coords2_21:9">
 		<focusedlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="image">
-				<top>44</top>
+				<top>49</top>
 				<width>390</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -451,25 +459,27 @@
 	<include name="HomeSubMenu_coords2_21:9_masked">
 		<focusedlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="image">
-				<top>44</top>
+				<top>49</top>
 				<width>390</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -480,25 +490,27 @@
 	<include name="HomeSubMenu_coords2_4:3">
 		<focusedlayout width="390" height="52">
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorFO]</textcolor>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="image">
-				<top>44</top>
+				<top>49</top>
 				<width>390</width>
 				<height>3</height>
 				<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				<visible>Control.HasFocus(9001)</visible>
 			</control>
 			<control type="label">
-				<top>0</top>
+				<top>4</top>
 				<width>390</width>
 				<height>52</height>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>

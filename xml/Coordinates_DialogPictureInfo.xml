@@ -71,16 +71,20 @@
 	<include name="DialogPictureInfo_coords3_16:9">
 		<itemlayout width="1140" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>320</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<left>340</left>
 				<width>800</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<align>right</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -91,16 +95,20 @@
 	<include name="DialogPictureInfo_coords3_21:9">
 		<itemlayout width="1780" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>320</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<left>340</left>
 				<width>1440</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<align>right</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -111,16 +119,20 @@
 	<include name="DialogPictureInfo_coords3_21:9_masked">
 		<itemlayout width="1780" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>320</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<left>340</left>
 				<width>1440</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<align>right</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -131,16 +143,20 @@
 	<include name="DialogPictureInfo_coords3_4:3">
 		<itemlayout width="660" height="58">
 			<control type="label">
+				<top>7</top>
 				<width>320</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
+				<top>7</top>
 				<left>340</left>
 				<width>320</width>
 				<height>58</height>
+				<aligny>top</aligny>
 				<font>Font36</font>
 				<align>right</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -162,23 +178,27 @@
 					<param name="id">5</param>
 				</include>
 				<control type="label">
+					<top>7</top>
 					<width>320</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>50</top>
+					<top>55</top>
 					<width>1140</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
+					<top>7</top>
 					<left>340</left>
 					<width>800</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -195,23 +215,27 @@
 					<param name="id">5</param>
 				</include>
 				<control type="label">
+					<top>7</top>
 					<width>320</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>50</top>
+					<top>55</top>
 					<width>1780</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
+					<top>7</top>
 					<left>300</left>
 					<width>1440</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -228,23 +252,27 @@
 					<param name="id">5</param>
 				</include>
 				<control type="label">
+					<top>7</top>
 					<width>320</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>50</top>
+					<top>55</top>
 					<width>1780</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
+					<top>7</top>
 					<left>340</left>
 					<width>1440</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -261,23 +289,27 @@
 					<param name="id">5</param>
 				</include>
 				<control type="label">
+					<top>7</top>
 					<width>320</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>50</top>
+					<top>55</top>
 					<width>660</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 				</control>
 				<control type="label">
+					<top>7</top>
 					<left>340</left>
 					<width>320</width>
 					<height>58</height>
+					<aligny>top</aligny>
 					<font>Font36</font>
 					<align>right</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>

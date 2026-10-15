@@ -62,6 +62,9 @@
 					<!-- Pause/Resume button -->
 					<control type="button" id="1001">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35224]</label>
@@ -72,6 +75,9 @@
 					<!-- Save and load button -->
 					<control type="button" id="1002">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35249]</label>
@@ -81,6 +87,9 @@
 					<!-- Reset button -->
 					<control type="button" id="1003">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[13007]</label>
@@ -91,6 +100,9 @@
 					<!-- Stop button -->
 					<control type="button" id="1004">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35222]</label>
@@ -107,6 +119,9 @@
 					<!-- Game video filter button -->
 					<control type="button" id="1006">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35225]</label>
@@ -116,6 +131,9 @@
 					<!-- Game stretch mode button -->
 					<control type="button" id="1007">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35233]</label>
@@ -125,6 +143,9 @@
 					<!-- View mode button -->
 					<control type="button" id="1008">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35227]</label>
@@ -134,6 +155,9 @@
 					<!-- Game volume button -->
 					<control type="button" id="1009">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[13376]</label>
@@ -149,6 +173,9 @@
 					<!-- Controls button -->
 					<control type="button" id="1011">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35234]</label>
@@ -158,6 +185,9 @@
 					<!-- Game advanced settings button -->
 					<control type="button" id="1012">
 						<include>GameOSD_coords8</include>
+						<aligny>top</aligny>
+						<textoffsety>2</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
 						<label>$LOCALIZE[35226]</label>

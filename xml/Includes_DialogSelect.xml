@@ -280,7 +280,7 @@
 					<control type="button" id="20">
 						<include>DialogSelect_coords24</include>
 						<align>center</align>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>15067</label>
 						<onclick>Action(Back)</onclick>
 					</control>
@@ -289,7 +289,7 @@
 					<control type="button" id="21">
 						<include>DialogSelect_coords24</include>
 						<align>center</align>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>13395</label>
 						<onclick>ActivateWindow(osdvideosettings)</onclick>
 						<visible>Window.IsActive(dialogselectvideo)</visible>
@@ -299,7 +299,7 @@
 					<control type="button" id="22">
 						<include>DialogSelect_coords24</include>
 						<align>center</align>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>13396</label>
 						<onclick>ActivateWindow(osdaudiosettings)</onclick>
 						<visible>Window.IsActive(dialogselectaudio)</visible>
@@ -309,7 +309,7 @@
 					<control type="button" id="23">
 						<include>DialogSelect_coords24</include>
 						<align>center</align>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>24133</label>
 						<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
 						<visible>Window.IsActive(dialogselectsubtitle)</visible>
@@ -319,7 +319,7 @@
 					<control type="button" id="24">
 						<include>DialogSelect_coords24</include>
 						<align>center</align>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52c.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>33003</label>
 						<onclick>ActivateWindow(subtitlesearch)</onclick>
 						<visible>Window.IsActive(dialogselectsubtitle)</visible>

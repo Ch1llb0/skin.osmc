@@ -359,8 +359,10 @@
 	<include name="DialogKeyboard_coords15_16:9">
 		<itemlayout height="50" width="405">
 			<control type="label">
+				<top>2</top>
 				<width>405</width>
 				<height>50</height>
+				<aligny>top</aligny>
 				<align>center</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -370,8 +372,10 @@
 	<include name="DialogKeyboard_coords15_21:9">
 		<itemlayout height="50" width="452">
 			<control type="label">
+				<top>2</top>
 				<width>452</width>
 				<height>50</height>
+				<aligny>top</aligny>
 				<align>center</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -381,8 +385,10 @@
 	<include name="DialogKeyboard_coords15_21:9_masked">
 		<itemlayout height="50" width="452">
 			<control type="label">
+				<top>2</top>
 				<width>452</width>
 				<height>50</height>
+				<aligny>top</aligny>
 				<align>center</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -392,8 +398,10 @@
 	<include name="DialogKeyboard_coords15_4:3">
 		<itemlayout height="50" width="380">
 			<control type="label">
+				<top>2</top>
 				<width>380</width>
 				<height>50</height>
+				<aligny>top</aligny>
 				<align>center</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -414,14 +422,16 @@
 					<param name="id">6000</param>
 				</include>
 				<control type="label">
+					<top>2</top>
 					<width>405</width>
 					<height>50</height>
+					<aligny>top</aligny>
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<top>42</top>
+					<top>47</top>
 					<width>405</width>
 					<height>3</height>
 					<align>center</align>
@@ -437,14 +447,16 @@
 					<param name="id">6000</param>
 				</include>
 				<control type="label">
+					<top>2</top>
 					<width>452</width>
 					<height>50</height>
+					<aligny>top</aligny>
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<top>42</top>
+					<top>47</top>
 					<width>452</width>
 					<height>3</height>
 					<align>center</align>
@@ -460,14 +472,16 @@
 					<param name="id">6000</param>
 				</include>
 				<control type="label">
+					<top>2</top>
 					<width>452</width>
 					<height>50</height>
+					<aligny>top</aligny>
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<top>42</top>
+					<top>47</top>
 					<width>452</width>
 					<height>3</height>
 					<align>center</align>
@@ -483,14 +497,16 @@
 					<param name="id">6000</param>
 				</include>
 				<control type="label">
+					<top>2</top>
 					<width>380</width>
 					<height>50</height>
+					<aligny>top</aligny>
 					<align>center</align>
 					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<top>42</top>
+					<top>47</top>
 					<width>380</width>
 					<height>3</height>
 					<align>center</align>

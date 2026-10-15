@@ -287,9 +287,10 @@
 		<itemlayout width="750" height="51">
 			<!-- Start time -->
 			<control type="label">
-				<top>2</top>
+				<top>9</top>
 				<width>140</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font27</font>
 				<align>left</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -298,9 +299,11 @@
 
 			<!-- Program name -->
 			<control type="label">
+				<top>3</top>
 				<left>160</left>
 				<width>532</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -309,7 +312,7 @@
 			<!-- Recording image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Recording.png</texture>
@@ -319,7 +322,7 @@
 			<!-- Timer image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Timer.png</texture>
@@ -330,7 +333,7 @@
 			<!-- Reminder image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Reminder.png</texture>
@@ -343,9 +346,10 @@
 		<itemlayout width="750" height="51">
 			<!-- Start time -->
 			<control type="label">
-				<top>2</top>
+				<top>9</top>
 				<width>140</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font27</font>
 				<align>left</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -354,9 +358,11 @@
 
 			<!-- Program name -->
 			<control type="label">
+				<top>3</top>
 				<left>160</left>
 				<width>532</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -365,7 +371,7 @@
 			<!-- Recording image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Recording.png</texture>
@@ -375,7 +381,7 @@
 			<!-- Timer image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Timer.png</texture>
@@ -386,7 +392,7 @@
 			<!-- Reminder image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Reminder.png</texture>
@@ -399,9 +405,10 @@
 		<itemlayout width="750" height="51">
 			<!-- Start time -->
 			<control type="label">
-				<top>2</top>
+				<top>9</top>
 				<width>140</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font27</font>
 				<align>left</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -410,9 +417,11 @@
 
 			<!-- Program name -->
 			<control type="label">
+				<top>3</top>
 				<left>160</left>
 				<width>532</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -421,7 +430,7 @@
 			<!-- Recording image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Recording.png</texture>
@@ -431,7 +440,7 @@
 			<!-- Timer image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Timer.png</texture>
@@ -442,7 +451,7 @@
 			<!-- Reminder image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Reminder.png</texture>
@@ -455,9 +464,10 @@
 		<itemlayout width="510" height="51">
 			<!-- Start time -->
 			<control type="label">
-				<top>2</top>
+				<top>9</top>
 				<width>140</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font27</font>
 				<align>left</align>
 				<textcolor>$VAR[TextColorNF]</textcolor>
@@ -466,9 +476,11 @@
 
 			<!-- Program name -->
 			<control type="label">
+				<top>3</top>
 				<left>160</left>
 				<width>292</width>
 				<height>51</height>
+				<aligny>top</aligny>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -477,7 +489,7 @@
 			<!-- Recording image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Recording.png</texture>
@@ -487,7 +499,7 @@
 			<!-- Timer image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Timer.png</texture>
@@ -498,7 +510,7 @@
 			<!-- Reminder image -->
 			<control type="image">
 				<right>3</right>
-				<top>17</top>
+				<top>13</top>
 				<width>24</width>
 				<height>24</height>
 				<texture>pvr/24/Reminder.png</texture>
@@ -523,9 +535,10 @@
 
 				<!-- Start time -->
 				<control type="label">
-					<top>2</top>
+					<top>6</top>
 					<width>140</width>
 					<height>51</height>
+					<aligny>top</aligny>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
 					<scrollspeed>49</scrollspeed>
@@ -536,10 +549,12 @@
 
 				<!-- Program name -->
 				<control type="label">
+					<top>0</top>
 					<left>160</left>
 					<width>532</width>
 					<height>51</height>
-					<font>Font42</font>
+					<aligny>top</aligny>
+					<font>Font36</font>
 					<scroll>True</scroll>
 					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -548,7 +563,7 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>49</top>
+					<top>48</top>
 					<width>692</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -557,7 +572,7 @@
 				<!-- Recording image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Recording.png</texture>
@@ -567,7 +582,7 @@
 				<!-- Timer image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Timer.png</texture>
@@ -578,7 +593,7 @@
 				<!-- Reminder image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Reminder.png</texture>
@@ -597,9 +612,10 @@
 
 				<!-- Start time -->
 				<control type="label">
-					<top>2</top>
+					<top>6</top>
 					<width>140</width>
 					<height>51</height>
+					<aligny>top</aligny>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
 					<scrollspeed>49</scrollspeed>
@@ -610,10 +626,12 @@
 
 				<!-- Program name -->
 				<control type="label">
+					<top>0</top>
 					<left>160</left>
 					<width>532</width>
 					<height>51</height>
-					<font>Font42</font>
+					<aligny>top</aligny>
+					<font>Font36</font>
 					<scroll>True</scroll>
 					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -622,7 +640,7 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>49</top>
+					<top>48</top>
 					<width>692</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -631,7 +649,7 @@
 				<!-- Recording image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Recording.png</texture>
@@ -641,7 +659,7 @@
 				<!-- Timer image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Timer.png</texture>
@@ -652,7 +670,7 @@
 				<!-- Reminder image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Reminder.png</texture>
@@ -671,9 +689,10 @@
 
 				<!-- Start time -->
 				<control type="label">
-					<top>2</top>
+					<top>6</top>
 					<width>140</width>
 					<height>51</height>
+					<aligny>top</aligny>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
 					<scrollspeed>49</scrollspeed>
@@ -684,10 +703,12 @@
 
 				<!-- Program name -->
 				<control type="label">
+					<top>0</top>
 					<left>160</left>
 					<width>532</width>
 					<height>51</height>
-					<font>Font42</font>
+					<aligny>top</aligny>
+					<font>Font36</font>
 					<scroll>True</scroll>
 					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -696,7 +717,7 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>49</top>
+					<top>48</top>
 					<width>692</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -705,7 +726,7 @@
 				<!-- Recording image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Recording.png</texture>
@@ -715,7 +736,7 @@
 				<!-- Timer image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Timer.png</texture>
@@ -726,7 +747,7 @@
 				<!-- Reminder image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Reminder.png</texture>
@@ -745,9 +766,10 @@
 
 				<!-- Start time -->
 				<control type="label">
-					<top>2</top>
+					<top>6</top>
 					<width>140</width>
 					<height>51</height>
+					<aligny>top</aligny>
 					<font>Font30-bold</font>
 					<scroll>True</scroll>
 					<scrollspeed>49</scrollspeed>
@@ -758,10 +780,12 @@
 
 				<!-- Program name -->
 				<control type="label">
+					<top>0</top>
 					<left>160</left>
 					<width>292</width>
 					<height>51</height>
-					<font>Font42</font>
+					<aligny>top</aligny>
+					<font>Font36</font>
 					<scroll>True</scroll>
 					<scrollspeed>71</scrollspeed>
 					<textcolor>$VAR[TextColorFO]</textcolor>
@@ -770,7 +794,7 @@
 
 				<!-- Highlighting -->
 				<control type="image">
-					<top>49</top>
+					<top>48</top>
 					<width>452</width>
 					<height>3</height>
 					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
@@ -779,7 +803,7 @@
 				<!-- Recording image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Recording.png</texture>
@@ -789,7 +813,7 @@
 				<!-- Timer image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Timer.png</texture>
@@ -800,7 +824,7 @@
 				<!-- Reminder image -->
 				<control type="image">
 					<right>3</right>
-					<top>17</top>
+					<top>13</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>pvr/24/Reminder.png</texture>

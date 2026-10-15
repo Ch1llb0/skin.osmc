@@ -62,7 +62,8 @@
 					<visible>[[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].Value),Window(Home).Property(SettingSelect.Current))]] + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) | $EXP[SettingSelectAnyOn]]</visible>
 
 					<control type="label">
-						<include>Custom_Setting_Select_coords2</include>
+						<include>Custom_Setting_Select_coords3</include>
+						<aligny>top</aligny>
 						<font>Font36-light</font>
 						<textcolor>$VAR[SelectedColor]</textcolor>
 						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
@@ -70,7 +71,8 @@
 					</control>
 
 					<control type="label">
-						<include>Custom_Setting_Select_coords2</include>
+						<include>Custom_Setting_Select_coords3</include>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[SelectedColor]</textcolor>
 						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
@@ -79,7 +81,7 @@
 					</control>
 
 					<control type="image">
-						<include>Custom_Setting_Select_coords3</include>
+						<include>Custom_Setting_Select_coords4</include>
 						<texture border="2,0,0,0" colordiffuse="$VAR[SelectedColor]">$VAR[focusline]</texture>
 						<visible>Control.HasFocus($PARAM[id])</visible>
 					</control>
@@ -90,7 +92,8 @@
 					<visible>![[String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].State),on)] | [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) + String.IsEqual(Window(Home).Property(SettingSelect.$PARAM[row].Value),Window(Home).Property(SettingSelect.Current))]] + [!String.IsEqual(Window(Home).Property(SettingSelect.Mode),many) | String.IsEmpty(Window(Home).Property(SettingSelect.$PARAM[row].Requires)) | $EXP[SettingSelectAnyOn]]</visible>
 
 					<control type="label">
-						<include>Custom_Setting_Select_coords2</include>
+						<include>Custom_Setting_Select_coords3</include>
+						<aligny>top</aligny>
 						<font>Font36-light</font>
 						<textcolor>$VAR[TextColorNF]</textcolor>
 						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
@@ -98,7 +101,8 @@
 					</control>
 
 					<control type="label">
-						<include>Custom_Setting_Select_coords2</include>
+						<include>Custom_Setting_Select_coords3</include>
+						<aligny>top</aligny>
 						<font>Font36-bold</font>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
@@ -107,7 +111,7 @@
 					</control>
 
 					<control type="image">
-						<include>Custom_Setting_Select_coords3</include>
+						<include>Custom_Setting_Select_coords4</include>
 						<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
 						<visible>Control.HasFocus($PARAM[id])</visible>
 					</control>
@@ -115,7 +119,8 @@
 
 				<!-- Out of reach until some row that requires nothing is on -->
 				<control type="label">
-					<include>Custom_Setting_Select_coords2</include>
+					<include>Custom_Setting_Select_coords3</include>
+					<aligny>top</aligny>
 					<font>Font36-light</font>
 					<textcolor>$VAR[DisabledColor]</textcolor>
 					<label>$INFO[Window(Home).Property(SettingSelect.$PARAM[row].Label)]</label>
