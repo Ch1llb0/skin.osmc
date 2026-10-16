@@ -17,7 +17,7 @@
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>VideoOSDBookmarks_coords1</include>
-			<visible>!Window.IsActive(playerprocessinfo) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(PVRChannelGuide) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(teletext) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
+			<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(PVRChannelGuide) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(teletext) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
 			<include>OSDVisibleHiddenAnimation</include>
 			<animation type="WindowOpen" condition="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))">
 				<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" delay="200" />
@@ -37,15 +37,13 @@
 		<control type="list" id="11">
 			<include>DialogDepth</include>
 			<include>VideoOSDBookmarks_coords2</include>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
 			<ondown>9001</ondown>
 			<onup>noop</onup>
 			<oninfo>noop</oninfo>
 			<orientation>horizontal</orientation>
 			<viewtype label="$LOCALIZE[535]">list</viewtype>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
-			<visible>!Window.IsActive(playerprocessinfo) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(PVRChannelGuide) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(teletext) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
+			<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(PVRChannelGuide) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(teletext) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
 			<include>OSDVisibleHiddenAnimation</include>
 			<animation type="WindowOpen" condition="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))">
 				<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" delay="200" />
@@ -69,7 +67,7 @@
 		<control type="group">
 			<include>DialogDepth</include>
 			<include>VideoOSDBookmarks_coords5</include>
-			<visible>!Window.IsActive(playerprocessinfo) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(PVRChannelGuide) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(teletext) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
+			<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(PVRChannelGuide) + !Window.IsVisible(pvrosdchannels) + !Window.IsVisible(teletext) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(1105) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
 			<include>OSDVisibleHiddenAnimation</include>
 			<animation type="WindowOpen" condition="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))">
 				<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" delay="200" />
@@ -97,7 +95,7 @@
 				<onleft>9001</onleft>
 				<onright>9001</onright>
 				<onup>11</onup>
-				<ondown>close</ondown>
+				<ondown>noop</ondown>
 				<orientation>horizontal</orientation>
 
 				<!-- Close -->

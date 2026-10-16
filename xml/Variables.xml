@@ -778,17 +778,68 @@
 		<value>$INFO[VideoPlayer.SubtitleLanguageEx]</value>
 	</variable>
 
-	<variable name="SubtitleLanguageOSD">
-		<value condition="!VideoPlayer.SubtitlesEnabled">$LOCALIZE[1223]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.SubtitleName)">$INFO[VideoPlayer.SubtitleName]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.SubtitleLanguageEx)">$INFO[VideoPlayer.SubtitleLanguageEx]</value>
-		<value condition="String.IsEmpty(VideoPlayer.SubtitlesLanguage)">Unk</value>
-		<value>$INFO[VideoPlayer.SubtitlesLanguage,[CAPITALIZE],[/CAPITALIZE]]</value>
-	</variable>
-
 	<variable name="SubtitleSimple">
 		<value condition="String.IsEmpty(ListItem.Property(SubtitleLanguage.5))">$INFO[ListItem.Property(SubtitleLanguage.1),[CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.2),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.3),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.4),$COMMA [CAPITALIZE],[/CAPITALIZE]]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))">$INFO[ListItem.Property(SubtitleLanguage.1),[CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.2),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.3),$COMMA [CAPITALIZE],[/CAPITALIZE]]$INFO[ListItem.Property(SubtitleLanguage.4),$COMMA [CAPITALIZE],[/CAPITALIZE] ...]</value>
+	</variable>
+
+	<!-- Stream select dialogs. Kodi gives each row the stream's properties; the language is its
+	     English name, the label (audio and subtitles) the same name, Disable or None. A video stream
+	     is named by its description alone, so an unnamed one falls back to the heading. -->
+	<variable name="StreamSelectLabel">
+		<value condition="Window.IsActive(dialogselectvideo) + String.IsEmpty(ListItem.Label)">$LOCALIZE[38031]</value>
+		<value>$INFO[ListItem.Label]$INFO[ListItem.Property(Stream.Description), &#8226; ,]$VAR[StreamSelectDefault, ,]$VAR[StreamSelectOriginal, ,]$VAR[StreamSelectForced, ,]$VAR[StreamSelectHearingImpaired, ,]$VAR[StreamSelectVisualImpaired, ,]$VAR[StreamSelectExternal, ,]</value>
+	</variable>
+
+	<variable name="StreamSelectDefault">
+		<value condition="ListItem.Property(Stream.IsDefault)">($LOCALIZE[571])</value>
+	</variable>
+
+	<variable name="StreamSelectOriginal">
+		<value condition="ListItem.Property(Stream.IsOriginal)">($LOCALIZE[31459])</value>
+	</variable>
+
+	<variable name="StreamSelectForced">
+		<value condition="ListItem.Property(Stream.IsForced)">($LOCALIZE[31458])</value>
+	</variable>
+
+	<!-- Written [CC] as in the subtitle download list -->
+	<variable name="StreamSelectHearingImpaired">
+		<value condition="ListItem.Property(Stream.IsHearingImpaired)">[CC]</value>
+	</variable>
+
+	<variable name="StreamSelectVisualImpaired">
+		<value condition="ListItem.Property(Stream.IsVisualImpaired)">($LOCALIZE[31460])</value>
+	</variable>
+
+	<variable name="StreamSelectExternal">
+		<value condition="ListItem.Property(Stream.IsExternal)">$LOCALIZE[21602]</value>
+	</variable>
+
+	<!-- The specs, worded as in the media flags and the info dialog. The video row adds the frame
+	     rate and the bitrate, which only the stream knows; Kodi gives no bitrate for audio. -->
+	<variable name="StreamSelectDetails">
+		<value condition="Window.IsActive(dialogselectaudio)">$MAP[AudioCodecMap,ListItem.Property(Stream.Codec)]$INFO[ListItem.Property(Stream.Channels), ,]</value>
+		<value condition="Window.IsActive(dialogselectvideo)">$MAP[VideoCodecMap,ListItem.Property(Stream.Codec)]$VAR[StreamSelectHDR, &#8226; ,]$VAR[StreamSelect3D, &#8226; ,]$INFO[ListItem.Property(Stream.Resolution), &#8226; ,]$INFO[ListItem.Property(Stream.FPS), &#8226; , fps]$VAR[StreamSelectBitrate, &#8226; ,]</value>
+	</variable>
+
+	<variable name="StreamSelectHDR">
+		<value condition="String.IsEqual(ListItem.Property(Stream.HdrType),dolbyvision)">DV</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Stream.HdrType))">$INFO[ListItem.Property(Stream.HdrType),[UPPERCASE],[/UPPERCASE]]</value>
+	</variable>
+
+	<variable name="StreamSelect3D">
+		<value condition="ListItem.Property(Stream.Is3D)">3D</value>
+	</variable>
+
+	<variable name="StreamSelectBitrate">
+		<value condition="Integer.IsGreater(ListItem.Property(Stream.Bitrate),0)">$INFO[ListItem.Property(Stream.Bitrate),, kb/s]</value>
+	</variable>
+
+	<!-- Kodi sets Stream.Language on video rows only; an audio or subtitle row carries its language as its
+	     label. The map gives a path in language/ or country/; a name it does not list draws nothing. -->
+	<variable name="StreamSelectFlag">
+		<value>$MAP[LanguageFlagMap,ListItem.Label].png</value>
 	</variable>
 
 	<!-- Video info label -->

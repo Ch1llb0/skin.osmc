@@ -325,7 +325,7 @@ pointing the way to press.
 | Move buttons | 35 × 66 | 31 × 18, centred | solid, 2.6 px round corners | — | `common/ArrowUp`, `ArrowDown` |
 | Media flag | 30 × 26 | 20 px ink box | 3 | 2.5 | `Video`, `Audio`, `Subtitles`, `Duration` |
 | Rating strip | 238 × 36 | five 47.6 px cells | 3 | — | `rating0`–`rating5` |
-| Language flag | 48 × 48 | 48 × 36 flag at top 6, full colour | — | 4 | `language/<code>.png`, `-.png` for an unknown language |
+| Language flag | 48 × 48 | 48 × 36 flag at top 6, full colour | — | 4 | `language/<code>.png`, `country/<ISO 3166>.png` for a regional language, `-.png` for an unknown language |
 
 `OverlaySpoiler.png` is not an overlay. No skin XML names it: Kodi itself returns it as `ListItem.Thumb` and
 `ListItem.Icon` of an unwatched episode when the unwatched-episode thumbs are hidden and the show has no fanart
@@ -349,6 +349,13 @@ carries its emblem as large as fits inside its triangle, 1.5 px clear of the dia
 (Serbia, Croatia) and `ch` (Guam, Northern Mariana Islands). A language with a flag of its own uses that flag
 (`eo` Esperanto, `ku` Kurdistan). Languages with neither get the neutral globe: `ae`, `cu`, `ia`, `ie`, `io`,
 `ji`, `pi`, `vo`, `yi`.
+
+A regional language (German (Austria), French (Canada)) shows its region's flag, from `country/`, one file per
+country for every language spoken there. A language in its own country keeps its flag, as does a community flag
+at home (Catalan, Basque and Galician in Spain, Welsh and Scottish Gaelic in the United Kingdom, Kurdish,
+Tibetan) and a constructed language. Two tags name no country: Latin America (`es-419`) takes Mexico's flag and
+Traditional Chinese (`zh-Hant`) Taiwan's. A country the set already draws as a language flag is a copy of that
+file. `LanguageFlagMap` turns Kodi's English name into the path.
 
 Keylines on the 405 grid: circle 300, square 266, portrait 234 × 300, landscape 300 × 234.
 
@@ -560,6 +567,43 @@ Status overlays come in six tiers, each drawn at its own size (see Watched-statu
   the Next strip 14 px below it, at 292, sliding down the same 30 px with the rows, so it never covers them.
 - Music visualisation info: art left, a Now column (artist, album, track · title, genre, format),
   playlist position and the same progress bar as video.
+- **Stream panels.** Audio, Subtitles (when there are any) and Video (when there is more than one video
+  stream) open Kodi's stream lists, windows 12301, 12302 and 12300. They load `DialogSelect.xml`, and
+  `$EXP[StreamSelectDialog]` gives them their own layout as they load (`Includes_DialogSelect.xml`). Laid
+  out as the bookmarks: the OSD rows give way, the progress bar stays, the panel's foot sits 18 px above it
+  (852) and a button row takes the OSD bar's place. Inside, the panel reads as the OSD settings dialogs: a
+  50 px inset, the heading in Font33 at top 30, 50 px rows from top 90, 17 px below the last, so its text
+  centre sits 42 px above the edge, as the settings dialogs' button text does. Five rows at most, the panel
+  shrinking upward with fewer (one image per count, 157 to 357 tall); past five the list scrolls, its
+  scrollbar at the inset and the rows 60 px further in. A row reads language • name, then the stream's
+  markers: (Default), (Original), (Forced), [CC], (Audio description), (External). The specs sit
+  right-aligned in Font33, as a button's label2, 440 px wide for audio and 600 for video at every ratio,
+  worded as in the media flags; video adds frame rate and bitrate. The language flag closes an audio or
+  subtitle row (`LanguageFlagMap`, from Kodi's English name, which those rows carry as their label); the
+  video list has none, so its specs end at the row's right edge. The selected stream is marked by
+  `SelectedColor` alone, the labels' selected colour. The focused row is a settings row: Font33 in
+  `TextColorFO` over the 3 px underline, scrolling its label and specs. Text and flag sit in the row's top
+  44 px and the underline at its foot (47), clear of descenders and flags. Up from the first row wraps to
+  the last; down from the last goes to the buttons, and down from the buttons does nothing (as in the
+  bookmarks); back closes the panel. The buttons are Close, the matching OSD settings dialog and, for
+  subtitles, Download, centred at the bookmark buttons' widths (385 / 545 / 545 / 265) and numbered from 20,
+  as Kodi writes its own labels into 10 to 12. A settings dialog opens over the panel, so closing it comes
+  back to its button. The panel shows while a stream list is the topmost modal dialog
+  (`$EXP[StreamSelectTopmost]`), so a list a key or a remote opens over another OSD dialog stays in sight;
+  the OSD's hiding reads `$EXP[StreamSelectVisible]`, which holds through the close animation. The progress
+  bar follows the bookmarks' pattern: a list opened while the OSD is up, from its buttons, a key or a
+  remote, sets `DialogFromOSD` on 12005 as it loads (the `OSDChildDialog` include); the bar's visibility
+  reads it while the dialog is on screen, its slides read it, and the list's unload clears it a second later,
+  so the panel and the buttons zoom out while the bar stays put. Opened from full-screen video, the bar
+  shows while the list is active and goes with it. The subtitle download dialog, full screen, hides the bar
+  as the OSD settings dialogs do. An OSD closed within that second still takes the bar with it, zoomed out where
+  it sits; only the slide back waits for the mark to clear.
+- **Dialogs over the OSD that Kodi does not keep it alive under** (the select dialog, masking, player
+  process info) carry `OSDChildDialog`. An OSD the mouse opened can time out under one: VideoOSD.xml's
+  unload then sets `OSDTimedOut` a second later, and closing the dialog reopens the OSD. A close-all takes
+  the OSD only a moment before the dialog, too soon for the timer, so nothing returns and the bar goes with
+  the dialog. The OSD family hides under player process info by `Window.IsVisible`, as under every other
+  dialog, so everything returns as the dialog finishes closing.
 
 ---
 
@@ -686,6 +730,7 @@ Contrast over pure white fanart through the 146-grey overlay (worst case):
 | SidePanelSlideAnimation | 200 | linear | slide −200 → 0 |
 | CornerWindowAnimation | 200 | linear | slide 550 → 0 |
 | OSDOpenCloseAnimation | 200 | back / out | zoom 90 → 100 + fade |
+| OSDReplaceOpenCloseAnimation | 200 | back / out | as OSDOpenCloseAnimation; opens 200 ms late while anything of the OSD's shows (`$EXP[OSDOnScreen]`) |
 | DialogZoomAnimation | 300 | back / inout | zoom 70 → 100 + fade |
 | OptionsAnimation | 300 | back / inout | zoom 70 → 100, fade 150 delay 150 |
 | NonFocusWindowFadeAnimation | 200 | cubic / out | fade 100 → 50 |
@@ -701,6 +746,13 @@ Reuse these includes. Movement (zoom, slide, scroll) runs 200–300 ms; fades ha
 - **`OptionsAnimation` fades in 150 ms after 150 ms**, inside its 300 ms zoom.
 
 A new fade outside 200–300 ms joins this list or does not ship.
+
+- **A dialog that replaces what is on screen waits for it.** The stream lists open 200 ms late while the
+  OSD shows, the bookmarks also behind the seek bar or the info dialog, and player process info behind any
+  of those or the now playing panel, so what they replace zooms out first instead of crossing them.
+- **A zoom centres on the control it is written on, before any slide.** A panel that slides into place
+  puts the slide on an outer group and its visibility and zoom on an inner one with no geometry, as
+  process info's debug bar does, so it zooms about where it ends up.
 
 ---
 

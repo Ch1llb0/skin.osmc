@@ -338,27 +338,4 @@
 		<width>60</width>
 		<height>60</height>
 	</include>
-
-	<include name="VideoOSD_coords14">
-		<include condition="$EXP[NonMaskedCoordinates]">VideoOSD_coords14_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoOSD_coords14_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">VideoOSD_coords14_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoOSD_coords14_4:3</include>
-	</include>
-	<include name="VideoOSD_coords14_16:9">
-		<width>600</width>
-		<height>60</height>
-	</include>
-	<include name="VideoOSD_coords14_21:9">
-		<width>600</width>
-		<height>60</height>
-	</include>
-	<include name="VideoOSD_coords14_21:9_masked">
-		<width>600</width>
-		<height>60</height>
-	</include>
-	<include name="VideoOSD_coords14_4:3">
-		<width>600</width>
-		<height>60</height>
-	</include>
 </includes>

@@ -2241,3 +2241,18 @@ msgstr ""
 msgctxt "#31457"
 msgid "Wide low info"
 msgstr ""
+
+#: /Variables.xml
+msgctxt "#31458"
+msgid "Forced"
+msgstr ""
+
+#: /Variables.xml
+msgctxt "#31459"
+msgid "Original"
+msgstr ""
+
+#: /Variables.xml
+msgctxt "#31460"
+msgid "Audio description"
+msgstr ""

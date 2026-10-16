@@ -1081,4 +1081,1178 @@
 		<right>80</right>
 		<height>60</height>
 	</include>
+
+	<include name="DialogSelect_coords15">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords15_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords15_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords15_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords15_4:3</include>
+	</include>
+	<include name="DialogSelect_coords15_16:9">
+		<left>150</left>
+		<top>495</top>
+		<width>1620</width>
+		<height>357</height>
+		<control type="image">
+			<width>1620</width>
+			<height>157</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>1620</width>
+			<height>207</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>1620</width>
+			<height>257</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>1620</width>
+			<height>307</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>1620</width>
+			<height>357</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
+		</control>
+	</include>
+	<include name="DialogSelect_coords15_21:9">
+		<left>150</left>
+		<top>495</top>
+		<width>2260</width>
+		<height>357</height>
+		<control type="image">
+			<width>2260</width>
+			<height>157</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>207</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>257</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>307</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>357</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
+		</control>
+	</include>
+	<include name="DialogSelect_coords15_21:9_masked">
+		<left>150</left>
+		<top>675</top>
+		<width>2260</width>
+		<height>357</height>
+		<control type="image">
+			<width>2260</width>
+			<height>157</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>207</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>257</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>307</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>2260</width>
+			<height>357</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
+		</control>
+	</include>
+	<include name="DialogSelect_coords15_4:3">
+		<left>150</left>
+		<top>495</top>
+		<width>1140</width>
+		<height>357</height>
+		<control type="image">
+			<width>1140</width>
+			<height>157</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,1)</visible>
+		</control>
+		<control type="image">
+			<width>1140</width>
+			<height>207</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,2)</visible>
+		</control>
+		<control type="image">
+			<width>1140</width>
+			<height>257</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,3)</visible>
+		</control>
+		<control type="image">
+			<width>1140</width>
+			<height>307</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsEqual(Container(3).NumItems,4)</visible>
+		</control>
+		<control type="image">
+			<width>1140</width>
+			<height>357</height>
+			<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
+		</control>
+	</include>
+
+	<include name="DialogSelect_coords16">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords16_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords16_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords16_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords16_4:3</include>
+	</include>
+	<include name="DialogSelect_coords16_16:9">
+		<left>50</left>
+		<top>30</top>
+		<width>1520</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords16_21:9">
+		<left>50</left>
+		<top>30</top>
+		<width>2160</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords16_21:9_masked">
+		<left>50</left>
+		<top>30</top>
+		<width>2160</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords16_4:3">
+		<left>50</left>
+		<top>30</top>
+		<width>1040</width>
+		<height>33</height>
+	</include>
+
+	<include name="DialogSelect_coords17">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords17_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords17_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords17_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords17_4:3</include>
+	</include>
+	<include name="DialogSelect_coords17_16:9">
+		<left>50</left>
+		<top>90</top>
+		<width>1520</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords17_21:9">
+		<left>50</left>
+		<top>90</top>
+		<width>2160</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords17_21:9_masked">
+		<left>50</left>
+		<top>90</top>
+		<width>2160</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords17_4:3">
+		<left>50</left>
+		<top>90</top>
+		<width>1040</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogSelect_coords18">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords18_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords18_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords18_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords18_4:3</include>
+	</include>
+	<include name="DialogSelect_coords18_16:9">
+		<itemlayout width="1520" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>988</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>928</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>1448</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>1388</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>900</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>840</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>1008</left>
+				<width>440</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectaudio)</visible>
+			</control>
+			<control type="label">
+				<left>920</left>
+				<width>600</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectvideo)</visible>
+			</control>
+			<control type="image">
+				<left>1472</left>
+				<top>-2</top>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[StreamSelectFlag]</texture>
+				<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogSelect_coords18_21:9">
+		<itemlayout width="2160" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>1628</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>1568</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>2088</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>2028</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>1540</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>1480</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>1648</left>
+				<width>440</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectaudio)</visible>
+			</control>
+			<control type="label">
+				<left>1560</left>
+				<width>600</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectvideo)</visible>
+			</control>
+			<control type="image">
+				<left>2112</left>
+				<top>-2</top>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[StreamSelectFlag]</texture>
+				<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogSelect_coords18_21:9_masked">
+		<itemlayout width="2160" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>1628</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>1568</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>2088</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>2028</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>1540</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>1480</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>1648</left>
+				<width>440</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectaudio)</visible>
+			</control>
+			<control type="label">
+				<left>1560</left>
+				<width>600</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectvideo)</visible>
+			</control>
+			<control type="image">
+				<left>2112</left>
+				<top>-2</top>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[StreamSelectFlag]</texture>
+				<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogSelect_coords18_4:3">
+		<itemlayout width="1040" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>508</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>448</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>968</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>908</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>420</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>360</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectLabel]</label>
+				<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>528</left>
+				<width>440</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectaudio)</visible>
+			</control>
+			<control type="label">
+				<left>440</left>
+				<width>600</width>
+				<height>44</height>
+				<font>Font33</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$VAR[StreamSelectDetails]</label>
+				<visible>Window.IsActive(dialogselectvideo)</visible>
+			</control>
+			<control type="image">
+				<left>992</left>
+				<top>-2</top>
+				<width>48</width>
+				<height>48</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[StreamSelectFlag]</texture>
+				<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+			</control>
+		</itemlayout>
+	</include>
+
+	<include name="DialogSelect_coords19">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords19_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords19_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords19_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords19_4:3</include>
+	</include>
+	<include name="DialogSelect_coords19_16:9">
+		<focusedlayout width="1520" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>988</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>928</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>1448</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>1388</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>900</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>840</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>1008</left>
+					<width>440</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio)</visible>
+				</control>
+				<control type="label">
+					<left>920</left>
+					<width>600</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo)</visible>
+				</control>
+				<control type="image">
+					<left>1472</left>
+					<top>-2</top>
+					<width>48</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[StreamSelectFlag]</texture>
+					<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>1520</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>1460</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[StreamSelectScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogSelect_coords19_21:9">
+		<focusedlayout width="2160" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>1628</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>1568</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>2088</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>2028</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>1540</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>1480</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>1648</left>
+					<width>440</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio)</visible>
+				</control>
+				<control type="label">
+					<left>1560</left>
+					<width>600</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo)</visible>
+				</control>
+				<control type="image">
+					<left>2112</left>
+					<top>-2</top>
+					<width>48</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[StreamSelectFlag]</texture>
+					<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>2160</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>2100</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[StreamSelectScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogSelect_coords19_21:9_masked">
+		<focusedlayout width="2160" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>1628</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>1568</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>2088</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>2028</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>1540</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>1480</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>1648</left>
+					<width>440</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio)</visible>
+				</control>
+				<control type="label">
+					<left>1560</left>
+					<width>600</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo)</visible>
+				</control>
+				<control type="image">
+					<left>2112</left>
+					<top>-2</top>
+					<width>48</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[StreamSelectFlag]</texture>
+					<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>2160</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>2100</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[StreamSelectScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogSelect_coords19_4:3">
+		<focusedlayout width="1040" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>508</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>448</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>968</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>908</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectsubtitle) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<width>420</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + !$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>360</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectLabel]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo) + $EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>528</left>
+					<width>440</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectaudio)</visible>
+				</control>
+				<control type="label">
+					<left>440</left>
+					<width>600</width>
+					<height>44</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$VAR[StreamSelectDetails]</label>
+					<scroll>True</scroll>
+					<visible>Window.IsActive(dialogselectvideo)</visible>
+				</control>
+				<control type="image">
+					<left>992</left>
+					<top>-2</top>
+					<width>48</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$VAR[StreamSelectFlag]</texture>
+					<visible>!Window.IsActive(dialogselectvideo) + Integer.IsGreaterOrEqual(ListItem.Property(Stream.ID),0)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>1040</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[StreamSelectScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>980</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[StreamSelectScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="DialogSelect_coords20">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords20_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords20_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords20_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords20_4:3</include>
+	</include>
+	<include name="DialogSelect_coords20_16:9">
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords20_21:9">
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords20_21:9_masked">
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords20_4:3">
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogSelect_coords21">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords21_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords21_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords21_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords21_4:3</include>
+	</include>
+	<include name="DialogSelect_coords21_16:9">
+		<left>150</left>
+		<top>945</top>
+		<width>1620</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords21_21:9">
+		<left>150</left>
+		<top>945</top>
+		<width>2260</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords21_21:9_masked">
+		<left>150</left>
+		<top>1125</top>
+		<width>2260</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords21_4:3">
+		<left>150</left>
+		<top>945</top>
+		<width>1140</width>
+		<height>60</height>
+	</include>
+
+	<include name="DialogSelect_coords22">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords22_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords22_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords22_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords22_4:3</include>
+	</include>
+	<include name="DialogSelect_coords22_16:9">
+		<width>1620</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords22_21:9">
+		<width>2260</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords22_21:9_masked">
+		<width>2260</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords22_4:3">
+		<width>1140</width>
+		<height>60</height>
+	</include>
+
+	<include name="DialogSelect_coords23">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords23_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords23_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords23_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords23_4:3</include>
+	</include>
+	<include name="DialogSelect_coords23_16:9">
+		<left>20</left>
+		<top>-6</top>
+		<width>1580</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords23_21:9">
+		<left>20</left>
+		<top>-6</top>
+		<width>2220</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords23_21:9_masked">
+		<left>20</left>
+		<top>-6</top>
+		<width>2220</width>
+		<height>60</height>
+	</include>
+	<include name="DialogSelect_coords23_4:3">
+		<left>20</left>
+		<top>-6</top>
+		<width>1100</width>
+		<height>60</height>
+	</include>
+
+	<include name="DialogSelect_coords24">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords24_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords24_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords24_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords24_4:3</include>
+	</include>
+	<include name="DialogSelect_coords24_16:9">
+		<width>385</width>
+	</include>
+	<include name="DialogSelect_coords24_21:9">
+		<width>545</width>
+	</include>
+	<include name="DialogSelect_coords24_21:9_masked">
+		<width>545</width>
+	</include>
+	<include name="DialogSelect_coords24_4:3">
+		<width>265</width>
+	</include>
 </includes>

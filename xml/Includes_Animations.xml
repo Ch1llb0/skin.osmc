@@ -92,6 +92,24 @@
 		</animation>
 	</include>
 
+	<!-- A dialog that takes the place of what the OSD has on screen, as player process info does: while any
+	     of it shows it waits the 200 ms that takes to zoom out, as the bookmarks and the stream lists do,
+	     rather than crossing it. -->
+	<include name="OSDReplaceOpenCloseAnimation">
+		<animation type="WindowOpen" condition="$EXP[OSDOnScreen]">
+			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" delay="200" />
+			<effect type="fade" start="0" end="100" time="200" delay="200" />
+		</animation>
+		<animation type="WindowOpen" condition="!$EXP[OSDOnScreen]">
+			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+
 	<include name="OSDVisibleHiddenAnimation">
 		<animation type="Visible">
 			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />

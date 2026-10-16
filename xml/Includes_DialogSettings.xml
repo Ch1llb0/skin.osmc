@@ -118,7 +118,7 @@
 			<control type="group">
 				<include>DialogDepth</include>
 				<include>DialogSettings_coords9</include>
-				<visible>!Window.IsVisible(10153) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(SliderDialog) + !Window.IsVisible(FileBrowser) + !Window.IsVisible(shutdownmenu) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
+				<visible>!Window.IsVisible(10153) + [!Window.IsVisible(DialogSelect.xml) | $EXP[StreamSelectVisible] + !Window.IsVisible(selectdialog)] + !Window.IsVisible(playerprocessinfo) + !Window.IsVisible(SliderDialog) + !Window.IsVisible(FileBrowser) + !Window.IsVisible(shutdownmenu) + String.IsEmpty(Window(home).Property(service.upnext.dialog))</visible>
 
 				<!-- Animation -->
 				<include>OSDVisibleHiddenAnimation</include>

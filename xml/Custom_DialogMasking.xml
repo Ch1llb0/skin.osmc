@@ -6,6 +6,8 @@
 	<!-- Scroll reset -->
 	<include>ResetScroll</include>
 
+	<include>OSDChildDialog</include>
+
 	<controls>
 			<control type="group">
 				<include>Custom_DialogMasking_coords1</include>

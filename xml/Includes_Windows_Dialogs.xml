@@ -35,6 +35,25 @@
 		<onload condition="!String.IsEmpty(Window(Home).Property(ResetScroll))">ClearProperty(ResetScroll,Home)</onload>
 	</include>
 
+	<!-- A dialog opened over the video OSD that Kodi does not keep the OSD alive under: the select dialog
+	     (stream lists, 3D mode, resolution), masking and player process info. An OSD the mouse opened
+	     can time out under one. The dialog marks itself as opened over the OSD, which holds the progress
+	     bar for a second after it closes, as the bookmarks' properties do. If the OSD went away under it,
+	     VideoOSD.xml has set OSDTimedOut a second later, and closing the dialog brings the OSD back. A
+	     close-all takes the OSD only a moment before the dialog, too soon for that, so nothing returns
+	     and the bar goes with the dialog. Kodi tests every onunload condition before running any. -->
+	<include name="OSDChildDialog">
+		<onload>CancelAlarm(DialogFromOSD,true)</onload>
+		<onload>ClearProperty(DialogFromOSD,12005)</onload>
+		<onload>ClearProperty(OSDTimedOut,12005)</onload>
+		<onload condition="Window.IsActive(videoosd)">SetProperty(DialogFromOSD,True,12005)</onload>
+		<onunload condition="!String.IsEmpty(Window(12005).Property(OSDTimedOut)) + !Window.IsActive(videoosd) + Player.HasVideo">ActivateWindow(videoosd)</onunload>
+		<onunload>CancelAlarm(OSDTimedOut,true)</onunload>
+		<onunload>ClearProperty(OSDTimedOut,12005)</onunload>
+		<onunload condition="!String.IsEmpty(Window(12005).Property(DialogFromOSD)) + [Window.IsActive(videoosd) | !String.IsEmpty(Window(12005).Property(OSDTimedOut))]">AlarmClock(DialogFromOSD,ClearProperty(DialogFromOSD,12005),00:01,silent)</onunload>
+		<onunload condition="!Window.IsActive(videoosd) + String.IsEmpty(Window(12005).Property(OSDTimedOut))">ClearProperty(DialogFromOSD,12005)</onunload>
+	</include>
+
 	<!-- Backgrounds -->
 
 	<!-- Window background image -->
