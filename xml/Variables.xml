@@ -914,6 +914,19 @@
 		<value condition="!ListItem.Property(hearingimp) + !ListItem.Property(sync)">$INFO[ListItem.Label2]</value>
 	</variable>
 
+	<!-- A file's path as the info and versions dialogs show it: Kodi's decoded form (bluray://smb://…, not
+	     bluray://smb%3A%2F%2F…), else the plain path, as the decoded one is empty for music videos.
+	     Only to read: anything that opens or tests a path keeps ListItem.FileNameAndPath. -->
+	<variable name="FileNameAndPathDisplay">
+		<value condition="!String.IsEmpty(ListItem.DecodedFileNameAndPath)">$INFO[ListItem.DecodedFileNameAndPath]</value>
+		<value>$INFO[ListItem.FileNameAndPath]</value>
+	</variable>
+
+	<variable name="VideoManagerFileNameAndPath">
+		<value condition="!String.IsEmpty(Container(50).ListItem.DecodedFileNameAndPath)">$INFO[Container(50).ListItem.DecodedFileNameAndPath]</value>
+		<value>$INFO[Container(50).ListItem.FileNameAndPath]</value>
+	</variable>
+
 	<!-- Weather icons -->
 	<variable name="weatherIcons">
 		<value condition="!String.IsEmpty(Skin.String(weatherIcons.path))">$INFO[Skin.String(weatherIcons.path)]</value>

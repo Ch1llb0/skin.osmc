@@ -100,7 +100,7 @@
 				<font>Font27</font>
 				<scrollspeed>44</scrollspeed>
 				<align>center</align>
-				<label>$INFO[ListItem.FileNameAndPath]</label>
+				<label>$VAR[FileNameAndPathDisplay]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<visible>Control.HasFocus(6)</visible>
 				<include>VisibleFadeAnimation</include>

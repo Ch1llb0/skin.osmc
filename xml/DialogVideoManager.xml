@@ -28,7 +28,7 @@
 				<font>Font27</font>
 				<scrollspeed>44</scrollspeed>
 				<align>center</align>
-				<label>$INFO[Container(50).ListItem.FileNameAndPath]</label>
+				<label>$VAR[VideoManagerFileNameAndPath]</label>
 				<textcolor>$VAR[TextColorNF]</textcolor>
 				<visible>!String.IsEmpty(Container(50).ListItem.FileNameAndPath)</visible>
 				<include>VisibleFadeAnimation</include>
