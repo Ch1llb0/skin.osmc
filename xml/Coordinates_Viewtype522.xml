@@ -62,7 +62,7 @@
 			<!-- Image - TV shows -->
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultTVShows.png</param>
-				<param name="visible">Container.Content(tvshows)</param>
+				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
@@ -90,7 +90,7 @@
 			<!-- Image - TV shows -->
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultTVShows.png</param>
-				<param name="visible">Container.Content(tvshows)</param>
+				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
@@ -118,7 +118,7 @@
 			<!-- Image - TV shows -->
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultTVShows.png</param>
-				<param name="visible">Container.Content(tvshows)</param>
+				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
@@ -146,7 +146,7 @@
 			<!-- Image - TV shows -->
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultTVShows.png</param>
-				<param name="visible">Container.Content(tvshows)</param>
+				<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
@@ -183,7 +183,7 @@
 				<!-- Image - TV shows -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultTVShows.png</param>
-					<param name="visible">Container.Content(tvshows)</param>
+					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
@@ -214,7 +214,7 @@
 				<!-- Image - TV shows -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultTVShows.png</param>
-					<param name="visible">Container.Content(tvshows)</param>
+					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
@@ -245,7 +245,7 @@
 				<!-- Image - TV shows -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultTVShows.png</param>
-					<param name="visible">Container.Content(tvshows)</param>
+					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
@@ -276,7 +276,7 @@
 				<!-- Image - TV shows -->
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultTVShows.png</param>
-					<param name="visible">Container.Content(tvshows)</param>
+					<param name="visible">Container.Content(tvshows) | Container.Content(seasons)</param>
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 

@@ -15,7 +15,7 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="$LOCALIZE[31457]">wide</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 
 				<include>Viewtype526_coords2</include>
 
@@ -50,7 +50,7 @@
 			<!-- Plot -->
 			<control type="group">
 				<include>Viewtype526_coords7</include>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				<visible>!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)</visible>
 				<control type="textbox">
 					<include>Viewtype526_coords8</include>
