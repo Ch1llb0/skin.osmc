@@ -458,6 +458,15 @@ Status overlays come in six tiers, each drawn at its own size (see Watched-statu
   slider track is 4 px and full length; slider nibs are 16 × 16 at 4 px radius, solid, the unfocused one
   with the track's four rows (y 8–12) cut out so the track never shows through it, the focused one opaque
   over the track; the big nib 6 × 30.
+- **Markers on the OSD progress bar** sit inside the bar and keep its shape. Commercial breaks (`Player.Editlist`)
+  dim their stretch with black at 15 % over the full height; chapters are 4 × 8 cuts from the top, round at the
+  foot; bookmarks (`Player.Bookmarks`) the same mark flipped, from the foot, round at the top, so a 4 px gap of
+  bar always separates the two. Cuts take `MenuOSDColor` through the grey-146 `OSDProgressMark`, the panel's own
+  tint, so they read as gaps in the bar. Drawn in that order: breaks, bookmarks, chapters. A ranges control
+  draws square boxes, so the breaks sit in a grouplist that clips them 10 px in from each end, and a break at
+  0 % or 100 % (`Player.Editlist` starting with `0.00000,`, or holding `100.00000,`) gets `OSDProgressCap`,
+  the bar's own rounded end, dimmed alike. Each ranges control
+  keeps a `texturebg` of its marker's file diffused `00FFFFFF`, for the same reason as the bars above.
 - **A bar at the foot of a panel follows the panel's corners.** The corner dialogs (extended progress,
   cache, Up Next) draw a 12 px bar inside the panel: 10 px below the last line of text or buttons, 12 px
   clear of the panel's left and right edges and its bottom, so 526 wide in the 550 px panel.

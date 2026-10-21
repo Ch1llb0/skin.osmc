@@ -555,30 +555,29 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords21_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords21_16:9">
-		<left>280</left>
-		<top>28</top>
-		<width>920</width>
-		<height>8</height>
+		<left>290</left>
+		<top>20</top>
+		<width>900</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords21_21:9">
-		<left>280</left>
-		<top>28</top>
-		<width>1560</width>
-		<height>8</height>
+		<left>290</left>
+		<top>20</top>
+		<width>1540</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords21_21:9_masked">
-		<left>280</left>
-		<top>28</top>
-		<width>1560</width>
-		<height>8</height>
+		<left>290</left>
+		<top>20</top>
+		<width>1540</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords21_4:3">
-		<left>280</left>
-		<top>28</top>
-		<width>440</width>
-		<height>8</height>
+		<left>290</left>
+		<top>20</top>
+		<width>420</width>
+		<height>20</height>
 	</include>
-
 	<include name="VideoFullScreen_coords22">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords22_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords22_21:9</include>
@@ -586,30 +585,29 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords22_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords22_16:9">
-		<left>280</left>
-		<top>16</top>
+		<left>-10</left>
+		<top>0</top>
 		<width>920</width>
-		<height>8</height>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords22_21:9">
-		<left>280</left>
-		<top>16</top>
+		<left>-10</left>
+		<top>0</top>
 		<width>1560</width>
-		<height>8</height>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords22_21:9_masked">
-		<left>280</left>
-		<top>16</top>
+		<left>-10</left>
+		<top>0</top>
 		<width>1560</width>
-		<height>8</height>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords22_4:3">
-		<left>280</left>
-		<top>16</top>
+		<left>-10</left>
+		<top>0</top>
 		<width>440</width>
-		<height>8</height>
+		<height>20</height>
 	</include>
-
 	<include name="VideoFullScreen_coords23">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords23_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords23_21:9</include>
@@ -618,29 +616,28 @@
 	</include>
 	<include name="VideoFullScreen_coords23_16:9">
 		<left>280</left>
-		<top>12</top>
-		<width>920</width>
+		<top>20</top>
+		<width>10</width>
 		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords23_21:9">
 		<left>280</left>
-		<top>12</top>
-		<width>1560</width>
+		<top>20</top>
+		<width>10</width>
 		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords23_21:9_masked">
 		<left>280</left>
-		<top>12</top>
-		<width>1560</width>
+		<top>20</top>
+		<width>10</width>
 		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords23_4:3">
 		<left>280</left>
-		<top>12</top>
-		<width>440</width>
+		<top>20</top>
+		<width>10</width>
 		<height>20</height>
 	</include>
-
 	<include name="VideoFullScreen_coords24">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords24_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords24_21:9</include>
@@ -648,26 +645,29 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords24_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords24_16:9">
-		<right>20</right>
-		<width>530</width>
-		<height>60</height>
+		<left>1190</left>
+		<top>20</top>
+		<width>10</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords24_21:9">
-		<right>20</right>
-		<width>530</width>
-		<height>60</height>
+		<left>1830</left>
+		<top>20</top>
+		<width>10</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords24_21:9_masked">
-		<right>20</right>
-		<width>530</width>
-		<height>60</height>
+		<left>1830</left>
+		<top>20</top>
+		<width>10</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords24_4:3">
-		<right>20</right>
-		<width>530</width>
-		<height>60</height>
+		<left>710</left>
+		<top>20</top>
+		<width>10</width>
+		<height>20</height>
 	</include>
-
 	<include name="VideoFullScreen_coords25">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords25_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords25_21:9</include>
@@ -675,24 +675,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords25_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords25_16:9">
-		<right>20</right>
-		<width>300</width>
-		<height>60</height>
+		<left>280</left>
+		<top>32</top>
+		<width>920</width>
+		<height>8</height>
 	</include>
 	<include name="VideoFullScreen_coords25_21:9">
-		<right>20</right>
-		<width>300</width>
-		<height>60</height>
+		<left>280</left>
+		<top>32</top>
+		<width>1560</width>
+		<height>8</height>
 	</include>
 	<include name="VideoFullScreen_coords25_21:9_masked">
-		<right>20</right>
-		<width>300</width>
-		<height>60</height>
+		<left>280</left>
+		<top>32</top>
+		<width>1560</width>
+		<height>8</height>
 	</include>
 	<include name="VideoFullScreen_coords25_4:3">
-		<right>20</right>
-		<width>300</width>
-		<height>60</height>
+		<left>280</left>
+		<top>32</top>
+		<width>440</width>
+		<height>8</height>
 	</include>
 
 	<include name="VideoFullScreen_coords26">
@@ -702,20 +706,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords26_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords26_16:9">
-		<width>1620</width>
-		<height>278</height>
+		<left>280</left>
+		<top>20</top>
+		<width>920</width>
+		<height>8</height>
 	</include>
 	<include name="VideoFullScreen_coords26_21:9">
-		<width>2260</width>
-		<height>278</height>
+		<left>280</left>
+		<top>20</top>
+		<width>1560</width>
+		<height>8</height>
 	</include>
 	<include name="VideoFullScreen_coords26_21:9_masked">
-		<width>2260</width>
-		<height>278</height>
+		<left>280</left>
+		<top>20</top>
+		<width>1560</width>
+		<height>8</height>
 	</include>
 	<include name="VideoFullScreen_coords26_4:3">
-		<width>1140</width>
-		<height>278</height>
+		<left>280</left>
+		<top>20</top>
+		<width>440</width>
+		<height>8</height>
 	</include>
 
 	<include name="VideoFullScreen_coords27">
@@ -725,109 +737,30 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords27_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords27_16:9">
-		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
-		<include content="ZoomCentre">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="810" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentre">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="810" />
-			<param name="y" value="154" />
-		</include>
-		<include content="OSDVisibleHiddenAnimation">
-			<param name="center" value="0,0" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="810" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="810" />
-			<param name="y" value="154" />
-		</include>
+		<left>280</left>
+		<top>12</top>
+		<width>920</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords27_21:9">
-		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
-		<include content="ZoomCentre">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentre">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="154" />
-		</include>
-		<include content="OSDVisibleHiddenAnimation">
-			<param name="center" value="0,0" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="154" />
-		</include>
+		<left>280</left>
+		<top>12</top>
+		<width>1560</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords27_21:9_masked">
-		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
-		<include content="ZoomCentre">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentre">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="154" />
-		</include>
-		<include content="OSDVisibleHiddenAnimation">
-			<param name="center" value="0,0" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="1130" />
-			<param name="y" value="154" />
-		</include>
+		<left>280</left>
+		<top>12</top>
+		<width>1560</width>
+		<height>20</height>
 	</include>
 	<include name="VideoFullScreen_coords27_4:3">
-		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
-		<include content="ZoomCentre">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="570" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentre">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="570" />
-			<param name="y" value="154" />
-		</include>
-		<include content="OSDVisibleHiddenAnimation">
-			<param name="center" value="0,0" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="570" />
-			<param name="y" value="139" />
-		</include>
-		<include content="ZoomCentreReturn">
-			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
-			<param name="x" value="570" />
-			<param name="y" value="154" />
-		</include>
+		<left>280</left>
+		<top>12</top>
+		<width>440</width>
+		<height>20</height>
 	</include>
+
 	<include name="VideoFullScreen_coords28">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords28_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords28_21:9</include>
@@ -836,27 +769,23 @@
 	</include>
 	<include name="VideoFullScreen_coords28_16:9">
 		<right>20</right>
-		<top>20</top>
-		<bottom>20</bottom>
-		<width>234</width>
+		<width>530</width>
+		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords28_21:9">
 		<right>20</right>
-		<top>20</top>
-		<bottom>20</bottom>
-		<width>234</width>
+		<width>530</width>
+		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords28_21:9_masked">
 		<right>20</right>
-		<top>20</top>
-		<bottom>20</bottom>
-		<width>234</width>
+		<width>530</width>
+		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords28_4:3">
 		<right>20</right>
-		<top>20</top>
-		<bottom>20</bottom>
-		<width>234</width>
+		<width>530</width>
+		<height>60</height>
 	</include>
 
 	<include name="VideoFullScreen_coords29">
@@ -866,20 +795,24 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords29_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords29_16:9">
-		<width>1620</width>
-		<height>308</height>
+		<right>20</right>
+		<width>300</width>
+		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords29_21:9">
-		<width>2260</width>
-		<height>308</height>
+		<right>20</right>
+		<width>300</width>
+		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords29_21:9_masked">
-		<width>2260</width>
-		<height>308</height>
+		<right>20</right>
+		<width>300</width>
+		<height>60</height>
 	</include>
 	<include name="VideoFullScreen_coords29_4:3">
-		<width>1140</width>
-		<height>308</height>
+		<right>20</right>
+		<width>300</width>
+		<height>60</height>
 	</include>
 
 	<include name="VideoFullScreen_coords30">
@@ -889,28 +822,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords30_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords30_16:9">
-		<left>20</left>
-		<top>14</top>
-		<width>1300</width>
-		<height>30</height>
+		<width>1620</width>
+		<height>278</height>
 	</include>
 	<include name="VideoFullScreen_coords30_21:9">
-		<left>20</left>
-		<top>14</top>
-		<width>1940</width>
-		<height>30</height>
+		<width>2260</width>
+		<height>278</height>
 	</include>
 	<include name="VideoFullScreen_coords30_21:9_masked">
-		<left>20</left>
-		<top>14</top>
-		<width>1940</width>
-		<height>30</height>
+		<width>2260</width>
+		<height>278</height>
 	</include>
 	<include name="VideoFullScreen_coords30_4:3">
-		<left>20</left>
-		<top>14</top>
-		<width>820</width>
-		<height>30</height>
+		<width>1140</width>
+		<height>278</height>
 	</include>
 
 	<include name="VideoFullScreen_coords31">
@@ -920,30 +845,109 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords31_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords31_16:9">
-		<left>20</left>
-		<top>14</top>
-		<width>1020</width>
-		<height>30</height>
+		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
+		<include content="ZoomCentre">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="810" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="810" />
+			<param name="y" value="154" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="810" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="810" />
+			<param name="y" value="154" />
+		</include>
 	</include>
 	<include name="VideoFullScreen_coords31_21:9">
-		<left>20</left>
-		<top>14</top>
-		<width>1660</width>
-		<height>30</height>
+		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
+		<include content="ZoomCentre">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="154" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="154" />
+		</include>
 	</include>
 	<include name="VideoFullScreen_coords31_21:9_masked">
-		<left>20</left>
-		<top>14</top>
-		<width>1660</width>
-		<height>30</height>
+		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
+		<include content="ZoomCentre">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="154" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="1130" />
+			<param name="y" value="154" />
+		</include>
 	</include>
 	<include name="VideoFullScreen_coords31_4:3">
-		<left>20</left>
-		<top>14</top>
-		<width>540</width>
-		<height>30</height>
+		<!-- The panel shows and hides about the middle of its background, 30 px taller when the audio row shows -->
+		<include content="ZoomCentre">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="570" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="570" />
+			<param name="y" value="154" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="VideoPlayer.Content(musicvideos) | [String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="570" />
+			<param name="y" value="139" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="!VideoPlayer.Content(musicvideos) + ![String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels) + String.IsEmpty(VideoPlayer.AudioLanguage)]" />
+			<param name="x" value="570" />
+			<param name="y" value="154" />
+		</include>
 	</include>
-
 	<include name="VideoFullScreen_coords32">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords32_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords32_21:9</include>
@@ -951,28 +955,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords32_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords32_16:9">
-		<right>300</right>
-		<top>14</top>
-		<width>280</width>
-		<height>30</height>
+		<right>20</right>
+		<top>20</top>
+		<bottom>20</bottom>
+		<width>234</width>
 	</include>
 	<include name="VideoFullScreen_coords32_21:9">
-		<right>300</right>
-		<top>14</top>
-		<width>280</width>
-		<height>30</height>
+		<right>20</right>
+		<top>20</top>
+		<bottom>20</bottom>
+		<width>234</width>
 	</include>
 	<include name="VideoFullScreen_coords32_21:9_masked">
-		<right>300</right>
-		<top>14</top>
-		<width>280</width>
-		<height>30</height>
+		<right>20</right>
+		<top>20</top>
+		<bottom>20</bottom>
+		<width>234</width>
 	</include>
 	<include name="VideoFullScreen_coords32_4:3">
-		<right>300</right>
-		<top>14</top>
-		<width>280</width>
-		<height>30</height>
+		<right>20</right>
+		<top>20</top>
+		<bottom>20</bottom>
+		<width>234</width>
 	</include>
 
 	<include name="VideoFullScreen_coords33">
@@ -982,28 +986,20 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords33_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords33_16:9">
-		<left>20</left>
-		<top>57</top>
-		<width>1280</width>
-		<height>163</height>
+		<width>1620</width>
+		<height>308</height>
 	</include>
 	<include name="VideoFullScreen_coords33_21:9">
-		<left>20</left>
-		<top>57</top>
-		<width>1920</width>
-		<height>163</height>
+		<width>2260</width>
+		<height>308</height>
 	</include>
 	<include name="VideoFullScreen_coords33_21:9_masked">
-		<left>20</left>
-		<top>57</top>
-		<width>1920</width>
-		<height>163</height>
+		<width>2260</width>
+		<height>308</height>
 	</include>
 	<include name="VideoFullScreen_coords33_4:3">
-		<left>20</left>
-		<top>57</top>
-		<width>800</width>
-		<height>163</height>
+		<width>1140</width>
+		<height>308</height>
 	</include>
 
 	<include name="VideoFullScreen_coords34">
@@ -1013,16 +1009,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords34_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords34_16:9">
-		<height>157</height>
+		<left>20</left>
+		<top>14</top>
+		<width>1300</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords34_21:9">
-		<height>157</height>
+		<left>20</left>
+		<top>14</top>
+		<width>1940</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords34_21:9_masked">
-		<height>157</height>
+		<left>20</left>
+		<top>14</top>
+		<width>1940</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords34_4:3">
-		<height>157</height>
+		<left>20</left>
+		<top>14</top>
+		<width>820</width>
+		<height>30</height>
 	</include>
 
 	<include name="VideoFullScreen_coords35">
@@ -1032,16 +1040,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords35_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords35_16:9">
-		<height>140</height>
+		<left>20</left>
+		<top>14</top>
+		<width>1020</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords35_21:9">
-		<height>140</height>
+		<left>20</left>
+		<top>14</top>
+		<width>1660</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords35_21:9_masked">
-		<height>140</height>
+		<left>20</left>
+		<top>14</top>
+		<width>1660</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords35_4:3">
-		<height>140</height>
+		<left>20</left>
+		<top>14</top>
+		<width>540</width>
+		<height>30</height>
 	</include>
 
 	<include name="VideoFullScreen_coords36">
@@ -1051,16 +1071,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords36_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords36_16:9">
-		<height>159</height>
+		<right>300</right>
+		<top>14</top>
+		<width>280</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords36_21:9">
-		<height>159</height>
+		<right>300</right>
+		<top>14</top>
+		<width>280</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords36_21:9_masked">
-		<height>159</height>
+		<right>300</right>
+		<top>14</top>
+		<width>280</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords36_4:3">
-		<height>159</height>
+		<right>300</right>
+		<top>14</top>
+		<width>280</width>
+		<height>30</height>
 	</include>
 
 	<include name="VideoFullScreen_coords37">
@@ -1070,16 +1102,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords37_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords37_16:9">
-		<height>129</height>
+		<left>20</left>
+		<top>57</top>
+		<width>1280</width>
+		<height>163</height>
 	</include>
 	<include name="VideoFullScreen_coords37_21:9">
-		<height>129</height>
+		<left>20</left>
+		<top>57</top>
+		<width>1920</width>
+		<height>163</height>
 	</include>
 	<include name="VideoFullScreen_coords37_21:9_masked">
-		<height>129</height>
+		<left>20</left>
+		<top>57</top>
+		<width>1920</width>
+		<height>163</height>
 	</include>
 	<include name="VideoFullScreen_coords37_4:3">
-		<height>129</height>
+		<left>20</left>
+		<top>57</top>
+		<width>800</width>
+		<height>163</height>
 	</include>
 
 	<include name="VideoFullScreen_coords38">
@@ -1089,28 +1133,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords38_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords38_16:9">
-		<left>20</left>
-		<top>233</top>
-		<width>1280</width>
-		<height>30</height>
+		<height>157</height>
 	</include>
 	<include name="VideoFullScreen_coords38_21:9">
-		<left>20</left>
-		<top>233</top>
-		<width>1920</width>
-		<height>30</height>
+		<height>157</height>
 	</include>
 	<include name="VideoFullScreen_coords38_21:9_masked">
-		<left>20</left>
-		<top>233</top>
-		<width>1920</width>
-		<height>30</height>
+		<height>157</height>
 	</include>
 	<include name="VideoFullScreen_coords38_4:3">
-		<left>20</left>
-		<top>233</top>
-		<width>800</width>
-		<height>30</height>
+		<height>157</height>
 	</include>
 
 	<include name="VideoFullScreen_coords39">
@@ -1120,24 +1152,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords39_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords39_16:9">
-		<left>0</left>
-		<width>140</width>
-		<height>30</height>
+		<height>140</height>
 	</include>
 	<include name="VideoFullScreen_coords39_21:9">
-		<left>0</left>
-		<width>140</width>
-		<height>30</height>
+		<height>140</height>
 	</include>
 	<include name="VideoFullScreen_coords39_21:9_masked">
-		<left>0</left>
-		<width>140</width>
-		<height>30</height>
+		<height>140</height>
 	</include>
 	<include name="VideoFullScreen_coords39_4:3">
-		<left>0</left>
-		<width>140</width>
-		<height>30</height>
+		<height>140</height>
 	</include>
 
 	<include name="VideoFullScreen_coords40">
@@ -1147,28 +1171,18 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords40_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords40_16:9">
-		<left>160</left>
-		<width>1120</width>
-		<height>30</height>
+		<height>159</height>
 	</include>
 	<include name="VideoFullScreen_coords40_21:9">
-		<left>160</left>
-		<width>1760</width>
-		<height>30</height>
+		<height>159</height>
 	</include>
 	<include name="VideoFullScreen_coords40_21:9_masked">
-		<left>160</left>
-		<width>1760</width>
-		<height>30</height>
+		<height>159</height>
 	</include>
 	<include name="VideoFullScreen_coords40_4:3">
-		<left>160</left>
-		<width>640</width>
-		<height>30</height>
+		<height>159</height>
 	</include>
 
-	<!-- A row each for the audio and the subtitle stream: a heading of its own width, the stream
-	     beside it, so a long name scrolls alone. -->
 	<include name="VideoFullScreen_coords41">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords41_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords41_21:9</include>
@@ -1176,28 +1190,16 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords41_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords41_16:9">
-		<left>20</left>
-		<top>263</top>
-		<width>1280</width>
-		<height>30</height>
+		<height>129</height>
 	</include>
 	<include name="VideoFullScreen_coords41_21:9">
-		<left>20</left>
-		<top>263</top>
-		<width>1920</width>
-		<height>30</height>
+		<height>129</height>
 	</include>
 	<include name="VideoFullScreen_coords41_21:9_masked">
-		<left>20</left>
-		<top>263</top>
-		<width>1920</width>
-		<height>30</height>
+		<height>129</height>
 	</include>
 	<include name="VideoFullScreen_coords41_4:3">
-		<left>20</left>
-		<top>263</top>
-		<width>800</width>
-		<height>30</height>
+		<height>129</height>
 	</include>
 
 	<include name="VideoFullScreen_coords42">
@@ -1207,24 +1209,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords42_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords42_16:9">
-		<top>292</top>
-		<width>1620</width>
-		<height>40</height>
+		<left>20</left>
+		<top>233</top>
+		<width>1280</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords42_21:9">
-		<top>292</top>
-		<width>2260</width>
-		<height>40</height>
+		<left>20</left>
+		<top>233</top>
+		<width>1920</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords42_21:9_masked">
-		<top>292</top>
-		<width>2260</width>
-		<height>40</height>
+		<left>20</left>
+		<top>233</top>
+		<width>1920</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords42_4:3">
-		<top>292</top>
-		<width>1140</width>
-		<height>40</height>
+		<left>20</left>
+		<top>233</top>
+		<width>800</width>
+		<height>30</height>
 	</include>
 
 	<include name="VideoFullScreen_coords43">
@@ -1234,20 +1240,24 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords43_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords43_16:9">
-		<width>1620</width>
-		<height>40</height>
+		<left>0</left>
+		<width>140</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords43_21:9">
-		<width>2260</width>
-		<height>40</height>
+		<left>0</left>
+		<width>140</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords43_21:9_masked">
-		<width>2260</width>
-		<height>40</height>
+		<left>0</left>
+		<width>140</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords43_4:3">
-		<width>1140</width>
-		<height>40</height>
+		<left>0</left>
+		<width>140</width>
+		<height>30</height>
 	</include>
 
 	<include name="VideoFullScreen_coords44">
@@ -1257,26 +1267,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords44_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords44_16:9">
-		<width>1280</width>
-		<height>40</height>
-		<left>20</left>
+		<left>160</left>
+		<width>1120</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords44_21:9">
-		<width>1920</width>
-		<height>40</height>
-		<left>20</left>
+		<left>160</left>
+		<width>1760</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords44_21:9_masked">
-		<width>1920</width>
-		<height>40</height>
-		<left>20</left>
+		<left>160</left>
+		<width>1760</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords44_4:3">
-		<width>800</width>
-		<height>40</height>
-		<left>20</left>
+		<left>160</left>
+		<width>640</width>
+		<height>30</height>
 	</include>
 
+	<!-- A row each for the audio and the subtitle stream: a heading of its own width, the stream
+	     beside it, so a long name scrolls alone. -->
 	<include name="VideoFullScreen_coords45">
 		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords45_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords45_21:9</include>
@@ -1284,24 +1296,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords45_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords45_16:9">
-		<width>1580</width>
-		<height>40</height>
 		<left>20</left>
+		<top>263</top>
+		<width>1280</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords45_21:9">
-		<width>2220</width>
-		<height>40</height>
 		<left>20</left>
+		<top>263</top>
+		<width>1920</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords45_21:9_masked">
-		<width>2220</width>
-		<height>40</height>
 		<left>20</left>
+		<top>263</top>
+		<width>1920</width>
+		<height>30</height>
 	</include>
 	<include name="VideoFullScreen_coords45_4:3">
-		<width>1100</width>
-		<height>40</height>
 		<left>20</left>
+		<top>263</top>
+		<width>800</width>
+		<height>30</height>
 	</include>
 
 	<include name="VideoFullScreen_coords46">
@@ -1311,28 +1327,24 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords46_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords46_16:9">
-		<left>-150</left>
-		<top>-75</top>
-		<width>1920</width>
-		<height>1080</height>
+		<top>292</top>
+		<width>1620</width>
+		<height>40</height>
 	</include>
 	<include name="VideoFullScreen_coords46_21:9">
-		<left>-150</left>
-		<top>-75</top>
-		<width>2560</width>
-		<height>1080</height>
+		<top>292</top>
+		<width>2260</width>
+		<height>40</height>
 	</include>
 	<include name="VideoFullScreen_coords46_21:9_masked">
-		<left>-150</left>
-		<top>-75</top>
-		<width>2560</width>
-		<height>1080</height>
+		<top>292</top>
+		<width>2260</width>
+		<height>40</height>
 	</include>
 	<include name="VideoFullScreen_coords46_4:3">
-		<left>-150</left>
-		<top>-75</top>
-		<width>1440</width>
-		<height>1080</height>
+		<top>292</top>
+		<width>1140</width>
+		<height>40</height>
 	</include>
 
 	<include name="VideoFullScreen_coords47">
@@ -1342,24 +1354,132 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords47_4:3</include>
 	</include>
 	<include name="VideoFullScreen_coords47_16:9">
-		<centerleft>50%</centerleft>
-		<centertop>50%</centertop>
-		<width>140</width>
-		<height>140</height>
+		<width>1620</width>
+		<height>40</height>
 	</include>
 	<include name="VideoFullScreen_coords47_21:9">
-		<centerleft>50%</centerleft>
-		<centertop>50%</centertop>
-		<width>140</width>
-		<height>140</height>
+		<width>2260</width>
+		<height>40</height>
 	</include>
 	<include name="VideoFullScreen_coords47_21:9_masked">
+		<width>2260</width>
+		<height>40</height>
+	</include>
+	<include name="VideoFullScreen_coords47_4:3">
+		<width>1140</width>
+		<height>40</height>
+	</include>
+
+	<include name="VideoFullScreen_coords48">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords48_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords48_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords48_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords48_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords48_16:9">
+		<width>1280</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+	<include name="VideoFullScreen_coords48_21:9">
+		<width>1920</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+	<include name="VideoFullScreen_coords48_21:9_masked">
+		<width>1920</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+	<include name="VideoFullScreen_coords48_4:3">
+		<width>800</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+
+	<include name="VideoFullScreen_coords49">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords49_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords49_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords49_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords49_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords49_16:9">
+		<width>1580</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+	<include name="VideoFullScreen_coords49_21:9">
+		<width>2220</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+	<include name="VideoFullScreen_coords49_21:9_masked">
+		<width>2220</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+	<include name="VideoFullScreen_coords49_4:3">
+		<width>1100</width>
+		<height>40</height>
+		<left>20</left>
+	</include>
+
+	<include name="VideoFullScreen_coords50">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords50_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords50_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords50_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords50_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords50_16:9">
+		<left>-150</left>
+		<top>-75</top>
+		<width>1920</width>
+		<height>1080</height>
+	</include>
+	<include name="VideoFullScreen_coords50_21:9">
+		<left>-150</left>
+		<top>-75</top>
+		<width>2560</width>
+		<height>1080</height>
+	</include>
+	<include name="VideoFullScreen_coords50_21:9_masked">
+		<left>-150</left>
+		<top>-75</top>
+		<width>2560</width>
+		<height>1080</height>
+	</include>
+	<include name="VideoFullScreen_coords50_4:3">
+		<left>-150</left>
+		<top>-75</top>
+		<width>1440</width>
+		<height>1080</height>
+	</include>
+
+	<include name="VideoFullScreen_coords51">
+		<include condition="$EXP[NonMaskedCoordinates]">VideoFullScreen_coords51_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">VideoFullScreen_coords51_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">VideoFullScreen_coords51_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">VideoFullScreen_coords51_4:3</include>
+	</include>
+	<include name="VideoFullScreen_coords51_16:9">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
 		<width>140</width>
 		<height>140</height>
 	</include>
-	<include name="VideoFullScreen_coords47_4:3">
+	<include name="VideoFullScreen_coords51_21:9">
+		<centerleft>50%</centerleft>
+		<centertop>50%</centertop>
+		<width>140</width>
+		<height>140</height>
+	</include>
+	<include name="VideoFullScreen_coords51_21:9_masked">
+		<centerleft>50%</centerleft>
+		<centertop>50%</centertop>
+		<width>140</width>
+		<height>140</height>
+	</include>
+	<include name="VideoFullScreen_coords51_4:3">
 		<centerleft>50%</centerleft>
 		<centertop>50%</centertop>
 		<width>140</width>
