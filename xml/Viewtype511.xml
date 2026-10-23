@@ -27,11 +27,16 @@
 				<param name="fallback">DefaultVideo.png</param>
 				<param name="visible">Container.Content(videos)</param>
 			</include>
+			<!-- Games -->
+			<include content="image-511">
+				<param name="fallback">DefaultGameAddons.png</param>
+				<param name="visible">Container.Content(games)</param>
+			</include>
 
 			<!-- Plot -->
 			<control type="group">
 				<include>Viewtype511_coords3</include>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video) | Container.Content(videos) | Container.Content(games)</visible>
 				<control type="textbox">
 					<include>Viewtype511_coords4</include>
 					<align>left</align>
@@ -150,7 +155,7 @@
 				<focusposition>4</focusposition>
 				<orientation>vertical</orientation>
 				<viewtype label="$LOCALIZE[31117]">list</viewtype>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(games)</visible>
 				<include>DefaultView</include>
 
 				<include>Viewtype511_coords18</include>

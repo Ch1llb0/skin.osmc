@@ -50,7 +50,9 @@
 
 				<!-- List -->
 				<control type="list" id="3">
-					<include>DialogSelect_coords2</include>
+					<!-- Game saves explain the focused save on the line above the buttons: the list ends with the image, 39 px above it -->
+					<include condition="!Window.IsActive(gamesaves)">DialogSelect_coords2</include>
+					<include condition="Window.IsActive(gamesaves)">DialogSelect_coords3</include>
 					<onup>3</onup>
 					<ondown>3</ondown>
 					<onleft>60</onleft>
@@ -60,14 +62,14 @@
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
-					<include>DialogSelect_coords3</include>
-
 					<include>DialogSelect_coords4</include>
+
+					<include>DialogSelect_coords5</include>
 				</control>
 
 				<!-- List -->
 				<control type="list" id="6">
-					<include>DialogSelect_coords5</include>
+					<include>DialogSelect_coords6</include>
 					<onup>6</onup>
 					<ondown>6</ondown>
 					<onleft>60</onleft>
@@ -77,14 +79,15 @@
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
-					<include>DialogSelect_coords6</include>
-
 					<include>DialogSelect_coords7</include>
+
+					<include>DialogSelect_coords8</include>
 				</control>
 
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="60">
-					<include>DialogSelect_coords8</include>
+					<include condition="!Window.IsActive(gamesaves)">DialogSelect_coords9</include>
+					<include condition="Window.IsActive(gamesaves)">DialogSelect_coords10</include>
 					<onleft>5</onleft>
 					<onright condition="Control.IsVisible(3)">3</onright>
 					<onright condition="Control.IsVisible(6)">6</onright>
@@ -160,13 +163,13 @@
 
 			<!-- Window Background -->
 			<control type="image">
-				<include>DialogSelect_coords9</include>
+				<include>DialogSelect_coords11</include>
 				<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 			</control>
 
 			<!-- Heading -->
 			<control type="label" id="1">
-				<include>DialogSelect_coords10</include>
+				<include>DialogSelect_coords12</include>
 				<align>center</align>
 				<aligny>top</aligny>
 				<font>Font33</font>
@@ -175,19 +178,19 @@
 
 			<!-- Panel -->
 			<control type="panel" id="10811">
-				<include>DialogSelect_coords11</include>
+				<include>DialogSelect_coords13</include>
 				<onup>Close</onup>
 				<ondown>Close</ondown>
 				<orientation>horizontal</orientation>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 
-				<include>DialogSelect_coords12</include>
+				<include>DialogSelect_coords14</include>
 
-				<include>DialogSelect_coords13</include>
+				<include>DialogSelect_coords15</include>
 			</control>
 
 			<control type="textbox" id="12">
-				<include>DialogSelect_coords14</include>
+				<include>DialogSelect_coords16</include>
 				<font>Font30</font>
 				<align>center</align>
 				<autoscroll delay="10000" time="2000" repeat="12000">True</autoscroll>
@@ -209,7 +212,7 @@
 			<!-- Panel: five streams at most, shorter with fewer, its foot 18 px above the progress bar; heading and
 			     rows as in the OSD settings dialogs -->
 			<control type="group">
-				<include>DialogSelect_coords15</include>
+				<include>DialogSelect_coords17</include>
 				<animation effect="slide" end="0,200" time="0" condition="Integer.IsEqual(Container(3).NumItems,1)">Conditional</animation>
 				<animation effect="slide" end="0,150" time="0" condition="Integer.IsEqual(Container(3).NumItems,2)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="0" condition="Integer.IsEqual(Container(3).NumItems,3)">Conditional</animation>
@@ -217,7 +220,7 @@
 
 				<!-- Heading -->
 				<control type="label" id="1">
-					<include>DialogSelect_coords16</include>
+					<include>DialogSelect_coords18</include>
 					<font>Font33</font>
 					<align>center</align>
 					<aligny>top</aligny>
@@ -225,7 +228,7 @@
 
 				<!-- List -->
 				<control type="list" id="3">
-					<include>DialogSelect_coords17</include>
+					<include>DialogSelect_coords19</include>
 					<onup>3</onup>
 					<ondown>9001</ondown>
 					<onleft>60</onleft>
@@ -234,14 +237,14 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
-					<include>DialogSelect_coords18</include>
+					<include>DialogSelect_coords20</include>
 
-					<include>DialogSelect_coords19</include>
+					<include>DialogSelect_coords21</include>
 				</control>
 
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="60">
-					<include>DialogSelect_coords20</include>
+					<include>DialogSelect_coords22</include>
 					<onright>3</onright>
 					<ondown>9001</ondown>
 					<orientation>vertical</orientation>
@@ -254,21 +257,21 @@
 
 			<!-- Buttons, where the OSD bar was -->
 			<control type="group">
-				<include>DialogSelect_coords21</include>
+				<include>DialogSelect_coords23</include>
 				<include content="OSDReplaceOpenCloseAnimation">
 					<param name="osd" value="Window.IsVisible(VideoOSD)" />
 				</include>
 
 				<!-- Background -->
 				<control type="image">
-					<include>DialogSelect_coords22</include>
+					<include>DialogSelect_coords24</include>
 					<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
 				</control>
 
 				<!-- Button grouplist. 20 on, as Kodi writes its own labels into 10 to 12. A settings dialog opens over
 				     the panel, so closing it comes back to the button. -->
 				<control type="grouplist" id="9001">
-					<include>DialogSelect_coords23</include>
+					<include>DialogSelect_coords25</include>
 					<itemgap>20</itemgap>
 					<align>center</align>
 					<onleft>9001</onleft>
@@ -279,7 +282,7 @@
 
 					<!-- Close -->
 					<control type="button" id="20">
-						<include>DialogSelect_coords24</include>
+						<include>DialogSelect_coords26</include>
 						<align>center</align>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>15067</label>
@@ -288,7 +291,7 @@
 
 					<!-- Video settings -->
 					<control type="button" id="21">
-						<include>DialogSelect_coords24</include>
+						<include>DialogSelect_coords26</include>
 						<align>center</align>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>13395</label>
@@ -298,7 +301,7 @@
 
 					<!-- Audio settings -->
 					<control type="button" id="22">
-						<include>DialogSelect_coords24</include>
+						<include>DialogSelect_coords26</include>
 						<align>center</align>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>13396</label>
@@ -308,7 +311,7 @@
 
 					<!-- Subtitle settings -->
 					<control type="button" id="23">
-						<include>DialogSelect_coords24</include>
+						<include>DialogSelect_coords26</include>
 						<align>center</align>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>24133</label>
@@ -318,7 +321,7 @@
 
 					<!-- Subtitle download -->
 					<control type="button" id="24">
-						<include>DialogSelect_coords24</include>
+						<include>DialogSelect_coords26</include>
 						<align>center</align>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus66c.png</texturefocus>
 						<label>33003</label>

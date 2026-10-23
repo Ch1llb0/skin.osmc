@@ -13,4 +13,11 @@
 	<color name="MaskingColor">FF000000</color>
 	<color name="BackgroundColor">FF009CC7</color>
 	<color name="MenuOSDColor">FF009CC7</color>
+	<color name="RarityUncommon">FF7FD99A</color>
+	<color name="RarityRare">FF6FC3FF</color>
+	<color name="RarityUltraRare">FFF2C14E</color>
+	<color name="MedalGold">FFF2C14E</color>
+	<color name="MedalSilver">FFC9D1D9</color>
+	<color name="MedalBronze">FFD08B5B</color>
+	<color name="CheatsMatch">FF8ED6A0</color>
 </colors>

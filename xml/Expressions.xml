@@ -88,4 +88,16 @@
 	<!-- A stream list scrolls past five rows; its scrollbar then takes the panel's left edge and the
 	     rows move in beside it. -->
 	<expression name="StreamSelectScrollbar">Integer.IsGreater(Container(3).NumItems,5) + !Skin.HasSetting(Scrollbars)</expression>
+
+	<!-- The game OSD holds eleven buttons, one more each when the game can change discs or take cheats -->
+	<expression name="GameOSDRows12">[RetroPlayer.SupportsEject + !RetroPlayer.SupportsCheats] | [!RetroPlayer.SupportsEject + RetroPlayer.SupportsCheats]</expression>
+	<expression name="GameOSDRows11">!RetroPlayer.SupportsEject + !RetroPlayer.SupportsCheats</expression>
+
+	<!-- The disc manager shows either its menu or the list of discs; the list scrolls past five rows -->
+	<expression name="DiscManagerList">String.IsEqual(Window.Property(GameDiscManager.ShowDiscList),true)</expression>
+	<expression name="DiscManagerScrollbar">Integer.IsGreater(Container(108321).NumItems,5) + !Skin.HasSetting(Scrollbars)</expression>
+
+	<!-- Achievements show only when signed in to RetroAchievements during a game; otherwise the dialog invites
+	     the reader to create an account -->
+	<expression name="GameAchievementsSignedIn">RetroPlayer.AchievementsLoggedIn + Player.HasGame</expression>
 </includes>

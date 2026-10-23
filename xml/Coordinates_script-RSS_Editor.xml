@@ -70,27 +70,27 @@
 	</include>
 	<include name="script-RSS_Editor_coords3_16:9">
 		<left>750</left>
-		<top>192</top>
+		<top>245</top>
 		<width>1020</width>
-		<height>638</height>
+		<height>580</height>
 	</include>
 	<include name="script-RSS_Editor_coords3_21:9">
 		<left>750</left>
-		<top>192</top>
+		<top>245</top>
 		<width>1660</width>
-		<height>638</height>
+		<height>580</height>
 	</include>
 	<include name="script-RSS_Editor_coords3_21:9_masked">
 		<left>750</left>
-		<top>372</top>
+		<top>425</top>
 		<width>1660</width>
-		<height>638</height>
+		<height>580</height>
 	</include>
 	<include name="script-RSS_Editor_coords3_4:3">
 		<left>750</left>
-		<top>192</top>
+		<top>245</top>
 		<width>540</width>
-		<height>638</height>
+		<height>580</height>
 	</include>
 
 	<include name="script-RSS_Editor_coords4">
@@ -267,26 +267,26 @@
 	</include>
 	<include name="script-RSS_Editor_coords6_16:9">
 		<left>690</left>
-		<top>214</top>
+		<top>267</top>
 		<width>20</width>
-		<height>594</height>
+		<height>536</height>
 	</include>
 	<include name="script-RSS_Editor_coords6_21:9">
 		<left>690</left>
-		<top>214</top>
+		<top>267</top>
 		<width>20</width>
-		<height>594</height>
+		<height>536</height>
 	</include>
 	<include name="script-RSS_Editor_coords6_21:9_masked">
 		<left>690</left>
-		<top>394</top>
+		<top>447</top>
 		<width>20</width>
-		<height>594</height>
+		<height>536</height>
 	</include>
 	<include name="script-RSS_Editor_coords6_4:3">
 		<left>690</left>
-		<top>214</top>
+		<top>267</top>
 		<width>20</width>
-		<height>594</height>
+		<height>536</height>
 	</include>
 </includes>

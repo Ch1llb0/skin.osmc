@@ -83,6 +83,18 @@
 				<param name="coords3">Viewtype527_coords14</param>
 				<param name="overlayset">20</param>
 			</include>
+			<!-- Image - Games -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultAddonGame.png</param>
+				<param name="visible">Container.Content(games)</param>
+				<param name="id">527</param>
+				<param name="coords">Viewtype527_coords12</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
+				<param name="coords2">Viewtype527_coords13</param>
+				<param name="coords3">Viewtype527_coords14</param>
+				<param name="overlayset">20</param>
+			</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype527_coords2_21:9">
@@ -115,6 +127,18 @@
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultMovies.png</param>
 				<param name="visible">Container.Content(movies)</param>
+				<param name="id">527</param>
+				<param name="coords">Viewtype527_coords12</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
+				<param name="coords2">Viewtype527_coords13</param>
+				<param name="coords3">Viewtype527_coords14</param>
+				<param name="overlayset">20</param>
+			</include>
+			<!-- Image - Games -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultAddonGame.png</param>
+				<param name="visible">Container.Content(games)</param>
 				<param name="id">527</param>
 				<param name="coords">Viewtype527_coords12</param>
 
@@ -163,6 +187,18 @@
 				<param name="coords3">Viewtype527_coords14</param>
 				<param name="overlayset">20</param>
 			</include>
+			<!-- Image - Games -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultAddonGame.png</param>
+				<param name="visible">Container.Content(games)</param>
+				<param name="id">527</param>
+				<param name="coords">Viewtype527_coords12</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
+				<param name="coords2">Viewtype527_coords13</param>
+				<param name="coords3">Viewtype527_coords14</param>
+				<param name="overlayset">20</param>
+			</include>
 		</itemlayout>
 	</include>
 	<include name="Viewtype527_coords2_4:3">
@@ -195,6 +231,18 @@
 			<include content="MediaViewImageNF">
 				<param name="fallback">DefaultMovies.png</param>
 				<param name="visible">Container.Content(movies)</param>
+				<param name="id">527</param>
+				<param name="coords">Viewtype527_coords12</param>
+
+				<param name="mask">common/masks/art-185x185.png</param>
+				<param name="coords2">Viewtype527_coords13</param>
+				<param name="coords3">Viewtype527_coords14</param>
+				<param name="overlayset">20</param>
+			</include>
+			<!-- Image - Games -->
+			<include content="MediaViewImageNF">
+				<param name="fallback">DefaultAddonGame.png</param>
+				<param name="visible">Container.Content(games)</param>
 				<param name="id">527</param>
 				<param name="coords">Viewtype527_coords12</param>
 
@@ -252,6 +300,18 @@
 					<param name="coords3">Viewtype527_coords17</param>
 					<param name="overlayset">24</param>
 				</include>
+				<!-- Image - Games -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultAddonGame.png</param>
+					<param name="visible">Container.Content(games)</param>
+					<param name="id">527</param>
+					<param name="coords">Viewtype527_coords15</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
+					<param name="coords2">Viewtype527_coords16</param>
+					<param name="coords3">Viewtype527_coords17</param>
+					<param name="overlayset">24</param>
+				</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -287,6 +347,18 @@
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultMovies.png</param>
 					<param name="visible">Container.Content(movies)</param>
+					<param name="id">527</param>
+					<param name="coords">Viewtype527_coords15</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
+					<param name="coords2">Viewtype527_coords16</param>
+					<param name="coords3">Viewtype527_coords17</param>
+					<param name="overlayset">24</param>
+				</include>
+				<!-- Image - Games -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultAddonGame.png</param>
+					<param name="visible">Container.Content(games)</param>
 					<param name="id">527</param>
 					<param name="coords">Viewtype527_coords15</param>
 
@@ -338,6 +410,18 @@
 					<param name="coords3">Viewtype527_coords17</param>
 					<param name="overlayset">24</param>
 				</include>
+				<!-- Image - Games -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultAddonGame.png</param>
+					<param name="visible">Container.Content(games)</param>
+					<param name="id">527</param>
+					<param name="coords">Viewtype527_coords15</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
+					<param name="coords2">Viewtype527_coords16</param>
+					<param name="coords3">Viewtype527_coords17</param>
+					<param name="overlayset">24</param>
+				</include>
 			</control>
 		</focusedlayout>
 	</include>
@@ -373,6 +457,18 @@
 				<include content="MediaViewImageFO">
 					<param name="fallback">DefaultMovies.png</param>
 					<param name="visible">Container.Content(movies)</param>
+					<param name="id">527</param>
+					<param name="coords">Viewtype527_coords15</param>
+
+					<param name="mask">common/masks/art-244x244.png</param>
+					<param name="coords2">Viewtype527_coords16</param>
+					<param name="coords3">Viewtype527_coords17</param>
+					<param name="overlayset">24</param>
+				</include>
+				<!-- Image - Games -->
+				<include content="MediaViewImageFO">
+					<param name="fallback">DefaultAddonGame.png</param>
+					<param name="visible">Container.Content(games)</param>
 					<param name="id">527</param>
 					<param name="coords">Viewtype527_coords15</param>
 

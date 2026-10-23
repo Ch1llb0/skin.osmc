@@ -15,7 +15,7 @@
 				<orientation>horizontal</orientation>
 				<viewtype label="$LOCALIZE[31392]">biginfo</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(games)</visible>
 
 				<include>Viewtype522_coords2</include>
 
@@ -25,7 +25,7 @@
 			<!-- Movie/TV show info -->
 			<control type="group">
 				<include>Viewtype522_coords4</include>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(games)</visible>
 
 				<!-- Title -->
 				<control type="fadelabel">

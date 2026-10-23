@@ -335,4 +335,758 @@
 			<include>MaskingBars</include>
 		</controls>
 	</include>
+
+	<!-- Disc manager: drawn as the game OSD panel it opens from. Kodi drives five buttons when the dialog has
+	     no menu list (id 3), and they read as the OSD's own rows; the disc list takes their place. Changing
+	     discs needs the tray open, so Disc selection, Add and Delete are disabled while it is closed -->
+	<include name="DialogGameControllers_DiscManager">
+		<controls>
+			<control type="group">
+				<include>DialogDepth</include>
+				<include>DialogGameControllers_coords17</include>
+				<visible>Window.IsVisible(gamediscmanager) + !Window.IsVisible(shutdownmenu)</visible>
+				<include content="OSDReplaceOpenCloseAnimation">
+					<param name="osd" value="Window.IsVisible(gameosd)" />
+				</include>
+				<include>OSDVisibleHiddenAnimation</include>
+
+				<control type="group">
+					<!-- Five rows at most, the panel kept centred: 25 px lower for each row a shorter disc list lacks -->
+					<animation effect="slide" end="0,25" time="0" condition="$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,4)">Conditional</animation>
+					<animation effect="slide" end="0,50" time="0" condition="$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,3)">Conditional</animation>
+					<animation effect="slide" end="0,75" time="0" condition="$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,2)">Conditional</animation>
+					<animation effect="slide" end="0,100" time="0" condition="$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,1)">Conditional</animation>
+
+					<!-- Background, one per row count -->
+					<control type="image">
+						<include>DialogGameControllers_coords18</include>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+						<visible>!$EXP[DiscManagerList] | Integer.IsGreaterOrEqual(Container(108321).NumItems,5)</visible>
+					</control>
+					<control type="image">
+						<include>DialogGameControllers_coords19</include>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+						<visible>$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,4)</visible>
+					</control>
+					<control type="image">
+						<include>DialogGameControllers_coords20</include>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+						<visible>$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,3)</visible>
+					</control>
+					<control type="image">
+						<include>DialogGameControllers_coords21</include>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+						<visible>$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,2)</visible>
+					</control>
+					<control type="image">
+						<include>DialogGameControllers_coords22</include>
+						<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+						<visible>$EXP[DiscManagerList] + Integer.IsEqual(Container(108321).NumItems,1)</visible>
+					</control>
+
+					<!-- Heading, and the game under it -->
+					<control type="label">
+						<include>DialogGameControllers_coords23</include>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Font33</font>
+						<label>$LOCALIZE[35272]</label>
+					</control>
+					<control type="label">
+						<include>DialogGameControllers_coords24</include>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>Font27</font>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<label>$INFO[RetroPlayer.Title]</label>
+					</control>
+
+					<!-- Menu: id 3 for the window's default focus, which lands on its first enabled button; Kodi only
+					     takes a container with that id as its menu, so the buttons stay its menu -->
+					<control type="grouplist" id="3">
+						<include>DialogGameControllers_coords25</include>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						<visible>!$EXP[DiscManagerList]</visible>
+
+						<!-- Disc selection: Kodi writes the disc in the tray as label2 -->
+						<control type="button" id="108323">
+							<include>DialogGameControllers_coords26</include>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
+							<label>$LOCALIZE[35273]</label>
+							<enable>RetroPlayer.DiscEjected</enable>
+						</control>
+
+						<!-- Eject, or Insert with label2 Tray open: Kodi writes both -->
+						<control type="button" id="108324">
+							<include>DialogGameControllers_coords26</include>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
+							<label>$LOCALIZE[35275]</label>
+						</control>
+
+						<!-- Add -->
+						<control type="button" id="108325">
+							<include>DialogGameControllers_coords26</include>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
+							<label>$LOCALIZE[15019]</label>
+							<enable>RetroPlayer.DiscEjected</enable>
+						</control>
+
+						<!-- Delete -->
+						<control type="button" id="108326">
+							<include>DialogGameControllers_coords26</include>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
+							<label>$LOCALIZE[117]</label>
+							<enable>RetroPlayer.DiscEjected</enable>
+						</control>
+
+						<!-- Resume game -->
+						<control type="button" id="108327">
+							<include>DialogGameControllers_coords26</include>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus50.png</texturefocus>
+							<label>$LOCALIZE[35277]</label>
+						</control>
+					</control>
+
+					<!-- Discs: the one in the tray in the selected colour, as the stream lists mark theirs -->
+					<!-- The list shows on its group, not itself: Kodi focuses it in the same step that shows it, and a
+					     control hidden by its own condition cannot take focus until the next frame -->
+					<control type="group">
+						<visible>$EXP[DiscManagerList]</visible>
+						<control type="list" id="108321">
+							<include>DialogGameControllers_coords27</include>
+							<onup>108321</onup>
+							<ondown>108321</ondown>
+							<onleft>108322</onleft>
+							<orientation>vertical</orientation>
+							<pagecontrol>108322</pagecontrol>
+							<scrolltime tween="sine" easing="out">240</scrolltime>
+
+							<include>DialogGameControllers_coords28</include>
+
+							<include>DialogGameControllers_coords29</include>
+						</control>
+					</control>
+
+					<!-- Scrollbar -->
+					<control type="scrollbar" id="108322">
+						<include>DialogGameControllers_coords30</include>
+						<onright>108321</onright>
+						<orientation>vertical</orientation>
+						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+						<visible>$EXP[DiscManagerList] + $EXP[DiscManagerScrollbar]</visible>
+					</control>
+				</control>
+			</control>
+		</controls>
+	</include>
+
+	<!-- Achievements: the select dialog's 96 px list, the game and its progress in the image slot over the
+	     three switches Kodi reads (it sets none of them, so each shows its setting), a switch's help on the
+	     line above the buttons. Signed out, or opened from settings with no game, it shows the sign-up code -->
+	<include name="DialogGameControllers_Achievements">
+		<onload condition="!$EXP[GameAchievementsSignedIn]">SetFocus(9001)</onload>
+		<controls>
+			<control type="group">
+				<include>DialogDepth</include>
+				<visible>Window.IsVisible(gameachievements)</visible>
+
+				<!-- Dialog fanart -->
+				<include>DialogBackgroundImage</include>
+
+				<control type="group">
+					<include content="DialogFrame">
+						<param name="heading">$LOCALIZE[35287]</param>
+					</include>
+
+					<control type="group">
+						<visible>$EXP[GameAchievementsSignedIn]</visible>
+
+						<!-- Game and progress -->
+						<control type="label">
+							<include>DialogGameControllers_coords31</include>
+							<font>Font36</font>
+							<label>$INFO[Window.Property(Achievements.GameTitle)]</label>
+						</control>
+						<control type="label">
+							<include>DialogGameControllers_coords32</include>
+							<font>Font27</font>
+							<textcolor>$VAR[TextColorNF]</textcolor>
+							<label>$INFO[RetroPlayer.AchievementsProgress]$INFO[Window.Property(Achievements.Progress), &#8226; ,]</label>
+						</control>
+
+						<!-- Switches: Kodi hides hardcore mode until the emulator is approved for it -->
+						<control type="grouplist" id="108334">
+							<include>DialogGameControllers_coords33</include>
+							<itemgap>0</itemgap>
+							<orientation>vertical</orientation>
+							<onright>3</onright>
+							<ondown>9001</ondown>
+
+							<control type="radiobutton" id="108340">
+								<include>DialogGameControllers_coords34</include>
+								<label>$LOCALIZE[35700]</label>
+								<selected>System.GetBool(gamesachievements.hardcore)</selected>
+							</control>
+							<control type="radiobutton" id="108331">
+								<include>DialogGameControllers_coords34</include>
+								<label>$LOCALIZE[35303]</label>
+								<selected>System.GetBool(gamesachievements.encore)</selected>
+							</control>
+							<control type="radiobutton" id="108332">
+								<include>DialogGameControllers_coords34</include>
+								<label>$LOCALIZE[35364]</label>
+								<selected>System.GetBool(gamesachievements.challengeindicator)</selected>
+							</control>
+						</control>
+
+						<!-- Achievements, earned first -->
+						<control type="list" id="3">
+							<include>DialogGameControllers_coords35</include>
+							<onup>3</onup>
+							<ondown>3</ondown>
+							<onleft condition="!Skin.HasSetting(Scrollbars)">60</onleft>
+							<onleft condition="Skin.HasSetting(Scrollbars)">108334</onleft>
+							<onright>9001</onright>
+							<orientation>vertical</orientation>
+							<pagecontrol>60</pagecontrol>
+							<scrolltime tween="sine" easing="out">240</scrolltime>
+
+							<include>DialogGameControllers_coords36</include>
+
+							<include>DialogGameControllers_coords37</include>
+						</control>
+
+						<!-- Scrollbar -->
+						<control type="scrollbar" id="60">
+							<include>DialogGameControllers_coords38</include>
+							<onleft>108334</onleft>
+							<onright>3</onright>
+							<orientation>vertical</orientation>
+							<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+							<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+							<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+							<visible>!Skin.HasSetting(Scrollbars)</visible>
+						</control>
+
+						<!-- Help for the focused switch -->
+						<control type="fadelabel">
+							<include>DialogVideoInfo_coords2</include>
+							<font>Font27</font>
+							<scrollspeed>44</scrollspeed>
+							<align>center</align>
+							<label>$VAR[GameAchievementsHelp]</label>
+							<textcolor>$VAR[TextColorNF]</textcolor>
+							<include>VisibleFadeAnimation</include>
+						</control>
+					</control>
+
+					<!-- Signed out: the code to scan for an account -->
+					<control type="group">
+						<visible>!$EXP[GameAchievementsSignedIn]</visible>
+						<control type="image">
+							<include>DialogGameControllers_coords39</include>
+							<aspectratio>keep</aspectratio>
+							<texture>special://xbmc/media/qr/games/retroachievements.png</texture>
+						</control>
+						<control type="label">
+							<include>DialogGameControllers_coords40</include>
+							<font>Font36</font>
+							<label>$LOCALIZE[35367]</label>
+						</control>
+						<control type="textbox">
+							<include>DialogGameControllers_coords41</include>
+							<font>Font33-light</font>
+							<textcolor>$VAR[TextColorFO]</textcolor>
+							<label>$LOCALIZE[35368]</label>
+						</control>
+						<control type="label">
+							<include>DialogGameControllers_coords42</include>
+							<font>Font27</font>
+							<textcolor>$VAR[TextColorNF]</textcolor>
+							<label>$LOCALIZE[35285]</label>
+						</control>
+					</control>
+
+					<!-- Buttons -->
+					<control type="grouplist" id="9001">
+						<include>DialogButtons</include>
+						<itemgap>30</itemgap>
+						<onup condition="$EXP[GameAchievementsSignedIn]">3</onup>
+						<orientation>horizontal</orientation>
+						<align>center</align>
+						<defaultcontrol always="true">0</defaultcontrol>
+
+						<!-- Leaderboards -->
+						<control type="button" id="108333">
+							<width>Auto</width>
+							<label>$LOCALIZE[35331]</label>
+							<onclick>ActivateWindow(gameleaderboards)</onclick>
+							<visible>$EXP[GameAchievementsSignedIn]</visible>
+						</control>
+
+						<!-- Sign in, in the games settings -->
+						<control type="button" id="108335">
+							<width>Auto</width>
+							<label>$LOCALIZE[5]</label>
+							<onclick>ActivateWindow(gamesettings)</onclick>
+							<visible>!RetroPlayer.AchievementsLoggedIn</visible>
+						</control>
+
+						<!-- Close -->
+						<control type="button" id="108336">
+							<width>Auto</width>
+							<label>$LOCALIZE[15067]</label>
+							<onclick>Close</onclick>
+						</control>
+					</control>
+
+					<!-- Button indicator -->
+					<include content="dialogButtonIndicator">
+						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+					</include>
+				</control>
+			</control>
+
+			<include>MaskingBars</include>
+		</controls>
+	</include>
+
+	<!-- Leaderboards: the text viewer's frame and box, the game on the heading's second line, a board per
+	     96 px row with its top score; the focused board's own standing on the line above the buttons.
+	     Kodi focuses the list itself once it has loaded -->
+	<include name="DialogGameControllers_Leaderboards">
+		<controls>
+			<control type="group">
+				<include>DialogDepth</include>
+				<visible>Window.IsVisible(gameleaderboards)</visible>
+
+				<!-- Dialog fanart -->
+				<include>DialogBackgroundImage</include>
+
+				<control type="group">
+					<include>DialogDepth</include>
+					<include>DialogZoomAnimation</include>
+					<include content="Time">
+						<param name="heading">$LOCALIZE[35331]</param>
+					</include>
+
+					<control type="list" id="3">
+						<include>DialogGameControllers_coords43</include>
+						<onup>3</onup>
+						<ondown>3</ondown>
+						<onleft>60</onleft>
+						<onright>9001</onright>
+						<orientation>vertical</orientation>
+						<pagecontrol>60</pagecontrol>
+						<scrolltime tween="sine" easing="out">240</scrolltime>
+						<visible>String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+
+						<include>DialogGameControllers_coords44</include>
+
+						<include>DialogGameControllers_coords45</include>
+					</control>
+
+					<!-- Scrollbar -->
+					<control type="scrollbar" id="60">
+						<include>DialogGameControllers_coords46</include>
+						<onleft>9001</onleft>
+						<onright>3</onright>
+						<orientation>vertical</orientation>
+						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+						<visible>!Skin.HasSetting(Scrollbars) + String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+					</control>
+
+					<!-- Kodi fills the list once the status clears, and says why while it is empty -->
+					<control type="label">
+						<include>DialogGameControllers_coords47</include>
+						<align>center</align>
+						<font>Font33</font>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<label>$INFO[Window.Property(Leaderboards.Status)]</label>
+						<visible>!String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+					</control>
+
+					<!-- Explanation -->
+					<control type="fadelabel">
+						<include>DialogVideoInfo_coords2</include>
+						<font>Font27</font>
+						<scrollspeed>44</scrollspeed>
+						<align>center</align>
+						<label>$VAR[GameLeaderboardStanding]</label>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<include>VisibleFadeAnimation</include>
+					</control>
+
+					<!-- Buttons -->
+					<control type="grouplist" id="9001">
+						<include>DialogButtons</include>
+						<itemgap>30</itemgap>
+						<onup>3</onup>
+						<orientation>horizontal</orientation>
+						<align>center</align>
+						<defaultcontrol always="true">0</defaultcontrol>
+
+						<!-- Close -->
+						<control type="button" id="108337">
+							<width>Auto</width>
+							<label>$LOCALIZE[15067]</label>
+							<onclick>Close</onclick>
+						</control>
+					</control>
+
+					<!-- Button indicator -->
+					<include content="dialogButtonIndicator">
+						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+					</include>
+				</control>
+			</control>
+
+			<include>MaskingBars</include>
+		</controls>
+	</include>
+
+	<!-- A leaderboard's entries: 58 px text rows under a column line, the first three ranks on medal discs
+	     and the reader's own entry in the selected colour; the focused entry's date above the buttons -->
+	<include name="DialogGameControllers_LeaderboardEntries">
+		<controls>
+			<control type="group">
+				<include>DialogDepth</include>
+				<visible>Window.IsVisible(gameleaderboardentries)</visible>
+
+				<!-- Dialog fanart -->
+				<include>DialogBackgroundImage</include>
+
+				<control type="group">
+					<include>DialogDepth</include>
+					<include>DialogZoomAnimation</include>
+					<include content="Time">
+						<param name="heading">$INFO[Window.Property(Leaderboards.Title)]</param>
+					</include>
+
+					<!-- Column heads -->
+					<control type="group">
+						<include>DialogGameControllers_coords48</include>
+						<visible>String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+						<include>DialogGameControllers_coords49</include>
+					</control>
+
+					<control type="list" id="3">
+						<include>DialogGameControllers_coords50</include>
+						<onup>3</onup>
+						<ondown>3</ondown>
+						<onleft>60</onleft>
+						<onright>9001</onright>
+						<orientation>vertical</orientation>
+						<pagecontrol>60</pagecontrol>
+						<scrolltime tween="sine" easing="out">240</scrolltime>
+						<visible>String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+
+						<include>DialogGameControllers_coords51</include>
+
+						<include>DialogGameControllers_coords52</include>
+					</control>
+
+					<!-- Scrollbar -->
+					<control type="scrollbar" id="60">
+						<include>DialogGameControllers_coords53</include>
+						<onleft>9001</onleft>
+						<onright>3</onright>
+						<orientation>vertical</orientation>
+						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+						<visible>!Skin.HasSetting(Scrollbars) + String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+					</control>
+
+					<!-- Kodi fills the list once the status clears, and says why while it is empty -->
+					<control type="label">
+						<include>DialogGameControllers_coords54</include>
+						<align>center</align>
+						<font>Font33</font>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<label>$INFO[Window.Property(Leaderboards.Status)]</label>
+						<visible>!String.IsEmpty(Window.Property(Leaderboards.Status))</visible>
+					</control>
+
+					<!-- Explanation -->
+					<control type="fadelabel">
+						<include>DialogVideoInfo_coords2</include>
+						<font>Font27</font>
+						<scrollspeed>44</scrollspeed>
+						<align>center</align>
+						<label>$INFO[Container(3).ListItem.Property(Date),$LOCALIZE[552]: ,]</label>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<include>VisibleFadeAnimation</include>
+					</control>
+
+					<!-- Buttons -->
+					<control type="grouplist" id="9001">
+						<include>DialogButtons</include>
+						<itemgap>30</itemgap>
+						<onup>3</onup>
+						<orientation>horizontal</orientation>
+						<align>center</align>
+						<defaultcontrol always="true">0</defaultcontrol>
+
+						<!-- Close -->
+						<control type="button" id="108338">
+							<width>Auto</width>
+							<label>$LOCALIZE[15067]</label>
+							<onclick>Close</onclick>
+						</control>
+					</control>
+
+					<!-- Button indicator -->
+					<include content="dialogButtonIndicator">
+						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+					</include>
+				</control>
+			</control>
+
+			<include>MaskingBars</include>
+		</controls>
+	</include>
+
+	<!-- Cheats: the setting select dialog's 58 px rows, which Kodi builds from the two templates below, the
+	     game's art in the image slot, the cheat file on the heading's second line (green when it matches the
+	     game) and the count enabled on the line above the buttons. Kodi focuses the first row itself -->
+	<include name="DialogGameControllers_Cheats">
+		<controls>
+			<control type="group">
+				<include>DialogDepth</include>
+				<visible>Window.IsVisible(gamecheats) + !Window.IsVisible(sliderdialog)</visible>
+
+				<!-- Dialog fanart -->
+				<include>DialogBackgroundImage</include>
+
+				<control type="group">
+					<include>DialogDepth</include>
+					<include>DialogZoomAnimation</include>
+					<include content="Time">
+						<param name="heading">$LOCALIZE[35320]</param>
+					</include>
+
+					<!-- Labels Kodi writes: heading, cheat file and pack, read by the heading's second line -->
+					<control type="label" id="1083900">
+						<font></font>
+					</control>
+					<control type="label" id="1083898">
+						<font></font>
+					</control>
+					<control type="label" id="1083899">
+						<font></font>
+					</control>
+
+					<!-- Image -->
+					<control type="image">
+						<include>DialogGameControllers_coords55</include>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture diffuse="common/masks/art-405x600.png" fallback="DefaultAddonGame.png">$INFO[Player.Art(thumb)]</texture>
+					</control>
+
+					<!-- Cheats -->
+					<control type="grouplist" id="1083901">
+						<include>DialogGameControllers_coords56</include>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						<pagecontrol>1083906</pagecontrol>
+						<onleft>1083906</onleft>
+						<onright>9001</onright>
+						<scrolltime tween="sine" easing="out">240</scrolltime>
+					</control>
+
+					<!-- Row templates, hidden by Kodi -->
+					<control type="radiobutton" id="1083904">
+						<include>DialogGameControllers_coords57</include>
+						<font>Font36-light</font>
+						<aligny>top</aligny>
+						<textoffsety>7</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus58.png</texturefocus>
+					</control>
+					<control type="button" id="1083903">
+						<include>DialogGameControllers_coords58</include>
+						<font>Font36-light</font>
+						<aligny>top</aligny>
+						<textoffsety>7</textoffsety>
+						<texturefocus border="2,0,0,0" colordiffuse="$VAR[buttonfocus]">common/focus58.png</texturefocus>
+					</control>
+
+					<!-- Scrollbar -->
+					<control type="scrollbar" id="1083906">
+						<include>DialogGameControllers_coords59</include>
+						<onleft>9001</onleft>
+						<onright>1083901</onright>
+						<orientation>vertical</orientation>
+						<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+						<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+						<texturesliderbarfocus border="0,5,0,5" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+						<visible>!Skin.HasSetting(Scrollbars)</visible>
+					</control>
+
+					<!-- How many are enabled, or why there are none -->
+					<control type="label" id="1083902">
+						<include>DialogVideoInfo_coords2</include>
+						<font>Font27</font>
+						<align>center</align>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+					</control>
+
+					<!-- Buttons, labelled by Kodi -->
+					<control type="grouplist" id="9001">
+						<include>DialogButtons</include>
+						<itemgap>30</itemgap>
+						<onup>1083901</onup>
+						<orientation>horizontal</orientation>
+						<align>center</align>
+
+						<!-- Cheat pack, when more than one matches -->
+						<control type="button" id="1083907">
+							<width>Auto</width>
+							<label>$LOCALIZE[35324]</label>
+						</control>
+
+						<!-- Close -->
+						<control type="button" id="1083905">
+							<width>Auto</width>
+							<label>$LOCALIZE[15067]</label>
+						</control>
+					</control>
+
+					<!-- Button indicator -->
+					<include content="dialogButtonIndicator">
+						<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+					</include>
+				</control>
+			</control>
+
+			<include>MaskingBars</include>
+		</controls>
+	</include>
+
+	<!-- Indicators over a running game: notifications in the same corner, one panel per indicator, stacked
+	     with the notification's gap and moving down under a notification. Kodi opens and closes the dialog,
+	     and it never takes input, so nothing in it can be focused -->
+	<include name="DialogGameControllers_Indicators">
+		<include>CornerWindowAnimation</include>
+		<controls>
+			<control type="group">
+				<include>NotificationDepth</include>
+				<include>DialogGameControllers_coords60</include>
+				<include>CornerWindowLiftAboveNotification</include>
+				<visible>Window.IsVisible(gameindicators)</visible>
+
+				<control type="grouplist">
+					<include>DialogGameControllers_coords61</include>
+					<itemgap>10</itemgap>
+					<orientation>vertical</orientation>
+
+						<control type="group">
+							<include>DialogGameControllers_coords62</include>
+							<visible>!String.IsEmpty(RetroPlayer.AchievementsChallengeTitle)</visible>
+							<control type="image">
+								<include>DialogGameControllers_coords62</include>
+								<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+							</control>
+							<control type="image">
+								<include>DialogGameControllers_coords63</include>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$INFO[RetroPlayer.AchievementsChallengeBadge]</texture>
+							</control>
+							<control type="label">
+								<include>DialogGameControllers_coords64</include>
+								<scroll>True</scroll>
+								<scrollspeed>44</scrollspeed>
+								<font>Font27</font>
+								<label>$INFO[RetroPlayer.AchievementsChallengeTitle]</label>
+							</control>
+							<control type="fadelabel">
+								<include>DialogGameControllers_coords65</include>
+								<aligny>top</aligny>
+								<font>Font27-light</font>
+								<scrollspeed>44</scrollspeed>
+								<label>$LOCALIZE[35364]</label>
+							</control>
+						</control>
+
+						<control type="group">
+							<include>DialogGameControllers_coords66</include>
+							<visible>!String.IsEmpty(RetroPlayer.AchievementsIndicatorTitle)</visible>
+							<control type="image">
+								<include>DialogGameControllers_coords66</include>
+								<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+							</control>
+							<control type="image">
+								<include>DialogGameControllers_coords63</include>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$INFO[RetroPlayer.AchievementsIndicatorBadge]</texture>
+							</control>
+							<control type="label">
+								<include>DialogGameControllers_coords64</include>
+								<scroll>True</scroll>
+								<scrollspeed>44</scrollspeed>
+								<font>Font27</font>
+								<label>$INFO[RetroPlayer.AchievementsIndicatorTitle]</label>
+							</control>
+							<control type="fadelabel">
+								<include>DialogGameControllers_coords65</include>
+								<aligny>top</aligny>
+								<font>Font27-light</font>
+								<scrollspeed>44</scrollspeed>
+								<label>$INFO[RetroPlayer.AchievementsIndicatorProgress]</label>
+							</control>
+							<!-- Kodi gives the percentage only as text, which a progress control cannot read: a one-item
+							     list carries it as a property, which it can -->
+							<control type="list">
+								<include>DialogGameControllers_coords67</include>
+								<orientation>horizontal</orientation>
+								<enable>false</enable>
+								<include>DialogGameControllers_coords68</include>
+								<content>
+									<item>
+										<label>-</label>
+										<property name="Percent">$INFO[RetroPlayer.AchievementsIndicatorPercent]</property>
+										<onclick>noop</onclick>
+									</item>
+								</content>
+							</control>
+						</control>
+
+						<control type="group">
+							<include>DialogGameControllers_coords69</include>
+							<visible>!String.IsEmpty(RetroPlayer.LeaderboardTracker)</visible>
+							<control type="image">
+								<include>DialogGameControllers_coords69</include>
+								<texture border="8" colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDPanel]</texture>
+							</control>
+							<control type="label">
+								<include>DialogGameControllers_coords70</include>
+								<font>Font27</font>
+								<label>$LOCALIZE[35331]</label>
+							</control>
+							<control type="label">
+								<include>DialogGameControllers_coords71</include>
+								<align>right</align>
+								<font>Font27</font>
+								<label>$INFO[RetroPlayer.LeaderboardTracker]</label>
+							</control>
+						</control>
+				</control>
+			</control>
+		</controls>
+	</include>
 </includes>

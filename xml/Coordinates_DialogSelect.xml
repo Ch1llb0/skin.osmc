@@ -69,6 +69,37 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords3_4:3</include>
 	</include>
 	<include name="DialogSelect_coords3_16:9">
+		<left>750</left>
+		<top>245</top>
+		<width>1020</width>
+		<height>580</height>
+	</include>
+	<include name="DialogSelect_coords3_21:9">
+		<left>750</left>
+		<top>245</top>
+		<width>1660</width>
+		<height>580</height>
+	</include>
+	<include name="DialogSelect_coords3_21:9_masked">
+		<left>750</left>
+		<top>425</top>
+		<width>1660</width>
+		<height>580</height>
+	</include>
+	<include name="DialogSelect_coords3_4:3">
+		<left>750</left>
+		<top>245</top>
+		<width>540</width>
+		<height>580</height>
+	</include>
+
+	<include name="DialogSelect_coords4">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords4_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords4_4:3</include>
+	</include>
+	<include name="DialogSelect_coords4_16:9">
 		<itemlayout width="1020" height="58">
 			<control type="label">
 				<top>7</top>
@@ -81,7 +112,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords3_21:9">
+	<include name="DialogSelect_coords4_21:9">
 		<itemlayout width="1660" height="58">
 			<control type="label">
 				<top>7</top>
@@ -94,7 +125,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords3_21:9_masked">
+	<include name="DialogSelect_coords4_21:9_masked">
 		<itemlayout width="1660" height="58">
 			<control type="label">
 				<top>7</top>
@@ -107,7 +138,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords3_4:3">
+	<include name="DialogSelect_coords4_4:3">
 		<itemlayout width="540" height="58">
 			<control type="label">
 				<top>7</top>
@@ -121,13 +152,13 @@
 		</itemlayout>
 	</include>
 
-	<include name="DialogSelect_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords4_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords4_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords4_4:3</include>
+	<include name="DialogSelect_coords5">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords5_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords5_4:3</include>
 	</include>
-	<include name="DialogSelect_coords4_16:9">
+	<include name="DialogSelect_coords5_16:9">
 		<focusedlayout width="1020" height="58">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -153,7 +184,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords4_21:9">
+	<include name="DialogSelect_coords5_21:9">
 		<focusedlayout width="1660" height="58">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -179,7 +210,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords4_21:9_masked">
+	<include name="DialogSelect_coords5_21:9_masked">
 		<focusedlayout width="1660" height="58">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -205,7 +236,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords4_4:3">
+	<include name="DialogSelect_coords5_4:3">
 		<focusedlayout width="540" height="58">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -232,37 +263,6 @@
 		</focusedlayout>
 	</include>
 
-	<include name="DialogSelect_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords5_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords5_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords5_4:3</include>
-	</include>
-	<include name="DialogSelect_coords5_16:9">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1020</width>
-		<height>672</height>
-	</include>
-	<include name="DialogSelect_coords5_21:9">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1660</width>
-		<height>672</height>
-	</include>
-	<include name="DialogSelect_coords5_21:9_masked">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>1660</width>
-		<height>672</height>
-	</include>
-	<include name="DialogSelect_coords5_4:3">
-		<left>750</left>
-		<centertop>50%</centertop>
-		<width>540</width>
-		<height>672</height>
-	</include>
-
 	<include name="DialogSelect_coords6">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords6_21:9</include>
@@ -270,6 +270,37 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords6_4:3</include>
 	</include>
 	<include name="DialogSelect_coords6_16:9">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1020</width>
+		<height>672</height>
+	</include>
+	<include name="DialogSelect_coords6_21:9">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1660</width>
+		<height>672</height>
+	</include>
+	<include name="DialogSelect_coords6_21:9_masked">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>1660</width>
+		<height>672</height>
+	</include>
+	<include name="DialogSelect_coords6_4:3">
+		<left>750</left>
+		<centertop>50%</centertop>
+		<width>540</width>
+		<height>672</height>
+	</include>
+
+	<include name="DialogSelect_coords7">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords7_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords7_4:3</include>
+	</include>
+	<include name="DialogSelect_coords7_16:9">
 		<itemlayout width="1020" height="96">
 			<control type="image">
 				<width>96</width>
@@ -311,7 +342,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords6_21:9">
+	<include name="DialogSelect_coords7_21:9">
 		<itemlayout width="1660" height="96">
 			<control type="image">
 				<width>96</width>
@@ -353,7 +384,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords6_21:9_masked">
+	<include name="DialogSelect_coords7_21:9_masked">
 		<itemlayout width="1660" height="96">
 			<control type="image">
 				<width>96</width>
@@ -395,7 +426,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords6_4:3">
+	<include name="DialogSelect_coords7_4:3">
 		<itemlayout width="540" height="96">
 			<control type="image">
 				<width>96</width>
@@ -438,13 +469,13 @@
 		</itemlayout>
 	</include>
 
-	<include name="DialogSelect_coords7">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords7_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords7_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords7_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords7_4:3</include>
+	<include name="DialogSelect_coords8">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords8_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords8_4:3</include>
 	</include>
-	<include name="DialogSelect_coords7_16:9">
+	<include name="DialogSelect_coords8_16:9">
 		<focusedlayout width="1020" height="96">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -512,7 +543,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords7_21:9">
+	<include name="DialogSelect_coords8_21:9">
 		<focusedlayout width="1660" height="96">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -580,7 +611,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords7_21:9_masked">
+	<include name="DialogSelect_coords8_21:9_masked">
 		<focusedlayout width="1660" height="96">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -648,7 +679,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords7_4:3">
+	<include name="DialogSelect_coords8_4:3">
 		<focusedlayout width="540" height="96">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -717,37 +748,6 @@
 		</focusedlayout>
 	</include>
 
-	<include name="DialogSelect_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords8_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords8_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords8_4:3</include>
-	</include>
-	<include name="DialogSelect_coords8_16:9">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>652</height>
-	</include>
-	<include name="DialogSelect_coords8_21:9">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>652</height>
-	</include>
-	<include name="DialogSelect_coords8_21:9_masked">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>652</height>
-	</include>
-	<include name="DialogSelect_coords8_4:3">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>652</height>
-	</include>
-
 	<include name="DialogSelect_coords9">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords9_21:9</include>
@@ -755,28 +755,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords9_4:3</include>
 	</include>
 	<include name="DialogSelect_coords9_16:9">
-		<left>20</left>
-		<top>660</top>
-		<width>1880</width>
-		<height>400</height>
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
 	</include>
 	<include name="DialogSelect_coords9_21:9">
-		<left>20</left>
-		<top>660</top>
-		<width>2520</width>
-		<height>400</height>
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
 	</include>
 	<include name="DialogSelect_coords9_21:9_masked">
-		<left>20</left>
-		<top>840</top>
-		<width>2520</width>
-		<height>400</height>
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
 	</include>
 	<include name="DialogSelect_coords9_4:3">
-		<left>20</left>
-		<top>660</top>
-		<width>1400</width>
-		<height>400</height>
+		<left>690</left>
+		<centertop>50%</centertop>
+		<width>20</width>
+		<height>652</height>
 	</include>
 
 	<include name="DialogSelect_coords10">
@@ -786,28 +786,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords10_4:3</include>
 	</include>
 	<include name="DialogSelect_coords10_16:9">
-		<left>0</left>
-		<top>690</top>
-		<width>1920</width>
-		<height>33</height>
+		<left>690</left>
+		<top>267</top>
+		<width>20</width>
+		<height>536</height>
 	</include>
 	<include name="DialogSelect_coords10_21:9">
-		<left>0</left>
-		<top>690</top>
-		<width>2560</width>
-		<height>33</height>
+		<left>690</left>
+		<top>267</top>
+		<width>20</width>
+		<height>536</height>
 	</include>
 	<include name="DialogSelect_coords10_21:9_masked">
-		<left>0</left>
-		<top>870</top>
-		<width>2560</width>
-		<height>33</height>
+		<left>690</left>
+		<top>447</top>
+		<width>20</width>
+		<height>536</height>
 	</include>
 	<include name="DialogSelect_coords10_4:3">
-		<left>0</left>
-		<top>690</top>
-		<width>1440</width>
-		<height>33</height>
+		<left>690</left>
+		<top>267</top>
+		<width>20</width>
+		<height>536</height>
 	</include>
 
 	<include name="DialogSelect_coords11">
@@ -817,28 +817,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords11_4:3</include>
 	</include>
 	<include name="DialogSelect_coords11_16:9">
-		<left>80</left>
-		<top>750</top>
-		<width>1800</width>
-		<height>250</height>
+		<left>20</left>
+		<top>660</top>
+		<width>1880</width>
+		<height>400</height>
 	</include>
 	<include name="DialogSelect_coords11_21:9">
-		<left>80</left>
-		<top>750</top>
-		<width>2440</width>
-		<height>250</height>
+		<left>20</left>
+		<top>660</top>
+		<width>2520</width>
+		<height>400</height>
 	</include>
 	<include name="DialogSelect_coords11_21:9_masked">
-		<left>80</left>
-		<top>930</top>
-		<width>2440</width>
-		<height>250</height>
+		<left>20</left>
+		<top>840</top>
+		<width>2520</width>
+		<height>400</height>
 	</include>
 	<include name="DialogSelect_coords11_4:3">
-		<left>80</left>
-		<top>750</top>
-		<width>1320</width>
-		<height>250</height>
+		<left>20</left>
+		<top>660</top>
+		<width>1400</width>
+		<height>400</height>
 	</include>
 
 	<include name="DialogSelect_coords12">
@@ -848,6 +848,68 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords12_4:3</include>
 	</include>
 	<include name="DialogSelect_coords12_16:9">
+		<left>0</left>
+		<top>690</top>
+		<width>1920</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords12_21:9">
+		<left>0</left>
+		<top>690</top>
+		<width>2560</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords12_21:9_masked">
+		<left>0</left>
+		<top>870</top>
+		<width>2560</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords12_4:3">
+		<left>0</left>
+		<top>690</top>
+		<width>1440</width>
+		<height>33</height>
+	</include>
+
+	<include name="DialogSelect_coords13">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords13_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords13_4:3</include>
+	</include>
+	<include name="DialogSelect_coords13_16:9">
+		<left>80</left>
+		<top>750</top>
+		<width>1800</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords13_21:9">
+		<left>80</left>
+		<top>750</top>
+		<width>2440</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords13_21:9_masked">
+		<left>80</left>
+		<top>930</top>
+		<width>2440</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords13_4:3">
+		<left>80</left>
+		<top>750</top>
+		<width>1320</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogSelect_coords14">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords14_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords14_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords14_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords14_4:3</include>
+	</include>
+	<include name="DialogSelect_coords14_16:9">
 		<itemlayout width="450" height="250">
 			<control type="gamewindow">
 				<left>47</left>
@@ -867,7 +929,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords12_21:9">
+	<include name="DialogSelect_coords14_21:9">
 		<itemlayout width="488" height="250">
 			<control type="gamewindow">
 				<left>66</left>
@@ -887,7 +949,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords12_21:9_masked">
+	<include name="DialogSelect_coords14_21:9_masked">
 		<itemlayout width="488" height="250">
 			<control type="gamewindow">
 				<left>66</left>
@@ -907,7 +969,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords12_4:3">
+	<include name="DialogSelect_coords14_4:3">
 		<itemlayout width="440" height="250">
 			<control type="gamewindow">
 				<left>42</left>
@@ -928,13 +990,13 @@
 		</itemlayout>
 	</include>
 
-	<include name="DialogSelect_coords13">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords13_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords13_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords13_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords13_4:3</include>
+	<include name="DialogSelect_coords15">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords15_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords15_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords15_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords15_4:3</include>
 	</include>
-	<include name="DialogSelect_coords13_16:9">
+	<include name="DialogSelect_coords15_16:9">
 		<focusedlayout width="450" height="250">
 			<control type="gamewindow">
 				<left>47</left>
@@ -969,7 +1031,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords13_21:9">
+	<include name="DialogSelect_coords15_21:9">
 		<focusedlayout width="488" height="250">
 			<control type="gamewindow">
 				<left>66</left>
@@ -1004,7 +1066,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords13_21:9_masked">
+	<include name="DialogSelect_coords15_21:9_masked">
 		<focusedlayout width="488" height="250">
 			<control type="gamewindow">
 				<left>66</left>
@@ -1039,7 +1101,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords13_4:3">
+	<include name="DialogSelect_coords15_4:3">
 		<focusedlayout width="440" height="250">
 			<control type="gamewindow">
 				<left>42</left>
@@ -1075,44 +1137,44 @@
 		</focusedlayout>
 	</include>
 
-	<include name="DialogSelect_coords14">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords14_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords14_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords14_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords14_4:3</include>
+	<include name="DialogSelect_coords16">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords16_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords16_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords16_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords16_4:3</include>
 	</include>
-	<include name="DialogSelect_coords14_16:9">
+	<include name="DialogSelect_coords16_16:9">
 		<top>1000</top>
 		<left>80</left>
 		<right>80</right>
 		<height>60</height>
 	</include>
-	<include name="DialogSelect_coords14_21:9">
+	<include name="DialogSelect_coords16_21:9">
 		<top>1000</top>
 		<left>80</left>
 		<right>80</right>
 		<height>60</height>
 	</include>
-	<include name="DialogSelect_coords14_21:9_masked">
+	<include name="DialogSelect_coords16_21:9_masked">
 		<top>1180</top>
 		<left>80</left>
 		<right>80</right>
 		<height>60</height>
 	</include>
-	<include name="DialogSelect_coords14_4:3">
+	<include name="DialogSelect_coords16_4:3">
 		<top>1000</top>
 		<left>80</left>
 		<right>80</right>
 		<height>60</height>
 	</include>
 
-	<include name="DialogSelect_coords15">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords15_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords15_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords15_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords15_4:3</include>
+	<include name="DialogSelect_coords17">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords17_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords17_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords17_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords17_4:3</include>
 	</include>
-	<include name="DialogSelect_coords15_16:9">
+	<include name="DialogSelect_coords17_16:9">
 		<left>150</left>
 		<top>495</top>
 		<width>1620</width>
@@ -1175,7 +1237,7 @@
 			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
 		</control>
 	</include>
-	<include name="DialogSelect_coords15_21:9">
+	<include name="DialogSelect_coords17_21:9">
 		<left>150</left>
 		<top>495</top>
 		<width>2260</width>
@@ -1238,7 +1300,7 @@
 			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
 		</control>
 	</include>
-	<include name="DialogSelect_coords15_21:9_masked">
+	<include name="DialogSelect_coords17_21:9_masked">
 		<left>150</left>
 		<top>675</top>
 		<width>2260</width>
@@ -1301,7 +1363,7 @@
 			<visible>Integer.IsGreaterOrEqual(Container(3).NumItems,5)</visible>
 		</control>
 	</include>
-	<include name="DialogSelect_coords15_4:3">
+	<include name="DialogSelect_coords17_4:3">
 		<left>150</left>
 		<top>495</top>
 		<width>1140</width>
@@ -1365,68 +1427,6 @@
 		</control>
 	</include>
 
-	<include name="DialogSelect_coords16">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords16_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords16_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords16_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords16_4:3</include>
-	</include>
-	<include name="DialogSelect_coords16_16:9">
-		<left>50</left>
-		<top>30</top>
-		<width>1520</width>
-		<height>33</height>
-	</include>
-	<include name="DialogSelect_coords16_21:9">
-		<left>50</left>
-		<top>30</top>
-		<width>2160</width>
-		<height>33</height>
-	</include>
-	<include name="DialogSelect_coords16_21:9_masked">
-		<left>50</left>
-		<top>30</top>
-		<width>2160</width>
-		<height>33</height>
-	</include>
-	<include name="DialogSelect_coords16_4:3">
-		<left>50</left>
-		<top>30</top>
-		<width>1040</width>
-		<height>33</height>
-	</include>
-
-	<include name="DialogSelect_coords17">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords17_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords17_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords17_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords17_4:3</include>
-	</include>
-	<include name="DialogSelect_coords17_16:9">
-		<left>50</left>
-		<top>90</top>
-		<width>1520</width>
-		<height>250</height>
-	</include>
-	<include name="DialogSelect_coords17_21:9">
-		<left>50</left>
-		<top>90</top>
-		<width>2160</width>
-		<height>250</height>
-	</include>
-	<include name="DialogSelect_coords17_21:9_masked">
-		<left>50</left>
-		<top>90</top>
-		<width>2160</width>
-		<height>250</height>
-	</include>
-	<include name="DialogSelect_coords17_4:3">
-		<left>50</left>
-		<top>90</top>
-		<width>1040</width>
-		<height>250</height>
-	</include>
-
 	<include name="DialogSelect_coords18">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords18_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords18_21:9</include>
@@ -1434,6 +1434,68 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords18_4:3</include>
 	</include>
 	<include name="DialogSelect_coords18_16:9">
+		<left>50</left>
+		<top>30</top>
+		<width>1520</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords18_21:9">
+		<left>50</left>
+		<top>30</top>
+		<width>2160</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords18_21:9_masked">
+		<left>50</left>
+		<top>30</top>
+		<width>2160</width>
+		<height>33</height>
+	</include>
+	<include name="DialogSelect_coords18_4:3">
+		<left>50</left>
+		<top>30</top>
+		<width>1040</width>
+		<height>33</height>
+	</include>
+
+	<include name="DialogSelect_coords19">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords19_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords19_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords19_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords19_4:3</include>
+	</include>
+	<include name="DialogSelect_coords19_16:9">
+		<left>50</left>
+		<top>90</top>
+		<width>1520</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords19_21:9">
+		<left>50</left>
+		<top>90</top>
+		<width>2160</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords19_21:9_masked">
+		<left>50</left>
+		<top>90</top>
+		<width>2160</width>
+		<height>250</height>
+	</include>
+	<include name="DialogSelect_coords19_4:3">
+		<left>50</left>
+		<top>90</top>
+		<width>1040</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogSelect_coords20">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords20_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords20_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords20_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords20_4:3</include>
+	</include>
+	<include name="DialogSelect_coords20_16:9">
 		<itemlayout width="1520" height="50">
 			<control type="label">
 				<left>0</left>
@@ -1520,7 +1582,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords18_21:9">
+	<include name="DialogSelect_coords20_21:9">
 		<itemlayout width="2160" height="50">
 			<control type="label">
 				<left>0</left>
@@ -1607,7 +1669,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords18_21:9_masked">
+	<include name="DialogSelect_coords20_21:9_masked">
 		<itemlayout width="2160" height="50">
 			<control type="label">
 				<left>0</left>
@@ -1694,7 +1756,7 @@
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogSelect_coords18_4:3">
+	<include name="DialogSelect_coords20_4:3">
 		<itemlayout width="1040" height="50">
 			<control type="label">
 				<left>0</left>
@@ -1782,13 +1844,13 @@
 		</itemlayout>
 	</include>
 
-	<include name="DialogSelect_coords19">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords19_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords19_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords19_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords19_4:3</include>
+	<include name="DialogSelect_coords21">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords21_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords21_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords21_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords21_4:3</include>
 	</include>
-	<include name="DialogSelect_coords19_16:9">
+	<include name="DialogSelect_coords21_16:9">
 		<focusedlayout width="1520" height="50">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -1904,7 +1966,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords19_21:9">
+	<include name="DialogSelect_coords21_21:9">
 		<focusedlayout width="2160" height="50">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -2020,7 +2082,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords19_21:9_masked">
+	<include name="DialogSelect_coords21_21:9_masked">
 		<focusedlayout width="2160" height="50">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -2136,7 +2198,7 @@
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogSelect_coords19_4:3">
+	<include name="DialogSelect_coords21_4:3">
 		<focusedlayout width="1040" height="50">
 			<control type="group">
 				<include content="NonFocusDialogFadeAnimation">
@@ -2253,68 +2315,6 @@
 		</focusedlayout>
 	</include>
 
-	<include name="DialogSelect_coords20">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords20_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords20_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords20_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords20_4:3</include>
-	</include>
-	<include name="DialogSelect_coords20_16:9">
-		<left>50</left>
-		<top>90</top>
-		<width>20</width>
-		<height>250</height>
-	</include>
-	<include name="DialogSelect_coords20_21:9">
-		<left>50</left>
-		<top>90</top>
-		<width>20</width>
-		<height>250</height>
-	</include>
-	<include name="DialogSelect_coords20_21:9_masked">
-		<left>50</left>
-		<top>90</top>
-		<width>20</width>
-		<height>250</height>
-	</include>
-	<include name="DialogSelect_coords20_4:3">
-		<left>50</left>
-		<top>90</top>
-		<width>20</width>
-		<height>250</height>
-	</include>
-
-	<include name="DialogSelect_coords21">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords21_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords21_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords21_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords21_4:3</include>
-	</include>
-	<include name="DialogSelect_coords21_16:9">
-		<left>150</left>
-		<top>945</top>
-		<width>1620</width>
-		<height>60</height>
-	</include>
-	<include name="DialogSelect_coords21_21:9">
-		<left>150</left>
-		<top>945</top>
-		<width>2260</width>
-		<height>60</height>
-	</include>
-	<include name="DialogSelect_coords21_21:9_masked">
-		<left>150</left>
-		<top>1125</top>
-		<width>2260</width>
-		<height>60</height>
-	</include>
-	<include name="DialogSelect_coords21_4:3">
-		<left>150</left>
-		<top>945</top>
-		<width>1140</width>
-		<height>60</height>
-	</include>
-
 	<include name="DialogSelect_coords22">
 		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords22_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords22_21:9</include>
@@ -2322,20 +2322,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords22_4:3</include>
 	</include>
 	<include name="DialogSelect_coords22_16:9">
-		<width>1620</width>
-		<height>60</height>
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
 	</include>
 	<include name="DialogSelect_coords22_21:9">
-		<width>2260</width>
-		<height>60</height>
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
 	</include>
 	<include name="DialogSelect_coords22_21:9_masked">
-		<width>2260</width>
-		<height>60</height>
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
 	</include>
 	<include name="DialogSelect_coords22_4:3">
-		<width>1140</width>
-		<height>60</height>
+		<left>50</left>
+		<top>90</top>
+		<width>20</width>
+		<height>250</height>
 	</include>
 
 	<include name="DialogSelect_coords23">
@@ -2345,28 +2353,28 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords23_4:3</include>
 	</include>
 	<include name="DialogSelect_coords23_16:9">
-		<left>20</left>
-		<top>-6</top>
-		<width>1580</width>
-		<height>66</height>
+		<left>150</left>
+		<top>945</top>
+		<width>1620</width>
+		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords23_21:9">
-		<left>20</left>
-		<top>-6</top>
-		<width>2220</width>
-		<height>66</height>
+		<left>150</left>
+		<top>945</top>
+		<width>2260</width>
+		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords23_21:9_masked">
-		<left>20</left>
-		<top>-6</top>
-		<width>2220</width>
-		<height>66</height>
+		<left>150</left>
+		<top>1125</top>
+		<width>2260</width>
+		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords23_4:3">
-		<left>20</left>
-		<top>-6</top>
-		<width>1100</width>
-		<height>66</height>
+		<left>150</left>
+		<top>945</top>
+		<width>1140</width>
+		<height>60</height>
 	</include>
 
 	<include name="DialogSelect_coords24">
@@ -2376,15 +2384,69 @@
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords24_4:3</include>
 	</include>
 	<include name="DialogSelect_coords24_16:9">
-		<width>385</width>
+		<width>1620</width>
+		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords24_21:9">
-		<width>545</width>
+		<width>2260</width>
+		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords24_21:9_masked">
-		<width>545</width>
+		<width>2260</width>
+		<height>60</height>
 	</include>
 	<include name="DialogSelect_coords24_4:3">
+		<width>1140</width>
+		<height>60</height>
+	</include>
+
+	<include name="DialogSelect_coords25">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords25_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords25_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords25_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords25_4:3</include>
+	</include>
+	<include name="DialogSelect_coords25_16:9">
+		<left>20</left>
+		<top>-6</top>
+		<width>1580</width>
+		<height>66</height>
+	</include>
+	<include name="DialogSelect_coords25_21:9">
+		<left>20</left>
+		<top>-6</top>
+		<width>2220</width>
+		<height>66</height>
+	</include>
+	<include name="DialogSelect_coords25_21:9_masked">
+		<left>20</left>
+		<top>-6</top>
+		<width>2220</width>
+		<height>66</height>
+	</include>
+	<include name="DialogSelect_coords25_4:3">
+		<left>20</left>
+		<top>-6</top>
+		<width>1100</width>
+		<height>66</height>
+	</include>
+
+	<include name="DialogSelect_coords26">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogSelect_coords26_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogSelect_coords26_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogSelect_coords26_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogSelect_coords26_4:3</include>
+	</include>
+	<include name="DialogSelect_coords26_16:9">
+		<width>385</width>
+	</include>
+	<include name="DialogSelect_coords26_21:9">
+		<width>545</width>
+	</include>
+	<include name="DialogSelect_coords26_21:9_masked">
+		<width>545</width>
+	</include>
+	<include name="DialogSelect_coords26_4:3">
 		<width>265</width>
 	</include>
 </includes>

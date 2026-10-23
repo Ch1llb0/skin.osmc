@@ -290,6 +290,10 @@
 
 	<variable name="HeadingLabelSecondary">
 		<value condition="Window.IsVisible(busydialog)"></value>
+		<value condition="Window.IsActive(gameleaderboardentries)">$INFO[Window.Property(Leaderboards.Description)]$INFO[Window.Property(Leaderboards.PlayerBest), &#8226; $LOCALIZE[35374]: ,]</value>
+		<value condition="Window.IsActive(gamecheats) + String.IsEqual(Window(gamecheats).Property(GameCheats.HasMatch),true)">[COLOR CheatsMatch]$INFO[Control.GetLabel(1083898)][/COLOR]$INFO[Control.GetLabel(1083899), &#8226; ,]</value>
+		<value condition="Window.IsActive(gamecheats)">$INFO[Control.GetLabel(1083898)]$INFO[Control.GetLabel(1083899), &#8226; ,]</value>
+		<value condition="Window.IsActive(gameleaderboards)">$INFO[Window.Property(Leaderboards.GameTitle)]</value>
 		<value condition="[String.StartsWith(Container.FolderPath,library://video/movies) + String.EndsWith(Container.FolderPath,library://video/movies/)] | [String.StartsWith(Container.FolderPath,videodb://movies/titles/) + String.EndsWith(Container.FolderPath,videodb://movies/titles/)]"></value>
 		<value condition="[Container.Content(movies) | [String.StartsWith(Container.FolderPath,videodb://movies/) + !String.EndsWith(Container.FolderPath,videodb://movies/)] | [String.StartsWith(Container.FolderPath,library://video/movies) + !String.EndsWith(Container.FolderPath,library://video/movies/)]] + !String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[Container.FolderName]</value>
 		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,videodb://movies/videoversions/)">$INFO[Container.FolderName] ($LOCALIZE[24069])</value>
@@ -638,6 +642,8 @@
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year, &#8226; ,]$VAR[LabelUserRating]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion,$LOCALIZE[19114]: ,]$INFO[ListItem.Label2, &#8226; ,]</value>
 		<value condition="Container.Content(images) + !String.IsEmpty(ListItem.PictureDatetime)">$INFO[ListItem.PictureDatetime,$LOCALIZE[21820]: ,]</value>
+		<value condition="Container.Content(games) + !String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]$INFO[ListItem.Genre(comma), &#8226; ,]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(games) + String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre(comma)]$VAR[LabelUserRating]</value>
 		<value condition="[Container.Content(files) | Container.Content(games) | Container.Content(images)] + !String.IsEmpty(ListItem.Date)">$INFO[ListItem.Date,$LOCALIZE[21820]: ,]</value>
 	</variable>
 
@@ -942,5 +948,46 @@
 	<variable name="keyboard-autocompletion">
 		<value condition="!System.HasAddon(plugin.program.autocompletion) | System.HasHiddenInput"></value>
 		<value>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=12</value>
+	</variable>
+
+	<!-- Game OSD heading: the game's title, then its platform and the emulator running it -->
+	<variable name="GameOSDHeading">
+		<value condition="!String.IsEmpty(RetroPlayer.Title)">$INFO[RetroPlayer.Title]</value>
+		<value>$LOCALIZE[35221]</value>
+	</variable>
+	<variable name="GameOSDPlatform">
+		<value condition="!String.IsEmpty(RetroPlayer.Platform) + !String.IsEmpty(RetroPlayer.GameClientName)">$INFO[RetroPlayer.Platform] &#8226; $INFO[RetroPlayer.GameClientName]</value>
+		<value>$INFO[RetroPlayer.Platform]$INFO[RetroPlayer.GameClientName]</value>
+	</variable>
+
+	<!-- An achievement's rarity, in the colour of its category; common ones stay in the row's colour -->
+	<variable name="GameAchievementRarity">
+		<value condition="String.IsEqual(ListItem.Property(achievement.raritycategory),$LOCALIZE[35291])">[COLOR RarityUncommon]$INFO[ListItem.Property(achievement.raritycategory)][/COLOR]</value>
+		<value condition="String.IsEqual(ListItem.Property(achievement.raritycategory),$LOCALIZE[35292])">[COLOR RarityRare]$INFO[ListItem.Property(achievement.raritycategory)][/COLOR]</value>
+		<value condition="String.IsEqual(ListItem.Property(achievement.raritycategory),$LOCALIZE[35293])">[COLOR RarityUltraRare]$INFO[ListItem.Property(achievement.raritycategory)][/COLOR]</value>
+		<value>$INFO[ListItem.Property(achievement.raritycategory)]</value>
+	</variable>
+
+	<!-- The achievements dialog explains its focused switch on the line above the buttons -->
+	<variable name="GameAchievementsHelp">
+		<value condition="Control.HasFocus(108340)">$LOCALIZE[35302]</value>
+		<value condition="Control.HasFocus(108331)">$LOCALIZE[35304]</value>
+		<value condition="Control.HasFocus(108332)">$LOCALIZE[35366]</value>
+	</variable>
+
+	<!-- Leaderboards: the focused board's standing of the reader, or why the boards only show -->
+	<variable name="GameLeaderboardStanding">
+		<value condition="!String.IsEmpty(Container(3).ListItem.Property(PlayerStanding))">$LOCALIZE[35377] $INFO[Container(3).ListItem.Property(PlayerStanding)]$INFO[Container(3).ListItem.Property(PlayerScore), &#8226; ,]$INFO[Container(3).ListItem.Property(TotalEntries), &#8226; ,]</value>
+		<value>$LOCALIZE[35332]</value>
+	</variable>
+
+	<!-- A leaderboard entry: the reader's own in the selected colour -->
+	<variable name="GameLeaderboardEntryColorNF">
+		<value condition="!String.IsEmpty(ListItem.Property(IsPlayer))">$VAR[SelectedColor]</value>
+		<value>$VAR[TextColorNF]</value>
+	</variable>
+	<variable name="GameLeaderboardEntryColorFO">
+		<value condition="!String.IsEmpty(ListItem.Property(IsPlayer))">$VAR[SelectedColor]</value>
+		<value>$VAR[TextColorFO]</value>
 	</variable>
 </includes>

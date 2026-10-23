@@ -1133,4 +1133,3613 @@
 			</control>
 		</focusedlayout>
 	</include>
+
+	<include name="DialogGameControllers_coords17">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords17_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords17_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords17_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords17_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords17_16:9">
+		<left>730</left>
+		<top>330</top>
+		<width>460</width>
+		<height>420</height>
+	</include>
+	<include name="DialogGameControllers_coords17_21:9">
+		<left>1050</left>
+		<top>330</top>
+		<width>460</width>
+		<height>420</height>
+	</include>
+	<include name="DialogGameControllers_coords17_21:9_masked">
+		<left>1050</left>
+		<top>510</top>
+		<width>460</width>
+		<height>420</height>
+	</include>
+	<include name="DialogGameControllers_coords17_4:3">
+		<left>490</left>
+		<top>330</top>
+		<width>460</width>
+		<height>420</height>
+	</include>
+
+	<include name="DialogGameControllers_coords18">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords18_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords18_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords18_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords18_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords18_16:9">
+		<width>460</width>
+		<height>420</height>
+	</include>
+	<include name="DialogGameControllers_coords18_21:9">
+		<width>460</width>
+		<height>420</height>
+	</include>
+	<include name="DialogGameControllers_coords18_21:9_masked">
+		<width>460</width>
+		<height>420</height>
+	</include>
+	<include name="DialogGameControllers_coords18_4:3">
+		<width>460</width>
+		<height>420</height>
+	</include>
+
+	<include name="DialogGameControllers_coords19">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords19_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords19_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords19_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords19_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords19_16:9">
+		<width>460</width>
+		<height>370</height>
+	</include>
+	<include name="DialogGameControllers_coords19_21:9">
+		<width>460</width>
+		<height>370</height>
+	</include>
+	<include name="DialogGameControllers_coords19_21:9_masked">
+		<width>460</width>
+		<height>370</height>
+	</include>
+	<include name="DialogGameControllers_coords19_4:3">
+		<width>460</width>
+		<height>370</height>
+	</include>
+
+	<include name="DialogGameControllers_coords20">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords20_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords20_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords20_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords20_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords20_16:9">
+		<width>460</width>
+		<height>320</height>
+	</include>
+	<include name="DialogGameControllers_coords20_21:9">
+		<width>460</width>
+		<height>320</height>
+	</include>
+	<include name="DialogGameControllers_coords20_21:9_masked">
+		<width>460</width>
+		<height>320</height>
+	</include>
+	<include name="DialogGameControllers_coords20_4:3">
+		<width>460</width>
+		<height>320</height>
+	</include>
+
+	<include name="DialogGameControllers_coords21">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords21_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords21_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords21_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords21_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords21_16:9">
+		<width>460</width>
+		<height>270</height>
+	</include>
+	<include name="DialogGameControllers_coords21_21:9">
+		<width>460</width>
+		<height>270</height>
+	</include>
+	<include name="DialogGameControllers_coords21_21:9_masked">
+		<width>460</width>
+		<height>270</height>
+	</include>
+	<include name="DialogGameControllers_coords21_4:3">
+		<width>460</width>
+		<height>270</height>
+	</include>
+
+	<include name="DialogGameControllers_coords22">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords22_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords22_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords22_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords22_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords22_16:9">
+		<width>460</width>
+		<height>220</height>
+	</include>
+	<include name="DialogGameControllers_coords22_21:9">
+		<width>460</width>
+		<height>220</height>
+	</include>
+	<include name="DialogGameControllers_coords22_21:9_masked">
+		<width>460</width>
+		<height>220</height>
+	</include>
+	<include name="DialogGameControllers_coords22_4:3">
+		<width>460</width>
+		<height>220</height>
+	</include>
+
+	<include name="DialogGameControllers_coords23">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords23_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords23_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords23_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords23_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords23_16:9">
+		<left>20</left>
+		<top>30</top>
+		<width>420</width>
+		<height>33</height>
+	</include>
+	<include name="DialogGameControllers_coords23_21:9">
+		<left>20</left>
+		<top>30</top>
+		<width>420</width>
+		<height>33</height>
+	</include>
+	<include name="DialogGameControllers_coords23_21:9_masked">
+		<left>20</left>
+		<top>30</top>
+		<width>420</width>
+		<height>33</height>
+	</include>
+	<include name="DialogGameControllers_coords23_4:3">
+		<left>20</left>
+		<top>30</top>
+		<width>420</width>
+		<height>33</height>
+	</include>
+
+	<include name="DialogGameControllers_coords24">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords24_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords24_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords24_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords24_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords24_16:9">
+		<left>20</left>
+		<top>70</top>
+		<width>420</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords24_21:9">
+		<left>20</left>
+		<top>70</top>
+		<width>420</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords24_21:9_masked">
+		<left>20</left>
+		<top>70</top>
+		<width>420</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords24_4:3">
+		<left>20</left>
+		<top>70</top>
+		<width>420</width>
+		<height>31</height>
+	</include>
+
+	<include name="DialogGameControllers_coords25">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords25_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords25_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords25_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords25_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords25_16:9">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords25_21:9">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords25_21:9_masked">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords25_4:3">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogGameControllers_coords26">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords26_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords26_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords26_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords26_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords26_16:9">
+		<width>420</width>
+		<height>50</height>
+	</include>
+	<include name="DialogGameControllers_coords26_21:9">
+		<width>420</width>
+		<height>50</height>
+	</include>
+	<include name="DialogGameControllers_coords26_21:9_masked">
+		<width>420</width>
+		<height>50</height>
+	</include>
+	<include name="DialogGameControllers_coords26_4:3">
+		<width>420</width>
+		<height>50</height>
+	</include>
+
+	<include name="DialogGameControllers_coords27">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords27_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords27_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords27_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords27_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords27_16:9">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords27_21:9">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords27_21:9_masked">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords27_4:3">
+		<left>20</left>
+		<top>150</top>
+		<width>420</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogGameControllers_coords28">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords28_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords28_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords28_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords28_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords28_16:9">
+		<itemlayout width="420" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>420</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!$EXP[DiscManagerScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>360</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>$EXP[DiscManagerScrollbar]</visible>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords28_21:9">
+		<itemlayout width="420" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>420</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!$EXP[DiscManagerScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>360</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>$EXP[DiscManagerScrollbar]</visible>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords28_21:9_masked">
+		<itemlayout width="420" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>420</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!$EXP[DiscManagerScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>360</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>$EXP[DiscManagerScrollbar]</visible>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords28_4:3">
+		<itemlayout width="420" height="50">
+			<control type="label">
+				<left>0</left>
+				<width>420</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!$EXP[DiscManagerScrollbar]</visible>
+			</control>
+			<control type="label">
+				<left>60</left>
+				<width>360</width>
+				<height>44</height>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>$EXP[DiscManagerScrollbar]</visible>
+			</control>
+		</itemlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords29">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords29_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords29_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords29_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords29_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords29_16:9">
+		<focusedlayout width="420" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">108321</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>420</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>360</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>420</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>360</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords29_21:9">
+		<focusedlayout width="420" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">108321</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>420</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>360</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>420</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>360</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords29_21:9_masked">
+		<focusedlayout width="420" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">108321</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>420</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>360</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>420</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>360</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords29_4:3">
+		<focusedlayout width="420" height="50">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">108321</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<width>420</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width>360</width>
+					<height>44</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>47</top>
+					<width>420</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>!$EXP[DiscManagerScrollbar]</visible>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>47</top>
+					<width>360</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+					<visible>$EXP[DiscManagerScrollbar]</visible>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords30">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords30_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords30_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords30_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords30_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords30_16:9">
+		<left>20</left>
+		<top>150</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords30_21:9">
+		<left>20</left>
+		<top>150</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords30_21:9_masked">
+		<left>20</left>
+		<top>150</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+	<include name="DialogGameControllers_coords30_4:3">
+		<left>20</left>
+		<top>150</top>
+		<width>20</width>
+		<height>250</height>
+	</include>
+
+	<include name="DialogGameControllers_coords31">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords31_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords31_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords31_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords31_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords31_16:9">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>43</height>
+	</include>
+	<include name="DialogGameControllers_coords31_21:9">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>43</height>
+	</include>
+	<include name="DialogGameControllers_coords31_21:9_masked">
+		<left>150</left>
+		<top>405</top>
+		<width>405</width>
+		<height>43</height>
+	</include>
+	<include name="DialogGameControllers_coords31_4:3">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>43</height>
+	</include>
+
+	<include name="DialogGameControllers_coords32">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords32_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords32_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords32_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords32_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords32_16:9">
+		<left>150</left>
+		<top>272</top>
+		<width>405</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords32_21:9">
+		<left>150</left>
+		<top>272</top>
+		<width>405</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords32_21:9_masked">
+		<left>150</left>
+		<top>452</top>
+		<width>405</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords32_4:3">
+		<left>150</left>
+		<top>272</top>
+		<width>405</width>
+		<height>31</height>
+	</include>
+
+	<include name="DialogGameControllers_coords33">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords33_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords33_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords33_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords33_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords33_16:9">
+		<left>150</left>
+		<top>345</top>
+		<width>405</width>
+		<height>198</height>
+	</include>
+	<include name="DialogGameControllers_coords33_21:9">
+		<left>150</left>
+		<top>345</top>
+		<width>405</width>
+		<height>198</height>
+	</include>
+	<include name="DialogGameControllers_coords33_21:9_masked">
+		<left>150</left>
+		<top>525</top>
+		<width>405</width>
+		<height>198</height>
+	</include>
+	<include name="DialogGameControllers_coords33_4:3">
+		<left>150</left>
+		<top>345</top>
+		<width>405</width>
+		<height>198</height>
+	</include>
+
+	<include name="DialogGameControllers_coords34">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords34_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords34_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords34_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords34_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords34_16:9">
+		<width>405</width>
+		<height>66</height>
+	</include>
+	<include name="DialogGameControllers_coords34_21:9">
+		<width>405</width>
+		<height>66</height>
+	</include>
+	<include name="DialogGameControllers_coords34_21:9_masked">
+		<width>405</width>
+		<height>66</height>
+	</include>
+	<include name="DialogGameControllers_coords34_4:3">
+		<width>405</width>
+		<height>66</height>
+	</include>
+
+	<include name="DialogGameControllers_coords35">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords35_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords35_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords35_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords35_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords35_16:9">
+		<left>750</left>
+		<top>249</top>
+		<width>1020</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords35_21:9">
+		<left>750</left>
+		<top>249</top>
+		<width>1660</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords35_21:9_masked">
+		<left>750</left>
+		<top>429</top>
+		<width>1660</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords35_4:3">
+		<left>750</left>
+		<top>249</top>
+		<width>540</width>
+		<height>576</height>
+	</include>
+
+	<include name="DialogGameControllers_coords36">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords36_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords36_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords36_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords36_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords36_16:9">
+		<itemlayout width="1020" height="96">
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<bordersize>6</bordersize>
+				<aspectratio>keep</aspectratio>
+				<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				<include>NonFocusImageFadeAnimation</include>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>10</top>
+				<width>560</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>720</left>
+				<top>18</top>
+				<width>300</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>61</top>
+				<width>520</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>680</left>
+				<top>61</top>
+				<width>340</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+				<control type="label">
+					<left>680</left>
+					<top>61</top>
+					<width>160</width>
+					<height>27</height>
+					<font>Font27-light</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+				</control>
+				<control type="progress">
+					<left>860</left>
+					<top>69</top>
+					<width>160</width>
+					<height>12</height>
+					<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+					<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+					<info>ListItem.Property(achievement.measuredpercent)</info>
+				</control>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords36_21:9">
+		<itemlayout width="1660" height="96">
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<bordersize>6</bordersize>
+				<aspectratio>keep</aspectratio>
+				<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				<include>NonFocusImageFadeAnimation</include>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>10</top>
+				<width>1200</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1360</left>
+				<top>18</top>
+				<width>300</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>61</top>
+				<width>1160</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>1320</left>
+				<top>61</top>
+				<width>340</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+				<control type="label">
+					<left>1320</left>
+					<top>61</top>
+					<width>160</width>
+					<height>27</height>
+					<font>Font27-light</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+				</control>
+				<control type="progress">
+					<left>1500</left>
+					<top>69</top>
+					<width>160</width>
+					<height>12</height>
+					<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+					<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+					<info>ListItem.Property(achievement.measuredpercent)</info>
+				</control>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords36_21:9_masked">
+		<itemlayout width="1660" height="96">
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<bordersize>6</bordersize>
+				<aspectratio>keep</aspectratio>
+				<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				<include>NonFocusImageFadeAnimation</include>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>10</top>
+				<width>1200</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1360</left>
+				<top>18</top>
+				<width>300</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>61</top>
+				<width>1160</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>1320</left>
+				<top>61</top>
+				<width>340</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+				<control type="label">
+					<left>1320</left>
+					<top>61</top>
+					<width>160</width>
+					<height>27</height>
+					<font>Font27-light</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+				</control>
+				<control type="progress">
+					<left>1500</left>
+					<top>69</top>
+					<width>160</width>
+					<height>12</height>
+					<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+					<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+					<info>ListItem.Property(achievement.measuredpercent)</info>
+				</control>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords36_4:3">
+		<itemlayout width="540" height="96">
+			<control type="image">
+				<width>96</width>
+				<height>96</height>
+				<bordersize>6</bordersize>
+				<aspectratio>keep</aspectratio>
+				<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				<include>NonFocusImageFadeAnimation</include>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>10</top>
+				<width>160</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>320</left>
+				<top>18</top>
+				<width>220</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+			</control>
+			<control type="label">
+				<left>140</left>
+				<top>61</top>
+				<width>150</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>310</left>
+				<top>61</top>
+				<width>230</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+				<control type="label">
+					<left>310</left>
+					<top>61</top>
+					<width>50</width>
+					<height>27</height>
+					<font>Font27-light</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorNF]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+				</control>
+				<control type="progress">
+					<left>380</left>
+					<top>69</top>
+					<width>160</width>
+					<height>12</height>
+					<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+					<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+					<info>ListItem.Property(achievement.measuredpercent)</info>
+				</control>
+			</control>
+		</itemlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords37">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords37_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords37_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords37_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords37_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords37_16:9">
+		<focusedlayout width="1020" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>10</top>
+					<width>560</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>720</left>
+					<top>18</top>
+					<width>300</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>61</top>
+					<width>520</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>680</left>
+					<top>61</top>
+					<width>340</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+					<control type="label">
+						<left>680</left>
+						<top>61</top>
+						<width>160</width>
+						<height>27</height>
+						<font>Font27-bold</font>
+						<align>right</align>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+					</control>
+					<control type="progress">
+						<left>860</left>
+						<top>69</top>
+						<width>160</width>
+						<height>12</height>
+						<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+						<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+						<info>ListItem.Property(achievement.measuredpercent)</info>
+					</control>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>55</top>
+					<width>880</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords37_21:9">
+		<focusedlayout width="1660" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>10</top>
+					<width>1200</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1360</left>
+					<top>18</top>
+					<width>300</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>61</top>
+					<width>1160</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1320</left>
+					<top>61</top>
+					<width>340</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+					<control type="label">
+						<left>1320</left>
+						<top>61</top>
+						<width>160</width>
+						<height>27</height>
+						<font>Font27-bold</font>
+						<align>right</align>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+					</control>
+					<control type="progress">
+						<left>1500</left>
+						<top>69</top>
+						<width>160</width>
+						<height>12</height>
+						<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+						<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+						<info>ListItem.Property(achievement.measuredpercent)</info>
+					</control>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>55</top>
+					<width>1520</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords37_21:9_masked">
+		<focusedlayout width="1660" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>10</top>
+					<width>1200</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1360</left>
+					<top>18</top>
+					<width>300</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>61</top>
+					<width>1160</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1320</left>
+					<top>61</top>
+					<width>340</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+					<control type="label">
+						<left>1320</left>
+						<top>61</top>
+						<width>160</width>
+						<height>27</height>
+						<font>Font27-bold</font>
+						<align>right</align>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+					</control>
+					<control type="progress">
+						<left>1500</left>
+						<top>69</top>
+						<width>160</width>
+						<height>12</height>
+						<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+						<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+						<info>ListItem.Property(achievement.measuredpercent)</info>
+					</control>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>55</top>
+					<width>1520</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords37_4:3">
+		<focusedlayout width="540" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+					<texture diffuse="common/masks/art-96x96.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>10</top>
+					<width>160</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>320</left>
+					<top>18</top>
+					<width>220</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.points)]$VAR[GameAchievementRarity, &#8226; ,]</label>
+				</control>
+				<control type="label">
+					<left>140</left>
+					<top>61</top>
+					<width>150</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>310</left>
+					<top>61</top>
+					<width>230</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(achievement.unlockeddate)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(achievement.earned))</visible>
+				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.Property(achievement.measured))</visible>
+					<control type="label">
+						<left>310</left>
+						<top>61</top>
+						<width>50</width>
+						<height>27</height>
+						<font>Font27-bold</font>
+						<align>right</align>
+						<textcolor>$VAR[TextColorFO]</textcolor>
+						<label>$INFO[ListItem.Property(achievement.measuredprogress)]</label>
+					</control>
+					<control type="progress">
+						<left>380</left>
+						<top>69</top>
+						<width>160</width>
+						<height>12</height>
+						<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+						<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+						<info>ListItem.Property(achievement.measuredpercent)</info>
+					</control>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>55</top>
+					<width>400</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords38">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords38_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords38_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords38_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords38_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords38_16:9">
+		<left>690</left>
+		<top>259</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+	<include name="DialogGameControllers_coords38_21:9">
+		<left>690</left>
+		<top>259</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+	<include name="DialogGameControllers_coords38_21:9_masked">
+		<left>690</left>
+		<top>439</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+	<include name="DialogGameControllers_coords38_4:3">
+		<left>690</left>
+		<top>259</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+
+	<include name="DialogGameControllers_coords39">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords39_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords39_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords39_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords39_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords39_16:9">
+		<left>150</left>
+		<top>322</top>
+		<width>405</width>
+		<height>405</height>
+	</include>
+	<include name="DialogGameControllers_coords39_21:9">
+		<left>150</left>
+		<top>322</top>
+		<width>405</width>
+		<height>405</height>
+	</include>
+	<include name="DialogGameControllers_coords39_21:9_masked">
+		<left>150</left>
+		<top>502</top>
+		<width>405</width>
+		<height>405</height>
+	</include>
+	<include name="DialogGameControllers_coords39_4:3">
+		<left>150</left>
+		<top>322</top>
+		<width>405</width>
+		<height>405</height>
+	</include>
+
+	<include name="DialogGameControllers_coords40">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords40_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords40_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords40_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords40_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords40_16:9">
+		<left>750</left>
+		<top>420</top>
+		<width>1020</width>
+		<height>43</height>
+	</include>
+	<include name="DialogGameControllers_coords40_21:9">
+		<left>750</left>
+		<top>420</top>
+		<width>1660</width>
+		<height>43</height>
+	</include>
+	<include name="DialogGameControllers_coords40_21:9_masked">
+		<left>750</left>
+		<top>600</top>
+		<width>1660</width>
+		<height>43</height>
+	</include>
+	<include name="DialogGameControllers_coords40_4:3">
+		<left>750</left>
+		<top>420</top>
+		<width>540</width>
+		<height>43</height>
+	</include>
+
+	<include name="DialogGameControllers_coords41">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords41_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords41_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords41_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords41_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords41_16:9">
+		<left>750</left>
+		<top>476</top>
+		<width>1020</width>
+		<height>80</height>
+	</include>
+	<include name="DialogGameControllers_coords41_21:9">
+		<left>750</left>
+		<top>476</top>
+		<width>1660</width>
+		<height>80</height>
+	</include>
+	<include name="DialogGameControllers_coords41_21:9_masked">
+		<left>750</left>
+		<top>656</top>
+		<width>1660</width>
+		<height>80</height>
+	</include>
+	<include name="DialogGameControllers_coords41_4:3">
+		<left>750</left>
+		<top>476</top>
+		<width>540</width>
+		<height>80</height>
+	</include>
+
+	<include name="DialogGameControllers_coords42">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords42_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords42_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords42_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords42_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords42_16:9">
+		<left>750</left>
+		<top>574</top>
+		<width>1020</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords42_21:9">
+		<left>750</left>
+		<top>574</top>
+		<width>1660</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords42_21:9_masked">
+		<left>750</left>
+		<top>754</top>
+		<width>1660</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords42_4:3">
+		<left>750</left>
+		<top>574</top>
+		<width>540</width>
+		<height>31</height>
+	</include>
+
+	<include name="DialogGameControllers_coords43">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords43_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords43_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords43_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords43_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords43_16:9">
+		<left>150</left>
+		<top>249</top>
+		<width>1620</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords43_21:9">
+		<left>150</left>
+		<top>249</top>
+		<width>2260</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords43_21:9_masked">
+		<left>150</left>
+		<top>429</top>
+		<width>2260</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords43_4:3">
+		<left>150</left>
+		<top>249</top>
+		<width>1140</width>
+		<height>576</height>
+	</include>
+
+	<include name="DialogGameControllers_coords44">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords44_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords44_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords44_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords44_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords44_16:9">
+		<itemlayout width="1620" height="96">
+			<control type="label">
+				<left>0</left>
+				<top>10</top>
+				<width>1200</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1220</left>
+				<top>10</top>
+				<width>400</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopScore)]</label>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>61</top>
+				<width>1200</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>1220</left>
+				<top>61</top>
+				<width>400</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopUsername)]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords44_21:9">
+		<itemlayout width="2260" height="96">
+			<control type="label">
+				<left>0</left>
+				<top>10</top>
+				<width>1840</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1860</left>
+				<top>10</top>
+				<width>400</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopScore)]</label>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>61</top>
+				<width>1840</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>1860</left>
+				<top>61</top>
+				<width>400</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopUsername)]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords44_21:9_masked">
+		<itemlayout width="2260" height="96">
+			<control type="label">
+				<left>0</left>
+				<top>10</top>
+				<width>1840</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1860</left>
+				<top>10</top>
+				<width>400</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopScore)]</label>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>61</top>
+				<width>1840</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>1860</left>
+				<top>61</top>
+				<width>400</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopUsername)]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords44_4:3">
+		<itemlayout width="1140" height="96">
+			<control type="label">
+				<left>0</left>
+				<top>10</top>
+				<width>720</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>740</left>
+				<top>10</top>
+				<width>400</width>
+				<height>36</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopScore)]</label>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>61</top>
+				<width>720</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="label">
+				<left>740</left>
+				<top>61</top>
+				<width>400</width>
+				<height>27</height>
+				<font>Font27-light</font>
+				<align>right</align>
+				<textcolor>$VAR[TextColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(TopUsername)]</label>
+			</control>
+		</itemlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords45">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords45_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords45_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords45_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords45_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords45_16:9">
+		<focusedlayout width="1620" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<top>10</top>
+					<width>1200</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1220</left>
+					<top>10</top>
+					<width>400</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopScore)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>61</top>
+					<width>1200</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1220</left>
+					<top>61</top>
+					<width>400</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopUsername)]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>1620</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords45_21:9">
+		<focusedlayout width="2260" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<top>10</top>
+					<width>1840</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1860</left>
+					<top>10</top>
+					<width>400</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopScore)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>61</top>
+					<width>1840</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1860</left>
+					<top>61</top>
+					<width>400</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopUsername)]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>2260</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords45_21:9_masked">
+		<focusedlayout width="2260" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<top>10</top>
+					<width>1840</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1860</left>
+					<top>10</top>
+					<width>400</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopScore)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>61</top>
+					<width>1840</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1860</left>
+					<top>61</top>
+					<width>400</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopUsername)]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>2260</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords45_4:3">
+		<focusedlayout width="1140" height="96">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="label">
+					<left>0</left>
+					<top>10</top>
+					<width>720</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>740</left>
+					<top>10</top>
+					<width>400</width>
+					<height>36</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopScore)]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>61</top>
+					<width>720</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>740</left>
+					<top>61</top>
+					<width>400</width>
+					<height>27</height>
+					<font>Font27-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[TextColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(TopUsername)]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>1140</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[TextColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords46">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords46_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords46_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords46_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords46_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords46_16:9">
+		<left>100</left>
+		<top>259</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+	<include name="DialogGameControllers_coords46_21:9">
+		<left>100</left>
+		<top>259</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+	<include name="DialogGameControllers_coords46_21:9_masked">
+		<left>100</left>
+		<top>439</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+	<include name="DialogGameControllers_coords46_4:3">
+		<left>100</left>
+		<top>259</top>
+		<width>20</width>
+		<height>556</height>
+	</include>
+
+	<include name="DialogGameControllers_coords47">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords47_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords47_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords47_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords47_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords47_16:9">
+		<left>150</left>
+		<top>249</top>
+		<width>1620</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords47_21:9">
+		<left>150</left>
+		<top>249</top>
+		<width>2260</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords47_21:9_masked">
+		<left>150</left>
+		<top>429</top>
+		<width>2260</width>
+		<height>576</height>
+	</include>
+	<include name="DialogGameControllers_coords47_4:3">
+		<left>150</left>
+		<top>249</top>
+		<width>1140</width>
+		<height>576</height>
+	</include>
+
+	<include name="DialogGameControllers_coords48">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords48_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords48_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords48_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords48_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords48_16:9">
+		<left>150</left>
+		<top>258</top>
+		<width>1620</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords48_21:9">
+		<left>150</left>
+		<top>258</top>
+		<width>2260</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords48_21:9_masked">
+		<left>150</left>
+		<top>438</top>
+		<width>2260</width>
+		<height>31</height>
+	</include>
+	<include name="DialogGameControllers_coords48_4:3">
+		<left>150</left>
+		<top>258</top>
+		<width>1140</width>
+		<height>31</height>
+	</include>
+
+	<include name="DialogGameControllers_coords49">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords49_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords49_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords49_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords49_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords49_16:9">
+		<control type="label">
+			<left>0</left>
+			<width>80</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>center</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35344]</label>
+		</control>
+		<control type="label">
+			<left>164</left>
+			<width>700</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[14200]</label>
+		</control>
+		<control type="label">
+			<left>900</left>
+			<width>360</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35375]</label>
+		</control>
+		<control type="label">
+			<left>1280</left>
+			<width>340</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>right</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35345]</label>
+		</control>
+	</include>
+	<include name="DialogGameControllers_coords49_21:9">
+		<control type="label">
+			<left>0</left>
+			<width>80</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>center</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35344]</label>
+		</control>
+		<control type="label">
+			<left>164</left>
+			<width>1000</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[14200]</label>
+		</control>
+		<control type="label">
+			<left>1300</left>
+			<width>460</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35375]</label>
+		</control>
+		<control type="label">
+			<left>1920</left>
+			<width>340</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>right</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35345]</label>
+		</control>
+	</include>
+	<include name="DialogGameControllers_coords49_21:9_masked">
+		<control type="label">
+			<left>0</left>
+			<width>80</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>center</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35344]</label>
+		</control>
+		<control type="label">
+			<left>164</left>
+			<width>1000</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[14200]</label>
+		</control>
+		<control type="label">
+			<left>1300</left>
+			<width>460</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35375]</label>
+		</control>
+		<control type="label">
+			<left>1920</left>
+			<width>340</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>right</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35345]</label>
+		</control>
+	</include>
+	<include name="DialogGameControllers_coords49_4:3">
+		<control type="label">
+			<left>0</left>
+			<width>80</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>center</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35344]</label>
+		</control>
+		<control type="label">
+			<left>164</left>
+			<width>400</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[14200]</label>
+		</control>
+		<control type="label">
+			<left>600</left>
+			<width>220</width>
+			<height>31</height>
+			<font>Font27</font>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35375]</label>
+		</control>
+		<control type="label">
+			<left>800</left>
+			<width>340</width>
+			<height>31</height>
+			<font>Font27</font>
+			<align>right</align>
+			<textcolor>$VAR[TextColorNF]</textcolor>
+			<label>$LOCALIZE[35345]</label>
+		</control>
+	</include>
+
+	<include name="DialogGameControllers_coords50">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords50_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords50_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords50_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords50_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords50_16:9">
+		<left>150</left>
+		<top>303</top>
+		<width>1620</width>
+		<height>522</height>
+	</include>
+	<include name="DialogGameControllers_coords50_21:9">
+		<left>150</left>
+		<top>303</top>
+		<width>2260</width>
+		<height>522</height>
+	</include>
+	<include name="DialogGameControllers_coords50_21:9_masked">
+		<left>150</left>
+		<top>483</top>
+		<width>2260</width>
+		<height>522</height>
+	</include>
+	<include name="DialogGameControllers_coords50_4:3">
+		<left>150</left>
+		<top>303</top>
+		<width>1140</width>
+		<height>522</height>
+	</include>
+
+	<include name="DialogGameControllers_coords51">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords51_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords51_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords51_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords51_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords51_16:9">
+		<itemlayout width="1620" height="58">
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<font>Font27-bold</font>
+				<align>center</align>
+				<textcolor>MaskingColor</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>7</top>
+				<width>80</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>center</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="image">
+				<left>100</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<aspectratio>scale</aspectratio>
+				<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<left>164</left>
+				<top>7</top>
+				<width>700</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>900</left>
+				<top>7</top>
+				<width>360</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(DateRelative)]</label>
+			</control>
+			<control type="label">
+				<left>1280</left>
+				<top>7</top>
+				<width>340</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords51_21:9">
+		<itemlayout width="2260" height="58">
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<font>Font27-bold</font>
+				<align>center</align>
+				<textcolor>MaskingColor</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>7</top>
+				<width>80</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>center</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="image">
+				<left>100</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<aspectratio>scale</aspectratio>
+				<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<left>164</left>
+				<top>7</top>
+				<width>1000</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1300</left>
+				<top>7</top>
+				<width>460</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(DateRelative)]</label>
+			</control>
+			<control type="label">
+				<left>1920</left>
+				<top>7</top>
+				<width>340</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords51_21:9_masked">
+		<itemlayout width="2260" height="58">
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<font>Font27-bold</font>
+				<align>center</align>
+				<textcolor>MaskingColor</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>7</top>
+				<width>80</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>center</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="image">
+				<left>100</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<aspectratio>scale</aspectratio>
+				<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<left>164</left>
+				<top>7</top>
+				<width>1000</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>1300</left>
+				<top>7</top>
+				<width>460</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(DateRelative)]</label>
+			</control>
+			<control type="label">
+				<left>1920</left>
+				<top>7</top>
+				<width>340</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+		</itemlayout>
+	</include>
+	<include name="DialogGameControllers_coords51_4:3">
+		<itemlayout width="1140" height="58">
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+			</control>
+			<control type="image">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+				<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+			</control>
+			<control type="label">
+				<left>18</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<font>Font27-bold</font>
+				<align>center</align>
+				<textcolor>MaskingColor</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>7</top>
+				<width>80</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>center</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(RankLabel)]</label>
+				<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+			</control>
+			<control type="image">
+				<left>100</left>
+				<top>7</top>
+				<width>44</width>
+				<height>44</height>
+				<aspectratio>scale</aspectratio>
+				<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<left>164</left>
+				<top>7</top>
+				<width>400</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>600</left>
+				<top>7</top>
+				<width>220</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Property(DateRelative)]</label>
+			</control>
+			<control type="label">
+				<left>800</left>
+				<top>7</top>
+				<width>340</width>
+				<height>44</height>
+				<font>Font36-light</font>
+				<align>right</align>
+				<textcolor>$VAR[GameLeaderboardEntryColorNF]</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+		</itemlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords52">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords52_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords52_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords52_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords52_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords52_16:9">
+		<focusedlayout width="1620" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<font>Font27-bold</font>
+					<align>center</align>
+					<textcolor>MaskingColor</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>7</top>
+					<width>80</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>center</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>164</left>
+					<top>7</top>
+					<width>700</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>900</left>
+					<top>7</top>
+					<width>360</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(DateRelative)]</label>
+				</control>
+				<control type="label">
+					<left>1280</left>
+					<top>7</top>
+					<width>340</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>1620</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[GameLeaderboardEntryColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords52_21:9">
+		<focusedlayout width="2260" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<font>Font27-bold</font>
+					<align>center</align>
+					<textcolor>MaskingColor</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>7</top>
+					<width>80</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>center</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>164</left>
+					<top>7</top>
+					<width>1000</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1300</left>
+					<top>7</top>
+					<width>460</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(DateRelative)]</label>
+				</control>
+				<control type="label">
+					<left>1920</left>
+					<top>7</top>
+					<width>340</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>2260</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[GameLeaderboardEntryColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords52_21:9_masked">
+		<focusedlayout width="2260" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<font>Font27-bold</font>
+					<align>center</align>
+					<textcolor>MaskingColor</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>7</top>
+					<width>80</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>center</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>164</left>
+					<top>7</top>
+					<width>1000</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>1300</left>
+					<top>7</top>
+					<width>460</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(DateRelative)]</label>
+				</control>
+				<control type="label">
+					<left>1920</left>
+					<top>7</top>
+					<width>340</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>2260</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[GameLeaderboardEntryColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords52_4:3">
+		<focusedlayout width="1140" height="58">
+			<control type="group">
+				<include content="NonFocusDialogFadeAnimation">
+					<param name="id">3</param>
+				</include>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalGold">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),gold)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalSilver">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),silver)</visible>
+				</control>
+				<control type="image">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<texture colordiffuse="MedalBronze">common/Disc44.png</texture>
+					<visible>String.IsEqual(ListItem.Property(Medal),bronze)</visible>
+				</control>
+				<control type="label">
+					<left>18</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<font>Font27-bold</font>
+					<align>center</align>
+					<textcolor>MaskingColor</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>!String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>7</top>
+					<width>80</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>center</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(RankLabel)]</label>
+					<visible>String.IsEmpty(ListItem.Property(Medal))</visible>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>7</top>
+					<width>44</width>
+					<height>44</height>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="common/Disc44.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="label">
+					<left>164</left>
+					<top>7</top>
+					<width>400</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>True</scroll>
+				</control>
+				<control type="label">
+					<left>600</left>
+					<top>7</top>
+					<width>220</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Property(DateRelative)]</label>
+				</control>
+				<control type="label">
+					<left>800</left>
+					<top>7</top>
+					<width>340</width>
+					<height>44</height>
+					<font>Font36-bold</font>
+					<align>right</align>
+					<textcolor>$VAR[GameLeaderboardEntryColorFO]</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="image">
+					<top>55</top>
+					<width>1140</width>
+					<height>3</height>
+					<texture border="2,0,0,0" colordiffuse="$VAR[GameLeaderboardEntryColorFO]">$VAR[focusline]</texture>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords53">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords53_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords53_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords53_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords53_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords53_16:9">
+		<left>100</left>
+		<top>313</top>
+		<width>20</width>
+		<height>502</height>
+	</include>
+	<include name="DialogGameControllers_coords53_21:9">
+		<left>100</left>
+		<top>313</top>
+		<width>20</width>
+		<height>502</height>
+	</include>
+	<include name="DialogGameControllers_coords53_21:9_masked">
+		<left>100</left>
+		<top>493</top>
+		<width>20</width>
+		<height>502</height>
+	</include>
+	<include name="DialogGameControllers_coords53_4:3">
+		<left>100</left>
+		<top>313</top>
+		<width>20</width>
+		<height>502</height>
+	</include>
+
+	<include name="DialogGameControllers_coords54">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords54_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords54_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords54_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords54_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords54_16:9">
+		<left>150</left>
+		<top>303</top>
+		<width>1620</width>
+		<height>522</height>
+	</include>
+	<include name="DialogGameControllers_coords54_21:9">
+		<left>150</left>
+		<top>303</top>
+		<width>2260</width>
+		<height>522</height>
+	</include>
+	<include name="DialogGameControllers_coords54_21:9_masked">
+		<left>150</left>
+		<top>483</top>
+		<width>2260</width>
+		<height>522</height>
+	</include>
+	<include name="DialogGameControllers_coords54_4:3">
+		<left>150</left>
+		<top>303</top>
+		<width>1140</width>
+		<height>522</height>
+	</include>
+
+	<include name="DialogGameControllers_coords55">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords55_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords55_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords55_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords55_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords55_16:9">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+	<include name="DialogGameControllers_coords55_21:9">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+	<include name="DialogGameControllers_coords55_21:9_masked">
+		<left>150</left>
+		<top>405</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+	<include name="DialogGameControllers_coords55_4:3">
+		<left>150</left>
+		<top>225</top>
+		<width>405</width>
+		<height>600</height>
+	</include>
+
+	<include name="DialogGameControllers_coords56">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords56_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords56_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords56_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords56_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords56_16:9">
+		<left>750</left>
+		<top>245</top>
+		<width>1020</width>
+		<height>580</height>
+	</include>
+	<include name="DialogGameControllers_coords56_21:9">
+		<left>750</left>
+		<top>245</top>
+		<width>1660</width>
+		<height>580</height>
+	</include>
+	<include name="DialogGameControllers_coords56_21:9_masked">
+		<left>750</left>
+		<top>425</top>
+		<width>1660</width>
+		<height>580</height>
+	</include>
+	<include name="DialogGameControllers_coords56_4:3">
+		<left>750</left>
+		<top>245</top>
+		<width>540</width>
+		<height>580</height>
+	</include>
+
+	<include name="DialogGameControllers_coords57">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords57_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords57_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords57_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords57_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords57_16:9">
+		<width>1020</width>
+		<height>58</height>
+		<textwidth>980</textwidth>
+	</include>
+	<include name="DialogGameControllers_coords57_21:9">
+		<width>1660</width>
+		<height>58</height>
+		<textwidth>1620</textwidth>
+	</include>
+	<include name="DialogGameControllers_coords57_21:9_masked">
+		<width>1660</width>
+		<height>58</height>
+		<textwidth>1620</textwidth>
+	</include>
+	<include name="DialogGameControllers_coords57_4:3">
+		<width>540</width>
+		<height>58</height>
+		<textwidth>500</textwidth>
+	</include>
+
+	<include name="DialogGameControllers_coords58">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords58_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords58_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords58_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords58_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords58_16:9">
+		<width>1020</width>
+		<height>58</height>
+	</include>
+	<include name="DialogGameControllers_coords58_21:9">
+		<width>1660</width>
+		<height>58</height>
+	</include>
+	<include name="DialogGameControllers_coords58_21:9_masked">
+		<width>1660</width>
+		<height>58</height>
+	</include>
+	<include name="DialogGameControllers_coords58_4:3">
+		<width>540</width>
+		<height>58</height>
+	</include>
+
+	<include name="DialogGameControllers_coords59">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords59_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords59_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords59_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords59_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords59_16:9">
+		<left>690</left>
+		<top>255</top>
+		<width>20</width>
+		<height>560</height>
+	</include>
+	<include name="DialogGameControllers_coords59_21:9">
+		<left>690</left>
+		<top>255</top>
+		<width>20</width>
+		<height>560</height>
+	</include>
+	<include name="DialogGameControllers_coords59_21:9_masked">
+		<left>690</left>
+		<top>435</top>
+		<width>20</width>
+		<height>560</height>
+	</include>
+	<include name="DialogGameControllers_coords59_4:3">
+		<left>690</left>
+		<top>255</top>
+		<width>20</width>
+		<height>560</height>
+	</include>
+
+	<include name="DialogGameControllers_coords60">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords60_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords60_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords60_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords60_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords60_16:9">
+		<right>20</right>
+		<top>90</top>
+		<width>550</width>
+		<height>400</height>
+	</include>
+	<include name="DialogGameControllers_coords60_21:9">
+		<right>20</right>
+		<top>90</top>
+		<width>550</width>
+		<height>400</height>
+	</include>
+	<include name="DialogGameControllers_coords60_21:9_masked">
+		<right>20</right>
+		<top>270</top>
+		<width>550</width>
+		<height>400</height>
+	</include>
+	<include name="DialogGameControllers_coords60_4:3">
+		<right>20</right>
+		<top>90</top>
+		<width>550</width>
+		<height>400</height>
+	</include>
+
+	<include name="DialogGameControllers_coords61">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords61_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords61_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords61_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords61_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords61_16:9">
+		<width>550</width>
+		<height>400</height>
+	</include>
+	<include name="DialogGameControllers_coords61_21:9">
+		<width>550</width>
+		<height>400</height>
+	</include>
+	<include name="DialogGameControllers_coords61_21:9_masked">
+		<width>550</width>
+		<height>400</height>
+	</include>
+	<include name="DialogGameControllers_coords61_4:3">
+		<width>550</width>
+		<height>400</height>
+	</include>
+
+	<include name="DialogGameControllers_coords62">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords62_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords62_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords62_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords62_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords62_16:9">
+		<width>550</width>
+		<height>75</height>
+	</include>
+	<include name="DialogGameControllers_coords62_21:9">
+		<width>550</width>
+		<height>75</height>
+	</include>
+	<include name="DialogGameControllers_coords62_21:9_masked">
+		<width>550</width>
+		<height>75</height>
+	</include>
+	<include name="DialogGameControllers_coords62_4:3">
+		<width>550</width>
+		<height>75</height>
+	</include>
+
+	<include name="DialogGameControllers_coords63">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords63_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords63_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords63_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords63_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords63_16:9">
+		<left>12</left>
+		<top>6</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="DialogGameControllers_coords63_21:9">
+		<left>12</left>
+		<top>6</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="DialogGameControllers_coords63_21:9_masked">
+		<left>12</left>
+		<top>6</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="DialogGameControllers_coords63_4:3">
+		<left>12</left>
+		<top>6</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+
+	<include name="DialogGameControllers_coords64">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords64_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords64_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords64_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords64_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords64_16:9">
+		<left>82</left>
+		<top>10</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+	<include name="DialogGameControllers_coords64_21:9">
+		<left>82</left>
+		<top>10</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+	<include name="DialogGameControllers_coords64_21:9_masked">
+		<left>82</left>
+		<top>10</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+	<include name="DialogGameControllers_coords64_4:3">
+		<left>82</left>
+		<top>10</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+
+	<include name="DialogGameControllers_coords65">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords65_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords65_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords65_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords65_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords65_16:9">
+		<left>82</left>
+		<top>35</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+	<include name="DialogGameControllers_coords65_21:9">
+		<left>82</left>
+		<top>35</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+	<include name="DialogGameControllers_coords65_21:9_masked">
+		<left>82</left>
+		<top>35</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+	<include name="DialogGameControllers_coords65_4:3">
+		<left>82</left>
+		<top>35</top>
+		<width>456</width>
+		<height>20</height>
+	</include>
+
+	<include name="DialogGameControllers_coords66">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords66_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords66_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords66_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords66_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords66_16:9">
+		<width>550</width>
+		<height>94</height>
+	</include>
+	<include name="DialogGameControllers_coords66_21:9">
+		<width>550</width>
+		<height>94</height>
+	</include>
+	<include name="DialogGameControllers_coords66_21:9_masked">
+		<width>550</width>
+		<height>94</height>
+	</include>
+	<include name="DialogGameControllers_coords66_4:3">
+		<width>550</width>
+		<height>94</height>
+	</include>
+
+	<include name="DialogGameControllers_coords67">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords67_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords67_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords67_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords67_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords67_16:9">
+		<left>12</left>
+		<top>70</top>
+		<width>526</width>
+		<height>12</height>
+	</include>
+	<include name="DialogGameControllers_coords67_21:9">
+		<left>12</left>
+		<top>70</top>
+		<width>526</width>
+		<height>12</height>
+	</include>
+	<include name="DialogGameControllers_coords67_21:9_masked">
+		<left>12</left>
+		<top>70</top>
+		<width>526</width>
+		<height>12</height>
+	</include>
+	<include name="DialogGameControllers_coords67_4:3">
+		<left>12</left>
+		<top>70</top>
+		<width>526</width>
+		<height>12</height>
+	</include>
+
+	<include name="DialogGameControllers_coords68">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords68_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords68_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords68_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords68_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords68_16:9">
+		<itemlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</itemlayout>
+		<focusedlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords68_21:9">
+		<itemlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</itemlayout>
+		<focusedlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords68_21:9_masked">
+		<itemlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</itemlayout>
+		<focusedlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="DialogGameControllers_coords68_4:3">
+		<itemlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</itemlayout>
+		<focusedlayout width="526" height="12">
+			<control type="progress">
+				<width>526</width>
+				<height>12</height>
+				<texturebg border="6,0,6,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBack.png</texturebg>
+				<midtexture border="6,0,0,0" colordiffuse="$VAR[OverlayColorFO]">common/PanelProgressBar.png</midtexture>
+				<info>ListItem.Property(Percent)</info>
+			</control>
+		</focusedlayout>
+	</include>
+
+	<include name="DialogGameControllers_coords69">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords69_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords69_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords69_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords69_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords69_16:9">
+		<width>550</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords69_21:9">
+		<width>550</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords69_21:9_masked">
+		<width>550</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords69_4:3">
+		<width>550</width>
+		<height>51</height>
+	</include>
+
+	<include name="DialogGameControllers_coords70">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords70_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords70_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords70_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords70_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords70_16:9">
+		<left>12</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords70_21:9">
+		<left>12</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords70_21:9_masked">
+		<left>12</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords70_4:3">
+		<left>12</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+
+	<include name="DialogGameControllers_coords71">
+		<include condition="$EXP[NonMaskedCoordinates]">DialogGameControllers_coords71_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogGameControllers_coords71_21:9</include>
+		<include condition="$EXP[MaskedCoordinates]">DialogGameControllers_coords71_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogGameControllers_coords71_4:3</include>
+	</include>
+	<include name="DialogGameControllers_coords71_16:9">
+		<left>275</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords71_21:9">
+		<left>275</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords71_21:9_masked">
+		<left>275</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
+	<include name="DialogGameControllers_coords71_4:3">
+		<left>275</left>
+		<width>263</width>
+		<height>51</height>
+	</include>
 </includes>

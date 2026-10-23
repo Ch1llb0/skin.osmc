@@ -44,6 +44,9 @@ Structural rules (coordinate families, numbering, the four aspect variants, tran
 | `BackgroundColor` | per scheme | Window overlay |
 | `MenuOSDColor` | per scheme | Menu and OSD panels |
 | `DisabledColor` | per scheme | Disabled text — grey, not dimmed white |
+| `RarityUncommon`, `RarityRare`, `RarityUltraRare` | `FF7FD99A`, `FF6FC3FF`, `FFF2C14E` | An achievement's rarity (common ones keep the row's colour) |
+| `MedalGold`, `MedalSilver`, `MedalBronze` | `FFF2C14E`, `FFC9D1D9`, `FFD08B5B` | The first three ranks of a leaderboard |
+| `CheatsMatch` | `FF8ED6A0` | A cheat file that matches the game |
 
 `colors/defaults.xml` holds the Lightblue values as a fallback; `xml/Variables_Colours.xml` is what
 resolves at runtime. Every token can be overridden through `Skin.String(color.*)`; eleven pickers in
@@ -208,7 +211,7 @@ The two 50% fades stack to 25% on purpose. Unfocused text is therefore never the
 | 60 px settings categories, Font42 | 57 | top-aligned at 1 |
 | 74 px keyboard keys, Font48 | 71, `focus74` / `focus74c` | centred |
 | 66 px bookmark and stream buttons, in a grouplist as tall as they are (a grouplist clips its children) | 58, `focus66c` | centred |
-| 58 px select-type lists, Font36 | 55, the row's foot | top-aligned at 7 |
+| 58 px select-type lists, Font36; the cheats' radiobuttons | 55, the row's foot; `focus58` for a button | top-aligned at 7 |
 | 85 / 96 px lists, Font36 | 70 / 75; with a second line 55, that line at 61 | centred |
 | Large library and PVR rows, Font48 | 83 / 87 / 101, the line below it 8 lower | as before |
 | Smaller lists (file manager, bookmarks, PVR guide channels, game window) | 43 / 237 / 60 / 247 (text at 202) | centred, or top-aligned as given |
@@ -272,6 +275,11 @@ Wide info (522, 525) puts the title and the plot in the upper half over the wide
 (526, 527) is Wide low (521, 524) unchanged plus the plot at the top left: x 120, top 240 (420 masked), up
 to 60 px short of the focused item (16:9 / 21:9 / 4:3: 690 / 1010 / 452 wide in 526, 656 / 978 / 417 in
 527), and in whole lines down to at least 55 px above the unfocused items, one height per plot size.
+
+The games window offers the seven info views (511, 522, 525, 526, 527, 536, 538) beside its own: a game
+fills them as a movie does, title, year • genre in `Label2`, plot and art, and its platform folder names
+the heading's second line. Developer, publisher, players, age rating, rating and tags have no slot in
+them and wait for a game info dialog, which Kodi 22 does not have.
 
 Every view carries: window title and folder (top left), clock (top right), media flags (bottom left),
 item count (bottom right), list indicators and scrollbar, and year · genre beside the title where there
@@ -639,6 +647,28 @@ Status overlays come in six tiers, each drawn at its own size (see Watched-statu
   the dialog. The OSD family hides under player process info by `Window.IsVisible`, as under every other
   dialog, so everything returns as the dialog finishes closing.
 
+- **Game OSD.** The panel (460 wide, centred) heads with the game: `RetroPlayer.Title` in Font33 at 30,
+  platform • emulator (`RetroPlayer.Platform`, `RetroPlayer.GameClientName`) in Font27 at 50% at 70, and
+  what the game reports it is doing (`RetroPlayer.RichPresence`) in Font27 light at 101; the rows start at
+  150. Eleven rows, one more for the disc menu (`RetroPlayer.SupportsEject`) and one for cheats
+  (`RetroPlayer.SupportsCheats`): the panel is 780, 830 or 880 tall, one background per count, and the
+  whole panel moves 25 px down per missing row so it stays centred. Achievements is always there, its
+  label2 unlocked of total. The OSD hides under each of its dialogs.
+- **Game dialogs** load `DialogGameControllers.xml` and are told apart by `Window.IsDialogTopMost` as they
+  load. The disc manager is the OSD panel itself: Kodi drives buttons 108323–108327 when there is no menu
+  list, so they are the OSD's 50 px rows; Disc selection, Add and Delete are disabled while the tray is
+  closed. The disc list takes their place, five rows at most, the disc in the tray in `SelectedColor`, the
+  panel shrinking and staying centred as the stream panels do. Achievements is the select dialog's 96 px
+  list beside the game, its progress and the three switches Kodi reads (each shows its setting; Kodi hides
+  hardcore mode until the emulator is approved), with points • rarity, the unlock date or a 160 px bar on
+  each row; signed out it shows the sign-up code in the image slot. Leaderboards are the text viewer's
+  frame and box, a board per 96 px row with its top score; a board's entries are 58 px rows under a
+  Font27 column line, ranks 1 to 3 on 44 px discs (`Disc44`, which also rounds the avatars) and the
+  reader's own entry in `SelectedColor`. Cheats are the setting select's 58 px rows, built by Kodi from a
+  radiobutton template, the cheat file on the heading's second line. Indicators are notifications: one
+  panel per indicator in the notification corner, the measured one with the extended progress bar's
+  foot bar. Kodi gives that percentage only as text, so a one-item list carries it as a property for the
+  progress control to read.
 ---
 
 ## 12. Settings UI
@@ -676,12 +706,15 @@ label, scrollbars, two widget rows, date above clock, masking ratio, kiosk mode.
   is at alpha 0 once open, and Kodi culls it, so it costs nothing then. Rounded copies: `PanelSolid` for the
   colour, `Background1*Top`, `Background1*Bottom` and `Background2*Round` for the overlay's outer bands, a per-canvas mask
   (`DialogMask*`, via `DialogBackgroundImageTexture`) for the images.
+- **Content ends 39 px above the explanation line**, at 825 with the 405 × 600 image, as in the info
+  dialogs: the game saves list (ten 58 px rows from 245, `Window.IsActive(gamesaves)` choosing it as the
+  select dialog loads), the RSS editor, achievements, leaderboards and cheats.
 - **Add-on windows** the skin can draw are skinned here rather than left to the add-on's own look: Up Next
   as corner dialogs, and `script-RSS_Editor.xml` (`script.rss.editor`, one window for its feeds and sets
   pages) as a full-screen dialog laid out like the select dialog's text list: heading from label 2 in the
   title slot, `DefaultNetwork` in the 405 × 600 image slot, the list caption (label 4) on the dialogs'
   explanation line above the buttons (centred, Font27, bottom 180, as `DialogVideoInfo_coords2`), the
-  58 px list 10 at 750, 192, eleven rows so it ends 34 px above that line, its scrollbar at 690, and Add, Remove, the set button (11), OK and Cancel in
+  58 px list 10 at 750, 245, ten rows so it ends at 825 with the image, 39 px above that line as in the info dialogs, its scrollbar at 690, and Add, Remove, the set button (11), OK and Cancel in
   `DialogButtons`. The add-on drives controls 2, 4, 10, 11, 13, 14, 18 and 19 by id; keep them. OK and
   Cancel are the add-on's: the skin adds no actions to them, as closing from the skin would skip its save.
 - **The window below a full-screen dialog fades out** 300 ms after it opens (`WindowFullscreenDialogFadeAnimation`,

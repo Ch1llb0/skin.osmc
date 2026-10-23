@@ -9,4 +9,10 @@
 	<include condition="Window.IsDialogTopMost(gamecontrollers)">DialogGameControllers_Default</include>
 	<include condition="Window.IsDialogTopMost(gameports)">DialogGameControllers_Ports</include>
 	<include condition="Window.IsDialogTopMost(gameagents)">DialogGameControllers_Agents</include>
+	<include condition="Window.IsDialogTopMost(gamediscmanager)">DialogGameControllers_DiscManager</include>
+	<include condition="Window.IsDialogTopMost(gameachievements)">DialogGameControllers_Achievements</include>
+	<include condition="Window.IsDialogTopMost(gameleaderboards)">DialogGameControllers_Leaderboards</include>
+	<include condition="Window.IsDialogTopMost(gameleaderboardentries)">DialogGameControllers_LeaderboardEntries</include>
+	<include condition="Window.IsDialogTopMost(gamecheats)">DialogGameControllers_Cheats</include>
+	<include condition="Window.IsDialogTopMost(gameindicators)">DialogGameControllers_Indicators</include>
 </window>
