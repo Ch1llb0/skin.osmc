@@ -1117,6 +1117,33 @@
 		<top>495</top>
 		<width>1620</width>
 		<height>357</height>
+		<!-- The panel opens and closes about the middle of its visible part: with fewer than five streams it is
+		     shorter than the group and slid down, so an auto centre would sit up to 100 px below it -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,1)" />
+			<param name="center" value="960,573.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,2)" />
+			<param name="center" value="960,598.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,3)" />
+			<param name="center" value="960,623.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,4)" />
+			<param name="center" value="960,648.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(3).NumItems,5)" />
+			<param name="center" value="960,673.5" />
+		</include>
 		<control type="image">
 			<width>1620</width>
 			<height>157</height>
@@ -1153,6 +1180,33 @@
 		<top>495</top>
 		<width>2260</width>
 		<height>357</height>
+		<!-- The panel opens and closes about the middle of its visible part: with fewer than five streams it is
+		     shorter than the group and slid down, so an auto centre would sit up to 100 px below it -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,1)" />
+			<param name="center" value="1280,573.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,2)" />
+			<param name="center" value="1280,598.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,3)" />
+			<param name="center" value="1280,623.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,4)" />
+			<param name="center" value="1280,648.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(3).NumItems,5)" />
+			<param name="center" value="1280,673.5" />
+		</include>
 		<control type="image">
 			<width>2260</width>
 			<height>157</height>
@@ -1189,6 +1243,33 @@
 		<top>675</top>
 		<width>2260</width>
 		<height>357</height>
+		<!-- The panel opens and closes about the middle of its visible part: with fewer than five streams it is
+		     shorter than the group and slid down, so an auto centre would sit up to 100 px below it -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,1)" />
+			<param name="center" value="1280,753.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,2)" />
+			<param name="center" value="1280,778.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,3)" />
+			<param name="center" value="1280,803.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,4)" />
+			<param name="center" value="1280,828.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(3).NumItems,5)" />
+			<param name="center" value="1280,853.5" />
+		</include>
 		<control type="image">
 			<width>2260</width>
 			<height>157</height>
@@ -1225,6 +1306,33 @@
 		<top>495</top>
 		<width>1140</width>
 		<height>357</height>
+		<!-- The panel opens and closes about the middle of its visible part: with fewer than five streams it is
+		     shorter than the group and slid down, so an auto centre would sit up to 100 px below it -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,1)" />
+			<param name="center" value="720,573.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,2)" />
+			<param name="center" value="720,598.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,3)" />
+			<param name="center" value="720,623.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsEqual(Container(3).NumItems,4)" />
+			<param name="center" value="720,648.5" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD)" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(3).NumItems,5)" />
+			<param name="center" value="720,673.5" />
+		</include>
 		<control type="image">
 			<width>1140</width>
 			<height>157</height>

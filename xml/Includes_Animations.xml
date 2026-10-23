@@ -94,31 +94,60 @@
 
 	<!-- A dialog that takes the place of what the OSD has on screen, as player process info does: while any
 	     of it shows it waits the 200 ms that takes to zoom out, as the bookmarks and the stream lists do,
-	     rather than crossing it. -->
+	     rather than crossing it. osd names what it waits for, when the condition the zoom applies under,
+	     and center where it zooms about: a panel that resizes with what it holds passes one per size. -->
 	<include name="OSDReplaceOpenCloseAnimation">
-		<animation type="WindowOpen" condition="$EXP[OSDOnScreen]">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" delay="200" />
-			<effect type="fade" start="0" end="100" time="200" delay="200" />
-		</animation>
-		<animation type="WindowOpen" condition="!$EXP[OSDOnScreen]">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
-			<effect type="fade" start="0" end="100" time="200" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
+		<param name="osd" default="$EXP[OSDOnScreen]" />
+		<param name="when" default="true" />
+		<param name="center" default="auto" />
+		<definition>
+			<animation type="WindowOpen" condition="[$PARAM[osd]] + [$PARAM[when]]">
+				<effect type="zoom" start="90" end="100" center="$PARAM[center]" tween="back" easing="out" time="200" delay="200" />
+				<effect type="fade" start="0" end="100" time="200" delay="200" />
+			</animation>
+			<animation type="WindowOpen" condition="![$PARAM[osd]] + [$PARAM[when]]">
+				<effect type="zoom" start="90" end="100" center="$PARAM[center]" tween="back" easing="out" time="200" />
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="$PARAM[when]">
+				<effect type="zoom" start="100" end="90" center="$PARAM[center]" easing="in" time="200" />
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+		</definition>
 	</include>
 
 	<include name="OSDVisibleHiddenAnimation">
-		<animation type="Visible">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
-			<effect type="fade" start="0" end="100" time="200" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
+		<param name="when" default="true" />
+		<param name="center" default="auto" />
+		<definition>
+			<animation type="Visible" condition="$PARAM[when]">
+				<effect type="zoom" start="90" end="100" center="$PARAM[center]" tween="back" easing="out" time="200" />
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="Hidden" condition="$PARAM[when]">
+				<effect type="zoom" start="100" end="90" center="$PARAM[center]" easing="in" time="200" />
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+		</definition>
+	</include>
+
+	<!-- Kodi runs one Visible or Hidden animation per change, the first whose condition holds, but on the way
+	     back it resets only the first one listed. A control with a conditional pair per state would keep a
+	     finished Hidden fade applied and stay invisible after its next Visible, so it carries the single
+	     pair above, zooming about 0,0, between these two: instant slides that carry its centre to 0,0 before
+	     the zoom and back after it (Kodi applies the animations listed later first). They cancel at rest. -->
+	<include name="ZoomCentre">
+		<param name="when" default="true" />
+		<definition>
+			<animation effect="slide" end="$PARAM[x],$PARAM[y]" time="0" condition="$PARAM[when]">Conditional</animation>
+		</definition>
+	</include>
+
+	<include name="ZoomCentreReturn">
+		<param name="when" default="true" />
+		<definition>
+			<animation effect="slide" end="-$PARAM[x],-$PARAM[y]" time="0" condition="$PARAM[when]">Conditional</animation>
+		</definition>
 	</include>
 
 	<!-- A music info dialog swapped in for another ($EXP[InfoDialogSwap]) skips its opening and shows at rest,

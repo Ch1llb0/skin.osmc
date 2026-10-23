@@ -755,7 +755,8 @@ Contrast over pure white fanart through the 146-grey overlay (worst case):
 | SidePanelSlideAnimation | 200 | linear | slide −200 → 0 |
 | CornerWindowAnimation | 200 | linear | slide 550 → 0 |
 | OSDOpenCloseAnimation | 200 | back / out | zoom 90 → 100 + fade |
-| OSDReplaceOpenCloseAnimation | 200 | back / out | as OSDOpenCloseAnimation; opens 200 ms late while anything of the OSD's shows (`$EXP[OSDOnScreen]`) |
+| OSDVisibleHiddenAnimation | 200 | back / out | as OSDOpenCloseAnimation, on Visible / Hidden; params `when`, `center` |
+| OSDReplaceOpenCloseAnimation | 200 | back / out | as OSDOpenCloseAnimation; opens 200 ms late while anything of the OSD's shows (`$EXP[OSDOnScreen]`); params `osd`, `when`, `center` |
 | DialogZoomAnimation | 300 | back / inout | zoom 70 → 100 + fade |
 | OptionsAnimation | 300 | back / inout | zoom 70 → 100, fade 150 delay 150 |
 | NonFocusWindowFadeAnimation | 200 | cubic / out | fade 100 → 50 |

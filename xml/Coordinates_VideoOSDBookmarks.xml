@@ -11,6 +11,87 @@
 		<top>610</top>
 		<width>1620</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="312,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="474,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="center" value="636,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="center" value="798,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,5)" />
+			<param name="center" value="960,731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="312" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="474" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="636" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="798" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,5)" />
+			<param name="x" value="960" />
+			<param name="y" value="731" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="312" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="474" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="636" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="798" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,5)" />
+			<param name="x" value="960" />
+			<param name="y" value="731" />
+		</include>
 		<control type="image">
 			<width>324</width>
 			<height>242</height>
@@ -47,6 +128,117 @@
 		<top>610</top>
 		<width>2260</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="311.5,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="473,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="center" value="634.5,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="center" value="796,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="center" value="957.5,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="center" value="1119,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="center" value="1280,731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="731" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="731" />
+		</include>
 		<control type="image">
 			<width>323</width>
 			<height>242</height>
@@ -95,6 +287,117 @@
 		<top>790</top>
 		<width>2260</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="311.5,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="473,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="center" value="634.5,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="center" value="796,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="center" value="957.5,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="center" value="1119,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="center" value="1280,911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="911" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="911" />
+		</include>
 		<control type="image">
 			<width>323</width>
 			<height>242</height>
@@ -143,6 +446,57 @@
 		<top>610</top>
 		<width>1140</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="340,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="530,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,3)" />
+			<param name="center" value="720,731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="340" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="530" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,3)" />
+			<param name="x" value="720" />
+			<param name="y" value="731" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="340" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="530" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,3)" />
+			<param name="x" value="720" />
+			<param name="y" value="731" />
+		</include>
 		<control type="image">
 			<width>380</width>
 			<height>242</height>
@@ -174,24 +528,378 @@
 		<top>610</top>
 		<width>1620</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="312,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="474,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="center" value="636,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="center" value="798,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,5)" />
+			<param name="center" value="960,731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="312" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="474" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="636" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="798" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,5)" />
+			<param name="x" value="960" />
+			<param name="y" value="731" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="312" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="474" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="636" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="798" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,5)" />
+			<param name="x" value="960" />
+			<param name="y" value="731" />
+		</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords2_21:9">
 		<left>150</left>
 		<top>610</top>
 		<width>2260</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="311.5,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="473,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="center" value="634.5,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="center" value="796,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="center" value="957.5,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="center" value="1119,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="center" value="1280,731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="731" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="731" />
+		</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords2_21:9_masked">
 		<left>150</left>
 		<top>790</top>
 		<width>2260</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="311.5,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="473,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="center" value="634.5,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="center" value="796,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="center" value="957.5,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="center" value="1119,911" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="center" value="1280,911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="911" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="311.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="473" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,3)" />
+			<param name="x" value="634.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,4)" />
+			<param name="x" value="796" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,5)" />
+			<param name="x" value="957.5" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,6)" />
+			<param name="x" value="1119" />
+			<param name="y" value="911" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,7)" />
+			<param name="x" value="1280" />
+			<param name="y" value="911" />
+		</include>
 	</include>
 	<include name="VideoOSDBookmarks_coords2_4:3">
 		<left>150</left>
 		<top>610</top>
 		<width>1140</width>
 		<height>290</height>
+		<!-- The row zooms about the middle of its panel, which is only as wide as the bookmarks it holds: an
+		     auto centre would be the middle of the full row -->
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="center" value="340,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="center" value="530,731" />
+		</include>
+		<include content="OSDReplaceOpenCloseAnimation">
+			<param name="osd" value="Window.IsVisible(VideoOSD) | !String.IsEmpty(Window(12005).Property(SeekBar)) | !String.IsEmpty(Window(12005).Property(FullScreenInfo))" />
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,3)" />
+			<param name="center" value="720,731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="340" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="530" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentre">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,3)" />
+			<param name="x" value="720" />
+			<param name="y" value="731" />
+		</include>
+		<include content="OSDVisibleHiddenAnimation">
+			<param name="when" value="Integer.IsGreater(Container(11).NumItems,0)" />
+			<param name="center" value="0,0" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,1)" />
+			<param name="x" value="340" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsEqual(Container(11).NumItems,2)" />
+			<param name="x" value="530" />
+			<param name="y" value="731" />
+		</include>
+		<include content="ZoomCentreReturn">
+			<param name="when" value="Integer.IsGreaterOrEqual(Container(11).NumItems,3)" />
+			<param name="x" value="720" />
+			<param name="y" value="731" />
+		</include>
 	</include>
 
 	<include name="VideoOSDBookmarks_coords3">

@@ -210,7 +210,6 @@
 			     rows as in the OSD settings dialogs -->
 			<control type="group">
 				<include>DialogSelect_coords15</include>
-				<include>StreamSelectOpenCloseAnimation</include>
 				<animation effect="slide" end="0,200" time="0" condition="Integer.IsEqual(Container(3).NumItems,1)">Conditional</animation>
 				<animation effect="slide" end="0,150" time="0" condition="Integer.IsEqual(Container(3).NumItems,2)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="0" condition="Integer.IsEqual(Container(3).NumItems,3)">Conditional</animation>
@@ -256,7 +255,9 @@
 			<!-- Buttons, where the OSD bar was -->
 			<control type="group">
 				<include>DialogSelect_coords21</include>
-				<include>StreamSelectOpenCloseAnimation</include>
+				<include content="OSDReplaceOpenCloseAnimation">
+					<param name="osd" value="Window.IsVisible(VideoOSD)" />
+				</include>
 
 				<!-- Background -->
 				<control type="image">
@@ -327,21 +328,5 @@
 				</control>
 			</control>
 		</control>
-	</include>
-
-	<!-- As the bookmarks: opened from the OSD, the panel waits for the OSD to fade first -->
-	<include name="StreamSelectOpenCloseAnimation">
-		<animation type="WindowOpen" condition="Window.IsVisible(VideoOSD)">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" delay="200" />
-			<effect type="fade" start="0" end="100" time="200" delay="200" />
-		</animation>
-		<animation type="WindowOpen" condition="!Window.IsVisible(VideoOSD)">
-			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
-			<effect type="fade" start="0" end="100" time="200" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200"/>
-			<effect type="fade" start="100" end="0" time="200"/>
-		</animation>
 	</include>
 </includes>
