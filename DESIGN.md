@@ -586,7 +586,7 @@ Status overlays come in six tiers, each drawn at its own size (see Watched-statu
 
 - Every button is 60 px tall; the row shares one baseline. Transport glyphs sit flush in their boxes: Play,
   Pause, Stop, Record and the channel buttons 36 wide, trick triangles 18 × 26 and skip bars 5 × 26, centred
-  on y 30. Everything on the bar keeps a 20 px inset, the progress bar's time labels included: the transport
+  on y 30. The channel arrows are the Play glyph turned a quarter turn, 36 × 33 with its 4 px corners. Everything on the bar keeps a 20 px inset, the progress bar's time labels included: the transport
   grouplist sits 20 px in, the options grouplist 8 px (its 60 px buttons keep their glyphs 12 px inside, so
   the last glyph ends 20 px from the edge; a narrower last glyph, such as Bookmarks, ends a little further
   in). The transport row has itemgap 20 and no spacers, so a hidden button takes its gap with it. The seek
