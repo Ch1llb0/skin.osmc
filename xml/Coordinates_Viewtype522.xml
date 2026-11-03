@@ -78,7 +78,7 @@
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
-				<param name="mask">common/masks/art-128x192.png</param>
+				<param name="mask">common/masks/art-128x128.png</param>
 				<param name="coords2">Viewtype522_coords13</param>
 				<param name="coords3">Viewtype522_coords14</param>
 				<param name="overlayset">12</param>
@@ -118,7 +118,7 @@
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
-				<param name="mask">common/masks/art-128x192.png</param>
+				<param name="mask">common/masks/art-128x128.png</param>
 				<param name="coords2">Viewtype522_coords13</param>
 				<param name="coords3">Viewtype522_coords14</param>
 				<param name="overlayset">12</param>
@@ -158,7 +158,7 @@
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
-				<param name="mask">common/masks/art-128x192.png</param>
+				<param name="mask">common/masks/art-128x128.png</param>
 				<param name="coords2">Viewtype522_coords13</param>
 				<param name="coords3">Viewtype522_coords14</param>
 				<param name="overlayset">12</param>
@@ -198,7 +198,7 @@
 				<param name="id">522</param>
 				<param name="coords">Viewtype522_coords12</param>
 
-				<param name="mask">common/masks/art-128x192.png</param>
+				<param name="mask">common/masks/art-128x128.png</param>
 				<param name="coords2">Viewtype522_coords13</param>
 				<param name="coords3">Viewtype522_coords14</param>
 				<param name="overlayset">12</param>
@@ -247,7 +247,7 @@
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
-					<param name="mask">common/masks/art-320x480.png</param>
+					<param name="mask">common/masks/art-320x320.png</param>
 					<param name="coords2">Viewtype522_coords16</param>
 					<param name="coords3">Viewtype522_coords17</param>
 					<param name="overlayset">32</param>
@@ -290,7 +290,7 @@
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
-					<param name="mask">common/masks/art-320x480.png</param>
+					<param name="mask">common/masks/art-320x320.png</param>
 					<param name="coords2">Viewtype522_coords16</param>
 					<param name="coords3">Viewtype522_coords17</param>
 					<param name="overlayset">32</param>
@@ -333,7 +333,7 @@
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
-					<param name="mask">common/masks/art-320x480.png</param>
+					<param name="mask">common/masks/art-320x320.png</param>
 					<param name="coords2">Viewtype522_coords16</param>
 					<param name="coords3">Viewtype522_coords17</param>
 					<param name="overlayset">32</param>
@@ -376,7 +376,7 @@
 					<param name="id">522</param>
 					<param name="coords">Viewtype522_coords15</param>
 
-					<param name="mask">common/masks/art-320x480.png</param>
+					<param name="mask">common/masks/art-320x320.png</param>
 					<param name="coords2">Viewtype522_coords16</param>
 					<param name="coords3">Viewtype522_coords17</param>
 					<param name="overlayset">32</param>
