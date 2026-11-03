@@ -357,12 +357,6 @@
 
 	<!-- Additional widgets -->
 	<group name="additional-widgets" label="$LOCALIZE[31230]" icon="DefaultShortcut.png">
-		<widget name="SkinHelperWidgets" label="$LOCALIZE[31081]" icon="DefaultFolder.png" browse="true" visible="System.AddonIsEnabled(script.skin.helper.widgets)">
-			<path>plugin://script.skin.helper.service/?action=widgets&amp;path=scriptwidgets</path>
-		</widget>
-		<widget name="ExtendedInfoWidgets" label="$LOCALIZE[31236]" icon="DefaultFolder.png" browse="true" visible="System.AddonIsEnabled(script.extendedinfo)">
-			<path>plugin://script.skin.helper.service/?action=widgets&amp;path=extendedinfo</path>
-		</widget>
 		<widget name="Favourites" label="$LOCALIZE[1036]" type="favourite" icon="DefaultFavourites.png">
 			<path>favourites://</path>
 		</widget>

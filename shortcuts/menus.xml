@@ -508,15 +508,6 @@
 		<content source="settings" folder="$LOCALIZE[10004]" />
 		<!-- Kodi commands -->
 		<content source="commands" folder="$LOCALIZE[31232]" />
-		<!-- Additional main menu items -->
-		<group name="additional-items" label="$LOCALIZE[31231]" icon="DefaultShortcut.png" visible="String.IsEqual(Window.Property(menuname),mainmenu) + [System.AddonIsEnabled(script.skin.helper.widgets) | System.AddonIsEnabled(script.extendedinfo)]">
-			<shortcut name="skinhelper-widgets" label="$LOCALIZE[31081]" icon="DefaultFolder.png" browse="videos" visible="System.AddonIsEnabled(script.skin.helper.widgets)">
-				<path>plugin://script.skin.helper.service/?action=widgets&amp;path=scriptwidgets</path>
-			</shortcut>
-			<shortcut name="extendedinfo-widgets" label="$LOCALIZE[31236]" icon="DefaultFolder.png" browse="videos" visible="System.AddonIsEnabled(script.extendedinfo)">
-				<path>plugin://script.skin.helper.service/?action=widgets&amp;path=extendedinfo</path>
-			</shortcut>
-		</group>
 	</groupings>
 
 	<!-- Subdialogs -->

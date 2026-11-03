@@ -98,21 +98,17 @@
 		<value condition="Control.HasFocus(623)">$LOCALIZE[31450]</value>
 		<value condition="Container(9000).HasFocus(7) + !ControlGroup(10000).HasFocus">$LOCALIZE[31338]</value>
 		<value condition="Control.HasFocus(702)">$LOCALIZE[31339]</value>
-		<value condition="Control.HasFocus(703)">$LOCALIZE[31340]</value>
-		<value condition="Control.HasFocus(704)">$LOCALIZE[31341]</value>
-		<value condition="Control.HasFocus(705)">$LOCALIZE[31342]</value>
-		<value condition="Control.HasFocus(708)">$LOCALIZE[31343]</value>
-		<value condition="Control.HasFocus(709)">$LOCALIZE[31408]</value>
-		<value condition="Control.HasFocus(710)">$LOCALIZE[31344]</value>
-		<value condition="Control.HasFocus(711)">$LOCALIZE[31393]</value>
-		<value condition="Control.HasFocus(712)">$LOCALIZE[31345]</value>
+		<value condition="Control.HasFocus(705)">$LOCALIZE[31343]</value>
+		<value condition="Control.HasFocus(706)">$LOCALIZE[31408]</value>
+		<value condition="Control.HasFocus(707)">$LOCALIZE[31344]</value>
+		<value condition="Control.HasFocus(708)">$LOCALIZE[31393]</value>
+		<value condition="Control.HasFocus(709)">$LOCALIZE[31345]</value>
 		<value condition="Container(9000).HasFocus(8) + !ControlGroup(10000).HasFocus">$LOCALIZE[31346]</value>
-		<value condition="Control.HasFocus(801)">$LOCALIZE[31347]</value>
-		<value condition="Control.HasFocus(802)">$LOCALIZE[31348]</value>
-		<value condition="Control.HasFocus(803)">$LOCALIZE[31349]</value>
-		<value condition="Control.HasFocus(804)">$LOCALIZE[31350]</value>
-		<value condition="Control.HasFocus(805)">$LOCALIZE[31351]</value>
-		<value condition="Control.HasFocus(806)">$LOCALIZE[31352]</value>
+		<value condition="Control.HasFocus(801)">$LOCALIZE[31348]</value>
+		<value condition="Control.HasFocus(802)">$LOCALIZE[31349]</value>
+		<value condition="Control.HasFocus(803)">$LOCALIZE[31350]</value>
+		<value condition="Control.HasFocus(804)">$LOCALIZE[31351]</value>
+		<value condition="Control.HasFocus(805)">$LOCALIZE[31352]</value>
 	</variable>
 
 	<!-- Skin Shortcuts explanation -->
@@ -288,26 +284,6 @@
 	<variable name="addon-skinshortcuts">
 		<value condition="System.AddonIsEnabled(script.skinshortcuts)">[COLOR lightgreen]v$INFO[System.AddonVersion(script.skinshortcuts)] $LOCALIZE[31093][/COLOR]</value>
 		<value condition="System.HasAddon(script.skinshortcuts) + !System.AddonIsEnabled(script.skinshortcuts)">[COLOR orange]$LOCALIZE[31119][/COLOR]</value>
-		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
-	</variable>
-	<variable name="addon-skinhelper">
-		<value condition="System.AddonIsEnabled(script.skin.helper.service)">[COLOR lightgreen]v$INFO[System.AddonVersion(script.skin.helper.service)] $LOCALIZE[31093][/COLOR]</value>
-		<value condition="System.HasAddon(script.skin.helper.service) + !System.AddonIsEnabled(script.skin.helper.service)">[COLOR orange]$LOCALIZE[31119][/COLOR]</value>
-		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
-	</variable>
-	<variable name="addon-skinhelperbackgrounds">
-		<value condition="System.AddonIsEnabled(script.skin.helper.backgrounds)">[COLOR lightgreen]v$INFO[System.AddonVersion(script.skin.helper.backgrounds)] $LOCALIZE[31093][/COLOR]</value>
-		<value condition="System.HasAddon(script.skin.helper.backgrounds) + !System.AddonIsEnabled(script.skin.helper.backgrounds)">[COLOR orange]$LOCALIZE[31119][/COLOR]</value>
-		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
-	</variable>
-	<variable name="addon-skinhelperwidgets">
-		<value condition="System.AddonIsEnabled(script.skin.helper.widgets)">[COLOR lightgreen]v$INFO[System.AddonVersion(script.skin.helper.widgets)] $LOCALIZE[31093][/COLOR]</value>
-		<value condition="System.HasAddon(script.skin.helper.widgets) + !System.AddonIsEnabled(script.skin.helper.widgets)">[COLOR orange]$LOCALIZE[31119][/COLOR]</value>
-		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
-	</variable>
-	<variable name="addon-skinhelperbackup">
-		<value condition="System.AddonIsEnabled(script.skin.helper.skinbackup)">[COLOR lightgreen]v$INFO[System.AddonVersion(script.skin.helper.skinbackup)] $LOCALIZE[31093][/COLOR]</value>
-		<value condition="System.HasAddon(script.skin.helper.skinbackup) + !System.AddonIsEnabled(script.skin.helper.skinbackup)">[COLOR orange]$LOCALIZE[31119][/COLOR]</value>
 		<value>[COLOR red]$LOCALIZE[31092][/COLOR]</value>
 	</variable>
 	<variable name="addon-autocompletion">

@@ -40,10 +40,6 @@ msgctxt "#31005"
 msgid "Disable scrollbars"
 msgstr ""
 
-msgctxt "#31006"
-msgid "Overlays"
-msgstr ""
-
 msgctxt "#31007"
 msgid "System music files"
 msgstr ""
@@ -72,41 +68,12 @@ msgctxt "#31013"
 msgid "Muted"
 msgstr ""
 
-msgctxt "#31014"
-msgid "Show visualisation & Artist Slideshow"
-msgstr ""
-
 msgctxt "#31015"
 msgid "Favourite"
 msgstr ""
 
 msgctxt "#31016"
 msgid "Settings level"
-msgstr ""
-
-msgctxt "#31017"
-msgid "Voted"
-msgstr ""
-
-msgctxt "#31018"
-msgid "Increase"
-msgstr ""
-
-msgctxt "#31019"
-msgid "Decrease"
-msgstr ""
-
-msgctxt "#31020"
-msgid "Background"
-msgstr ""
-
-msgctxt "#31021"
-msgid "Home"
-msgstr ""
-
-#: /MyPVRChannels.xml /MyPVRGuide.xml /MyPVRRecordings.xml /MyPVRSearch.xml /MyPVRTimers.xml
-msgctxt "#31022"
-msgid "Rules"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -147,14 +114,6 @@ msgctxt "#31030"
 msgid "Enable main menu customization"
 msgstr ""
 
-msgctxt "#31031"
-msgid "Recent movies"
-msgstr ""
-
-msgctxt "#31032"
-msgid "Recommended movies"
-msgstr ""
-
 #: /script-skinshortcuts.xml
 msgctxt "#31033"
 msgid "Artwork"
@@ -164,25 +123,9 @@ msgctxt "#31034"
 msgid "Show background Artist Slideshow"
 msgstr ""
 
-msgctxt "#31035"
-msgid "Recent episodes"
-msgstr ""
-
-msgctxt "#31036"
-msgid "Recommended episodes"
-msgstr ""
-
 #: /SkinSettings.xml
 msgctxt "#31037"
 msgid "Colour used for controls without focus like buttons, scrollbars or non-highlighted indicators and progress bars[CR]Adjust colour opacity via the edit colour value button (the alpha channel - the first two hex digits adjust opacity)"
-msgstr ""
-
-msgctxt "#31038"
-msgid "Recent albums"
-msgstr ""
-
-msgctxt "#31039"
-msgid "Recommended albums"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -196,26 +139,6 @@ msgstr ""
 
 msgctxt "#31042"
 msgid "Debug labels"
-msgstr ""
-
-msgctxt "#31043"
-msgid "Extra art"
-msgstr ""
-
-msgctxt "#31044"
-msgid "Local subtitle found!"
-msgstr ""
-
-msgctxt "#31045"
-msgid "Supplied by"
-msgstr ""
-
-msgctxt "#31046"
-msgid "Currently"
-msgstr ""
-
-msgctxt "#31047"
-msgid "Visualisation Presets"
 msgstr ""
 
 msgctxt "#31048"
@@ -232,16 +155,6 @@ msgid "Colour used for the OSD cache bar[CR]Adjust colour opacity via the edit c
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31051"
-msgid "Settings can be accessed from the Shutdown menu.[CR]ONLY deactivate 'Always show settings link in main menu' AND remove the settings and power main menu item at the same time, if you know what you're doing!"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31052"
-msgid "Backup and restore skin settings"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31053"
 msgid "Disable scrolling label"
 msgstr ""
@@ -249,11 +162,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31054"
 msgid "Random movies"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31055"
-msgid "Random episodes"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -291,22 +199,8 @@ msgid "Menu/OSD colour"
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31063"
-msgid "Add-ons"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31064"
-msgid "Custom background image"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31065"
 msgid "Masking aspect ratio"
-msgstr ""
-
-msgctxt "#31066"
-msgid "Cinema Exp."
 msgstr ""
 
 #: /SkinSettings.xml
@@ -329,41 +223,6 @@ msgctxt "#31070"
 msgid "OSMC Light blue"
 msgstr ""
 
-#: /Variables.xml
-msgctxt "#31071"
-msgid "Edit sub menu"
-msgstr ""
-
-#: /script-nextup-notification-StillWatchingInfo.xml
-msgctxt "#31072"
-msgid "Still there?"
-msgstr ""
-
-#: /script-nextup-notification-StillWatchingInfo.xml
-msgctxt "#31073"
-msgid "Click OK to keep watching"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31074"
-msgid "Always show music info during fullscreen music playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31075"
-msgid "Reset/Debug"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31076"
-msgid "Widget fanart in the main menu"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31077"
-msgid "Widget icons in the main menu"
-msgstr ""
-
 #: /Viewtype53.xml /Viewtype535.xml
 msgctxt "#31078"
 msgid "Wall"
@@ -377,11 +236,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31080"
 msgid "Recommended"
-msgstr ""
-
-#: /SkinSettings.xml /shortcuts/overrides.xml
-msgctxt "#31081"
-msgid "Skin Helper Service"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -444,24 +298,9 @@ msgctxt "#31093"
 msgid "installed"
 msgstr ""
 
-#: /SkinSettings.xml
-msgctxt "#31094"
-msgid "Multi-image weather fanart is not supported"
-msgstr ""
-
 #: /Variables.xml
 msgctxt "#31095"
 msgid "Manage widgets"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31096"
-msgid "Always show settings link in main menu"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31097"
-msgid "Skin Helper Service Skin Backup"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -502,11 +341,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31105"
 msgid "Disable underline text highlight"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31106"
-msgid "Skin Helper Service Widgets"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -595,38 +429,8 @@ msgid "Show OSD info when video playback starts"
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31124"
-msgid "Active for movie playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31125"
-msgid "Active for TV show playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31126"
-msgid "Active for live TV playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31127"
-msgid "Active for music video playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31128"
-msgid "Active for other video playback"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31129"
 msgid "Duration after playback starts"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31130"
-msgid "Show OSD info when switching TV channels"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -665,11 +469,6 @@ msgid "Time per image"
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31138"
-msgid "Randomize"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31139"
 msgid "Reset path"
 msgstr ""
@@ -677,11 +476,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31140"
 msgid "Customization dialog to change the way the main menu looks[CR]Main menu and submenu items and widgets can be edited."
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31141"
-msgid "Open music fullscreen window when starting playback"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -759,26 +553,6 @@ msgctxt "#31156"
 msgid "Click OK to toggle player debug information."
 msgstr ""
 
-#: /script-skinshortcuts-includes.xml /script-skinshortcuts-static.xml
-msgctxt "#31157"
-msgid "Previous"
-msgstr ""
-
-#: /script-skinshortcuts-includes.xml /script-skinshortcuts-static.xml
-msgctxt "#31158"
-msgid "Current"
-msgstr ""
-
-#: /script-skinshortcuts-includes.xml /script-skinshortcuts-static.xml
-msgctxt "#31159"
-msgid "Next"
-msgstr ""
-
-#: /script-skinshortcuts-includes.xml /script-skinshortcuts-static.xml
-msgctxt "#31160"
-msgid "Widget"
-msgstr ""
-
 #: /script-skinshortcuts.xml
 msgctxt "#31161"
 msgid "Hide"
@@ -807,11 +581,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31166"
 msgid "Disabled text colour"
-msgstr ""
-
-#: /script-skinshortcuts-includes.xml
-msgctxt "#31167"
-msgid "Recently added movies"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1080,11 +849,6 @@ msgid "Unwatched Music Videos"
 msgstr ""
 
 #: /shortcuts/overrides.xml
-msgctxt "#31221"
-msgid "PVR"
-msgstr ""
-
-#: /shortcuts/overrides.xml
 msgctxt "#31222"
 msgid "Last Played TV Channels"
 msgstr ""
@@ -1130,11 +894,6 @@ msgid "Additional widgets"
 msgstr ""
 
 #: /shortcuts/overrides.xml
-msgctxt "#31231"
-msgid "Additional main menu items"
-msgstr ""
-
-#: /shortcuts/overrides.xml
 msgctxt "#31232"
 msgid "Commands"
 msgstr ""
@@ -1152,11 +911,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31235"
 msgid "Dark blue"
-msgstr ""
-
-#: /shortcuts/overrides.xml
-msgctxt "#31236"
-msgid "ExtendedInfo Script"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1182,11 +936,6 @@ msgstr ""
 #: /Variables.xml
 msgctxt "#31241"
 msgid "Wide"
-msgstr ""
-
-#: /Variables.xml
-msgctxt "#31242"
-msgid "Examining available artwork"
 msgstr ""
 
 #: /Variables.xml
@@ -1292,11 +1041,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31267"
 msgid "In order to be able to customize the main menu an add-on has to be installed first."
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31268"
-msgid "The settings link is always shown in the main menu despite any customization via the skin's main menu customization dialog.[CR]Warning: If you remove Settings from the main menu and disable this setting, another way to access Settings such as a custom keyboard shortcut will be needed."
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1470,31 +1214,6 @@ msgid "Show video information when playback begins"
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31303"
-msgid "Show video information at the beginning of movie playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31304"
-msgid "Show video information at the beginning of TV show playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31305"
-msgid "Show video information at the beginning of live TV playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31306"
-msgid "Show video information at the beginning of music video playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31307"
-msgid "Show video information at the beginning of playback of other videos"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31308"
 msgid "Duration video information is shown for when playback begins (default: 10s)[CR]Options available: 5s, 10s, 15s, 20s"
 msgstr ""
@@ -1502,26 +1221,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31309"
 msgid "Show video information before playback ends"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31310"
-msgid "Show video information before the end of movie playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31311"
-msgid "Show video information before the end of TV show playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31312"
-msgid "Show video information before the end of music video playback"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31313"
-msgid "Show video information before the end of playback of other videos"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1655,21 +1354,6 @@ msgid "Enables customization of the main menu[CR]If not installed or disabled, t
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31340"
-msgid "Warning: This add-on is currently only available from 'Marcelveldt's BETA repository' which has to be installed manually.[CR][CR]Additional customization functions[CR]Required for the following two add-ons"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31341"
-msgid "Warning: This add-on is currently only available from 'Marcelveldt's BETA repository' which has to be installed manually.[CR][CR]Provides extra widgets to customize the main menu"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31342"
-msgid "Warning: This add-on is currently only available from 'Marcelveldt's BETA repository' which has to be installed manually.[CR][CR]Lets you backup and restore your skin settings"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31343"
 msgid "Word completion assistant for the virtual keyboard"
 msgstr ""
@@ -1687,11 +1371,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31346"
 msgid "Settings to reset skin settings, perform skin settings backups and enable debug information"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31347"
-msgid "Warning: The add-on required for this is currently only available from 'Marcelveldt's BETA repository' which has to be installed manually.[CR][CR]Backup and restore skin settings"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1939,16 +1618,6 @@ msgctxt "#31396"
 msgid "Square small"
 msgstr ""
 
-#: /script-skinshortcuts.xml
-msgctxt "#31397"
-msgid "Main menu item"
-msgstr ""
-
-#: /script-skinshortcuts.xml
-msgctxt "#31398"
-msgid "Submenu item"
-msgstr ""
-
 #: /SkinSettings.xml
 msgctxt "#31399"
 msgid "Reset all menus and views"
@@ -1990,11 +1659,6 @@ msgid "Library Node Editor"
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31407"
-msgid "Reset to colour default"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31408"
 msgid "Enables customization of library nodes from the library root context menu"
 msgstr ""
@@ -2005,18 +1669,8 @@ msgid "Set default view for video add-ons"
 msgstr ""
 
 #: /SkinSettings.xml
-msgctxt "#31410"
-msgid "Default view"
-msgstr ""
-
-#: /SkinSettings.xml
 msgctxt "#31411"
 msgid "Views in video add-ons have to be set for each page seperately. Force a specific view to be used for all video add-on pages."
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31412"
-msgid "The view used for all video add-on pages (default: List)[CR]Options available: List, List info, Wide, Wide info, Wide low, Wide low info, Wall, Wall info, Wall small, Wall small info, Wall low"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -2122,11 +1776,6 @@ msgstr ""
 #: /SkinSettings.xml
 msgctxt "#31433"
 msgid "Disable the genre based colour background of the TV/radio guide tiles for a more minimalistic look."
-msgstr ""
-
-#: /DialogColorPicker.xml
-msgctxt "#31434"
-msgid "Pick colour"
 msgstr ""
 
 #: /SkinSettings.xml

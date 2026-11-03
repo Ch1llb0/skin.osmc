@@ -239,6 +239,8 @@ commit that hand-edits a `msgstr` is overwritten on the next sync. The split to 
   the XML that uses them. String ids are **append-only**: take `max(id) + 1`, and never reassign a retired id,
   because Kodi keys on `msgctxt` alone and reusing an id silently repoints every locale's translation.
   Skin ids are confined to 31000-31999.
+- **A string nothing references leaves `en_gb`** in the commit that drops its last use in `xml/`,
+  `shortcuts/` or `addon.xml`. Its id stays retired.
 - **Translations** of those strings come back through Weblate. Do not PR them.
 
 Changing an existing `msgid` invalidates every translation of it, so avoid cosmetic rewording — a hyphen
