@@ -1905,3 +1905,8 @@ msgstr ""
 msgctxt "#31460"
 msgid "Audio description"
 msgstr ""
+
+#: /Variables.xml
+msgctxt "#31461"
+msgid "Achievements already earned can be triggered again. Applies the next time the game is loaded."
+msgstr ""

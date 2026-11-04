@@ -971,7 +971,7 @@
 	<!-- The achievements dialog explains its focused switch on the line above the buttons -->
 	<variable name="GameAchievementsHelp">
 		<value condition="Control.HasFocus(108340)">$LOCALIZE[35302]</value>
-		<value condition="Control.HasFocus(108331)">$LOCALIZE[35304]</value>
+		<value condition="Control.HasFocus(108331)">$LOCALIZE[31461]</value>
 		<value condition="Control.HasFocus(108332)">$LOCALIZE[35366]</value>
 	</variable>
 
