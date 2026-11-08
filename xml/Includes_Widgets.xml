@@ -495,17 +495,21 @@
 		<param name="twoup">False</param>
 		<param name="shown">False</param>
 		<definition>
-			<!-- Visible/Hidden (group) animation -->
+			<!-- Only the widgets on screen and the one either side of the selected one are visible to
+			     Kodi, so it neither processes nor refreshes the rest. The neighbours stay faded out:
+			     the buttons that switch widgets focus the next one before they select it, and a
+			     hidden list cannot take focus. -->
+			<visible>Control.IsVisible($PARAM[container1]) + [[![$PARAM[twoup]] + String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])] | [[$PARAM[twoup]] + [$PARAM[shown]]] | String.IsEqual(Container($PARAM[container1]).ListItem(-1).Property(widgetID),$PARAM[container2]) | String.IsEqual(Container($PARAM[container1]).ListItem(1).Property(widgetID),$PARAM[container2])]</visible>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="400" />
+			</animation>
 			<animation type="Conditional" condition="Control.IsVisible($PARAM[container1])">
 				<effect type="fade" start="0" end="100" time="400" delay="400" />
-			</animation>
-			<animation type="Conditional" condition="!Control.IsVisible($PARAM[container1])">
-				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
 
 			<!-- Selected/deselected widget animation. With two on screen the pair sharing a page
 			     fades together, so paging crossfades exactly as moving between single widgets does. -->
-			<animation type="Conditional" condition="[![$PARAM[twoup]] + String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])] | [[$PARAM[twoup]] + [$PARAM[shown]]]">
+			<animation type="Conditional" condition="[[![$PARAM[twoup]] + String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])] | [[$PARAM[twoup]] + [$PARAM[shown]]]]">
 				<effect type="fade" start="0" end="100" time="400" delay="400" />
 			</animation>
 			<animation type="Conditional" condition="![[![$PARAM[twoup]] + String.IsEqual(Container($PARAM[container1]).ListItem.Property(widgetID),$PARAM[container2])] | [[$PARAM[twoup]] + [$PARAM[shown]]]]">
