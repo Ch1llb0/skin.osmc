@@ -2037,6 +2037,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -2086,6 +2088,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -2132,6 +2136,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -2180,6 +2186,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -2227,14 +2235,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -2276,13 +2287,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -2322,14 +2336,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -2370,14 +2387,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -2496,6 +2516,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -2545,6 +2567,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -2591,6 +2615,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -2639,6 +2665,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -2686,14 +2714,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -2735,13 +2766,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -2781,14 +2815,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -2829,14 +2866,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -2955,6 +2995,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3004,6 +3046,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -3050,6 +3094,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3098,6 +3144,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3145,14 +3193,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -3194,13 +3245,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -3240,14 +3294,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -3288,14 +3345,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -3414,6 +3474,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3463,6 +3525,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -3509,6 +3573,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3557,6 +3623,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3604,14 +3672,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -3653,13 +3724,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -3699,14 +3773,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -3747,14 +3824,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -3873,6 +3953,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -3922,6 +4004,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -3968,6 +4052,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4016,6 +4102,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4063,14 +4151,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -4112,13 +4203,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -4158,14 +4252,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -4206,14 +4303,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -4332,6 +4432,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4381,6 +4483,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -4427,6 +4531,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4475,6 +4581,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4522,14 +4630,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -4571,13 +4682,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -4617,14 +4731,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -4665,14 +4782,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -4791,6 +4911,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4840,6 +4962,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -4886,6 +5010,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4934,6 +5060,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -4981,14 +5109,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -5030,13 +5161,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -5076,14 +5210,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -5124,14 +5261,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -5250,6 +5390,8 @@
 					<param name="left">12</param>
 					<param name="width">216</param>
 					<param name="height">24</param>
+					<param name="overlayset">24</param>
+					<param name="pvrset">24</param>
 					<param name="centerleft">108</param>
 					<param name="slide">12</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -5299,6 +5441,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="font">Font23-title</param>
@@ -5345,6 +5489,8 @@
 							<param name="left">12</param>
 							<param name="width">216</param>
 							<param name="height">24</param>
+							<param name="overlayset">24</param>
+							<param name="pvrset">24</param>
 							<param name="centerleft">108</param>
 							<param name="slide">12</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -5393,6 +5539,8 @@
 						<param name="left">12</param>
 						<param name="width">216</param>
 						<param name="height">24</param>
+						<param name="overlayset">24</param>
+						<param name="pvrset">24</param>
 						<param name="centerleft">108</param>
 						<param name="slide">12</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -5440,14 +5588,17 @@
 					<param name="left">29</param>
 					<param name="width">133</param>
 					<param name="height">16</param>
-					<param name="centerleft">66.5</param>
+					<param name="overlayset">16</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">0</param>
+					<param name="centerleft">66</param>
 					<param name="slide">8</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font16-title</param>
 					<param name="scrollspeed">25</param>
-					<param name="pad">5</param>
+					<param name="pad">8</param>
 					<param name="titleright">37</param>
-					<param name="badgeshift">45.5</param>
+					<param name="badgeshift">46</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -5489,13 +5640,16 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -5535,14 +5689,17 @@
 							<param name="left">29</param>
 							<param name="width">133</param>
 							<param name="height">16</param>
-							<param name="centerleft">66.5</param>
+							<param name="overlayset">16</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">0</param>
+							<param name="centerleft">66</param>
 							<param name="slide">8</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font16-title</param>
 							<param name="scrollspeed">25</param>
-							<param name="pad">5</param>
+							<param name="pad">8</param>
 							<param name="titleright">37</param>
-							<param name="badgeshift">45.5</param>
+							<param name="badgeshift">46</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -5583,14 +5740,17 @@
 						<param name="left">29</param>
 						<param name="width">133</param>
 						<param name="height">16</param>
-						<param name="centerleft">66.5</param>
+						<param name="overlayset">16</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">0</param>
+						<param name="centerleft">66</param>
 						<param name="slide">8</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font16-title</param>
 						<param name="scrollspeed">25</param>
-						<param name="pad">5</param>
+						<param name="pad">8</param>
 						<param name="titleright">37</param>
-						<param name="badgeshift">45.5</param>
+						<param name="badgeshift">46</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -5683,7 +5843,7 @@
 						<top>60</top>
 						<width>162</width>
 						<height>197</height>
-						<texture background="true" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="common/masks/art-162x197.png" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 					</control>
@@ -5721,7 +5881,7 @@
 							<top>60</top>
 							<width>162</width>
 							<height>197</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture background="true" diffuse="common/masks/art-162x197.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center">keep</aspectratio>
 							<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 						</control>
@@ -5743,7 +5903,7 @@
 							<top>60</top>
 							<width>162</width>
 							<height>197</height>
-							<texture background="true" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
+							<texture background="true" diffuse="common/masks/art-162x197.png" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="center">keep</aspectratio>
 							<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 						</control>
@@ -5822,7 +5982,7 @@
 						<top>60</top>
 						<width>162</width>
 						<height>197</height>
-						<texture background="true" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="common/masks/art-162x197.png" colordiffuse="$VAR[DiffusePosterNF]">$INFO[ListItem.Icon]</texture>
 						<aspectratio align="center">keep</aspectratio>
 						<visible>!Skin.HasSetting(weatherIcons.multi)</visible>
 					</control>
@@ -5919,6 +6079,8 @@
 					<param name="left">16</param>
 					<param name="width">288</param>
 					<param name="height">32</param>
+					<param name="overlayset">32</param>
+					<param name="pvrset">32</param>
 					<param name="centerleft">144</param>
 					<param name="slide">16</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -5968,6 +6130,8 @@
 							<param name="left">16</param>
 							<param name="width">288</param>
 							<param name="height">32</param>
+							<param name="overlayset">32</param>
+							<param name="pvrset">32</param>
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
 							<param name="font">Font30</param>
@@ -6014,6 +6178,8 @@
 							<param name="left">16</param>
 							<param name="width">288</param>
 							<param name="height">32</param>
+							<param name="overlayset">32</param>
+							<param name="pvrset">32</param>
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -6062,6 +6228,8 @@
 						<param name="left">16</param>
 						<param name="width">288</param>
 						<param name="height">32</param>
+						<param name="overlayset">32</param>
+						<param name="pvrset">32</param>
 						<param name="centerleft">144</param>
 						<param name="slide">16</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -6109,14 +6277,17 @@
 					<param name="left">18</param>
 					<param name="width">177</param>
 					<param name="height">20</param>
-					<param name="centerleft">88.5</param>
+					<param name="overlayset">20</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">2</param>
+					<param name="centerleft">88</param>
 					<param name="slide">10</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font20-title</param>
 					<param name="scrollspeed">32</param>
-					<param name="pad">7</param>
+					<param name="pad">8</param>
 					<param name="titleright">47</param>
-					<param name="badgeshift">61.5</param>
+					<param name="badgeshift">62</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -6158,13 +6329,16 @@
 							<param name="left">18</param>
 							<param name="width">177</param>
 							<param name="height">20</param>
-							<param name="centerleft">88.5</param>
+							<param name="overlayset">20</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">2</param>
+							<param name="centerleft">88</param>
 							<param name="slide">10</param>
 							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
-							<param name="pad">7</param>
+							<param name="pad">8</param>
 							<param name="titleright">47</param>
-							<param name="badgeshift">61.5</param>
+							<param name="badgeshift">62</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -6204,14 +6378,17 @@
 							<param name="left">18</param>
 							<param name="width">177</param>
 							<param name="height">20</param>
-							<param name="centerleft">88.5</param>
+							<param name="overlayset">20</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">2</param>
+							<param name="centerleft">88</param>
 							<param name="slide">10</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
-							<param name="pad">7</param>
+							<param name="pad">8</param>
 							<param name="titleright">47</param>
-							<param name="badgeshift">61.5</param>
+							<param name="badgeshift">62</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -6252,14 +6429,17 @@
 						<param name="left">18</param>
 						<param name="width">177</param>
 						<param name="height">20</param>
-						<param name="centerleft">88.5</param>
+						<param name="overlayset">20</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">2</param>
+						<param name="centerleft">88</param>
 						<param name="slide">10</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font20-title</param>
 						<param name="scrollspeed">32</param>
-						<param name="pad">7</param>
+						<param name="pad">8</param>
 						<param name="titleright">47</param>
-						<param name="badgeshift">61.5</param>
+						<param name="badgeshift">62</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>
@@ -6378,6 +6558,8 @@
 					<param name="left">16</param>
 					<param name="width">288</param>
 					<param name="height">32</param>
+					<param name="overlayset">32</param>
+					<param name="pvrset">32</param>
 					<param name="centerleft">144</param>
 					<param name="slide">16</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -6427,6 +6609,8 @@
 							<param name="left">16</param>
 							<param name="width">288</param>
 							<param name="height">32</param>
+							<param name="overlayset">32</param>
+							<param name="pvrset">32</param>
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
 							<param name="font">Font30</param>
@@ -6473,6 +6657,8 @@
 							<param name="left">16</param>
 							<param name="width">288</param>
 							<param name="height">32</param>
+							<param name="overlayset">32</param>
+							<param name="pvrset">32</param>
 							<param name="centerleft">144</param>
 							<param name="slide">16</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -6521,6 +6707,8 @@
 						<param name="left">16</param>
 						<param name="width">288</param>
 						<param name="height">32</param>
+						<param name="overlayset">32</param>
+						<param name="pvrset">32</param>
 						<param name="centerleft">144</param>
 						<param name="slide">16</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
@@ -6568,14 +6756,17 @@
 					<param name="left">18</param>
 					<param name="width">177</param>
 					<param name="height">20</param>
-					<param name="centerleft">88.5</param>
+					<param name="overlayset">20</param>
+					<param name="pvrset">16</param>
+					<param name="pvrtop">2</param>
+					<param name="centerleft">88</param>
 					<param name="slide">10</param>
 					<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 					<param name="font">Font20-title</param>
 					<param name="scrollspeed">32</param>
-					<param name="pad">7</param>
+					<param name="pad">8</param>
 					<param name="titleright">47</param>
-					<param name="badgeshift">61.5</param>
+					<param name="badgeshift">62</param>
 					<param name="textcolor">$VAR[TextColorNF]</param>
 				</include>
 			</itemlayout>
@@ -6617,13 +6808,16 @@
 							<param name="left">18</param>
 							<param name="width">177</param>
 							<param name="height">20</param>
-							<param name="centerleft">88.5</param>
+							<param name="overlayset">20</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">2</param>
+							<param name="centerleft">88</param>
 							<param name="slide">10</param>
 							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
-							<param name="pad">7</param>
+							<param name="pad">8</param>
 							<param name="titleright">47</param>
-							<param name="badgeshift">61.5</param>
+							<param name="badgeshift">62</param>
 							<param name="scroll">True</param>
 						</include>
 					</control>
@@ -6663,14 +6857,17 @@
 							<param name="left">18</param>
 							<param name="width">177</param>
 							<param name="height">20</param>
-							<param name="centerleft">88.5</param>
+							<param name="overlayset">20</param>
+							<param name="pvrset">16</param>
+							<param name="pvrtop">2</param>
+							<param name="centerleft">88</param>
 							<param name="slide">10</param>
 							<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 							<param name="font">Font20-title</param>
 							<param name="scrollspeed">32</param>
-							<param name="pad">7</param>
+							<param name="pad">8</param>
 							<param name="titleright">47</param>
-							<param name="badgeshift">61.5</param>
+							<param name="badgeshift">62</param>
 							<param name="textcolor">$VAR[TextColorNF]</param>
 						</include>
 					</control>
@@ -6711,14 +6908,17 @@
 						<param name="left">18</param>
 						<param name="width">177</param>
 						<param name="height">20</param>
-						<param name="centerleft">88.5</param>
+						<param name="overlayset">20</param>
+						<param name="pvrset">16</param>
+						<param name="pvrtop">2</param>
+						<param name="centerleft">88</param>
 						<param name="slide">10</param>
 						<param name="colordiffuse">$VAR[DiffusePosterNF]</param>
 						<param name="font">Font20-title</param>
 						<param name="scrollspeed">32</param>
-						<param name="pad">7</param>
+						<param name="pad">8</param>
 						<param name="titleright">47</param>
-						<param name="badgeshift">61.5</param>
+						<param name="badgeshift">62</param>
 						<param name="textcolor">$VAR[TextColorNF]</param>
 					</include>
 				</control>

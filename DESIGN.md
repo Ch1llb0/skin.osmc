@@ -318,6 +318,13 @@ the right in 200 ms on `MenuOSDColor`, with icon, Font27 heading and Font27 ligh
 - A box holds whole slots only; a partial slot makes the row scroll a column early.
 - *Show two widgets on screen* stacks two rows with smaller slots and title fonts
   (poster 173 × 222 slot, 133 × 200 → 148 × 222 art, Font16-title); every poster's bottom lands at y = 445.
+- **Only what is on screen is live** (`widgetAnimation-OSMC`). The widgets on screen (one, or the pair on a
+  two-row page) and the one either side of the selected widget are visible to Kodi; every other widget, in
+  every menu entry, is hidden by its `<visible>`, so Kodi neither processes it nor refreshes its content. A
+  menu may hold any number of widgets, add-on widgets among them, and a faded control is still visible to
+  Kodi, so never hide a widget with a fade alone. The neighbours stay visible but faded out: the buttons that
+  switch widgets focus the next one before they select it, and a hidden list cannot take focus. Hidden focus
+  (`allowhiddenfocus`) is no way round it, as a list does not draw its focus while hidden.
 
 ---
 

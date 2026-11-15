@@ -2,7 +2,7 @@
 <addon id="skin.osmc" version="22.0.0" name="OSMC Skin" provider-name="OSMC">
 	<requires>
 		<import addon="xbmc.gui" version="5.18.0"/>
-		<import addon="script.skinshortcuts" version="3.0.3" optional="true"/>
+		<import addon="script.skinshortcuts" version="3.0.5" optional="true"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<!-- <res width="2560" height="1080" aspect="21:9" default="true" folder="xml" /> -->

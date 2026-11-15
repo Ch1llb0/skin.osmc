@@ -827,6 +827,7 @@ script-skinshortcuts-static.xml:
 - rebuild it once more for the seeded sorts, which reach the generated content elements of the five widgets that gained one
 - rebuild it against Skin Shortcuts 3.0.3 from a clean profile, picking up everything the configuration gained on this branch
 - follow the menu icons to the default set
+- rebuild it against Skin Shortcuts 3.0.5 from a clean profile, picking up the overlay sizes and the art masks the templates gained
 
 script-skinshortcuts.xml:
 - draw the fanart layer only when the item has fanart, and drop the transparent fallback behind it
@@ -1166,7 +1167,8 @@ media/:
 
 addon.xml:
 - require xbmc.gui 5.18.0
-- require script.skinshortcuts 3.0.3, as the property overrides the configuration uses did not exist before 3.0.2
+- require script.skinshortcuts 3.0.5, for the property overrides the configuration uses (3.0.2), widget sort and limit
+  reaching widgets picked into a slot (3.0.4), and the menu showing on the first start after a Kodi upgrade (3.0.5)
 - bump version to 22.0.0
 - update changelog
 - shorten the news entries to one line each
