@@ -206,20 +206,22 @@
 	<!-- Three sizes of the same spinner, one texture per size so none is drawn scaled: 200 px for
 	     the busy dialog, 60 px for the corner and heading slots, 36 px for a reloading widget. An
 	     unsized image control takes the texture's own size. APNG, not GIF, for a full alpha edge;
-	     the slow set is 30 fps rather than 60 for boxes with less than 512 MB. -->
+	     the slow set is 30 fps rather than 60 for boxes with less than 512 MB. They live in
+	     extras/busy, outside media/: the bundle cannot hold APNG, and OSMC's package keeps nothing
+	     in media/ but the bundle. -->
 	<variable name="BusySpinner">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow.apng</value>
-		<value>busy.apng</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">special://skin/extras/busy/busy-slow.apng</value>
+		<value>special://skin/extras/busy/busy.apng</value>
 	</variable>
 
 	<variable name="BusySpinnerMedium">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-medium.apng</value>
-		<value>busy-medium.apng</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">special://skin/extras/busy/busy-slow-medium.apng</value>
+		<value>special://skin/extras/busy/busy-medium.apng</value>
 	</variable>
 
 	<variable name="BusySpinnerSmall">
-		<value condition="Integer.IsLess(System.Memory(total),512)">busy-slow-small.apng</value>
-		<value>busy-small.apng</value>
+		<value condition="Integer.IsLess(System.Memory(total),512)">special://skin/extras/busy/busy-slow-small.apng</value>
+		<value>special://skin/extras/busy/busy-small.apng</value>
 	</variable>
 
 	<!-- Media images -->

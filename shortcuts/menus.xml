@@ -158,7 +158,7 @@
 		</item>
 		<item name="addons">
 			<label>$LOCALIZE[1038]</label>
-			<action>ActivateWindow(MusicLibrary,Addons,return)</action>
+			<action>ActivateWindow(Music,Addons,return)</action>
 			<icon>DefaultAddonMusic.png</icon>
 		</item>
 		<item name="files">

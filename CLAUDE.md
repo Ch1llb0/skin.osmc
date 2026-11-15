@@ -31,7 +31,9 @@ structural checks in `.github/scripts/validate_skin.py` (see Verifying changes).
 - `shortcuts/` — config for the `script.skinshortcuts` addon: `menus.xml` (menu and submenu structure),
   `widgets.xml`, `backgrounds.xml`, `properties.xml` (widget property pickers) and `templates.xml`.
 - `extras/` — bundled smart playlists (`extras/playlists/*.xsp`), background images, debug grid overlays,
-  and `extras/colors/colors.xml`.
+  `extras/colors/colors.xml`, the busy spinners (`extras/busy/*.apng`) and the flag licences
+  (`extras/licences/`). Anything that is not a bundled image lives here rather than in `media/`: OSMC's
+  package deletes everything in `media/` except `Textures.xbt`, and TexturePacker takes no APNG.
 - `resources/` — addon icon/fanart shown in the Kodi addon browser.
 
 ## Branch model (important — read before editing coordinates)
@@ -254,7 +256,7 @@ Kodi's "install from zip file". Remember that `media/Textures.xbt` shadows the l
 existing PNG needs the bundle rebuilt before it is visible.
 
 What *is* automated is `.github/workflows/validate.yml`, which runs `.github/scripts/validate_skin.py` on
-every pull request. It catches five things that fail silently:
+every pull request. It catches six things that fail silently:
 
 - an `<include>` or `$VAR[]` name that is referenced but never defined — Kodi logs a warning at most for the
   first and nothing at all for the second
@@ -264,6 +266,8 @@ every pull request. It catches five things that fail silently:
   but the row sorts one way while the management dialog says another
 - an include file that `xml/Includes.xml` never names — Kodi reads only the files listed there, so the
   file's names exist for the other checks but not in Kodi, and its controls draw with no geometry
+- an include definition that declares `<param>` defaults without wrapping its body in `<definition>` —
+  Kodi logs "invalid include definition" and drops it, so whatever it carried never applies
 
 It also reports each locale's `msgid` against `en_gb` and the Kodi markup tokens (`[B]`, `[CR]`, `[COLOR]`)
 between `msgid` and `msgstr`, but never fails on those, since they are Weblate's to fix.

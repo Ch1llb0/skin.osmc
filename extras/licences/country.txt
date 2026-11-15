@@ -1,7 +1,6 @@
-The flags in this folder are drawn from flag-icons 7.6.0
+The flags in media/country are drawn from flag-icons 7.6.0
 (https://github.com/lipis/flag-icons), each clipped into a 48 x 36 tile with
-4 px corners. flag-icons is distributed under the licence below. The Tibetan
-snow lion (bo), the question mark (-) and the globe are the skin's own.
+4 px corners. flag-icons is distributed under the licence below.
 
 The MIT License (MIT)
 

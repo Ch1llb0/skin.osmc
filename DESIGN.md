@@ -742,8 +742,9 @@ label, scrollbars, two widget rows, date above clock, masking ratio, kiosk mode.
 - **Waiting**: blocking = `DimOverlay` + 200 px spinner; with a percentage = progress dialog
   (760 × 20 bar at y 867); background work = corner dialog with the 60 px spinner, never blocking; a
   reloading widget shows the 36 px spinner.
-- **The spinner** is the OSMC mark drawn by one travelling stroke, as APNG for a full alpha edge (Kodi
-  loads `.apng` from the file system; TexturePacker leaves it out of the bundle). `$VAR[BusySpinner]`
+- **The spinner** is the OSMC mark drawn by one travelling stroke, as APNG for a full alpha edge, kept in
+  `extras/busy/` and named by full path: TexturePacker leaves APNG out of the bundle, and OSMC's package
+  deletes everything in `media/` but the bundle, so a spinner there would not ship. `$VAR[BusySpinner]`
   200 px, `$VAR[BusySpinnerMedium]` 60 px, `$VAR[BusySpinnerSmall]` 36 px: 60 fps, or 30 fps below 512 MB
   (`busy-slow*`), both a 2.9 s loop that runs straight across the path's seam: no blank frames, the stroke
   never shorter than 18 px. Built from the supplied 60 and 30 fps frames; identical frames are merged,

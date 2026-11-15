@@ -59,6 +59,11 @@ _Improved_
 - scroll every label at a speed set by its own font size
 
 _Fixed_
+- fix short widgets never sliding into place
+- fix the music add-ons menu entry opening nothing
+- fix games, countries and roles showing no image in the list view
+- fix the picture info dialog drawing its image with square corners
+- fix the busy spinner and the flag licences missing from the OSMC package
 - fix audio channel labels naming layouts a channel count cannot identify
 - fix the Dolby Vision profile 7 flag reading as one word
 - fix the audio flag describing more than one track
@@ -730,6 +735,7 @@ menus.xml:
 - drop the layout and artwork the seeded widgets spelled out, which the type keyed defaults now resolve to the same values, so the seeds no longer freeze a default that has moved on
 - seed the sort of the five widgets whose definitions declare one and whose rows did not, as the add-on re-derives a widget's path, type and target on every build but never its sort
 - name the recordings, search and timers icons from the default set, as the other forty eight entries do
+- open the music add-ons entry in the music window, as Kodi knows no window called MusicLibrary and the entry opened nothing
 
 overrides.xml:
 - remove the v2 groupings, widgets, backgrounds and property options, carried into menus.xml, widgets.xml, backgrounds.xml and properties.xml
@@ -828,6 +834,7 @@ script-skinshortcuts-static.xml:
 - rebuild it against Skin Shortcuts 3.0.3 from a clean profile, picking up everything the configuration gained on this branch
 - follow the menu icons to the default set
 - rebuild it against Skin Shortcuts 3.0.5 from a clean profile, picking up the overlay sizes and the art masks the templates gained
+- rebuild it against Skin Shortcuts 3.0.5 for the music add-ons entry, the only change
 
 script-skinshortcuts.xml:
 - draw the fanart layer only when the item has fanart, and drop the transparent fallback behind it
@@ -876,6 +883,7 @@ Coordinates_Includes_Widgets.xml:
 - add the widget arrow coordinates, at the home menu list's own height against the opposite margin
 - give each widget box a second set of right alignment offsets for the two row slot, taken by a tworow parameter the weather slide never passes
 - size every widget box to a whole number of slots in both layouts, as Kodi pages by the whole slots a box holds; 4:3 wide moves to a 640 box at 680, as square already was, which also ends the sliver of a third poster its 720 box has always shown
+- wrap the sixteen per-aspect widget slide offsets in a definition, as Kodi drops an include that declares a param default without one, so short widgets were never slid into place
 
 Coordinates_LoginScreen.xml:
 - give the scrollbar its own LoginScreen_coords6 family, as its geometry was declared under the name the profile list already used and Kodi keeps only the first definition
@@ -936,6 +944,9 @@ DialogPVRInfo.xml:
 - add the parental rating to the end of the plot
 - add the backend name to the channel row in multi client setups
 - separate genres with commas
+
+DialogPictureInfo.xml:
+- round the picture with the 405 × 600 art mask, as every other info dialog rounds its image
 
 DialogPlayerProcessInfo.xml:
 - add the live bitrate to the video and audio rows
@@ -1096,6 +1107,7 @@ Variables.xml:
 - name the provider window's heading, breadcrumb and secondary column
 - add PVRChannelLogo and PVRChannelLogoDialogOSD, the channel's own logo with the padlock an encrypted channel falls back to, leaving PVRChannelIcon to the programme rows that should keep showing what is on
 - hold the watched status overlays in one variable rather than two, now that one set of artwork serves both
+- name the busy spinners by full path in extras/busy, as the packer takes no APNG and OSMC's package keeps nothing in media/ but the bundle
 
 Variables_Settings.xml:
 - follow the renamed window property and the moved control ids in the dialog help texts
@@ -1110,6 +1122,9 @@ Variables_Skinshortcuts.xml:
 - read the resolved label in the widget list, falling back to the script's own none string
 - take over widgetBackground, which the generated file no longer defines, and add the two arrow variables the dialog's focusedlayout now shares
 - rename the sort order label variable to match its property
+
+Viewtype50.xml:
+- show the item image for games, countries and roles, which the list left out of its catch-all image without giving them one of their own
 
 VideoFullScreen.xml:
 - hide end time, position, progress and cache bar during live playback
@@ -1163,6 +1178,7 @@ media/:
   the ten OSD buttons this skin's OSD does not carry, the two old mouse pointers, the four superseded
   library icons, the three artwork placeholders, the two PVR fallbacks, the DSP add-on icon and the large logo
 - repack Textures.xbt: 366 frames to 332, 881 to 1054 kB, the list icons at 405 costing more than the removals save
+- move the busy spinners to extras/busy and the flag licences to extras/licences, as OSMC's package deletes everything in media/ except Textures.xbt
 
 
 addon.xml:
@@ -1193,3 +1209,4 @@ validate_skin.py:
 - report each locale's msgid against en_gb and the Kodi markup tokens between msgid and msgstr, without failing on either, as translations come from Weblate and a hand-edit is overwritten on the next sync
 - leave definitions that are never used unreported, as names reached through a param value or a quoted expression are invisible to a structural parse
 - check a widget's sort against what it actually sorts by, across the bundled playlist's own order, the widget definition the picker copies from and the menu seed; nothing else keeps the three in step and a disagreement is invisible from the skin
+- report an include that declares a param default without a definition, which Kodi drops with only a log line

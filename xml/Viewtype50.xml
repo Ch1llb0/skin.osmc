@@ -87,6 +87,21 @@
 				<param name="fallback">DefaultFavourites.png</param>
 				<param name="visible">Container.Content(favourites)</param>
 			</include>
+			<!-- Countries -->
+			<include content="image-50">
+				<param name="fallback">DefaultCountry.png</param>
+				<param name="visible">Container.Content(countries)</param>
+			</include>
+			<!-- Roles -->
+			<include content="image-50">
+				<param name="fallback">DefaultActor.png</param>
+				<param name="visible">Container.Content(roles)</param>
+			</include>
+			<!-- Games -->
+			<include content="image-50">
+				<param name="fallback">DefaultGameAddons.png</param>
+				<param name="visible">Container.Content(games)</param>
+			</include>
 
 			<!-- Song Info -->
 			<control type="group">

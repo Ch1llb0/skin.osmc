@@ -331,11 +331,11 @@
 		<item id="13">
 			<label>$LOCALIZE[1038]</label>
 			<icon>DefaultAddonMusic.png</icon>
-			<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
 			<property name="id">13</property>
 			<property name="name">addons</property>
 			<property name="menu">music</property>
-			<property name="action">ActivateWindow(MusicLibrary,Addons,return)</property>
+			<property name="action">ActivateWindow(Music,Addons,return)</property>
 			<property name="path">Addons</property>
 			<property name="submenuVisibility">addons</property>
 			<property name="parent">music</property>
@@ -692,11 +692,11 @@
 		<item id="2">
 			<label>$LOCALIZE[1038]</label>
 			<icon>DefaultAddonMusic.png</icon>
-			<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
 			<property name="id">2</property>
 			<property name="name">addons</property>
 			<property name="menu">music</property>
-			<property name="action">ActivateWindow(MusicLibrary,Addons,return)</property>
+			<property name="action">ActivateWindow(Music,Addons,return)</property>
 			<property name="path">Addons</property>
 			<property name="submenuVisibility">addons</property>
 		</item>

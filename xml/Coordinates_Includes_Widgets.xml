@@ -76,72 +76,80 @@
 
 	<include name="widgetLayoutSlide-tall-OSMC_16:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="972,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="732,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="492,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="252,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1039,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="866,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="693,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="520,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="347,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="174,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="972,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="732,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="492,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="252,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1039,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="866,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="693,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="520,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="347,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="174,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-tall-OSMC_21:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
-		<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
+			<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-tall-OSMC_21:9_masked">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
-		<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
+			<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-tall-OSMC_4:3">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="547,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="374,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="201,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="547,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="374,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="201,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		</definition>
 	</include>
 
 	<include name="widgetLayoutSlide-wide-OSMC">
@@ -168,60 +176,68 @@
 
 	<include name="widgetLayoutSlide-wide-OSMC_16:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1067,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="854,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="641,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="428,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="215,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1067,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="854,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="641,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="428,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="215,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-wide-OSMC_21:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-wide-OSMC_21:9_masked">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-wide-OSMC_4:3">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="427,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="214,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="427,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="214,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		</definition>
 	</include>
 
 	<include name="widgetLayoutSlide-square-OSMC">
@@ -248,60 +264,68 @@
 
 	<include name="widgetLayoutSlide-square-OSMC_16:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1067,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="854,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="641,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="428,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="215,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1067,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="854,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="641,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="428,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="215,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-square-OSMC_21:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-square-OSMC_21:9_masked">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1600,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1280,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="640,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1707,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1494,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1281,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1068,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="855,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="642,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="429,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="216,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-square-OSMC_4:3">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="427,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="214,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="320,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="427,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="214,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		</definition>
 	</include>
 
 	<include name="widgetLayoutSlide-square-small-OSMC">
@@ -328,72 +352,80 @@
 
 	<include name="widgetLayoutSlide-square-small-OSMC_16:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="972,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="732,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="492,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="252,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1039,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="866,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="693,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="520,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="347,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="174,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="972,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="732,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="492,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="252,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1039,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="866,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="693,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="520,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="347,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="174,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-square-small-OSMC_21:9">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
-		<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
+			<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-square-small-OSMC_21:9_masked">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
-		<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
-		<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
-		<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
-		<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="1680,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1440,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1200,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="960,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="720,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1747,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1574,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1401,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1228,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="1055,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+			<animation effect="slide" start="0,0" end="882,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+			<animation effect="slide" start="0,0" end="709,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+			<animation effect="slide" start="0,0" end="536,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+			<animation effect="slide" start="0,0" end="363,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,9)">conditional</animation>
+			<animation effect="slide" start="0,0" end="190,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,10)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,10)">conditional</animation>
+		</definition>
 	</include>
 	<include name="widgetLayoutSlide-square-small-OSMC_4:3">
 		<param name="tworow">False</param>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="547,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="374,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="201,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<definition>
+			<animation effect="slide" start="0,0" end="480,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="240,0" time="0" condition="![$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="![$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="547,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+			<animation effect="slide" start="0,0" end="374,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+			<animation effect="slide" start="0,0" end="201,0" time="0" condition="[$PARAM[tworow]] + String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,0" time="0" condition="[$PARAM[tworow]] + Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		</definition>
 	</include>
 
 	<include name="widgetLayout-weather-OSMC">

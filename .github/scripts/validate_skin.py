@@ -18,12 +18,15 @@ land while one is outstanding:
      and every file named there present (bar the generated one): Kodi reads only
      the files Includes.xml names, so an unlisted file's names are defined here but
      not in Kodi, and its controls draw with no geometry at all
+  6. an include definition that declares <param> defaults also wraps its body in
+     <definition>: Kodi logs "invalid include definition" and drops the include
+     otherwise, so whatever it carried never applies
 
 Advisory checks — real findings, but the fix belongs in Weblate rather than in a
 commit, so they are reported and never fail the build:
 
-  6. .po: locale msgid differing from en_gb, and ids missing from a locale
-  7. .po: Kodi markup tokens ([B], [CR], [COLOR]...) unbalanced between msgid/msgstr
+  7. .po: locale msgid differing from en_gb, and ids missing from a locale
+  8. .po: Kodi markup tokens ([B], [CR], [COLOR]...) unbalanced between msgid/msgstr
 
 Translations arrive from translate.osmc.tv and a commit that edits them by hand
 is overwritten on the next sync, so failing a build on them would only train
@@ -322,6 +325,29 @@ def check_translations(root):
     return stale, markup
 
 
+def check_param_definitions(root):
+    """6. An include that declares <param> defaults wraps its body in <definition>."""
+    problems = []
+    for path in xml_files(root):
+        rel = os.path.relpath(path, root)
+        try:
+            tree = ET.parse(path)
+        except ET.ParseError:
+            continue  # reported by check_parse
+        if tree.getroot().tag != "includes":
+            continue
+        with open(path, encoding="utf-8") as handle:
+            lines = handle.read().splitlines()
+        for include in tree.getroot().findall("include"):
+            name = include.get("name")
+            if name and include.find("param") is not None and include.find("definition") is None:
+                marker = '<include name="%s"' % name
+                lineno = next((i for i, line in enumerate(lines, 1) if marker in line), 0)
+                problems.append("%s:%d: include %r declares <param> without <definition>; "
+                                "Kodi drops it" % (rel, lineno, name))
+    return problems
+
+
 def main(argv):
     warn_only = "--warn-only" in argv
     args = [a for a in argv[1:] if not a.startswith("-")]
@@ -334,6 +360,7 @@ def main(argv):
         ("Names defined twice in one file", dupes),
         ("Widget sorts that disagree with their source", check_widget_sorts(root)),
         ("Include files Kodi never loads", check_loaded(root)),
+        ("Includes with <param> but no <definition>", check_param_definitions(root)),
     ]
 
     stale, markup = check_translations(root)
