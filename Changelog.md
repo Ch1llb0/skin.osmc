@@ -746,7 +746,7 @@ properties.xml:
 - give the item limit v3's numeric type, so any limit can be set
 - move the artwork options to the skin's own strings, as v2 listed them in English in the picker while the button underneath showed the localized name
 - key the add-on sort options off widgetSource and the user rating option off the normalized "videos" target, neither of which the v2 conditions matched
-- rename widgetSortDirection to v3's own widgetSortOrder through an overrides block, which moves the key on menus users have already saved
+- rename widgetSortDirection to v3's own widgetSortOrder; no override moves the key on menus already saved, as v3 refuses one that targets a key it writes itself
 - restore requires="widget" on the item limit, so it is offered only where there is a widget to limit
 - offer date sorting on live TV and radio widgets, which Kodi uses for timers and recordings
 - match the PVR sort options to the types the picker actually produces
@@ -1183,8 +1183,8 @@ media/:
 
 addon.xml:
 - require xbmc.gui 5.18.0
-- require script.skinshortcuts 3.0.5, for the property overrides the configuration uses (3.0.2), widget sort and limit
-  reaching widgets picked into a slot (3.0.4), and the menu showing on the first start after a Kodi upgrade (3.0.5)
+- require script.skinshortcuts 3.0.5, for widget sort and limit reaching widgets picked into a slot (3.0.4), and the
+  menu showing on the first start after a Kodi upgrade (3.0.5)
 - bump version to 22.0.0
 - update changelog
 - shorten the news entries to one line each

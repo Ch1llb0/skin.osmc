@@ -303,9 +303,8 @@ customised, or that customisation becomes everyone's default.
 3. The addon writes `xml/script-skinshortcuts-includes.xml`. Copy it over
    `xml/script-skinshortcuts-static.xml` **verbatim**.
 4. Note in the commit message which addon version it was built against. The committed file is a 3.0.5
-   build; `addon.xml` pins 3.0.5. The floor is not cosmetic: `shortcuts/properties.xml` uses an
-   `<overrides>` block to rename `widgetSortDirection`, and property overrides did not exist before 3.0.2,
-   so on an older addon that rename is silently skipped.
+   build; `addon.xml` pins 3.0.5. The floor is not cosmetic: 3.0.4 carries a widget's limit and sort
+   onto a widget picked into a slot, and 3.0.5 shows the menu on the first start after a Kodi upgrade.
 5. Re-check the interface below still lines up, and run `xmllint --noout` on the result.
 
 ### When a rebuild is needed
